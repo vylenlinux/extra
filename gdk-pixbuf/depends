@@ -1,0 +1,10 @@
+glib
+libpng
+libtiff
+libjpeg-turbo
+shared-mime-info
+libx11
+libxcb
+libxau
+jasper
+gobject-introspection

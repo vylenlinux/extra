@@ -1,0 +1,22 @@
+description="Toolkit for image loading and pixel buffer manipulation"
+homepage="https://wiki.gnome.org/Projects/GdkPixbuf"
+maintainer="Vylen Linux Team"
+
+name=gdk-pixbuf
+version=2.44.5
+release=1
+source="https://gitlab.gnome.org/GNOME/$name/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	vylen-meson $name-$version build \
+		-Ddebug=false \
+		-Dglycin=disabled \
+		-Ddocumentation=false \
+		-Dinstalled_tests=false \
+		-Dman=false \
+		-Dothers=enabled \
+		-Dtests=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+	
+}
