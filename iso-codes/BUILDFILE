@@ -1,0 +1,14 @@
+description="List of country, language and currency names"
+homepage="https://salsa.debian.org/iso-codes-team/iso-codes"
+maintainer="Vylen Linux Team"
+
+name=iso-codes
+version=4.20.1
+release=1
+source="$name-$version.tar.gz::https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v$version/iso-codes-v$version.tar.gz"
+
+build() {
+	vylen-meson $name-v$version build
+	meson compile -C build
+	DESTDIR="$PKG" meson install --no-rebuild -C build
+}
