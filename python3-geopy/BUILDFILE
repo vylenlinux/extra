@@ -1,0 +1,19 @@
+description="Geocoding library for Python"
+homepage="https://github.com/geopy/geopy"
+maintainer="Vylen Linux Team"
+
+name=python3-geopy
+nm=geopy
+version=2.4.1
+release=1
+source="$name-$version.tar.gz::https://github.com/geopy/geopy/archive/$version.tar.gz"
+
+build() {
+	cd $nm-$version
+	    gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+
+	    python3 -m installer -d $PKG \
+		    .dist/*.whl
+}
