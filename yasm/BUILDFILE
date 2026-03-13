@@ -1,0 +1,22 @@
+description="A rewrite of NASM to allow for multiple syntax supported (NASM, TASM, GAS, etc.)"
+homepage="https://www.tortall.net/projects/yasm/"
+maintainer="Vylen Linux Team"
+
+name=yasm
+version=1.3.0
+release=1
+source="https://www.tortall.net/projects/$name/releases/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	# fix build with GCC 15
+	export CFLAGS="$CFLAGS -std=gnu17"
+
+	sed -i 's#) ytasm.*#)#' Makefile.in
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
+
