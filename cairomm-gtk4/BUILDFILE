@@ -1,0 +1,15 @@
+description="Provides a C++ interface to Cairo"
+homepage="https://www.cairographics.org/cairomm/"
+maintainer="Vylen Linux Team"
+
+name=cairomm-gtk4
+nm=cairomm
+version=1.18.0
+release=1
+source="$name-$version.tar.xz::https://cairographics.org/releases/$nm-$version.tar.xz"
+
+build() {
+	vylen-meson $nm-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
