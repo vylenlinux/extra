@@ -1,0 +1,15 @@
+description="display directory contents, including directories, files, links, in a terminal"
+homepage="http://mama.indstate.edu/users/ice/tree"
+maintainer="Vylen Linux Team"
+
+name=tree
+version=2.1.3
+release=1
+source="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/$version/unix-tree-$version.tar.gz"
+
+build() {
+	cd unix-$name-$version
+
+  	make
+	make PREFIX=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install
+}
