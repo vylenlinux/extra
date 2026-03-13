@@ -1,0 +1,32 @@
+description="A fast Bayesian spam filtering tool"
+homepage="https://bogofilter.sourceforge.io/"
+maintainer="Vylen Linux Team"
+
+name=bogofilter
+version=1.2.5
+release=1
+backup="etc/bogofilter/bogofilter.cf"
+source="https://downloads.sourceforge.net/project/$name/$name-stable/$name-$version.tar.xz
+        db5.3.patch"
+
+build() {
+	
+	cd $name-$version
+	
+	patch -Np1 -i ../db5.3.patch
+  
+	autoreconf -vfi 
+	./configure CFLAGS="$CFLAGS -I/usr/include/db" \
+              --prefix=/usr \
+              --sysconfdir=/etc/bogofilter  \
+              --localstatedir=/var \
+              --enable-transactions \
+	      --with-included-gsl \
+	      --with-database=sqlite3
+
+	make
+	make DESTDIR=$PKG install
+
+	mv $PKG/etc/bogofilter/bogofilter.cf.example $PKG/etc/bogofilter/bogofilter.cf
+}
+
