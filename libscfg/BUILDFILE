@@ -1,0 +1,14 @@
+description="A C library for scfg"
+homepage="https://git.sr.ht/~emersion/libscfg"
+maintainer="Vylen Linux Team"
+
+name=libscfg
+version=0.2.0
+release=1
+source="$name-$version.tar.gz::https://codeberg.org/emersion/libscfg/archive/v$version.tar.gz"
+
+build() {
+	vylen-meson $name build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
