@@ -1,0 +1,29 @@
+libfyaml-0.9.5-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/fy-compose -> fy-tool
+lrwxrwxrwx root/root    usr/bin/fy-dump -> fy-tool
+lrwxrwxrwx root/root    usr/bin/fy-filter -> fy-tool
+lrwxrwxrwx root/root    usr/bin/fy-join -> fy-tool
+lrwxrwxrwx root/root    usr/bin/fy-testsuite -> fy-tool
+-rwxr-xr-x root/root    usr/bin/fy-tool
+lrwxrwxrwx root/root    usr/bin/fy-ypath -> fy-tool
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/libfyaml.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libfyaml.a
+lrwxrwxrwx root/root    usr/lib/libfyaml.so -> libfyaml.so.0.0.0
+lrwxrwxrwx root/root    usr/lib/libfyaml.so.0 -> libfyaml.so.0.0.0
+-rwxr-xr-x root/root    usr/lib/libfyaml.so.0.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libfyaml.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+lrwxrwxrwx root/root    usr/share/man/man1/fy-compose.1.gz -> fy-tool.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/fy-dump.1.gz -> fy-tool.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/fy-filter.1.gz -> fy-tool.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/fy-join.1.gz -> fy-tool.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/fy-testsuite.1.gz -> fy-tool.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/fy-tool.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/fy-ypath.1.gz -> fy-tool.1.gz
