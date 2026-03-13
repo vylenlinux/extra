@@ -1,0 +1,12 @@
+webkitgtk
+gtk3
+pango
+harfbuzz
+at-spi2-core
+cairo
+gdk-pixbuf
+libsoup
+glib
+libx11
+gcr3
+p11-kit

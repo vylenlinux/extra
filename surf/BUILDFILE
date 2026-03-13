@@ -1,0 +1,26 @@
+description="A simple web browser based on WebKit/GTK+."
+homepage="https://surf.suckless.org/"
+maintainer="Vylen Linux Team"
+
+name=surf
+version=2.1
+release=1
+source="https://dl.suckless.org/$name/$name-$version.tar.gz"
+
+_portdir=$PWD
+
+build() {
+	cd $name-$version
+	
+	if [ -f $_portdir/config.h ]; then
+                cp $_portdir/config.h .
+        fi
+
+        for p in $_portdir/*.patch $_portdir/*.diff; do
+                [ -f $p ] || continue
+                patch -Np1 -i $p
+        done
+
+	make PREFIX=/usr
+	make PREFIX=/usr DESTDIR=$PKG install
+}
