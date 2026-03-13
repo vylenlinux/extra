@@ -3,7 +3,7 @@ homepage="https://www.vim.org/"
 maintainer="Vylen Linux Team"
 
 name=vim
-version=9.2.0112
+version=9.2.0152
 release=1
 source="https://github.com/vim/vim/archive/v$version/vim-v$version.tar.gz"
 
