@@ -1,0 +1,12 @@
+description="Vylen Linux inits stuffs"
+homepage="https://vylen.gitlab.io/"
+maintainer="Vylen Linux Team"
+
+name=init
+version=1
+release=1
+source="modules-load"
+
+build() {
+	install -Dm755 $SRC/modules-load $PKG/usr/sbin/modules-load
+}
