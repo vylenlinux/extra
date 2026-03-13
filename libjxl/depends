@@ -1,0 +1,13 @@
+cmake
+ninja
+asciidoc
+brotli
+gdk-pixbuf
+giflib
+gflags
+highway
+lcms2
+libjpeg-turbo
+libpng
+openexr
+zlib
