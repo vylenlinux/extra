@@ -1,0 +1,8 @@
+boost
+fmt
+pcre2
+meson
+ninja
+alsa-lib
+libsndfile
+ffmpeg

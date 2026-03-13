@@ -1,0 +1,54 @@
+description="Music playback daemon"
+homepage="https://www.musicpd.org/"
+maintainer="Vylen Linux Team"
+
+name=mpd
+version=0.24.9
+release=1
+
+source="$name-$version.tar.gz::https://github.com/MusicPlayerDaemon/MPD/archive/v$version.tar.gz
+	run.$name"
+
+build() {
+	vylen-meson MPD-$version build  \
+		--auto-features disabled \
+		-Dadplug=disabled \
+		-Dcurl=enabled \
+		-Dbzip2=enabled \
+		-Diconv=enabled \
+		-Dipv6=enabled \
+		-Dpcre=enabled \
+		-Dsqlite=enabled \
+		-Dalsa=enabled \
+		-Dsndfile=enabled \
+		-Daudiofile=$(emerald isinstalled audiofile && printf "enabled" || printf "disabled") \
+		-Ddbus=$(emerald isinstalled dbus && printf "enabled" || printf "disabled") \
+		-Dflac=$(emerald isinstalled flac && printf "enabled" || printf "disabled") \
+		-Dfluidsynth=$(emerald isinstalled fluidsynth && printf "enabled" || printf "disabled") \
+		-Dicu=$(emerald isinstalled icu && printf "enabled" || printf "disabled") \
+		-Djack=$(emerald isinstalled jack && printf "enabled" || printf "disabled") \
+		-Dlame=$(emerald isinstalled lame && printf "enabled" || printf "disabled") \
+		-Dcdio_paranoia=$(emerald isinstalled libcdio-paranoia  && printf "enabled" || printf "disabled") \
+		-Did3tag=$(emerald isinstalled libid3tag && printf "enabled" || printf "disabled") \
+		-Diso9660=$(emerald isinstalled libisofs && printf "enabled" || printf "disabled") \
+		-Dmad=$(emerald isinstalled libmad && printf "enabled" || printf "disabled") \
+		-Dlibsamplerate=$(emerald isinstalled libsamplerate && printf "enabled" || printf "disabled") \
+		-Dsoxr=$(emerald isinstalled libsoxr && printf "enabled" || printf "disabled") \
+		-Dmpcdec=disabled \
+		-Dmpg123=$(emerald isinstalled mpg123 && printf "enabled" || printf "disabled") \
+		-Dpulse=$(emerald isinstalled pulseaudio && printf "enabled" || printf "disabled") \
+		-Dpipewire=$(emerald isinstalled pipewire && printf "enabled" || printf "disabled") \
+		-Dsmbclient=$(emerald isinstalled samba && printf "enabled" || printf "disabled") \
+		-Dtwolame=$(emerald isinstalled twolame && printf "enabled" || printf "disabled") \
+		-Dvorbis=$(emerald isinstalled libvorbis && printf "enabled" || printf "disabled") \
+		-Dwavpack=$(emerald isinstalled wavpack && printf "enabled" || printf "disabled") \
+		-Dhtml_manual=false
+	meson compile -C build 
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
+	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+
+	rm -r $PKG/usr/share/doc
+}
+
