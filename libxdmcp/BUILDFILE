@@ -1,0 +1,21 @@
+description="X11 Display Manager Control Protocol library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxdmcp"
+maintainer="Vylen Linux Team"
+
+name=libxdmcp
+version=1.1.5
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXdmcp-$version.tar.xz"
+
+build() {
+	cd libXdmcp-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
