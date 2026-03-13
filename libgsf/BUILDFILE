@@ -1,0 +1,17 @@
+description="libgsf "
+homepage="https://gitlab.gnome.org/GNOME/libgsf"
+maintainer="Vylen Linux Team"
+
+name=libgsf
+version=1.14.55
+vrsn=$(printf "$version" | sed 's/\./_/g')
+release=1
+source="$name-$version.tar.gz::https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_${vrsn}/${name}-LIBGSF_${vrsn}.tar.gz"
+
+build() {
+	cd ${name}-LIBGSF_${vrsn}
+	NOCONFIGURE=1 ./autogen.sh
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
