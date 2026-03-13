@@ -1,0 +1,26 @@
+description="Configuration database system used by many GNOME applications"
+homepage="https://ftp.gnome.org"
+maintainer="Vylen Linux Team"
+
+name=gconf
+version=3.2.6
+release=1
+source="$name-$version.tar.xz::https://ftp.gnome.org/pub/gnome/sources/GConf/${version%.*}/GConf-$version.tar.xz"
+
+build() {
+	cd GConf-$version
+
+	# fix build with GCC 14
+	export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
+	./configure --prefix=/usr \
+	            --sysconfdir=/etc \
+		    --libexecdir=/usr/lib/$name \
+	            --disable-orbit \
+	            --disable-static
+	make
+	make DESTDIR=$PKG install
+
+	ln -s gconf.xml.defaults \
+	      $PKG/etc/gconf/gconf.xml.system
+
+}
