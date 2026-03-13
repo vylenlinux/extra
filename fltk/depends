@@ -1,0 +1,9 @@
+cmake
+ninja
+libjpeg-turbo
+zlib
+libpng
+fontconfig
+libglvnd
+glu
+shared-mime-info
