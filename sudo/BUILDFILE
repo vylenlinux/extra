@@ -1,0 +1,35 @@
+description="Give certain users the ability to run some commands as root"
+homepage="https://www.sudo.ws/sudo/"
+maintainer="Vylen Linux Team"
+
+name=sudo
+version=1.9.17p2
+release=1
+backup="etc/sudoers"
+source="https://www.sudo.ws/dist/$name-$version.tar.gz
+	sudo"
+
+build() {
+	cd $name-$version
+
+	./configure \
+	    --prefix=/usr \
+            --libexecdir=/usr/lib \
+            --with-secure-path \
+            --with-all-insults \
+            --with-env-editor \
+            --with-passprompt="[sudo] password for %p: "
+	make
+	make DESTDIR=$PKG install
+
+	ln -sfv libsudo_util.so.0.0.0 $PKG/usr/lib/sudo/libsudo_util.so.0
+
+	mkdir -m 755 $PKG/etc/pam.d
+	install -D -m 644 -o root -g root $SRC/sudo $PKG/etc/pam.d/sudo
+
+	sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' $PKG/etc/sudoers
+
+	rm -fr $PKG/var/run
+	rm -fr $PKG/run
+
+}
