@@ -1,0 +1,4 @@
+cmake
+ninja
+python3-babel
+qt6-tools

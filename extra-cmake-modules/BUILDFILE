@@ -1,0 +1,23 @@
+description="Extra modules and scripts for CMake"
+homepage="https://community.kde.org/Frameworks"
+maintainer="Vylen Linux Team"
+
+name=extra-cmake-modules
+version=6.23.0
+release=1
+source="$name-$version.tar.gz::https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v$version.tar.gz"
+
+build() {
+	cmake -S $name-$version -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DBUILD_HTML_DOCS=OFF \
+		-DBUILD_QTHELP_DOCS=OFF \
+		-DBUILD_MAN_DOCS=OFF \
+		-DBUILD_TESTING=OFF \
+		-Wno-dev  
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
+
