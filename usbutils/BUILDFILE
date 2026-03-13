@@ -1,0 +1,17 @@
+description="A collection of USB tools to query connected USB devices"
+homepage="https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/"
+maintainer="Vylen Linux Team"
+
+name=usbutils
+version=019
+release=1
+IGNORE_CHECKSUM=yes
+source="https://www.kernel.org/pub/linux/utils/usb/usbutils/$name-$version.tar.xz
+	http://www.linux-usb.org/usb.ids"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+}
