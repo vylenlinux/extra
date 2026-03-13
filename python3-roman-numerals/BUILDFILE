@@ -1,0 +1,15 @@
+description="Integer to Roman numerals converter"
+homepage="https://pypi.org/project/roman-numerals"
+maintainer="Vylen Linux Team"
+
+name=python3-roman-numerals
+version=4.1.0
+release=1
+source="$name-$version.tar.gz::https://github.com/AA-Turner/roman-numerals/archive/v$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version/python
+	cp ../LICENCE* ./
+	gpep517 build-wheel --wheel-dir .dist --output-fd 3 3>&1 >&2
+	/usr/bin/python3 -m installer -d $PKG .dist/*.whl
+}
