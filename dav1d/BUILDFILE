@@ -1,0 +1,15 @@
+description="dav1d is an AV1 decoder"
+homepage="https://code.videolan.org/videolan/dav1d/"
+maintainer="Vylen Linux Team"
+
+name=dav1d
+version=1.5.3
+release=1
+source="https://code.videolan.org/videolan/dav1d/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	vylen-meson -Denable_tests=false build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
