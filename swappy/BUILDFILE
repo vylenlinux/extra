@@ -1,0 +1,17 @@
+description="A Wayland native snapshot editing tool"
+homepage="https://github.com/jtheoof/swappy"
+maintainer="Vylen Linux Team"
+
+name=swappy
+version=1.8.0
+release=1
+source="https://github.com/jtheoof/swappy/archive/v$version/swappy-$version.tar.gz
+	no-git-version.patch"
+
+build() {
+
+	patch -d $name-$version -i $SRC/no-git-version.patch
+	vylen-meson $name-$version build 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
