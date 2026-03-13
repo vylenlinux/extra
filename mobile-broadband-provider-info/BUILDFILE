@@ -1,0 +1,14 @@
+description="APN configuration presets for mobile broadband connections"
+homepage="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info"
+maintainer="Vylen Linux Team"
+
+name=mobile-broadband-provider-info
+version=20251101
+release=1
+source="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
