@@ -1,0 +1,24 @@
+description="A set of free peer-reviewed portable C++ source libraries"
+homepage="https://www.boost.org/"
+maintainer="Vylen Linux Team"
+
+name=boost
+version=1.89.0
+vrsn=$(printf "$version" | sed 's/\./_/g')
+release=1
+source="$name-$version.tar.bz2::https://archives.boost.io/release/$version/source/boost_${vrsn}.tar.bz2"
+
+build() {
+	cd boost_${vrsn}
+
+	./bootstrap.sh --prefix=/usr --with-python=python3
+
+	./b2 stage ${MAKEFLAGS} threading=multi link=shared
+	
+	# Older cmake directories need to be explicitly removed
+	rm -rf /usr/lib/cmake/[Bb]oost*
+
+	./b2 install --prefix=$PKG/usr threading=multi link=shared
+
+	ln -sv detail/sha1.hpp $PKG/usr/include/boost/uuid/sha1.hpp
+}
