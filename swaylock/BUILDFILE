@@ -1,0 +1,21 @@
+description="Screen locker for Wayland"
+homepage="https://github.com/swaywm/swaylock"
+maintainer="Vylen Linux Team"
+
+name=swaylock
+version=1.8.5
+release=1
+source="https://github.com/swaywm/swaylock/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build \
+		-D pam=enabled \
+		-Dbash-completions=$(emerald isinstalled bash-completions && printf "true" || printf "false") \
+		-Dfish-completions=$(emerald isinstalled fish-completions && printf "true" || printf "false") \
+		-Dzsh-completions=$(emerald isinstalled zsh-completions && printf "true" || printf "false")
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+	# Adapt pam file to vylen
+	sed -i 's|login|system-auth|' $PKG/etc/pam.d/swaylock
+}
+
