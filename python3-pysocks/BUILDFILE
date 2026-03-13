@@ -1,0 +1,14 @@
+description="SOCKS4, SOCKS5 or HTTP proxy (Anorov fork PySocks replaces socksipy)"
+homepage="https://github.com/Anorov/PySocks"
+maintainer="Vylen Linux Team"
+
+name=python3-pysocks
+version=1.7.1
+release=1
+source="$name-$version.tar.gz::https://pypi.io/packages/source/P/PySocks/PySocks-$version.tar.gz"
+
+build() {
+	cd PySocks-$version
+	python3 setup.py build
+	python3 setup.py install --prefix=/usr --root=$PKG --optimize=1 --skip-build
+}

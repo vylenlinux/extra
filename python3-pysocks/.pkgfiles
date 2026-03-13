@@ -1,0 +1,17 @@
+python3-pysocks-1.7.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.13/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/PySocks-1.7.1-py3.13.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/PySocks-1.7.1-py3.13.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/PySocks-1.7.1-py3.13.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/PySocks-1.7.1-py3.13.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/PySocks-1.7.1-py3.13.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/socks.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/socks.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/sockshandler.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/sockshandler.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/socks.py
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/sockshandler.py
