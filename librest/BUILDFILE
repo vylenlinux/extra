@@ -1,0 +1,15 @@
+description="Gives more easily access to internet services which says be 'RESTful'"
+homepage="http://www.gnome.org/"
+maintainer="Vylen Linux Team"
+
+name=librest
+version=0.10.2
+release=1
+
+source="https://gitlab.gnome.org/GNOME/librest/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build -Dgtk_doc=false -Dvapi=true
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build 
+}
