@@ -1,0 +1,6 @@
+meson
+glib
+json-c
+gtk3
+pkgconf
+json-glib
