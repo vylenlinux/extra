@@ -1,0 +1,19 @@
+description="Command line tools that assist applications with a variety of desktop integration tasks"
+homepage="https://www.freedesktop.org/wiki/Software/xdg-utils/"
+maintainer="Vylen Linux Team"
+
+name=xdg-utils
+version=1.2.1
+release=1
+source="https://gitlab.freedesktop.org/xdg/$name/-/archive/v$version/$name-v$version.tar.gz"
+
+build() {
+	cd $name-v$version
+
+	export XML_CATALOG_FILES=/etc/xml/catalog
+
+
+	./configure --prefix=/usr --mandir=/usr/share/man
+	make
+	make DESTDIR=$PKG install
+}
