@@ -1,0 +1,4 @@
+cmake
+freetype2
+poppler-data
+ninja
