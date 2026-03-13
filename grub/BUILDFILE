@@ -1,0 +1,44 @@
+description="GNU GRand Unified Bootloader"
+homepage="https://www.gnu.org/software/grub/"
+maintainer="Vylen Linux Team"
+
+name=grub
+version=2.14
+release=1
+backup="etc/default/grub"
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
+	vylen-tweaks.patch
+	grub.default
+	grub.cfg"
+
+build() {
+	cd $name-$version
+
+	# Unset any environment variables which may affect the build
+	unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
+
+	# Vylen multikernel support
+	patch -Np1 -i $SRC/vylen-tweaks.patch
+
+	# Add a file missing from the release tarball
+	echo depends bli part_gpt > grub-core/extra_deps.lst
+	
+	# Fix os name
+	sed 's|GNU/Linux|Linux|' -i "util/grub.d/10_linux.in"
+
+	./configure --prefix=/usr \
+		--sbindir=/sbin \
+		--sysconfdir=/etc \
+		--disable-efiemu \
+		--disable-werror \
+		--enable-device-mapper \
+		--enable-grub-mount
+	make
+	make DESTDIR=$PKG install
+
+	# Borrow from Arch
+	install -D -m0644 $SRC/grub.default $PKG/etc/default/grub
+
+	# Liveiso stuff
+	cp $SRC/grub.cfg $PKG/usr/share/$name
+}
