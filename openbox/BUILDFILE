@@ -1,0 +1,24 @@
+description="Highly configurable desktop window manager with extensive standards support"
+homepage="http://openbox.org"
+maintainer="Vylen Linux Team"
+
+name=openbox
+version=3.6.1
+release=1
+source="http://openbox.org/dist/$name/$name-$version.tar.gz
+	client_calc_segfault.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/client_calc_segfault.patch
+	
+	./configure --prefix=/usr \
+	            --sysconfdir=/etc \
+	            --libexecdir=/usr/lib/$name \
+	            --disable-static \
+		    --disable-nls
+	make
+	make DESTDIR=$PKG install
+
+}
