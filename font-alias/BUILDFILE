@@ -1,0 +1,21 @@
+description="X.org font alias files"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=font-alias
+version=1.0.6
+release=1
+source="http://ftp.x.org/pub/individual/font/font-alias-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+}
+
