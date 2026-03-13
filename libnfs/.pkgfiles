@@ -1,4 +1,4 @@
-libnfs-6.0.2-2
+libnfs-6.0.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rw-r--r-- root/root    usr/bin/nfs-cat
