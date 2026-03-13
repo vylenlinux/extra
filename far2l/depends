@@ -1,0 +1,15 @@
+cmake
+ninja
+gawk
+m4
+wxgtk3
+xerces-c
+spdlog
+uchardet
+libnfs
+libssh2
+openssl
+samba
+neon
+libarchive
+pcre2
