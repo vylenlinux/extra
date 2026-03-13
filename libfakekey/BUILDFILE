@@ -1,0 +1,16 @@
+description="X virtual keyboard library"
+homepage="https://www.yoctoproject.org/tools-resources/projects/matchbox"
+maintainer="Vylen Linux Team"
+
+name=libfakekey
+version=0.3
+release=1
+source="http://git.yoctoproject.org/cgit/cgit.cgi/$name/snapshot/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./autogen.sh
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+	make
+	make DESTDIR=$PKG install
+}
