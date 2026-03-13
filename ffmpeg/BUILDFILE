@@ -1,0 +1,87 @@
+description="FFmpeg is a solution to record, convert and stream audio and video"
+homepage="https://ffmpeg.org/"
+maintainer="Vylen Linux Team"
+
+name=ffmpeg
+version=8.0.1
+release=1
+source="https://ffmpeg.org/releases/$name-$version.tar.xz
+	add-av_stream_get_first_dts-for-chromium.patch
+	ffmpeg-8.0.1-svt-av1-4.patch
+	ffmpeg-x264-10bit.sh"
+
+build() {
+	cd $name-$version
+
+	_opt=""
+
+	addopt() {
+		if [ "$_opt" = "" ]; then
+			emerald isinstalled $1 && _opt="--enable-$2" || _opt="--disable-$2"
+		elif [ ! "$_opt" = "" ]; then
+			emerald isinstalled $1 && _opt="$_opt --enable-$2" || _opt="$_opt --disable-$2"
+		fi
+	}
+
+	## $1 is package name
+	## $2 is feature
+	addopt libvdpau vdpau
+	addopt libva vaapi
+	addopt nvidia cuda
+	addopt nvidia cuvid 
+	addopt nv-codec-headers nvenc
+	addopt amf-headers amf
+	addopt svt-av1 libsvtav1
+	addopt vulkan-icd-loader vulkan
+
+	# Adds an API necessary for some packages to build
+	patch -Np1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
+	
+	# Fix build with svt-av1 4.0.1
+	patch -Np1 -i $SRC/ffmpeg-8.0.1-svt-av1-4.patch
+
+	# adds the ALSA library to the Flite LDFLAGS variable and
+	# enables the discovery of Flite
+	sed -i 's/-lflite"/-lflite -lasound"/' configure
+
+	./configure --prefix=/usr        \
+	            --enable-gpl         \
+		    --enable-gnutls      \
+	            --enable-version3    \
+	            --enable-nonfree     \
+	            --disable-static     \
+	            --enable-shared      \
+	            --disable-debug      \
+		    --disable-libcelt    \
+		    --disable-optimizations \
+		    --disable-stripping  \
+		    --disable-doc  \
+		    --enable-swresample  \
+		    --enable-avfilter    \
+		    --enable-pic         \
+		    --enable-pthreads    \
+	            --enable-libass      \
+	            --enable-libfdk-aac  \
+	            --enable-libfreetype \
+	            --enable-libmp3lame  \
+	            --enable-libopus     \
+	            --enable-libtheora   \
+	            --enable-libvorbis   \
+	            --enable-libvpx      \
+	            --enable-libx264     \
+	            --enable-libx265	 \
+	            --enable-libaom      \
+		    --enable-libdav1d    \
+		    $_opt                
+	make
+	gcc tools/qt-faststart.c -o tools/qt-faststart
+	make DESTDIR=$PKG install
+
+	install -m755 tools/qt-faststart $PKG/usr/bin
+
+	[ -e '/usr/lib/pkgconfig/x264.pc' ] && \
+		install -m 0755 -D $SRC/ffmpeg-x264-10bit.sh \
+			$PKG/usr/bin/ffmpeg-x264-10bit
+
+	rm -r $PKG/usr/share/ffmpeg/examples
+}

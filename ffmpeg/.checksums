@@ -1,0 +1,4 @@
+6e3533c3b530961d784011c4ff4839f1cf7964d7bf99fe2bbff52f2640b18b07  add-av_stream_get_first_dts-for-chromium.patch
+f096fd4b23ed6b7321dfcc3af1ced8aa013a1f3ecf6a00fd88dd2f31f7110425  ffmpeg-8.0.1-svt-av1-4.patch
+9b0da96f97d9e7c23e7df73d348e7491030e8ed51dcc491ee029dc8785350997  ffmpeg-8.0.1.tar.xz
+b0a55dbf171fba7ce55d08a7c71b3583acc3a8705c4bdceddeebb55f34291e00  ffmpeg-x264-10bit.sh
