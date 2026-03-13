@@ -1,0 +1,7 @@
+gtk3
+vala
+gobject-introspection
+libindicator
+libdbusmenu
+dbus-glib
+gtk-doc
