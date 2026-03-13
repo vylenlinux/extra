@@ -1,0 +1,38 @@
+description="Server and user space API to deal with multimedia"
+homepage="https://github.com/PipeWire/pipewire"
+maintainer="Vylen Linux Team"
+
+name=pipewire
+version=1.6.1
+release=1
+source="$name-$version.tar.gz::https://github.com/PipeWire/$name/archive/refs/tags/$version.tar.gz
+	vylen-pipewire-launcher
+	pipewire.desktop"
+
+build() {
+
+	vylen-meson $name-$version build \
+		-Ddocs=disabled \
+	        -Dvulkan=disabled \
+	        -Dexamples=disabled \
+		-Dsession-managers=[]
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	# enable alsa by default
+	install -Dm644 /dev/null $PKG/usr/share/pipewire/media-session.d/with-alsa
+	mkdir -p $PKG/etc/alsa/conf.d
+	ln -st $PKG/etc/alsa/conf.d /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf
+	ln -st $PKG/etc/alsa/conf.d /usr/share/alsa/alsa.conf.d/50-pipewire.conf
+
+	# install vylen pipewire launcher
+	install -Dm755 $SRC/vylen-pipewire-launcher $PKG/usr/bin/vylen-pipewire-launcher
+
+	# install desktop file
+	install -Dm644 $SRC/pipewire.desktop -t $PKG/etc/xdg/autostart/
+	
+	# remove leftovers
+	rm -r $PKG/usr/share/locale
+
+}
+
