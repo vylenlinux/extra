@@ -1,0 +1,23 @@
+description="Session/policy manager implementation for PipeWire"
+homepage="https://gitlab.freedesktop.org/pipewire/wireplumber"
+maintainer="Vylen Linux Team"
+
+name=wireplumber
+version=0.5.13
+release=1
+source="https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+
+	vylen-meson $name-$version build \
+	    -D system-lua=true \
+	    -D system-lua-version=auto \
+	    -D introspection=disabled \
+	    -D doc=disabled \
+	    -D elogind=disabled \
+	    -D systemd=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	rm -r $PKG/usr/share/locale
+}
