@@ -1,0 +1,15 @@
+description="Text and graphics mode WWW browser"
+homepage="http://links.twibright.com/"
+maintainer="Vylen Linux Team"
+
+name=links
+version=2.30
+release=1
+source="http://links.twibright.com/download/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --mandir=/usr/share/man
+	make
+	make DESTDIR=$PKG install
+}
