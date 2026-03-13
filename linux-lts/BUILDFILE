@@ -3,7 +3,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts
-version=6.18.17
+version=6.18.18
 release=1
 noextract="patch-$version.xz"
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz
