@@ -1,0 +1,14 @@
+description="GObject wrappers for libusb-1.0"
+homepage="https://github.com/hughsie/libgusb"
+maintainer="Vylen Linux Team"
+
+name=libgusb
+version=0.4.9
+release=1
+source="https://github.com/hughsie/libgusb/releases/download/$version/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build -Ddocs=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
