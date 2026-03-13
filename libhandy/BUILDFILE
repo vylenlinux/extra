@@ -1,0 +1,20 @@
+description="Building blocks for modern adaptive GNOME apps"
+homepage="https://gitlab.gnome.org/GNOME/libhandy/"
+maintainer="Vylen Linux Team"
+ 
+
+name=libhandy
+version=1.8.3
+release=1
+source="https://gitlab.gnome.org/GNOME/libhandy/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	vylen-meson $name-$version build \
+		-D gtk_doc=false \
+		-D examples=false \
+		-D tests=false
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+
+	rm -r $PKG/usr/share/locale
+}
