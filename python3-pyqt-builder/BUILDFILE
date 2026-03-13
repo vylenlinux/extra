@@ -1,0 +1,17 @@
+description="PyQt-builder is the PEP 517 compliant build system for PyQt"
+homepage="https://pypi.org/project/PyQt-builder"
+maintainer="Vylen Linux Team"
+
+name=python3-pyqt-builder
+version=1.19.1
+release=1
+source="https://pypi.io/packages/source/p/pyqt_builder/pyqt_builder-$version.tar.gz"
+
+build() {
+	cd pyqt_builder-$version
+
+	SETUPTOOLS_SCM_PRETEND_VERSION=$version 	
+	python3 -m build --wheel --no-isolation
+	python3 -m installer --destdir=$PKG dist/*.whl
+
+}
