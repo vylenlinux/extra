@@ -1,0 +1,17 @@
+ffmpeg
+libevent
+libva
+libwebp
+minizip
+nodejs
+nss
+pciutils
+python3-html5lib
+python3-six
+qt6-tools
+qt6-webchannel
+pcre2
+libxcomposite
+libxcursor
+brotli
+snappy
