@@ -1,0 +1,20 @@
+description="X cursor management library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxcursor"
+maintainer="Vylen Linux Team"
+
+name=libxcursor
+version=1.2.3
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXcursor-$version.tar.xz"
+
+build() {
+	cd libXcursor-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+}
