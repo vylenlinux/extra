@@ -1,0 +1,23 @@
+python3-pyaml-24.12.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/pyaml
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.14/
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/entry_points.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/licenses/COPYING
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml-24.12.1.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyaml/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/__init__.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/__main__.py
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyaml/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/__pycache__/__init__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/__pycache__/__main__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/__pycache__/cli.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyaml/cli.py
