@@ -1,0 +1,23 @@
+description="linux port of openbsd ksh"
+homepage="https://github.com/dimkr/loksh/"
+maintainer="Vylen Linux Team"
+
+name=oksh
+version=7.8
+release=1
+source="https://github.com/ibara/oksh/releases/download/$name-$version/$name-$version.tar.gz"
+
+bsdtar() {
+    tar $@
+}
+
+build() {
+ 	cd $name-$version
+	./configure \
+		--prefix=/ \
+		--bindir=/bin \
+		--enable-lto
+	make
+	make DESTDIR=$PKG install
+}
+
