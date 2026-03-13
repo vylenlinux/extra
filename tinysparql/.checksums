@@ -1,0 +1,3 @@
+f7a2439337f7ab1a40ad399feff618e77c0fcbb131f923cb528f3af9aaef3084  disable-cli-test.patch
+39c4228ea584cb85c55482ba1f6e68867d83bfa08097a041d4787bb747955e86  gh-ci-timeout.patch
+3061da93f64a23a4e5a0976ffc488062eb8eb3b0cb67496e5ebdc1f1082a008d  tinysparql-3.10.1.tar.gz
