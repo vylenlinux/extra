@@ -1,0 +1,14 @@
+description="Select a region in a Wayland compositor and print it to the standard output. Works well with grim."
+homepage="https://github.com/emersion/slurp"
+maintainer="Vylen Linux Team"
+
+name=slurp
+version=1.6.0
+release=1
+source="$name-$version.tar.gz::https://github.com/emersion/slurp/archive/refs/tags/v$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build 
+}

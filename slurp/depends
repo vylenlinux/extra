@@ -1,0 +1,5 @@
+meson
+cairo
+wayland-protocols
+libxkbcommon
+scdoc
