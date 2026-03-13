@@ -1,0 +1,12 @@
+curl
+gnutls
+libndp
+libxslt
+newt
+nss
+polkit
+python3-gobject3
+libpsl
+vala
+wpa_supplicant
+jansson
