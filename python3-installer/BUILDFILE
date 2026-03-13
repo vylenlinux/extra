@@ -1,0 +1,22 @@
+description="A low-level library for installing from a Python wheel distribution"
+homepage="https://github.com/pypa/installer"
+maintainer="Vylen Linux Team"
+
+name=python3-installer
+version=0.7.0
+release=1
+noextract="installer-$version-py3-none-any.whl"
+source="https://files.pythonhosted.org/packages/py3/i/installer/installer-$version-py3-none-any.whl
+	default-bytecode-level.patch"
+
+build() {
+
+	pyver=$(/usr/bin/python3 -c 'import site;print(site.getsitepackages()[0])')
+	mkdir -p $PKG/$pyver
+	bsdtar  -xf $SRC/installer-$version-py3-none-any.whl  -C $PKG/$pyver
+	patch -Np1 -d $PKG/$pyver -i $SRC/default-bytecode-level.patch
+
+	python3 -m compileall $PKG/$pyver
+
+
+}
