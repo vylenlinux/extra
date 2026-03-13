@@ -1,0 +1,12 @@
+libdrm
+libx11
+libglvnd
+libxkbfile
+libxfont2
+libepoxy
+libxdmcp
+libxcvt
+libtirpc
+mesa
+pixman
+xkeyboard-config
