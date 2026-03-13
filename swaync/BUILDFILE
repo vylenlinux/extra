@@ -1,0 +1,16 @@
+description="A simple GTK based notification daemon for SwayWM"
+homepage="https://github.com/ErikReider/SwayNotificationCenter"
+maintainer="Vylen Linux Team"
+
+name=swaync
+version=0.12.5
+release=1
+source="$name-$version.tar.gz::https://github.com/ErikReider/SwayNotificationCenter/archive/v$version.tar.gz"
+
+build() {
+	vylen-meson SwayNotificationCenter-$version build \
+		-Dsystemd-service=false \
+		-Dscripting=true
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}
