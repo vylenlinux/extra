@@ -1,0 +1,50 @@
+description="Virtualization for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V)"
+homepage="https://www.qemu.org"
+maintainer="Vylen Linux Team"
+
+name=qemu
+version=10.2.1
+release=1
+commit=ece408818d27f745ef1b05fb3cc99a1e7a5bf580
+source="$name-$version-$commit.tar.gz::https://github.com/$name/$name/archive/$commit.tar.gz
+	notest.patch"
+
+build() {
+	cd $name-$commit
+
+	patch -Np1 -i $SRC/notest.patch
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libdir=/usr/lib/$name \
+		--libexecdir=/usr/lib/$name \
+		--disable-docs \
+		--disable-gtk \
+		--localstatedir=/var \
+		--python=/usr/bin/python3 \
+		--enable-kvm \
+		--enable-slirp \
+		--enable-spice \
+		--enable-usb-redir \
+		--enable-vhost-net \
+		--enable-virglrenderer \
+                --enable-modules \
+                --enable-sdl \
+                --enable-tpm \
+                --smbd=/usr/bin/smbd \
+                --with-coroutine=ucontext
+
+	make
+	make DESTDIR=$PKG install
+
+	#cp -r $SRC/man $PKG/usr/share
+
+	install -d $PKG/etc/udev/rules.d/
+	echo 'KERNEL=="kvm", NAME="kvm", OWNER="root", GROUP="kvm", MODE="0660"' > \
+		$PKG/etc/udev/rules.d/60-kvm.rules
+
+	rm -fr $PKG/var/run
+}
+
+
