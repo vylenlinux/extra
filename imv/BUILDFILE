@@ -1,0 +1,14 @@
+description="X11/Wayland Image Viewer "
+homepage="https://sr.ht/~exec64/imv/"
+maintainer="Vylen Linux Team"
+
+name=imv
+version=5.0.1
+release=1
+source="$name-$version.tar.gz::https://git.sr.ht/~exec64/imv/archive/v$version.tar.gz"
+
+build() {
+	vylen-meson build $name-v$version -Dlibnsgif=disabled 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
