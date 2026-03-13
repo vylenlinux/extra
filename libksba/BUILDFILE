@@ -1,0 +1,17 @@
+description="Library used to make X.509 certificates as well as making the CMS (Cryptographic Message Syntax) easily accessible by other applications"
+homepage="https://www.gnupg.org/related_software/libksba/"
+maintainer="Vylen Linux Team"
+
+name=libksba
+version=1.6.8
+release=1
+source="https://gnupg.org/ftp/gcrypt/libksba/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+}
