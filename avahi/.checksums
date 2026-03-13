@@ -1,4 +1,4 @@
 5a3ff4118df7c50d76ed398a02cdbfb12e88deff53f672e6127f1b5c5862ad95  0001-Fix-avahi-browse-Invalid-service-type.patch
 2f05960ed1b8fe93249b5eabe7e26f2431fc9dd9b7dc6c8c5f315587ccb71c5c  avahi-0.8-ipv6_race_condition_fix-1.patch
 21a042c0a94c8319000d6980e8e59df4c63aa9becd3ba113270e20c8215591bf  avahi-0.8.tar.gz
-97d8ef964473b3bd9074857cec760d174ac7c9a2041439908a86cd34fe36473f  run.avahi-daemon
+1fa7a54c5fe609f8afdc5ac220b4390277807de8495c0b7262e46a685d5989bd  run.avahi-daemon
