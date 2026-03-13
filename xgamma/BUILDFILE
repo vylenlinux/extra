@@ -1,0 +1,21 @@
+description="Alter a monitor's gamma correction"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xgamma
+version=1.0.8
+release=1
+source="http://ftp.x.org/pub/individual/app/xgamma-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+}
+
