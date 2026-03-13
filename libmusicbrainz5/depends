@@ -1,0 +1,4 @@
+cmake
+ninja
+libxml2
+neon
