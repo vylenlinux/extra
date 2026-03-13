@@ -1,0 +1,6 @@
+appstream
+gobject-introspection
+gtk4
+meson
+sassc
+vala
