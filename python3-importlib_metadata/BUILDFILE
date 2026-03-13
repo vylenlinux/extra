@@ -1,0 +1,22 @@
+description="Read metadata from Python packages"
+homepage="https://pypi.org/project/importlib-metadata/"
+maintainer="Vylen Linux Team"
+
+name=python3-importlib_metadata
+version=8.7.1
+release=1
+source="https://pypi.python.org/packages/source/i/importlib_metadata/importlib_metadata-$version.tar.gz"
+
+build() {
+	cd importlib_metadata-$version
+
+	export SETUPTOOLS_SCM_PRETEND_VERSION=$version
+
+	    gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+
+	    python3 -m installer \
+		-d $PKG \
+		.dist/*.whl
+}
