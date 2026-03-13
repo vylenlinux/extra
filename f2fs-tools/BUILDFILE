@@ -1,0 +1,22 @@
+description="Userland tools for the Flash-Friendly File System (F2FS)"
+homepage="https://f2fs.wiki.kernel.org/"
+maintainer="Vylen Linux Team"
+
+name=f2fs-tools
+version=1.16.0
+release=1
+source="https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz gcc15.patch"
+
+build() {
+	cd $name-$version
+
+    patch -Np1 -i $SRC/gcc15.patch
+
+	autoreconf -fi
+	./configure --prefix=/usr \
+	--sbindir=/usr/bin
+
+	make
+	make DESTDIR=$PKG \
+	sbindir=/usr/bin install
+}
