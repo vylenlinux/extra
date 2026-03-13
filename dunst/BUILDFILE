@@ -1,0 +1,23 @@
+description="Customizable and lightweight notification-daemon"
+homepage="https://dunst-project.org/"
+maintainer="Vylen Linux Team"
+
+name=dunst
+version=1.13.1
+release=1
+source="https://github.com/dunst-project/dunst/archive/v$version/$name-$version.tar.gz"
+
+build() {
+
+	cd $name-$version
+
+	emerald isinstalled wayland && \
+	make all || \
+	export WAYLAND=0 make
+
+	make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=$PKG install
+	install -Dm755 dunstify $PKG/usr/bin/dunstify
+
+	# remove systemd trash file
+	rm -fr $PKG/usr/lib/
+}
