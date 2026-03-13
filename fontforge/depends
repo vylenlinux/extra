@@ -1,0 +1,11 @@
+freetype2
+glib
+libxml2
+cairo
+gtk3
+harfbuzz
+pango
+desktop-file-utils
+shared-mime-info
+libuninameslist
+libspiro
