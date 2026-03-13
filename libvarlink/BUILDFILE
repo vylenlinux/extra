@@ -1,0 +1,14 @@
+description="Varlink C library and command line tool"
+homepage="https://github.com/varlink/libvarlink"
+maintainer="Vylen Linux Team"
+
+name=libvarlink
+version=24.0.1
+release=1
+source="$name-$version.tar.gz::https://github.com/varlink/libvarlink/archive/refs/tags/v$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}

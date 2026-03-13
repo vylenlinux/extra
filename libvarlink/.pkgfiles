@@ -1,0 +1,24 @@
+libvarlink-24.0.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/varlink
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/varlink.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libvarlink.so -> libvarlink.so.0
+-rwxr-xr-x root/root    usr/lib/libvarlink.so.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libvarlink.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/bash-completion/
+drwxr-xr-x root/root    usr/share/bash-completion/completions/
+-rw-r--r-- root/root    usr/share/bash-completion/completions/varlink
+drwxr-xr-x root/root    usr/share/vim/
+drwxr-xr-x root/root    usr/share/vim/vimfiles/
+drwxr-xr-x root/root    usr/share/vim/vimfiles/after/
+drwxr-xr-x root/root    usr/share/vim/vimfiles/after/ftdetect/
+-rw-r--r-- root/root    usr/share/vim/vimfiles/after/ftdetect/varlink.vim
+drwxr-xr-x root/root    usr/share/vim/vimfiles/after/ftplugin/
+-rw-r--r-- root/root    usr/share/vim/vimfiles/after/ftplugin/varlink.vim
+drwxr-xr-x root/root    usr/share/vim/vimfiles/after/syntax/
+-rw-r--r-- root/root    usr/share/vim/vimfiles/after/syntax/varlink.vim
