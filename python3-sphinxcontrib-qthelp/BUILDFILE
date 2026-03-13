@@ -1,0 +1,18 @@
+description="sphinx extension which outputs QtHelp document"
+homepage="https://github.com/sphinx-doc/sphinxcontrib-qthelp/"
+maintainer="Vylen Linux Team"
+
+name=python3-sphinxcontrib-qthelp
+version=2.0.0
+release=1
+source="$name-$version.tar.gz::https://github.com/sphinx-doc/${name#*-}/archive/$version/${name#*-}-$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version
+
+ gpep517 build-wheel \
+		   --wheel-dir .dist \
+		   --output-fd 3 3>&1 >&2
+	   python3 -m installer -d $PKG \
+			.dist/*.whl
+}
