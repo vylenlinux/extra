@@ -1,0 +1,14 @@
+description="Python3 compatibility library"
+homepage="https://pypi.python.org/pypi/six/"
+maintainer="Vylen Linux Team"
+
+name=python3-six
+version=1.17.0
+release=1
+source="$name-$version.tar.gz::https://pypi.io/packages/source/s/six/six-$version.tar.gz"
+
+build() {
+	cd six-$version
+	python3 setup.py build
+	python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}
