@@ -1,0 +1,21 @@
+description="Kill a client by its X resource"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xkill
+version=1.0.7
+release=1
+source="http://ftp.x.org/pub/individual/app/xkill-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+}
+
