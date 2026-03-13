@@ -1,0 +1,5 @@
+cmake
+ninja
+ffmpeg
+libjpeg-turbo
+libpng
