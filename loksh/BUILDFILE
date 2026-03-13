@@ -1,0 +1,15 @@
+description="A Linux port of OpenBSD's ksh"
+homepage="https://github.com/dimkr/loksh/"
+maintainer="Vylen Linux Team"
+
+name=loksh
+version=7.8
+release=1
+source="https://github.com/dimkr/loksh/releases/download/$version/$name-$version.tar.xz"
+
+build() {
+ 	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
+
