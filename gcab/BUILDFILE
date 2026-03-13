@@ -1,0 +1,15 @@
+description="A GObject library to create cabinet files"
+homepage="https://wiki.gnome.org/msitools"
+maintainer="Vylen Linux Team"
+
+name=gcab
+version=1.6
+release=1
+source="https://gitlab.gnome.org/GNOME/$name/-/archive/v$version/$name-v$version.tar.bz2"
+
+build() {
+	cd $name-v$version
+	vylen-meson -Ddocs=false -Dtests=false build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
