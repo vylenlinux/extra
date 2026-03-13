@@ -1,0 +1,28 @@
+description="libclc is an implementation of the library requirements of the OpenCL C programming language"
+homepage="https://libclc.llvm.org/"
+maintainer="Vylen Linux Team"
+
+name=libclc
+version=21.1.8
+release=1
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz"
+
+build() {
+  # libclc is intended to be used with the Clang compiler's OpenCL frontend
+  # https://libclc.llvm.org/
+  export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib
+
+  cmake -S $name-$version.src -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -DLLVM_SPIRV=/usr/bin/llvm-spirv \
+    -DCMAKE_MODULE_PATH="$SRC/cmake-$pkgver.src/Modules" \
+    -Wno-dev
+
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}
