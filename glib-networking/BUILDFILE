@@ -1,0 +1,15 @@
+description="Network related gio modules for GLib"
+homepage="https://gitlab.gnome.org/GNOME/glib-networking"
+maintainer="Vylen Linux Team"
+
+name=glib-networking
+version=2.80.1
+release=1
+source="https://gitlab.gnome.org/GNOME/$name/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	vylen-meson $name-$version build \
+		-Dlibproxy=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
