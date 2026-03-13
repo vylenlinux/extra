@@ -1,0 +1,30 @@
+description="Various utilities for controlling sound card"
+homepage="http://www.alsa-project.org/"
+maintainer="Vylen Linux Team"
+
+name=alsa-utils
+version=1.2.15.2
+release=1
+source="https://www.alsa-project.org/files/pub/utils/$name-$version.tar.bz2
+	run.alsa
+	finish.alsa"
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--disable-alsaconf \
+		--disable-bat \
+		--disable-maintainer-mode \
+		--disable-nls \
+		--disable-xmlto \
+		--with-systemdsystemunitdir=no 
+	make
+	make DESTDIR=$PKG install
+
+	install -Dm755 $SRC/run.alsa $PKG/etc/sv/alsa/run
+	install -Dm755 $SRC/finish.alsa $PKG/etc/sv/alsa/finish
+
+	ln -s /run/runit/supervise.alsa $PKG/etc/sv/alsa/supervise
+}
