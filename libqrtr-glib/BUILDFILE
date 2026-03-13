@@ -1,0 +1,15 @@
+description="Qualcomm IPC Router protocol helper library"
+homepage="https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib"
+maintainer="Vylen Linux Team"
+
+name=libqrtr-glib
+version=1.4.0
+release=1
+source="https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build -Dgtk_doc=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+}
