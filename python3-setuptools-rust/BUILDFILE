@@ -1,0 +1,21 @@
+description="Compile and distribute Python extensions written in rust as easily as if they were written in C"
+homepage="https://github.com/PyO3/setuptools-rust"
+maintainer="Vylen Linux Team"
+
+name=python3-setuptools-rust
+version=1.12.0
+release=1
+source="https://github.com/PyO3/setuptools-rust/archive/v$version/python-setuptools-rust-$version.tar.gz"
+
+build() {
+	export SETUPTOOLS_SCM_PRETEND_VERSION=$version
+
+	cd setuptools-rust-$version
+
+	    gpep517 build-wheel \
+                --wheel-dir .dist \
+                --output-fd 3 3>&1 >&2
+
+            python3 -m installer -d $PKG \
+                .dist/*.whl
+}
