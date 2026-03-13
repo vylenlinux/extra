@@ -1,0 +1,19 @@
+description="Python3 library to access freedesktop.org standards"
+homepage="http://freedesktop.org/Software/pyxdg"
+maintainer="Vylen Linux Team"
+
+name=python3-xdg
+version=0.28
+release=1
+source="$name-$version.tar.gz::https://pypi.org/packages/source/p/pyxdg/pyxdg-$version.tar.gz"
+
+build() {
+	cd pyxdg-$version
+	python3 setup.py build
+	python3 setup.py install \
+	--prefix=/usr\
+	--optimize=1 \
+	--root=$PKG \
+	--skip-build
+}
+
