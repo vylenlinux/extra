@@ -1,0 +1,12 @@
+ccache
+cups
+double-conversion
+gst-plugins-base
+libinput
+libxkbcommon
+shared-mime-info
+vulkan-headers
+libxi
+xcb-util-cursor
+xcb-util-keysyms
+xcb-util-wm
