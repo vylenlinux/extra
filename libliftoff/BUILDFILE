@@ -1,0 +1,14 @@
+description="Lightweight KMS plane library"
+homepage="https://gitlab.freedesktop.org/emersion/libliftoff"
+maintainer="Vylen Linux Team"
+
+name=libliftoff
+version=0.5.0
+release=1
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/emersion/libliftoff/-/archive/v$version/$name-v$version.tar.bz2"
+
+build() {
+	vylen-meson $name-v$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
