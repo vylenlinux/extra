@@ -1,0 +1,25 @@
+python3-msgpack-1.1.2-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.13/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/msgpack-1.1.2-py3.13.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack-1.1.2-py3.13.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack-1.1.2-py3.13.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack-1.1.2-py3.13.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack-1.1.2-py3.13.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/msgpack/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__init__.py
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/__init__.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/__init__.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/exceptions.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/exceptions.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/ext.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/ext.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/fallback.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/__pycache__/fallback.cpython-313.pyc
+-rwxr-xr-x root/root    usr/lib/python3.13/site-packages/msgpack/_cmsgpack.cpython-313-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/exceptions.py
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/ext.py
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/msgpack/fallback.py
