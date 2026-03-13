@@ -14,10 +14,6 @@ build() {
 	meson compile -C build
 	DESTDIR=$PKG meson install --no-rebuild -C build
 
-	# rc service
-	emerald isinstalled sysvinit && \
-		install -Dm755 $SRC/rc.$name $PKG/etc/rc.d/$name || continue
-
 	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
 	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
 }
