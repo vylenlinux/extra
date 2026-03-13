@@ -1,0 +1,20 @@
+description="Python implementation of the geodesic routines in GeographicLib"
+homepage="https://geographiclib.sourceforge.io/1.50/python/"
+maintainer="Vylen Linux Team"
+
+name=python3-geographiclib
+nm=geographiclib
+version=2.1
+release=1
+source="https://files.pythonhosted.org/packages/source/g/$nm/$nm-$version.tar.gz"
+
+build() {
+	cd $nm-$version
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d "$PKG" \
+		.dist/*.whl
+}
+
+
