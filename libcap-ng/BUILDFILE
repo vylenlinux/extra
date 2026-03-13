@@ -1,0 +1,30 @@
+description="A library for Linux that makes using posix capabilities easy"
+homepage="https://people.redhat.com/sgrubb/libcap-ng/"
+maintainer="Vylen Linux Team"
+
+name=libcap-ng
+version=0.9.1
+release=1
+source="https://github.com/stevegrubb/libcap-ng/archive/v${version}/${name}-${version}.tar.gz
+	apply-disable.patch"
+
+build() {
+	cd $name-$version
+
+	touch NEWS
+
+	patch -Np1 -i $SRC/apply-disable.patch
+
+	autoreconf -fvi
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--without-python \
+		--without-python3 \
+		--enable-static=no 
+	make
+	make DESTDIR=$PKG install
+}
