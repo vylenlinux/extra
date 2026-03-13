@@ -1,0 +1,22 @@
+description="X Rendering Extension client library"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=libxrender
+version=0.9.12
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXrender-$version.tar.xz"
+
+build() {
+	cd libXrender-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+
+
+}
