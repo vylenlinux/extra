@@ -1,0 +1,78 @@
+description="Collection of modular and reusable compiler and toolchain technologies"
+homepage="https://llvm.org/"
+maintainer="Vylen Linux Team"
+
+name=llvm
+version=21.1.8
+release=1
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/third-party-${version}.src.tar.xz
+	llvm-config.h"
+noextract="cmake-${version}.src.tar.xz third-party-${version}.src.tar.xz"
+
+build() {
+	cd $name-$version.src
+
+	# The upstream expects them extracted at the same level as the llvm tarball, and 
+	# the extracted directories renamed to cmake and third-party:
+	tar -xf $SRC/cmake-${version}.src.tar.xz
+	tar -xf $SRC/third-party-${version}.src.tar.xz
+	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt                 
+	sed "/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-${version}.src@" \
+		-i cmake/modules/HandleLLVMOptions.cmake
+
+	# Fix Python scripts which use /usr/bin/env python to access the system Python:
+	grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
+
+	cmake -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DLLVM_BINUTILS_INCDIR=/usr/include \
+		-DLLVM_BUILD_DOCS=OFF \
+		-DLLVM_BUILD_LLVM_DYLIB=ON \
+		-DLLVM_BUILD_TESTS=OFF \
+		-DLLVM_ENABLE_ASSERTIONS=OFF \
+		-DLLVM_ENABLE_FFI=ON \
+		-DLLVM_ENABLE_LIBCXX=OFF \
+		-DLLVM_ENABLE_LIBEDIT=OFF \
+		-DLLVM_ENABLE_LIBXML2=OFF \
+		-DLLVM_ENABLE_RTTI=ON \
+		-DLLVM_ENABLE_SPHINX=OFF \
+		-DLLVM_INCLUDE_BENCHMARKS=OFF \
+		-DLLVM_INCLUDE_EXAMPLES=OFF \
+		-DLLVM_INSTALL_UTILS=ON \
+		-DLLVM_LINK_LLVM_DYLIB=ON \
+		-Wno-dev
+	
+	jobs=
+	while : ; do
+		echo "Try ${jobs:-default} parallel jobs ..."
+
+		cmake --build build -j $jobs && break
+
+		# Try few parallel jobs to avoid OOM
+		if [ -z "$jobs" ]; then
+			jobs=$(expr $(free -g | grep Mem: | awk '{print $2}') / 2 + 1)
+			continue
+		elif [ $jobs -gt 2 ]; then
+			jobs=$(expr $jobs - 2)
+			continue
+		elif [ $jobs = 1 ]; then
+			exit 1
+		else
+			jobs=1
+		fi
+	done
+
+
+	DESTDIR=$PKG cmake --install build
+
+	# multilib stub
+	mv $PKG/usr/include/llvm/Config/llvm-config.h \
+	   $PKG/usr/include/llvm/Config/llvm-config-64.h
+
+	cp $SRC/llvm-config.h $PKG/usr/include/llvm/Config/llvm-config.h	
+}
