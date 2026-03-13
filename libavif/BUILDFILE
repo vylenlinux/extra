@@ -1,0 +1,31 @@
+description="Library for encoding and decoding .avif files"
+homepage="https://github.com/AOMediaCodec/libavif"
+maintainer="Vylen Linux Team"
+
+name=libavif
+version=1.4.0
+release=1
+source="https://github.com/AOMediaCodec/$name/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-D AVIF_BUILD_APPS=ON \
+		-D AVIF_LIBYUV=LOCAL \
+		-D AVIF_CODEC_AOM=SYSTEM \
+		-D AVIF_CODEC_DAV1D=SYSTEM \
+		-D AVIF_BUILD_GDK_PIXBUF=ON \
+		-D AVIF_JPEG=SYSTEM \
+		-D AVIF_LIBSHARPYUV=SYSTEM \
+		-D AVIF_BUILD_MAN_PAGES=OFF \
+		-D AVIF_CODEC_SVT=SYSTEM \
+		-D AVIF_BUILD_MAN_PAGES=OFF \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
+
