@@ -1,0 +1,31 @@
+description="Official Telegram Desktop client"
+homepage="https://desktop.telegram.org"
+maintainer="Vylen Linux Team"
+
+name=telegram-desktop
+version=6.5.1
+release=1
+commit=6d74326c5ce53aeb52496f157f0080d9b8515970
+source="https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tdesktop-$version-full.tar.gz
+	https://github.com/tdlib/td/archive/$commit.tar.gz
+	glib2.86.patch"
+
+build() {
+	cmake -S $SRC/td-$commit -B $SRC/td-$commit/build \
+		-DCMAKE_BUILD_TYPE=None \
+		-DCMAKE_INSTALL_PREFIX="$SRC/td-$commit/install" \
+		-Wno-dev \
+		-DTD_E2E_ONLY=ON
+	cmake --build $SRC/td-$commit/build
+	cmake --install $SRC/td-$commit/build
+
+	cmake -S tdesktop-$version-full -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-Dtde2e_DIR="$SRC/td-$commit/install/lib/cmake/tde2e" \
+		-DTDESKTOP_API_ID=611335 \
+		-DTDESKTOP_API_HASH=d524b414d21f4d37f08684c1df41ac9c \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
