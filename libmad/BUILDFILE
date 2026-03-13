@@ -1,0 +1,22 @@
+description="High-quality MPEG audio decoder capable of 24-bit output"
+homepage="https://www.underbit.com/products/mad/"
+maintainer="Vylen Linux Team"
+
+name=libmad
+version=0.16.4
+release=1
+source="$name-$version.tar.gz::https://codeberg.org/tenacityteam/$name/archive/$version.tar.gz"
+
+build() {
+	cmake -S $name -B build -G Ninja \
+		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DEXAMPLE=OFF \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
