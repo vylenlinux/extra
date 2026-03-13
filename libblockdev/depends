@@ -1,0 +1,8 @@
+cryptsetup
+gobject-introspection
+json-glib
+keyutils
+libbytesize
+libnvme
+parted
+yaml

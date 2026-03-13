@@ -1,0 +1,24 @@
+description="C library supporting GObject introspection for manipulation of block devices"
+homepage="https://github.com/storaged-project/libblockdev/"
+maintainer="Vylen Linux Team"
+
+name=libblockdev
+version=3.4.0
+release=1
+source="https://github.com/storaged-project/libblockdev/releases/download/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	
+	./configure \
+		--prefix=/usr \
+            	--sysconfdir=/etc \
+            	--with-python3    \
+		--without-escrow \
+            	--without-gtk-doc \
+		--without-nvdimm \
+            	--without-dm
+	make
+	make DESTDIR=$PKG install
+}
+
