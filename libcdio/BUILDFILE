@@ -1,0 +1,17 @@
+description="library for CD-ROM and CD image access"
+homepage="https://www.gnu.org/software/libcdio/"
+maintainer="Vylen Linux Team"
+
+name=libcdio
+version=2.3.0
+release=1
+source="https://github.com/libcdio/libcdio/releases/download/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
