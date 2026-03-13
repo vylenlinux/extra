@@ -1,0 +1,17 @@
+description="Utility library for gitignore style pattern matching of file paths"
+homepage="https://github.com/cpburnz/python-path-specification"
+maintainer="Vylen Linux Team"
+
+name=python3-pathspec
+version=1.0.4
+release=1
+source="https://pypi.io/packages/source/p/pathspec/pathspec-$version.tar.gz"
+
+build() {
+  cd pathspec-$version
+  /usr/bin/python3 setup.py build
+  /usr/bin/python3 setup.py install --prefix=/usr \
+    --root=$PKG \
+    --skip-build \
+    -O1
+}
