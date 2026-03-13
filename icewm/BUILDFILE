@@ -1,0 +1,16 @@
+description="Window manager with the goals of speed, simplicity, and not getting in the user's way"
+homepage="https://ice-wm.org/"
+maintainer="Vylen Linux Team"
+
+name=icewm
+version=4.0.0
+release=1
+source="https://github.com/ice-wm/icewm/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
