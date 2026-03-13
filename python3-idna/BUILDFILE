@@ -1,0 +1,19 @@
+description="Internationalized Domain Names in Applications (IDNA)"
+homepage="https://github.com/kjd/idna"
+maintainer="Vylen Linux Team"
+
+name=python3-idna
+_name=${name#*-}
+_n=${_name%${_name#?}}
+version=3.11
+release=1
+source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version
+	    gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	    python3 -m installer -d $PKG \
+		.dist/*.whl
+}
