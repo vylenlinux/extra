@@ -1,0 +1,20 @@
+description="GLib interfaces to the D-Bus API"
+homepage="https://www.freedesktop.org/wiki/Software/dbus/"
+maintainer="Vylen Linux Team"
+
+name=dbus-glib
+version=0.114
+release=1
+source="http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+  	./configure --prefix=/usr \
+		    --libexecdir=/usr/lib/$name \
+	            --sysconfdir=/etc \
+	            --disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
