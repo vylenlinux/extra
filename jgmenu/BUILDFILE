@@ -1,0 +1,15 @@
+description="A simple X11 menu intended to be use with openbox and tint2"
+homepage="https://www.github.com/johanmalm/jgmenu"
+maintainer="Vylen Linux Team"
+
+name=jgmenu
+version=4.5.0
+release=1
+source="https://github.com/johanmalm/jgmenu/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,7 @@
+libx11
+libxrandr
+cairo
+pango
+librsvg
+libxml2
+glib
