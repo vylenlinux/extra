@@ -1,0 +1,27 @@
+description="Library and other files required by menu-cache-gen libexec of menu-cache"
+homepage="https://lxde.org/"
+maintainer="Vylen Linux Team"
+
+name=libfm-extra
+version=1.4.1
+release=1
+source="${name%-*}-$version.tar.gz::https://github.com/lxde/libfm/archive/$version.tar.gz"
+
+build() {
+	cd ${name%-*}-$version
+	autoreconf -fvi
+	./configure \
+		--prefix=/usr \
+	        --sysconfdir=/etc \
+		--with-extra-only \
+	        --with-gtk=no \
+		--enable-gtk-doc \
+	        --disable-static
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/include/libfm
+
+	mv $PKG/usr/include/libfm-1.0/ $PKG/usr/include/libfm
+}
+
