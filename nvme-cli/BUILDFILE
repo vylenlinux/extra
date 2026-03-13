@@ -1,0 +1,17 @@
+description="NVMe management command line interface"
+homepage="https://github.com/linux-nvme/nvme-cli"
+maintainer="Vylen Linux Team"
+
+name=nvme-cli
+version=2.16
+release=1
+source="https://github.com/linux-nvme/nvme-cli/archive/v$version/$name-$version.tar.gz"
+
+build() {
+       vylen-meson $name-$version build \
+                -Dudevrulesdir=/lib/udev/rules.d
+        meson compile -C build
+        DESTDIR=$PKG meson install --no-rebuild -C build
+
+        rm -r $PKG/usr/lib/systemd
+}
