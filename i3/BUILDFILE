@@ -1,0 +1,15 @@
+description="An improved dynamic tiling window manager"
+homepage="https://i3wm.org/"
+maintainer="Vylen Linux Team"
+
+name=i3
+version=4.25.1
+release=1
+source="http://i3wm.org/downloads/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	vylen-meson build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
