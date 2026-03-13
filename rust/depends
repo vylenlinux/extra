@@ -1,0 +1,5 @@
+curl
+cmake
+python3
+libssh2
+lld
