@@ -1,0 +1,19 @@
+description="Core utilities for Python packages"
+homepage="https://github.com/pypa/packaging"
+maintainer="Vylen Linux Team"
+
+name=python3-packaging
+_name=${name#*-}
+_n=${_name%${_name#?}}
+version=26.0
+release=1
+source="$name-$version.tar.gz::https://github.com/pypa/packaging/archive/refs/tags/$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version
+	    gpep517 build-wheel \
+		    --wheel-dir .dist \
+		    --output-fd 3 3>&1 >&2
+	    python3 -m installer -d $PKG \
+			.dist/*.whl
+}
