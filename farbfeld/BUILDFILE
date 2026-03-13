@@ -1,0 +1,13 @@
+description="A lossless image format"
+homepage="https://tools.suckless.org/farbfeld/"
+maintainer="Vylen Linux Team"
+
+name=farbfeld
+version=4
+release=1
+source="https://dl.suckless.org/farbfeld/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	make PREFIX=/usr DESTDIR=$PKG install
+}
