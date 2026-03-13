@@ -1,0 +1,17 @@
+description="Standalone CSS2 parsing and manipulation library"
+homepage="https://gitlab.gnome.org/GNOME/libcroco"
+maintainer="Vylen Linux Team"
+
+name=libcroco
+version=0.6.13
+release=1
+source="https://gitlab.gnome.org/Archive/libcroco/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	autoreconf -fvi
+	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
