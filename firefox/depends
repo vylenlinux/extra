@@ -1,0 +1,15 @@
+autoconf2.13
+dbus-glib
+cbindgen
+clang
+ffmpeg
+hicolor-icon-theme
+libevent
+libnotify
+libxdamage
+libxscrnsaver
+libwebp
+nodejs
+nss
+pkgconf
+unzip
