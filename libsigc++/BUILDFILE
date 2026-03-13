@@ -1,0 +1,16 @@
+description="Implements a typesafe callback system for standard C++"
+homepage="https://libsigcplusplus.github.io/libsigcplusplus/"
+maintainer="Vylen Linux Team"
+
+name=libsigc++
+version=2.12.1
+release=1
+source="$name-$version.tar.gz::https://github.com/libsigcplusplus/libsigcplusplus/archive/$version.tar.gz"
+
+build() {
+	vylen-meson libsigcplusplus-$version build \
+		-Dbuild-documentation=false \
+		-Dmaintainer-mode=true
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
