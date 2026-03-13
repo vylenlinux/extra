@@ -1,0 +1,10 @@
+dbus
+glib
+lcms2
+sqlite
+libgudev
+libgusb
+polkit
+gobject-introspection
+vala
+meson
