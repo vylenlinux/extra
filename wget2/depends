@@ -1,0 +1,7 @@
+ca-certificates
+openssl
+util-linux
+libidn2
+pcre2
+xz
+gperf

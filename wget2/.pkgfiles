@@ -1,0 +1,40 @@
+wget2-2.2.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/wget2
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/wget.h
+-rw-r--r-- root/root    usr/include/wgetver.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libwget.so -> libwget.so.4.0.0
+lrwxrwxrwx root/root    usr/lib/libwget.so.4 -> libwget.so.4.0.0
+-rwxr-xr-x root/root    usr/lib/libwget.so.4.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libwget.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-rw-r--r-- root/root    usr/share/man/man3/libwget-base64.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-bitmap.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-console.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-dns-caching.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-dns.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-error.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-hash.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-hashmap.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-io.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-ip.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-list.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-mem.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-net.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-parse_atom.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-parse_sitemap.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-printf.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-random.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-robots.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-stringmap.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-thread.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-utils.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-vector.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-xalloc.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libwget-xml.3.gz
