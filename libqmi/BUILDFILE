@@ -1,0 +1,15 @@
+description="QMI modem protocol helper library"
+homepage="https://www.freedesktop.org/wiki/Software/libqmi/"
+maintainer="Vylen Linux Team"
+
+name=libqmi
+version=1.38.0
+release=1
+source="https://gitlab.freedesktop.org/mobile-broadband/libqmi/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+}
