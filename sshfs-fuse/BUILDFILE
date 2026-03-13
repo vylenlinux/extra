@@ -1,0 +1,16 @@
+description="Remote filesystem in userspace using SSH"
+homepage="https://github.com/libfuse/sshfs "
+maintainer="Vylen Linux Team"
+
+name=sshfs-fuse
+version=3.7.5
+release=1
+source="https://github.com/libfuse/sshfs/releases/download/sshfs-$version/sshfs-$version.tar.xz"
+
+build() {
+	vylen-meson  sshfs-$version  build \
+		--buildtype=release
+
+	meson compile -C build -j ${JOBS:-1}
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
