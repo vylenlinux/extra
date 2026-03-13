@@ -1,0 +1,22 @@
+diff -Naur html5lib-python-1.1.orig/setup.py html5lib-python-1.1/setup.py
+--- html5lib-python-1.1.orig/setup.py	2026-02-19 23:39:47.587011128 +0100
++++ html5lib-python-1.1/setup.py	2026-02-19 23:40:37.321904154 +0100
+@@ -6,9 +6,7 @@
+ 
+ from os.path import join, dirname
+ from setuptools import setup, find_packages, __version__ as setuptools_version
+-from pkg_resources import parse_version
+-
+-import pkg_resources
++from packaging.version import parse as parse_version
+ 
+ try:
+     import _markerlib.markers
+@@ -49,6 +47,7 @@
+ # Avoid the very buggy pkg_resources.parser, which doesn't consistently
+ # recognise the markers needed by this setup.py
+ # Change this to setuptools 20.10.0 to support all markers.
++pkg_resources = None
+ if pkg_resources:
+     if parse_version(setuptools_version) < parse_version('18.5'):
+         MarkerEvaluation = pkg_resources.MarkerEvaluation

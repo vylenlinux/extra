@@ -1,0 +1,24 @@
+description="A Python HTML parser/tokenizer based on the WHATWG HTML5 spec."
+homepage="https://github.com/html5lib/html5lib-python"
+maintainer="Vylen Linux Team"
+
+name=python3-html5lib
+version=1.1
+release=1
+source="$name-$version.tar.gz::https://github.com/html5lib/html5lib-python/archive/$version/html5lib-python-$version.tar.gz
+	python-3.14-compatibility.patch setuptools.patch"
+
+build() {
+	cd html5lib-python-$version
+
+	#Fix build with python 3.14
+	patch -Np1 -i $SRC/python-3.14-compatibility.patch
+
+	# Fix build with setuptools
+	patch -Np1 -i $SRC/setuptools.patch
+
+	/usr/bin/python3 setup.py build
+
+	/usr/bin/python3 setup.py install \
+		--prefix=/usr --root=$PKG --optimize=1 --skip-build
+}
