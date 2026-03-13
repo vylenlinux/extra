@@ -1,0 +1,6 @@
+colord
+glib
+gtk3
+intltool
+lcms2
+meson
