@@ -1,0 +1,6 @@
+cmake
+ninja
+gettext
+pcre2
+python3-babel
+rust
