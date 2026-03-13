@@ -1,0 +1,14 @@
+description="The pixel-manipulation library for X and cairo"
+homepage="https://cgit.freedesktop.org/pixman/"
+maintainer="Vylen Linux Team"
+
+name=pixman
+version=0.46.4
+release=1
+source="https://www.x.org/releases/individual/lib/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build -Dtests=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
