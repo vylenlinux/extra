@@ -1,0 +1,4 @@
+cython3
+meson-python
+python3-setuptools
+python3-gpep517
