@@ -1,0 +1,19 @@
+description="portable and efficient API to determine the call-chain of a program"
+homepage="https://savannah.nongnu.org/projects/libunwind"
+maintainer="Vylen Linux Team"
+
+name=libunwind
+version=1.8.3
+release=1
+source="https://github.com/libunwind/libunwind/releases/download/v$version/$name-$version.tar.gz
+	457612f470f8c0e718cdf7f14ef1ecb583f3b3a6.patch"
+
+build() {
+	cd $name-$version
+	patch -Np1 -i $SRC/457612f470f8c0e718cdf7f14ef1ecb583f3b3a6.patch
+	autoreconf -fvi
+	./configure --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --enable-documentation
+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+	make
+	make DESTDIR=$PKG install
+}
