@@ -1,0 +1,17 @@
+description="Keyboard configuration database for the X Window System"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xkeyboard-config
+version=2.47
+release=1
+source="https://gitlab.freedesktop.org/$name/$name/-/archive/$name-$version/$name-$name-$version.tar.bz2"
+
+build() {
+
+        vylen-meson $name-$name-$version build \
+		-Dcompat-rules=true \
+		-Dxorg-rules-symlinks=true
+        meson compile -C build
+        DESTDIR=$PKG meson install --no-rebuild -C build
+}
