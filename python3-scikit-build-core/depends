@@ -1,0 +1,9 @@
+cmake
+python3-packaging
+python3-pathspec
+python3-typing_extensions
+ninja
+python3-gpep517
+python3-hatchling
+python3-hatch-vcs
+python3-wheel
