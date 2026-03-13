@@ -1,0 +1,16 @@
+gvfs-smb-1.58.2-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/gvfsd-smb
+-rwxr-xr-x root/root    usr/lib/gvfsd-smb-browse
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/GConf/
+drwxr-xr-x root/root    usr/share/GConf/gsettings/
+-rw-r--r-- root/root    usr/share/GConf/gsettings/gvfs-smb.convert
+drwxr-xr-x root/root    usr/share/glib-2.0/
+drwxr-xr-x root/root    usr/share/glib-2.0/schemas/
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.gnome.system.smb.gschema.xml
+drwxr-xr-x root/root    usr/share/gvfs/
+drwxr-xr-x root/root    usr/share/gvfs/mounts/
+-rw-r--r-- root/root    usr/share/gvfs/mounts/smb-browse.mount
+-rw-r--r-- root/root    usr/share/gvfs/mounts/smb.mount
