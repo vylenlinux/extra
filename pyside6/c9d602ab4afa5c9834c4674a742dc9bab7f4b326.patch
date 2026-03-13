@@ -1,0 +1,38 @@
+From c9d602ab4afa5c9834c4674a742dc9bab7f4b326 Mon Sep 17 00:00:00 2001
+From: Samuli Piippo <samuli.piippo@qt.io>
+Date: Fri, 10 Oct 2025 08:33:54 +0000
+Subject: [PATCH] Build: Fix super project build for libpyside
+
+Amend f73a5a291cd1a3b6f7bbd3f761435dc468771a31 and extend
+it to libpyside to avoid dublicate installations.
+
+Task-number: QTBUG-141036
+Change-Id: I7037c00c2fcdb4bddc51e8240a46ac689d814477
+Reviewed-by: Shyamnath Premnadh <Shyamnath.Premnadh@qt.io>
+(cherry picked from commit 57579e218cfa3f7f36ea7d819c170bc62bc9ae4a)
+Reviewed-by: Qt Cherry-pick Bot <cherrypick_bot@qt-project.org>
+---
+ sources/pyside6/libpyside/CMakeLists.txt | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/sources/pyside6/libpyside/CMakeLists.txt b/sources/pyside6/libpyside/CMakeLists.txt
+index 75c232874..b0050dd00 100644
+--- a/sources/pyside6/libpyside/CMakeLists.txt
++++ b/sources/pyside6/libpyside/CMakeLists.txt
+@@ -189,10 +189,12 @@ install(TARGETS pyside6 EXPORT PySide6Targets
+ set_target_properties(pyside6 PROPERTIES
+     VERSION ${PYSIDE_SOVERSION})
+ 
+-install(TARGETS pyside6 EXPORT PySide6WheelTargets
+-                        LIBRARY DESTINATION "PySide6"
+-                        ARCHIVE DESTINATION "PySide6"
+-                        RUNTIME DESTINATION "PySide6")
++if(NOT is_pyside6_superproject_build)
++    install(TARGETS pyside6 EXPORT PySide6WheelTargets
++                            LIBRARY DESTINATION "PySide6"
++                            ARCHIVE DESTINATION "PySide6"
++                            RUNTIME DESTINATION "PySide6")
++endif()
+ 
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/pyside6${pyside6_SUFFIX}.pc"
+         DESTINATION "${LIB_INSTALL_DIR}/pkgconfig")
