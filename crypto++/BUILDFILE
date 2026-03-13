@@ -1,0 +1,15 @@
+description="A free C++ class library of cryptographic schemes "
+homepage="https://www.cryptopp.com/"
+maintainer="Vylen Linux Team"
+
+name=crypto++
+version=8.9.0
+_v=$(echo $version | sed 's/\./_/g')
+release=1
+source="$name-$version.tar.gz::https://github.com/weidai11/cryptopp/archive/CRYPTOPP_${_v}.tar.gz"
+        
+build() {
+	cd cryptopp-CRYPTOPP_${_v}
+	make PREFIX="/usr" all libcryptopp.pc
+	make DESTDIR=$PKG PREFIX="/usr" install
+}
