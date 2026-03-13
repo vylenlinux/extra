@@ -1,0 +1,4 @@
+meson
+gobject-introspection
+hwdata
+osinfo-db

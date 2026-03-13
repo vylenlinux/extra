@@ -1,0 +1,22 @@
+description="A library for querying the osinfo database"
+homepage="https://libosinfo.org/"
+maintainer="Vylen Linux Team"
+
+name=libosinfo
+version=1.12.0
+release=1
+source="https://releases.pagure.org/libosinfo/$name-$version.tar.xz
+	libxml-2.14.patch"
+
+build() {
+	patch -d $name-$version -Np1 -i $SRC/libxml-2.14.patch
+
+	vylen-meson $name-$version build \
+		-Denable-gtk-doc=false \
+		-Denable-vala=disabled \
+		-Dwith-usb-ids-path=/usr/share/hwdata/usb.ids \
+                -Dwith-pci-ids-path=/usr/share/hwdata/pci.ids
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
+
