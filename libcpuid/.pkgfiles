@@ -1,0 +1,21 @@
+libcpuid-0.8.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cpuid_tool
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/libcpuid/
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid.h
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid_constants.h
+-rw-r--r-- root/root    usr/include/libcpuid/libcpuid_types.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/cpuid/
+-rw-r--r-- root/root    usr/lib/cmake/cpuid/cpuidConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cpuid/cpuidConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cpuid/cpuidTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cpuid/cpuidTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libcpuid.so -> libcpuid.so.18
+lrwxrwxrwx root/root    usr/lib/libcpuid.so.18 -> libcpuid.so.18.1.1
+-rwxr-xr-x root/root    usr/lib/libcpuid.so.18.1.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libcpuid.pc
