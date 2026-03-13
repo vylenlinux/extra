@@ -1,0 +1,18 @@
+description="Sanitize/validate strings in filenames/file-paths/etc"
+homepage="https://github.com/thombashi/pathvalidate"
+maintainer="Vylen Linux Team"
+
+name=python3-pathvalidate
+version=3.3.1
+release=1
+source="$name-$version.tar.gz::https://github.com/thombashi/pathvalidate/releases/download/v$version/pathvalidate-$version.tar.gz"
+
+
+build() {
+	cd pathvalidate-$version
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d $PKG \
+		.dist/*.whl
+}
