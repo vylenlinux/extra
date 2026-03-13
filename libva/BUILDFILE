@@ -1,0 +1,14 @@
+description="Library which provides access to hardware accelerated video processing"
+homepage="https://01.org/linuxmedia/vaapi"
+maintainer="Vylen Linux Team"
+
+name=libva
+version=2.23.0
+release=1
+source="https://github.com/intel/libva/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
