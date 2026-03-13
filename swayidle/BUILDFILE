@@ -1,0 +1,18 @@
+description="Idle management daemon for Wayland"
+homepage="https://github.com/swaywm/swayidle"
+maintainer="Vylen Linux Team"
+
+name=swayidle
+version=1.9.0
+release=1
+source="https://github.com/swaywm/$name/releases/download/v$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Dbash-completions=$(emerald isinstalled bash-completions && printf "true" || printf "false") \
+		-Dfish-completions=$(emerald isinstalled fish-completions && printf "true" || printf "false") \
+		-Dzsh-completions=$(emerald isinstalled zsh-completions && printf "true" || printf "false") \
+		-Dlogind=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
