@@ -1,0 +1,15 @@
+description="A computer display server protocol"
+homepage="https://wayland.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=wayland
+version=1.24.0
+release=1
+source="http://gitlab.freedesktop.org/$name/$name/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	vylen-meson -Dtests=false -Ddocumentation=false build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
