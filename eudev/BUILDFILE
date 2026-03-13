@@ -1,0 +1,37 @@
+description="Programs for dynamic creation of device nodes"
+homepage="https://www.kernel.org/pub/software/network/ethtool/"
+maintainer="Vylen Linux Team"
+
+name=eudev
+version=3.2.14
+release=1
+source="$name-$version.tar.gz::https://github.com/eudev-project/eudev/archive/v$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	OPTS=""
+	emerald isinstalled libxslt && OPTS="--enable-manpages"
+
+	# remove an unneeded group 'sgx'
+	sed -i -e 's/GROUP="sgx", //' rules/50-udev-default.rules
+
+	autoreconf -f -i -s
+	./configure \
+		--prefix=/usr \
+		--bindir=/sbin \
+		--sbindir=/sbin \
+		--libdir=/usr/lib \
+		--sysconfdir=/etc \
+		--libexecdir=/lib \
+		--with-rootprefix= \
+		--with-rootlibdir=/lib \
+		--disable-static \
+		$OPTS
+	make
+
+	mkdir -pv $PKG/lib/udev/rules.d
+	mkdir -pv $PKG/etc/udev/rules.d
+
+	make DESTDIR=$PKG install
+}
