@@ -1,0 +1,11 @@
+python3-pycurl-7.45.7-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.13/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/pycurl-7.45.6-py3.13.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/pycurl-7.45.6-py3.13.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/pycurl-7.45.6-py3.13.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/pycurl-7.45.6-py3.13.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/pycurl-7.45.6-py3.13.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/share/
