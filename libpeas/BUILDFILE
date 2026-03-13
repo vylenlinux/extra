@@ -1,0 +1,17 @@
+description="GObject based plugins engine"
+homepage="https://wiki.gnome.org/Projects/Libpeas"
+maintainer="Vylen Linux Team"
+
+name=libpeas
+version=2.2.1
+release=1
+source="https://gitlab.gnome.org/GNOME/libpeas/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Dgtk_doc=false \
+		-Dgjs=false \
+		-Dlua51=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
