@@ -1,0 +1,30 @@
+description="Modern toolset used for generating Makefiles"
+homepage="https://www.cmake.org/"
+maintainer="Vylen Linux Team"
+
+name=cmake
+version=4.2.3
+release=1
+source="https://www.cmake.org/files/v${version%.*}/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
+	sed -i Source/CMakeInstallDestinations.cmake \
+	    -e 's|share/cmake-${CMake_VERSION_MAJOR}.${CMake_VERSION_MINOR}|share/cmake|'
+
+	./bootstrap \
+		--prefix=/usr \
+		--datadir=/share/$name \
+		--no-system-jsoncpp  \
+		--no-system-cppdap   \
+		--no-system-librhash \
+		--system-libs \
+		-- -D Cmake_BUILD_LTO=ON \
+		-D BUILD_TESTING=OFF
+	make
+	make DESTDIR=$PKG install
+
+	rm -r $PKG/usr/doc
+}
