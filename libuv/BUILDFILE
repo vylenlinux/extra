@@ -1,0 +1,16 @@
+description="Multi-platform support library with a focus on asynchronous I/O"
+homepage="https://github.com/libuv/libuv"
+maintainer="Vylen Linux Team"
+
+name=libuv
+version=1.52.1
+release=1
+source="https://dist.libuv.org/dist/v$version/libuv-v$version.tar.gz"
+
+build() {
+	cd $name-v$version
+	sh autogen.sh
+	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+}
