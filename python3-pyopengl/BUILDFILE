@@ -1,0 +1,13 @@
+description="The cross platform Python binding to OpenGL and related APIs"
+homepage="http://pyopengl.sourceforge.net/"
+maintainer="Vylen Linux Team"
+
+name=python3-pyopengl
+version=3.1.10
+release=1
+source="$name-$version.tar.gz::https://pypi.python.org/packages/source/P/PyOpenGL/pyopengl-${version}.tar.gz"
+
+build() {
+    cd pyopengl-$version
+    /usr/bin/python3 setup.py install --root=$PKG --optimize=1 --skip-build
+}
