@@ -1,0 +1,16 @@
+description="Plugins for various audio libraries and sound servers"
+homepage="https://www.alsa-project.org/wiki/Main_Page"
+maintainer="Vylen Linux Team"
+
+name=alsa-plugins
+version=1.2.12
+release=1
+source="ftp://ftp.alsa-project.org/pub/plugins/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+}
