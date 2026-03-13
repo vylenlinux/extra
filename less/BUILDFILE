@@ -1,0 +1,16 @@
+description="A text file viewer"
+homepage="https://www.greenwoodsoftware.com/less/"
+maintainer="Vylen Linux Team"
+
+name=less
+version=692
+release=1
+source="$name-$version.tar.gz::http://greenwoodsoftware.com/$name/$name-$version-beta.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+}
