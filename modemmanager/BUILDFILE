@@ -1,0 +1,19 @@
+description="Mobile broadband modem management service"
+homepage="https://www.freedesktop.org/wiki/Software/ModemManager/"
+maintainer="Vylen Linux Team"
+
+name=modemmanager
+version=1.24.2
+release=1
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/$version/ModemManager-$version.tar.gz"
+
+build() {
+	vylen-meson ModemManager-$version build \
+		-Dat_command_via_dbus=true \
+		-Dpolkit=permissive \
+		-Dsystemdsystemunitdir=no \
+		-Dsystemd_suspend_resume=false \
+		-Dsystemd_journal=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
