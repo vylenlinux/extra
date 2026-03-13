@@ -1,1 +1,1 @@
-Vylen Linux COMMUNITY ports used by emerald
+Vylen Linux MAIN ports used by emerald
