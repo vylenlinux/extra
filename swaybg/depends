@@ -1,0 +1,4 @@
+meson
+ninja
+wayland-protocols
+cairo
