@@ -1,0 +1,14 @@
+description="nl80211 based CLI configuration utility for wireless devices"
+homepage="https://wireless.wiki.kernel.org/en/users/documentation/iw"
+maintainer="Vylen Linux Team"
+
+name=iw
+version=6.17
+release=1
+source="https://www.kernel.org/pub/software/network/$name/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+  	make
+	make DESTDIR=$PKG SBINDIR=/sbin install
+}
