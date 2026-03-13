@@ -1,0 +1,14 @@
+description="Runit bootscripts for Vylen Linux"
+homepage="https://gitlab.com/vylen/runit-rc"
+maintainer="Vylen Linux Team"
+
+name=runit-rc
+version=20260312
+release=1
+source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    cd "${name}-${version}"
+    make all
+    DESTDIR="${PKG}" make install
+}
