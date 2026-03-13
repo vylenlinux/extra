@@ -1,0 +1,22 @@
+description="Cross-platform audio output library and plugins."
+homepage="https://github.com/xiph/libao"
+maintainer="Vylen Linux Team"
+
+name=libao
+version=1.2.2
+release=1
+source="https://github.com/xiph/$name/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	export CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
+
+	./autogen.sh
+	./configure --prefix=/usr --enable-pulse=yes
+
+	make
+	make DESTDIR=$PKG install
+
+	rm -r $PKG/usr/share/doc
+}
