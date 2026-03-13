@@ -1,0 +1,17 @@
+description="Asynchronous event notification software library"
+homepage="https://libevent.org/"
+maintainer="Vylen Linux Team"
+
+name=libevent
+version=2.1.12
+release=1
+source="https://github.com/$name/$name/releases/download/release-$version-stable/$name-$version-stable.tar.gz
+libevent-2.1.12-libressl.patch"
+
+build() {
+	cd $name-$version-stable
+    patch -Np1 -i ../libevent-2.1.12-libressl.patch
+  	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+}
