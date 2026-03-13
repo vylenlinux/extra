@@ -1,0 +1,19 @@
+description="Python library for creating editable wheels"
+homepage="https://github.com/pfmoore/editables"
+maintainer="Vylen Linux Team"
+
+name=python3-editables
+version=0.5
+release=1
+source="https://pypi.org/packages/source/e/editables/editables-$version.tar.gz"
+
+build() {
+  cd editables-$version
+
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+
+	python3 -m installer -d $PKG \
+		.dist/*.whl	
+}
