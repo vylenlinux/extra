@@ -1,0 +1,80 @@
+From dash  Fri Oct 31 05:10:00 2025
+From: Herbert Xu <herbert () gondor ! apana ! org ! au>
+Date: Fri, 31 Oct 2025 05:10:00 +0000
+To: dash
+Subject: [PATCH] options: Call input_init before using stdin_istty
+Message-Id: <aQREqBcMzzW1_Blw () gondor ! apana ! org ! au>
+X-MARC-Message: https://marc.info/?l=dash&m=176188900609643
+
+j.daubert@posteo.de wrote:
+> With dash 0.5.13.1 together with your latest patch I got this:
+> 
+> $:~> echo date | /bin/sh
+> $:\w> Do 30. Okt 12:21:36 CET 2025
+> $:\w>
+> /bin/sh: 1: Cannot set tty process group (No such process)
+> $:~>
+> 
+> with dash 0.5.12 and bash this works:
+> 
+> $:~> echo date | /bin/bash
+> Do 30. Okt 12:22:52 CET 2025
+> $:~>
+
+Oh yes, the input_init optimisation went a bit over the top:
+
+---8<---
+Call input_init before using stdin_istty as otherwise it will
+always be true.
+
+Reported-by: Juergen Daubert <j.daubert@posteo.de>
+Fixes: 6abb589582c6 ("input: Call input_init on first use")
+Signed-off-by: Herbert Xu <herbert@gondor.apana.org.au>
+
+diff --git a/src/input.c b/src/input.c
+index c36d120..c7236d0 100644
+--- a/src/input.c
++++ b/src/input.c
+@@ -79,8 +79,6 @@ struct parsefile *parsefile = &basepf;	/* current input file */
+ int whichprompt;		/* 1 == PS1, 2 == PS2 */
+ int stdin_istty = -1;
+ 
+-MKINIT void input_init(void);
+-
+ STATIC void pushfile(void);
+ static void popstring(void);
+ static int preadfd(void);
+diff --git a/src/input.h b/src/input.h
+index 706ac73..59dc5a1 100644
+--- a/src/input.h
++++ b/src/input.h
+@@ -119,6 +119,7 @@ void unwindfiles(struct parsefile *);
+ void popallfiles(void);
+ void flush_input(void);
+ void reset_input(void);
++void input_init(void);
+ 
+ static inline int input_get_lleft(struct parsefile *pf)
+ {
+diff --git a/src/options.c b/src/options.c
+index c318e0f..c4eedeb 100644
+--- a/src/options.c
++++ b/src/options.c
+@@ -138,8 +138,11 @@ procargs(char **xargv)
+ 			sh_error("-c requires an argument");
+ 		sflag = 1;
+ 	}
+-	if (iflag == 2 && sflag == 1 && stdin_istty && isatty(2))
+-		iflag = 1;
++	if (iflag == 2 && sflag == 1) {
++		input_init();
++		if (stdin_istty && isatty(2))
++			iflag = 1;
++	}
+ 	if (mflag == 2)
+ 		mflag = iflag;
+ 	for (i = 0; i < NOPTS; i++)
+-- 
+Email: Herbert Xu <herbert@gondor.apana.org.au>
+Home Page: http://gondor.apana.org.au/~herbert/
+PGP Key: http://gondor.apana.org.au/~herbert/pubkey.txt

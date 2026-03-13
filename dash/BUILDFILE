@@ -1,0 +1,23 @@
+description="POSIX compliant shell"
+homepage="http://gondor.apana.org.au/~herbert/dash/"
+maintainer="Vylen Linux Team"
+
+name=dash
+version=0.5.13.1
+release=1
+source="http://gondor.apana.org.au/~herbert/dash/files/$name-$version.tar.gz
+	call-input_init-before-using-stdin_istty.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/call-input_init-before-using-stdin_istty.patch
+
+	./configure \
+		--prefix=/usr \
+		--bindir=/bin \
+		--mandir=/usr/share/man
+	make
+	make DESTDIR=$PKG install
+	ln -s dash $PKG/bin/sh
+}
