@@ -1,0 +1,21 @@
+description="Utility for determining the type of a given file or files"
+homepage="https://www.darwinsys.com/file/"
+maintainer="Vylen Linux Team"
+
+name=file
+version=5.47
+release=1
+source="ftp://ftp.astron.com/pub/$name/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--enable-fsect-man5 \
+                --enable-static \
+                --disable-libseccomp \
+		--disable-zstdlib
+	make
+	make DESTDIR=$PKG install
+}
