@@ -1,0 +1,21 @@
+description="X11 Video Motion Compensation extension library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxvmc"
+maintainer="Vylen Linux Team"
+
+name=libxvmc
+version=1.0.15
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXvMC-$version.tar.xz"
+
+build() {
+	cd libXvMC-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
