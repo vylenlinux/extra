@@ -1,0 +1,21 @@
+description="A collection of tools for internationalizing Python applications"
+homepage="http://babel.pocoo.org/"
+maintainer="Vylen Linux Team"
+
+name=python3-babel
+version=2.18.0
+release=1
+source="https://github.com/python-babel/babel/archive/v$version/$name-$version.tar.gz"
+
+
+build() {
+  cd babel-$version
+
+	/usr/bin/python3 setup.py import_cldr
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d $PKG \
+		.dist/*.whl
+
+}
