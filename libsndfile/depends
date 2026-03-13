@@ -1,0 +1,4 @@
+cmake
+flac
+libvorbis
+alsa-lib
