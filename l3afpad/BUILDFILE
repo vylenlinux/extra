@@ -1,0 +1,16 @@
+description="Simple plain text editor for GTK+ 3"
+homepage="https://github.com/stevenhoneyman/l3afpad"
+maintainer="Vylen Linux Team"
+
+name=l3afpad
+version=0.8.18.1.11
+release=1
+source="https://github.com/stevenhoneyman/l3afpad/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	./autogen.sh
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
