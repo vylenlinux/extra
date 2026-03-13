@@ -1,0 +1,13 @@
+pixman
+opus
+libjpeg-turbo
+lz4
+meson
+spice-protocol
+libcacard
+python3-pyparsing
+python3-six
+gdk-pixbuf
+glib-networking
+cyrus-sasl
+asciidoc
