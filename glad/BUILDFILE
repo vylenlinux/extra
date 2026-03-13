@@ -1,0 +1,16 @@
+description="Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator"
+homepage="https://glad.dav1d.de"
+maintainer="Vylen Linux Team"
+
+name=glad
+version=2.0.8
+release=1
+source="https://github.com/Dav1dde/glad/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	python3 -m build --wheel --no-isolation
+	python3 -m installer --destdir=$PKG dist/*.whl
+}
+
