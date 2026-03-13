@@ -1,0 +1,21 @@
+description="X11 miscellaneous 'fixes' extension library"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=libxfixes
+version=6.0.2
+release=1
+source="$name-$version.tar.xz::https://www.x.org/releases/individual/lib/libXfixes-${version}.tar.xz"
+
+build() {
+	cd libXfixes-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+}
+
