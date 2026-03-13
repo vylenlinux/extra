@@ -1,0 +1,34 @@
+description="Mouse server for the console and xterm"
+homepage="https://www.nico.schottelius.org/software/gpm/"
+maintainer="Vylen Linux Team"
+
+name=gpm
+version=1.20.7
+release=1
+
+source="https://www.nico.schottelius.org/software/gpm/archives/$name-$version.tar.bz2
+	gpm-1.20.7-consolidated-1.patch
+	gpm.conf
+	run.$name
+	gpm.sh"
+
+build() {
+	cd $name-$version
+	patch -Np1 -i ../gpm-1.20.7-consolidated-1.patch
+
+	# fix build with gcc-15
+	CFLAGS="$CFLAGS -std=gnu17"
+
+	./autogen.sh
+	./configure --prefix=/usr --sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+
+	ln -sfv libgpm.so.2.1.0 $PKG/usr/lib/libgpm.so
+	install -v -m644 conf/gpm-root.conf $PKG/etc
+	install -Dm644 $SRC/gpm.sh $PKG/etc/profile.d/gpm.sh
+	install -Dm644 $SRC/gpm.conf $PKG/etc/conf.d/gpm
+
+	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
+	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+}
