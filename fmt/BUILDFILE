@@ -1,0 +1,23 @@
+description="An open-source formatting library"
+homepage="https://fmt.dev/latest/index.html"
+maintainer="Vylen Linux Team"
+
+name=fmt
+version=12.1.0
+release=1
+source="https://github.com/fmtlib/$name/archive/$version/$name-$version.tar.gz"
+
+build() {
+
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D BUILD_SHARED_LIBS=ON \
+		-D CMAKE_POSITION_INDEPENDENT_CODE=ON \
+		-D FMT_TEST=OFF \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
