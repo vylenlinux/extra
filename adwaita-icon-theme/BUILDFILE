@@ -1,0 +1,19 @@
+description="Icon theme for GTK+ 3 and GTK 4 applications. "
+homepage="https://gitlab.gnome.org/GNOME/adwaita-icon-theme/"
+maintainer="Vylen Linux Team"
+
+name=adwaita-icon-theme
+version=49.0
+release=1
+source="https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	emerald isinstalled gtk4 || sed -i '49d' $name-$version/meson.build
+	emerald isinstalled gtk3 || sed -i '50d' $name-$version/meson.build
+
+	vylen-meson $name-$version build 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	rm -rf $PKG/usr/share/licenses
+}
