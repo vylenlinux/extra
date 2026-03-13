@@ -1,0 +1,27 @@
+description="GNOME Docking Library"
+homepage="https://gitlab.gnome.org/GNOME/gdl"
+maintainer="Vylen Linux Team"
+
+name=gdl
+version=3.40.0
+release=1
+source="https://download.gnome.org/sources/gdl/${version%.*}/$name-$version.tar.xz
+	0001-fix-missing-include.patch"
+
+build() {
+	cd $name-$version
+
+	# fix build with GCC 14
+	export CFLAGS="$CFLAGS -Wno-deprecated-declarations -Wno-incompatible-pointer-types"
+
+	patch -Np1 -i $SRC/0001-fix-missing-include.patch
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
