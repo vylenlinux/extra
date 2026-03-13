@@ -1,0 +1,9 @@
+sway-contrib-1.11-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/sway-contrib/
+-rwxr-xr-x root/root    usr/share/sway-contrib/autoname-workspaces.py
+-rwxr-xr-x root/root    usr/share/sway-contrib/firefox-focus-monitor.py
+-rwxr-xr-x root/root    usr/share/sway-contrib/inactive-windows-transparency.py
+-rwxr-xr-x root/root    usr/share/sway-contrib/layout-per-window.py
+-rwxr-xr-x root/root    usr/share/sway-contrib/switch-top-level.py
