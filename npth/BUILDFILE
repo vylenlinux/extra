@@ -1,0 +1,16 @@
+description="The new GNU portable threads library"
+homepage="https://www.gnupg.org/software/npth/index.html"
+maintainer="Vylen Linux Team"
+
+name=npth
+version=1.8
+release=1
+source="https://gnupg.org/ftp/gcrypt/npth/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
