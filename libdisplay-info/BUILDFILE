@@ -1,0 +1,14 @@
+description="EDID and DisplayID library"
+homepage="https://gitlab.freedesktop.org/emersion/libdisplay-info"
+maintainer="Vylen Linux Team"
+
+name=libdisplay-info
+version=0.3.0
+release=1
+source="https://gitlab.freedesktop.org/emersion/libdisplay-info/-/releases/$version/downloads/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build 
+}
