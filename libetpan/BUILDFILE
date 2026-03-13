@@ -1,0 +1,36 @@
+description="A portable middleware for email access"
+homepage="https://www.etpan.org/libetpan.html"
+maintainer="Vylen Linux Team"
+
+name=libetpan
+version=1.9.4
+release=1
+source="$name-$version.tar.gz::https://github.com/dinhviethoa/$name/archive/$version.tar.gz
+        CVE-2020-15953_1.diff::https://github.com/dinhvh/libetpan/commit/1002a0121a8f5a9aee25357769807f2c519fa50b.patch
+        CVE-2020-15953_2.diff::https://github.com/dinhvh/libetpan/commit/298460a2adaabd2f28f417a0f106cb3b68d27df9.patch
+        avoid_user_LDFLAGS_into_Libs.diff::https://github.com/dinhvh/libetpan/commit/8e904aa1c92bd0993123dd46d5a10a58f0516721.patch
+"
+
+build() {
+
+	cd $name-$version
+  
+	# CVE-2020-15953 - https://bugs.archlinux.org/task/69284
+	    patch -Np1 -i ../CVE-2020-15953_1.diff
+	    patch -Np1 -i ../CVE-2020-15953_2.diff
+
+	# Don't put user LDFLAGS into Libs
+	    patch -Np1 -i ../avoid_user_LDFLAGS_into_Libs.diff
+
+	NOCONFIGURE=1 ./autogen.sh
+
+	./configure --prefix=/usr \
+	    --disable-static \
+	    --disable-db \
+	    --with-openssl=no \
+	    --with-gnutls=yes
+	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+	make
+	make DESTDIR=$PKG install
+}
+
