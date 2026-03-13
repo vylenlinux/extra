@@ -1,0 +1,19 @@
+description="Used to send desktop notifications to a notification daemon"
+homepage="https://gitlab.gnome.org/GNOME/libnotify"
+maintainer="Vylen Linux Team"
+
+name=libnotify
+version=0.8.8
+release=1
+source="https://gitlab.gnome.org/GNOME/libnotify/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Dtests=false \
+		-Dintrospection=auto \
+		-Dman=false \
+		-Dgtk_doc=false \
+		-Ddocbook_docs=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
