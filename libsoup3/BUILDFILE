@@ -1,0 +1,16 @@
+description="HTTP client/server library for GNOME"
+homepage="https://wiki.gnome.org/Projects/libsoup"
+maintainer="Vylen Linux Team"
+
+name=libsoup3
+version=3.6.6
+release=1
+source="$name-$version.tar.xz::https://download.gnome.org/sources/libsoup/${version%.*}/libsoup-$version.tar.xz"
+
+build() {
+        vylen-meson libsoup-$version build \
+		-Dtests=false \
+		-Dautobahn=disabled 
+        meson compile -C build
+        DESTDIR=$PKG meson install --no-rebuild -C build
+}
