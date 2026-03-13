@@ -1,0 +1,21 @@
+description="X11 Input extension library"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=libxi
+version=1.8.2
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXi-$version.tar.xz"
+
+build() {
+	cd libXi-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+
+}
