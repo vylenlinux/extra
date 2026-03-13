@@ -1,0 +1,22 @@
+description="X11 Athena Widget library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxaw"
+maintainer="Vylen Linux Team"
+
+name=libxaw
+version=1.0.16
+release=1
+source="$name-$version.tar.bz2::http://ftp.x.org/pub/individual/lib/libXaw-$version.tar.xz"
+
+build() {
+	cd libXaw-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+
+
+}
