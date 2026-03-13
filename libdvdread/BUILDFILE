@@ -1,0 +1,15 @@
+description="Library which provides a simple foundation for reading DVDs"
+homepage="https://www.videolan.org/developers/libdvdnav.html"
+maintainer="Vylen Linux Team"
+
+name=libdvdread
+version=7.0.1
+release=1
+source="https://code.videolan.org/videolan/libdvdread/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
+
