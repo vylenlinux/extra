@@ -1,0 +1,58 @@
+description="Collection of modular and reusable compiler and toolchain technologies"
+homepage="https://clang.llvm.org/"
+maintainer="Vylen Linux Team"
+
+name=clang
+version=21.1.8
+release=1
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz"
+noextract="cmake-${version}.src.tar.xz"
+
+build() {
+	cd $name-$version.src
+
+	# The upstream expects it to be extracted at the same level as the llvm tarball, and 
+	# the extracted directory renamed to cmake
+	tar -xf $SRC/cmake-${version}.src.tar.xz
+	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt  
+
+	cmake -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DCLANG_BUILD_EXAMPLES=OFF \
+		-DCLANG_DEFAULT_PIE_ON_LINUX=ON \
+		-DCLANG_INCLUDE_DOCS=OFF \
+		-DCLANG_INCLUDE_TESTS=OFF \
+		-DCLANG_LINK_CLANG_DYLIB=YES \
+		-DLLVM_ENABLE_EH=ON \
+		-DLLVM_ENABLE_LIBXML2=OFF \
+		-DLLVM_ENABLE_RTTI=ON \
+		-DLLVM_INCLUDE_TESTS=OFF \
+		-Wno-dev
+		
+	jobs=
+	while : ; do
+		echo "Try ${jobs:-default} parallel jobs ..."
+
+		cmake --build build -j $jobs && break
+
+		# Try few parallel jobs to avoid OOM
+		if [ -z "$jobs" ]; then
+			jobs=$(expr $(free -g | grep Mem: | awk '{print $2}') / 2 + 1)
+			continue
+		elif [ $jobs -gt 2 ]; then
+			jobs=$(expr $jobs - 2)
+			continue
+		elif [ $jobs = 1 ]; then
+			exit 1
+		else
+			jobs=1
+		fi
+	done
+
+	DESTDIR=$PKG cmake --install build
+}
