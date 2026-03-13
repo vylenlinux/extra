@@ -1,0 +1,13 @@
+description="A picom fork with support for rounded corners "
+homepage="https://github.com/ibhagwan/picom"
+maintainer="Vylen Linux Team"
+
+name=ibhagwan-picom
+version="Next"
+release=1
+source="$name-$version.tar.gz::https://github.com/ibhagwan/picom/archive/vNext.tar.gz"
+build() {
+	vylen-meson picom-v$version build --buildtype=release 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
