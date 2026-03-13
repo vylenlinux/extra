@@ -1,0 +1,16 @@
+description="A program for identifying or deleting duplicate files residing within specified directories"
+homepage="https://github.com/adrianlopezroche/fdupes"
+maintainer="Vylen Linux Team"
+
+name=fdupes
+version=2.4.0
+release=1
+source="https://github.com/adrianlopezroche/fdupes/releases/download/v$version/fdupes-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
