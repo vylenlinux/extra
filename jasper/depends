@@ -1,0 +1,5 @@
+cmake
+ninja
+freeglut
+libjpeg-turbo
+libxmu
