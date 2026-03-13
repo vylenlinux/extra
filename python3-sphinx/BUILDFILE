@@ -1,0 +1,23 @@
+description="The Sphinx documentaion generator"
+homepage="https://www.sphinx-doc.org/en/master/"
+maintainer="Vylen Linux Team"
+
+name=python3-sphinx
+_name=sphinx
+version=9.1.0
+release=1
+source="$name-$version.tar.gz::https://github.com/sphinx-doc/sphinx/archive/v$version.tar.gz"
+
+bsdtar() {
+tar $@;
+}
+
+build() {
+	cd $_name-$version
+
+	    gpep517 build-wheel \
+		   --wheel-dir .dist \
+		   --output-fd 3 3>&1 >&2
+	   python3 -m installer -d $PKG \
+			.dist/*.whl
+}
