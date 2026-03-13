@@ -1,0 +1,16 @@
+description="A GTK2 based configuration tool for the Openbox windowmanager"
+homepage="http://www.openbox.org"
+maintainer="Vylen Linux Team"
+
+name=obconf
+version=2.0.4
+release=1
+source="http://www.openbox.org/dist/$name/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	export CFLAGS="$CFLAGS -Wno-implicit-function-declaration"
+	./configure --prefix=/usr --disable-nls
+	make
+	make DESTDIR=$PKG install
+}
