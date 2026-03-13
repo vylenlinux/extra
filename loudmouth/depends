@@ -1,0 +1,6 @@
+glib
+gnutls
+libidn
+krb5
+pkgconf
+intltool
