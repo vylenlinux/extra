@@ -1,0 +1,10 @@
+libx11
+libxext
+libxrandr
+libxfixes
+libxi
+libxinerama
+wayland-protocols
+cmake
+libxkbcommon
+ninja
