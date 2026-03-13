@@ -1,0 +1,25 @@
+description="Audio CODEC similar to MP3, but lossless"
+homepage="https://xiph.org/flac/"
+maintainer="Vylen Linux Team"
+
+name=flac
+version=1.5.0
+release=1
+source="$name-$version.tar.gz::https://github.com/xiph/flac/archive/$version.tar.gz"
+
+build() {
+	cd $name-$version
+	
+	NOCONFIGURE=1 ./autogen.sh
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--disable-rpath \
+		--disable-thorough-tests \
+		--enable-ogg \
+		--enable-shared \
+		--enable-sse
+	make 
+	make DESTDIR=$PKG install
+
+}
