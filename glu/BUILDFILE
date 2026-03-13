@@ -1,0 +1,14 @@
+description="Mesa OpenGL Utility library"
+homepage="https://gitlab.freedesktop.org/mesa/glu"
+maintainer="Vylen Linux Team"
+
+name=glu
+version=9.0.3
+release=1
+source="https://mesa.freedesktop.org/archive/glu/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
