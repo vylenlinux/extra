@@ -1,0 +1,7 @@
+dbus-glib
+libgudev
+libusb
+polkit
+gobject-introspection
+meson
+libxslt
