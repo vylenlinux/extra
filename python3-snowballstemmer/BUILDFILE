@@ -1,0 +1,15 @@
+description="Snowball stemming library collection for Python."
+homepage="https://github.com/shibukawa/snowball_py/"
+maintainer="Vylen Linux Team"
+
+name=python3-snowballstemmer
+version=3.0.1
+release=1
+source="$name-$version.tar.gz::https://pypi.org/packages/source/S/Snowballstemmer/${name#*-}-$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version
+
+	/usr/bin/python3 setup.py build
+	/usr/bin/python3 setup.py install --prefix=/usr --root=$PKG --optimize=1 --skip-build
+}
