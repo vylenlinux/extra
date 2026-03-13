@@ -1,0 +1,8 @@
+at-spi2-core
+cairo
+gdk-pixbuf
+glib
+gtk3
+hicolor-icon-theme
+appstream-glib
+meson
