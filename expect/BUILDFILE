@@ -1,0 +1,33 @@
+description="CLI automation framework for Tcl"
+homepage="https://core.tcl-lang.org/expect/index"
+maintainer="Vylen Linux Team"
+
+name=expect
+version=5.45.4
+release=1
+source="$name-$version.tar.gz::https://downloads.sourceforge.net/project/expect/Expect/$version/expect$version.tar.gz
+	expect-5.44.1.15-ldflags.patch
+	expect-5.45-headers.patch
+	expect-5.45.4-configure-in.patch
+	expect-5.45-format-security.patch
+	expect-5.45-warnings.patch
+	expect-5.45.4-examples.patch
+	expect-5.45-gfbsd.patch"
+
+build() {
+	cd $name$version
+
+	export CFLAGS="${CFLAGS} -std=gnu89"
+
+	for p in $SRC/*patch; do
+		patch -Np1 -i $p
+	done
+
+	./configure --prefix=/usr \
+	           --enable-shared \
+	           --mandir=/usr/share/man \
+	           --with-tcl=/usr/lib \
+	           --with-tclinclude=/usr/include
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,8 @@
+2983f44b549d174f9cf47ee98aca0d8c1f00e9dc980a4a3b5ee56c7916116bb5  expect-5.44.1.15-ldflags.patch
+dc56976a1653461ae0814e71f213f9e1087141d890ee33669680eb08e20f06dc  expect-5.45-format-security.patch
+d43e5aa6b815e4fb42b18ec1eb2ba5364ce75ddd469ce98b4dc6311b4329d19f  expect-5.45-gfbsd.patch
+e1ccf29440743f03056b8cea2b27679cb37e41bfea9c377254d660b4400aec99  expect-5.45-headers.patch
+cba3751c12902ec8c058c0441ca7141b265dac108dbe8437a019b3850db34847  expect-5.45-warnings.patch
+3eedfb84a84eb88bd848e0a976e0ddb49cfbf89282aebd6d753df5a7588da6cb  expect-5.45.4-configure-in.patch
+b76b806ea238792fff1d81155d2df1b128f92cc50b5e2feb2b32d857d3b72636  expect-5.45.4-examples.patch
+87c9c69ecebbf92f114a30f6b8ffd36a2ef809b75fb45fa361d286fdf5be7c4c  expect-5.45.4.tar.gz
