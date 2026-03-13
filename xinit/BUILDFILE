@@ -1,0 +1,22 @@
+description="Script to start the xserver"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xinit
+version=1.4.4
+release=1
+source="http://ftp.x.org/pub/individual/app/xinit-$version.tar.xz serverauth-temp.patch"
+
+build() {
+	cd xinit-$version
+
+	patch -Np1 -i $SRC/serverauth-temp.patch
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static \
+		--with-xinitdir=/etc/X11/app-defaults
+	make
+	make DESTDIR=$PKG install
+}
