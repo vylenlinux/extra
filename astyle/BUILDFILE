@@ -1,0 +1,16 @@
+description="astyle A Free, Fast, and Small Automatic Formatter for C, C++, C++/CLI, Objective‑C, C#, and Java Source Code"
+homepage="https://sourceforge.net/projects/astyle/"
+maintainer="Vylen Linux Team"
+
+name=astyle
+version=3.6.14
+release=1
+source="https://gitlab.com/saalen/astyle/-/archive/$version/$name-$version.tar.bz2
+	makefile-install.patch"
+
+build() {
+	cd $name-$version/AStyle/build/gcc
+	patch -Np1 -i $SRC/makefile-install.patch
+	make shared release
+	DESTDIR=$PKG make INSTALL=install install
+}
