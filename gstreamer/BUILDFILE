@@ -1,0 +1,18 @@
+description="Streaming media framework that enables applications to share a common set of plugins"
+homepage="https://gstreamer.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=gstreamer
+version=1.28.1
+release=1
+source="http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Ddbghelp=disabled \
+		-Dptp-helper-permissions=capabilities \
+		-Dintrospection=enabled \
+		-Dpackage-name="GStreamer $version (Vylen Linux)"
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
