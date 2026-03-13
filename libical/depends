@@ -1,0 +1,4 @@
+cmake
+ninja
+gobject-introspection
+vala
