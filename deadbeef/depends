@@ -1,0 +1,15 @@
+alsa-lib
+clang
+curl
+desktop-file-utils
+ffmpeg
+gettext
+gtk3
+intltool
+jansson
+libdispatch
+libmad
+libtool
+libsamplerate
+pkgconf
+yasm
