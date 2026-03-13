@@ -1,0 +1,39 @@
+description="Web content engine for GTK"
+homepage="https://webkitgtk.org"
+maintainer="Vylen Linux Team"
+
+name=webkitgtk
+version=2.50.5
+release=1
+source="https://webkitgtk.org/releases/$name-$version.tar.xz"
+
+build() {
+	# failed build with ccache, remove reom path
+	PATH="$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+
+	# fix build ICU 76
+	sed '/U_SHOW_CPLUSPLUS_API/a#define U_SHOW_CPLUSPLUS_HEADER_API 0' -i $name-$version/Source/WTF/wtf/Platform.h
+
+	cmake -S $name-$version -B build -G Ninja \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DCMAKE_INSTALL_LIBEXECDIR=lib \
+		-DCMAKE_SKIP_INSTALL_RPATH=ON \
+		-DPORT=GTK \
+		-DENABLE_GAMEPAD=OFF \
+		-DENABLE_JOURNALD_LOG=OFF \
+		-DENABLE_DOCUMENTATION=OFF \
+		-DENABLE_GEOLOCATION=OFF \
+		-DENABLE_MINIBROWSER=ON \
+		-DUSE_AVIF=OFF \
+		-DUSE_GTK4=OFF \
+		-DUSE_LIBBACKTRACE=OFF \
+		-DUSE_LIBHYPHEN=OFF \
+		-DUSE_SOUP2=OFF \
+		-DUSE_WOFF2=OFF \
+		-DUSE_SYSTEM_SYSPROF_CAPTURE=NO \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
