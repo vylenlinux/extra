@@ -1,0 +1,15 @@
+description="An implementation of the IETF's draft ICE (for p2p UDP data streams)"
+homepage="https://nice.freedesktop.org"
+maintainer="Vylen Linux Team"
+
+name=libnice
+version=0.1.23
+release=1
+source="https://libnice.freedesktop.org/releases/libnice-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	vylen-meson -Dtests=disabled build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
