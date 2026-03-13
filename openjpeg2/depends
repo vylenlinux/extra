@@ -1,0 +1,5 @@
+cmake
+ninja
+lcms2
+libpng
+libtiff
