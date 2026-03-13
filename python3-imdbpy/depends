@@ -1,0 +1,4 @@
+python3-lxml
+python3-setuptools
+python3-sqlalchemy
+python3-greenlet
