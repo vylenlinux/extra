@@ -1,0 +1,19 @@
+description="Python PE parsing module"
+homepage="https://github.com/erocarrera/pefile"
+maintainer="Vylen Linux Team"
+
+name=python3-pefile
+version=2024.8.26
+release=1
+source="$name-$version.tar.gz::https://github.com/erocarrera/pefile/archive/v$version/python-setuptools-$version.tar.gz"
+
+build() {
+	cd pefile-$version
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+
+	python3 -m installer -d $PKG \
+		.dist/*.whl
+}
+
