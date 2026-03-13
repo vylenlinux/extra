@@ -1,0 +1,28 @@
+description="GNU's tool for secure communication and data storage"
+homepage="https://gnupg.org"
+maintainer="Vylen Linux Team"
+
+name=gnupg
+version=2.5.18
+release=1
+source="https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version
+
+	./configure $GPUPG \
+		--prefix=/usr \
+		--libexecdir=/usr/lib/$name \
+		--disable-ldap \
+		--disable-nls \
+		--disable-tests 
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/info
+	rm -rf $PKG/usr/share/doc
+	rm -f $PKG/usr/share/gnupg/FAQ
+        rm -f $PKG/usr/share/gnupg/faq.html
+        rm -f $PKG/usr/share/gnupg/qualified.txt
+	rm -f $PKG/usr/share/gnupg/help*
+}
