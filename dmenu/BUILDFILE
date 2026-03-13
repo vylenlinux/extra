@@ -1,0 +1,14 @@
+description="A generic menu for X"
+homepage="https://tools.suckless.org/dmenu/"
+maintainer="Vylen Linux Team"
+
+name=dmenu
+version=5.4
+release=1
+source="http://dl.suckless.org/tools/dmenu-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	make
+	make DESTDIR=$PKG PREFIX=/usr install
+}
