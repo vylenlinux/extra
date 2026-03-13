@@ -1,0 +1,10 @@
+cairo
+fcft
+fontconfig
+libpng
+libxkbcommon
+pixman
+meson
+scdoc
+tllist
+wayland-protocols
