@@ -1,0 +1,16 @@
+description="A simple program which provides a run program window"
+homepage="https://github.com/wdlkmpx/gmrun"
+maintainer="Vylen Linux Team"
+
+name=gmrun
+version=1.4w
+release=1
+source="https://github.com/wdlkmpx/gmrun/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+}
