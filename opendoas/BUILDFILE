@@ -1,0 +1,23 @@
+description="A portable fork of the OpenBSD `doas` command"
+homepage="https://github.com/Duncaen/OpenDoas"
+maintainer="Vylen Linux Team"
+
+name=opendoas
+version=6.8.2
+release=1
+backup="etc/doas.conf"
+source="https://github.com/Duncaen/OpenDoas/releases/download/v$version/opendoas-$version.tar.xz
+	better-wayland-support.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/better-wayland-support.patch
+
+	./configure --prefix=/usr --without-pam
+	make
+	make DESTDIR=$PKG install
+
+	mkdir -p $PKG/etc
+	echo "permit :wheel" > $PKG/etc/doas.conf
+}
