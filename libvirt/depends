@@ -1,0 +1,7 @@
+libnl
+rpcsvc-proto
+python3-docutils
+qemu
+parted
+swtpm
+xf86-video-qxl
