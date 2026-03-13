@@ -5,13 +5,15 @@ maintainer="Vylen Linux Team"
 name=scron
 version=0.4
 release=1
+
 source="https://dl.2f30.org/releases/$name-$version.tar.gz
-rc.crond"
+    run.${name}"
 
 build() {
     cd $name-$version
     make
     make DESTDIR=$PKG PREFIX=/usr install
 
-	install -Dm755 $SRC/rc.crond $PKG/etc/rc.d/crond
+	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
+	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
 }

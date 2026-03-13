@@ -1,7 +1,9 @@
-scron-0.4-2
+scron-0.4-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/rc.d/
--rwxr-xr-x root/root    etc/rc.d/crond
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/scron/
+-rwxr-xr-x root/root    etc/sv/scron/run
+lrwxrwxrwx root/root    etc/sv/scron/supervise -> /run/runit/supervise.scron
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/crond
