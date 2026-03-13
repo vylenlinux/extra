@@ -1,0 +1,18 @@
+description="A file manager that emulates Norton Commander"
+homepage="https://midnight-commander.org/"
+maintainer="Vylen Linux Team"
+
+name=mc
+version=4.8.33
+release=1
+source="http://ftp.midnight-commander.org/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+	            --sysconfdir=/etc \
+	            --libexecdir=/usr/lib \
+	            --enable-charset
+	make
+	make DESTDIR=$PKG install
+}
