@@ -1,0 +1,4 @@
+cmake
+glib
+libsndfile
+python3
