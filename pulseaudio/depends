@@ -1,0 +1,15 @@
+libsndfile
+alsa-lib
+dbus
+glib
+libcap
+openssl
+speexdsp
+libx11
+libxcb
+libice
+libsm
+libxtst
+vala
+perl-xml-parser
+tdb
