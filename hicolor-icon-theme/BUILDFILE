@@ -1,0 +1,15 @@
+description="Freedesktop.org Hicolor icon theme"
+homepage="https://www.freedesktop.org/wiki/Software/icon-theme/"
+maintainer="Vylen Linux Team"
+
+name=hicolor-icon-theme
+version=0.18
+release=1
+source="http://icon-theme.freedesktop.org/releases/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+  	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
+
