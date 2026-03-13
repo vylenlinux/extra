@@ -1,0 +1,29 @@
+description="Toolkit for defining and handling authorizations"
+homepage="https://freedesktop.org/software/polkit"
+maintainer="Vylen Linux Team"
+
+name=polkit
+version=127
+release=1
+source="$name-$version.tar.gz::https://github.com/polkit-org/$name/archive/refs/tags/$version.tar.gz
+	agent.helper.patch"
+
+build() {
+	export XML_CATALOG_FILES=/etc/xml/catalog
+
+	patch -Np1 -d $name-$version -i $SRC/agent.helper.patch
+
+  	vylen-meson $name-$version build \
+		-Dsystemdsystemunitdir=/trash \
+		-Dsession_tracking="ConsoleKit" \
+		-Dman=false \
+		-Dtests=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	chown polkitd $PKG/etc/polkit-1/rules.d
+	chown polkitd $PKG/usr/share/polkit-1/rules.d
+	chmod 700 $PKG/etc/polkit-1/rules.d
+	chmod 700 $PKG/usr/share/polkit-1/rules.d
+
+}
