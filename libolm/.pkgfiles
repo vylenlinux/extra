@@ -1,0 +1,23 @@
+libolm-3.2.16-2
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/olm/
+-rw-r--r-- root/root    usr/include/olm/error.h
+-rw-r--r-- root/root    usr/include/olm/inbound_group_session.h
+-rw-r--r-- root/root    usr/include/olm/olm.h
+-rw-r--r-- root/root    usr/include/olm/olm_export.h
+-rw-r--r-- root/root    usr/include/olm/outbound_group_session.h
+-rw-r--r-- root/root    usr/include/olm/pk.h
+-rw-r--r-- root/root    usr/include/olm/sas.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/Olm/
+-rw-r--r-- root/root    usr/lib/cmake/Olm/OlmConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Olm/OlmConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Olm/OlmTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Olm/OlmTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libolm.so -> libolm.so.3
+lrwxrwxrwx root/root    usr/lib/libolm.so.3 -> libolm.so.3.2.16
+-rwxr-xr-x root/root    usr/lib/libolm.so.3.2.16
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/olm.pc
