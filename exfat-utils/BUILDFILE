@@ -1,0 +1,23 @@
+description="Utilities for exFAT file system"
+homepage="https://github.com/relan/exfat"
+maintainer="Vylen Linux Team"
+
+name=exfat-utils
+version=1.4.0
+release=1
+source="https://github.com/relan/exfat/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cd exfat-$version
+
+	autoreconf -fiv
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+	# Fix exfatprogs files conflicts
+	rm -f "$PKG/usr/share/man/man8/exfatlabel.8"* \
+	   "$PKG/usr/sbin/mkfs.exfat" \
+	   "$PKG/usr/sbin/exfatlabel" \
+	   "$PKG/usr/sbin/fsck.exfat"
+}
