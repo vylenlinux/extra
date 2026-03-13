@@ -1,0 +1,16 @@
+description="Pulseaudio command-line mixer like amixer"
+homepage="https://github.com/cdemoulins/pamixer"
+maintainer="Vylen Linux Team"
+
+name=pamixer
+version=1.6
+release=1
+source="https://github.com/cdemoulins/$name/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+        vylen-meson build
+        meson compile -C build
+        meson install --no-rebuild -C build --destdir=$PKG
+
+}
