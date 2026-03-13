@@ -1,0 +1,15 @@
+description="Simple generic tabbed fronted to xembed aware applications"
+homepage="https://tools.suckless.org/tabbed"
+maintainer="Vylen Linux Team"
+
+name=tabbed
+version=0.9
+release=1
+source="http://dl.suckless.org/tools/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	sed -i "/xembed.1/d" Makefile
+	make CC=gcc
+	make DESTDIR=$PKG PREFIX=/usr install
+}
