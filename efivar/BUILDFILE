@@ -1,0 +1,15 @@
+description="Tools and library to manipulate EFI variables"
+homepage="https://github.com/rhboot/efivar"
+maintainer="Vylen Linux Team"
+
+name=efivar
+version=39
+release=1
+source="$name-$version.tar.gz::https://github.com/rhboot/efivar/archive/$version.tar.gz"
+
+build() {
+	cd $name-$version
+	sed 's/docs//' -i Makefile
+	make ERRORS=
+	make LIBDIR=/usr/lib DESTDIR=$PKG install
+}
