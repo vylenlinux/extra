@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# The port 'wlroots-19' conflicts with 'wlroots', remove 'wlroots-19' before installing 'wlroots'
+emerald isinstalled wlroots-19 && emerald remove -y wlroots-19
