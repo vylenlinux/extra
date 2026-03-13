@@ -1,0 +1,26 @@
+description="Image viewer for Sway"
+homepage="https://github.com/artemsen/swayimg"
+maintainer="Vylen Linux Team"
+
+name=swayimg
+version=4.7
+release=1
+source="https://github.com/artemsen/$name/archive/v$version/$name-$version.tar.gz"
+
+build() {
+
+    vylen-meson $name-$version build \
+		-D jpeg=enabled \
+		-D png=enabled \
+		-D heif=$(emerald isinstalled libheif && printf "enabled" || printf "disabled") \
+		-D jxl=$(emerald isinstalled libjxl && printf "enabled" || printf "disabled") \
+		-D svg=$(emerald isinstalled librsvg && printf "enabled" || printf "disabled") \
+		-D webp=$(emerald isinstalled libwebp && printf "enabled" || printf "disabled") \
+		-D exr=$(emerald isinstalled openxr && printf "enabled" || printf "disabled") \
+		-D tiff=$(emerald isinstalled libtiff && printf "enabled" || printf "disabled") \
+		-D bash=$(emerald isinstalled bash-completion && printf "enabled" || printf "disabled") \
+		-D zsh=$(emerald isinstalled zsh && printf "enabled" || printf "disabled") \
+		-D version=$version
+    meson compile -C build
+    DESTDIR=$PKG meson install --no-rebuild -C build
+}

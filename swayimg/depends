@@ -1,0 +1,7 @@
+meson
+wayland-protocols
+libxkbcommon
+libjpeg-turbo
+libpng
+json-c
+hicolor-icon-theme
