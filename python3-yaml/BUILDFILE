@@ -1,0 +1,21 @@
+description="Python bindings for YAML, using fast libYAML library"
+homepage="https://github.com/yaml/pyyaml"
+maintainer="Vylen Linux Team"
+
+name=python3-yaml
+version=6.0.3
+release=1
+source="$name-$version.tar.gz::https://github.com/yaml/pyyaml/archive/$version.tar.gz"
+
+build() {
+
+	cd pyyaml-$version
+	rm -f ext/_yaml.c
+
+        gpep517 build-wheel \
+                --wheel-dir .dist \
+                --output-fd 3 3>&1 >&2
+
+        python3 -m installer -d $PKG \
+                .dist/*.whl   
+}
