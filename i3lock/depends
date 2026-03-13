@@ -1,0 +1,7 @@
+xcb-util-image
+xcb-util-xrm
+libxkbcommon
+cairo
+linux-pam
+libev
+meson
