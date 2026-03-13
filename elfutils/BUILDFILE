@@ -1,0 +1,31 @@
+description="utilities and libraries for handling ELF files"
+homepage="https://sourceware.org/elfutils/"
+maintainer="Vylen Linux Team"
+
+name=elfutils
+version=0.194
+release=1
+source="https://sourceware.org/ftp/elfutils/$version/elfutils-$version.tar.bz2
+	libeu.patch
+	4a5cf8be906d5991e7527e69e3f2ceaa74811301.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/libeu.patch
+	patch -Np1 -i $SRC/4a5cf8be906d5991e7527e69e3f2ceaa74811301.patch 
+
+	autoreconf -vfi
+	CFLAGS="$CFLAGS -ffat-lto-objects" \
+	./configure \
+		--prefix=/usr \
+		--program-prefix="eu-" \
+		--sysconfdir=/etc \
+		--disable-debuginfod \
+		--disable-libdebuginfod \
+		--disable-nls \
+		--enable-deterministic-archives \
+		--without-zstd
+	make
+	make DESTDIR=$PKG install
+}
