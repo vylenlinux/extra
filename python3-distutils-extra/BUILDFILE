@@ -1,0 +1,15 @@
+description="Enhancements to the Python build system"
+homepage="https://launchpad.net/python-distutils-extra"
+maintainer="Vylen Linux Team"
+
+name=python3-distutils-extra
+version=2.47
+release=1
+source="$name-$version.tar.gz::https://salsa.debian.org/python-team/modules/python-distutils-extra/-/archive/$version/python-distutils-extra-$version.tar.bz2"
+
+build() {
+	cd python-distutils-extra-$version
+	python3 setup.py build
+	python3 setup.py install --root=$PKG --skip-build
+}
+
