@@ -1,0 +1,35 @@
+description="Compressor/archiver for creating and modifying zipfiles"
+homepage="http://www.info-zip.org/Zip.html"
+maintainer="Vylen Linux Team"
+
+name=unzip
+version=6.0
+_version=$(printf '%s' "$version" | sed 's/\.//')
+release=1
+source="https://downloads.sourceforge.net/infozip/${name}${_version}.tar.gz
+	CVE-2021-4217.patch
+	CVE-2022-0529.patch
+	CVE-2022-0530.patch"
+
+build() {
+	cd ${name}${_version}
+        
+        # fix build with GCC 15
+	export CFLAGS="$CFLAGS -std=gnu17"
+
+	for i in $SRC/*.patch ; do
+	    patch -Np1 < $i
+	done
+
+		DEFINES='-DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT \
+		-DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD \
+		-DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DNOMEMCPY -DNO_WORKING_ISPRINT'
+
+	make -f unix/Makefile prefix=/usr \
+		D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 \
+		LF2="$LDFLAGS" CF="$CFLAGS $CPPFLAGS -I. $DEFINES" \
+		unzips
+	make prefix=$PKG/usr MANDIR=$PKG/usr/share/man/man1 \
+	    -f unix/Makefile install
+}
+
