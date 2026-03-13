@@ -1,0 +1,14 @@
+description="Fast, compact, key-value embedded data store"
+homepage="https://github.com/LMDB/lmdb"
+maintainer="Vylen Linux Team"
+
+name=lmdb
+version=0.9.35
+release=1
+source="$name-$version.tar.gz::https://git.openldap.org/openldap/openldap/-/archive/LMDB_$version/openldap-LMDB_$version.tar.gz"
+
+build() {
+	cd openldap-LMDB_$version/libraries/liblmdb
+	make
+	make prefix=$PKG/usr install
+}
