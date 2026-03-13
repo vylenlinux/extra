@@ -1,0 +1,5 @@
+meson
+gobject-introspection
+gtk3
+vala
+wayland-protocols

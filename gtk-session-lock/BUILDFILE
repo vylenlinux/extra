@@ -1,0 +1,14 @@
+description="A library to create screen lockers for Wayland using the ext-session-lock protocol"
+homepage="https://github.com/Cu3PO42/gtk-session-lock"
+maintainer="Vylen Linux Team"
+
+name=gtk-session-lock
+version=0.2.0
+release=1
+source="$name-$version.tar.gz::https://github.com/Cu3PO42/gtk-session-lock/archive/v${version}.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
