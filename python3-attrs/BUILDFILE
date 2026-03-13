@@ -1,0 +1,19 @@
+description="Attributes without boilerplate"
+homepage="https://www.attrs.org/"
+maintainer="Vylen Linux Team"
+
+name=python3-attrs
+version=25.4.0
+release=1
+source="$name-$version.tar.gz::https://pypi.io/packages/source/a/attrs/attrs-$version.tar.gz"
+build() {
+	cd attrs-$version
+
+	    gpep517 build-wheel \
+		    --wheel-dir .dist \
+		    --output-fd 3 3>&1 >&2
+	    python3 -m installer -d "$PKG" \
+		    .dist/*.whl
+
+
+}
