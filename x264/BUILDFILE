@@ -1,0 +1,19 @@
+description="Open Source H264/AVC video encoder"
+homepage="https://www.videolan.org/developers/x264.html"
+maintainer="Vylen Linux Team"
+
+name=x264
+version=20191217.2245
+_version=$(printf '%s' "$version" | tr '.' '-')
+release=1
+source="http://download.videolan.org/pub/videolan/$name/snapshots/$name-snapshot-${_version}-stable.tar.bz2"
+
+build() {
+	cd $name-snapshot-${_version}-stable
+
+	./configure --prefix=/usr \
+	            --enable-shared \
+	            --disable-cli
+	make
+	make DESTDIR=$PKG install
+}
