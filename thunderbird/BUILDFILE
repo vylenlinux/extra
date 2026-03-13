@@ -1,0 +1,87 @@
+description="Standalone mail and news reader from mozilla.org"
+homepage="https://www.thunderbird.net/"
+maintainer="Vylen Linux Team"
+
+name=thunderbird
+version=148.0.1
+release=1
+source="https://archive.mozilla.org/pub/thunderbird/releases/${version}/source/thunderbird-${version}.source.tar.xz
+	0023-bmo-2006630-remove-gitmodules-and-gitattributes-from-cargo-checksum-files.patch
+	0024-bgo-969412-glibc-2.43.patch"
+
+build() {
+	INITDIR=$PWD
+
+	cd $name-$version
+
+	patch -Np1 -i $SRC/0023-bmo-2006630-remove-gitmodules-and-gitattributes-from-cargo-checksum-files.patch
+	patch -Np1 -i $SRC/0024-bgo-969412-glibc-2.43.patch
+
+cat > mozconfig << "EOF"
+ac_add_options --disable-audio-backends
+ac_add_options --disable-bootstrap
+ac_add_options --disable-crashreporter
+ac_add_options --disable-debug
+ac_add_options --disable-debug-symbols
+ac_add_options --disable-necko-wifi
+ac_add_options --disable-tests
+ac_add_options --disable-updater
+ac_add_options --enable-alsa
+ac_add_options --enable-application=comm/mail
+ac_add_options --enable-install-strip
+ac_add_options --enable-official-branding
+ac_add_options --enable-optimize=-O2
+ac_add_options --enable-strip
+ac_add_options --enable-install-strip
+ac_add_options --enable-system-ffi
+ac_add_options --enable-system-pixman
+ac_add_options --prefix=/usr
+ac_add_options --with-system-icu
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-libevent
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-png
+ac_add_options --with-system-zlib
+ac_add_options --without-wasm-sandboxed-libraries
+EOF
+
+	sed -e '1i\#![warn(dangerous_implicit_autorefs)]\r' \
+	    -i third_party/rust/allocator-api2/src/stable/vec/mod.rs
+ 
+	#export CC=gcc CXX=g++
+        export MOZBUILD_STATE_PATH=${PWD}/mozbuild
+	export MOZ_NOSPAM=1
+	export CARGO_HOME=$INITDIR
+	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+	export SHELL=/bin/sh
+
+        ./mach build
+        DESTDIR=$PKG ./mach install
+
+	mkdir -pv $PKG/usr/share/applications  $PKG/usr/share/pixmaps
+
+cat > $PKG/usr/share/applications/thunderbird.desktop << "EOF"
+[Desktop Entry]
+Name=Thunderbird Mail
+Comment=Send and receive mail with Thunderbird
+GenericName=Mail Client
+Exec=thunderbird %u
+Terminal=false
+Type=Application
+Icon=thunderbird
+Categories=Network;Email;
+MimeType=application/xhtml+xml;text/xml;application/xhtml+xml;application/xml;application/rss+xml;x-scheme-handler/mailto;
+StartupNotify=true
+EOF
+
+	ln -sfv /usr/lib/thunderbird/chrome/icons/default/default256.png \
+        $PKG/usr/share/pixmaps/thunderbird.png
+
+	
+	# exclude library for revdep
+	install -d $PKG/etc/revdep.d
+	echo "/usr/lib/thunderbird/" > $PKG/etc/revdep.d/$name.conf
+
+}
