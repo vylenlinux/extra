@@ -1,0 +1,8 @@
+cmake
+ninja
+libxinerama
+libx11
+libxext
+libxrandr
+libxft
+libxfixes
