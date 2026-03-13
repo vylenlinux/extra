@@ -1,0 +1,15 @@
+description="Library that allows easy use of sophisticated DVD navigation features"
+homepage="https://www.videolan.org/developers/libdvdnav.html"
+maintainer="Vylen Linux Team"
+
+name=libdvdnav
+version=7.0.0
+release=1
+source="https://code.videolan.org/videolan/libdvdnav/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+}
