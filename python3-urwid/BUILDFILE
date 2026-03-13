@@ -1,0 +1,18 @@
+description="Curses-based user interface library"
+homepage="https://urwid.org/"
+maintainer="Vylen Linux Team"
+
+name=python3-urwid
+version=3.0.5
+release=1
+source="$name-$version.tar.gz::https://pypi.python.org/packages/source/u/urwid/urwid-$version.tar.gz"
+
+build() {
+	cd urwid-$version
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d "$PKG" \
+		.dist/*.whl
+
+}
