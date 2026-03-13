@@ -1,0 +1,25 @@
+description="Python bindings for the Qt cross platform application toolkit"
+homepage="https://pypi.org/project/PyQt6/"
+maintainer="Vylen Linux Team"
+
+name=python3-pyqt6
+version=6.10.2
+release=1
+source="$name-$version.tar.gz::https://pypi.python.org/packages/source/p/pyqt6/pyqt6-$version.tar.gz"
+
+build () {
+  cd pyqt6-$version
+
+  sip-build \
+    --confirm-license \
+    --no-make \
+    --qmake=/usr/lib/qt6/bin/qmake6 \
+    --pep484-pyi
+  cd build
+  make
+  make INSTALL_ROOT=$PKG install
+
+  # compile Python bytecode
+  python3 -m compileall -d / $PKG/usr/lib
+  python3 -O -m compileall -d / $PKG/usr/lib
+}
