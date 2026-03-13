@@ -1,0 +1,16 @@
+description="Plugin for LXAppearance to configure OpenBox"
+homepage="https://lxde.org/"
+maintainer="Vylen Linux Team"
+
+name=lxappearance-obconf
+version=0.2.4
+release=1
+source="$name-$version.tar.gz::https://github.com/lxde/lxappearance-obconf/archive/refs/tags/$version.tar.gz"
+
+build() {
+	cd $name-$version
+	autoreconf -fvi
+	./configure --prefix=/usr --disable-static 
+	make
+	make DESTDIR=$PKG install
+}
