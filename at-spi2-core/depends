@@ -1,0 +1,6 @@
+dbus
+glib
+libxtst
+gobject-introspection
+meson
+libxml2
