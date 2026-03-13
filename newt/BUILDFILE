@@ -1,0 +1,24 @@
+description="Not Erik's Windowing Toolkit - text mode windowing with slang"
+homepage="https://pagure.io/newt"
+maintainer="Vylen Linux Team"
+
+name=newt
+version=0.52.25
+release=1
+source="http://fedorahosted.org/releases/n/e/newt/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	sed -e 's/^LIBNEWT =/#&/' \
+	    -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
+	    -e 's/$(LIBNEWT)/$(LIBNEWTSONAME)/g' \
+	    -i Makefile.in
+
+	./configure --prefix=/usr \
+		    --with-gpm-support  \
+		    --without-tcl
+	make
+	make DESTDIR=$PKG install
+
+}
