@@ -1,0 +1,28 @@
+description="Logging system messages, such as those given by the kernel"
+homepage="https://github.com/troglobit/sysklogd"
+maintainer="Vylen Linux Team"
+
+name=sysklogd
+version=2.7.2
+release=1
+backup="etc/syslog.conf"
+
+source="https://github.com/troglobit/sysklogd/releases/download/v$version/sysklogd-$version.tar.gz
+	run.$name"
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--without-logger
+	make
+	make DESTDIR=$PKG install
+
+	install -Dm644 syslog.conf $PKG/etc/syslog.conf
+
+	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
+	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+}
