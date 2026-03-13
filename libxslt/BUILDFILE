@@ -1,0 +1,21 @@
+description="XSLT libraries used for extending libxml2 libraries to support XSLT files"
+homepage="https://gitlab.gnome.org/GNOME/libxslt/-/wikis/home"
+maintainer="Vylen Linux Team"
+
+name=libxslt
+version=1.1.45
+release=1
+source="https://gitlab.gnome.org/GNOME/libxslt/-/archive/v$version/$name-v$version.tar.gz"
+
+build() {
+	cd $name-v$version
+	autoreconf -fi
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static \
+		--with-python=/usr/bin/python3
+	make
+	make DESTDIR=$PKG install
+}
