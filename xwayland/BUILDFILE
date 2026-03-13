@@ -1,0 +1,32 @@
+description="Compact xserver to run under wayland for compatibility"
+homepage="https://www.x.org/wiki"
+maintainer="Vylen Linux Team"
+
+name=xwayland
+version=24.1.9
+release=1
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/$name-$version/xserver-$name-$version.tar.gz fix.pointers.patch"
+
+build() {
+
+    patch -d xserver-$name-$version -i $SRC/fix.pointers.patch -Np1
+
+        vylen-meson xserver-$name-$version build \
+		-Db_lto=true \
+		-Dipv6=true \
+		-Dxvfb=false \
+		-Dxdmcp=false \
+		-Dxcsecurity=true \
+		-Ddri3=true \
+		-Dglamor=true \
+		-Dsha1=libmd \
+		-Dxkb_dir=/usr/share/X11/xkb \
+		-Dxkb_output_dir=/var/lib/xkb 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+        
+	rm $PKG/usr/lib/xorg/protocol.txt
+	rmdir $PKG/usr/lib/xorg
+	rm $PKG/usr/share/man/man1/Xserver.1
+
+}

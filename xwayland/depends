@@ -1,0 +1,10 @@
+dbus
+libmd
+egl-wayland
+pixman
+libxkbfile
+libepoxy
+libxfont2
+libxcvt
+libtirpc
+libxshmfence
