@@ -1,0 +1,23 @@
+description="HTTP client/server library for GNOME"
+homepage="https://wiki.gnome.org/Projects/libsoup"
+maintainer="Vylen Linux Team"
+
+name=libsoup
+version=2.74.3
+release=1
+source="https://gitlab.gnome.org/GNOME/libsoup/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	# Fix a build failure caused by libxml2-2.12.x:
+	sed -i '/tree/a #include <libxml/parser.h>' libsoup/soup-xmlrpc*.c
+
+	vylen-meson build \
+		-Dgssapi=disabled \
+		-Dvapi=enabled \
+		-Dbrotli=disabled \
+		-Dsysprof=disabled 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
