@@ -1,0 +1,21 @@
+description="NetworkManager GUI client library"
+homepage="https://gitlab.gnome.org/GNOME/libnma"
+maintainer="Vylen Linux Team"
+
+name=libnma
+version=1.10.6
+release=1
+source="https://github.com/GNOME/libnma/archive/$version/$name-$version.tar.gz"
+
+build() {
+	emerald isinstalled vala && _opt="-D vapi=false"
+
+        vylen-meson $name-$version build $_opt \
+		-D mobile_broadband_provider_info=false \
+		-D gtk_doc=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	# conflict with network-manager-applet
+	rm $PKG/usr/share/glib-2.0/schemas/org.gnome.nm-applet.gschema.xml
+}
