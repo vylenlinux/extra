@@ -1,0 +1,15 @@
+description="Visually (c)lean, responsive, configurable theme for Sphinx."
+homepage="https://alabaster.readthedocs.io/"
+maintainer="Vylen Linux Team"
+
+name=python3-alabaster
+version=1.0.0
+release=1
+source="$name-$version.tar.gz::https://github.com/bitprophet/${name#*-}/archive/$version/${name#*-}-$version.tar.gz"
+
+build() {
+	cd ${name#*-}-$version
+
+	    gpep517 build-wheel --wheel-dir .dist --output-fd 3 3>&1 >&2
+	    python3 -m installer -d $PKG .dist/*.whl
+}
