@@ -1,0 +1,16 @@
+description="Official C++ interface for the ATK accessibility toolkit library"
+homepage="https://www.gtkmm.org/"
+maintainer="Vylen Linux Team"
+
+name=atkmm-gtk4
+nm=atkmm
+version=2.36.3
+release=1
+source="$name-$version.tar.xz::https://gitlab.gnome.org/GNOME/${name%-*}/-/archive/$version/${name%-*}-$version.tar.bz2"
+
+build() {
+	vylen-meson ${name%-*}-$version build \
+	    -D maintainer-mode=true
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
