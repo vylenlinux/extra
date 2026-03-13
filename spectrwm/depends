@@ -1,0 +1,10 @@
+libx11
+xcb-util
+xcb-util-wm
+xcb-util-keysyms
+libxcb
+libxcursor
+libxft
+libxrandr
+libxt
+freetype2
