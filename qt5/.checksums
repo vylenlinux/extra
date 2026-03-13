@@ -1,0 +1,7 @@
+7930da6fd8365f37669e221ddb3e6d45862a1868313e0a371ee13167951a9cc3  qt-everywhere-opensource-src-5.15.18.tar.xz
+5ac408dafd6bd2110ff6b25129a8636e9dabeba8f1220d29652b3e42525d638c  qt5-cflags.patch
+fc56ba5d2f1c4ff74047f9cf3730a352056cf525f6ef0bd93a26df0217b481e9  qt5-logo.png
+817077c6e3957e01e0331424fc9e2b5f0404552d461a74af938efff11f5c0335  qtbase-5.15.8-fix-missing-qtsan-include.patch
+71c49bd801cc92a564d186fd754aa8929cd984e986a42e8c8c7eefce963571a9  qtbase-everywhere-src-5.14.2-no_relocatable.patch
+4f57da494ad5bc079129e8ff4ca3ae80c118467065ed8fe0217e7957bc41739d  qtbase-everywhere-src-5.15.2-libglvnd.patch
+4b4f5f1e04bc868c1a3b6658a480d6a5c4403d11a0a39584402b4d7468231f04  qtbase-use-wayland-on-gnome.patch
