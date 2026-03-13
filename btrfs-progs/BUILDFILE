@@ -1,0 +1,23 @@
+description="Administration and debugging tools for the B-tree file system (btrfs)"
+homepage="https://btrfs.readthedocs.io/"
+maintainer="Vylen Linux Team"
+
+name=btrfs-progs
+version=6.19
+release=1
+source="https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/$name-v$version.tar.xz"
+
+build() {
+	cd $name-v$version
+	./configure \
+		--prefix=/usr \
+		--bindir=/sbin \
+		--disable-documentation \
+		--disable-backtrace \
+		--disable-python
+	make
+	make DESTDIR=$PKG install
+
+	# install bash completion (FS#44618)
+	install -Dm644 btrfs-completion $PKG/usr/share/bash-completion/completions/btrfs
+}
