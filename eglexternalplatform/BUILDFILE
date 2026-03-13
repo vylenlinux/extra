@@ -1,0 +1,16 @@
+description="EGL External Platform interface"
+homepage="https://github.com/NVIDIA/eglexternalplatform"
+maintainer="Vylen Linux Team"
+
+name=eglexternalplatform
+version=1.2.1
+release=1
+source="https://github.com/NVIDIA/eglexternalplatform/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
+
+
