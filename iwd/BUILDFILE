@@ -3,7 +3,7 @@ homepage="https://iwd.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=iwd
-version=3.11
+version=3.12
 release=1
 
 source="https://www.kernel.org/pub/linux/network/wireless/$name-$version.tar.xz
