@@ -1,0 +1,5 @@
+ad11b797c52f0d2de5736fe09d7a95becfb9b7fe8bc618fd4788313c0544e282  udevil-0.4.3-flags.patch
+5331ac9ef76daabb4da822c3b7aa2f32a1c2becae2d27482348bbe932c772b75  udevil-0.4.4-include-sysmacros.patch
+a4dc474e5f9f26a58fe0b0cee1a922e63fbc2e0a6b502a9e0fa0a332d5bbfaf2  udevil-0.4.4-no-libtool.patch
+29b7fe898ec9ea57731f101a354b85031c676f82c00ee97920b7e4cfac82ab1a  udevil-0.4.4-stat.patch
+f5b2487c3183a9a48cc89e14f284d9b8b2e9e375fa1eab695cfbeeb51f4e3431  udevil-0.4.4.tar.gz
