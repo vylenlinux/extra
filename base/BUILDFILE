@@ -1,0 +1,12 @@
+description="Meta port for base system"
+homepage="https://vylen.gitlab.io/"
+maintainer="Vylen Linux Team"
+
+name=base
+version=20260313
+release=1
+IGNORE_CHECKSUM="yes"
+
+build() {
+	mkdir -pv $PKG/usr
+}
