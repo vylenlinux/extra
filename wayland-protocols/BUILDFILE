@@ -1,0 +1,16 @@
+description="Additional Wayland protocols that add functionality outside of protocols already in the Wayland core"
+homepage="https://wayland.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=wayland-protocols
+version=1.47
+release=1
+source="https://gitlab.freedesktop.org/wayland/$name/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	   
+        vylen-meson $name-$version build \
+	    -Dtests=false
+        meson compile -C build
+        DESTDIR=$PKG meson install --no-rebuild -C build
+}
