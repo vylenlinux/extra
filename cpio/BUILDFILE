@@ -1,0 +1,26 @@
+description="Tools for archiving"
+homepage="https://www.gnu.org/software/cpio"
+maintainer="Vylen Linux Team"
+
+name=cpio
+version=2.15
+release=1
+source="https://ftp.gnu.org/gnu/cpio/$name-$version.tar.bz2
+	cpio-c23.patch"
+
+build() {
+	cd $name-$version
+
+	export CFLAGS="$CFLAGS -fcommon"
+
+	patch -Np1 -i $SRC/cpio-c23.patch
+
+	./configure --prefix=/usr \
+	            --bindir=/bin \
+	            --enable-mt   \
+		    --disable-nls \
+	            --with-rmt=/usr/lib/tar/rmt
+	make
+	make DESTDIR=$PKG install
+
+}
