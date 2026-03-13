@@ -1,0 +1,16 @@
+description="Library for making brushstrokes which is used by MyPaint and other projects"
+homepage="http://mypaint.org/"
+maintainer="Vylen Linux Team"
+
+name=libmypaint
+version=1.6.1
+release=1
+source="https://github.com/mypaint/libmypaint/releases/download/v$version/libmypaint-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+
+}
