@@ -1,0 +1,24 @@
+description="Implementations of the VP8 Codec, used in most current html5 video, and of the next-generation VP9 Codec"
+homepage="https://www.webmproject.org/"
+maintainer="Vylen Linux Team"
+
+name=libvpx
+version=1.16.0
+release=1
+source="$name-$version.tar.gz::https://github.com/webmproject/libvpx/archive/v$version.tar.gz
+	CVE-2026-2447.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/CVE-2026-2447.patch	
+
+	mkdir libvpx-build
+	cd    libvpx-build
+
+	../configure --prefix=/usr    \
+ 	            --enable-shared  \
+ 	            --disable-static
+	make
+	make DESTDIR=$PKG install
+}
