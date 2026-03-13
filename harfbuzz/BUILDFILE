@@ -1,0 +1,22 @@
+description="OpenType text shaping engine"
+homepage="https://harfbuzz.github.io/"
+maintainer="Vylen Linux Team"
+
+name=harfbuzz
+version=13.1.1
+release=1
+source="https://github.com/harfbuzz/harfbuzz/releases/download/$version/harfbuzz-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build \
+		-D docs=disabled \
+		-D graphite=auto \
+		-D benchmark=disabled \
+		-D icu=disabled 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	rm -f $PKG/usr/include/harfbuzz/hb-icu.h
+	rm -f $PKG/usr/lib/libharfbuzz-icu*
+	rm -f $PKG/usr/lib/pkgconfig/harfbuzz-icu.pc
+}
