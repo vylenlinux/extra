@@ -1,0 +1,10 @@
+pcre2
+libconfig
+dbus
+libev
+libxdg-basedir
+uthash
+xcb-util-renderutil
+xcb-util-image
+pixman
+libglvnd

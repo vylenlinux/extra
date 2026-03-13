@@ -1,0 +1,19 @@
+description="A lightweight compositor for X11"
+homepage="https://github.com/yshui/picom"
+maintainer="Vylen Linux Team"
+
+name=picom
+version=13
+release=1
+backup="etc/xdg/picom.conf"
+source="$name-$version.tar.gz::https://github.com/yshui/picom/archive/v$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build --buildtype=release
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	sed 's/vsync = true/vsync = false/' -i $name-$version/picom.sample.conf
+	install -Dm644 $name-$version/picom.sample.conf $PKG/etc/xdg/picom.conf
+	install -Dm644 $name-$version/picom.sample.conf $PKG/etc/xdg/picom.conf.example
+}
