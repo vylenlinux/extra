@@ -5,10 +5,11 @@ maintainer="Vylen Linux Team"
 name=avahi
 version=0.8
 release=1
+
 source="https://github.com/lathiat/avahi/releases/download/v$version/$name-$version.tar.gz
 	avahi-0.8-ipv6_race_condition_fix-1.patch
 	0001-Fix-avahi-browse-Invalid-service-type.patch
-	rc.avahi-daemon"
+	run.avahi-daemon"
 
 build() {
 	cd $name-$version
@@ -43,7 +44,8 @@ build() {
 
 	ln -s avahi-compat-libdns_sd/dns_sd.h $PKG/usr/include/dns_sd.h
 
-	install -D -m 0755 $SRC/rc.avahi-daemon $PKG/etc/rc.d/avahi-daemon
+	install -Dm755 $SRC/run.avahi-daemon $PKG/etc/sv/avahi-daemon/run
+	ln -s /run/runit/supervise.avahi-daemon $PKG/etc/sv/avahi-daemon/supervise
 
 	rm -fr $PKG/run
 }

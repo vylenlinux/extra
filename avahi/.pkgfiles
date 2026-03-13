@@ -1,4 +1,4 @@
-avahi-0.8-3
+avahi-0.8-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/avahi/
 -rwxr-xr-x root/root    etc/avahi/avahi-autoipd.action
@@ -11,8 +11,10 @@ drwxr-xr-x root/root    etc/avahi/services/
 drwxr-xr-x root/root    etc/dbus-1/
 drwxr-xr-x root/root    etc/dbus-1/system.d/
 -rw-r--r-- root/root    etc/dbus-1/system.d/avahi-dbus.conf
-drwxr-xr-x root/root    etc/rc.d/
--rwxr-xr-x root/root    etc/rc.d/avahi-daemon
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/avahi-daemon/
+-rwxr-xr-x root/root    etc/sv/avahi-daemon/run
+lrwxrwxrwx root/root    etc/sv/avahi-daemon/supervise -> /run/runit/supervise.avahi-daemon
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/avahi-browse
