@@ -1,0 +1,5 @@
+dbus
+gobject-introspection
+intltool
+libdaemon
+libevent

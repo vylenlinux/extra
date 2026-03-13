@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# /etc/rc.d/avahi-daemon: start/stop avahi daemon
+#
+
+. /etc/rc.subr
+
+NAME=avahi-daemon
+PROG=/usr/sbin/avahi-daemon
+PID=/run/avahi-daemon/pid
+OPTS="-D"
+
+case $1 in
+	start)
+		[ -d "${PID%/*}" ] || install -o ${NAME%-*} -g ${NAME%-*} -d "${PID%/*}"
+		msg "Starting $NAME..."	
+		start_daemon -p $PID $PROG $OPTS 
+		;;
+	stop)
+		msg "Stopping $NAME..."	
+		stop_daemon -p $PID $PROG
+		;;
+	restart)
+		$0 stop
+		sleep 1
+		$0 start
+		;;
+	status)
+		status_daemon $PROG
+		case $? in
+			0) echo "$PROG is running with pid $(cat $PID)" ;;
+			1) echo "$PROG is not running but the pid file $PID exists" ;;
+			3) echo "$PROG is not running" ;;
+			4) echo "Unable to determine the program status" ;;
+		esac
+		;;
+	*)
+		echo "Usage: $0 [start|stop|restart|status]"
+		;;
+esac
+
+# End of file

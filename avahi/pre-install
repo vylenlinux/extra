@@ -1,0 +1,6 @@
+#!/bin/sh -e
+
+getent group avahi > /dev/null || groupadd -r avahi
+
+getent passwd avahi > /dev/null || \
+useradd -r -M -g avahi -G avahi -c "avahi system user" -d /run/avahi -s /sbin/nologin avahi
