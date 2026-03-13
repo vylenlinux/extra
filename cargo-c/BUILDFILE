@@ -1,0 +1,19 @@
+description="A cargo subcommand to build and install C-ABI compatibile dynamic and static libraries"
+homepage="https://github.com/lu-zero/cargo-c/"
+maintainer="Vylen Linux Team"
+
+name=cargo-c
+version=0.10.21
+release=1
+source="https://github.com/lu-zero/cargo-c/archive/v${version}/${name}-${version}.tar.gz 
+	${name}-${version}.Cargo.lock::https://github.com/lu-zero/cargo-c/releases/download/v${version}/Cargo.lock"
+
+build() {
+	export RUSTUP_TOOLCHAIN='stable'
+	export CARGO_TARGET_DIR="${name}-${version}/target"
+
+	ln -sf "$SRC/${name}-${version}.Cargo.lock" "$name-$version/Cargo.lock"
+	cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')" --manifest-path="$name-$version/Cargo.toml"
+	cargo build --release --frozen --manifest-path="$name-$version/Cargo.toml"
+	find "$name-$version/target/release" -maxdepth 1 -type f -executable -exec install -D -m755 -t "$PKG/usr/bin" {} +
+}
