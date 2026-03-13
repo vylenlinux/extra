@@ -1,0 +1,14 @@
+description="GObject-based wrapper around the Exiv2 library"
+homepage="https://gitlab.gnome.org/GNOME/gexiv2"
+maintainer="Vylen Linux Team"
+
+name=gexiv2
+version=0.14.6
+release=1
+source="https://gitlab.gnome.org/GNOME/$name/-/archive/$name-$version/$name-$name-$version.tar.bz2"
+
+build() {
+	vylen-meson $name-$name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
