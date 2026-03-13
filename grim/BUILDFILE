@@ -1,0 +1,14 @@
+description="Screenshot utility for Wayland"
+homepage="https://github.com/emersion/grim"
+maintainer="Vylen Linux Team"
+
+name=grim
+version=1.5.0
+release=1
+source="https://gitlab.freedesktop.org/emersion/grim/-/releases/v$version/downloads/$name-$version.tar.gz"
+
+build() {
+    vylen-meson $name-$version build
+    meson compile -C build
+    DESTDIR=$PKG meson install --no-rebuild -C build
+}
