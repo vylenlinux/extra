@@ -1,0 +1,15 @@
+description="Library used to identify wacom tablets and their model-specific features"
+homepage="https://github.com/linuxwacom/libwacom/wiki"
+maintainer="Vylen Linux Team"
+
+name=libwacom
+version=2.18.0
+release=1
+source="https://github.com/linuxwacom/libwacom/releases/download/$name-$version/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Dtests=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
