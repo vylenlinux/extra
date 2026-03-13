@@ -1,0 +1,14 @@
+description="GObject bindings for libudev"
+homepage="https://wiki.gnome.org/Projects/libgudev"
+maintainer="Vylen Linux Team"
+
+name=libgudev
+version=238
+release=1
+source="https://gitlab.gnome.org/GNOME/libgudev/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
