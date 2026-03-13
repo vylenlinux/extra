@@ -1,0 +1,18 @@
+description="Python implementation of markdown"
+homepage="https://pypi.org/project/markdown"
+maintainer="Vylen Linux Team"
+
+name=python3-markdown
+version=3.10.2
+release=1
+source="$name-$version.tar.gz::https://github.com/Python-Markdown/markdown/archive/refs/tags/$version.tar.gz"
+build() {
+	cd markdown-$version
+
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+
+	python3 -m installer -d $PKG \
+		.dist/*.whl
+}
