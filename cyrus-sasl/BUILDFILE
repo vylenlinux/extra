@@ -6,7 +6,7 @@ name=cyrus-sasl
 version=2.1.28
 release=1
 source="https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
-	saslauthd
+	run.saslauthd
 	5e4395aaf4d91aba66649c9915e38d343d000ef7.patch
 	79bce416883cab6dc45151575f2a66dc181c67e4.patch
 	c3ccead6ee3773f624708ca22be41292cd5ce557.patch"
@@ -36,9 +36,8 @@ build() {
 	make CFLAGS="$CFLAGS -fPIC -Wno-implicit-function-declaration"
 	make DESTDIR=$PKG install
 
-	install -d \
-		$PKG/usr/lib/sasl2 \
-		$PKG/var/sasl/saslauthd \
+	install -d $PKG/usr/lib/sasl2 $PKG/var/sasl/saslauthd
+    install -Dm755 $SRC/run.saslauthd $PKG/etc/sv/saslauthd/run
 
-	install -Dm 755 $SRC/saslauthd $PKG/etc/rc.d/saslauthd
+	ln -s /run/runit/supervise.saslauthd $PKG/etc/sv/saslauthd/supervise
 }
