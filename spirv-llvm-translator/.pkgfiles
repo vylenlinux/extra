@@ -1,0 +1,13 @@
+spirv-llvm-translator-21.1.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/llvm-spirv
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/LLVMSPIRVLib/
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVLib.h
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVOpts.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libLLVMSPIRVLib.a
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/LLVMSPIRVLib.pc
