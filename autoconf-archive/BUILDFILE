@@ -1,0 +1,19 @@
+description="A collection of freely re-usable Autoconf macros"
+homepage="https://www.gnu.org/software/autoconf-archive/"
+maintainer="Vylen Linux Team"
+
+name=autoconf-archive
+version=2024.10.16
+release=1
+source="https://ftpmirror.gnu.org/$name/$name-$version.tar.xz
+	fix_AX_CXX_COMPILE_STDCXX.patch"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/fix_AX_CXX_COMPILE_STDCXX.patch
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
