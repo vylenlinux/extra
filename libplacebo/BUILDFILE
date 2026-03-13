@@ -3,7 +3,7 @@ homepage="https://github.com/haasn/libplacebo"
 maintainer="Vylen Linux Team"
 
 name=libplacebo
-version=7.360.0
+version=7.360.1
 release=1
 source="$name-$version.tar.gz::https://github.com/haasn/libplacebo/archive/v$version.tar.gz"
 
