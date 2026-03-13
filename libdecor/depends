@@ -1,0 +1,4 @@
+meson
+dbus
+pango
+wayland-protocols

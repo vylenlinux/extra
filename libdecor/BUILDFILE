@@ -1,0 +1,15 @@
+description="Client-side decorations library for Wayland clients"
+homepage="https://gitlab.gnome.org/jadahl/libdecor"
+maintainer="Vylen Linux Team"
+
+name=libdecor
+version=0.2.5
+release=1
+
+source="https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build -Ddemo=false
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
