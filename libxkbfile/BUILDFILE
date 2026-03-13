@@ -1,0 +1,14 @@
+description="X11 keyboard file manipulation library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxkbfile"
+maintainer="Vylen Linux Team"
+
+name=libxkbfile
+version=1.2.0
+release=1
+source="http://ftp.x.org/pub/individual/lib/libxkbfile-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR="$PKG" meson install --no-rebuild -C build
+}
