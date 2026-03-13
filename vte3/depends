@@ -1,0 +1,14 @@
+fmt
+gobject-introspection
+vala
+pango
+fribidi
+gnutls
+pcre2
+zlib
+gtk3
+at-spi2-core
+cairo
+gdk-pixbuf
+fast_float
+simdutf
