@@ -1,0 +1,14 @@
+description="C++ interface to GTK+ 4"
+homepage="http://www.gtkmm.org/"
+maintainer="Vylen Linux Team"
+
+name=gtkmm4
+version=4.22.0
+release=1
+source="https://ftp.gnome.org/pub/gnome/sources/gtkmm/${version%.*}/gtkmm-$version.tar.xz"
+
+build() {
+	vylen-meson gtkmm-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
