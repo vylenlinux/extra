@@ -1,0 +1,21 @@
+description="Display information utility for X"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xdpyinfo
+version=1.4.0
+release=1
+source="http://ftp.x.org/pub/individual/app/xdpyinfo-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+}
+
