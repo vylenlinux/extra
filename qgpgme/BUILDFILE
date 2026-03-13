@@ -1,0 +1,21 @@
+description="Qt bindings for GPGME"
+homepage="https://www.gnupg.org/related_software/gpgme/"
+maintainer="Vylen Linux Team"
+
+name=qgpgme
+version=2.0.0
+release=1
+source="https://gnupg.org/ftp/gcrypt/qgpgme/$name-$version.tar.xz"
+
+build() {
+	cmake -S $name-$version -B build \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-DCMAKE_INSTALL_LIBEXECDIR=lib \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-Wno-dev 
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}
