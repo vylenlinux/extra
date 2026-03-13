@@ -1,0 +1,17 @@
+description="Interactive process viewer"
+homepage="https://htop.dev/"
+maintainer="Vylen Linux Team"
+
+name=htop
+version=3.4.1
+release=1
+source="https://github.com/htop-dev/htop/archive/$version/htop-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	./autogen.sh
+	./configure --prefix=/usr --disable-nls --mandir=/usr/share/man
+	make
+	make DESTDIR=$PKG install
+}
