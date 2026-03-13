@@ -1,0 +1,16 @@
+description="Utility for controlling network drivers and hardware"
+homepage="https://www.kernel.org/pub/software/network/ethtool/"
+maintainer="Vylen Linux Team"
+
+name=ethtool
+version=6.19
+release=1
+source="https://git.kernel.org/pub/scm/network/ethtool/ethtool.git/snapshot/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	autoreconf -fi
+	./configure --prefix=/usr --mandir=/usr/share/man --sbindir=/usr/bin
+	make
+	make DESTDIR=$PKG install
+}
