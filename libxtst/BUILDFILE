@@ -1,0 +1,22 @@
+description="X11 Testing -- Resource extension library"
+homepage="https://gitlab.freedesktop.org/xorg/lib/libxtst"
+maintainer="Vylen Linux Team"
+
+name=libxtst
+version=1.2.5
+release=1
+source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXtst-$version.tar.xz"
+
+build() {
+	cd libXtst-$version
+
+	./configure \
+		--prefix=/usr \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --disable-static
+	make
+	make DESTDIR=$PKG install
+
+
+}
