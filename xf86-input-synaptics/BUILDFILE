@@ -1,0 +1,23 @@
+description="Synaptics driver for notebook touchpads"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xf86-input-synaptics
+version=1.10.0
+release=1
+source="http://ftp.x.org/pub/individual/driver/xf86-input-synaptics-$version.tar.xz
+	50-synaptics.conf"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+
+	install -Dm 644 $SRC/50-synaptics.conf $PKG/etc/X11/xorg.conf.d/50-synaptics.conf
+}
