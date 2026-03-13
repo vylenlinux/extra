@@ -1,0 +1,20 @@
+description="Combined X.Org X11 Protocol headers"
+homepage="https://xorg.freedesktop.org/"
+maintainer="Vylen Linux Team"
+
+name=xorgproto
+version=2025.1
+release=1
+source="https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	vylen-meson build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	# cleanup
+	rm $PKG/usr/include/X11/extensions/apple*
+	rm $PKG/usr/share/pkgconfig/apple*
+
+}
