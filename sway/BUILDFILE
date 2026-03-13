@@ -1,0 +1,19 @@
+description="Tiling Wayland compositor and replacement for the i3 window manager "
+homepage="https://github.com/swaywm/sway"
+maintainer="Vylen Linux Team"
+
+name=sway
+version=1.11
+release=1
+source="https://github.com/swaywm/sway/releases/download/$version/sway-$version.tar.gz
+	sway-portals.conf
+	sway.desktop"
+
+build() {
+	vylen-meson $name-$version build -Dwerror=false 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	install -Dm644 $SRC/sway.desktop $PKG/usr/share/wayland-sessions/sway.desktop
+	install -Dm644 $SRC/sway-portals.conf -t $PKG/usr/share/xdg-desktop-portal/portals/
+}
