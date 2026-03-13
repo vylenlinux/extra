@@ -1,0 +1,17 @@
+description="Configuration database system"
+homepage="https://wiki.gnome.org/Projects/dconf"
+maintainer="Vylen Linux Team"
+
+name=dconf
+version=0.40.0
+release=1
+source="https://gitlab.gnome.org/GNOME/dconf/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+
+	export XML_CATALOG_FILES=/etc/xml/catalog
+	vylen-meson $name-$version build \
+	--libexecdir=/usr/lib/$name
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
