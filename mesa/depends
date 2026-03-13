@@ -1,0 +1,16 @@
+python3-mako
+elfutils
+bison
+flex
+libclc
+libxdamage
+python3-ply
+python3-yaml
+libxshmfence
+libxxf86vm
+libxrandr
+libdrm
+libglvnd
+glslang
+cbindgen
+rust-bindgen
