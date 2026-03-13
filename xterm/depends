@@ -1,0 +1,12 @@
+libxft
+fontconfig
+freetype2
+libxext
+libxaw
+libxmu
+libxinerama
+libxpm
+libice
+libxt
+libx11
+ncurses
