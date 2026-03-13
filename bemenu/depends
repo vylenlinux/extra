@@ -1,0 +1,8 @@
+pango
+wlroots
+libxkbcommon
+wayland
+wayland-protocols
+libxinerama
+xcb-util-renderutil
+ncurses
