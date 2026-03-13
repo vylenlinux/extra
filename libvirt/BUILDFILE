@@ -8,8 +8,8 @@ release=1
 backup="etc/libvirt/libvirtd.conf  
 	etc/libvirt/qemu.conf"
 source="https://libvirt.org/sources/$name-$version.tar.xz
-	rc.libvirtd 
-	rc.virtlogd 
+	run.libvirtd
+	run.virtlogd
 	libvirtd.conf 
 	qemu.conf"
 
@@ -42,10 +42,12 @@ build() {
 	meson compile -C build
 	DESTDIR=$PKG meson install --no-rebuild -C build
 
-	install -D -o root -g root -m 0755 $SRC/rc.libvirtd \
-		$PKG/etc/rc.d/libvirtd
-	install -D -o root -g root -m 0755 $SRC/rc.virtlogd \
-		$PKG/etc/rc.d/virtlogd
+    install -Dm755 $SRC/run.libvirtd $PKG/etc/sv/libvirtd/run
+	ln -s /run/runit/supervise.libvirtd $PKG/etc/sv/libvirtd/supervise
+
+    install -Dm755 $SRC/run.virtlogd $PKG/etc/sv/virtlogd/run
+	ln -s /run/runit/supervise.virtlogd $PKG/etc/sv/virtlogd/supervise
+
 	install -D -o root -g root -m 0644 $SRC/libvirtd.conf \
 		$PKG/etc/libvirt/libvirtd.conf
 	install -D -o root -g root -m 0644 $SRC/qemu.conf \
