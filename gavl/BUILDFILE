@@ -1,0 +1,20 @@
+description="Low level library that handles the details of audio and video formats"
+homepage="http://gmerlin.sourceforge.net/"
+maintainer="Vylen Linux Team"
+
+name=gavl
+version=1.4.0
+release=1
+source="https://downloads.sourceforge.net/gmerlin/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	# fix build with GCC 14
+	export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration"
+
+	LIBS=-lm \
+	./configure --prefix=/usr --without-doxygen --with-cpuflags=none
+	make
+	make DESTDIR=$PKG install
+}
