@@ -1,0 +1,15 @@
+description="Deprecated Xlib integration for GdkPixbuf"
+homepage="https://gitlab.gnome.org/Archive/gdk-pixbuf-xlib"
+maintainer="Vylen Linux Team"
+
+name=gdk-pixbuf-xlib
+version=2.40.2
+release=1
+source="https://gitlab.gnome.org/Archive/$name/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+
+	vylen-meson $name-$version build 
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
