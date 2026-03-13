@@ -1,0 +1,17 @@
+description="Font rasterization library"
+homepage="https://downloads.sourceforge.net/freetype"
+maintainer="Vylen Linux Team"
+
+name=freetype2
+version=2.14.2
+release=1
+source="https://downloads.sourceforge.net/freetype/freetype-$version.tar.xz
+	freetype2.sh"
+
+build() {
+	vylen-meson freetype-$version build -Dfreetype2:default_library=shared
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	install -Dt $PKG/etc/profile.d -m644 $SRC/freetype2.sh
+}
