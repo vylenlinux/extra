@@ -1,0 +1,26 @@
+description="ImageMagick is a collection of tools and libraries to read, write, and manipulate an image in various image formats"
+homepage="https://imagemagick.org/ "
+maintainer="Vylen Linux Team"
+
+name=imagemagick
+version=7.1.2.16
+vrsn=${version%.*}-${version##*.}
+release=1
+source="$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$vrsn.tar.gz"
+
+KEEP_LIBTOOL="yes"
+
+build() {
+	cd ImageMagick-$vrsn
+
+	./configure --prefix=/usr     \
+	            --sysconfdir=/etc \
+	            --enable-hdri     \
+	            --with-modules    \
+	            --with-perl       \
+	            --disable-static  \
+		    --without-openexr
+	make
+	make DESTDIR=$PKG install
+
+}
