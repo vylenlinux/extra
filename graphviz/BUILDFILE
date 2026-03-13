@@ -1,0 +1,26 @@
+description="Graph visualization software"
+homepage="https://www.graphviz.org/"
+maintainer="Vylen Linux Team"
+
+name=graphviz
+version=14.1.3
+release=1
+source="https://gitlab.com/graphviz/graphviz/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	cd $name-$version	
+
+	./autogen.sh NOCONFIG
+	./configure \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--libexecdir=/usr/lib \
+		--disable-perl \
+		--disable-python \
+		--enable-python3=yes 
+	make
+	make DESTDIR=$PKG install
+
+	mv -f $PKG/usr/lib64/* $PKG/usr/lib/
+	rm -rf $PKG/usr/lib64
+}
