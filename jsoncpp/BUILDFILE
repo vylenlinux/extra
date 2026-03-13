@@ -1,0 +1,17 @@
+description="C++ library for interacting with JSON"
+homepage="https://github.com/open-source-parsers/jsoncpp"
+maintainer="Vylen Linux Team"
+
+name=jsoncpp
+version=1.9.6
+release=1
+source="https://github.com/open-source-parsers/jsoncpp/archive/$version/$name-$version.tar.gz"
+
+build() {
+	echo ${version} > $name-$version/version
+
+	vylen-meson $name-$version build \
+		--default-library shared
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}
