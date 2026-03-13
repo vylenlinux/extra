@@ -1,0 +1,16 @@
+description="80x86 assembler designed for portability and modularity"
+homepage="https://www.nasm.us/"
+maintainer="Vylen Linux Team"
+
+name=nasm
+version=3.01
+release=1
+source="https://www.nasm.us/pub/nasm/releasebuilds/$version/nasm-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}
