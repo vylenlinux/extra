@@ -1,0 +1,16 @@
+description="X.org font encoding files"
+homepage="https://gitlab.freedesktop.org/xorg/font/encodings"
+maintainer="Vylen Linux Team"
+
+name=encodings
+version=1.1.0
+release=1
+source="https://xorg.freedesktop.org//releases/individual/font/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+
+	rm -rf $PKG/usr/share/fonts/encodings/encodings.dir
+}
