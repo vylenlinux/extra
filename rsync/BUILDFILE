@@ -1,0 +1,47 @@
+description="Utilities for synchronizing large file archives over a network"
+homepage="https://rsync.samba.org/"
+maintainer="Vylen Linux Team"
+
+name=rsync
+version=3.4.1
+release=1
+backup="etc/rsyncd.conf"
+
+source="https://download.samba.org/pub/rsync/$name-$version.tar.gz
+	fix-invalid-acces-array.patch
+	run.rsyncd"
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/fix-invalid-acces-array.patch
+
+	./configure \
+		--prefix=/usr \
+		--with-included-popt=no \
+		--with-included-zlib=no \
+		--disable-xxhash
+	make
+	make DESTDIR=$PKG install
+
+mkdir -p $PKG/etc
+cat > $PKG/etc/rsyncd.conf << "EOF"
+# This is a basic rsync configuration file
+# It exports a single module without user authentication.
+
+motd file = /home/rsync/welcome.msg
+use chroot = yes
+
+[localhost]
+    path = /home/rsync
+    comment = Default rsync module
+    read only = yes
+    list = yes
+    uid = rsyncd
+    gid = rsyncd
+
+EOF
+
+	install -Dm755 $SRC/run.rsyncd $PKG/etc/sv/rsyncd/run
+	ln -s /run/runit/supervise.rsyncd $PKG/etc/sv/rsyncd/supervise
+}
