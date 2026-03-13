@@ -1,0 +1,21 @@
+description="C/C++ Configuration File Library"
+homepage="https://github.com/hyperrealm/libconfig"
+maintainer="Vylen Linux Team"
+
+name=libconfig
+version=1.8.2
+release=1
+source="$name-$version.tar.gz::https://github.com/hyperrealm/libconfig/archive/v$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	autoreconf -vi
+
+	./configure --prefix=/usr
+	sed -i "s/doc//g" Makefile
+
+	make
+	make DESTDIR=$PKG install
+}
+
