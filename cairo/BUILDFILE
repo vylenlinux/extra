@@ -1,0 +1,20 @@
+description="2D graphics library with support for multiple output devices"
+homepage="https://cairographics.org/"
+maintainer="Vylen Linux Team"
+
+name=cairo
+version=1.18.4
+release=1
+source="https://gitlab.freedesktop.org/cairo/cairo/-/archive/$version/$name-$version.tar.bz2"
+
+build() {
+	export XML_CATALOG_FILES=/etc/xml/catalog
+
+	vylen-meson $name-$version build \
+		-D dwrite=disabled \
+		-D spectre=disabled \
+		-D symbol-lookup=disabled \
+		-D tests=disabled
+	meson compile -C build
+	meson install --no-rebuild -C build --destdir $PKG
+}
