@@ -1,0 +1,8 @@
+extra-cmake-modules
+ninja
+qt6-tools
+qt6-declarative
+linux-pam
+upower
+consolekit2
+libxcb
