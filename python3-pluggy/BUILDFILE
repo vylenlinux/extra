@@ -1,0 +1,21 @@
+description="Plugin and hook calling mechanisms for python"
+homepage="https://github.com/pytest-dev/pluggy"
+maintainer="Vylen Linux Team"
+
+name=python3-pluggy
+version=1.6.0
+release=1
+source="https://files.pythonhosted.org/packages/source/p/pluggy/pluggy-$version.tar.gz"
+
+build() {
+	cd pluggy-$version
+
+
+	SETUPTOOLS_SCM_PRETEND_VERSION="$version" \
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d "$PKG" \
+		.dist/*.whl
+
+}
