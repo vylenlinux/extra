@@ -1,0 +1,5 @@
+libdrm
+eudev
+mesa
+libpciaccess
+xorg-server
