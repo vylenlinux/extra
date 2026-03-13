@@ -1,0 +1,7 @@
+cmake
+boost
+python3-setuptools
+python3-gpep517
+python3-wheel
+ninja
+python3-scikit-build-core
