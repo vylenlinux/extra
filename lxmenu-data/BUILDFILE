@@ -1,0 +1,17 @@
+description="Freedesktop.org menu spec-compliant desktop menus for LXDE"
+homepage="https://lxde.org/"
+maintainer="Vylen Linux Team"
+
+name=lxmenu-data
+version=0.1.7
+release=1
+source="https://github.com/lxde/lxmenu-data/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	autoreconf -fvi
+	./configure --prefix=/usr --sysconfdir=/etc
+	make
+	make DESTDIR=$PKG install
+}
+
