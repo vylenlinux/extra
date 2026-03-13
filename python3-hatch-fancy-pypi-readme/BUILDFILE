@@ -1,0 +1,20 @@
+description="Fancy PyPI READMEs with Hatch"
+homepage="https://github.com/hynek/hatch-fancy-pypi-readme"
+maintainer="Vylen Linux Team"
+
+name=python3-hatch-fancy-pypi-readme
+version=25.1.0
+release=1
+source="https://github.com/hynek/hatch-fancy-pypi-readme/archive/$version/$name-$version.tar.gz"
+
+build() {
+    cd hatch-fancy-pypi-readme-$version
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d $PKG \
+		.dist/*.whl
+
+	rm -rf $PKG/usr/lib/python*/site-packages/hatch_fancy_pypi_readme-*/license
+
+}
