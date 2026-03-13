@@ -1,0 +1,24 @@
+description="A multi-platform toolkit for creating graphical user interfaces, version 4"
+homepage="https://www.gtk.org/"
+maintainer="Vylen Linux Team"
+
+name=gtk4
+version=4.22.0
+release=1
+source="https://gitlab.gnome.org/GNOME/gtk/-/archive/$version/gtk-$version.tar.bz2"
+
+build() {
+	export XML_CATALOG_FILES=/etc/xml/catalog
+	
+	vylen-meson gtk-$version build \
+		-Dbroadway-backend=true \
+		-Dwayland-backend=$(emerald isinstalled wayland-protocols && printf "true" || printf "false") \
+		-D introspection=enabled \
+		-D man-pages=false \
+		-D build-tests=false \
+		-D build-testsuite=false \
+		-D build-examples=false \
+		-D build-demos=false
+        meson compile -C build
+        DESTDIR=$PKG meson install --no-rebuild -C build
+}
