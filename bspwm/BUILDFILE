@@ -1,0 +1,16 @@
+description="Tiling window manager based on binary space partitioning"
+homepage="https://github.com/baskerville/bspwm"
+maintainer="Vylen Linux Team"
+
+name=bspwm
+version=0.9.12
+release=1
+source="https://github.com/baskerville/bspwm/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	make PREFIX=/usr
+	make PREFIX=/usr DESTDIR=$PKG install
+
+}
