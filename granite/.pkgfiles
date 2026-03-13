@@ -1,0 +1,35 @@
+granite-7.8.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/granite-7/
+-rw-r--r-- root/root    usr/include/granite-7/granite-7.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/girepository-1.0/
+-rw-r--r-- root/root    usr/lib/girepository-1.0/Granite-7.0.typelib
+lrwxrwxrwx root/root    usr/lib/libgranite-7.so -> libgranite-7.so.7
+lrwxrwxrwx root/root    usr/lib/libgranite-7.so.7 -> libgranite-7.so.7.8.0
+-rwxr-xr-x root/root    usr/lib/libgranite-7.so.7.8.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/granite-7.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/gir-1.0/
+-rw-r--r-- root/root    usr/share/gir-1.0/Granite-7.0.gir
+drwxr-xr-x root/root    usr/share/icons/
+drwxr-xr-x root/root    usr/share/icons/hicolor/
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/48x48/apps/io.elementary.granite-7.svg
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48@2/
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48@2/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/48x48@2/apps/io.elementary.granite-7.svg
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/granite-7.metainfo.xml
+drwxr-xr-x root/root    usr/share/themes/
+drwxr-xr-x root/root    usr/share/themes/Granite/
+drwxr-xr-x root/root    usr/share/themes/Granite/gtk-4.0/
+-rw-r--r-- root/root    usr/share/themes/Granite/gtk-4.0/gtk-dark.css
+-rw-r--r-- root/root    usr/share/themes/Granite/gtk-4.0/gtk.css
+drwxr-xr-x root/root    usr/share/vala/
+drwxr-xr-x root/root    usr/share/vala/vapi/
+-rw-r--r-- root/root    usr/share/vala/vapi/granite-7.deps
+-rw-r--r-- root/root    usr/share/vala/vapi/granite-7.vapi
