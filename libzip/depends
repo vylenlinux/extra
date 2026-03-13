@@ -1,0 +1,6 @@
+cmake
+ninja
+zlib
+bzip2
+openssl
+gnutls
