@@ -2,3 +2,4 @@ doxygen
 glib
 libsigc++
 meson
+graphviz
