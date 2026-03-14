@@ -1,4 +1,4 @@
-simdutf-8.1.0-1
+simdutf-8.2.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/fastbase64
@@ -69,8 +69,8 @@ drwxr-xr-x root/root    usr/lib/cmake/simdutf/
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutf-config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutfTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutfTargets.cmake
-lrwxrwxrwx root/root    usr/lib/libsimdutf.so -> libsimdutf.so.32
-lrwxrwxrwx root/root    usr/lib/libsimdutf.so.32 -> libsimdutf.so.32.0.0
--rwxr-xr-x root/root    usr/lib/libsimdutf.so.32.0.0
+lrwxrwxrwx root/root    usr/lib/libsimdutf.so -> libsimdutf.so.33
+lrwxrwxrwx root/root    usr/lib/libsimdutf.so.33 -> libsimdutf.so.33.0.0
+-rwxr-xr-x root/root    usr/lib/libsimdutf.so.33.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/simdutf.pc
