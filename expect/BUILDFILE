@@ -19,7 +19,7 @@ build() {
 
 	export CFLAGS="${CFLAGS} -std=gnu89"
 
-	for p in $SRC/*patch; do
+	for p in $SRC/*.patch; do
 		patch -Np1 -i $p
 	done
 
