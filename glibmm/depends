@@ -3,3 +3,4 @@ glib
 libsigc++
 meson
 graphviz
+libxslt
