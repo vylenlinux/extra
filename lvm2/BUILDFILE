@@ -3,7 +3,7 @@ homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team"
 
 name=lvm2
-version=2.03.38
+version=2.03.39
 release=1
 backup="etc/lvm/lvm.conf
 	etc/lvm/lvmlocal.conf"
