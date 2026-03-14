@@ -1,12 +1,16 @@
-description="Vylen Linux inits stuffs"
-homepage="https://vylen.gitlab.io/"
+description="Runit bootscripts for Vylen Linux"
+homepage="https://gitlab.com/vylen/init"
 maintainer="Vylen Linux Team"
 
 name=init
-version=1
+version=20260314
 release=1
-source="modules-load"
+source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	install -Dm755 $SRC/modules-load $PKG/usr/sbin/modules-load
+    cd "${name}-${version}"
+    make all
+
+    DESTDIR="${PKG}" make install
+    install -Dm755 "modules-load" -t "${PKG}/usr/sbin/"
 }

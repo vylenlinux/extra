@@ -62,6 +62,5 @@ texinfo
 vim
 emerald
 dhcpcd
-runit-rc
 init
 b3sum
