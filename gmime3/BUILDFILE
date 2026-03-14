@@ -18,7 +18,9 @@ EOF
 chmod +x which
 export PATH=$PATH:$PWD
 
-	NOCONFIGURE=1 ./autogen.sh
+	sed -i '/AM_INIT_AUTOMAKE/s/]/ foreign]/' configure.ac
+	autoreconf -fvi
+
 	./configure --prefix=/usr \
     	--program-prefix=gmime3 \
     	--enable-smime \
