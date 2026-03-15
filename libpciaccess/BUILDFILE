@@ -3,7 +3,7 @@ homepage="https://gitlab.freedesktop.org/xorg/lib/libpciaccess"
 maintainer="Vylen Linux Team"
 
 name=libpciaccess
-version=0.18.1
+version=0.19
 release=1
 source="http://ftp.x.org/pub/individual/lib/libpciaccess-$version.tar.xz"
 
