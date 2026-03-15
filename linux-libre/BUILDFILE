@@ -3,7 +3,7 @@ homepage="https://linux-libre.fsfla.org"
 maintainer="Vylen Linux Team"
 
 name=linux-libre
-version=6.19.3
+version=6.19.8
 release=1
 source="${name}-${version}.tar.xz::https://linux-libre.fsfla.org/pub/linux-libre/releases/${version%.0}-gnu/${name}-${version%.0}-gnu.tar.xz
 	x86-64-gnu
