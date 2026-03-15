@@ -3,7 +3,7 @@ homepage="https://github.com/cisco/libsrtp"
 maintainer="Vylen Linux Team"
 
 name=libsrtp
-version=2.7.0
+version=2.8.0
 release=1
 source="https://github.com/cisco/libsrtp/archive/v$version/$name-$version.tar.gz"
 
