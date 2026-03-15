@@ -3,14 +3,12 @@ homepage="https://gitlab.com/vylen/mkinitramfs"
 maintainer="Vylen Linux Team"
 
 name=mkinitramfs
-version=20260312
+version=20260315
 release=1
 backup="etc/${name}.conf"
-source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz
-	${name}.conf"
+source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	DESTDIR=$PKG ./INSTALL.sh
-	install -m644 $SRC/${name}.conf $PKG/etc/
+    cd "${name}-${version}"
+    DESTDIR="${PKG}" ./INSTALL.sh
 }
