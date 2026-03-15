@@ -3,7 +3,7 @@ homepage="https://www.gnu.org/software/groff/groff.html"
 maintainer="Vylen Linux Team"
 
 name=groff
-version=1.23.0
+version=1.24.1
 release=1
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz"
 
@@ -13,7 +13,8 @@ build() {
         PAGER=A4 ./configure \
 		--prefix=/usr \
                 --sysconfdir=/etc \
-                --without-x
+                --without-x \
+                    --disable-rpath
         make
         make DESTDIR=$PKG install
 
