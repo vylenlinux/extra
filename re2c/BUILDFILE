@@ -1,0 +1,22 @@
+description="A tool for generating C-based recognizers from regular expressions"
+maintainer="Vylen Linux Team"
+homepage="https://re2c.org"
+
+name=re2c
+version=4.4
+release=1
+source="https://github.com/skvadrik/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S $name-$version -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+}
