@@ -3,7 +3,7 @@ homepage="https://codeberg.org/dnkl/foot"
 maintainer="Vylen Linux Team"
 
 name=foot
-version=1.26.0
+version=1.26.1
 release=1
 source="$name-$version.tar.gz::https://codeberg.org/dnkl/foot/archive/$version.tar.gz"
 
