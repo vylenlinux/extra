@@ -3,24 +3,13 @@ homepage="https://llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=llvm
-version=21.1.8
+version=22.1.1
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/third-party-${version}.src.tar.xz
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/$name-project-${version}.src.tar.xz
 	llvm-config.h"
-noextract="cmake-${version}.src.tar.xz third-party-${version}.src.tar.xz"
 
 build() {
-	cd $name-$version.src
-
-	# The upstream expects them extracted at the same level as the llvm tarball, and 
-	# the extracted directories renamed to cmake and third-party:
-	tar -xf $SRC/cmake-${version}.src.tar.xz
-	tar -xf $SRC/third-party-${version}.src.tar.xz
-	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt                 
-	sed "/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-${version}.src@" \
-		-i cmake/modules/HandleLLVMOptions.cmake
+	cd $name-project-$version.src/$name
 
 	# Fix Python scripts which use /usr/bin/env python to access the system Python:
 	grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
