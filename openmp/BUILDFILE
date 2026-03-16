@@ -3,16 +3,14 @@ homepage="https://openmp.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=openmp
-version=21.1.8
+version=22.1.1
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/openmp-$version.src.tar.xz
-  https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/cmake-$version.src.tar.xz"
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz"
 
 build () {
-	mv cmake-$version.src cmake
 	CC=clang \
 	CXX=clang++ \
-	cmake -S $name-$version.src -B build -G Ninja \
+	cmake -S llvm-project-$version.src/openmp -B build -G Ninja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBDIR=lib \
 		-DCMAKE_INSTALL_LIBEXECDIR=lib \
