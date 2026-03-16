@@ -11,7 +11,7 @@ build() {
 	cd $name-$version
 
 	# Fix build with znver4 or newer
-	export CFLAGS="$CFLAGS -march=x86-64"
+	export CFLAGS="$CFLAGS -march=x86-64 -Wno-error=discarded-qualifiers"
 
 	autoreconf --install --force
 	./configure --prefix=/usr \
