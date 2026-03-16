@@ -3,7 +3,7 @@ homepage="https://gitlab.gnome.org/GNOME/vte"
 maintainer="Vylen Linux Team"
 
 name=vte3
-version=0.82.3
+version=0.84.0
 release=1
 source="https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.gz"
 
