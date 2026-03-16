@@ -12,10 +12,10 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/libnetcfg
 lrwxrwxrwx root/root    usr/bin/perl -> perl5.42.0
 -rwxr-xr-x root/root    usr/bin/perl5.42.0
-hrwxr-xr-x root/root    usr/bin/perlbug link to usr/bin/perlthanks
+-rwxr-xr-x root/root    usr/bin/perlbug
 -rwxr-xr-x root/root    usr/bin/perldoc
 -rwxr-xr-x root/root    usr/bin/perlivp
--rwxr-xr-x root/root    usr/bin/perlthanks
+hrwxr-xr-x root/root    usr/bin/perlthanks link to usr/bin/perlbug
 -rwxr-xr-x root/root    usr/bin/piconv
 -rwxr-xr-x root/root    usr/bin/pl2pm
 -rwxr-xr-x root/root    usr/bin/pod2html
