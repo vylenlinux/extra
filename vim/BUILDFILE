@@ -28,7 +28,9 @@ build() {
 		--disable-xim \
 		--disable-gui \
 		--disable-nls \
-		--without-x
+		--with-x=no \
+		--with-wayland=no \
+		--with-compiledby='Vylen Linux'
 	make
 	make DESTDIR=$PKG install
 
