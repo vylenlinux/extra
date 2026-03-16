@@ -3,21 +3,14 @@ homepage="https://clang.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=clang
-version=21.1.8
+version=22.1.1
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/clang-$version.src.tar.xz
-	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz"
-noextract="cmake-${version}.src.tar.xz"
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz"
 
 build() {
-	cd $name-$version.src
+	mv llvm-project-$version.src/clang-tools-extra llvm-project-$version.src/clang/tools/extra
 
-	# The upstream expects it to be extracted at the same level as the llvm tarball, and 
-	# the extracted directory renamed to cmake
-	tar -xf $SRC/cmake-${version}.src.tar.xz
-	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt  
-
-	cmake -B build -G Ninja \
+	cmake -S llvm-project-$version.src/clang -B build -G Ninja \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
 		-DCMAKE_BUILD_TYPE=Release \
