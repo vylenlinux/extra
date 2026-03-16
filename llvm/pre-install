@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Fix clang 21.1.8 conflict
+[ -f "/usr/bin/clang-offload-packager" ] && rm -f "/usr/bin/clang-offload-packager"
