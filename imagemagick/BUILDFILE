@@ -3,7 +3,7 @@ homepage="https://imagemagick.org/ "
 maintainer="Vylen Linux Team"
 
 name=imagemagick
-version=7.1.2.16
+version=7.1.2.17
 vrsn=${version%.*}-${version##*.}
 release=1
 source="$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$vrsn.tar.gz"
