@@ -8,6 +8,7 @@ release=1
 source="$name-$version.tar.xz::https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-$version-src/pyside-setup-everywhere-src-$version.tar.xz
 	c9d602ab4afa5c9834c4674a742dc9bab7f4b326.patch
 	05e328476f2d6ef8a0f3f44aca1e5b1cdb7499fc.patch
+	clang-22.patch
 	fix-header-install-dir.patch"
 
 build() {
@@ -15,6 +16,7 @@ build() {
 
 	patch -d pyside-setup-everywhere-src-${version} -Rp1 -i $SRC/c9d602ab4afa5c9834c4674a742dc9bab7f4b326.patch
 	patch -d pyside-setup-everywhere-src-${version} -Rp1 -i $SRC/05e328476f2d6ef8a0f3f44aca1e5b1cdb7499fc.patch
+	patch -d pyside-setup-everywhere-src-${version} -Np1 -i $SRC/clang-22.patch
 	patch -d pyside-setup-everywhere-src-${version} -Np1 -i $SRC/fix-header-install-dir.patch
 
 	cmake -S pyside-setup-everywhere-src-${version} -B build -G Ninja \
