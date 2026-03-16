@@ -3,7 +3,7 @@ homepage="https://botan.randombit.net/"
 maintainer="Vylen Linux Team"
 
 name=botan
-version=3.10.0
+version=3.11.0
 release=1
 source="$name-$version.tar.xz::https://botan.randombit.net/releases/Botan-$version.tar.xz"
 
