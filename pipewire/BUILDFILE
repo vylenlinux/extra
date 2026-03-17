@@ -3,13 +3,14 @@ homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team"
 
 name=pipewire
-version=1.6.1
+version=1.6.2
 release=1
 source="$name-$version.tar.gz::https://github.com/PipeWire/$name/archive/refs/tags/$version.tar.gz
 	vylen-pipewire-launcher
 	pipewire.desktop"
 
 build() {
+    export CFLAGS="$CFLAGS -Wno-error=discarded-qualifiers"
 
 	vylen-meson $name-$version build \
 		-Ddocs=disabled \
