@@ -5,7 +5,7 @@ maintainer="Vylen Linux Team"
 name=librsvg
 version=2.62.0
 release=1
-source="$name-$version.tar.bz2::https://gitlab.gnome.org/GNOME/librsvg/-/archive/2.62.0/librsvg-2.62.0.tar.bz2"
+source="https://gitlab.gnome.org/GNOME/librsvg/-/archive/2.62.0/librsvg-2.62.0.tar.bz2"
 
 build() {
 	export CARGO_PROFILE_RELEASE_LTO=true 
