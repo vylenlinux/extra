@@ -8,3 +8,5 @@ wayland-protocols
 cmake
 libxkbcommon
 ninja
+libxcursor
+libxscrnsaver
