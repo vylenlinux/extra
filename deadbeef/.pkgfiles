@@ -1,4 +1,4 @@
-deadbeef-1.10.1-1
+deadbeef-1.10.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/deadbeef
@@ -145,6 +145,7 @@ drwxr-xr-x root/root    usr/lib/deadbeef/data68/Replay/
 -rwxr-xr-x root/root    usr/lib/deadbeef/m3u.so
 -rwxr-xr-x root/root    usr/lib/deadbeef/medialib.so
 -rwxr-xr-x root/root    usr/lib/deadbeef/mp3.so
+-rwxr-xr-x root/root    usr/lib/deadbeef/mpris.so
 -rwxr-xr-x root/root    usr/lib/deadbeef/musepack.so
 -rwxr-xr-x root/root    usr/lib/deadbeef/notify.so
 -rwxr-xr-x root/root    usr/lib/deadbeef/nullout.so
