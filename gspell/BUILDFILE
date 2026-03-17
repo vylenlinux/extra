@@ -3,7 +3,7 @@ homepage="https://wiki.gnome.org/Projects/gspell"
 maintainer="Vylen Linux Team"
 
 name=gspell
-version=1.14.2
+version=1.14.3
 release=1
 source="https://gitlab.gnome.org/GNOME/$name/-/archive/$version/$name-$version.tar.bz2"
 
