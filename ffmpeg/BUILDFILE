@@ -3,11 +3,10 @@ homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team"
 
 name=ffmpeg
-version=8.0.1
+version=8.1
 release=1
 source="https://ffmpeg.org/releases/$name-$version.tar.xz
 	add-av_stream_get_first_dts-for-chromium.patch
-	ffmpeg-8.0.1-svt-av1-4.patch
 	ffmpeg-x264-10bit.sh"
 
 build() {
@@ -36,9 +35,6 @@ build() {
 
 	# Adds an API necessary for some packages to build
 	patch -Np1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
-	
-	# Fix build with svt-av1 4.0.1
-	patch -Np1 -i $SRC/ffmpeg-8.0.1-svt-av1-4.patch
 
 	# adds the ALSA library to the Flite LDFLAGS variable and
 	# enables the discovery of Flite
