@@ -3,7 +3,7 @@ homepage="https://gitlab.gnome.org/GNOME/libgsf"
 maintainer="Vylen Linux Team"
 
 name=libgsf
-version=1.14.55
+version=1.14.56
 vrsn=$(printf "$version" | sed 's/\./_/g')
 release=1
 source="$name-$version.tar.gz::https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_${vrsn}/${name}-LIBGSF_${vrsn}.tar.gz"
