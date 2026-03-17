@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Official desktop version of Telegram messaging app - Static binaries"
+description="Official Telegram Desktop client"
 homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
