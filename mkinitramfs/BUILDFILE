@@ -3,7 +3,7 @@ homepage="https://gitlab.com/vylen/mkinitramfs"
 maintainer="Vylen Linux Team"
 
 name=mkinitramfs
-version=20260315
+version=20260317
 release=1
 backup="etc/${name}.conf"
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
