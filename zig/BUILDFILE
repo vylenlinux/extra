@@ -1,0 +1,20 @@
+description="A general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software"
+homepage="https://ziglang.org/"
+maintainer="Vylen Linux Team"
+
+name=zig
+version=0.15.2
+release=1
+source="${name}-${version}.tar.xz::https://ziglang.org/download/$version/${name}-x86_64-linux-$version.tar.xz"
+
+build() {
+	cd ${name}-x86_64-linux-$version
+
+	install -Dm755 -t "$PKG/usr/bin/" zig
+
+	install -d "$PKG/usr/lib/zig/"
+	cp -r -t "$PKG/usr/lib/zig/" lib/*
+
+	install -d "$PKG/usr/include/"
+	ln -srf -t "$PKG/usr/include/" "$PKG/usr/lib/zig/zig.h"
+}
