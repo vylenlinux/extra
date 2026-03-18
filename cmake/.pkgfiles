@@ -1,4 +1,4 @@
-cmake-4.2.3-1
+cmake-4.3.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ccmake
@@ -332,6 +332,8 @@ drwxr-xr-x root/root    usr/share/cmake/Help/manual/
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/cmake-toolchains.7.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/cmake-variables.7.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/cmake.1.rst
+drwxr-xr-x root/root    usr/share/cmake/Help/manual/cmake/
+-rw-r--r-- root/root    usr/share/cmake/Help/manual/cmake/version-schema.json
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/cpack-generators.7.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/cpack.1.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/ctest.1.rst
@@ -352,6 +354,8 @@ drwxr-xr-x root/root    usr/share/cmake/Help/manual/include/
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/include/LINKS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/include/OPTIONS_BUILD.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/include/OPTIONS_HELP.rst
+drwxr-xr-x root/root    usr/share/cmake/Help/manual/instrumentation/
+-rw-r--r-- root/root    usr/share/cmake/Help/manual/instrumentation/query-v1-schema.json
 drwxr-xr-x root/root    usr/share/cmake/Help/manual/presets/
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/presets/example.json
 -rw-r--r-- root/root    usr/share/cmake/Help/manual/presets/schema.json
@@ -840,6 +844,12 @@ drwxr-xr-x root/root    usr/share/cmake/Help/policy/
 -rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0202.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0203.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0204.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0205.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0206.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0207.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0208.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0209.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/policy/CMP0210.rst
 drwxr-xr-x root/root    usr/share/cmake/Help/policy/include/
 -rw-r--r-- root/root    usr/share/cmake/Help/policy/include/DEPRECATED.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/policy/include/DISALLOWED_COMMAND.rst
@@ -1186,6 +1196,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/prop_tgt/
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_DEFINITIONS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_FEATURES.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_COMPILE_OPTIONS.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_CONFIG.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_INCLUDE_DIRECTORIES.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_CXX_MODULES_LINK_LIBRARIES.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/IMPORTED_GLOBAL.rst
@@ -1257,6 +1268,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/prop_tgt/
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_ICSTAT.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_INCLUDE_WHAT_YOU_USE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_LINKER_LAUNCHER.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_PVS_STUDIO.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_STANDARD.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_STANDARD_REQUIRED.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/LANG_VISIBILITY_PRESET.rst
@@ -1325,6 +1337,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/prop_tgt/
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PREFIX.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PRE_INSTALL_SCRIPT.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PRIVATE_HEADER.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PRIVATE_HEADER_SETS_TO_VERIFY.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PROJECT_LABEL.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/PUBLIC_HEADER.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/RESOURCE.rst
@@ -1365,6 +1378,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/prop_tgt/
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/UNITY_BUILD_RELOCATABLE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/UNITY_BUILD_UNIQUE_ID.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/VERIFY_INTERFACE_HEADER_SETS.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/VERIFY_PRIVATE_HEADER_SETS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/VERSION.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/VISIBILITY_INLINES_HIDDEN.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/VS_CONFIGURATION_TYPE.rst
@@ -1467,6 +1481,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/prop_tgt/include/
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/PDB_NOTE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/STATIC_LIBRARY_OPTIONS_ARCHIVER.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/Swift_COMPILATION_MODE-VALUES.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/VERIFY_XXX_HEADER_SETS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/VERSION_SOVERSION_EXAMPLE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/VS_USE_DEBUG_LIBRARIES-PURPOSE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/prop_tgt/include/WATCOM_RUNTIME_LIBRARY-VALUES.rst
@@ -1508,6 +1523,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/release/
 -rw-r--r-- root/root    usr/share/cmake/Help/release/4.0.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/release/4.1.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/release/4.2.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/release/4.3.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/release/dev.txt
 -rw-r--r-- root/root    usr/share/cmake/Help/release/index.rst
 drwxr-xr-x root/root    usr/share/cmake/Help/variable/
@@ -1787,6 +1803,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/variable/
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INCLUDE_PATH.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_DEFAULT_COMPONENT_NAME.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_DEFAULT_DIRECTORY_PERMISSIONS.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_EXPORTS_AS_PACKAGE_INFO.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_MESSAGE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_NAME_DIR.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_INSTALL_OBJECT_NAME_STRATEGY.rst
@@ -1879,6 +1896,8 @@ drwxr-xr-x root/root    usr/share/cmake/Help/variable/
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINKER_WRAPPER_FLAG_SEP.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_DEF_FILE_FLAG.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_EXECUTABLE.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_FLAGS.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_FLAGS_CONFIG.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_GROUP_USING_FEATURE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_GROUP_USING_FEATURE_SUPPORTED.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_LIBRARY_FEATURE_ATTRIBUTES.rst
@@ -1891,6 +1910,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/variable/
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_LINK_WHAT_YOU_USE_FLAG.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_OUTPUT_EXTENSION.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_PLATFORM_ID.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_PVS_STUDIO.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_SIMULATE_ID.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_SIMULATE_VERSION.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_LANG_SIZEOF_DATA_PTR.rst
@@ -2083,6 +2103,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/variable/
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_USE_RELATIVE_PATHS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VERBOSE_MAKEFILE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VERIFY_INTERFACE_HEADER_SETS.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VERIFY_PRIVATE_HEADER_SETS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VERSION.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VISIBILITY_INLINES_HIDDEN.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/CMAKE_VS_DEBUGGER_COMMAND.rst
@@ -2313,6 +2334,7 @@ drwxr-xr-x root/root    usr/share/cmake/Help/variable/include/
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CMAKE_LINK_LIBRARY_USING_FEATURE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CMAKE_OSX_VARIABLE.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CMAKE_TLS_VERSION-VALUES.rst
+-rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CMAKE_VERIFY_XXX_HEADER_SETS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CMAKE_VS_VERSION_BUILD_NUMBER_COMPONENTS.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/CTEST_CUSTOM_XXX.rst
 -rw-r--r-- root/root    usr/share/cmake/Help/variable/include/IGNORE_SEARCH_LOCATIONS.rst
@@ -2392,6 +2414,7 @@ drwxr-xr-x root/root    usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineOBJCCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineOBJCXXCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineRCCompiler.cmake
+-rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineRustCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineSwiftCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineSystem.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeDetermineVSServicePack.cmake
@@ -2456,6 +2479,8 @@ drwxr-xr-x root/root    usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakePushCheckState.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeRCCompiler.cmake.in
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeRCInformation.cmake
+-rw-r--r-- root/root    usr/share/cmake/Modules/CMakeRustCompiler.cmake.in
+-rw-r--r-- root/root    usr/share/cmake/Modules/CMakeRustInformation.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeSwiftCompiler.cmake.in
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeSwiftInformation.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeSystem.cmake.in
@@ -2479,6 +2504,7 @@ drwxr-xr-x root/root    usr/share/cmake/Modules/CMakeAddFortranSubdirectory/
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeTestOBJCCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeTestOBJCXXCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeTestRCCompiler.cmake
+-rw-r--r-- root/root    usr/share/cmake/Modules/CMakeTestRustCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeTestSwiftCompiler.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeUnixFindMake.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/CMakeVerifyManifest.cmake
@@ -3065,6 +3091,7 @@ drwxr-xr-x root/root    usr/share/cmake/Modules/Internal/
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeCUDAFindToolkit.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeCUDALinkerInformation.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake
+-rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeChipStarHIP.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake
 -rw-r--r-- root/root    usr/share/cmake/Modules/Internal/CMakeFortranLinkerInformation.cmake
