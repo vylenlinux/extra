@@ -3,7 +3,7 @@ homepage="https://libexpat.github.io"
 maintainer="Vylen Linux Team"
 
 name=expat
-version=2.7.4
+version=2.7.5
 _v=$(echo $version | sed 's/\./_/g')
 release=1
 source="https://github.com/libexpat/libexpat/archive/R_$_v/$name-$version.tar.gz"
