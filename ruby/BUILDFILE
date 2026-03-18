@@ -3,7 +3,7 @@ homepage="https://www.ruby-lang.org/en/"
 maintainer="Vylen Linux Team"
 
 name=ruby
-version=4.0.1
+version=4.0.2
 release=1
 source="https://cache.ruby-lang.org/pub/$name/${version%.*}/$name-$version.tar.xz"
 
