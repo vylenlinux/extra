@@ -3,7 +3,7 @@ homepage="https://gparted.org/"
 maintainer="Vylen Linux Team"
 
 name=gparted
-version=1.8.0
+version=1.8.1
 release=1
 source="https://sourceforge.net/projects/gparted/files/gparted/gparted-$version/gparted-$version.tar.gz"
 
