@@ -1,4 +1,4 @@
-adwaita-icon-theme-49.0-1
+adwaita-icon-theme-50.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icons/
@@ -195,7 +195,7 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/scalable/places/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/places/user-trash.svg
 drwxr-xr-x root/root    usr/share/icons/Adwaita/scalable/status/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/avatar-default.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/folder-open.svg
+lrwxrwxrwx root/root    usr/share/icons/Adwaita/scalable/status/folder-open.svg -> ../places/folder.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/image-loading.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/image-missing.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/user-trash-full.svg
@@ -512,6 +512,8 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/legacy/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/battery-good-charging-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/battery-good-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/battery-low-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/emblem-important-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/emblem-system-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/gnome-power-manager-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/goa-panel-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/legacy/help-browser-symbolic.svg
