@@ -3,7 +3,7 @@ homepage="https://icu.unicode.org"
 maintainer="Vylen Linux Team"
 
 name=icu
-version=78.2
+version=78.3
 vrsn=$(printf "$version" | sed 's/\./-/g')
 release=1
 source="$name-$version.tar.gz::https://github.com/unicode-org/icu/archive/refs/tags/release-$version.tar.gz"
