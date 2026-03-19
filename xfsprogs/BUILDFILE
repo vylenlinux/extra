@@ -1,27 +1,34 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Administration and debugging tools for the XFS file system"
 homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=xfsprogs
-version=6.18.0
+version=6.19.0
 release=1
-source="https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/$name-$version.tar.xz"
+source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	make configure
+	# shellcheck disable=SC2164
+    cd "${name}-${version}"
+    make configure
 
-	export DEBUG=-DNDEBUG
-	export OPTIMIZER=$CFLAGS
+    export DEBUG=-DNDEBUG
+    export OPTIMIZER="${CFLAGS}"
 
-	./configure --prefix=/usr \
-		    --enable-readline \
-		    --disable-libicu
-	make
-	make -j1 DIST_ROOT=$PKG install install-dev
-	mkdir -p $PKG/sbin
-	mv $PKG/usr/sbin/fsck.xfs $PKG/sbin
-	mv $PKG/usr/sbin/xfs_repair $PKG/sbin
-	rm -rf $PKG/usr/var
+    ./configure \
+        --prefix=/usr \
+        --enable-readline \
+        --disable-libicu
 
+    make
+    make -j1 DIST_ROOT="${PKG}" install install-dev
+
+    mkdir -p "${PKG}/sbin"
+    mv "${PKG}/usr/sbin/fsck.xfs" "${PKG}/sbin"
+
+    mv "${PKG}/usr/sbin/xfs_repair" "${PKG}/sbin"
+    rm -rf "${PKG}/usr/var"
 }
