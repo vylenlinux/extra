@@ -1,16 +1,18 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library that extends Gtk+"
 homepage="https://github.com/elementary/granite"
 maintainer="Vylen Linux Team"
 
 name=granite
-version=7.8.0
+version=7.8.1
 release=1
-source="$name-$version.tar.gz::https://github.com/elementary/granite/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/elementary/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	
-	vylen-meson $name-$version build -Ddemo=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build -Ddemo=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
 
