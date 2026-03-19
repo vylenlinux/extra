@@ -7,7 +7,7 @@ version=1.12.6
 release=1
 source="https://github.com/PyO3/maturin/archive/v$version/$name-$version.tar.gz"
 
-build () {
+build() {
 	cd $name-$version
 	cargo fetch --locked --target "x86_64-unknown-linux-gnu"
 	python3 -m build --wheel --no-isolation

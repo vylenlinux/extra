@@ -7,7 +7,7 @@ version=0.11.2
 release=1
 source="$name-$version.tar.gz::https://github.com/libjxl/libjxl/archive/v$version/$name-v$version.tar.gz"
 
-build () {
+build() {
 	export XML_CATALOG_FILES=/etc/xml/catalog
 
 	cmake -S $name-$version -B build -G Ninja \

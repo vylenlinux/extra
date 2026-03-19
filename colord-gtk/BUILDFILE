@@ -7,7 +7,7 @@ version=0.3.1
 release=1
 source="https://www.freedesktop.org/software/colord/releases/$name-$version.tar.xz"
 
-build () {
+build() {
 vylen-meson $name-$version build \
     -Dgtk2=false \
     -Dgtk4=false \

@@ -7,7 +7,7 @@ version=3.11
 release=1
 source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/e5/69/882ee5c9d017149285cab114ebeab373308ef0f874fcdac9beb90e0ac4da/ply-$version.tar.gz"
 
-build () {
+build() {
 	cd ${name##python3-}-$version
 
 	    /usr/bin/python3 setup.py build

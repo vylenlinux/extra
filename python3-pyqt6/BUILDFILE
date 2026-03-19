@@ -7,7 +7,7 @@ version=6.10.2
 release=1
 source="$name-$version.tar.gz::https://pypi.python.org/packages/source/p/pyqt6/pyqt6-$version.tar.gz"
 
-build () {
+build() {
   cd pyqt6-$version
 
   sip-build \

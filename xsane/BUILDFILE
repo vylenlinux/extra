@@ -7,7 +7,7 @@ version=0.999
 release=1
 source="http://http.debian.net/debian/pool/main/x/$name/${name}_$version.orig.tar.gz"
 
-build () {
+build() {
     cd $name-$version
     
     # http://www.linuxfromscratch.org/blfs/view/svn/pst/xsane.html

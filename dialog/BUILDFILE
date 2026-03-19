@@ -8,7 +8,7 @@ vrsn=$(printf "$version" | sed 's/_/-/')
 release=1
 source="https://invisible-mirror.net/archives/$name/$name-$vrsn.tgz"
 
-build () {
+build() {
 	cd $name-$vrsn
 
 	./configure \

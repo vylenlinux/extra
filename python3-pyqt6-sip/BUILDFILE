@@ -7,7 +7,7 @@ version=13.11.1
 release=1
 source="$name-$version.tar.gz::https://pypi.python.org/packages/source/P/PyQt6-sip/pyqt6_sip-$version.tar.gz"
 
-build () {
+build() {
 	cd pyqt6_sip-$version
 	python3 -m build --wheel --no-isolation
 	python3 -m installer --destdir=$PKG dist/*.whl
