@@ -1,23 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Customizable and lightweight notification-daemon"
 homepage="https://dunst-project.org/"
 maintainer="Vylen Linux Team"
 
 name=dunst
-version=1.13.1
+version=1.13.2
 release=1
-source="https://github.com/dunst-project/dunst/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/dunst-project/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
+	# shellcheck disable=SC2164
+    cd "${name}-${version}"
+    emerald isinstalled wayland && make all || export WAYLAND=0 make
 
-	cd $name-$version
+    make PREFIX=/usr SYSCONFDIR=/etc DESTDIR="${PKG}" install
+    install -Dm755 dunstify "${PKG}/usr/bin/dunstify"
 
-	emerald isinstalled wayland && \
-	make all || \
-	export WAYLAND=0 make
-
-	make PREFIX=/usr SYSCONFDIR=/etc DESTDIR=$PKG install
-	install -Dm755 dunstify $PKG/usr/bin/dunstify
-
-	# remove systemd trash file
-	rm -fr $PKG/usr/lib/
+    # remove systemd trash file
+    rm -fr "${PKG}/usr/lib/"
 }
