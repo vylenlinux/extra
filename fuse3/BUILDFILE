@@ -1,17 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A simple interface for userspace programs to export a virtual filesystem to the Linux kernel"
 homepage="https://github.com/libfuse/libfuse"
 maintainer="Vylen Linux Team"
 
 name=fuse3
-version=3.18.1
+version=3.18.2
 release=1
-source="$name-$version.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
 
 build() {
-	
-	vylen-meson libfuse-fuse-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
-	rm -r $PKG/dev $PKG/etc/fuse.conf
-	rm -fr $PKG/etc/init.d
+    vylen-meson "libfuse-fuse-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # shellcheck disable=SC2115
+    rm -r "${PKG}/dev" "${PKG}/etc/fuse.conf"
+    rm -fr "${PKG}/etc/init.d"
 }
