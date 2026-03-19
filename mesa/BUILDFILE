@@ -1,70 +1,77 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Open-source OpenGL drivers"
 homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.0.2
+version=26.0.3
 release=1
 
 ### BEGIN Rust crates
 rust_crates="paste 1.0.14
-proc-macro2 1.0.86
-quote 1.0.35
-rustc-hash 2.1.1
-syn 2.0.87
-unicode-ident 1.0.12"
+    proc-macro2 1.0.86
+    quote 1.0.35
+    rustc-hash 2.1.1
+    syn 2.0.87
+    unicode-ident 1.0.12"
 
 # Full list crates
-gen_rust_crates () {
-    grep crates.io subprojects/*.wrap | \
-        sed -r 's|.*crates/([^/]+)/([0-9.]+)/download|\1 \2|'
+gen_rust_crates() {
+    grep crates.io subprojects/*.wrap | sed -r 's|.*crates/([^/]+)/([0-9.]+)/download|\1 \2|'
 }
 
 rcrate=""
+
 while IFS= read -r line; do
-    set -- $line
-    crate_name=$1
-    crate_version=$2
-    rcrate="$rcrate $crate_name-$crate_version.tar.gz::https://crates.io/api/v1/crates/$crate_name/$crate_version/download"
+    set -- "${line}"
+
+    crate_name="${1}"
+    crate_version="${2}"
+
+    rcrate="${rcrate} ${crate_name}-${crate_version}.tar.gz::https://crates.io/api/v1/crates/${crate_name}/${crate_version}/download"
 done <<EOF 
-$rust_crates 
+${rust_crates}
 EOF
 ### END Rust crates
 
-source="https://mesa.freedesktop.org/archive/$name-$version.tar.xz $rcrate"
+source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz ${rcrate}"
 
 build() {
-	cd $name-$version
+	# shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# Add subproject sources
-	export MESON_PACKAGE_CACHE_DIR="$SRC"
+    # Add subproject sources
+    export MESON_PACKAGE_CACHE_DIR="${SRC}"
 
-	emerald isinstalled vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
-	emerald isinstalled libva && OPT_MESA_VAAPI='-Dgallium-va=enabled' || OPT_MESA_VAAPI='-Dgallium-va=disabled'
-	emerald isinstalled wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
+    emerald isinstalled vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
+    emerald isinstalled libva && OPT_MESA_VAAPI='-Dgallium-va=enabled' || OPT_MESA_VAAPI='-Dgallium-va=disabled'
+    emerald isinstalled wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
-	vylen-meson build \
-		-Db_lto=false \
-		-Degl=enabled \
-		-Dllvm=enabled \
-		-Dshared-llvm=enabled \
-		-Dgbm=enabled \
-		-Dgles1=disabled \
-		-Dgles2=enabled \
-		-Dglx=dri \
-		-Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915 \
-		-Dplatforms=${OPT_MESA_PLATFORMS} \
-		-Dgallium-mediafoundation=disabled \
-		-Dintel-rt=enabled \
-		-Dgallium-rusticl=true \
-		-Dvulkan-drivers=amd,intel,intel_hasvk,nouveau \
-		-Dvulkan-layers=device-select,intel-nullhw,overlay \
-		-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
-		-Dglvnd=enabled $OPT_MESA_VAAPI
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson build \
+        -Db_lto=false \
+        -Degl=enabled \
+        -Dllvm=enabled \
+        -Dshared-llvm=enabled \
+        -Dgbm=enabled \
+        -Dgles1=disabled \
+        -Dgles2=enabled \
+        -Dglx=dri \
+        -Dgallium-drivers="${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915" \
+        -Dplatforms="${OPT_MESA_PLATFORMS}" \
+        -Dgallium-mediafoundation=disabled \
+        -Dintel-rt=enabled \
+        -Dgallium-rusticl=true \
+        -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau \
+        -Dvulkan-layers=device-select,intel-nullhw,overlay \
+        -Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
+        -Dglvnd=enabled "${OPT_MESA_VAAPI}"
 
-	# Indirect rendering symlink
-	ln -s libGLX_mesa.so.0 $PKG/usr/lib/libGLX_indirect.so.0
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # Indirect rendering symlink
+    ln -s libGLX_mesa.so.0 "${PKG}/usr/lib/libGLX_indirect.so.0"
 }
 
