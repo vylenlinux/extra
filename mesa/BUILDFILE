@@ -25,6 +25,7 @@ gen_rust_crates() {
 rcrate=""
 
 while IFS= read -r line; do
+    # shellcheck disable=SC2086
     set -- $line
 
     crate_name="${1}"
