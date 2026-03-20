@@ -36,8 +36,6 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata/comp
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/__pycache__/__init__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/__pycache__/py311.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/__pycache__/py39.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/py311.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/compat/py39.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/diagnose.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/py.typed
