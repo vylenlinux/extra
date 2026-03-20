@@ -1,15 +1,15 @@
-python3-importlib_metadata-8.7.1-1
+python3-importlib_metadata-8.8.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/licenses/LICENSE
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.7.1.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/licenses/LICENSE
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata-8.8.0.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/importlib_metadata/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/importlib_metadata/__pycache__/
