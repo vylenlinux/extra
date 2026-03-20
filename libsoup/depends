@@ -4,3 +4,4 @@ glib-networking
 gobject-introspection
 sqlite
 vala
+krb5
