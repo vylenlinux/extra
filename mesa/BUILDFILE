@@ -25,7 +25,7 @@ gen_rust_crates() {
 rcrate=""
 
 while IFS= read -r line; do
-    set -- "${line}"
+    set -- $line
 
     crate_name="${1}"
     crate_version="${2}"
