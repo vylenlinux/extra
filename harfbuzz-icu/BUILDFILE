@@ -6,16 +6,16 @@ homepage="https://harfbuzz.github.io/"
 maintainer="Vylen Linux Team"
 
 name=harfbuzz-icu
-version=13.2.0
+version=13.2.1
 release=1
 source="https://github.com/harfbuzz/harfbuzz/releases/download/${version}/harfbuzz-${version}.tar.xz"
 
 build() {
     vylen-meson "harfbuzz-${version}" build \
-        -D docs=disabled \
-        -D graphite=auto \
-        -D benchmark=disabled \
-        -D cpp_std=c++17
+        -Ddocs=disabled \
+        -Dgraphite=auto \
+        -Dbenchmark=disabled \
+        -Dcpp_std=c++17
 
     meson compile -C build
     DESTDIR="${PWD}/PKG" meson install --no-rebuild -C build
