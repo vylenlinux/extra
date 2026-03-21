@@ -1,48 +1,54 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Vi Improved, a highly configurable, improved version of the vi text editor"
 homepage="https://www.vim.org/"
 maintainer="Vylen Linux Team"
 
 name=vim
-version=9.2.0152
+version=9.2.0209
 release=1
-source="https://github.com/vim/vim/archive/v$version/vim-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/v$version/${name}-v${version}.tar.gz"
 
 build() {
-	cd vim-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
+    echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 
-	./configure \
-		--prefix=/usr \
-		--enable-cscope \
-		--enable-multibyte \
-		--with-ex-name=vim-ex \
-		--with-tlib=ncursesw \
-		--with-view-name=vim-view \
-		--disable-perlinterp \
-		--disable-pythoninterp \
-		--disable-rubyinterp \
-		--disable-netbeans \
-		--disable-canberra \
-		--disable-gpm \
-		--disable-xim \
-		--disable-gui \
-		--disable-nls \
-		--with-x=no \
-		--with-wayland=no \
-		--with-compiledby='Vylen Linux'
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-cscope \
+        --enable-multibyte \
+        --with-ex-name=vim-ex \
+        --with-tlib=ncursesw \
+        --with-view-name=vim-view \
+        --disable-perlinterp \
+        --disable-pythoninterp \
+        --disable-rubyinterp \
+        --disable-netbeans \
+        --disable-canberra \
+        --disable-gpm \
+        --disable-xim \
+        --disable-gui \
+        --disable-nls \
+        --with-x=no \
+        --with-wayland=no \
+        --with-compiledby='Vylen Linux'
 
-	mv $PKG/usr/share/man/man1 $SRC/man1
-	mv $SRC/man1 $PKG/usr/share/man/man1
+    make
+    make DESTDIR="${PKG}" install
 
-	# no desktop files and icons
-	rm -r $PKG/usr/share/applications \
-	      $PKG/usr/share/icons
+    mv "${PKG}/usr/share/man/man1" "${SRC}/man1"
+    mv "${SRC}/man1" "${PKG}/usr/share/man/man1"
 
-	mkdir -pv $PKG/etc
-cat > $PKG/etc/vimrc << "EOF"
+    # no desktop files and icons
+    rm -r "${PKG}/usr/share/applications" \
+        "${PKG}/usr/share/icons"
+
+    mkdir -pv "${PKG}/etc"
+
+    cat > "${PKG}/etc/vimrc" << "EOF"
 " Begin /etc/vimrc
 
 " Ensure defaults are set before customizing settings, not after
@@ -60,5 +66,5 @@ endif
 " End /etc/vimrc
 EOF
 
-	ln -sv vim $PKG/usr/bin/vi
+	ln -sv vim "${PKG}/usr/bin/vi"
 }

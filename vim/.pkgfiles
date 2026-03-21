@@ -1,4 +1,4 @@
-vim-9.2.0152-1
+vim-9.2.0209-1
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/vimrc
 drwxr-xr-x root/root    usr/
@@ -859,6 +859,7 @@ drwxr-xr-x root/root    usr/share/vim/vim92/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/xslt.vim
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/yacc.vim
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/yaml.vim
+-rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/yara.vim
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/zathurarc.vim
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/zig.vim
 -rw-r--r-- root/root    usr/share/vim/vim92/ftplugin/zimbu.vim
