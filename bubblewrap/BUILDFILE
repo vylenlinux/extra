@@ -1,14 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Unprivileged sandboxing tool"
 homepage="https://github.com/containers/bubblewrap"
 maintainer="Vylen Linux Team"
 
 name=bubblewrap
-version=0.11.0
+version=0.11.1
 release=1
-source="https://github.com/containers/bubblewrap/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/containers/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
