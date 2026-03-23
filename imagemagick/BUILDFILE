@@ -1,26 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="ImageMagick is a collection of tools and libraries to read, write, and manipulate an image in various image formats"
 homepage="https://imagemagick.org/ "
 maintainer="Vylen Linux Team"
 
 name=imagemagick
-version=7.1.2.17
-vrsn=${version%.*}-${version##*.}
+version=7.1.2.18
 release=1
-source="$name-$version.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/$vrsn.tar.gz"
+
+vrsn="${version%.*}-${version##*.}"
+source="${name}-${version}.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/${vrsn}.tar.gz"
 
 KEEP_LIBTOOL="yes"
 
 build() {
-	cd ImageMagick-$vrsn
+    # shellcheck disable=SC2164
+    cd "ImageMagick-${vrsn}"
 
-	./configure --prefix=/usr     \
-	            --sysconfdir=/etc \
-	            --enable-hdri     \
-	            --with-modules    \
-	            --with-perl       \
-	            --disable-static  \
-		    --without-openexr
-	make
-	make DESTDIR=$PKG install
+    ./configure --prefix=/usr \
+        --sysconfdir=/etc \
+        --enable-hdri \
+        --with-modules \
+        --with-perl \
+        --disable-static \
+        --without-openexr
 
+    make
+    make DESTDIR="${PKG}" install
 }
