@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="File::ShareDir::Install - Install read-only data files from a distribution"
+maintainer="Vylen Linux Team"
+homepage="https://search.cpan.org/dist/File-ShareDir-Install"
+
+name=perl-file-sharedir-install
+version=0.14
+release=1
+source="${name}-${version}.tar.gz::https://cpan.org/modules/by-module/File/File-ShareDir-Install-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "File-ShareDir-Install-${version}"
+    PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+
+    make
+    make DESTDIR="${PKG}" install
+}
