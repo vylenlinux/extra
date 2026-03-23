@@ -6,14 +6,13 @@ homepage="https://pypi.org/project/importlib-metadata/"
 maintainer="Vylen Linux Team"
 
 name=python3-importlib_metadata
-version=8.8.0
+version=9.0.0
 release=1
 source="https://pypi.python.org/packages/source/i/importlib_metadata/importlib_metadata-${version}.tar.gz"
 
 build() {
 	# shellcheck disable=SC2164
     cd "importlib_metadata-${version}"
-
     export SETUPTOOLS_SCM_PRETEND_VERSION="${version}"
 
     gpep517 build-wheel \
