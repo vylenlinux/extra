@@ -1,17 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Font rasterization library"
 homepage="https://downloads.sourceforge.net/freetype"
 maintainer="Vylen Linux Team"
 
 name=freetype2
-version=2.14.2
+version=2.14.3
 release=1
-source="https://downloads.sourceforge.net/freetype/freetype-$version.tar.xz
-	freetype2.sh"
+
+source="https://downloads.sourceforge.net/freetype/freetype-${version}.tar.xz
+    ${name}.sh"
 
 build() {
-	vylen-meson freetype-$version build -Dfreetype2:default_library=shared
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "freetype-${version}" build -Dfreetype2:default_library=shared
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	install -Dt $PKG/etc/profile.d -m644 $SRC/freetype2.sh
+    install -Dm644 "${SRC}/${name}.sh" -t "${PKG}/etc/profile.d/"
 }
