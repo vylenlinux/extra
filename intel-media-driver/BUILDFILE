@@ -1,20 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Intel Media Driver for VAAPI — Broadwell+ iGPUs"
 homepage="https://github.com/intel/media-driver/"
 maintainer="Vylen Linux Team"
 
 name=intel-media-driver
-version=26.1.4
+version=26.1.5
 release=1
-source="https://github.com/intel/media-driver/archive/${name%-*}-$version.tar.gz"
+source="https://github.com/intel/media-driver/archive/${name%-*}-${version}.tar.gz"
 
 build() {
-	cmake -B build -S ${name#*-}-${name%-*}-${version} -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=/usr/lib \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-DINSTALL_DRIVER_SYSCONF=OFF \
-		-DMEDIA_BUILD_FATAL_WARNINGS=OFF \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -B build -S "${name#*-}-${name%-*}-${version}" -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=/usr/lib \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DINSTALL_DRIVER_SYSCONF=OFF \
+        -DMEDIA_BUILD_FATAL_WARNINGS=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
