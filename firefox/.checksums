@@ -1,6 +1,6 @@
-28fde4103f404b9114c867ac7c41693ad72db5177467454c49e0456294ccca93  0001-Install-under-remoting-name.patch
-211f41f3e8fa099fe96dea72da81697c8a33f3db054c61042b01324ae92d5e5f  0002-Bug-2012006-WebRTC-backport-PipeWire-capture-clear-e.patch
-26305d2e30606fc25cb5d494f20236b11fa9719b1b0d00e47300526684a2487f  0003-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch
-c66abbadef6172fa3998c9ac6dbd9214ab1d05d5a779b3bc23bcdc0ebfcdf377  0004-Fix-sandbox-to-build-with-glibc-2.43.patch
-099078fb450fa505930af18c0a6017a42ca55308147a53d5826762fc617dd66e  firefox-148.0.2.tar.xz
+72886d54dc37effad463f4bc1020a51ba48ca84d4c0e1f1f856029192934d297  0001-Install-under-remoting-name.patch
+3b13ceefdb8617a56e7a1d71e46c969edf48dbb42a1d33ee483c83c55007222e  0002-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch
+b71b2352626faa8e9b4eec7b15787d2bb7aafef09f9e88cf8e430a663bb0fe64  0003-Bug-2016618-Fix-Linux-sandbox-build-breakage-on-glib.patch
+6b69fd097cecb4583f6df679352913d7ba65c3704c34c36051490487c220df5e  0004-Use-wasm32-wasip1-target.patch
+7b3ec6364ce8dff8dc4a4743d45cc9796c137cfda53db0fe3968c5eab6d6b18e  firefox-149.0.tar.xz
 8a2af2fa36006f471f001a154ab5464395111a5205b3f30f1737ff93b268446f  firefox.desktop
