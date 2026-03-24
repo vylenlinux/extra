@@ -1,4 +1,4 @@
-far2l-2.7.0-1
+far2l-2.8.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/far2l
@@ -6,6 +6,9 @@ lrwxrwxrwx root/root    usr/bin/far2ledit -> far2l
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/far2l/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/ImageViewer/
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/ImageViewer/plug/
+-rwxr-xr-x root/root    usr/lib/far2l/Plugins/ImageViewer/plug/ImageViewer.far-plug-wide
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/NetRocks/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/NetRocks/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/NetRocks/plug/NetRocks-FILE.broker
@@ -51,6 +54,9 @@ drwxr-xr-x root/root    usr/lib/far2l/Plugins/editcase/plug/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/editorcomp/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/editorcomp/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/editorcomp/plug/editorcomp.far-plug-wide
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/edsort/
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/edsort/plug/
+-rwxr-xr-x root/root    usr/lib/far2l/Plugins/edsort/plug/edsort.far-plug-wide
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/filecase/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/filecase/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/filecase/plug/filecase.far-plug-wide
@@ -63,16 +69,30 @@ drwxr-xr-x root/root    usr/lib/far2l/Plugins/incsrch/plug/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/inside/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/inside/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/inside/plug/inside.far-plug-mb
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/memo/
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/memo/plug/
+-rwxr-xr-x root/root    usr/lib/far2l/Plugins/memo/plug/memo.far-plug-wide
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/multiarc/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/multiarc/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/multiarc/plug/multiarc.far-plug-mb
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/tmppanel/
 drwxr-xr-x root/root    usr/lib/far2l/Plugins/tmppanel/plug/
 -rwxr-xr-x root/root    usr/lib/far2l/Plugins/tmppanel/plug/tmppanel.far-plug-wide
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/truncate/
+drwxr-xr-x root/root    usr/lib/far2l/Plugins/truncate/plug/
+-rwxr-xr-x root/root    usr/lib/far2l/Plugins/truncate/plug/truncate.far-plug-wide
 lrwxrwxrwx root/root    usr/lib/far2l/far2l_askpass -> ../../bin/far2l
 -rwxr-xr-x root/root    usr/lib/far2l/far2l_gui.so
 lrwxrwxrwx root/root    usr/lib/far2l/far2l_sudoapp -> ../../bin/far2l
 -rwxr-xr-x root/root    usr/lib/far2l/far2l_ttyx.broker
+drwxr-xr-x root/root    usr/lib/far2l/themes/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Amber on Black/
+drwxr-xr-x root/root    usr/lib/far2l/themes/DOS Navigator/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Dark classic/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Gold on Blue/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Green on LightGray/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Magenta on Violet/
+drwxr-xr-x root/root    usr/lib/far2l/themes/Tokyo Night/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rwxr-xr-x root/root    usr/share/applications/far2l-tty.desktop
@@ -97,10 +117,16 @@ drwxr-xr-x root/root    usr/share/far2l/
 -rw-r--r-- root/root    usr/share/far2l/FarUkr.hlf
 -rw-r--r-- root/root    usr/share/far2l/FarUkr.lng
 drwxr-xr-x root/root    usr/share/far2l/Plugins/
+drwxr-xr-x root/root    usr/share/far2l/Plugins/ImageViewer/
+drwxr-xr-x root/root    usr/share/far2l/Plugins/ImageViewer/plug/
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/ImageViewer/plug/ImageViewer_en.hlf
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/ImageViewer/plug/ImageViewer_en.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/ImageViewer/plug/ImageViewer_ru.hlf
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/ImageViewer/plug/ImageViewer_ru.lng
 drwxr-xr-x root/root    usr/share/far2l/Plugins/NetRocks/
 drwxr-xr-x root/root    usr/share/far2l/Plugins/NetRocks/plug/
 drwxr-xr-x root/root    usr/share/far2l/Plugins/NetRocks/plug/SHELL/
--rwxrwxr-x root/root    usr/share/far2l/Plugins/NetRocks/plug/SHELL/remote.sh
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/NetRocks/plug/SHELL/remote.sh
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/NetRocks/plug/SHELL/ways.ini
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/NetRocks/plug/bel.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/NetRocks/plug/eng.lng
@@ -208,11 +234,13 @@ drwxr-xr-x root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/gen/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/perl-vars.pkg.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/perl.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/python.hrc
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/qml.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/ruby.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/ruby.kw-class.ent.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/ruby.kw.ent.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/rust.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/scala.hrc
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/swift.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/tcltk.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/vb.net.hrc
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrc/base/vbasic.hrc
@@ -558,6 +586,7 @@ drwxr-xr-x root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib/gray_pult.hrd
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib/ocean.hrd
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib/take4.hrd
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib/violet.hrd
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/contrib/visual.hrd
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/default.hrd
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/colorer/base/hrd/console/dnlike.hrd
@@ -620,6 +649,14 @@ drwxr-xr-x root/root    usr/share/far2l/Plugins/editorcomp/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/editorcomp/plug/editorcomp_be.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/editorcomp/plug/editorcomp_en.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/editorcomp/plug/editorcomp_ru.lng
+drwxr-xr-x root/root    usr/share/far2l/Plugins/edsort/
+drwxr-xr-x root/root    usr/share/far2l/Plugins/edsort/plug/
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_en.hlf
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_en.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_pl.hlf
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_pl.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_ru.hlf
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/edsort/plug/edsort_ru.lng
 drwxr-xr-x root/root    usr/share/far2l/Plugins/filecase/
 drwxr-xr-x root/root    usr/share/far2l/Plugins/filecase/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/filecase/plug/CaseBel.lng
@@ -642,12 +679,17 @@ drwxr-xr-x root/root    usr/share/far2l/Plugins/incsrch/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/incsrch/plug/isrcbel.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/incsrch/plug/isrceng.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/incsrch/plug/isrcrus.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/incsrch/plug/key_macros.ini
 drwxr-xr-x root/root    usr/share/far2l/Plugins/inside/
 drwxr-xr-x root/root    usr/share/far2l/Plugins/inside/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/inside/plug/bel.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/inside/plug/config.ini
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/inside/plug/eng.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/inside/plug/rus.lng
+drwxr-xr-x root/root    usr/share/far2l/Plugins/memo/
+drwxr-xr-x root/root    usr/share/far2l/Plugins/memo/plug/
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/memo/plug/memoe.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/memo/plug/memor.lng
 drwxr-xr-x root/root    usr/share/far2l/Plugins/multiarc/
 drwxr-xr-x root/root    usr/share/far2l/Plugins/multiarc/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/multiarc/plug/arcbel.lng
@@ -664,11 +706,37 @@ drwxr-xr-x root/root    usr/share/far2l/Plugins/tmppanel/plug/
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/tmppanel/plug/TmpEng.lng
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/tmppanel/plug/TmpRus.hlf
 -rw-rw-r-- root/root    usr/share/far2l/Plugins/tmppanel/plug/TmpRus.lng
+drwxr-xr-x root/root    usr/share/far2l/Plugins/truncate/
+drwxr-xr-x root/root    usr/share/far2l/Plugins/truncate/plug/
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/truncate/plug/TruncEng.lng
+-rw-rw-r-- root/root    usr/share/far2l/Plugins/truncate/plug/TruncRus.lng
 -rwxr-xr-x root/root    usr/share/far2l/closewait.sh
--rwxr-xr-x root/root    usr/share/far2l/far2l-cd.sh
+-rw-r--r-- root/root    usr/share/far2l/far2l-cd.sh
 -rwxr-xr-x root/root    usr/share/far2l/notify.sh
 -rwxr-xr-x root/root    usr/share/far2l/open.sh
 -rwxr-xr-x root/root    usr/share/far2l/ps.sh
+drwxr-xr-x root/root    usr/share/far2l/themes/
+drwxr-xr-x root/root    usr/share/far2l/themes/Amber on Black/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Amber on Black/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Amber on Black/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/DOS Navigator/
+-rw-rw-r-- root/root    usr/share/far2l/themes/DOS Navigator/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/DOS Navigator/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/Dark classic/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Dark classic/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Dark classic/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/Gold on Blue/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Gold on Blue/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Gold on Blue/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/Green on LightGray/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Green on LightGray/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Green on LightGray/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/Magenta on Violet/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Magenta on Violet/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Magenta on Violet/farcolors.ini
+drwxr-xr-x root/root    usr/share/far2l/themes/Tokyo Night/
+-rw-rw-r-- root/root    usr/share/far2l/themes/Tokyo Night/author.txt
+-rw-rw-r-- root/root    usr/share/far2l/themes/Tokyo Night/farcolors.ini
 -rwxr-xr-x root/root    usr/share/far2l/trash.sh
 -rwxr-xr-x root/root    usr/share/far2l/unmount.sh
 -rwxr-xr-x root/root    usr/share/far2l/view.sh
