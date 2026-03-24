@@ -1,19 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python module for character encoding auto-detection"
 homepage="https://github.com/chardet/chardet"
 maintainer="Vylen Linux Team"
 
 name=python3-chardet
-_name=${name#*-}
-_n=${_name%${_name#?}}
-version=7.2.0
+version=7.3.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz"
+
+_name="${name#*-}"
+_n="${_name%"${_name#?}"}"
+
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/${_n}/${name#*-}/${name#*-}-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
-	gpep517 build-wheel \
-		    --wheel-dir .dist \
-		    --output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		    .dist/*.whl
+    # shellcheck disable=SC2164
+    cd "${name#*-}-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
