@@ -3,7 +3,7 @@ homepage="https://www.qt.io/"
 maintainer="Vylen Linux Team"
 
 name=qt6-3d
-version=6.10.2
+version=6.11.0
 release=1
 source="$name-$version.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/$version/submodules/qt3d-everywhere-src-$version.tar.xz"
 
