@@ -1,26 +1,30 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Minimalistic plugin API for video effects"
 homepage="https://frei0r.dyne.org/"
 maintainer="Vylen Linux Team"
 
 name=frei0r-plugins
-version=2.5.5
+version=2.5.6
 release=1
-source="$name-$version.tar.gz::https://github.com/dyne/frei0r/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/dyne/frei0r/archive/v${version}.tar.gz"
 
 build() {
-	# Fix build with znver4 or newer
-	export CFLAGS="$CFLAGS -march=x86-64"
+    # Fix build with znver4 or newer
+    export CFLAGS="${CFLAGS} -march=x86-64"
 
-	cmake  -S frei0r-$version -B build -G Ninja \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-	        -DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DWITHOUT_OPENCV=$(emerald isinstalled opencv && printf "OFF" || printf "ON") \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake  -S "frei0r-${version}" -B build -G Ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DWITHOUT_OPENCV="$(emerald isinstalled opencv && printf "OFF" || printf "ON")" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
