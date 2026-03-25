@@ -1,19 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A simple, correct PEP517 package builder"
 homepage="https://github.com/pypa/build"
 maintainer="Vylen Linux Team"
 
 name=python3-build
-version=1.4.0
+version=1.4.1
 release=1
-source="$name-$version.tar.gz::https://pypi.python.org/packages/source/b/build/build-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/b/build/build-${version}.tar.gz"
 
 build() {
-  cd build-$version
+    # shellcheck disable=SC2164
+    cd "build-${version}"
 
-		gpep517 build-wheel \
-			--wheel-dir .dist \
-			--output-fd 3 3>&1 >&2
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-		python3 -m installer -d $PKG \
-			.dist/build*.whl		
+    python3 -m installer -d "${PKG}" .dist/build*.whl
 }
