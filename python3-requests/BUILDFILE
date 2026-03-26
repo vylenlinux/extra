@@ -1,21 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python HTTP for Humans"
 homepage="https://requests.readthedocs.io"
 maintainer="Vylen Linux Team"
 
 name=python3-requests
-_name=${name#*-}
-_n=${_name%${_name#?}}
-version=2.32.5
+version=2.33.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz
-	certs.patch"
+
+_name="${name#*-}"
+_n="${_name%"${_name#?}"}"
+
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/${_n}/${name#*-}/${name#*-}-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
+    # shellcheck disable=SC2164
+    cd "${name#*-}-${version}"
+    sed -e '/certifi/d' -i setup.py
 
-	sed -e '/certifi/d' -i setup.py
-	patch -p1 -i $SRC/certs.patch
-
-	python3 setup.py build
-	python3 setup.py install --prefix=/usr --root=$PKG --skip-build
+    python3 setup.py build
+    python3 setup.py install --prefix=/usr --root="${PKG}" --skip-build
 }
