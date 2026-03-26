@@ -1,0 +1,21 @@
+perl-class-inspector-1.36-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.42/
+drwxr-xr-x root/root    usr/lib/perl5/5.42/x86_64-linux-thread-multi/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/Class/
+-r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/Class/Inspector.pm
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/Class/Inspector/
+-r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/Class/Inspector/Functions.pm
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Class/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Class/Inspector/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/Class::Inspector.3.gz
+-r--r--r-- root/root    usr/share/man/man3/Class::Inspector::Functions.3.gz
