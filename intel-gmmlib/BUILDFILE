@@ -1,18 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Intel Graphics Memory Management Library"
 homepage="https://github.com/intel/gmmlib/"
 maintainer="Vylen Linux Team"
 
 name=intel-gmmlib
-version=22.9.0
+version=22.10.0
 release=1
-source="https://github.com/intel/gmmlib/archive/$name-$version.tar.gz"
+source="https://github.com/intel/gmmlib/archive/${name}-${version}.tar.gz"
 
 build() {
-	cmake -B build -S gmmlib-$name-$version -G Ninja \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DRUN_TEST_SUITE=OFF \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -B build -S "gmmlib-${name}-${version}" -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DRUN_TEST_SUITE=OFF \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
