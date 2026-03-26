@@ -1,4 +1,4 @@
-# /etc/services, created 2026-03-10T18:59:00+0000
+# /etc/services, created 2026-03-26T17:46:05+0100
 # Source: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xml
 tcpmux              1/tcp
 tcpmux              1/udp
@@ -11337,6 +11337,9 @@ profinet-rtm    34963/tcp
 profinet-rtm    34963/udp
 profinet-cm     34964/tcp
 profinet-cm     34964/udp
+profinet-cm-sec 34965/tcp
+profinet-cm-sec 34965/udp
+profinet-rt-sec 34966/udp
 ethercat        34980/tcp
 ethercat        34980/udp
 heathview       35000/tcp

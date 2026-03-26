@@ -1,14 +1,18 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Provides data for network services and protocols"
 homepage="https://www.iana.org/protocols"
 maintainer="Vylen Linux Team"
 
 name=iana-etc
-version=20260309
+version=20260318
 release=1
-source="services protocols update.sh"
+
+source="services
+    protocols"
 
 build() {
-	install -d -m 755 $PKG/etc
-	install -m 644 services $PKG/etc
-	install -m 644 protocols $PKG/etc
+    install -Dm644 services  -t "${PKG}/etc/"
+    install -Dm644 protocols -t "${PKG}/etc/"
 }
