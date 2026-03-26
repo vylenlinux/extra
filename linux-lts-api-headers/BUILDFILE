@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
 maintainer="Vylen Linux Team"
 
 name=linux-lts-api-headers
-version=6.18.19
+version=6.18.20
 release=1
 source="https://www.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
 
