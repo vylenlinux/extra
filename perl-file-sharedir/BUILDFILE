@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Locate per-dist and per-module shared files"
+maintainer="Vylen Linux Team"
+homepage="https://metacpan.org/dist/File-ShareDir"
+
+name=perl-file-sharedir
+version=1.118
+release=1
+source="${name}-${version}.tar.gz::https://cpan.org/modules/by-module/File/File-ShareDir-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "File-ShareDir-${version}"
+    perl Makefile.PL INSTALLDIRS=vendor
+
+    make
+    make DESTDIR="${PKG}" install
+}
