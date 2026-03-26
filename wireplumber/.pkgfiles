@@ -1,4 +1,4 @@
-wireplumber-0.5.13-1
+wireplumber-0.5.14-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/wireplumber
@@ -50,8 +50,8 @@ drwxr-xr-x root/root    usr/include/wireplumber-0.5/wp/
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/wpversion.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so -> libwireplumber-0.5.so.0
-lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.513.0
--rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.513.0
+lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.514.0
+-rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.514.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/wireplumber-0.5.pc
 drwxr-xr-x root/root    usr/lib/wireplumber-0.5/
@@ -123,6 +123,7 @@ drwxr-xr-x root/root    usr/share/wireplumber/scripts/linking/
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/mpris-pause.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/prepare-link.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/rescan-media-role-links.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/rescan-on-linkable.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/rescan.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/metadata.lua
 drwxr-xr-x root/root    usr/share/wireplumber/scripts/monitors/
