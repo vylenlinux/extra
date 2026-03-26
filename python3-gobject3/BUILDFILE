@@ -1,18 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python3 bindings for PyGObject3"
 homepage="https://pygobject.gnome.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-gobject3
-version=3.56.1
+version=3.56.2
 release=1
-source="$name-$version.tar.gz::https://gitlab.gnome.org/GNOME/pygobject/-/archive/$version/pygobject-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/pygobject/-/archive/${version}/pygobject-${version}.tar.gz"
 
 build() {
-	vylen-meson pygobject-$version build \
-	    --wrap-mode=default \
-	    -Dpython=python3 \
-	    -Dpycairo=enabled \
-	    -Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "pygobject-${version}" build \
+        --wrap-mode=default \
+        -Dpython=python3 \
+        -Dpycairo=enabled \
+        -Dtests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
