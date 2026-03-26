@@ -1,24 +1,30 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Linker from the LLVM project"
 homepage="https://lld.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=lld
-version=22.1.1
+version=22.1.2
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz
-	lld-import-compact_unwind_encoding.h-from-libu.patch"
+
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+    lld-import-compact_unwind_encoding.h-from-libu.patch"
 
 build() {
-	cd llvm-project-$version.src/lld
-	patch -p2 -i $SRC/lld-import-compact_unwind_encoding.h-from-libu.patch
+    # shellcheck disable=SC2164
+    cd "llvm-project-${version}.src/lld"
+    patch -p2 -i "${SRC}/lld-import-compact_unwind_encoding.h-from-libu.patch"
 
-	cmake -B build -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D LLVM_LINK_LLVM_DYLIB=ON \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -D LLVM_LINK_LLVM_DYLIB=ON \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
