@@ -1,51 +1,55 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Collection of modular and reusable compiler and toolchain technologies"
 homepage="https://clang.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=clang
-version=22.1.1
+version=22.1.2
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-project-$version.src.tar.xz"
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
 build() {
-	mv llvm-project-$version.src/clang-tools-extra llvm-project-$version.src/clang/tools/extra
+    mv "llvm-project-${version}.src/clang-tools-extra" "llvm-project-${version}.src/clang/tools/extra"
 
-	cmake -S llvm-project-$version.src/clang -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DCLANG_BUILD_EXAMPLES=OFF \
-		-DCLANG_DEFAULT_PIE_ON_LINUX=ON \
-		-DCLANG_INCLUDE_DOCS=OFF \
-		-DCLANG_INCLUDE_TESTS=OFF \
-		-DCLANG_LINK_CLANG_DYLIB=YES \
-		-DLLVM_ENABLE_EH=ON \
-		-DLLVM_ENABLE_LIBXML2=OFF \
-		-DLLVM_ENABLE_RTTI=ON \
-		-DLLVM_INCLUDE_TESTS=OFF \
-		-Wno-dev
-		
+    cmake -S "llvm-project-${version}.src/clang" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCLANG_BUILD_EXAMPLES=OFF \
+        -DCLANG_DEFAULT_PIE_ON_LINUX=ON \
+        -DCLANG_INCLUDE_DOCS=OFF \
+        -DCLANG_INCLUDE_TESTS=OFF \
+        -DCLANG_LINK_CLANG_DYLIB=YES \
+        -DLLVM_ENABLE_EH=ON \
+        -DLLVM_ENABLE_LIBXML2=OFF \
+        -DLLVM_ENABLE_RTTI=ON \
+        -DLLVM_INCLUDE_TESTS=OFF \
+        -Wno-dev
+
 	jobs=
-	while : ; do
-		echo "Try ${jobs:-default} parallel jobs ..."
 
-		cmake --build build -j $jobs && break
+    while : ; do
+        echo "Try ${jobs:-default} parallel jobs ..."
 
-		# Try few parallel jobs to avoid OOM
-		if [ -z "$jobs" ]; then
-			jobs=$(expr $(free -g | grep Mem: | awk '{print $2}') / 2 + 1)
-			continue
-		elif [ $jobs -gt 2 ]; then
-			jobs=$(expr $jobs - 2)
-			continue
-		elif [ $jobs = 1 ]; then
-			exit 1
-		else
-			jobs=1
-		fi
-	done
+        cmake --build build -j "${jobs}" && break
 
-	DESTDIR=$PKG cmake --install build
+        # Try few parallel jobs to avoid OOM
+        if [ -z "${jobs}" ]; then
+            jobs=$(expr "$(free -g | grep Mem: | awk '{print $2}')" / 2 + 1)
+            continue
+        elif [ "${jobs}" -gt 2 ]; then
+            jobs=$(expr "${jobs}" - 2)
+            continue
+        elif [ "${jobs}" = 1 ]; then
+            exit 1
+        else
+            jobs=1
+        fi
+    done
+
+    DESTDIR="${PKG}" cmake --install build
 }
