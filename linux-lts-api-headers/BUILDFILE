@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Expose the kernel's API for use by Glibc"
-homepage="https://www.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
+homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts-api-headers

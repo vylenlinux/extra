@@ -1,4 +1,4 @@
-description="A portable fork of the OpenBSD `doas` command"
+description="A portable fork of the OpenBSD 'doas' command"
 homepage="https://github.com/Duncaen/OpenDoas"
 maintainer="Vylen Linux Team"
 
