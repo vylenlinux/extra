@@ -1,14 +1,18 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="PyYAML-based module to produce pretty and readable YAML-serialized data"
 homepage="https://github.com/mk-fg/pretty-yaml"
 maintainer="Vylen Linux Team"
 
 name=python3-pyaml
-version=24.12.1
+version=25.1.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mk-fg/pretty-yaml/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    cd pretty-yaml-${version}
+    # shellcheck disable=SC2164
+    cd "pretty-yaml-${version}"
 
     python3 -m build --wheel --no-isolation
     python3 -m installer --destdir="${PKG}" dist/*.whl
