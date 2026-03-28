@@ -1,16 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="World timezone definitions, modern and historical"
 homepage="https://pythonhosted.org/pytz/"
 maintainer="Vylen Linux Team"
 
 name=python3-pytz
-version=2025.2
+version=2026.1
 release=1
-source="$name-$version.tar.gz::https://pypi.io/packages/source/p/pytz/pytz-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.io/packages/source/p/pytz/pytz-${version}.tar.gz"
 
 build() {
-  cd pytz-$version
-  /usr/bin/python3 setup.py build
-  /usr/bin/python3 setup.py install --root=$PKG \
-    --optimize=1 \
-    --skip-build
+    # shellcheck disable=SC2164
+    cd "pytz-${version}"
+    python3 setup.py build
+
+    python3 setup.py install --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 }
