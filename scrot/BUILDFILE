@@ -1,19 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Simple command-line screenshot utility for X"
 homepage="https://github.com/resurrecting-open-source-projects/scrot"
 maintainer="Vylen Linux Team"
 
 name=scrot
-version=1.12.1
+version=2.0.0
 release=1
-source="https://github.com/resurrecting-open-source-projects/$name/archive/refs/tags/$version.tar.gz"
+source="https://github.com/resurrecting-open-source-projects/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    NOCONFIGURE=1 ./autogen.sh
 
-	NOCONFIGURE=1 ./autogen.sh
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
+
+    make
+    make DESTDIR="${PKG}" install
 }
