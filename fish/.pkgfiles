@@ -1,4 +1,4 @@
-fish-4.5.0-1
+fish-4.6.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/fish/
 drwxr-xr-x root/root    etc/fish/completions/
@@ -890,6 +890,7 @@ drwxr-xr-x root/root    usr/share/fish/completions/
 -rw-r--r-- root/root    usr/share/fish/completions/test.fish
 -rw-r--r-- root/root    usr/share/fish/completions/tex-fmt.fish
 -rw-r--r-- root/root    usr/share/fish/completions/tex.fish
+-rw-r--r-- root/root    usr/share/fish/completions/tflint.fish
 -rw-r--r-- root/root    usr/share/fish/completions/tig.fish
 -rw-r--r-- root/root    usr/share/fish/completions/time.fish
 -rw-r--r-- root/root    usr/share/fish/completions/timedatectl.fish
