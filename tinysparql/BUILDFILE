@@ -1,9 +1,12 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Low-footprint RDF triple store with SPARQL 1.1 interface"
 homepage="https://tinysparql.org/"
 maintainer="Vylen Linux Team"
 
 name=tinysparql
-version=3.10.1
+version=3.11.0
 release=1
 
 source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz
@@ -11,16 +14,17 @@ source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/arch
     gh-ci-timeout.patch"
 
 build() {
+    # shellcheck disable=SC2164
     cd ${name}-${version}
 
     patch -Np1 -i "${SRC}/disable-cli-test.patch"
     patch -Np1 -i "${SRC}/gh-ci-timeout.patch"
 
     vylen-meson build \
-		-Dtests_tap_protocol=true \
-		-Ddocs=false \
-		-Dman=true \
-		-Dsystemd_user_services=false
+        -Dtests_tap_protocol=true \
+        -Ddocs=false \
+        -Dman=true \
+        -Dsystemd_user_services=false
 
     meson compile -C build
     meson install -C build --destdir "${PKG}"
