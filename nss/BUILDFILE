@@ -36,7 +36,7 @@ build() {
     install -d "${PKG}/usr/lib"
     install -v -m755 Linux*/lib/*.so "${PKG}/usr/lib"
 
-    for xx in 'Linux*/lib/*.chk' 'Linux*/lib/libcrmf.a'; do
+    for xx in Linux*/lib/*.chk Linux*/lib/libcrmf.a; do
         install -v -m644 "${xx}" "${PKG}/usr/lib"
     done
 
