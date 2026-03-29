@@ -6,43 +6,35 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=6.6.2
+version=6.6.4
 release=1
 
-source="${name}-${version}.tar.xz::https://updates.tdesktop.com/tlinux/tsetup.${version}.tar.xz
-    ${name}.desktop
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon16.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon32.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon48.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon64.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon128.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon256.png
-    https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon512.png"
+commit=0ae923c493bceb75433de2682ba8ae29cc7bf88d
+
+source="https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
+    https://github.com/tdlib/td/archive/${commit}.tar.gz
+    minizip.patch"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${SRC}"
+    patch -Np1 -d "tdesktop-${version}-full/Telegram/lib_base" -i "${SRC}/minizip.patch"
 
-    # Creating needed directories
-    install -dm755 "${PKG}/usr/bin"
-    install -dm755 "${PKG}/usr/share/pixmaps/"
-    install -dm755 "${PKG}/usr/share/applications/"
+    cmake -S "${SRC}/td-${commit}" -B "${SRC}/td-${commit}/build" \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX="${SRC}/td-${commit}/install" \
+        -Wno-dev \
+        -DTD_E2E_ONLY=ON
 
-    # Program
-    install -Dm755 "${SRC}/Telegram/Telegram" "${PKG}/usr/bin/telegram-desktop"
+    cmake --build "${SRC}/td-${commit}/build"
+    cmake --install "${SRC}/td-${commit}/build"
 
-    # Remove RPATH informations
-    chrpath --delete "${PKG}/usr/bin/telegram-desktop"
+    cmake -S "tdesktop-${version}-full" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -Dtde2e_DIR="${SRC}/td-${commit}/install/lib/cmake/tde2e" \
+        -DTDESKTOP_API_ID=611335 \
+        -DTDESKTOP_API_HASH=d524b414d21f4d37f08684c1df41ac9c \
+        -Wno-dev
 
-    # Desktop launcher
-    install -Dm644 "${SRC}/icon256.png" "${PKG}/usr/share/pixmaps/telegram.png"
-    install -Dm644 "${SRC}/${name}.desktop" "${PKG}/usr/share/applications/telegramdesktop.desktop"
-
-    # Icons
-    for icon_size in 16 32 48 64 128 256 512; do
-        icon_dir="${PKG}/usr/share/icons/hicolor/${icon_size}x${icon_size}/apps"
-
-        install -d "${icon_dir}"
-        install -m644 "${SRC}/icon${icon_size}.png" "${icon_dir}/telegram.png"
-    done
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
