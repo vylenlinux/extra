@@ -1,17 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Super fast, versatile, and customizable command-line fetcher"
 homepage="https://gitlab.com/lynxfetch/lynxfetch"
 maintainer="Vylen Linux Team"
 
 name=lynxfetch
-version=1.1.2
+version=1.1.3
 release=1
 source="https://gitlab.com/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd "${name}-${version}"
-    
-	cargo build -r
-	install -Dm755 "target/release/${name}" "${PKG}/usr/bin/${name}"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    cargo build --release
+    install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
 
     install -Dm644 "completions/${name}.bash" "${PKG}/usr/share/bash-completion/completions/${name}"
     install -Dm644 "completions/${name}.fish" "${PKG}/usr/share/fish/vendor_completions.d/${name}.fish"
