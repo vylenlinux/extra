@@ -1,23 +1,21 @@
-python3-urwid-3.0.5-1
+python3-urwid-4.0.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/licenses/COPYING
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-3.0.5.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/licenses/COPYING
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid-4.0.0.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/__init__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/canvas.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/command_map.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/container.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/decoration.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/font.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/graphics.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/numedit.cpython-314.pyc
@@ -28,11 +26,8 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/util.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/version.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/vterm.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/__pycache__/wimp.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/canvas.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/command_map.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/container.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/decoration.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/display/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/display/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/display/__pycache__/
@@ -153,4 +148,3 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urwid/widget/__pycache_
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/widget/widget.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/widget/widget_decoration.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/widget/wimp.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urwid/wimp.py
