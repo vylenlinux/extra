@@ -1,4 +1,4 @@
-perl-5.42.1-1
+perl-5.42.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/corelist
@@ -10,8 +10,8 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/instmodsh
 -rwxr-xr-x root/root    usr/bin/json_pp
 -rwxr-xr-x root/root    usr/bin/libnetcfg
-lrwxrwxrwx root/root    usr/bin/perl -> perl5.42.1
--rwxr-xr-x root/root    usr/bin/perl5.42.1
+lrwxrwxrwx root/root    usr/bin/perl -> perl5.42.2
+-rwxr-xr-x root/root    usr/bin/perl5.42.2
 hrwxr-xr-x root/root    usr/bin/perlbug link to usr/bin/perlthanks
 -rwxr-xr-x root/root    usr/bin/perldoc
 -rwxr-xr-x root/root    usr/bin/perlivp
@@ -1008,11 +1008,14 @@ drwxr-xr-x root/root    usr/lib/perl5/5.42/pod/
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5382delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5383delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5384delta.pod
+-rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5385delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5400delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5401delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5402delta.pod
+-rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5403delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5420delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5421delta.pod
+-rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl5422delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl561delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl56delta.pod
 -rw-r--r-- root/root    usr/lib/perl5/5.42/pod/perl581delta.pod
@@ -2312,11 +2315,14 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/perl5382delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5383delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5384delta.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/perl5385delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5400delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5401delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5402delta.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/perl5403delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5420delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl5421delta.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/perl5422delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl561delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl56delta.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/perl581delta.1.gz

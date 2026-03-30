@@ -6,12 +6,12 @@ homepage="https://www.perl.org/"
 maintainer="Vylen Linux Team"
 
 name=perl
-version=5.42.1
+version=5.42.2
 release=1
 source="https://www.cpan.org/src/5.0/${name}-${version}.tar.xz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "${name}-${version}"
 
     export BUILD_ZLIB=False
