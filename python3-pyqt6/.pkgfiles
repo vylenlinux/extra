@@ -1,4 +1,4 @@
-python3-pyqt6-6.10.2-1
+python3-pyqt6-6.11.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/pylupdate6
@@ -362,6 +362,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qpolygon.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qpygui_native_interface.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qpygui_qlist.sip
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qpygui_qmap.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qpygui_vulkan.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qquaternion.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtGui/qrasterwindow.sip
@@ -802,7 +803,6 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidget
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qerrormessage.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfiledialog.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfileiconprovider.sip
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfilesystemmodel.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfocusframe.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfontcombobox.sip
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PyQt6/bindings/QtWidgets/qfontdialog.sip
@@ -1021,12 +1021,12 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PyQt6/uic/widget-plugin
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/dbus/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/dbus/mainloop/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/dbus/mainloop/pyqt6.abi3.so
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/INSTALLER
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/RECORD
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.10.2.dist-info/licenses/LICENSE
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/INSTALLER
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/RECORD
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pyqt6-6.11.0.dist-info/licenses/LICENSE
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/PyQt6/
