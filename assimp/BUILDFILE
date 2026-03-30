@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library to import various well-known 3D model formats in an uniform manner"
 homepage="https://assimp.sourceforge.net/index.html"
 maintainer="Vylen Linux Team"
@@ -5,20 +8,24 @@ maintainer="Vylen Linux Team"
 name=assimp
 version=6.0.4
 release=1
-source="https://github.com/assimp/assimp/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/assimp/assimp/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  cmake -S $name-$version -B build -G Ninja \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -D ASSIMP_WARNINGS_AS_ERRORS=OFF \
-    -D ASSIMP_BUILD_SAMPLES=OFF \
-    -Wno-dev
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DASSIMP_WARNINGS_AS_ERRORS=OFF \
+        -DASSIMP_BUILD_ASSIMP_TOOLS=ON \
+        -DASSIMP_BUILD_SAMPLES=OFF \
+        -DASSIMP_BUILD_MINIZIP=True \
+        -DASSIMP_BUILD_ZLIB=OFF \
+        -Wno-dev
 
-  sed -i "s|includedir=.*|includedir=/usr/include/assimp|" ${PKG}/usr/lib/pkgconfig/assimp.pc
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    sed -i "s|includedir=.*|includedir=/usr/include/assimp|" "${PKG}/usr/lib/pkgconfig/assimp.pc"
 }
