@@ -4,3 +4,4 @@ VERSION="rolling"
 ID="vylen"
 VERSION_ID="rolling"
 HOME_URL="https://vylen.gitlab.io/"
+LOGO=vylenlinux-logo

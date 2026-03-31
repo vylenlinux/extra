@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=filesystem
 version=20260331
-release=1
+release=2
 
 backup="etc/fstab
     etc/group
@@ -83,6 +83,5 @@ build() {
     install -d "${PKG}/etc/skel"
     install -m644 issue "${PKG}/etc"
 
-    install -Dm644 "${SRC}/vylen.png" -t "${PKG}/usr/share/pixmaps/"
-    install -Dm644 "${SRC}/vylen.png" "${PKG}/usr/share/pixmaps/vylen-logo.png"
+    install -Dm644 "${SRC}/vylen.png" "${PKG}/usr/share/pixmaps/vylenlinux-logo.png"
 }
