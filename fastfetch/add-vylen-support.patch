@@ -1,0 +1,154 @@
+diff '--color=auto' '--color=auto' -Naur a/src/detection/packages/packages.h b/src/detection/packages/packages.h
+--- a/src/detection/packages/packages.h	2026-03-28 07:10:34.000000000 +0100
++++ b/src/detection/packages/packages.h	2026-03-31 12:04:47.167403106 +0200
+@@ -47,6 +47,7 @@
+     uint32_t sorcery;
+     uint32_t winget;
+     uint32_t xbps;
++    uint32_t emerald;
+ 
+     uint32_t all; //Make sure this goes last
+ 
+diff '--color=auto' '--color=auto' -Naur a/src/detection/packages/packages_linux.c b/src/detection/packages/packages_linux.c
+--- a/src/detection/packages/packages_linux.c	2026-03-28 07:10:34.000000000 +0100
++++ b/src/detection/packages/packages_linux.c	2026-03-31 12:05:26.899406350 +0200
+@@ -493,6 +493,7 @@
+     if (!(options->disabled & FF_PACKAGES_FLAG_PISI_BIT)) packageCounts->pisi += getNumElements(baseDir, "/var/lib/pisi/package", true);
+     if (!(options->disabled & FF_PACKAGES_FLAG_PKGSRC_BIT)) packageCounts->pkgsrc += getNumElements(baseDir, "/usr/pkg/pkgdb", DT_DIR);
+     if (!(options->disabled & FF_PACKAGES_FLAG_MOSS_BIT)) packageCounts->moss += getSQLite3Int(baseDir, "/.moss/db/state", "SELECT COUNT(*) FROM state_selections WHERE state_id = (SELECT MAX(id) FROM state)", "moss");
++    if (!(options->disabled & FF_PACKAGES_FLAG_EMERALD_BIT)) packageCounts->emerald += getNumElements(baseDir, "/var/lib/emerald/db", false);
+ }
+ 
+ static void getPackageCountsRegular(FFstrbuf* baseDir, FFPackagesResult* packageCounts, FFPackagesOptions* options)
+diff '--color=auto' '--color=auto' -Naur a/src/logo/ascii/vylen_small.txt b/src/logo/ascii/vylen_small.txt
+--- a/src/logo/ascii/vylen_small.txt	1970-01-01 01:00:00.000000000 +0100
++++ b/src/logo/ascii/vylen_small.txt	2026-03-31 12:06:39.806412301 +0200
+@@ -0,0 +1,13 @@
++      :~!!!~. .~!!!~:
++    :~!!!!!~. .~!!!!!~:
++  :~!!!!!!!~. .~!!!!!!!~:
++:~!!!!!!!!!~. .~!!!!!!!!!~:
++!!!!!!!!!!!!. .!!!!!!!!!!!!
++~~~~~~~~~~~^   ^~~~~~~~~~~~
++
++~~~~~~~~~~~^   ^~~~~~~~~~~~
++!!!!!!!!!!!!   !!!!!!!!!!!!
++:~!!!!!!!!!!:.:!!!!!!!!!!~:
++  :~!!!!!!!!!!!!!!!!!!!~:
++    :~!!!!!!!!!!!!!!!~:
++      :~!!!!!!!!!!!~:
+\ No newline at end of file
+diff '--color=auto' '--color=auto' -Naur a/src/logo/ascii/vylen.txt b/src/logo/ascii/vylen.txt
+--- a/src/logo/ascii/vylen.txt	1970-01-01 01:00:00.000000000 +0100
++++ b/src/logo/ascii/vylen.txt	2026-03-31 12:06:55.079413548 +0200
+@@ -0,0 +1,19 @@
++          .^^^^^^:    :^^^^^^.
++        .:^^^^^^^:    :^^^^^^^:.
++      .^^^^^^^^^^:    :^^^^^^^^^^.
++    .^^^^^^^^^^^^:    :^^^^^^^^^^^^.
++  .^^^^^^^^^^^^^^:    :^^^^^^^^^^^^^^.
++.^^^^^^^^^^^^^^^^:    :^^^^^^^^^^^^^^^^:
++^^^^^^^^^^^^^^^^^:    :^^^^^^^^^^^^^^^^^
++^^^^^^^^^^^^^^^^~:    :~^^^^^^^^^^^^^^^^
++..................    ..................
++
++..................    ..................
++^^^^^^^^^^^^^^^^~:    :~^^^^^^^^^^^^^^^^
++^^^^^^^^^^^^^^^^^:    :^^^^^^^^^^^^^^^^^
++.^^^^^^^^^^^^^^^^:    :^^^^^^^^^^^^^^^^.
++  .^^^^^^^^^^^^^^^::::^^^^^^^^^^^^^^^.
++    .^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^.
++      .^^^^^^^^^^^^^^^^^^^^^^^^^^.
++        .:^^^^^^^^^^^^^^^^^^^^:.
++          .^^^^^^^^^^^^^^^^^^.
+\ No newline at end of file
+diff '--color=auto' '--color=auto' -Naur a/src/logo/builtin.c b/src/logo/builtin.c
+--- a/src/logo/builtin.c	2026-03-28 07:10:34.000000000 +0100
++++ b/src/logo/builtin.c	2026-03-31 12:07:41.820417363 +0200
+@@ -5379,6 +5379,25 @@
+         .colorKeys = FF_COLOR_FG_DEFAULT,
+         .colorTitle = FF_COLOR_FG_GREEN,
+     },
++    {
++        .names = {"Vylen"},
++        .lines = FASTFETCH_DATATEXT_LOGO_VYLEN,
++        .colors = {
++            FF_COLOR_FG_GREEN
++        },
++        .colorKeys = FF_COLOR_FG_GREEN,
++        .colorTitle = FF_COLOR_FG_GREEN,
++    },
++    {
++        .names = {"Vylen_small"},
++        .type = FF_LOGO_LINE_TYPE_SMALL_BIT,
++        .lines = FASTFETCH_DATATEXT_LOGO_VYLEN_SMALL,
++        .colors = {
++            FF_COLOR_FG_GREEN
++        },
++        .colorKeys = FF_COLOR_FG_GREEN,
++        .colorTitle = FF_COLOR_FG_GREEN,
++    },
+     // LAST
+     {},
+ };
+diff '--color=auto' '--color=auto' -Naur a/src/modules/packages/option.h b/src/modules/packages/option.h
+--- a/src/modules/packages/option.h	2026-03-28 07:10:34.000000000 +0100
++++ b/src/modules/packages/option.h	2026-03-31 12:07:56.623418572 +0200
+@@ -38,6 +38,7 @@
+     FF_PACKAGES_FLAG_SOAR_BIT = 1ULL << 30,
+     FF_PACKAGES_FLAG_KISS_BIT = 1ULL << 31,
+     FF_PACKAGES_FLAG_MOSS_BIT = 1ULL << 32,
++    FF_PACKAGES_FLAG_EMERALD_BIT = 1ULL << 33,
+     FF_PACKAGES_FLAG_FORCE_UNSIGNED = UINT64_MAX,
+ } FFPackagesFlags;
+ static_assert(sizeof(FFPackagesFlags) == sizeof(uint64_t), "");
+diff '--color=auto' '--color=auto' -Naur a/src/modules/packages/packages.c b/src/modules/packages/packages.c
+--- a/src/modules/packages/packages.c	2026-03-28 07:10:34.000000000 +0100
++++ b/src/modules/packages/packages.c	2026-03-31 12:09:47.520427624 +0200
+@@ -148,6 +148,7 @@
+         FF_PRINT_PACKAGE(pisi)
+         FF_PRINT_PACKAGE(soar)
+         FF_PRINT_PACKAGE(moss)
++        FF_PRINT_PACKAGE(emerald)
+ 
+         putchar('\n');
+     }
+@@ -203,6 +204,7 @@
+             FF_ARG(brewAll, "brew-all"),
+             FF_ARG(guixAll, "guix-all"),
+             FF_ARG(hpkgAll, "hpkg-all"),
++            FF_ARG(counts.emerald, "emerald"),
+         }));
+     }
+ 
+@@ -262,6 +264,7 @@
+                         case 'E': if (false);
+                             FF_TEST_PACKAGE_NAME(EMERGE)
+                             FF_TEST_PACKAGE_NAME(EOPKG)
++                            FF_TEST_PACKAGE_NAME(EMERALD)
+                             break;
+                         case 'F': if (false);
+                             FF_TEST_PACKAGE_NAME(FLATPAK)
+@@ -377,6 +380,7 @@
+     FF_TEST_PACKAGE_NAME(SORCERY)
+     FF_TEST_PACKAGE_NAME(WINGET)
+     FF_TEST_PACKAGE_NAME(XBPS)
++    FF_TEST_PACKAGE_NAME(EMERALD)
+     #undef FF_TEST_PACKAGE_NAME
+ 
+     yyjson_mut_obj_add_bool(doc, module, "combined", options->combined);
+@@ -440,6 +444,7 @@
+     FF_APPEND_PACKAGE_COUNT(sorcery)
+     FF_APPEND_PACKAGE_COUNT(winget)
+     FF_APPEND_PACKAGE_COUNT(xbps)
++    FF_APPEND_PACKAGE_COUNT(emerald)
+     yyjson_mut_obj_add_strbuf(doc, obj, "pacmanBranch", &counts.pacmanBranch);
+ 
+     return true;
+@@ -517,5 +522,6 @@
+         {"Total number of all brew packages", "brew-all"},
+         {"Total number of all guix packages", "guix-all"},
+         {"Total number of all hpkg packages", "hpkg-all"},
++        {"Number of emerald packages", "emerald"},
+     }))
+ };
