@@ -6,7 +6,7 @@ homepage="https://vylen.gitlab.io/"
 maintainer="Vylen Linux Team"
 
 name=filesystem
-version=20260318
+version=20260331
 release=1
 
 backup="etc/fstab
@@ -28,7 +28,8 @@ source="fstab
     os-release
     passwd
     resolv.conf
-    shells"
+    shells
+    vylen.png::https://gitlab.com/vylen/artworks/-/raw/main/png/round_colored.png"
 
 build() {
     # root dirs
@@ -81,4 +82,7 @@ build() {
 
     install -d "${PKG}/etc/skel"
     install -m644 issue "${PKG}/etc"
+
+    install -Dm644 "${SRC}/vylen.png" -t "${PKG}/usr/share/pixmaps/"
+    install -Dm644 "${SRC}/vylen.png" "${PKG}/usr/share/pixmaps/vylen-logo.png"
 }
