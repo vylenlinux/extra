@@ -1,10 +1,10 @@
-libvirt-12.1.0-1
+libvirt-12.2.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/libvirt/
 -rw-r--r-- root/root    etc/libvirt/ch.conf
 -rw-r--r-- root/root    etc/libvirt/libvirt-admin.conf
 -rw-r--r-- root/root    etc/libvirt/libvirt.conf
--rw-r--r-- root/root    etc/libvirt/libvirtd.conf.epkgnew
+-rw-r--r-- root/root    etc/libvirt/libvirtd.conf.spkgnew
 -rw-r--r-- root/root    etc/libvirt/lxc.conf
 drwxr-xr-x root/root    etc/libvirt/lxc/
 drwxr-xr-x root/root    etc/libvirt/lxc/autostart/
@@ -35,7 +35,7 @@ drwxr-xr-x root/root    etc/libvirt/nwfilter/
 -rw-r--r-- root/root    etc/libvirt/nwfilter/qemu-announce-self-rarp.xml
 -rw-r--r-- root/root    etc/libvirt/nwfilter/qemu-announce-self.xml
 -rw-r--r-- root/root    etc/libvirt/qemu-lockd.conf
--rw-r--r-- root/root    etc/libvirt/qemu.conf.epkgnew
+-rw-r--r-- root/root    etc/libvirt/qemu.conf.spkgnew
 drwxr-xr-x root/root    etc/libvirt/qemu/
 drwxr-xr-x root/root    etc/libvirt/qemu/autostart/
 drwxr-xr-x root/root    etc/libvirt/qemu/networks/
@@ -65,18 +65,14 @@ drwxr-xr-x root/root    etc/logrotate.d/
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.libxl
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.lxc
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.qemu
+drwxr-xr-x root/root    etc/rc.d/
+-rwxr-xr-x root/root    etc/rc.d/libvirtd
+-rwxr-xr-x root/root    etc/rc.d/virtlogd
 drwxr-xr-x root/root    etc/sasl2/
 -rw-r--r-- root/root    etc/sasl2/libvirt.conf
 drwxr-xr-x root/root    etc/ssh/
 drwxr-xr-x root/root    etc/ssh/ssh_config.d/
 -rw-r--r-- root/root    etc/ssh/ssh_config.d/30-libvirt-ssh-proxy.conf
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/libvirtd/
--rwxr-xr-x root/root    etc/sv/libvirtd/run
-lrwxrwxrwx root/root    etc/sv/libvirtd/supervise -> /run/runit/supervise.libvirtd
-drwxr-xr-x root/root    etc/sv/virtlogd/
--rwxr-xr-x root/root    etc/sv/virtlogd/run
-lrwxrwxrwx root/root    etc/sv/virtlogd/supervise -> /run/runit/supervise.virtlogd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/virsh
@@ -122,17 +118,17 @@ drwxr-xr-x root/root    usr/lib/firewalld/zones/
 -rwxr-xr-x root/root    usr/lib/libnss_libvirt.so.2
 -rwxr-xr-x root/root    usr/lib/libnss_libvirt_guest.so.2
 lrwxrwxrwx root/root    usr/lib/libvirt-admin.so -> libvirt-admin.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-admin.so.0 -> libvirt-admin.so.0.12001.0
--rwxr-xr-x root/root    usr/lib/libvirt-admin.so.0.12001.0
+lrwxrwxrwx root/root    usr/lib/libvirt-admin.so.0 -> libvirt-admin.so.0.12002.0
+-rwxr-xr-x root/root    usr/lib/libvirt-admin.so.0.12002.0
 lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so -> libvirt-lxc.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so.0 -> libvirt-lxc.so.0.12001.0
--rwxr-xr-x root/root    usr/lib/libvirt-lxc.so.0.12001.0
+lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so.0 -> libvirt-lxc.so.0.12002.0
+-rwxr-xr-x root/root    usr/lib/libvirt-lxc.so.0.12002.0
 lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so -> libvirt-qemu.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so.0 -> libvirt-qemu.so.0.12001.0
--rwxr-xr-x root/root    usr/lib/libvirt-qemu.so.0.12001.0
+lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so.0 -> libvirt-qemu.so.0.12002.0
+-rwxr-xr-x root/root    usr/lib/libvirt-qemu.so.0.12002.0
 lrwxrwxrwx root/root    usr/lib/libvirt.so -> libvirt.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt.so.0 -> libvirt.so.0.12001.0
--rwxr-xr-x root/root    usr/lib/libvirt.so.0.12001.0
+lrwxrwxrwx root/root    usr/lib/libvirt.so.0 -> libvirt.so.0.12002.0
+-rwxr-xr-x root/root    usr/lib/libvirt.so.0.12002.0
 drwxr-xr-x root/root    usr/lib/libvirt/
 drwxr-xr-x root/root    usr/lib/libvirt/connection-driver/
 -rwxr-xr-x root/root    usr/lib/libvirt/connection-driver/libvirt_driver_ch.so
@@ -169,9 +165,6 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libvirt.pc
 drwxr-xr-x root/root    usr/lib/sysctl.d/
 -rw-r--r-- root/root    usr/lib/sysctl.d/60-libvirtd.conf
-drwxr-xr-x root/root    usr/lib/systemd/
-drwxr-xr-x root/root    usr/lib/systemd/system/
--rw-r--r-- root/root    usr/lib/systemd/system/virt-secret-init-encryption.service
 drwxr-xr-x root/root    usr/lib/sysusers.d/
 -rw-r--r-- root/root    usr/lib/sysusers.d/libvirt-login-shell.conf
 -rw-r--r-- root/root    usr/lib/sysusers.d/libvirt-qemu.conf

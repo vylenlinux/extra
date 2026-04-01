@@ -1,14 +1,19 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python bindings for libvirt"
 homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team"
 
 name=libvirt-python
-version=12.1.0
+version=12.2.0
 release=1
-source="$name-$version.tar.gz::https://gitlab.com/libvirt/libvirt-python/-/archive/v$version/$name-v$version.tar.gz"
-build() {
-	cd $name-v$version
-	/usr/bin/python3 setup.py build
-	/usr/bin/python3 setup.py install --root $PKG
-}
+source="${name}-${version}.tar.gz::https://gitlab.com/libvirt/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-v${version}"
+
+    python3 setup.py build
+    python3 setup.py install --root "${PKG}"
+}

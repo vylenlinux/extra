@@ -1,57 +1,64 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="API for virtualization"
 homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team"
 
 name=libvirt
-version=12.1.0
+version=12.2.0
 release=1
-backup="etc/libvirt/libvirtd.conf  
-	etc/libvirt/qemu.conf"
-source="https://libvirt.org/sources/$name-$version.tar.xz
-	run.libvirtd
-	run.virtlogd
-	libvirtd.conf 
-	qemu.conf"
+
+backup="etc/libvirt/libvirtd.conf
+    etc/libvirt/qemu.conf"
+
+source="https://libvirt.org/sources/${name}-${version}.tar.xz
+    run.libvirtd
+    run.virtlogd
+    libvirtd.conf
+    qemu.conf"
 
 build() {
-	vylen-meson $name-$version build \
-		--libexecdir=/usr/lib/$name \
-		-Drunstatedir=/run \
-		-Ddriver_qemu=enabled \
-		-Dqemu_user=libvirt \
-		-Dqemu_group=libvirt \
-		-Dtests=disabled \
-		-Dnetcf=disabled \
-		-Dopenwsman=disabled \
-		-Dapparmor=disabled \
-		-Dapparmor_profiles=disabled \
-		-Dselinux=disabled \
-		-Dwireshark_dissector=disabled \
-		-Ddriver_bhyve=disabled \
-		-Ddriver_hyperv=disabled \
-		-Ddriver_libxl=disabled \
-		-Ddriver_vz=disabled \
-		-Dsanlock=disabled \
-		-Dsecdriver_apparmor=disabled \
-		-Dsecdriver_selinux=disabled \
-		-Dstorage_vstorage=disabled \
-		-Ddtrace=disabled \
-		-Dnumad=disabled \
-		-Dstorage_zfs=disabled\
-		-Dstorage_rbd=disabled
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        --libexecdir="/usr/lib/${name}" \
+        -Drunstatedir=/run \
+        -Ddriver_qemu=enabled \
+        -Dqemu_user=libvirt \
+        -Dqemu_group=libvirt \
+        -Dtests=disabled \
+        -Dnetcf=disabled \
+        -Dopenwsman=disabled \
+        -Dapparmor=disabled \
+        -Dapparmor_profiles=disabled \
+        -Dselinux=disabled \
+        -Dwireshark_dissector=disabled \
+        -Ddriver_bhyve=disabled \
+        -Ddriver_hyperv=disabled \
+        -Ddriver_libxl=disabled \
+        -Ddriver_vz=disabled \
+        -Dsanlock=disabled \
+        -Dsecdriver_apparmor=disabled \
+        -Dsecdriver_selinux=disabled \
+        -Dstorage_vstorage=disabled \
+        -Ddtrace=disabled \
+        -Dnumad=disabled \
+        -Dstorage_zfs=disabled\
+        -Dstorage_rbd=disabled
 
-    install -Dm755 $SRC/run.libvirtd $PKG/etc/sv/libvirtd/run
-	ln -s /run/runit/supervise.libvirtd $PKG/etc/sv/libvirtd/supervise
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm755 $SRC/run.virtlogd $PKG/etc/sv/virtlogd/run
-	ln -s /run/runit/supervise.virtlogd $PKG/etc/sv/virtlogd/supervise
+    install -Dm755 "${SRC}/run.libvirtd" "${PKG}/etc/sv/libvirtd/run"
+	ln -s /run/runit/supervise.libvirtd "${PKG}/etc/sv/libvirtd/supervise"
 
-	install -D -o root -g root -m 0644 $SRC/libvirtd.conf \
-		$PKG/etc/libvirt/libvirtd.conf
-	install -D -o root -g root -m 0644 $SRC/qemu.conf \
-		$PKG/etc/libvirt/qemu.conf
+    install -Dm755 "${SRC}/run.virtlogd" "${PKG}/etc/sv/virtlogd/run"
+	ln -s /run/runit/supervise.virtlogd "${PKG}/etc/sv/virtlogd/supervise"
 
-	rm -fr $PKG/usr/share/locale $PKG/run
+	install -Dm0644 "${SRC}/libvirtd.conf" "${PKG}/etc/libvirt/libvirtd.conf"
+	install -Dm0644 "${SRC}/qemu.conf" "${PKG}/etc/libvirt/qemu.conf"
+
+	rm -fr \
+	    "${PKG}/usr/share/locale" \
+	    "${PKG}/run" \
+	    "${PKG}/usr/lib/systemd"
 }
