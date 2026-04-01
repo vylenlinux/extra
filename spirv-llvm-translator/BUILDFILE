@@ -1,28 +1,32 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A tool and a library for bi-directional translation between SPIR-V and LLVM IR"
 homepage="https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
 maintainer="Vylen Linux Team"
 
 name=spirv-llvm-translator
-version=22.1.0
+version=22.1.1
 release=1
-source="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/KhronosGroup/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cmake -S SPIRV-LLVM-Translator-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-		-DCMAKE_SKIP_RPATH=ON \
-		-DLLVM_BUILD_TOOLS=ON \
-		-DCCACHE_ALLOWED=OFF \
-		-DLLVM_DIR=/usr/lib/cmake/llvm \
-		-DLLVM_SPIRV_BUILD_EXTERNAL=YES \
-		-DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv \
-		-DFETCHCONTENT_FULLY_DISCONNECTED=ON \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "SPIRV-LLVM-Translator-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DCMAKE_SKIP_RPATH=ON \
+        -DLLVM_BUILD_TOOLS=ON \
+        -DCCACHE_ALLOWED=OFF \
+        -DLLVM_DIR=/usr/lib/cmake/llvm \
+        -DLLVM_SPIRV_BUILD_EXTERNAL=YES \
+        -DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv \
+        -DFETCHCONTENT_FULLY_DISCONNECTED=ON \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
