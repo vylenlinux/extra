@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Desktop integration portals for sandboxed apps"
 homepage="https://github.com/flatpak/xdg-desktop-portal"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,16 @@ maintainer="Vylen Linux Team"
 name=xdg-desktop-portal
 version=1.20.3
 release=1
-source="https://github.com/flatpak/xdg-desktop-portal/archive/$version/$name-$version.tar.gz"
+source="https://github.com/flatpak/xdg-desktop-portal/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-		--libexecdir=lib/$name \
-		-Dtests=disabled \
-		-Dsystemd=disabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        --libexecdir="lib/${name}" \
+        -Dtests=disabled \
+        -Dsystemd=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    rm -rf "${PKG}/usr/lib/systemd"
 }
