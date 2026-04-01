@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Utilities for handling file systems, consoles, partitions, and messages"
 homepage="https://github.com/util-linux/util-linux"
 maintainer="Vylen Linux Team"
@@ -5,36 +8,40 @@ maintainer="Vylen Linux Team"
 name=util-linux
 version=2.41.3
 release=1
-
-source="https://www.kernel.org/pub/linux/utils/$name/v${version%.*}/$name-$version.tar.gz"
+source="https://www.kernel.org/pub/linux/utils/${name}/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    mkdir -pv "${PKG}/var/lib/hwclock"
 
-	mkdir -pv $PKG/var/lib/hwclock
+    ./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \
+        --libdir=/usr/lib \
+        --libexecdir=/usr/lib \
+        --runstatedir=/run \
+        --disable-asciidoc \
+        --disable-chfn-chsh \
+        --disable-login \
+        --disable-nologin \
+        --disable-su \
+        --disable-sulogin \
+        --disable-setpriv \
+        --disable-runuser \
+        --disable-pylibmount \
+        --disable-liblastlog2 \
+        --disable-nls \
+        --disable-static \
+        --without-python \
+        --without-systemd \
+        --without-systemdsystemunitdir
 
-	./configure ADJTIME_PATH=/var/lib/hwclock/adjtime \
-		--libdir=/usr/lib     \
-		--libexecdir=/usr/lib \
-		--runstatedir=/run    \
-		--disable-asciidoc    \
-		--disable-chfn-chsh   \
-		--disable-login       \
-		--disable-nologin     \
-		--disable-su          \
-		--disable-sulogin     \
-		--disable-setpriv     \
-		--disable-runuser     \
-		--disable-pylibmount  \
-		--disable-liblastlog2 \
-		--disable-nls         \
-		--disable-static      \
-		--without-python      \
-		--without-systemd     \
-		--without-systemdsystemunitdir 
 	make
-	make DESTDIR=$PKG install
+	make DESTDIR="${PKG}" install
 
-	rm -f $PKG/sbin/mkfs.bfs $PKG/sbin/mkfs.minix $PKG/sbin/fsck.minix
-	rm -f $PKG/usr/share/man/man8/*.minix.8 $PKG/usr/share/man/man8/mkfs.bfs.8
+	rm -f \
+	    "${PKG}/sbin/mkfs.bfs" \
+	    "${PKG}/sbin/mkfs.minix" \
+	    "${PKG}/sbin/fsck.minix" \
+	    "${PKG}/usr/share/man/man8"/*.minix.8 \
+	    "${PKG}/usr/share/man/man8/mkfs.bfs.8"
 }
