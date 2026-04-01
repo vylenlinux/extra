@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=xdg-desktop-portal
 version=1.20.3
-release=1
+release=2
 source="https://github.com/flatpak/xdg-desktop-portal/archive/${version}/${name}-${version}.tar.gz"
 
 build() {

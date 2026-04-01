@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=xdg-user-dirs
 version=0.19
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xdg/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
