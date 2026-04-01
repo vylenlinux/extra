@@ -6,7 +6,7 @@ homepage="https://requests.readthedocs.io"
 maintainer="Vylen Linux Team"
 
 name=python3-requests
-version=2.33.0
+version=2.33.1
 release=1
 
 _name="${name#*-}"
@@ -17,8 +17,12 @@ source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/sourc
 build() {
     # shellcheck disable=SC2164
     cd "${name#*-}-${version}"
-    sed -e '/certifi/d' -i setup.py
 
+    sed -e '/certifi/d' -i setup.py
     python3 setup.py build
-    python3 setup.py install --prefix=/usr --root="${PKG}" --skip-build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}" \
+        --skip-build
 }
