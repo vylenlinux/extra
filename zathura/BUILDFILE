@@ -1,18 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Minimalistic document viewer"
 homepage="https://pwmt.org/projects/zathura/"
 maintainer="Vylen Linux Team"
 
 name=zathura
-version=2026.02.22
+version=2026.03.27
 release=1
-source="https://github.com/pwmt/zathura/archive/$version/$name-$version.tar.gz"
-build() {
+source="https://github.com/pwmt/${name}/archive/${version}/${name}-${version}.tar.gz"
 
-	vylen-meson $name-$version build \
-		-Dconvert-icon=disabled \
-		-Dmanpages=disabled \
-		-Dseccomp=disabled \
-		-Dsynctex=disabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Dconvert-icon=disabled \
+        -Dmanpages=disabled \
+        -Dseccomp=disabled \
+        -Dsynctex=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

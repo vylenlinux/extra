@@ -14,7 +14,8 @@ build() {
     # shellcheck disable=SC2164
     cd "Botan-${version}"
 
-    ./configure.py --prefix=/usr \
+    ./configure.py \
+        --prefix=/usr \
         --with-bzip \
         --with-zlib \
         --with-sqlite3 \
