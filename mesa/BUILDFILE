@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.0.3
+version=26.0.4
 release=1
 
 ### BEGIN Rust crates
@@ -40,7 +40,7 @@ EOF
 source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz ${rcrate}"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "${name}-${version}"
 
     # Add subproject sources
