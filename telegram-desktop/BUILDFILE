@@ -6,12 +6,12 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=6.6.4
+version=6.7.1
 release=1
 
 commit=0ae923c493bceb75433de2682ba8ae29cc7bf88d
 
-source="https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
+source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
     https://github.com/tdlib/td/archive/${commit}.tar.gz
     minizip.patch"
 
