@@ -6,7 +6,7 @@ homepage="https://webkitgtk.org"
 maintainer="Vylen Linux Team"
 
 name=webkitgtk
-version=2.52.0
+version=2.52.1
 release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
@@ -30,7 +30,6 @@ build() {
         -DENABLE_GEOLOCATION=OFF \
         -DENABLE_MINIBROWSER=ON \
         -DUSE_AVIF=OFF \
-        -DUSE_GTK4=OFF \
         -DUSE_LIBBACKTRACE=OFF \
         -DUSE_LIBHYPHEN=OFF \
         -DUSE_SOUP2=OFF \
