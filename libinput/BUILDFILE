@@ -1,20 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Input device management and event handling library"
 homepage="https://gitlab.freedesktop.org/libinput/libinput"
 maintainer="Vylen Linux Team"
 
 name=libinput
-version=1.31.0
+version=1.31.1
 release=1
-source="https://gitlab.freedesktop.org/libinput/libinput/-/archive/$version/libinput-$version.tar.gz"
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-		-Dudev-dir=/lib/udev \
-		-Ddebug-gui=false \
-		-Db_ndebug=false \
-		-Dtests=false \
-		-Ddocumentation=false \
-		-Dlibwacom=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dudev-dir=/lib/udev \
+        -Ddebug-gui=false \
+        -Db_ndebug=false \
+        -Dtests=false \
+        -Ddocumentation=false \
+        -Dlibwacom=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
