@@ -1,3 +1,4 @@
 at-spi2-core
 glibmm-gtk4
 meson
+graphviz
