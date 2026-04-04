@@ -11,6 +11,7 @@ release=1
 source="http://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
     cd "${name}-${version}"
 
     ./configure \
