@@ -1,16 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library to create an ISO-9660 filesystem with extensions like RockRidge or Joliet"
 homepage="https://archlinux.org/packages/extra/x86_64/libisofs/"
 maintainer="Vylen Linux Team"
 
 name=libisofs
-version=1.5.6
+version=1.5.8
 release=1
-source="https://files.libburnia-project.org/releases/$name-$version.tar.gz"
+source="https://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./bootstrap
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./bootstrap
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
