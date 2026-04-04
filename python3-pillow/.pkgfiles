@@ -1,4 +1,4 @@
-python3-pillow-12.1.1-1
+python3-pillow-12.2.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/3.14/
@@ -239,11 +239,11 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PIL/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PIL/features.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PIL/py.typed
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PIL/report.py
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/licenses/LICENSE
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/top_level.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.1.1.dist-info/zip-safe
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/licenses/LICENSE
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/top_level.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pillow-12.2.0.dist-info/zip-safe

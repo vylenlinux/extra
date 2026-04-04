@@ -1,24 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python Imaging Library (PIL) fork"
 homepage="https://python-pillow.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-pillow
-version=12.1.1
+version=12.2.0
 release=1
-source="$name-$version.tar.gz::https://github.com/python-pillow/Pillow/archive/refs/tags/$version.tar.gz
-	"
+source="${name}-${version}.tar.gz::https://github.com/python-pillow/Pillow/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd Pillow-$version
+    # shellcheck disable=SC2164
+    cd "Pillow-${version}"
+    export CFLAGS="${CFLAGS} -O2 -L/lib -flto=auto"
 
-	export CFLAGS="$CFLAGS -O2 -L/lib -flto=auto"
-	    gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		.dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-	local pversion=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
-	install -d "$PKG/usr/include/$pversion"
-	install -m644 -t "$PKG/usr/include/$pversion/" src/libImaging/*.h
+    python3 -m installer -d "${PKG}" .dist/*.whl
+	pversion="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')"
+
+	install -d "${PKG}/usr/include/${pversion}"
+	install -m644 src/libImaging/*.h -t "${PKG}/usr/include/${pversion}/"
 }
