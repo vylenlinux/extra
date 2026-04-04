@@ -1,42 +1,37 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Free version of the SSH connectivity tools"
 homepage="https://www.openssh.com/"
 maintainer="Vylen Linux Team"
 
 name=openssh
-version=10.2p1
+version=10.3p1
 release=1
 
-source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz
-	run.sshd
-	openssh-10.2p1-error-to-debug-pkcs11_fetch_certs.patch::https://github.com/openssh/openssh-portable/commit/607f337637f2077b34a9f6f96fc24237255fe175.patch
-	openssh-10.2p1-pinentry-pkcs11provider.patch::https://github.com/openssh/openssh-portable/commit/434ba7684054c0637ce8f2486aaacafe65d9b8aa.patch"
+source="https://ftp.openbsd.org/pub/OpenBSD/${name}/portable/${name}-${version}.tar.gz
+    run.sshd"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# Fix an issue with PKCS#11 provided keys
-	patch -Np1 -i $SRC/$name-10.2p1-error-to-debug-pkcs11_fetch_certs.patch
-	patch -Np1 -i $SRC/$name-10.2p1-pinentry-pkcs11provider.patch
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc/ssh \
+        --libexecdir="/usr/lib/${name}" \
+        --with-md5-passwords \
+        --with-privsep-path=/var/lib/sshd \
+        --without-zlib-version-check
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc/ssh \
-		--libexecdir=/usr/lib/$name \
-		--with-md5-passwords \
-		--with-privsep-path=/var/lib/sshd \
-		--without-zlib-version-check
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-	install -v -m755    contrib/ssh-copy-id $PKG/usr/bin
-	install -v -m644    contrib/ssh-copy-id.1 \
-	                    $PKG/usr/share/man/man1
+    install -v -m755 contrib/ssh-copy-id "${PKG}/usr/bin"
+    install -v -m644 contrib/ssh-copy-id.1 "${PKG}/usr/share/man/man1"
 
-	sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' \
-	    -i $PKG/etc/ssh/sshd_config
+	sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' -i "${PKG}/etc/ssh/sshd_config"
 
-	install -dm700 -o root -g sys $PKG/var/lib/sshd
-
-	install -Dm755 $SRC/run.sshd $PKG/etc/sv/sshd/run
-	ln -s /run/runit/supervise.sshd $PKG/etc/sv/sshd/supervise
+	install -Dm755 "${SRC}/run.sshd" "${PKG}/etc/sv/sshd/run"
+	ln -s /run/runit/supervise.sshd "${PKG}/etc/sv/sshd/supervise"
 }

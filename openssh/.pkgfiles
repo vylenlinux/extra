@@ -1,4 +1,4 @@
-openssh-10.2p1-1
+openssh-10.3p1-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/ssh/
 -rw-r--r-- root/root    etc/ssh/moduli
@@ -49,6 +49,3 @@ drwxr-xr-x root/root    usr/share/man/man8/
 -rw-r--r-- root/root    usr/share/man/man8/ssh-pkcs11-helper.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ssh-sk-helper.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/sshd.8.gz
-drwxr-xr-x root/root    var/
-drwxr-xr-x root/root    var/lib/
-drwx------ root/sys    var/lib/sshd/
