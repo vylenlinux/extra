@@ -1,19 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="frontend for libraries libburn and libisofs"
 homepage="https://dev.lovelyhq.com/libburnia"
 maintainer="Vylen Linux Team"
 
 name=libisoburn
-version=1.5.6
+version=1.5.8
 release=1
-source="http://files.libburnia-project.org/releases/$name-$version.tar.gz"
+source="http://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr              \
-	            --disable-static           \
-	            --enable-pkg-check-modules
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --enable-pkg-check-modules
 
+    make
+    make DESTDIR="${PKG}" install
 }
