@@ -1,18 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library for writing preformatted data onto optical media: CD, DVD and BD (Blu-Ray)"
 homepage="https://dev.lovelyhq.com/libburnia"
 maintainer="Vylen Linux Team"
 
 name=libburn
-version=1.5.6
+version=1.5.8
 release=1
-source="https://files.libburnia-project.org/releases/$name-$version.tar.gz
-	libburn-c23.patch"
+source="https://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	patch -Np1 -i $SRC/libburn-c23.patch
-	./bootstrap
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./bootstrap
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
