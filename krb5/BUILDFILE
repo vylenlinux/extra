@@ -9,22 +9,23 @@ name=krb5
 version=1.22.2
 release=1
 
-vrsn="$(printf "${version}" | awk -F. '{print $1"."$2}')"
+vrsn="$(printf "%s" "${version}" | awk -F. '{print $1"."$2}')"
 
 source="https://kerberos.org/dist/krb5/${vrsn}/${name}-${version}.tar.gz
     mitkrb-1.22.2-upstream_fix-1.patch"
 
 build() {
-	patch -d "${name}-${version}" -Np1 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
+
     # shellcheck disable=SC2164
-	cd "${name}-${version}/src"
+    cd "${name}-${version}/src"
 
-	# increases the width of the virtual terminal used for some tests to
-	# prevent some spurious text in the output which is taken as a failure
-	sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test
-	# autoreconf -fvi
+    # increases the width of the virtual terminal used for some tests to
+    # prevent some spurious text in the output which is taken as a failure
+    sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test
+    # autoreconf -fvi
 
-	./configure \
+    ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
         --localstatedir=/var/lib \
