@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=nodejs
 version=25.9.0
 release=1
-source="https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
