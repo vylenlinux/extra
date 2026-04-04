@@ -1,20 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Compatibility layer between SDL2 and SDL3"
 maintainer="Vylen Linux Team"
 homepage="https://www.libsdl.org"
 
 name=sdl2-compat
-version=2.32.64
+version=2.32.66
 release=1
-source="https://github.com/libsdl-org/sdl2-compat/releases/download/release-$version/$name-$version.tar.gz"
+source="https://github.com/libsdl-org/${name}/releases/download/release-${version}/${name}-${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
