@@ -6,7 +6,7 @@ homepage="https://aomedia.googlesource.com/aom"
 maintainer="Vylen Linux Team"
 
 name=aom
-version=3.13.2
+version=3.13.3
 release=1
 source="${name}-${version}.tar.gz::https://storage.googleapis.com/aom-releases/libaom-${version}.tar.gz"
 
@@ -15,9 +15,9 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DBUILD_SHARED_LIBS=1 \
         -DENABLE_TESTS=0 \
         -DENABLE_DOCS=0 \
