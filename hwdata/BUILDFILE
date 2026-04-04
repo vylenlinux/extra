@@ -1,19 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Hardware identification and configuration data"
 homepage="https://github.com/vcrhonek/hwdata"
 maintainer="Vylen Linux Team"
 
 name=hwdata
-version=0.405
+version=0.406
 release=1
-source="https://github.com/vcrhonek/hwdata/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/vcrhonek/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	cd $name-$version
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--datadir=/usr/share \
-		--disable-blacklist
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --datadir=/usr/share \
+        --disable-blacklist
+
+    make DESTDIR="${PKG}" install
 }
