@@ -1,16 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A small C library that is supposed to make it easy to run an HTTP server as part of another application."
 homepage="https://www.gnu.org/software/libmicrohttpd/"
 maintainer="Vylen Linux Team"
 
 name=libmicrohttpd
-version=1.0.2
+version=1.0.3
 release=1
-source="https://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-$version.tar.gz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
 build() {
-    cd $name-$version
-
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
     ./configure --prefix=/usr
+
     make
-    make DESTDIR=$PKG/ install
+    make DESTDIR="${PKG}" install
 }
