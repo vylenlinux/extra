@@ -1,15 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="More routines for operating on iterables, beyond itertools"
 homepage="https://github.com/more-itertools/more-itertools"
 maintainer="Vylen Linux Team"
 
 name=python3-more-itertools
-version=10.8.0
+version=11.0.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/more-itertools/more-itertools/archive/refs/tags/v${version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
     cd "more-itertools-${version}"
 
-    SETUPTOOLS_SCM_PRETEND_VERSION="${version}" python3 -m build --wheel --no-isolation
+    SETUPTOOLS_SCM_PRETEND_VERSION="${version}" python3 -m build \
+        --wheel \
+        --no-isolation
+
     python3 -m installer --destdir="${PKG}" dist/*.whl
 }
