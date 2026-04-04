@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Linker from the LLVM project"
+homepage="https://lld.llvm.org/"
+maintainer="Vylen Linux Team"
+
+name=lld21
+version=21.1.8
+release=1
+
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+    lld-import-compact_unwind_encoding.h-from-libu.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "llvm-project-${version}.src/lld"
+    patch -p2 -i "${SRC}/lld-import-compact_unwind_encoding.h-from-libu.patch"
+
+    cmake -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr/lib/llvm21 \
+        -DCMAKE_PREFIX_PATH=/usr/lib/llvm21 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DLLVM_LINK_LLVM_DYLIB=ON \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
