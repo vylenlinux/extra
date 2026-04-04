@@ -1,22 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A library for portable low-level access to a video framebuffer, audio output, mouse, and keyboard (Version 2)"
 homepage="https://www.libsdl.org/"
 maintainer="Vylen Linux Team"
 
 name=sdl3
-version=3.4.2
+version=3.4.4
 release=1
-source="$name-$version.tar.gz::https://github.com/libsdl-org/SDL/releases/download/release-$version/SDL3-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/libsdl-org/SDL/releases/download/release-${version}/SDL3-${version}.tar.gz"
 
 build() {
+    CFLAGS="${CFLAGS} -ffat-lto-objects"
 
-	CFLAGS="${CFLAGS} -ffat-lto-objects"
-	cmake -S SDL3-$version -B build -G Ninja \
-			-D CMAKE_BUILD_TYPE=None \
-			-D CMAKE_INSTALL_PREFIX=/usr \
-			-D SDL_STATIC=OFF \
-			-D SDL_RPATH=OFF
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "SDL3-${version}" -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DSDL_STATIC=OFF \
+        -DSDL_RPATH=OFF
 
-	rm -r $PKG/usr/share/licenses/
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    rm -r "${PKG}/usr/share/licenses/"
 }
