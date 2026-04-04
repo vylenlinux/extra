@@ -49,9 +49,11 @@ build() {
 
         # Try few parallel jobs to avoid OOM
         if [ -z "${jobs}" ]; then
+            # shellcheck disable=SC2003
             jobs=$(expr "$(free -g | grep Mem: | awk '{print $2}')" / 2 + 1)
             continue
         elif [ "${jobs}" -gt 2 ]; then
+            # shellcheck disable=SC2003
             jobs=$(expr "${jobs}" - 2)
             continue
         elif [ "${jobs}" = 1 ]; then
