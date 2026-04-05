@@ -1,22 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Manual tiling window manager for X"
 homepage="https://herbstluftwm.org/"
 maintainer="Vylen Linux Team"
 
 name=herbstluftwm
-version=0.9.5
+version=0.9.6
 release=1
-source="https://herbstluftwm.org/tarballs/herbstluftwm-$version.tar.gz"
+source="https://herbstluftwm.org/tarballs/${name}-${version}.tar.gz"
 
 build() {
-	cmake  -S $name-$version -B build -G Ninja \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DWITH_DOCUMENTATION=NO \
-		-Wno-dev 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DWITH_DOCUMENTATION=NO \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
