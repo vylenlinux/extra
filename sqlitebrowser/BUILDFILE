@@ -7,7 +7,7 @@ homepage="https://sqlitebrowser.org"
 
 name=sqlitebrowser
 version=nightly.2b39cef
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/nightly.tar.gz"
 
 build() {
@@ -27,6 +27,6 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    install -Dm0644 distri/sqlitebrowser.desktop "${PKG}/usr/share/applications/${name}.desktop"
-    install -Dm0644 images/logo.png "${PKG}/usr/share/icons/hicolor/scalable/apps/${name}.svg"
+    install -Dm0644 "distri/${name}.desktop" -t "${PKG}/usr/share/applications/"
+    install -Dm0644 images/logo.svg "${PKG}/usr/share/icons/hicolor/scalable/apps/${name}.svg"
 }
