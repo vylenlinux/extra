@@ -1,4 +1,4 @@
-sdl2_image-2.8.8-1
+sdl2_image-2.8.10-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/SDL2/
@@ -13,8 +13,8 @@ drwxr-xr-x root/root    usr/lib/cmake/SDL2_image/
 -rw-r--r-- root/root    usr/lib/cmake/SDL2_image/SDL2_imageConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/SDL2_image/SDL2_imageConfigVersion.cmake
 lrwxrwxrwx root/root    usr/lib/libSDL2_image-2.0.so -> libSDL2_image-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libSDL2_image-2.0.so.0 -> libSDL2_image-2.0.so.0.800.8
--rwxr-xr-x root/root    usr/lib/libSDL2_image-2.0.so.0.800.8
+lrwxrwxrwx root/root    usr/lib/libSDL2_image-2.0.so.0 -> libSDL2_image-2.0.so.0.800.10
+-rwxr-xr-x root/root    usr/lib/libSDL2_image-2.0.so.0.800.10
 lrwxrwxrwx root/root    usr/lib/libSDL2_image.so -> libSDL2_image-2.0.so.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/SDL2_image.pc
