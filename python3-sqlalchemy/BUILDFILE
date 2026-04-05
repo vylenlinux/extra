@@ -1,15 +1,21 @@
-description="Python SQL toolkit and Object Relational Mapper "
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Python SQL toolkit and Object Relational Mapper"
 homepage="https://www.sqlalchemy.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-sqlalchemy
-version=2.0.48
+version=2.0.49
 release=1
-source="$name-$version.tar.gz::https://pypi.org/packages/source/s/sqlalchemy/sqlalchemy-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.org/packages/source/s/sqlalchemy/sqlalchemy-${version}.tar.gz"
 
 build() {
-	cd sqlalchemy-$version
-	python3 setup.py build
-	python3 setup.py install --root="${PKG}" --skip-build
-}
+    # shellcheck disable=SC2164
+    cd "sqlalchemy-${version}"
+    python3 setup.py build
 
+    python3 setup.py install \
+        --root="${PKG}" \
+        --skip-build
+}
