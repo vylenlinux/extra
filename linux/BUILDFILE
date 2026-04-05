@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=linux
 version=6.19.11
-release=1
+release=2
 
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz
     x86_64-dotconfig"

@@ -1,4 +1,4 @@
-linux-6.19.11-1
+linux-6.19.11-2
 drwxr-xr-x root/root    boot/
 -rw-r--r-- root/root    boot/config-linux
 -rw-r--r-- root/root    boot/vmlinuz-linux
@@ -3525,6 +3525,9 @@ drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/compa
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/compat-i915-headers/soc/
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/display/
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/display/ext/
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/generated/
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/i915-display/
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/i915-soc/
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/instructions/
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/regs/
 drwxrwxr-x root/root    lib/modules/6.19.11-linux/build/drivers/gpu/drm/xe/tests/
@@ -9552,6 +9555,7 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/include/config/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVFREQ_GOV_USERSPACE
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVFREQ_THERMAL
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVICE_MIGRATION
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVICE_PRIVATE
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVMEM
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVPORT
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DEVTMPFS
@@ -9663,6 +9667,7 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/include/config/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GEM_SHMEM_HELPER
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GM12U320
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GMA500
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GPUSVM
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GPUVM
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_GUD
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_I2C_NXP_TDA998X
@@ -9720,8 +9725,22 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/include/config/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_VKMS
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_VMWGFX
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_VRAM_HELPER
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XEN
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XEN_FRONTEND
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_DISPLAY
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_DP_TUNNEL
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_ENABLE_SCHEDTIMEOUT_LIMIT
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_FORCE_PROBE
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_GPUSVM
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_JOB_TIMEOUT_MAX
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_JOB_TIMEOUT_MIN
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_PAGEMAP
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_PREEMPT_TIMEOUT
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_PREEMPT_TIMEOUT_MAX
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_PREEMPT_TIMEOUT_MIN
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_TIMESLICE_MAX
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DRM_XE_TIMESLICE_MIN
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DS1682
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DS1803
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/DS4424
@@ -10275,6 +10294,7 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/include/config/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GENKSYMS
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GENWQE
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GENWQE_PLATFORM_ERROR_RECOVERY
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GET_FREE_REGION
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GFS2_FS
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GFS2_FS_LOCKING_DLM
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/GIGABYTE_WMI
@@ -10693,6 +10713,7 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/build/include/config/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HP_ILO
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HP_WATCHDOG
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HSA_AMD
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HSA_AMD_SVM
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HSI
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HSI_BOARDINFO
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/build/include/config/HSI_CHAR
@@ -25522,6 +25543,7 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/display
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_buddy.ko
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_dma_helper.ko
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_exec.ko
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_gpusvm_helper.ko
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_gpuvm.ko
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_kms_helper.ko
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/drm_mipi_dbi.ko
@@ -25581,6 +25603,8 @@ drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/vkms/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/vkms/vkms.ko
 drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/vmwgfx/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/vmwgfx/vmwgfx.ko
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/xe/
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/xe/xe.ko
 drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/xen/
 -rw-r--r-- root/root    lib/modules/6.19.11-linux/kernel/drivers/gpu/drm/xen/drm_xen_front.ko
 drwxr-xr-x root/root    lib/modules/6.19.11-linux/kernel/drivers/greybus/
