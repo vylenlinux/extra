@@ -1,4 +1,4 @@
-# /etc/services, created 2026-03-26T17:46:05+0100
+# /etc/services, created 2026-04-05T14:43:38+0000
 # Source: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xml
 tcpmux              1/tcp
 tcpmux              1/udp
@@ -8528,6 +8528,8 @@ hacl-poll        5315/udp
 hpbladems        5316/tcp
 hpdevms          5317/tcp
 pkix-cmc         5318/tcp
+roughtime        5319/tcp
+roughtime        5319/udp
 bsfserver-zn     5320/tcp
 bsfsvr-zn-ssl    5321/tcp
 kfserver         5343/tcp
