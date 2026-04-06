@@ -1,27 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="PCI bus configuration space access library and tools"
 homepage="https://mj.ucw.cz/sw/pciutils/"
 maintainer="Vylen Linux Team"
 
 name=pciutils
-version=3.14.0
+version=3.15.0
 release=1
-source="https://git.kernel.org/pub/scm/utils/$name/$name.git/snapshot/$name-$version.tar.gz"
+source="https://git.kernel.org/pub/scm/utils/${name}/${name}.git/snapshot/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	make OPT="${CFLAGS} -fPIC -DPIC" \
-	     PREFIX=/usr                \
-	     SHAREDIR=/usr/share/hwdata \
-	     MANDIR=/usr/share/man	\
-	     SHARED=yes
+    make OPT="${CFLAGS} -fPIC -DPIC" \
+        PREFIX=/usr \
+        SHAREDIR=/usr/share/hwdata \
+        MANDIR=/usr/share/man \
+        SHARED=yes
 
-	make PREFIX=/usr                \
-	     SHAREDIR=/usr/share/hwdata \
-	     MANDIR=/usr/share/man	\
-	     SHARED=yes                 \
-	     DESTDIR=$PKG		\
-	     install install-lib
+    make PREFIX=/usr \
+        SHAREDIR=/usr/share/hwdata \
+        MANDIR=/usr/share/man \
+        SHARED=yes \
+        DESTDIR="${PKG}" \
+        install install-lib
 
-	chmod -v 755 $PKG/usr/lib/libpci.so
+    chmod -v 755 "${PKG}/usr/lib/libpci.so"
 }
