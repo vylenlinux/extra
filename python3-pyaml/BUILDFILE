@@ -6,7 +6,7 @@ homepage="https://github.com/mk-fg/pretty-yaml"
 maintainer="Vylen Linux Team"
 
 name=python3-pyaml
-version=25.1.0
+version=26.2.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mk-fg/pretty-yaml/archive/refs/tags/${version}.tar.gz"
 
@@ -14,7 +14,10 @@ build() {
     # shellcheck disable=SC2164
     cd "pretty-yaml-${version}"
 
-    python3 -m build --wheel --no-isolation
+    python3 -m build \
+        --wheel \
+        --no-isolation
+
     python3 -m installer --destdir="${PKG}" dist/*.whl
 
     python_version=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
