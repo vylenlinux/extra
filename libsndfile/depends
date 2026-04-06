@@ -2,3 +2,4 @@ cmake
 flac
 libvorbis
 alsa-lib
+opus
