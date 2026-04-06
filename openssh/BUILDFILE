@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=openssh
 version=10.3p1
-release=1
+release=2
 
 source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz
     run.sshd"
