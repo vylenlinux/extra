@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=util-linux
 version=2.42
-release=2
+release=3
 source="https://www.kernel.org/pub/linux/utils/${name}/v${version}/${name}-${version}.tar.gz"
 
 build() {
@@ -28,6 +28,7 @@ build() {
         -Dbuild-newgrp=disabled \
         -Dbuild-bfs=disabled \
         -Dbuild-minix=disabled \
+        -Dbuild-line=disabled \
         -Dsystemd=disabled
 
     meson compile -C build -j "${JOBS:-1}"

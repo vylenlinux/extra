@@ -1,4 +1,4 @@
-util-linux-2.42-2
+util-linux-2.42-3
 drwxr-xr-x root/root    bin/
 -rwxr-xr-x root/root    bin/dmesg
 -rwxr-xr-x root/root    bin/findmnt
@@ -75,7 +75,6 @@ lrwxrwxrwx root/root    usr/bin/i386 -> setarch
 -rwxr-xr-x root/root    usr/bin/last
 lrwxrwxrwx root/root    usr/bin/lastb -> last
 -rwxr-xr-x root/root    usr/bin/lastlog2
--rwxr-xr-x root/root    usr/bin/line
 lrwxrwxrwx root/root    usr/bin/linux32 -> setarch
 lrwxrwxrwx root/root    usr/bin/linux64 -> setarch
 -rwxr-xr-x root/root    usr/bin/logger
