@@ -1,14 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library to create Wayland desktop components using the Layer Shell protocol"
 homepage="https://github.com/wmww/gtk-layer-shell"
 maintainer="Vylen Linux Team"
 
 name=gtk-layer-shell
-version=0.10.0
+version=0.10.1
 release=1
-source="https://github.com/wmww/gtk-layer-shell/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/wmww/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
