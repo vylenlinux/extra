@@ -1,5 +1,0 @@
-cmake
-qt6-base
-qt6-tools
-sqlite
-libxkbcommon
