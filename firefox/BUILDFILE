@@ -6,7 +6,7 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team"
 
 name=firefox
-version=149.0
+version=149.0.2
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
@@ -132,13 +132,13 @@ pref("browser.shell.checkDefaultBrowser", false);
 pref("extensions.autoDisableScopes", 11);
 END
   
-	# distribution
-	distini="${PKG}/usr/lib/${name}/distribution/distribution.ini"
+    # distribution
+    distini="${PKG}/usr/lib/${name}/distribution/distribution.ini"
 
     install -Dvm644 /dev/stdin "${distini}" <<END
 [Global]
 id=vylenlinux
-version=148.0.2
+version=${version}
 about=Mozilla Firefox for Vylen Linux
 
 [Preferences]
