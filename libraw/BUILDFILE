@@ -1,24 +1,30 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library for reading RAW files obtained from digital photo cameras"
 homepage="https://www.libraw.org/"
 maintainer="Vylen Linux Team"
 
 name=libraw
-version=0.22.0
+version=0.22.1
 release=1
-source="$name-$version.tar.gz::https://www.libraw.org/data/LibRaw-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 
 build() {
-	cd LibRaw-$version
+    # shellcheck disable=SC2164
+    cd "LibRaw-${version}"
+    autoreconf -fiv
 
-	autoreconf -fiv
-	./configure --prefix=/usr    \
-	            --enable-jpeg    \
-	            --enable-jasper  \
-	            --enable-lcms    \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-jpeg \
+        --enable-jasper \
+        --enable-lcms \
+        --disable-static
 
-	rm -r $PKG/usr/share
+    make
+    make DESTDIR="${PKG}" install
+
+    # shellcheck disable=SC2115
+    rm -r "${PKG}/usr/share"
 }
-
