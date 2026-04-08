@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Pico editor clone with enhancements"
+homepage="https://www.nano-editor.org/"
+maintainer="Vylen Linux Team"
+
+name=nano
+version=8.7.1
+release=1
+
+source="https://www.nano-editor.org/dist/v${version%%.*}/${name}-${version}.tar.xz"
+backup="etc/nanorc"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --enable-utf8 \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+
+    install -v -Dm644 doc/sample.nanorc "${PKG}/etc/nanorc"
+}
