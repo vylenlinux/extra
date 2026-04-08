@@ -6,7 +6,7 @@ homepage="https://search.cpan.org/dist/XML-Parser/"
 maintainer="Vylen Linux Team"
 
 name=perl-xml-parser
-version=2.56
+version=2.57
 release=1
 source="${name}-${version}.tar.gz::http://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-${version}.tar.gz"
 
