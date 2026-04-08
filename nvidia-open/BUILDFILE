@@ -94,7 +94,7 @@ build() {
     symlink_lib /usr/lib/libnvidia-ptxjitcompiler.so
 
     # OpenCL libraries and config
-    install_lib libOpenCL.so.1.0.0
+    # install_lib libOpenCL.so.1.0.0
     install_lib "libnvidia-opencl.so.${version}"
     symlink_lib /usr/lib/libnvidia-opencl.so.1
     symlink_lib /usr/lib/libnvidia-opencl.so

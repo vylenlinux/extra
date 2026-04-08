@@ -15,13 +15,13 @@ drwxr-xr-x root/root    lib/firmware/nvidia/595.58.03/
 -rw-r--r-- root/root    lib/firmware/nvidia/595.58.03/gsp_ga10x.bin
 -rw-r--r-- root/root    lib/firmware/nvidia/595.58.03/gsp_tu10x.bin
 drwxr-xr-x root/root    lib/modules/
-drwxr-xr-x root/root    lib/modules/6.19.10-linux/
-drwxr-xr-x root/root    lib/modules/6.19.10-linux/extra/
--rw-r--r-- root/root    lib/modules/6.19.10-linux/extra/nvidia-drm.ko
--rw-r--r-- root/root    lib/modules/6.19.10-linux/extra/nvidia-modeset.ko
--rw-r--r-- root/root    lib/modules/6.19.10-linux/extra/nvidia-peermem.ko
--rw-r--r-- root/root    lib/modules/6.19.10-linux/extra/nvidia-uvm.ko
--rw-r--r-- root/root    lib/modules/6.19.10-linux/extra/nvidia.ko
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/
+drwxr-xr-x root/root    lib/modules/6.19.11-linux/extra/
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/extra/nvidia-drm.ko
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/extra/nvidia-modeset.ko
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/extra/nvidia-peermem.ko
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/extra/nvidia-uvm.ko
+-rw-r--r-- root/root    lib/modules/6.19.11-linux/extra/nvidia.ko
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/nvidia-cuda-mps-control
@@ -44,7 +44,6 @@ lrwxrwxrwx root/root    usr/lib/libGLESv2_nvidia.so.2 -> /usr/lib/libGLESv2_nvid
 -rwxr-xr-x root/root    usr/lib/libGLESv2_nvidia.so.595.58.03
 lrwxrwxrwx root/root    usr/lib/libGLX_nvidia.so.0 -> /usr/lib/libGLX_nvidia.so.595.58.03
 -rwxr-xr-x root/root    usr/lib/libGLX_nvidia.so.595.58.03
--rwxr-xr-x root/root    usr/lib/libOpenCL.so.1.0.0
 lrwxrwxrwx root/root    usr/lib/libcuda.so -> /usr/lib/libcuda.so.595.58.03
 lrwxrwxrwx root/root    usr/lib/libcuda.so.1 -> /usr/lib/libcuda.so.595.58.03
 -rwxr-xr-x root/root    usr/lib/libcuda.so.595.58.03
