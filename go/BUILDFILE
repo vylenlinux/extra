@@ -1,47 +1,45 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="The Go Programming Language"
 homepage="https://golang.org/"
 maintainer="Vylen Linux Team"
 
 name=go
-version=1.26.1
+version=1.26.2
 release=1
+
+source="${name}-${version}.src.tar.gz::https://golang.org/dl/go${version}.src.tar.gz
+    ${name}-${version}.linux-amd64.tar.gz::https://golang.org/dl/go${version}.linux-amd64.tar.gz"
+
 noextract="${name}-${version}.linux-amd64.tar.gz"
-source="$name-${version}.src.tar.gz::https://golang.org/dl/go${version}.src.tar.gz 
-	${name}-${version}.linux-amd64.tar.gz::https://golang.org/dl/go${version}.linux-amd64.tar.gz"
+
 unset LC_ALL
 NO_STRIP=yes
 
-bsdtar() {
-	tar $@
-}
-
 build() {
+    install -d "${name}-${version}"
+    tar -xf "${name}-${version}.linux-amd64.tar.gz" -C "${name}-${version}" --strip-components=1
 
-	install -d $name-${version}
+    export GOCACHE="${SRC}/${name}-build"
+    export GOROOT_BOOTSTRAP="${SRC}/${name}-${version}"
+    export GOROOT_FINAL="/usr/lib/${name}"
+    export GOARCH=amd64
+    export GOOS=linux
 
-	tar -xf $SOURCE_DIR/$name-${version}.linux-amd64.tar.gz \
-	-C $SRC/$name-${version} --strip-components=1
+    # shellcheck disable=SC2164
+    cd "${name}/src"
+    ./make.bash
 
-	tar -xf $SOURCE_DIR/$name-${version}.src.tar.gz \
-        -C $SRC
+    install -d "${PKG}/usr/lib"
+    mv "${SRC}/${name}" "${PKG}/usr/lib/"
 
-	export GOCACHE=$SRC/go-build
-	export GOROOT_BOOTSTRAP=$SRC/$name-${version}
-	export GOROOT_FINAL=/usr/lib/go
-	export GOARCH=amd64
-	export GOOS=linux
-	
-	cd go/src
-	./make.bash
+    install -d "${PKG}/usr/bin"
+    ln -s /usr/lib/go/bin/go "${PKG}/usr/bin/"
+    ln -s /usr/lib/go/bin/gofmt "${PKG}/usr/bin/"
 
-	install -d $PKG/usr/lib
-	mv $SRC/go $PKG/usr/lib/
+    rm -rf "${SRC}/go/pkg/obj/go-build"/*
+    find "${PKG}" \( -name "README*" -o -name "AUTHORS" -o -name "TODO" \) -delete
 
-	install -d $PKG/usr/bin
-	ln -s /usr/lib/go/bin/go $PKG/usr/bin/
-	ln -s /usr/lib/go/bin/gofmt $PKG/usr/bin/
-
-	rm -rf $SRC/go/pkg/obj/go-build/*
-	find $PKG \( -name "README*" -o -name "AUTHORS" -o -name "TODO" \) -delete
-	rm $PKG/usr/lib/go/src/*.bat
+    rm "${PKG}/usr/lib/go/src"/*.bat
 }
