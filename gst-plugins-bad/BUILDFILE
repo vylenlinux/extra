@@ -1,37 +1,41 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Set of plug-ins that aren't up to par compared to the rest"
 homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=gst-plugins-bad
-version=1.28.1
+version=1.28.2
 release=1
-source="https://gstreamer.freedesktop.org/src/gst-plugins-bad/$name-$version.tar.xz"
+source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
 build() {
-	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
 
-	vylen-meson $name-$version build \
-		-Ddoc=disabled \
-		-Dnls=disabled \
-		-Ddirectfb=disabled \
-		-Dflite=disabled \
-		-Dgsm=disabled \
-		-Diqa=disabled \
-		-Dmagicleap=disabled \
-		-Dmsdk=disabled \
-		-Dopenmpt=disabled \
-		-Dopenni2=disabled \
-		-Dopensles=disabled \
-		-Dtinyalsa=disabled \
-		-Dvoaacenc=disabled \
-		-Dvoamrwbenc=disabled \
-		-Dwasapi2=disabled \
-		-Dwasapi=disabled \
-		-Dextra-checks=disabled \
-		-Dgobject-cast-checks=disabled \
-		-Dpackage-name="GStreamer Bad Plugins $version (Vylen Linux)" \
-		-Dgpl=enabled \
-		-Dintrospection=enabled
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Ddoc=disabled \
+        -Dnls=disabled \
+        -Ddirectfb=disabled \
+        -Dflite=disabled \
+        -Dgsm=disabled \
+        -Diqa=disabled \
+        -Dmagicleap=disabled \
+        -Dmsdk=disabled \
+        -Dopenmpt=disabled \
+        -Dopenni2=disabled \
+        -Dopensles=disabled \
+        -Dtinyalsa=disabled \
+        -Dvoaacenc=disabled \
+        -Dvoamrwbenc=disabled \
+        -Dwasapi2=disabled \
+        -Dwasapi=disabled \
+        -Dextra-checks=disabled \
+        -Dgobject-cast-checks=disabled \
+        -Dpackage-name="GStreamer Bad Plugins ${version} (Vylen Linux)" \
+        -Dgpl=enabled \
+        -Dintrospection=enabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

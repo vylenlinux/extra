@@ -1,21 +1,25 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Well-groomed and well-maintained collection of GStreamer plug-ins and elements"
 homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=gst-plugins-base
-version=1.28.1
+version=1.28.2
 release=1
-source="http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
+source="http://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build \
-		-Dalsa=enabled \
-		-Dintrospection=enabled \
-		-Dtests=disabled \
-		-Ddoc=disabled \
-		-Dlibvisual=disabled \
-		-Dtremor=disabled \
-		-Dpackage-name="GStreamer Base Plugins $version (Vylen Linux)"
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dalsa=enabled \
+        -Dintrospection=enabled \
+        -Dtests=disabled \
+        -Ddoc=disabled \
+        -Dlibvisual=disabled \
+        -Dtremor=disabled \
+        -Dpackage-name="GStreamer Base Plugins ${version} (Vylen Linux)"
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
