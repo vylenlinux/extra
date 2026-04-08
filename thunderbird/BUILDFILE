@@ -6,10 +6,10 @@ homepage="https://www.thunderbird.net/"
 maintainer="Vylen Linux Team"
 
 name=thunderbird
-version=149.0.1
+version=149.0.2
 release=1
 
-source="https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
+source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
     0024-bgo-969412-glibc-2.43.patch"
 
 build() {
