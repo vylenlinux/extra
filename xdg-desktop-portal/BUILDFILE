@@ -6,11 +6,19 @@ homepage="https://github.com/flatpak/xdg-desktop-portal"
 maintainer="Vylen Linux Team"
 
 name=xdg-desktop-portal
-version=1.20.3
-release=2
-source="https://github.com/flatpak/xdg-desktop-portal/archive/${version}/${name}-${version}.tar.gz"
+version=1.20.4
+release=1
+
+commit=ccea836b799256420788c463a638ded0636b1632
+
+source="https://github.com/flatpak/xdg-desktop-portal/archive/${version}/${name}-${version}.tar.gz
+    libglnx.tar.gz::https://gitlab.gnome.org/GNOME/libglnx/-/archive/${commit}.tar.gz"
 
 build() {
+    # Inject libglnx
+    mv "libglnx-${commit}" libglnx
+    export MESON_PACKAGE_CACHE_DIR="${SRC}"
+
     vylen-meson "${name}-${version}" build \
         --libexecdir="lib/${name}" \
         -Dtests=disabled \
