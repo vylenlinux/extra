@@ -1,11 +1,11 @@
 #!/bin/sh
 
-PYVERSION=$(awk -F'[=.]' '/^version=/{print $2"."$3}' spkgbuild)
+PYVERSION=$(awk -F'[=.]' '/^version=/{print $2"."$3}' BUILDFILE)
 
 # Rebuild with a mayor version upgrade
-if [ "$PYVERSION" != "3.14" ]; then
-	  PYREBUILD="python3-setuptools
-	      meson
+if [ "${PYVERSION}" != "3.14" ]; then
+    PYREBUILD="python3-setuptools
+        meson
         python3-gpep517
         python3-installer
         python3-flit-core
@@ -22,7 +22,7 @@ if [ "$PYVERSION" != "3.14" ]; then
         python3-pygments
         python3-markupsafe"
 
-	  for p in $PYREBUILD; do
-		    emerald isinstalled "$p" && emerald install -fr "$p"
-	  done
+    for p in $PYREBUILD; do
+        emerald isinstalled "${p}" && emerald install -fr "${p}"
+    done
 fi
