@@ -1,14 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Lightweight in-process concurrent programming "
 homepage="https://pypi.org/project/greenlet/"
 maintainer="Vylen Linux Team"
 
 name=python3-greenlet
-version=3.3.2
+version=3.4.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-${version}.tar.gz"
 
 build() {
-	cd greenlet-$version
-	python3 setup.py build
-	python3 setup.py install -O1 --root="$PKG" --skip-build
+    # shellcheck disable=SC2164
+    cd "greenlet-${version}"
+    python3 setup.py build
+
+    python3 setup.py install -O1 \
+        --root="${PKG}" \
+        --skip-build
 }
