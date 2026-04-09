@@ -6,13 +6,13 @@ homepage="https://archlinux.org/packages/extra/x86_64/libisofs/"
 maintainer="Vylen Linux Team"
 
 name=libisofs
-version=1.5.8
+version=1.5.8.pl01
 release=1
 source="https://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}-${version%.pl*}"
     ./bootstrap
 
     ./configure \
