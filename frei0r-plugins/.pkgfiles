@@ -1,4 +1,4 @@
-frei0r-plugins-2.5.6-1
+frei0r-plugins-3.0.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/frei0r.h
@@ -70,8 +70,6 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/emboss.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/equaliz0r.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/euclid_eraser.so
--rwxr-xr-x root/root    usr/lib/frei0r-1/facebl0r.so
--rwxr-xr-x root/root    usr/lib/frei0r-1/facedetect.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/filmgrain.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/flippo.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/gamma.so
@@ -170,6 +168,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/vectorscope.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/vertigo.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/vignette.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/water.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/xfade0r.so
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/frei0r.pc
