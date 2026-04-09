@@ -1,23 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Simple powerful testing with Python"
 homepage="https://pytest.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-pytest
-version=9.0.2
+version=9.0.3
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/p/pytest/pytest-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pytest/pytest-${version}.tar.gz"
 
 build() {
-	cd pytest-$version
-	sed -e "/^\[metadata\]/a version = $version" -i setup.cfg
-		gpep517 build-wheel \
-			--wheel-dir .dist \
-			--output-fd 3 3>&1 >&2
+    # shellcheck disable=SC2164
+    cd "pytest-${version}"
+    sed -e "/^\[metadata\]/a version = ${version}" -i setup.cfg
 
-		python3 -m installer -d "$PKG" \
-			.dist/pytest*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-
-
-
+    python3 -m installer -d "${PKG}" .dist/pytest*.whl
 }
