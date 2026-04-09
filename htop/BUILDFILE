@@ -1,17 +1,25 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Interactive process viewer"
 homepage="https://htop.dev/"
 maintainer="Vylen Linux Team"
 
 name=htop
-version=3.4.1
+version=3.5.0
 release=1
-source="https://github.com/htop-dev/htop/archive/$version/htop-$version.tar.gz"
+source="https://github.com/htop-dev/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./autogen.sh
 
-	./autogen.sh
-	./configure --prefix=/usr --disable-nls --mandir=/usr/share/man
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --mandir=/usr/share/man
+
+    make
+    make DESTDIR="${PKG}" install
 }
