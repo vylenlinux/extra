@@ -1,18 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A program for creating, destroying, resizing, checking and copying partitions"
 homepage="https://www.gnu.org/software/parted/parted.html"
 maintainer="Vylen Linux Team"
 
 name=parted
-version=3.6
+version=3.7
 release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
-	parted-c23.patch"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	patch -Np1 -i $SRC/parted-c23.patch
-	./configure --prefix=/usr --disable-static --disable-nls
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
 }
