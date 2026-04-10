@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Operating system and container binary deployment and upgrades"
+maintainer="Vylen Linux Team"
+homepage="https://ostreedev.github.io/ostree/"
+
+name=ostree
+version=2025.7
+release=1
+source="https://github.com/ostreedev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "lib${name}-${version}"
+
+    ./configure --prefix=/usr \
+        --with-builtin-grub2-mkconfig \
+        --with-ed25519-libsodium \
+        --with-openssl \
+        --with-curl \
+        --disable-man
+
+    make
+    make DESTDIR="${PKG}" install
+}

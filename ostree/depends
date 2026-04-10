@@ -1,0 +1,7 @@
+curl
+openssl
+gpgme
+libsodium
+glib
+libsoup3
+fuse3
