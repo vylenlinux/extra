@@ -6,23 +6,23 @@ homepage="https://github.com/artemsen/swayimg"
 maintainer="Vylen Linux Team"
 
 name=swayimg
-version=5.1
+version=5.2
 release=1
 source="https://github.com/artemsen/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build \
-        -D jpeg=enabled \
-        -D png=enabled \
-        -D heif="$(emerald isinstalled libheif && printf "enabled" || printf "disabled")" \
-        -D jxl="$(emerald isinstalled libjxl && printf "enabled" || printf "disabled")" \
-        -D svg="$(emerald isinstalled librsvg && printf "enabled" || printf "disabled")" \
-        -D webp="$(emerald isinstalled libwebp && printf "enabled" || printf "disabled")" \
-        -D exr="$(emerald isinstalled openxr && printf "enabled" || printf "disabled")" \
-        -D tiff="$(emerald isinstalled libtiff && printf "enabled" || printf "disabled")" \
-        -D bash="$(emerald isinstalled bash-completion && printf "enabled" || printf "disabled")" \
-        -D zsh="$(emerald isinstalled zsh && printf "enabled" || printf "disabled")" \
-        -D version="${version}"
+        -Djpeg=enabled \
+        -Dpng=enabled \
+        -Dheif="$(emerald isinstalled libheif && printf "enabled" || printf "disabled")" \
+        -Djxl="$(emerald isinstalled libjxl && printf "enabled" || printf "disabled")" \
+        -Dsvg="$(emerald isinstalled librsvg && printf "enabled" || printf "disabled")" \
+        -Dwebp="$(emerald isinstalled libwebp && printf "enabled" || printf "disabled")" \
+        -Dexr="$(emerald isinstalled openxr && printf "enabled" || printf "disabled")" \
+        -Dtiff="$(emerald isinstalled libtiff && printf "enabled" || printf "disabled")" \
+        -Dbash="$(emerald isinstalled bash-completion && printf "enabled" || printf "disabled")" \
+        -Dzsh="$(emerald isinstalled zsh && printf "enabled" || printf "disabled")" \
+        -Dversion="${version}"
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
