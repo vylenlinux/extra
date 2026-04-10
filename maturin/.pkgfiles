@@ -1,18 +1,18 @@
-maturin-1.12.6-1
+maturin-1.13.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/maturin
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/licenses/license-apache
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/licenses/license-mit
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.12.6.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/licenses/license-apache
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/licenses/license-mit
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin-1.13.1.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/maturin/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/maturin/__main__.py
