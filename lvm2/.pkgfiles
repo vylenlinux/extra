@@ -1,8 +1,8 @@
 lvm2-2.03.39-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/lvm/
--rw-r--r-- root/root    etc/lvm/lvm.conf.spkgnew
--rw-r--r-- root/root    etc/lvm/lvmlocal.conf.spkgnew
+-rw-r--r-- root/root    etc/lvm/lvm.conf.epkgnew
+-rw-r--r-- root/root    etc/lvm/lvmlocal.conf.epkgnew
 drwxr-xr-x root/root    etc/lvm/profile/
 -r--r--r-- root/root    etc/lvm/profile/cache-mq.profile
 -r--r--r-- root/root    etc/lvm/profile/cache-smq.profile
