@@ -6,8 +6,8 @@ homepage="https://www.freedesktop.org/wiki/Software/xdg-user-dirs"
 maintainer="Vylen Linux Team"
 
 name=xdg-user-dirs
-version=0.19
-release=2
+version=0.20
+release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xdg/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
