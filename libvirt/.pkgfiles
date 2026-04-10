@@ -4,7 +4,7 @@ drwxr-xr-x root/root    etc/libvirt/
 -rw-r--r-- root/root    etc/libvirt/ch.conf
 -rw-r--r-- root/root    etc/libvirt/libvirt-admin.conf
 -rw-r--r-- root/root    etc/libvirt/libvirt.conf
--rw-r--r-- root/root    etc/libvirt/libvirtd.conf.spkgnew
+-rw-r--r-- root/root    etc/libvirt/libvirtd.conf.epkgnew
 -rw-r--r-- root/root    etc/libvirt/lxc.conf
 drwxr-xr-x root/root    etc/libvirt/lxc/
 drwxr-xr-x root/root    etc/libvirt/lxc/autostart/
@@ -35,7 +35,7 @@ drwxr-xr-x root/root    etc/libvirt/nwfilter/
 -rw-r--r-- root/root    etc/libvirt/nwfilter/qemu-announce-self-rarp.xml
 -rw-r--r-- root/root    etc/libvirt/nwfilter/qemu-announce-self.xml
 -rw-r--r-- root/root    etc/libvirt/qemu-lockd.conf
--rw-r--r-- root/root    etc/libvirt/qemu.conf.spkgnew
+-rw-r--r-- root/root    etc/libvirt/qemu.conf.epkgnew
 drwxr-xr-x root/root    etc/libvirt/qemu/
 drwxr-xr-x root/root    etc/libvirt/qemu/autostart/
 drwxr-xr-x root/root    etc/libvirt/qemu/networks/
