@@ -16,4 +16,4 @@ unifdef
 which
 wpebackend-fdo
 xdg-dbus-proxy
-gtk4
+gtk3

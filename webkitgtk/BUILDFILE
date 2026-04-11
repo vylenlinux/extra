@@ -7,17 +7,25 @@ maintainer="Vylen Linux Team"
 
 name=webkitgtk
 version=2.52.1
-release=1
-source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
+release=2
+
+source="https://webkitgtk.org/releases/${name}-${version}.tar.xz
+    fix-build.patch"
 
 build() {
     # failed build with ccache, remove reom path
     PATH="$(echo "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
 
-    # fix build ICU 76
-    sed '/U_SHOW_CPLUSPLUS_API/a#define U_SHOW_CPLUSPLUS_HEADER_API 0' -i "${name}-${version}/Source/WTF/wtf/Platform.h"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-    cmake -S "${name}-${version}" -B build -G Ninja \
+    # fix build ICU 76
+    sed '/U_SHOW_CPLUSPLUS_API/a#define U_SHOW_CPLUSPLUS_HEADER_API 0' -i Source/WTF/wtf/Platform.h
+
+    # Fix build of GTK 3 port
+    patch -Np1 -i "${SRC}/fix-build.patch"
+
+    cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
@@ -30,6 +38,7 @@ build() {
         -DENABLE_GEOLOCATION=OFF \
         -DENABLE_MINIBROWSER=ON \
         -DUSE_AVIF=OFF \
+        -DUSE_GTK4=OFF \
         -DUSE_LIBBACKTRACE=OFF \
         -DUSE_LIBHYPHEN=OFF \
         -DUSE_SOUP2=OFF \
