@@ -1,14 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A library that encapsulates the logic for complex text layout"
 homepage="https://github.com/HOST-Oman/libraqm/"
 maintainer="Vylen Linux Team"
 
 name=libraqm
-version=0.10.4
+version=0.10.5
 release=1
-source="https://github.com/HOST-Oman/libraqm/releases/download/v$version/raqm-$version.tar.xz"
+source="https://github.com/HOST-Oman/${name}/releases/download/v${version}/raqm-${version}.tar.xz"
 
 build() {
-	vylen-meson raqm-$version build -Ddocs=false
-	meson compile -C build
-	meson install -C build --destdir $PKG
+    vylen-meson "raqm-${version}" build -Ddocs=false
+    meson compile -C build
+    meson install -C build --destdir "${PKG}"
 }
