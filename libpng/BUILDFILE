@@ -7,12 +7,15 @@ maintainer="Vylen Linux Team"
 
 name=libpng
 version=1.6.57
-release=1
-source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz"
+release=2
+
+source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz
+    https://downloads.sourceforge.net/sourceforge/${name}-apng/${name}-${version}-apng.patch.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    gzip -cd $SRC/$name-$version-apng.patch.gz | patch -p1
 
     autoreconf -fiv
     ./configure --prefix=/usr --disable-static
