@@ -65,5 +65,5 @@ endif
 " End /etc/vimrc
 EOF
 
-	ln -sv vim "${PKG}/usr/bin/vi"
+    ln -sv vim "${PKG}/usr/bin/vi"
 }
