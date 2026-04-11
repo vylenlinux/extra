@@ -1,17 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Documentation tool for public library API"
 homepage="https://www.gtk.org/gtk-doc/"
 maintainer="Vylen Linux Team"
 
 name=gtk-doc
-version=1.36.0
+version=1.36.1
 release=1
-source="https://gitlab.gnome.org/GNOME/$name/-/archive/$version/$name-$version.tar.bz2"
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
+
 KEEP_DOC="yes"
 
 build() {
-	vylen-meson $name-$version build \
-		-Dyelp_manual=false \
-		-Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dyelp_manual=false \
+        -Dtests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
