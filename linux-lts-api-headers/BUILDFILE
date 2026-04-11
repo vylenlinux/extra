@@ -6,12 +6,12 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts-api-headers
-version=6.18.21
+version=6.18.22
 release=1
 source="https://www.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "linux-${version}"
 
     make mrproper

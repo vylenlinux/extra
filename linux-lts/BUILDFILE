@@ -6,8 +6,8 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts
-version=6.18.21
-release=2
+version=6.18.22
+release=1
 
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz
     x86_64-dotconfig"
@@ -83,7 +83,7 @@ build() {
         [ "${i}" = "objtool" ] || rm -fr "tools/${i}"
     done
 
-	# shellcheck disable=SC2045
+    # shellcheck disable=SC2045
     for i in $(ls tools/objtool); do
         [ "${i}" = "objtool" ] || rm -fr "tools/objtool/${i}"
     done
