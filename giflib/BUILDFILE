@@ -1,20 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Libraries for reading and writing GIFs as well as programs for converting and working with GIF files"
 homepage="https://giflib.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=giflib
-version=6.1.2
+version=6.1.3
 release=1
-source="https://downloads.sourceforge.net/giflib/$name-$version.tar.gz"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i -e '/^install: all /s/ install-doc//' Makefile
 
-	sed -i -e '/^install: all /s/ install-doc//' Makefile
+    make
+    make PREFIX="${PKG}/usr" install
 
-	make
-	make PREFIX=$PKG/usr install
-
-	install -vDm 640 doc/*.1 -t $PKG/usr/share/man/man1/
-	install -vDm 640 doc/*.7 -t $PKG/usr/share/man/man7/
+    install -vDm640 doc/*.1 -t "${PKG}/usr/share/man/man1/"
+    install -vDm640 doc/*.7 -t "${PKG}/usr/share/man/man7/"
 }
