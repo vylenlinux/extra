@@ -6,7 +6,7 @@ homepage="https://imagemagick.org/ "
 maintainer="Vylen Linux Team"
 
 name=imagemagick
-version=7.1.2.18
+version=7.1.2.19
 release=1
 
 vrsn="${version%.*}-${version##*.}"

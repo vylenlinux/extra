@@ -1,4 +1,4 @@
-imagemagick-7.1.2.18-1
+imagemagick-7.1.2.19-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/ImageMagick-7/
 -rw-r--r-- root/root    etc/ImageMagick-7/colors.xml
@@ -220,8 +220,6 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/debug.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/dib.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/dib.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/djvu.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/djvu.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/dng.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/dng.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/dot.la
