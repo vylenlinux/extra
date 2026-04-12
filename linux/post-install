@@ -1,13 +1,13 @@
 #!/bin/sh
 
-kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n")
+kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
 
 # removing other vylen kernel
 for i in /lib/modules/*; do
     [ -d "${i}" ] || continue
 
     case ${i##*/} in
-        "${kernver}") continue;;
+        "${kernver}") continue ;;
 
         *-linux)
             [ -d "${i}/build/include" ] && continue
