@@ -6,14 +6,14 @@ homepage="https://www.graphviz.org/"
 maintainer="Vylen Linux Team"
 
 name=graphviz
-version=14.1.4
+version=14.1.5
 release=1
-source="https://gitlab.com/graphviz/graphviz/-/archive/${version}/${name}-${version}.tar.bz2"
+source="https://gitlab.com/${name}/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
 build() {
-	# shellcheck disable=SC2164
-	cd "${name}-${version}"
-	./autogen.sh NOCONFIG
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./autogen.sh NOCONFIG
 
     ./configure \
         --prefix=/usr \
@@ -26,6 +26,8 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    mv -f "${PKG}/usr/lib64"/* "${PKG}/usr/lib/"
+    mv -f "${PKG}/usr/lib64"/* \
+        "${PKG}/usr/lib/"
+
     rm -rf "${PKG}/usr/lib64"
 }
