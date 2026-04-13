@@ -1,3 +1,3 @@
 7e51a7f43f4b5c075d354d0df31a3e97eeaefb5fa271d0189a999887a265bb64  0001-scripts-Fix-libressl-check.patch
-e2c9c6f902bbc1ad86ca6bcf137993820d81bd4267d2e20d1e3482d7b3f72816  linux-libre-6.19.11.tar.xz
-78a9d7a8ebccca29dcfb734dadde7e66a2021dccd1bb42eababf613bda0baf69  x86-64-gnu
+c2dd2c863a34c2fddc318c1cdcb50db64a99e133032d102be45f910c0bd91ee8  linux-libre-7.0.0.tar.xz
+f71a49996a03f49613146744ffc753548f9135e770fe688da8dbad5f5bd7731c  x86-64-gnu

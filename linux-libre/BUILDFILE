@@ -6,19 +6,17 @@ homepage="https://linux-libre.fsfla.org"
 maintainer="Vylen Linux Team"
 
 name=linux-libre
-version=6.19.11
+version=7.0.0
 release=1
 
 source="${name}-${version}.tar.xz::https://linux-libre.fsfla.org/pub/linux-libre/releases/${version%.0}-gnu/${name}-${version%.0}-gnu.tar.xz
-    x86-64-gnu
-    0001-scripts-Fix-libressl-check.patch"
+    x86-64-gnu"
 
 NO_STRIP=yes
 
 build() {
     # shellcheck disable=SC2164
     cd "${name%-*}-${version%.0}"
-    patch -Np1 -i "${SRC}/0001-scripts-Fix-libressl-check.patch"
 
     make mrproper
     [ -f "${SRC}/config" ] && cp "${SRC}/config" .config || cp "${SRC}/x86-64-gnu" .config
@@ -38,9 +36,8 @@ build() {
 
     mkdir -p "${PKG}/boot"
 
-    cp  arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
+    cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
     cp .config "${PKG}/boot/config-${name}"
-    # cp -iv System.map "${PKG}/boot/"
 
     make clean
     make prepare
