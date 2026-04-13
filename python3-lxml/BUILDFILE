@@ -6,7 +6,7 @@ homepage="https://lxml.de/"
 maintainer="Vylen Linux Team"
 
 name=python3-lxml
-version=6.0.3
+version=6.0.4
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/l/lxml/lxml-${version}.tar.gz"
 
