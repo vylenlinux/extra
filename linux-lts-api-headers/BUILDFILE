@@ -7,8 +7,8 @@ maintainer="Vylen Linux Team"
 
 name=linux-lts-api-headers
 version=6.18.22
-release=1
-source="https://www.kernel.org/pub/linux/kernel/v6.x/linux-${version}.tar.xz"
+release=2
+source="https://www.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
