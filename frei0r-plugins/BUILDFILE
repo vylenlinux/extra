@@ -6,7 +6,7 @@ homepage="https://frei0r.dyne.org/"
 maintainer="Vylen Linux Team"
 
 name=frei0r-plugins
-version=3.1.0
+version=3.1.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/dyne/frei0r/archive/v${version}.tar.gz"
 
@@ -14,7 +14,7 @@ build() {
     # Fix build with znver4 or newer
     export CFLAGS="${CFLAGS} -march=x86-64"
 
-    cmake  -S "frei0r-${version}" -B build -G Ninja \
+    cmake -S "frei0r-${version}" -B build -G Ninja \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
