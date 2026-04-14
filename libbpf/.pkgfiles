@@ -1,0 +1,24 @@
+libbpf-1.7.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/bpf/
+-rw-r--r-- root/root    usr/include/bpf/bpf.h
+-rw-r--r-- root/root    usr/include/bpf/bpf_core_read.h
+-rw-r--r-- root/root    usr/include/bpf/bpf_endian.h
+-rw-r--r-- root/root    usr/include/bpf/bpf_helper_defs.h
+-rw-r--r-- root/root    usr/include/bpf/bpf_helpers.h
+-rw-r--r-- root/root    usr/include/bpf/bpf_tracing.h
+-rw-r--r-- root/root    usr/include/bpf/btf.h
+-rw-r--r-- root/root    usr/include/bpf/libbpf.h
+-rw-r--r-- root/root    usr/include/bpf/libbpf_common.h
+-rw-r--r-- root/root    usr/include/bpf/libbpf_legacy.h
+-rw-r--r-- root/root    usr/include/bpf/libbpf_version.h
+-rw-r--r-- root/root    usr/include/bpf/skel_internal.h
+-rw-r--r-- root/root    usr/include/bpf/usdt.bpf.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libbpf.a
+lrwxrwxrwx root/root    usr/lib/libbpf.so -> libbpf.so.1
+lrwxrwxrwx root/root    usr/lib/libbpf.so.1 -> libbpf.so.1.7.0
+-rwxr-xr-x root/root    usr/lib/libbpf.so.1.7.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libbpf.pc
