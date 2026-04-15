@@ -1,16 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library to help create and query binary XML blobs"
 homepage="https://github.com/hughsie/libxmlb"
 maintainer="Vylen Linux Team"
 
 name=libxmlb
-version=0.3.25
+version=0.3.26
 release=1
-source="https://github.com/hughsie/libxmlb/releases/download/$version/$name-$version.tar.xz"
+source="https://github.com/hughsie/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
 build() {
-        vylen-meson $name-$version build \
-		-D gtkdoc=false \
-		-D tests=false 
-        meson compile -C build
-        DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dgtkdoc=false \
+        -Dtests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
