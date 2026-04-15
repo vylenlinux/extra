@@ -6,11 +6,9 @@ homepage="https://webkitgtk.org"
 maintainer="Vylen Linux Team"
 
 name=webkitgtk
-version=2.52.1
-release=2
-
-source="https://webkitgtk.org/releases/${name}-${version}.tar.xz
-    fix-build.patch"
+version=2.52.2
+release=1
+source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
     # failed build with ccache, remove reom path
@@ -21,9 +19,6 @@ build() {
 
     # fix build ICU 76
     sed '/U_SHOW_CPLUSPLUS_API/a#define U_SHOW_CPLUSPLUS_HEADER_API 0' -i Source/WTF/wtf/Platform.h
-
-    # Fix build of GTK 3 port
-    patch -Np1 -i "${SRC}/fix-build.patch"
 
     cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
