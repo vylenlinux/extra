@@ -1,18 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Collection of GSettings schemas for settings shared by various components of a GNOME Desktop"
 homepage="https://www.gnome.org/"
 maintainer="Vylen Linux Team"
 
 name=gsettings-desktop-schemas
-version=50.0
+version=50.1
 release=1
-source="https://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.xz"
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
+    sed -i -r 's:"(/system):"/org/gnome\1:g' "${name}-${version}/schemas"/*.in
 
-	sed -i -r 's:"(/system):"/org/gnome\1:g' $name-$version/schemas/*.in
-	vylen-meson $name-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	rm -r $PKG/usr/share/locale
+    rm -r "${PKG}/usr/share/locale"
 }
