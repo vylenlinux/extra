@@ -1,7 +1,6 @@
 glibc-2.43-1
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/ld.so.cache
--rw-r--r-- root/root    etc/ld.so.conf
 -rw-r--r-- root/root    etc/locales.epkgnew
 -rw-r--r-- root/root    etc/nscd.conf
 -rw-r--r-- root/root    etc/nsswitch.conf

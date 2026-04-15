@@ -11,8 +11,7 @@ release=1
 
 source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
     genlocales
-    nsswitch.conf
-    ld.so.conf"
+    nsswitch.conf"
 
 backup="etc/locales"
 
@@ -57,7 +56,6 @@ build() {
     install -d "${PKG}/usr/lib/locale"
 
     install -m644 ../nscd/nscd.conf \
-        "${SRC}/ld.so.conf" \
         "${SRC}/nsswitch.conf" \
         -t "${PKG}/etc/"
 
