@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Library for Emulated Input"
+homepage="https://libinput.pages.freedesktop.org/libei/"
+maintainer="Vylen Linux Team"
+
+name=libei
+version=1.5.0
+release=1
+source="https://gitlab.freedesktop.org/libinput/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        --prefix=/usr \
+        --libdir=lib \
+        -Dtests=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
