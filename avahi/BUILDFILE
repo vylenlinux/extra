@@ -1,51 +1,54 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite"
 homepage="https://www.avahi.org/"
 maintainer="Vylen Linux Team"
 
 name=avahi
-version=0.8
+version=0.9.rc4
 release=1
 
-source="https://github.com/lathiat/avahi/releases/download/v$version/$name-$version.tar.gz
-	avahi-0.8-ipv6_race_condition_fix-1.patch
-	0001-Fix-avahi-browse-Invalid-service-type.patch
+source="https://github.com/${name}/${name}/archive/refs/tags/v${version%.*}-${version##*.}.tar.gz
 	run.avahi-daemon"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version%.*}-${version##*.}"
+    NOCONFIGURE=1 ./autogen.sh
 
-	patch -Np1 -i $SRC/0001-Fix-avahi-browse-Invalid-service-type.patch
-	patch -Np1 -i $SRC/avahi-0.8-ipv6_race_condition_fix-1.patch
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --runstatedir=/run \
+        --with-distro=none \
+        --with-autoipd-user=avahi \
+        --with-autoipd-group=avahi \
+        --with-avahi-priv-access-group=wheel \
+        --enable-compat-libdns_sd \
+        --disable-gtk \
+        --disable-gtk3 \
+        --disable-qt3 \
+        --disable-qt4 \
+        --disable-qt5 \
+        --disable-python \
+        --disable-manpages \
+        --disable-static \
+        --disable-pygobject \
+        --disable-python-dbus \
+        --disable-mono \
+        --disable-mono-doc \
+        --disable-nls \
+        --disable-libsystemd \
+        --with-systemdsystemunitdir=no
 
-	NOCONFIGURE=1 ./autogen.sh
-	./configure --prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--runstatedir=/run \
-		--with-distro=none \
-		--with-autoipd-user=avahi \
-		--with-autoipd-group=avahi \
-		--with-avahi-priv-access-group=wheel \
-		--enable-compat-libdns_sd \
-		--disable-gtk \
-		--disable-gtk3 \
-		--disable-qt3 \
-		--disable-qt4 \
-		--disable-qt5 \
-		--disable-python \
-		--disable-static \
-		--disable-pygobject \
-		--disable-python-dbus \
-		--disable-mono \
-		--disable-mono-doc \
-		--disable-nls
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-	ln -s avahi-compat-libdns_sd/dns_sd.h $PKG/usr/include/dns_sd.h
+    ln -s avahi-compat-libdns_sd/dns_sd.h "${PKG}/usr/include/dns_sd.h"
+    rm -rf "${PKG}/run"
 
-	install -Dm755 $SRC/run.avahi-daemon $PKG/etc/sv/avahi-daemon/run
-	ln -s /run/runit/supervise.avahi-daemon $PKG/etc/sv/avahi-daemon/supervise
-
-	rm -fr $PKG/run
+    install -Dm755 "${SRC}/run.avahi-daemon" "${PKG}/etc/sv/avahi-daemon/run"
+    ln -s /run/runit/supervise.avahi-daemon "${PKG}/etc/sv/avahi-daemon/supervise"
 }
