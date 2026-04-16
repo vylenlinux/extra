@@ -2,7 +2,7 @@ meson-1.11.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/meson
--rwxr-xr-x root/root    usr/bin/venom-meson
+-rwxr-xr-x root/root    usr/bin/vylen-meson
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
