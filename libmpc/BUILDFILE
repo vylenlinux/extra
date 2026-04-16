@@ -6,9 +6,9 @@ homepage="http://www.multiprecision.org/"
 maintainer="Vylen Linux Team"
 
 name=libmpc
-version=1.4.0
+version=1.4.1
 release=1
-source="https://ftp.gnu.org/gnu/mpc/mpc-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.gnu.org/gnu/mpc/mpc-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
