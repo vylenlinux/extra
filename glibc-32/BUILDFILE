@@ -47,7 +47,13 @@ build() {
 
     # shellcheck disable=SC2016
     sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
-    make install_root="${PKG}" install
+    make install_root="${PWD}/DESTDIR" install
+
+    install -dm755 "${PKG}/usr/lib32"
+    cp -Rv DESTDIR/usr/lib32/* "${PKG}/usr/lib32/"
+
+    install -dm755 "${PKG}/usr/include/gnu/"
+    install -m644 DESTDIR/usr/include/gnu/lib-names-32.h DESTDIR/usr/include/gnu/stubs-32.h "${PKG}/usr/include/gnu/"
 
     install -d "${PKG}/lib"
     install -d "${PKG}/etc/ld.so.conf.d"
