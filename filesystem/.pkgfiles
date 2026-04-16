@@ -24,18 +24,17 @@ lrwxrwxrwx root/root    lib -> usr/lib
 lrwxrwxrwx root/root    lib64 -> usr/lib
 drwxr-xr-x root/root    mnt/
 drwxr-xr-x root/root    opt/
-drwxr-xr-x root/root    proc/
+dr-xr-xr-x root/root    proc/
 drwxr-x--- root/root    root/
 drwxr-xr-x root/root    run/
 lrwxrwxrwx root/root    sbin -> usr/bin
 drwxr-xr-x root/root    srv/
-drwxr-xr-x root/root    sys/
+dr-xr-xr-x root/root    sys/
 drwxrwxrwt root/root    tmp/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib64 -> lib
 drwxr-xr-x root/root    usr/local/
 drwxr-xr-x root/root    usr/local/bin/
 drwxr-xr-x root/root    usr/local/include/
@@ -52,8 +51,7 @@ drwxr-xr-x root/root    usr/local/share/man/man6/
 drwxr-xr-x root/root    usr/local/share/man/man7/
 drwxr-xr-x root/root    usr/local/share/man/man8/
 drwxr-xr-x root/root    usr/local/src/
-drwxr-xr-x root/root    usr/sbin/
-lrwxrwxrwx root/root    usr/sbin/bin -> bin
+lrwxrwxrwx root/root    usr/sbin -> bin
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
