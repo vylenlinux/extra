@@ -65,6 +65,7 @@ build() {
 
     ln -sfv ../run "${PKG}/var/run"
     ln -s /proc/self/mounts "${PKG}/etc/mtab"
+    ln -sv lib "${PKG}/lib64"
 
     for f in btmp faillog lastlog wtmp; do
         touch "${PKG}/var/log/${f}"

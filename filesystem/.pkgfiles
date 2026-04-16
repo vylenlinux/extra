@@ -1,4 +1,4 @@
-filesystem-20260415-1
+filesystem-20260416-1
 drwxr-xr-x root/root    bin/
 drwxr-xr-x root/root    boot/
 drwxr-xr-x root/root    dev/
@@ -21,6 +21,7 @@ drwxr-xr-x root/root    etc/profile.d/
 drwxr-xr-x root/root    etc/skel/
 drwxr-xr-x root/root    home/
 drwxr-xr-x root/root    lib/
+lrwxrwxrwx root/root    lib64 -> lib
 drwxr-xr-x root/root    mnt/
 drwxr-xr-x root/root    opt/
 dr-xr-xr-x root/root    proc/
