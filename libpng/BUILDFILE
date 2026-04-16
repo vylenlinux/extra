@@ -6,8 +6,8 @@ homepage="http://www.libpng.org/pub/png/libpng.html"
 maintainer="Vylen Linux Team"
 
 name=libpng
-version=1.6.57
-release=2
+version=1.6.58
+release=1
 
 source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz
     https://downloads.sourceforge.net/sourceforge/${name}-apng/${name}-${version}-apng.patch.gz"
@@ -15,10 +15,13 @@ source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    gzip -cd $SRC/$name-$version-apng.patch.gz | patch -p1
 
+    gzip -cd "${SRC}/${name}-${version}-apng.patch.gz" | patch -p1
     autoreconf -fiv
-    ./configure --prefix=/usr --disable-static
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
 
     make
     make DESTDIR="${PKG}" install
