@@ -6,7 +6,7 @@ homepage="https://vylen.gitlab.io/"
 maintainer="Vylen Linux Team"
 
 name=filesystem
-version=20260415
+version=20260416
 release=1
 
 source="fstab
@@ -35,6 +35,19 @@ backup="etc/fstab
 
 build() {
     # root dirs
+    for d in bin boot dev etc/opt etc/skel home lib mnt opt run sbin srv var; do
+        mkdir -p "${PKG}/${d}"
+    done
+
+    install -dm 0750 "${PKG}/root"
+
+    install -dm555 "${PKG}/proc" \
+        "${PKG}/sys"
+
+    install -dm 1777 "${PKG}/tmp" \
+        "${PKG}/var/tmp"
+
+    # /usr and /usr/local dirs
     for d in bin include lib sbin src; do
         mkdir -p "${PKG}/usr/${d}"
         mkdir -p "${PKG}/usr/local/${d}"
@@ -46,47 +59,24 @@ build() {
         mkdir -p "${PKG}/usr/local/share/man/man${d}"
     done
 
-    rmdir "${PKG}/usr/sbin"
-
-    ln -sv usr/bin "${PKG}/bin"
-    ln -sv usr/bin "${PKG}/sbin"
-    ln -sv bin "${PKG}/usr/sbin"
-
-    ln -sv usr/lib "${PKG}/lib"
-    ln -sv usr/lib "${PKG}/lib64"
-
-    for d in boot dev etc/opt etc/skel home mnt opt proc run srv sys var; do
-        mkdir -p "${PKG}/${d}"
-    done
-
-    install -dm0750 "${PKG}/root"
-
-    install -dm555 "${PKG}/proc" \
-        "${PKG}/sys"
-
-    install -dm1777 "${PKG}/tmp" \
-        "${PKG}/var/tmp"
-
     for d in cache lib/misc local lock log opt spool/mail; do
         mkdir -p "${PKG}/var/${d}"
     done
 
-    ln -sv ../proc/self/mounts "${PKG}/etc/mtab"
-    ln -sv ../man "${PKG}/usr/local/share/man"
-    ln -sv ../run/lock "${PKG}/var/lock"
-    ln -sv spool/mail "${PKG}/var/mail"
-    ln -sv ../run "${PKG}/var/run"
+    ln -sfv ../run "${PKG}/var/run"
+    ln -s /proc/self/mounts "${PKG}/etc/mtab"
 
     for f in btmp faillog lastlog wtmp; do
         touch "${PKG}/var/log/${f}"
     done
 
     chgrp utmp "${PKG}/var/log/lastlog"
+
     chmod 664 "${PKG}/var/log/lastlog"
     chmod 600 "${PKG}/var/log/btmp"
 
     for e in fstab group hosts hostname locale.conf os-release passwd resolv.conf shells issue ld.so.conf; do
-        install -m644 "${e}" "${PKG}/etc/"
+        install -m644 "${e}" -t "${PKG}/etc/"
     done
 
     install -Dm644 locale.sh -t "${PKG}/etc/profile.d/"
