@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Network connection manager and user applications"
 homepage="https://networkmanager.dev/"
 maintainer="Vylen Linux Team"
@@ -7,36 +10,45 @@ version=1.56.0
 release=1
 backup="etc/NetworkManager/NetworkManager.conf"
 
-source="$name-$version.tar.gz::https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/$version/NetworkManager-$version.tar.gz
-	run.$name"
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz
+    run.${name}"
 
 build() {
-	emerald isinstalled modemmanager && OPT='-Dmodem_manager=true' || OPT='-Dmodem_manager=false'
-	vylen-meson NetworkManager-$version build \
-	      -Dlibaudit=no              \
-	      -Dnmtui=true               \
-	      -Dovs=false                \
-	      -Dppp=false                \
-	      -Dselinux=false            \
-	      -Dudev_dir=/lib/udev       \
-	      -Dsession_tracking=no      \
-	      -Dsystemdsystemunitdir=no  \
-	      -Dsystemd_journal=false    \
-	      -Dmodify_system=true       \
-	      -Ddocs=false               \
-	      -Dqt=false                 \
-	      -Dtests=no		 \
-	      -Dvapi=false	         \
-	      $OPT
-	meson compile -C build 
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    emerald isinstalled modemmanager && OPT='-Dmodem_manager=true' || OPT='-Dmodem_manager=false'
 
-mkdir -p $PKG/etc/NetworkManager
-cat >> $PKG/etc/NetworkManager/NetworkManager.conf << "EOF"
+    vylen-meson "NetworkManager-${version}" build \
+        -Dlibaudit=no \
+        -Dnmtui=true \
+        -Dovs=false \
+        -Dppp=false \
+        -Dselinux=false \
+        -Dudev_dir=/lib/udev \
+        -Dsession_tracking=no \
+        -Dsystemdsystemunitdir=no \
+        -Dsystemd_journal=false \
+        -Dmodify_system=true \
+        -Ddocs=false \
+        -Dqt=false \
+        -Dtests=no \
+        -Dvapi=false \
+        "${OPT}"
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    mkdir -p "${PKG}/etc/NetworkManager"
+
+    cat >> "${PKG}/etc/NetworkManager/NetworkManager.conf" <<"EOF"
 [main]
 plugins=keyfile
 EOF
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    if emerald isinstalled runit; then
+        install -Dm755 "${SRC}/run.${name}" "${PKG}/etc/sv/${name}/run"
+        ln -s "/run/runit/supervise.${name}" "${PKG}/etc/sv/${name}/supervise"
+    fi
+
+    if emerald isinstalled openrc; then
+        openrc_add "${name}"
+    fi
 }
