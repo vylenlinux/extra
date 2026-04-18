@@ -6,7 +6,7 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xterm
-version=408
+version=409
 release=1
 source="http://invisible-mirror.net/archives/${name}/${name}-${version}.tgz"
 
@@ -26,7 +26,7 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    cat >> "${PKG}/etc/X11/app-defaults/XTerm" << "EOF"
+    cat >> "${PKG}/etc/X11/app-defaults/XTerm" <<'EOF'
 *VT100*locale: true
 *VT100*faceName: Monospace
 *VT100*faceSize: 10
@@ -34,6 +34,5 @@ build() {
 *ptyInitialErase: true
 EOF
 
-    install -m755 -d "${PKG}/usr/share/applications"
-    install -Dm644 xterm.desktop uxterm.desktop "${PKG}/usr/share/applications"
+    install -Dm644 xterm.desktop uxterm.desktop -t "${PKG}/usr/share/applications/"
 }
