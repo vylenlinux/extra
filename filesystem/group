@@ -22,3 +22,4 @@ mail:x:34:
 kvm:x:61:
 nogroup:x:99:
 users:x:999:
+uucp:x:14:uucp
