@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/sbin/openrc-run
 
 # shellcheck disable=SC2034
 # shellcheck disable=SC2154
