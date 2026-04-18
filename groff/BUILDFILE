@@ -20,7 +20,7 @@ build() {
         --without-x \
         --disable-rpath
 
-    sed -i '/typesetting.pdf/d' Makefile
+    emerald isinstalled ghostscript || sed -i '/typesetting.pdf/d' Makefile
 
     make
     make DESTDIR="${PKG}" install
