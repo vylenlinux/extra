@@ -2,6 +2,7 @@
 
 # shellcheck disable=SC2034
 # shellcheck disable=SC2154
+command=/sbin/udevd
 command_args="${udev_opts}"
 command_background=yes
 pidfile=/run/udev.pid
@@ -47,7 +48,7 @@ start_pre() {
 
 stop() {
     ebegin "Stopping ${name:-$RC_SVCNAME}"
-    udevadm control --exit || start-stop-daemon --stop --exec /sbin/udevd --pidfile "${pidfile}"
+    udevadm control --exit || start-stop-daemon --stop --exec "${command}" --pidfile "${pidfile}"
 
     eend $? "Failed to stop $RC_SVCNAME"
     [ $? -eq 0 ] && rm -f "${pidfile}" /run/udev/control
