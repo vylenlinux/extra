@@ -42,5 +42,9 @@ build() {
 
     if emerald isinstalled openrc; then
         openrc_add udev udev-trigger
+        install -d "${PKG}/etc/runlevels/sysinit"
+
+        ln -sf "/etc/init.d/udev" "${PKG}/etc/runlevels/sysinit/udev"
+        ln -sf "/etc/init.d/udev-trigger" "${PKG}/etc/runlevels/sysinit/udev-trigger"
     fi
 }

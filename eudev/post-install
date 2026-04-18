@@ -1,6 +1,0 @@
-#!/bin/sh
-
-if emerald isinstalled openrc; then
-    rc-update add udev sysinit
-    rc-update add udev-trigger sysinit
-fi
