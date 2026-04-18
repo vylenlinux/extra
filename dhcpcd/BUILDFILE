@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="An implementation of the DHCP client specified in RFC2131"
 homepage="https://roy.marples.name/projects/dhcpcd/"
 maintainer="Vylen Linux Team"
@@ -6,18 +9,29 @@ name=dhcpcd
 version=10.3.1
 release=1
 
-source="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v${version}/${name}-${version}.tar.xz
-    run.$name
+source="https://github.com/NetworkConfiguration/${name}/releases/download/v${version}/${name}-${version}.tar.xz
+    run.${name}
     50-ntp.conf"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure --libexecdir=/lib/dhcpcd --dbdir=/var/lib/dhcpcd
-	make
-	make DESTDIR=$PKG install
-        [ ! -f $PKG/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf ] && install -m 444 $SRC/50-ntp.conf $PKG/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf
+    ./configure \
+        --libexecdir=/lib/dhcpcd \
+        --dbdir=/var/lib/dhcpcd
 
-	install -Dm755 $SRC/run.dhcpcd $PKG/etc/sv/dhcpcd/run
-	ln -s /run/runit/supervise.dhcpcd $PKG/etc/sv/dhcpcd/supervise
+    make
+    make DESTDIR="${PKG}" install
+
+    [ ! -f "${PKG}/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf" ] && install -Dm444 "${SRC}/50-ntp.conf" -t "${PKG}/lib/dhcpcd/dhcpcd-hooks/"
+
+    if emerald isinstalled runit; then
+        install -Dm755 "${SRC}/run.dhcpcd" "${PKG}/etc/sv/dhcpcd/run"
+        ln -s /run/runit/supervise.dhcpcd "${PKG}/etc/sv/dhcpcd/supervise"
+    fi
+
+    if emerald isinstalled openrc; then
+        openrc_add dhcpcd
+    fi
 }
