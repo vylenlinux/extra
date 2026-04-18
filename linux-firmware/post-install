@@ -1,13 +1,9 @@
 #!/bin/sh
 
-if [ -f /lib/modules/KERNELVERSION ]; then
-    kernver=$(cat /lib/modules/KERNELVERSION)
-else
-    kernver=$(uname -r)
+kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
+
+if [ "$(command -v mkinitramfs)" ]; then
+    mkinitramfs -q -k "${kernver}" -o /boot/initrd-linux.img
 fi
 
-if [ $(command -v mkinitramfs) ]; then
-    mkinitramfs -q -k $kernver -o /boot/initrd-vylen.img
-fi
-
-depmod $kernver
+depmod "${kernver}"
