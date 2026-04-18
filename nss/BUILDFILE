@@ -6,7 +6,7 @@ homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
 maintainer="Vylen Linux Team"
 
 name=nss
-version=3.122.1
+version=3.123
 release=1
 
 source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz
@@ -40,7 +40,7 @@ build() {
         install -v -m644 "${xx}" "${PKG}/usr/lib"
     done
 
-    install -m755 -d "${PKG}/usr/include/nss"
+    install -dm755 "${PKG}/usr/include/nss"
     cp -v -RL public/nss/* "${PKG}/usr/include/nss"
     cp -v -RL private/nss/* "${PKG}/usr/include/nss"
     chmod 644 "${PKG}/usr/include/nss"/*
@@ -51,6 +51,5 @@ build() {
         install -m755 Linux*/"bin/${xx}" "${PKG}/usr/bin"
     done
 
-    install -d "${PKG}/usr/lib/pkgconfig"
-    install -m644 Linux*/lib/pkgconfig/nss.pc "${PKG}/usr/lib/pkgconfig"
+    install -Dm644 Linux*/lib/pkgconfig/nss.pc -t "${PKG}/usr/lib/pkgconfig/"
 }
