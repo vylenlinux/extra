@@ -1,17 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Wayland stacking compositor"
 homepage="https://github.com/labwc/labwc"
 maintainer="Vylen Linux Team"
 
 name=labwc
-version=0.9.6
+version=0.9.7
 release=1
-source="$name-$version.tar.gz::https://github.com/labwc/labwc/archive/$version.tar.gz
-	labwc.desktop"
+
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${version}.tar.gz
+    ${name}.desktop"
 
 build() {
-	vylen-meson $name-$version build 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	install -Dm644 $SRC/labwc.desktop -t $PKG/usr/share/wayland-sessions/
+    install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/wayland-sessions/"
 }
