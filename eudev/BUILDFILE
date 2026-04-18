@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Programs for dynamic creation of device nodes"
 homepage="https://www.kernel.org/pub/software/network/ethtool/"
 maintainer="Vylen Linux Team"
@@ -5,33 +8,39 @@ maintainer="Vylen Linux Team"
 name=eudev
 version=3.2.14
 release=1
-source="$name-$version.tar.gz::https://github.com/eudev-project/eudev/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/eudev-project/${name}/archive/v${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	OPTS=""
-	emerald isinstalled libxslt && OPTS="--enable-manpages"
+    OPTS=""
+    emerald isinstalled libxslt && OPTS="--enable-manpages"
 
-	# remove an unneeded group 'sgx'
-	sed -i -e 's/GROUP="sgx", //' rules/50-udev-default.rules
+    # remove an unneeded group 'sgx'
+    sed -i -e 's/GROUP="sgx", //' rules/50-udev-default.rules
+    autoreconf -f -i -s
 
-	autoreconf -f -i -s
-	./configure \
-		--prefix=/usr \
-		--bindir=/sbin \
-		--sbindir=/sbin \
-		--libdir=/usr/lib \
-		--sysconfdir=/etc \
-		--libexecdir=/lib \
-		--with-rootprefix= \
-		--with-rootlibdir=/lib \
-		--disable-static \
-		$OPTS
-	make
+    ./configure \
+        --prefix=/usr \
+        --bindir=/sbin \
+        --sbindir=/sbin \
+        --libdir=/usr/lib \
+        --sysconfdir=/etc \
+        --libexecdir=/lib \
+        --with-rootprefix= \
+        --with-rootlibdir=/lib \
+        --disable-static \
+        "${OPTS}"
 
-	mkdir -pv $PKG/lib/udev/rules.d
-	mkdir -pv $PKG/etc/udev/rules.d
+    make
 
-	make DESTDIR=$PKG install
+    mkdir -pv "${PKG}/lib/udev/rules.d"
+    mkdir -pv "${PKG}/etc/udev/rules.d"
+
+    make DESTDIR="${PKG}" install
+
+    if emerald isinstalled openrc; then
+        openrc_add udev udev-trigger
+    fi
 }
