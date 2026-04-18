@@ -1,4 +1,4 @@
-frei0r-plugins-3.1.2-1
+frei0r-plugins-3.1.3-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/frei0r.h
@@ -42,6 +42,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/cairoblend.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/cairogradient.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/cairoimagegrid.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/camerashake.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/cartoon.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/cluster.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/colgate.so
