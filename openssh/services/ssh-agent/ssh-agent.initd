@@ -1,0 +1,6 @@
+#!/sbin/openrc-run
+
+# shellcheck disable=SC2034
+supervisor=supervise-daemon
+command="/usr/bin/ssh-agent"
+command_args="-D -a ${XDG_RUNTIME_DIR}/ssh-agent.sock"

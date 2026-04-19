@@ -1,7 +1,0 @@
-#!/bin/sh
-
-exec 2>&1
-sv check dbus >/dev/null || exit 1
-
-[ -f ./conf ] && . ./conf
-exec libvirtd -d 2>&1

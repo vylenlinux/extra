@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Lightweight Display Manager for the LXDE desktop"
 homepage="https://lxde.org/"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,14 @@ maintainer="Vylen Linux Team"
 name=lxdm
 version=0.5.3
 release=1
-backup="etc/lxdm/lxdm.conf"
-
-source="https://sourceforge.net/projects/lxde/files/$name/$name%20$version/$name-$version.tar.xz
-	run.$name"
+source="https://sourceforge.net/projects/lxde/files/${name}/${name}%20${version}/${name}-${version}.tar.xz"
+backup="etc/${name}/${name}.conf"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-cat > pam/lxdm << "EOF"
+    cat > pam/lxdm <<"EOF"
 #%PAM-1.0
 auth       requisite      pam_nologin.so
 auth       required       pam_env.so
@@ -26,25 +28,28 @@ session    include        system-session
 -session   optional       pam_gnome_keyring.so auto_start
 EOF
 
-sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in
-sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession
-sed -e 's/^bg/#&/'        \
-    -e '/reset=1/ s/# //' \
-    -e 's/logou$/logout/' \
-    -e "/arg=/a arg=/usr/bin/X" \
-    -i data/lxdm.conf.in
+    sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in
+    sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession
 
-	autoreconf -fiv
-	./configure --prefix=/usr \
-				--with-pam \
-				--disable-nls \
-				--libexecdir=/usr/lib/$name \
-				--with-systemdsystemunitdir=no \
-				--sysconfdir=/etc \
-	            --enable-gtk3
-	make
-	make DESTDIR=$PKG install
+    sed -e 's/^bg/#&/' \
+        -e '/reset=1/ s/# //' \
+        -e 's/logou$/logout/' \
+        -e "/arg=/a arg=/usr/bin/X" \
+        -i data/lxdm.conf.in
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    autoreconf -fiv
+
+    ./configure \
+        --prefix=/usr \
+        --with-pam \
+        --disable-nls \
+        --libexecdir="/usr/lib/${name}" \
+        --with-systemdsystemunitdir=no \
+        --sysconfdir=/etc \
+        --enable-gtk3
+
+    make
+    make DESTDIR="${PKG}" install
+
+    openrc_add "${name}"
 }

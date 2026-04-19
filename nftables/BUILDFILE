@@ -1,3 +1,6 @@
+#!/isr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Firewalling, NAT, and packet mangling for linux"
 homepage="https://netfilter.org/projects/nftables/"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,13 @@ maintainer="Vylen Linux Team"
 name=nftables
 version=1.1.6
 release=1
-source="https://www.netfilter.org/pub/nftables/nftables-$version.tar.xz
-    nftables.nft
-    run.$name"
+
+source="https://www.netfilter.org/pub/${name}/${name}-${version}.tar.xz
+    ${name}.nft"
 
 build() {
-    cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
     CONFIG_SHELL=/bin/bash ./configure \
         --prefix=/usr \
@@ -19,21 +23,20 @@ build() {
         --with-cli=readline \
         --with-json \
         --disable-debug
-    make
-    make DESTDIR=$PKG install
 
+    make
+    make DESTDIR="${PKG}" install
+
+    # shellcheck disable=SC2164
     cd py
 
     gpep517 build-wheel \
-        --wheel-dir $SRC/$name-$version/.dist \
+        --wheel-dir .dist \
         --output-fd 3 3>&1 >&2
 
-    python3 -m installer -d "$PKG" \
-        $SRC/$name-$version/.dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
+    install -Dm600 "${SRC}/${name}.nft" -t "${PKG}/etc/"
 
-    install -D -m 600 $SRC/nftables.nft $PKG/etc/nftables.nft
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
-    rm -r $PKG/usr/share/doc
+    rm -r "${PKG}/usr/share/doc"
+    openrc_add "${name}"
 }

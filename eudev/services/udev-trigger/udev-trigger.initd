@@ -1,4 +1,4 @@
-#!/usr/sbin/openrc-run
+#!/sbin/openrc-run
 
 # shellcheck disable=SC2034
 description="udev Coldplug all Devices"

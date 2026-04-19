@@ -1,4 +1,5 @@
 filesystem
+openrc
 linux-api-headers
 glibc
 binutils
@@ -62,5 +63,4 @@ texinfo
 vim
 emerald
 dhcpcd
-init
 b3sum

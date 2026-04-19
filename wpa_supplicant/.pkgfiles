@@ -1,13 +1,12 @@
 wpa_supplicant-2.11-1
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/wpa_supplicant
 drwxr-xr-x root/root    etc/dbus-1/
 drwxr-xr-x root/root    etc/dbus-1/system.d/
 -rw-r--r-- root/root    etc/dbus-1/system.d/wpa_supplicant.conf
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/wpa/
--rwxr-xr-x root/root    etc/sv/wpa/auto
--rwxr-xr-x root/root    etc/sv/wpa/run
-lrwxrwxrwx root/root    etc/sv/wpa/supervise -> /run/runit/supervise.wpa
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/wpa_supplicant
 -rw------- root/root    etc/wpa_supplicant.conf.epkgnew
 drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/wpa_cli

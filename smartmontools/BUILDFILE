@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives"
 homepage="http://smartmontools.sourceforge.net/"
 maintainer="Vylen Linux Team"
@@ -5,22 +8,19 @@ maintainer="Vylen Linux Team"
 name=smartmontools
 version=7.5
 release=1
-
-source="https://sourceforge.net/projects/$name/files/$name/$version/$name-$version.tar.gz
-	run.smartd
-	finish.smartd"
+source="https://sourceforge.net/projects/${name}/files/${name}/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure --prefix=/usr           \
-	            --sysconfdir=/etc       \
-	            --with-initscriptdir=no
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --with-initscriptdir=no
 
-	install -Dm755 $SRC/run.smartd $PKG/etc/sv/smartd/run
-	install -Dm755 $SRC/finish.smartd $PKG/etc/sv/smartd/finish
+    make
+    make DESTDIR="${PKG}" install
 
-	ln -s /run/runit/supervise.smartd $PKG/etc/sv/smartd/supervise
+    openrc_add smartd
 }

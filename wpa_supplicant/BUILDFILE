@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A utility providing key negotiation for WPA wireless networks"
 homepage="https://w1.fi"
 maintainer="Vylen Linux Team"
@@ -5,21 +8,22 @@ maintainer="Vylen Linux Team"
 name=wpa_supplicant
 version=2.11
 release=1
+
+source="https://w1.fi/releases/${name}-${version}.tar.gz
+    nl80211-add-extra-ies-only-if-allowed-by-driver.patch
+    wpa_supplicant-Revert-Mark-authorization-completed-on-driver-indica.patch
+    wpa_supplicant.conf"
+
 backup="etc/wpa_supplicant.conf"
-source="https://w1.fi/releases/$name-$version.tar.gz
-	nl80211-add-extra-ies-only-if-allowed-by-driver.patch
-	wpa_supplicant-Revert-Mark-authorization-completed-on-driver-indica.patch 
-	wpa_supplicant.conf
-	run.wpa
-	auto.wpa"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	patch -Np1 -i $SRC/nl80211-add-extra-ies-only-if-allowed-by-driver.patch
-	patch -Np1 -i $SRC/wpa_supplicant-Revert-Mark-authorization-completed-on-driver-indica.patch 
+    patch -Np1 -i "${SRC}/nl80211-add-extra-ies-only-if-allowed-by-driver.patch"
+    patch -Np1 -i "${SRC}/wpa_supplicant-Revert-Mark-authorization-completed-on-driver-indica.patch"
 
-	cat > wpa_supplicant/.config << "EOF"
+    cat > wpa_supplicant/.config <<"EOF"
 CONFIG_BACKEND=file
 CONFIG_CTRL_IFACE=y
 CONFIG_DEBUG_FILE=y
@@ -51,28 +55,21 @@ CONFIG_CTRL_IFACE_DBUS_NEW=y
 CONFIG_CTRL_IFACE_DBUS_INTRO=y
 EOF
 
-	cd $name
-	make BINDIR=/sbin LIBDIR=/lib
+    # shellcheck disable=SC2164
+    cd "${name}"
+    make BINDIR=/sbin LIBDIR=/lib
 
-	for xx in sbin usr/share/man/man5 usr/share/man/man8; do
-		install -d $PKG/$xx
-	done
+    for xx in cli passphrase supplicant; do
+        install -Dm755 "wpa_${xx}" -t "${PKG}/sbin/"
+        install -Dm644 "doc/docbook/wpa_${xx}.8" -t "${PKG}/usr/share/man/man8/"
+    done
 
-	for xx in cli passphrase supplicant; do
-		install -m755 wpa_$xx $PKG/sbin/
-		install -m644 doc/docbook/wpa_$xx.8 $PKG/usr/share/man/man8/
-	done
-	install -m644 doc/docbook/wpa_supplicant.conf.5 $PKG/usr/share/man/man5/
-	
-	install -d $PKG/etc/dbus-1/system.d/
-	install -d $PKG/usr/share/dbus-1/system-services/
-	install -m644 dbus/fi.w1.wpa_supplicant1.service $PKG/usr/share/dbus-1/system-services/fi.w1.wpa_supplicant1.service
-	install -m644 dbus/dbus-wpa_supplicant.conf $PKG/etc/dbus-1/system.d/wpa_supplicant.conf
+    install -Dm644 doc/docbook/wpa_supplicant.conf.5 -t "${PKG}/usr/share/man/man5/"
 
-	# wpa_supplicant.conf
-	install -Dm 600 $SRC/wpa_supplicant.conf $PKG/etc/wpa_supplicant.conf
+    install -Dm644 dbus/fi.w1.wpa_supplicant1.service -t "${PKG}/usr/share/dbus-1/system-services/"
+    install -Dm644 dbus/dbus-wpa_supplicant.conf "${PKG}/etc/dbus-1/system.d/wpa_supplicant.conf"
 
-	install -Dm755 $SRC/run.wpa $PKG/etc/sv/wpa/run
-	install -Dm755 $SRC/auto.wpa $PKG/etc/sv/wpa/auto
-	ln -s /run/runit/supervise.wpa $PKG/etc/sv/wpa/supervise
+    # wpa_supplicant.conf
+    install -Dm600 "${SRC}/wpa_supplicant.conf" -t "${PKG}/etc/"
+    openrc_add "${name}"
 }

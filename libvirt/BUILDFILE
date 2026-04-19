@@ -13,8 +13,6 @@ backup="etc/libvirt/libvirtd.conf
     etc/libvirt/qemu.conf"
 
 source="https://libvirt.org/sources/${name}-${version}.tar.xz
-    run.libvirtd
-    run.virtlogd
     libvirtd.conf
     qemu.conf"
 
@@ -48,17 +46,13 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm755 "${SRC}/run.libvirtd" "${PKG}/etc/sv/libvirtd/run"
-	ln -s /run/runit/supervise.libvirtd "${PKG}/etc/sv/libvirtd/supervise"
+    install -Dm0644 "${SRC}/libvirtd.conf" -t "${PKG}/etc/libvirt/"
+    install -Dm0644 "${SRC}/qemu.conf"     -t "${PKG}/etc/libvirt/"
 
-    install -Dm755 "${SRC}/run.virtlogd" "${PKG}/etc/sv/virtlogd/run"
-	ln -s /run/runit/supervise.virtlogd "${PKG}/etc/sv/virtlogd/supervise"
+    rm -fr \
+        "${PKG}/usr/share/locale" \
+        "${PKG}/run" \
+        "${PKG}/usr/lib/systemd"
 
-	install -Dm0644 "${SRC}/libvirtd.conf" "${PKG}/etc/libvirt/libvirtd.conf"
-	install -Dm0644 "${SRC}/qemu.conf" "${PKG}/etc/libvirt/qemu.conf"
-
-	rm -fr \
-	    "${PKG}/usr/share/locale" \
-	    "${PKG}/run" \
-	    "${PKG}/usr/lib/systemd"
+    openrc_add "libvirt-guests libvirtd virtlockd virtlogd"
 }

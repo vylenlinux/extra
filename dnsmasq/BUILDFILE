@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Lightweight, easy to configure DNS forwarder and DHCP server"
 homepage="http://www.thekelleys.org.uk/dnsmasq/doc.html"
 maintainer="Vylen Linux Team"
@@ -5,22 +8,18 @@ maintainer="Vylen Linux Team"
 name=dnsmasq
 version=2.92
 release=1
-backup="etc/dnsmasq.conf"
-
-source="http://www.thekelleys.org.uk/$name/$name-$version.tar.xz
-	run.$name"
-
-_build_copts="-DHAVE_DNSSEC -DHAVE_DBUS"
+source="http://www.thekelleys.org.uk/${name}/${name}-${version}.tar.xz"
+backup="etc/${name}.conf"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# need to pass COPTS here to avoid rebuilding the binary.
-	make COPTS="$_build_copts" PREFIX=/usr BINDIR=/usr/bin DESTDIR=$PKG install-i18n
+    # need to pass COPTS here to avoid rebuilding the binary.
+    make COPTS="-DHAVE_DNSSEC -DHAVE_DBUS" PREFIX=/usr BINDIR=/usr/bin DESTDIR="${PKG}" install-i18n
 
-	install -Dm 644 dnsmasq.conf.example $PKG/etc/dnsmasq.conf
-	install -Dm 644 trust-anchors.conf $PKG/usr/share/dnsmasq/trust-anchors.conf
+    install -Dm644 dnsmasq.conf.example "${PKG}/etc/dnsmasq.conf"
+    install -Dm644 trust-anchors.conf -t "${PKG}/usr/share/dnsmasq/"
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    openrc_add "${name}"
 }

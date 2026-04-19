@@ -8,9 +8,7 @@ maintainer="Vylen Linux Team"
 name=openssh
 version=10.3p1
 release=2
-
-source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz
-    run.sshd"
+source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
@@ -31,7 +29,5 @@ build() {
     install -v -m644 contrib/ssh-copy-id.1 "${PKG}/usr/share/man/man1"
 
     sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' -i "${PKG}/etc/ssh/sshd_config"
-
-    install -Dm755 "${SRC}/run.sshd" "${PKG}/etc/sv/sshd/run"
-    ln -s /run/runit/supervise.sshd "${PKG}/etc/sv/sshd/supervise"
+    openrc_add ssh-agent sshd
 }

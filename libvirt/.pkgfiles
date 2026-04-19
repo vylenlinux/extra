@@ -1,5 +1,13 @@
 libvirt-12.2.0-1
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/libvirt-guests
+-rw-r--r-- root/root    etc/conf.d/libvirtd
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/libvirt-guests
+-rwxr-xr-x root/root    etc/init.d/libvirtd
+-rwxr-xr-x root/root    etc/init.d/virtlockd
+-rwxr-xr-x root/root    etc/init.d/virtlogd
 drwxr-xr-x root/root    etc/libvirt/
 -rw-r--r-- root/root    etc/libvirt/ch.conf
 -rw-r--r-- root/root    etc/libvirt/libvirt-admin.conf
@@ -65,9 +73,6 @@ drwxr-xr-x root/root    etc/logrotate.d/
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.libxl
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.lxc
 -rw-r--r-- root/root    etc/logrotate.d/libvirtd.qemu
-drwxr-xr-x root/root    etc/rc.d/
--rwxr-xr-x root/root    etc/rc.d/libvirtd
--rwxr-xr-x root/root    etc/rc.d/virtlogd
 drwxr-xr-x root/root    etc/sasl2/
 -rw-r--r-- root/root    etc/sasl2/libvirt.conf
 drwxr-xr-x root/root    etc/ssh/

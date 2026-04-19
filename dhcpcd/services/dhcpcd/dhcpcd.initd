@@ -1,8 +1,8 @@
-#!/usr/sbin/openrc-run
+#!/sbin/openrc-run
 
-command=${RC_PREFIX}/sbin/dhcpcd
-pidfile=${RC_PREFIX}/var/run/dhcpcd/pid
-command_args=-q
+command="${RC_PREFIX}/sbin/dhcpcd"
+pidfile="${RC_PREFIX}/var/run/dhcpcd/pid"
+command_args="-q"
 name="DHCP Client Daemon"
 
 depend() {

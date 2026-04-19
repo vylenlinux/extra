@@ -10,11 +10,6 @@ version=1.3.2
 release=1
 source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
 
-_zig_deps="clap-0.11.0.tar.gz::https://github.com/Hejsil/zig-clap/archive/refs/tags/0.11.0.tar.gz
-    ini-0.1.0.tar.gz::https://github.com/AnErrupTion/ini/archive/918f16d0dcf893d0c1cdffe204faa08bb3584e04.tar.gz
-    zigini-0.3.3.tar.gz::https://github.com/AnErrupTion/zigini/archive/9281f47702b57779e831d7618e158abb8eb4d4a2.tar.gz
-    termbox2-496730697c662893eec43192f48ff616c2539da6.tar.gz::https://github.com/AnErrupTion/termbox2/archive/496730697c662893eec43192f48ff616c2539da6.tar.gz"
-
 build() {
     # shellcheck disable=SC2164
     cd "${name}"
@@ -24,11 +19,7 @@ build() {
     sed -i 's|shutdown_cmd = /sbin/shutdown $PLATFORM_SHUTDOWN_ARG now|shutdown_cmd = poweroff|' res/config.ini
     sed -i 's|sleep_cmd = null|sleep_cmd = zzz|' res/config.ini
 
-    for dep in $_zig_deps; do
-        zig fetch --global-cache-dir ./zig-global-cache "${dep##*::}"
-    done
-
-    zig build -Dinit_system=runit --search-prefix /usr -Ddest_directory="${PKG}" -Dname="ly-dm" --global-cache-dir ./zig-global-cache/p --build-id=sha1 -Dtarget=native -Dcpu=baseline -Doptimize=ReleaseSafe installexe
+    zig build --search-prefix /usr -Ddest_directory="${PKG}" -Dname="ly-dm" --global-cache-dir ./zig-global-cache/p --build-id=sha1 -Dtarget=native -Dcpu=baseline -Doptimize=ReleaseSafe installexe
 
     cat <<'EOF' > "${PKG}/etc/pam.d/ly"
 auth        include     system-auth
@@ -39,4 +30,6 @@ session     optional    pam_keyinit.so force revoke
 session     include     system-session
 -session    optional    pam_kwallet5.so auto_start
 EOF
+
+    openrc_add "${name}"
 }

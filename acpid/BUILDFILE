@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Extensible daemon for delivering ACPI events"
 homepage="https://sourceforge.net/projects/acpid2/"
 maintainer="Vylen Linux Team"
@@ -5,31 +8,30 @@ maintainer="Vylen Linux Team"
 name=acpid
 version=2.0.34
 release=1
-
-source="https://downloads.sourceforge.net/acpid2/$name-$version.tar.xz
-	run.acpid"
+source="https://downloads.sourceforge.net/acpid2/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
 
+    make
+    make DESTDIR="${PKG}" install
 
-	install -v -m755 -d $PKG/etc/acpi/events
+    install -v -m755 -d "${PKG}/etc/acpi/events"
 
-cat > $PKG/etc/acpi/events/lid << "EOF"
+    cat > "${PKG}/etc/acpi/events/lid" <<"EOF"
 event=button/lid
 action=/etc/acpi/lid.sh
 EOF
 
-cat > $PKG/etc/acpi/lid.sh << "EOF"
+    cat > "${PKG}/etc/acpi/lid.sh" <<"EOF"
 #!/bin/sh
+
 /bin/grep -q open /proc/acpi/button/lid/LID/state && exit 0
 /usr/sbin/pm-suspend
 EOF
-	chmod +x $PKG/etc/acpi/lid.sh
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    chmod +x "${PKG}/etc/acpi/lid.sh"
+    openrc_add "${name}"
 }

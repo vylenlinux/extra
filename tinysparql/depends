@@ -5,3 +5,4 @@ python3-dbus
 stemmer
 json-glib
 asciidoc
+brotli

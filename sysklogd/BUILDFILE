@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Logging system messages, such as those given by the kernel"
 homepage="https://github.com/troglobit/sysklogd"
 maintainer="Vylen Linux Team"
@@ -5,24 +8,22 @@ maintainer="Vylen Linux Team"
 name=sysklogd
 version=2.7.2
 release=1
+source="https://github.com/troglobit/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 backup="etc/syslog.conf"
 
-source="https://github.com/troglobit/sysklogd/releases/download/v$version/sysklogd-$version.tar.gz
-	run.$name"
-
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--without-logger
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --without-logger
 
-	install -Dm644 syslog.conf $PKG/etc/syslog.conf
+    make
+    make DESTDIR="${PKG}" install
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    install -Dm644 syslog.conf -t "${PKG}/etc/"
+    openrc_add "${name}"
 }

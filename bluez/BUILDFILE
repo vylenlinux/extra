@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Bluetooth protocol stack for Linux"
 homepage="http://www.bluez.org/"
 maintainer="Vylen Linux Team"
@@ -5,38 +8,38 @@ maintainer="Vylen Linux Team"
 name=bluez
 version=5.86
 release=1
-
-source="https://www.kernel.org/pub/linux/bluetooth/$name-$version.tar.xz
-	run.bluetooth-meshd
-	run.bluetoothd"
+source="https://www.kernel.org/pub/linux/bluetooth/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr \
-	            --sysconfdir=/etc \
-	            --libexecdir=/usr/lib \
-	            --localstatedir=/var \
-	            --enable-library \
-	            --enable-mesh \
-		    --enable-a2dp \
-		    --enable-experimental\
-		    --enable-hid2hci \
-		    --enable-library \
-		    --enable-tools \
-	            --disable-systemd
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib \
+        --localstatedir=/var \
+        --enable-library \
+        --enable-mesh \
+        --enable-a2dp \
+        --enable-experimental\
+        --enable-hid2hci \
+        --enable-library \
+        --enable-tools \
+        --disable-systemd
 
-	install -d $PKG/usr/sbin
-	ln -svf ../lib/bluetooth/bluetoothd $PKG/usr/sbin/bluetoothd
-    ln -svf ../lib/bluetooth/bluetooth-meshd $PKG/usr/sbin/bluetooth-meshd
+    make
+    make DESTDIR="${PKG}" install
 
-	# main configuration
-	install -v -dm755 $PKG/etc/bluetooth
-	install -v -m644 src/main.conf $PKG/etc/bluetooth/main.conf
+    install -d "${PKG}/usr/sbin"
+    ln -svf ../lib/bluetooth/bluetoothd "${PKG}/usr/sbin/bluetoothd"
+    ln -svf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/sbin/bluetooth-meshd"
 
-cat > $PKG/etc/bluetooth/rfcomm.conf << "EOF"
+    # main configuration
+    install -v -dm755 "${PKG}/etc/bluetooth"
+    install -v -m644 src/main.conf "${PKG}/etc/bluetooth/main.conf"
+
+    cat > "${PKG}/etc/bluetooth/rfcomm.conf" <<"EOF"
 # Start rfcomm.conf
 # Set up the RFCOMM configuration of the Bluetooth subsystem in the Linux kernel.
 # Use one line per command
@@ -45,7 +48,7 @@ cat > $PKG/etc/bluetooth/rfcomm.conf << "EOF"
 # End of rfcomm.conf
 EOF
 
-cat > $PKG/etc/bluetooth/uart.conf << "EOF"
+    cat > "${PKG}/etc/bluetooth/uart.conf" << "EOF"
 # Start uart.conf
 # Attach serial devices via UART HCI to BlueZ stack
 # Use one line per device
@@ -54,9 +57,5 @@ cat > $PKG/etc/bluetooth/uart.conf << "EOF"
 # End of uart.conf
 EOF
 
-	install -Dm755 $SRC/run.bluetoothd $PKG/etc/sv/bluetoothd/run
-	ln -s /run/runit/supervise.bluetoothd $PKG/etc/sv/bluetoothd/supervise
-
-	install -Dm755 $SRC/run.bluetooth-meshd $PKG/etc/sv/bluetooth-meshd/run
-	ln -s /run/runit/supervise.bluetooth-meshd $PKG/etc/sv/bluetooth-meshd/supervise
+    openrc_add bluetoothd
 }

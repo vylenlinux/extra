@@ -9,12 +9,10 @@ drwxr-xr-x root/root    etc/cron.hourly/
 -rwxr-xr-x root/root    etc/cron.hourly/0anacron
 drwxr-xr-x root/root    etc/cron.monthly/
 drwxr-xr-x root/root    etc/cron.weekly/
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/cronie
 drwxr-xr-x root/root    etc/pam.d/
 -rw-r--r-- root/root    etc/pam.d/crond
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/crond/
--rwxr-xr-x root/root    etc/sv/crond/run
-lrwxrwxrwx root/root    etc/sv/crond/supervise -> /run/runit/supervise.crond
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/anacron

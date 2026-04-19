@@ -10,7 +10,6 @@ version=10.3.1
 release=1
 
 source="https://github.com/NetworkConfiguration/${name}/releases/download/v${version}/${name}-${version}.tar.xz
-    run.${name}
     50-ntp.conf"
 
 build() {
@@ -25,13 +24,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     [ ! -f "${PKG}/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf" ] && install -Dm444 "${SRC}/50-ntp.conf" -t "${PKG}/lib/dhcpcd/dhcpcd-hooks/"
-
-    if emerald isinstalled runit; then
-        install -Dm755 "${SRC}/run.dhcpcd" "${PKG}/etc/sv/dhcpcd/run"
-        ln -s /run/runit/supervise.dhcpcd "${PKG}/etc/sv/dhcpcd/supervise"
-    fi
-
-    if emerald isinstalled openrc; then
-        openrc_add dhcpcd
-    fi
+    openrc_add dhcpcd
 }

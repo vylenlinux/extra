@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Simple Authentication and Security Layer"
 homepage="https://www.cyrusimap.org/sasl/"
 maintainer="Vylen Linux Team"
@@ -5,39 +8,40 @@ maintainer="Vylen Linux Team"
 name=cyrus-sasl
 version=2.1.28
 release=1
-source="https://github.com/cyrusimap/$name/releases/download/$name-$version/$name-$version.tar.gz
-	run.saslauthd
-	5e4395aaf4d91aba66649c9915e38d343d000ef7.patch
-	79bce416883cab6dc45151575f2a66dc181c67e4.patch
-	c3ccead6ee3773f624708ca22be41292cd5ce557.patch"
+
+source="https://github.com/cyrusimap/${name}/releases/download/${name}-${version}/${name}-${version}.tar.gz
+    5e4395aaf4d91aba66649c9915e38d343d000ef7.patch
+    79bce416883cab6dc45151575f2a66dc181c67e4.patch
+    c3ccead6ee3773f624708ca22be41292cd5ce557.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	patch -Np1 -i $SRC/5e4395aaf4d91aba66649c9915e38d343d000ef7.patch
-	patch -Np1 -i $SRC/79bce416883cab6dc45151575f2a66dc181c67e4.patch
-	patch -Np1 -i $SRC/c3ccead6ee3773f624708ca22be41292cd5ce557.patch
-	
-	autoreconf -fvi
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc/sasl \
-		--with-plugindir=/usr/lib/sasl2 \
-		--with-saslauthd=/var/sasl/saslauthd \
-		--with-dbpath=/etc/sasl/sasldb2 \
-		--with-dblib=berkeley \
-		--with-bdb-incdir=/usr/include \
-		--with-bdb-libdir=/usr/lib \
-		--with-openssl=/usr \
-		--enable-login \
-		--enable-cram \
-		--enable-digest \
-		--enable-shared
-	make CFLAGS="$CFLAGS -fPIC -Wno-implicit-function-declaration"
-	make DESTDIR=$PKG install
+    patch -Np1 -i "${SRC}/5e4395aaf4d91aba66649c9915e38d343d000ef7.patch"
+    patch -Np1 -i "${SRC}/79bce416883cab6dc45151575f2a66dc181c67e4.patch"
+    patch -Np1 -i "${SRC}/c3ccead6ee3773f624708ca22be41292cd5ce557.patch"
 
-	install -d $PKG/usr/lib/sasl2 $PKG/var/sasl/saslauthd
-    install -Dm755 $SRC/run.saslauthd $PKG/etc/sv/saslauthd/run
+    autoreconf -fvi
 
-	ln -s /run/runit/supervise.saslauthd $PKG/etc/sv/saslauthd/supervise
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc/sasl \
+        --with-plugindir=/usr/lib/sasl2 \
+        --with-saslauthd=/var/sasl/saslauthd \
+        --with-dbpath=/etc/sasl/sasldb2 \
+        --with-dblib=berkeley \
+        --with-bdb-incdir=/usr/include \
+        --with-bdb-libdir=/usr/lib \
+        --with-openssl=/usr \
+        --enable-login \
+        --enable-cram \
+        --enable-digest \
+        --enable-shared
+
+    make CFLAGS="${CFLAGS} -fPIC -Wno-implicit-function-declaration"
+    make DESTDIR="${PKG}" install
+
+    install -d "${PKG}/usr/lib/sasl2" "${PKG}/var/sasl/saslauthd"
+    openrc_add saslauthd
 }

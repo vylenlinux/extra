@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Wireless daemon for Linux"
 homepage="https://iwd.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
@@ -5,26 +8,24 @@ maintainer="Vylen Linux Team"
 name=iwd
 version=3.12
 release=1
-
-source="https://www.kernel.org/pub/linux/network/wireless/$name-$version.tar.xz
-	run.$name"
+source="https://www.kernel.org/pub/linux/network/wireless/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/sbin \
-		--localstatedir=/var \
-		--sysconfdir=/etc \
-		--disable-systemd-service
+    ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/sbin \
+        --localstatedir=/var \
+        --sysconfdir=/etc \
+        --disable-systemd-service
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-	install -d -m 0700 $PKG/var/lib/iwd
-	install -d -m 0700 $PKG/etc/iwd
+    install -dm0700 "${PKG}/var/lib/iwd" \
+        "${PKG}/etc/iwd"
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    openrc_add "${name}"
 }

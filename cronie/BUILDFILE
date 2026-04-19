@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Daemon that runs specified programs at scheduled times and related tools"
 homepage="https://github.com/cronie-crond/cronie/"
 maintainer="Vylen Linux Team"
@@ -6,38 +9,44 @@ name=cronie
 version=1.7.2
 release=1
 
-source="https://github.com/cronie-crond/cronie/releases/download/$name-$version/$name-$version.tar.gz
-	gcc15.patch
-	run.crond
-	$name.deny
-	$name.pam"
+source="https://github.com/${name}-crond/${name}/releases/download/${name}-${version}/${name}-${version}.tar.gz
+    gcc15.patch
+    ${name}.deny
+    ${name}.pam"
 
 build() {
-	cd $name-$version
-	
-	patch -Np1 -i $SRC/gcc15.patch
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--sbindir=/usr/bin \
-		--enable-anacron \
-		--with-inotify \
-		--with-pam
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/gcc15.patch"
 
-	chmod u+s $PKG/usr/bin/crontab
-	install -d $PKG/var/spool/anacron  $PKG/var/spool/cron
-	install -d $PKG/etc/cron.d $PKG/etc/cron.hourly $PKG/etc/cron.daily $PKG/etc/cron.weekly $PKG/etc/cron.monthly
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --sbindir=/usr/bin \
+        --enable-anacron \
+        --with-inotify \
+        --with-pam
 
-	install -Dm0644 ../cronie.deny $PKG/etc/cron.deny
-	install -Dm0644 ../cronie.pam $PKG/etc/pam.d/crond
+    make
+    make DESTDIR="${PKG}" install
 
-	install -Dm0644 contrib/anacrontab $PKG/etc/anacrontab
-	install -Dm0644 contrib/0hourly $PKG/etc/cron.d/0hourly
-	install -Dm0755 contrib/0anacron $PKG/etc/cron.hourly/0anacron
+    chmod u+s "${PKG}/usr/bin/crontab"
 
-	install -Dm755 $SRC/run.crond $PKG/etc/sv/crond/run
-	ln -s /run/runit/supervise.crond $PKG/etc/sv/crond/supervise
+    install -d "${PKG}/var/spool/anacron" \
+        "${PKG}/var/spool/cron" \
+        "${PKG}/etc/cron.d" \
+        "${PKG}/etc/cron.hourly" \
+        "${PKG}/etc/cron.daily" \
+        "${PKG}/etc/cron.weekly" \
+        "${PKG}/etc/cron.monthly"
+
+    install -Dm0644 "${SRC}/${name}.deny" "${PKG}/etc/cron.deny"
+    install -Dm0644 "${SRC}/${name}.pam" "${PKG}/etc/pam.d/crond"
+
+    install -Dm0644 contrib/anacrontab -t "${PKG}/etc/"
+    install -Dm0644 contrib/0hourly    -t "${PKG}/etc/cron.d/"
+    install -Dm0755 contrib/0anacron   -t "${PKG}/etc/cron.hourly/"
+
+    openrc_add "${name}"
 }

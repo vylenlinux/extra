@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Seat management daemon and library "
 homepage="https://git.sr.ht/~kennylevinsen/seatd"
 maintainer="Vylen Linux Team"
@@ -5,24 +8,21 @@ maintainer="Vylen Linux Team"
 name=seatd
 version=0.9.3
 release=1
-
-source="$name-$version.tar.gz::https://git.sr.ht/~kennylevinsen/seatd/archive/$version.tar.gz
-	run.seatd"
+source="${name}-${version}.tar.gz::https://git.sr.ht/~kennylevinsen/${name}/archive/${version}.tar.gz"
 
 build() {
-    vylen-meson $name-$version build \
-          -Dlibseat-logind=disabled \
-	  -Dlibseat-seatd=enabled \
-	  -Dlibseat-builtin=enabled \
-          -Dman-pages=enabled \
-          -Dexamples=disabled \
-          -Dserver=enabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dlibseat-logind=disabled \
+        -Dlibseat-seatd=enabled \
+        -Dlibseat-builtin=enabled \
+        -Dman-pages=enabled \
+        -Dexamples=disabled \
+        -Dserver=enabled
 
-	# user can run seatd-launch
-	chmod u+s $PKG/usr/bin/seatd-launch
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	install -Dm755 $SRC/run.seatd $PKG/etc/sv/seatd/run
-	ln -s /run/runit/supervise.seatd $PKG/etc/sv/seatd/supervise
+    # user can run seatd-launch
+    chmod u+s "${PKG}/usr/bin/seatd-launch"
+    openrc_add "${name}"
 }

@@ -1,9 +1,9 @@
 cyrus-sasl-2.1.28-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/saslauthd/
--rwxr-xr-x root/root    etc/sv/saslauthd/run
-lrwxrwxrwx root/root    etc/sv/saslauthd/supervise -> /run/runit/supervise.saslauthd
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/saslauthd
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/saslauthd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/sasl/

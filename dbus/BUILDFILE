@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Message bus system, a simple way for applications to talk to one another"
 homepage="https://www.freedesktop.org/wiki/Software/dbus/"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,12 @@ maintainer="Vylen Linux Team"
 name=dbus
 version=1.16.2
 release=1
-
-source="https://dbus.freedesktop.org/releases/$name/$name-$version.tar.xz
-	run.$name"
+source="https://${name}.freedesktop.org/releases/${name}/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build -Dsystem_pid_file=/run/dbus/dbus.pid 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build -Dsystem_pid_file=/run/dbus/dbus.pid
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	install -Dm755 $SRC/run.$name $PKG/etc/sv/$name/run
-	ln -s /run/runit/supervise.$name $PKG/etc/sv/$name/supervise
+    openrc_add "${name} dbus.user"
 }
