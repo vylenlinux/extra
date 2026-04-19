@@ -1,21 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="xdg-desktop-portal backend for wlroots"
 homepage="https://github.com/emersion/xdg-desktop-portal-wlr"
 maintainer="Vylen Linux Team"
 
 name=xdg-desktop-portal-wlr
-version=0.8.1
+version=0.8.2
 release=1
-source="https://github.com/emersion/xdg-desktop-portal-wlr/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  meson setup $name-$version build \
-    --prefix=/usr \
-    --libexecdir=lib \
-    --buildtype=plain \
-    --wrap-mode nodownload \
-    -D b_lto=true \
-    -D b_pie=true \
-    -D sd-bus-provider=basu
-  meson compile -C build
-  DESTDIR=$PKG meson install -C build
+    vylen-meson "${name}-${version}" build \
+        --libexecdir=lib \
+        -Dsd-bus-provider=basu
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 }
