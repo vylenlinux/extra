@@ -1,19 +1,23 @@
-description="Vylen Linux Package Manager "
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Vylen Linux Package Manager"
 homepage="https://gitlab.com/vylen/emerald"
 maintainer="Vylen Linux Team"
 
 name=emerald
-version=20260318
+version=20260419
 release=1
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 backup="etc/${name}.conf
-	etc/${name}.alias
-	etc/${name}.repo
-	etc/${name}.mask
-	etc/revdep.conf"
+    etc/${name}.alias
+    etc/${name}.repo
+    etc/${name}.mask
+    etc/revdep.conf"
 
 build() {
-	cd "${name}-${version}"
-	DESTDIR="${PKG}" ./INSTALL.sh
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    DESTDIR="${PKG}" ./INSTALL.sh
 }
