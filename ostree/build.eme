@@ -14,7 +14,8 @@ build() {
     # shellcheck disable=SC2164
     cd "lib${name}-${version}"
 
-    ./configure --prefix=/usr \
+    ./configure \
+        --prefix=/usr \
         --with-builtin-grub2-mkconfig \
         --with-ed25519-libsodium \
         --with-openssl \
