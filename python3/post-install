@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PYVERSION=$(awk -F'[=.]' '/^version=/{print $2"."$3}' BUILDFILE)
+PYVERSION=$(awk -F'[=.]' '/^version=/{print $2"."$3}' build.eme)
 
 # Rebuild with a mayor version upgrade
 if [ "${PYVERSION}" != "3.14" ]; then
