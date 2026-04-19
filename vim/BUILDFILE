@@ -40,9 +40,6 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    mv "${PKG}/usr/share/man/man1" "${SRC}/man1"
-    mv "${SRC}/man1" "${PKG}/usr/share/man/man1"
-
     # no desktop files and icons
     rm -r "${PKG}/usr/share/applications" \
         "${PKG}/usr/share/icons"
