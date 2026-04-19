@@ -121,12 +121,20 @@ drwxr-xr-x root/root    etc/sysctl.d/
 drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/halt
 lrwxrwxrwx root/root    sbin/init -> /usr/sbin/openrc-init
+-rwxr-xr-x root/root    sbin/openrc
+-rwxr-xr-x root/root    sbin/openrc-init
+-rwxr-xr-x root/root    sbin/openrc-run
+-rwxr-xr-x root/root    sbin/openrc-shutdown
 lrwxrwxrwx root/root    sbin/poweroff -> halt
+-rwxr-xr-x root/root    sbin/rc-service
+-rwxr-xr-x root/root    sbin/rc-sstat
+-rwxr-xr-x root/root    sbin/rc-status
+-rwxr-xr-x root/root    sbin/rc-update
 -rwxr-xr-x root/root    sbin/reboot
 lrwxrwxrwx root/root    sbin/shutdown -> /usr/sbin/openrc-shutdown
+-rwxr-xr-x root/root    sbin/start-stop-daemon
+-rwxr-xr-x root/root    sbin/supervise-daemon
 drwxr-xr-x root/root    usr/
-drwxr-xr-x root/root    usr/bin/
--rwxr-xr-x root/root    usr/bin/rc-status
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/einfo.h
 -rw-r--r-- root/root    usr/include/rc.h
@@ -218,16 +226,6 @@ drwxr-xr-x root/root    usr/lib/rc/sh/
 -rw-r--r-- root/root    usr/lib/rc/version
 drwxr-xr-x root/root    usr/lib/security/
 -rwxr-xr-x root/root    usr/lib/security/pam_openrc.so
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/openrc
--rwxr-xr-x root/root    usr/sbin/openrc-init
--rwxr-xr-x root/root    usr/sbin/openrc-run
--rwxr-xr-x root/root    usr/sbin/openrc-shutdown
--rwxr-xr-x root/root    usr/sbin/rc-service
--rwxr-xr-x root/root    usr/sbin/rc-sstat
--rwxr-xr-x root/root    usr/sbin/rc-update
--rwxr-xr-x root/root    usr/sbin/start-stop-daemon
--rwxr-xr-x root/root    usr/sbin/supervise-daemon
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/bash-completion/
 drwxr-xr-x root/root    usr/share/bash-completion/completions/
