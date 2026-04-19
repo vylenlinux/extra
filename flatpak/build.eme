@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team"
 homepage="https://flatpak.org"
 
 name=flatpak
-version=1.16.5
+version=1.16.6
 release=1
 
 source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz
