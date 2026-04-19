@@ -1,7 +1,9 @@
 filesystem
 openrc
+linux-pam
 linux-api-headers
 glibc
+glibc-32
 binutils
 gcc
 libtool
