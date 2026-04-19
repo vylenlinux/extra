@@ -1,40 +1,45 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Framework for keeping track of the various users, sessions, and seats present on a system"
 homepage="https://github.com/ConsoleKit2/ConsoleKit2"
 maintainer="Vylen Linux Team"
 
 name=consolekit2
-version=1.2.6
+version=2.0.0
 release=1
-source="https://github.com/ConsoleKit2/ConsoleKit2/archive/$version/$name-$version.tar.gz
-	pam-foreground-compat.ck"
+
+source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz
+    pam-foreground-compat.ck"
 
 build() {
-	cd ConsoleKit2-$version
+    # shellcheck disable=SC2164
+    cd "ConsoleKit2-${version}"
+    NOCONFIGURE=1 ./autogen.sh
 
-	NOCONFIGURE=1 ./autogen.sh
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--libexecdir=/usr/lib/$name \
-		--localstatedir=/var \
-		--runstatedir=/run \
-		--disable-nls \
-		--enable-udev-acl \
-		--enable-pam-module \
-		--enable-polkit \
-		--with-xinitrc-dir=/etc/X11/app-defaults/xinitrc.d \
-		--with-systemdsystemunitdir=no
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir="/usr/lib/${name}" \
+        --localstatedir=/var \
+        --runstatedir=/run \
+        --disable-nls \
+        --enable-udev-acl \
+        --enable-pam-module \
+        --enable-polkit \
+        --with-xinitrc-dir=/etc/X11/app-defaults/xinitrc.d \
+        --with-systemdsystemunitdir=no
 
-	mv -v $PKG/etc/X11/app-defaults/xinitrc.d/90-consolekit \
-	      $PKG/etc/X11/app-defaults/xinitrc.d/90-consolekit.sh
+    make
+    make DESTDIR="${PKG}" install
 
-	install -Dm 755 $SRC/pam-foreground-compat.ck \
-	                $PKG/usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck
+    mv -v "${PKG}/etc/X11/app-defaults/xinitrc.d/90-consolekit" \
+        "${PKG}/etc/X11/app-defaults/xinitrc.d/90-consolekit.sh"
 
-	# Use poweroff instead shutdown command.
-	sed '/^shutdown/c\poweroff' -i "$PKG/usr/lib/ConsoleKit/scripts/ck-system-stop"
+    install -Dm755 "${SRC}/pam-foreground-compat.ck" \
+        "${PKG}/usr/lib/ConsoleKit/run-session.d/pam-foreground-compat.ck"
 
-	rm -fr $PKG/var/run
+    # Use poweroff instead shutdown command.
+    sed '/^shutdown/c\poweroff' -i "${PKG}/usr/lib/ConsoleKit/scripts/ck-system-stop"
+    rm -fr "${PKG}/var/run"
 }
