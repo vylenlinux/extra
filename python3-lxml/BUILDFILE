@@ -6,17 +6,18 @@ homepage="https://lxml.de/"
 maintainer="Vylen Linux Team"
 
 name=python3-lxml
-version=6.0.4
+version=6.1.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/l/lxml/lxml-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "lxml-${version}"
-    python3 setup.py build
+    export CFLAGS="${CFLAGS} -flto=auto"
 
-    python3 setup.py install \
-        --root="${PKG}" \
-        --optimize=1 \
-        --skip-build
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }

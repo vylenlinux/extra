@@ -1,2 +1,7 @@
 python3-setuptools
 libxslt
+libxml2
+python3-gpep517
+python3-setuptools
+python3-wheel
+cython3
