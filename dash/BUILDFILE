@@ -6,7 +6,7 @@ homepage="http://gondor.apana.org.au/~herbert/dash/"
 maintainer="Vylen Linux Team"
 
 name=dash
-version=0.5.13.2
+version=0.5.13.3
 release=1
 source="http://gondor.apana.org.au/~herbert/${name}/files/${name}-${version}.tar.gz"
 
@@ -22,5 +22,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-	ln -s dash "${PKG}/bin/sh"
+    ln -s dash "${PKG}/bin/sh"
 }
