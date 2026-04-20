@@ -43,8 +43,8 @@ build() {
     done
 
     install -d "${PKG}/sbin"
-    ln -s /usr/sbin/openrc-init "${PKG}/sbin/init"
-    ln -s /usr/sbin/openrc-shutdown "${PKG}/sbin/shutdown"
+    ln -s /sbin/openrc-init "${PKG}/sbin/init"
+    ln -s /sbin/openrc-shutdown "${PKG}/sbin/shutdown"
 
     install -Dm755 "${SRC}/halt" -t "${PKG}/sbin/"
     install -Dm755 "${SRC}/reboot" -t "${PKG}/sbin/"

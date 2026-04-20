@@ -120,7 +120,7 @@ drwxr-xr-x root/root    etc/sysctl.d/
 -rw-r--r-- root/root    etc/sysctl.d/README
 drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/halt
-lrwxrwxrwx root/root    sbin/init -> /usr/sbin/openrc-init
+lrwxrwxrwx root/root    sbin/init -> /sbin/openrc-init
 -rwxr-xr-x root/root    sbin/openrc
 -rwxr-xr-x root/root    sbin/openrc-init
 -rwxr-xr-x root/root    sbin/openrc-run
@@ -131,7 +131,7 @@ lrwxrwxrwx root/root    sbin/poweroff -> halt
 -rwxr-xr-x root/root    sbin/rc-status
 -rwxr-xr-x root/root    sbin/rc-update
 -rwxr-xr-x root/root    sbin/reboot
-lrwxrwxrwx root/root    sbin/shutdown -> /usr/sbin/openrc-shutdown
+lrwxrwxrwx root/root    sbin/shutdown -> /sbin/openrc-shutdown
 -rwxr-xr-x root/root    sbin/start-stop-daemon
 -rwxr-xr-x root/root    sbin/supervise-daemon
 drwxr-xr-x root/root    usr/
