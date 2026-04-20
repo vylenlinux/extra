@@ -1,4 +1,4 @@
-eudev-3.2.14-1
+eudev-3.2.14-2
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
 -rw-r--r-- root/root    etc/conf.d/udev
