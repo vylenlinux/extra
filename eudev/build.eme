@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=eudev
 version=3.2.14
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://github.com/eudev-project/${name}/archive/v${version}.tar.gz"
 
 build() {
@@ -40,11 +40,9 @@ build() {
 
     make DESTDIR="${PKG}" install
 
-    if emerald isinstalled openrc; then
-        openrc_add udev udev-trigger
-        install -d "${PKG}/etc/runlevels/sysinit"
+    openrc_add udev udev-trigger
+    install -d "${PKG}/etc/runlevels/sysinit"
 
-        ln -sf "/etc/init.d/udev" "${PKG}/etc/runlevels/sysinit/udev"
-        ln -sf "/etc/init.d/udev-trigger" "${PKG}/etc/runlevels/sysinit/udev-trigger"
-    fi
+    ln -sf "/etc/init.d/udev" "${PKG}/etc/runlevels/sysinit/udev"
+    ln -sf "/etc/init.d/udev-trigger" "${PKG}/etc/runlevels/sysinit/udev-trigger"
 }
