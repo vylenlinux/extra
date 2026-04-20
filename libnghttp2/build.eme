@@ -6,12 +6,12 @@ homepage="https://nghttp2.org"
 maintainer="Vylen Linux Team"
 
 name=libnghttp2
-version=1.68.1
+version=1.69.0
 release=1
 source="https://github.com/nghttp2/nghttp2/releases/download/v${version}/nghttp2-${version}.tar.xz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "nghttp2-${version}"
     autoreconf -i
 
