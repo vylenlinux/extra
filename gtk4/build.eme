@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=gtk4
 version=4.22.3
 release=1
-source="https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.bz2"
+source="${name}-${version}.tar.bz2::https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.bz2"
 
 build() {
     export XML_CATALOG_FILES=/etc/xml/catalog
