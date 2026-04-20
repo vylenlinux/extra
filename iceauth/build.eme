@@ -1,21 +1,25 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="ICE authority file utility"
 homepage="https://gitlab.freedesktop.org/xorg/app/iceauth"
 maintainer="Vylen Linux Team"
 
 name=iceauth
-version=1.0.10
+version=1.0.11
 release=1
-source="http://ftp.x.org/pub/individual/app/iceauth-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/app/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
