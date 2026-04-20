@@ -33,5 +33,5 @@ build() {
     install -v -m644 conf/gpm-root.conf "${PKG}/etc"
 
     install -Dm644 "${SRC}/gpm.sh" -t "${PKG}/etc/profile.d/"
-    openrc_add "${name}"
+    runit_add "${name}"
 }

@@ -48,6 +48,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    openrc_add "${name}"
+    runit_add "${name}"
     rm -r "${PKG}/usr/share/doc"
 }

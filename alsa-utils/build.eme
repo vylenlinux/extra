@@ -26,5 +26,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    openrc_add alsa
+    runit_add alsa
 }

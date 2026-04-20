@@ -1,0 +1,37 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A UNIX init scheme with service supervision"
+homepage="http://smarden.org/runit"
+maintainer="Vylen Linux Team"
+
+name=runit
+version=2.3.1
+release=1
+
+source="http://smarden.org/${name}/${name}-${version}.tar.gz
+    halt
+    shutdown
+    shutdown.8"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "admin/${name}-${version}"
+
+    # set default service path to /var/service
+    sed -i -e 's:^char \*varservice ="/service/";$:char \*varservice ="/var/service/";:' src/sv.c
+
+    ./package/compile
+    ./package/check
+
+    for bin in "${SRC}/halt" "${SRC}/shutdown" command/*; do
+        install -Dm755 "${bin}" -t "${PKG}/sbin/"
+    done
+
+    ln -s /sbin/runit-init "${PKG}/sbin/init"
+    ln -s halt "${PKG}/sbin/reboot"
+    ln -s halt "${PKG}/sbin/poweroff"
+
+    install -Dm644 man/* -t "${PKG}/usr/share/man/man8/"
+    install -Dm644 "${SRC}/shutdown.8" "${PKG}/usr/share/man/man8/shutdown.8"
+}

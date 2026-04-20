@@ -1,12 +1,12 @@
 smartmontools-7.5-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/smartd
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/smartd
 -rw-r--r-- root/root    etc/smartd.conf
 drwxr-xr-x root/root    etc/smartd_warning.d/
 -rwxr-xr-x root/root    etc/smartd_warning.sh
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/smartd/
+-rwxr-xr-x root/root    etc/sv/smartd/finish
+-rwxr-xr-x root/root    etc/sv/smartd/run
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/smartctl

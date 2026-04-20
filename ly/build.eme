@@ -19,7 +19,15 @@ build() {
     sed -i 's|shutdown_cmd = /sbin/shutdown $PLATFORM_SHUTDOWN_ARG now|shutdown_cmd = poweroff|' res/config.ini
     sed -i 's|sleep_cmd = null|sleep_cmd = zzz|' res/config.ini
 
-    zig build --search-prefix /usr -Ddest_directory="${PKG}" -Dname="ly-dm" --global-cache-dir ./zig-global-cache/p --build-id=sha1 -Dtarget=native -Dcpu=baseline -Doptimize=ReleaseSafe installexe
+    zig build \
+        -Dinit_system=runit \
+        --search-prefix /usr \
+        -Ddest_directory="${PKG}" \
+        -Dname="ly-dm" \
+        --build-id=sha1 \
+        -Dtarget=native \
+        -Dcpu=baseline \
+        -Doptimize=ReleaseSafe installexe
 
     cat <<'EOF' > "${PKG}/etc/pam.d/ly"
 auth        include     system-auth
@@ -30,6 +38,4 @@ session     optional    pam_keyinit.so force revoke
 session     include     system-session
 -session    optional    pam_kwallet5.so auto_start
 EOF
-
-    openrc_add "${name}"
 }

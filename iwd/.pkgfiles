@@ -1,8 +1,9 @@
 iwd-3.12-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/iwd
 drwx------ root/root    etc/iwd/
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/iwd/
+-rwxr-xr-x root/root    etc/sv/iwd/run
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/iwctl

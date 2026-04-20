@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Runit bootscripts for Vylen Linux"
+homepage="https://gitlab.com/vylen/init"
+maintainer="Vylen Linux Team"
+
+name=init
+version=20260314
+release=1
+source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    make all
+
+    DESTDIR="${PKG}" make install
+    install -Dm755 modules-load -t "${PKG}/usr/sbin/"
+}

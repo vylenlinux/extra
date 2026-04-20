@@ -1,12 +1,11 @@
 gpm-1.20.7-2
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/gpm
 -rw-r--r-- root/root    etc/gpm-root.conf
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/gpm
 drwxr-xr-x root/root    etc/profile.d/
 -rw-r--r-- root/root    etc/profile.d/gpm.sh
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/gpm/
+-rwxr-xr-x root/root    etc/sv/gpm/run
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/disable-paste

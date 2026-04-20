@@ -29,5 +29,5 @@ build() {
     install -v -m644 contrib/ssh-copy-id.1 "${PKG}/usr/share/man/man1"
 
     sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' -i "${PKG}/etc/ssh/sshd_config"
-    openrc_add ssh-agent sshd
+    runit_add sshd # ssh-agent
 }

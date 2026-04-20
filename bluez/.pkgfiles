@@ -7,10 +7,11 @@ drwxr-xr-x root/root    etc/bluetooth/
 -rw-r--r-- root/root    etc/bluetooth/network.conf
 -rw-r--r-- root/root    etc/bluetooth/rfcomm.conf
 -rw-r--r-- root/root    etc/bluetooth/uart.conf
-drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/bluetoothd
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/bluetoothd
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/bluetooth-meshd/
+-rwxr-xr-x root/root    etc/sv/bluetooth-meshd/run
+drwxr-xr-x root/root    etc/sv/bluetoothd/
+-rwxr-xr-x root/root    etc/sv/bluetoothd/run
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 -rwxr-xr-x root/root    lib/udev/hid2hci

@@ -8,7 +8,10 @@ maintainer="Vylen Linux Team"
 name=networkmanager
 version=1.56.0
 release=1
-source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz
+    NetworkManager.conf"
+
 backup="etc/NetworkManager/NetworkManager.conf"
 
 build() {
@@ -34,12 +37,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    mkdir -p "${PKG}/etc/NetworkManager"
-
-    cat >> "${PKG}/etc/NetworkManager/NetworkManager.conf" <<"EOF"
-[main]
-plugins=keyfile
-EOF
-
-    openrc_add "${name}"
+    install -Dm644 "${SRC}/NetworkManager.conf" -t "${PKG}/etc/NetworkManager/"
+    runit_add "${name}"
 }

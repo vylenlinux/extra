@@ -10,10 +10,9 @@ drwxr-xr-x root/root    etc/NetworkManager/dispatcher.d/pre-up.d/
 drwxr-xr-x root/root    etc/NetworkManager/dnsmasq-shared.d/
 drwxr-xr-x root/root    etc/NetworkManager/dnsmasq.d/
 drwxr-xr-x root/root    etc/NetworkManager/system-connections/
-drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/networkmanager
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/networkmanager
+drwxr-xr-x root/root    etc/sv/
+drwxr-xr-x root/root    etc/sv/networkmanager/
+-rwxr-xr-x root/root    etc/sv/networkmanager/run
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 drwxr-xr-x root/root    lib/udev/rules.d/

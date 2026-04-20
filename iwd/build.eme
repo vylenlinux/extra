@@ -27,5 +27,5 @@ build() {
     install -dm0700 "${PKG}/var/lib/iwd" \
         "${PKG}/etc/iwd"
 
-    openrc_add "${name}"
+    runit_add "${name}"
 }

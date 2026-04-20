@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sv check dbus >/dev/null || exit 1
+
+exec 2>&1
+exec /usr/lib/bluetooth/bluetooth-meshd --nodetach

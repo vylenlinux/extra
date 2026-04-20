@@ -30,5 +30,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/rsyncd.conf" -t "${PKG}/etc/"
-    openrc_add rsyncd
+    runit_add rsyncd
 }

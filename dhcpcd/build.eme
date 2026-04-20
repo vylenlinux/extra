@@ -24,5 +24,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     [ ! -f "${PKG}/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf" ] && install -Dm444 "${SRC}/50-ntp.conf" -t "${PKG}/lib/dhcpcd/dhcpcd-hooks/"
-    openrc_add dhcpcd
+    runit_add dhcpcd
 }
