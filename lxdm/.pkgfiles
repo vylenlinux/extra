@@ -14,6 +14,7 @@ drwxr-xr-x root/root    etc/pam.d/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/lxdm/
 -rwxr-xr-x root/root    etc/sv/lxdm/run
+lrwxrwxrwx root/root    etc/sv/lxdm/supervise -> /run/runit/supervise.lxdm
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/lxdm-config

@@ -4,6 +4,7 @@ drwx------ root/root    etc/iwd/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/iwd/
 -rwxr-xr-x root/root    etc/sv/iwd/run
+lrwxrwxrwx root/root    etc/sv/iwd/supervise -> /run/runit/supervise.iwd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/iwctl

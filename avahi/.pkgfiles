@@ -11,6 +11,7 @@ drwxr-xr-x root/root    etc/avahi/services/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/avahi-daemon/
 -rwxr-xr-x root/root    etc/sv/avahi-daemon/run
+lrwxrwxrwx root/root    etc/sv/avahi-daemon/supervise -> /run/runit/supervise.avahi-daemon
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/avahi-browse

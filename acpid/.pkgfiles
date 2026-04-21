@@ -7,6 +7,7 @@ drwxr-xr-x root/root    etc/acpi/events/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/acpid/
 -rwxr-xr-x root/root    etc/sv/acpid/run
+lrwxrwxrwx root/root    etc/sv/acpid/supervise -> /run/runit/supervise.acpid
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/acpi_listen

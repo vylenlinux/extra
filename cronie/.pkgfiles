@@ -14,6 +14,7 @@ drwxr-xr-x root/root    etc/pam.d/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/crond/
 -rwxr-xr-x root/root    etc/sv/crond/run
+lrwxrwxrwx root/root    etc/sv/crond/supervise -> /run/runit/supervise.crond
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/anacron

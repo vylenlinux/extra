@@ -73,8 +73,10 @@ drwxr-xr-x root/root    etc/ssh/ssh_config.d/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/libvirtd/
 -rwxr-xr-x root/root    etc/sv/libvirtd/run
+lrwxrwxrwx root/root    etc/sv/libvirtd/supervise -> /run/runit/supervise.libvirtd
 drwxr-xr-x root/root    etc/sv/virtlogd/
 -rwxr-xr-x root/root    etc/sv/virtlogd/run
+lrwxrwxrwx root/root    etc/sv/virtlogd/supervise -> /run/runit/supervise.virtlogd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/virsh

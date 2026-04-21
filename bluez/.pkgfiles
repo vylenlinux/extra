@@ -10,8 +10,10 @@ drwxr-xr-x root/root    etc/bluetooth/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/bluetooth-meshd/
 -rwxr-xr-x root/root    etc/sv/bluetooth-meshd/run
+lrwxrwxrwx root/root    etc/sv/bluetooth-meshd/supervise -> /run/runit/supervise.bluetooth-meshd
 drwxr-xr-x root/root    etc/sv/bluetoothd/
 -rwxr-xr-x root/root    etc/sv/bluetoothd/run
+lrwxrwxrwx root/root    etc/sv/bluetoothd/supervise -> /run/runit/supervise.bluetoothd
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 -rwxr-xr-x root/root    lib/udev/hid2hci

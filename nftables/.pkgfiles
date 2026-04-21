@@ -4,6 +4,7 @@ drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/nftables/
 -rwxr-xr-x root/root    etc/sv/nftables/run
+lrwxrwxrwx root/root    etc/sv/nftables/supervise -> /run/runit/supervise.nftables
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/nft

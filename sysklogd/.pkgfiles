@@ -3,6 +3,7 @@ drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/sysklogd/
 -rwxr-xr-x root/root    etc/sv/sysklogd/run
+lrwxrwxrwx root/root    etc/sv/sysklogd/supervise -> /run/runit/supervise.sysklogd
 -rw-r--r-- root/root    etc/syslog.conf.epkgnew
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/

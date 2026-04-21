@@ -8,6 +8,7 @@ drwxr-xr-x root/root    etc/pam.d/
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/sddm/
 -rwxr-xr-x root/root    etc/sv/sddm/run
+lrwxrwxrwx root/root    etc/sv/sddm/supervise -> /run/runit/supervise.sddm
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/sddm
