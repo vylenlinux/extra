@@ -6,11 +6,11 @@ homepage="https://www.rust-lang.org/"
 maintainer="Vylen Linux Team"
 
 name=rust
-version=1.94.1
+version=1.95.0
 release=1
 
-_date=2026-01-22
-_rust=1.93.0
+_date=2026-03-05
+_rust=1.94.0
 _cargo="${_rust}"
 _triplet=x86_64-unknown-linux-gnu
 
@@ -23,7 +23,8 @@ source="https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
     0003-bootstrap-Workaround-for-system-stage0.patch
     0004-compiler-Change-LLVM-targets.patch
     0005-compiler-Use-ld.lld-by-default.patch
-    0008-compiler-Swap-primary-and-secondary-lib-dirs.patch"
+    0008-compiler-Swap-primary-and-secondary-lib-dirs.patch
+    config.toml"
 
 noextract="rust-std-${_rust}-${_triplet}.tar.xz
     rustc-${_rust}-${_triplet}.tar.xz
@@ -54,69 +55,12 @@ build() {
     patch -Np1 -i "${SRC}/0008-compiler-Swap-primary-and-secondary-lib-dirs.patch"
 
     mkdir -p "build/cache/${_date}"
-    cp "${SRC}/rust-std-${_rust}-${_triplet}.tar.xz" "build/cache/${_date}/"
-    cp "${SRC}/rustc-${_rust}-${_triplet}.tar.xz"    "build/cache/${_date}/"
-    cp "${SRC}/cargo-${_cargo}-${_triplet}.tar.xz"   "build/cache/${_date}/"
 
-    cat <<'EOF' > config.toml
-profile = "dist"
-change-id = 148671
+    for tarball in "rust-std-${_rust}-${_triplet}.tar.xz" "rustc-${_rust}-${_triplet}.tar.xz" "cargo-${_cargo}-${_triplet}.tar.xz"; do
+        cp "${SRC}/${tarball}" "build/cache/${_date}/"
+    done
 
-[llvm]
-ninja = true
-download-ci-llvm = false
-link-shared = true
-
-[install]
-prefix = "/usr"
-
-[rust]
-channel = "stable"
-codegen-units = 1
-codegen-units-std = 1
-debuginfo-level = 1
-debuginfo-level-std = 2
-codegen-tests = false
-backtrace-on-ice = true
-lld = false
-use-lld = "external"
-jemalloc = true
-remap-debuginfo = false
-debug-assertions = false
-rpath = false
-frame-pointers = true
-deny-warnings = false
-optimize = true
-codegen-backends = ["llvm"]
-lto = "fat"
-
-[build]
-target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
-description = "Vylen"
-tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
-docs = false
-extended = true
-sanitizers = true
-profiler = true
-locked-deps = true
-vendor = true
-optimized-compiler-builtins = true
-python = "/usr/bin/python3"
-
-[target.x86_64-unknown-linux-gnu]
-cc = "/usr/bin/gcc"
-cxx = "/usr/bin/g++"
-ar = "/usr/bin/gcc-ar"
-ranlib = "/usr/bin/gcc-ranlib"
-llvm-config = "/usr/bin/llvm-config"
-
-[target.i686-unknown-linux-gnu]
-cc = "/usr/bin/gcc"
-cxx = "/usr/bin/g++"
-ar = "/usr/bin/gcc-ar"
-ranlib = "/usr/bin/gcc-ranlib"
-EOF
-
+    install -Dm644 "${SRC}/config.toml" -t .
     mkdir "${SRC}/rust"
 
     export CARGO_HOME="${SRC}/rust"
@@ -130,9 +74,9 @@ EOF
 
     unset LIBSSH2_SYS_USE_PKG_CONFIG LIBSQLITE3_SYS_USE_PKG_CONFIG
 
-    rm -rf "${PKG}/usr/lib/rustlib/components"
-    rm -rf "${PKG}/usr/lib/rustlib/manifest-rustc"
-    rm -rf "${PKG}/usr/lib/rustlib/rust-installer-version"
     # shellcheck disable=SC2115
-    rm -rf "${PKG}/etc"
+    rm -rf "${PKG}/usr/lib/rustlib/components" \
+        "${PKG}/usr/lib/rustlib/manifest-rustc" \
+        "${PKG}/usr/lib/rustlib/rust-installer-version" \
+        "${PKG}/etc"
 }

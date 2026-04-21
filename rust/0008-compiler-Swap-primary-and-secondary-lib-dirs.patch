@@ -9,7 +9,7 @@ Arch Linux prefers "lib" over "lib64".
  1 file changed, 7 insertions(+), 5 deletions(-)
 
 diff --git a/compiler/rustc_target/src/lib.rs b/compiler/rustc_target/src/lib.rs
-index dfa1b2320718..fe7d266dea7f 100644
+index 1dc62cb3659c..6913c965e4fc 100644
 --- a/compiler/rustc_target/src/lib.rs
 +++ b/compiler/rustc_target/src/lib.rs
 @@ -50,20 +50,22 @@ fn find_relative_libdir(sysroot: &Path) -> std::borrow::Cow<'static, str> {

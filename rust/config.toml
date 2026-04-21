@@ -1,0 +1,56 @@
+profile = "dist"
+change-id = 154587
+
+[llvm]
+ninja = true
+download-ci-llvm = false
+link-shared = true
+
+[install]
+prefix = "/usr"
+
+[rust]
+channel = "stable"
+codegen-units = 1
+codegen-units-std = 1
+debuginfo-level = 1
+debuginfo-level-std = 2
+codegen-tests = false
+backtrace-on-ice = true
+lld = false
+use-lld = "external"
+jemalloc = true
+remap-debuginfo = false
+debug-assertions = false
+rpath = false
+frame-pointers = true
+deny-warnings = false
+optimize = true
+codegen-backends = ["llvm"]
+lto = "fat"
+
+[build]
+target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
+description = "Vylen"
+tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
+docs = false
+extended = true
+sanitizers = true
+profiler = true
+locked-deps = true
+vendor = true
+optimized-compiler-builtins = true
+python = "/usr/bin/python3"
+
+[target.x86_64-unknown-linux-gnu]
+cc = "/usr/bin/gcc"
+cxx = "/usr/bin/g++"
+ar = "/usr/bin/gcc-ar"
+ranlib = "/usr/bin/gcc-ranlib"
+llvm-config = "/usr/bin/llvm-config"
+
+[target.i686-unknown-linux-gnu]
+cc = "/usr/bin/gcc"
+cxx = "/usr/bin/g++"
+ar = "/usr/bin/gcc-ar"
+ranlib = "/usr/bin/gcc-ranlib"
