@@ -15,3 +15,4 @@ gettext
 appstream
 bubblewrap
 gdk-pixbuf
+avahi
