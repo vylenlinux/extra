@@ -220,4 +220,7 @@ build() {
         # shellcheck disable=SC2035
         install -m0644 *.ko "${PKG}/lib/modules/${kver}/extra/"
     done
+
+    install -d "${PKG}/etc/revdep.d/"
+    echo "/usr/lib/libnvidia-gtk2.so.595.58.03" "${PKG}/etc/revdep.d/${name}.conf"
 }
