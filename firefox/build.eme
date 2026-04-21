@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=firefox
 version=150.0
-release=1
+release=2
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
     ${name}.desktop
@@ -21,7 +21,7 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/relea
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
- 
+
     # Make different channels installable in parallel
     patch -Np1 -i "${SRC}/0001-Install-under-remoting-name.patch"
 
@@ -83,7 +83,12 @@ build() {
 
     # distribution
     distini="${PKG}/usr/lib/${name}/distribution/"
-    install -Dvm644 /dev/stdin "${SRC}/distribution.ini" -t "${distini}"
+
+    sed -i \
+         -e "s|@VERSION@|${version}|" \
+         -e "s|@NAME@|${name}|" \
+         "${SRC}/distribution.ini" \
+    | install -Dvm644 /dev/stdin "${SRC}/distribution.ini" -t "${distini}"
 
     # add icons
     for i in 16 22 24 32 48 64 128 256; do
