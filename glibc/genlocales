@@ -24,7 +24,7 @@ while read -r locale charset; do
             input=$(echo "${locale}" | sed 's/\([^.]*\)[^@]*\(.*\)/\1\2/')
         fi
 
-        printf "Generate locale %s.%s..." "${locale}" "${charset}"
+        printf 'Generate locale %s.%s...\n' "${locale}" "${charset}"
         localedef -i "${input}" -f "${charset}" "${locale}"
     fi
 done < "${LOCALES}"
