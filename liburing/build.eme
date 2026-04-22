@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Linux-native io_uring I/O access library"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/axboe/liburing"
+
+name=liburing
+version=2.14
+release=1
+source="https://github.com/axboe/${name}/archive/refs/tags/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
+
+    make
+    make DESTDIR="${PKG}" install
+}
