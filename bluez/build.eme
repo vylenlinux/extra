@@ -57,5 +57,5 @@ EOF
 # End of uart.conf
 EOF
 
-    runit_add bluetoothd bluetooth-meshd
+    openrc_add bluetoothd
 }

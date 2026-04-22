@@ -43,5 +43,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -d "${PKG}/usr/lib/sasl2" "${PKG}/var/sasl/saslauthd"
-    runit_add saslauthd
+    openrc_add saslauthd
 }

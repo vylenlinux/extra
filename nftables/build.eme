@@ -38,5 +38,5 @@ build() {
     install -Dm600 "${SRC}/${name}.nft" -t "${PKG}/etc/"
 
     rm -r "${PKG}/usr/share/doc"
-    runit_add "${name}"
+    openrc_add "${name}"
 }

@@ -1,10 +1,9 @@
 alsa-utils-1.2.15.2-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/alsa/
--rwxr-xr-x root/root    etc/sv/alsa/finish
--rwxr-xr-x root/root    etc/sv/alsa/run
-lrwxrwxrwx root/root    etc/sv/alsa/supervise -> /run/runit/supervise.alsa
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/alsa
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/alsa
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 drwxr-xr-x root/root    lib/udev/rules.d/

@@ -54,5 +54,5 @@ build() {
         "${PKG}/run" \
         "${PKG}/usr/lib/systemd"
 
-    runit_add libvirtd virtlogd # virtlockd
+    openrc_add libvirt-guests libvirtd virtlockd virtlogd
 }

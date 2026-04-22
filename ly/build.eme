@@ -20,7 +20,6 @@ build() {
     sed -i 's|sleep_cmd = null|sleep_cmd = zzz|' res/config.ini
 
     zig build \
-        -Dinit_system=runit \
         --search-prefix /usr \
         -Ddest_directory="${PKG}" \
         -Dname="ly-dm" \
@@ -38,4 +37,7 @@ session     optional    pam_keyinit.so force revoke
 session     include     system-session
 -session    optional    pam_kwallet5.so auto_start
 EOF
+
+    openrc_add "${name}"
+    rm -rf "${PKG}/usr/lib/"
 }

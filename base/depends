@@ -1,5 +1,6 @@
 filesystem
-init
+openrc
+linux-pam
 linux-api-headers
 glibc
 glibc-32

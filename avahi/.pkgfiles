@@ -8,10 +8,9 @@ drwxr-xr-x root/root    etc/avahi/
 drwxr-xr-x root/root    etc/avahi/services/
 -rw-r--r-- root/root    etc/avahi/services/sftp-ssh.service
 -rw-r--r-- root/root    etc/avahi/services/ssh.service
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/avahi-daemon/
--rwxr-xr-x root/root    etc/sv/avahi-daemon/run
-lrwxrwxrwx root/root    etc/sv/avahi-daemon/supervise -> /run/runit/supervise.avahi-daemon
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/avahi-daemon
+-rwxr-xr-x root/root    etc/init.d/avahi-dnsconfd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/avahi-browse

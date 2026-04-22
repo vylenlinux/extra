@@ -20,7 +20,7 @@ build() {
         --sysconfdir=/etc \
         --localstatedir=/var \
         --runstatedir=/run \
-        --with-distro=none \
+        --with-distro=gentoo \
         --with-autoipd-user=avahi \
         --with-autoipd-group=avahi \
         --with-avahi-priv-access-group=wheel \
@@ -46,6 +46,4 @@ build() {
 
     ln -s avahi-compat-libdns_sd/dns_sd.h "${PKG}/usr/include/dns_sd.h"
     rm -rf "${PKG}/run"
-
-    runit_add avahi-daemon
 }

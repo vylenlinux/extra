@@ -1,9 +1,9 @@
 sysklogd-2.7.2-1
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/sv/
-drwxr-xr-x root/root    etc/sv/sysklogd/
--rwxr-xr-x root/root    etc/sv/sysklogd/run
-lrwxrwxrwx root/root    etc/sv/sysklogd/supervise -> /run/runit/supervise.sysklogd
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/sysklogd
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/sysklogd
 -rw-r--r-- root/root    etc/syslog.conf.epkgnew
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-[ -r ./conf ] && . ./conf
-exec /usr/sbin/iwd ${OPTS} 2>&1
