@@ -222,5 +222,5 @@ build() {
     done
 
     install -d "${PKG}/etc/revdep.d/"
-    echo "/usr/lib/libnvidia-gtk2.so.595.58.03" "${PKG}/etc/revdep.d/${name}.conf"
+    echo "/usr/lib/libnvidia-gtk2.so.595.58.03" > "${PKG}/etc/revdep.d/${name}.conf"
 }

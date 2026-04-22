@@ -6,6 +6,7 @@ drwxr-xr-x root/root    etc/OpenCL/vendors/
 drwxr-xr-x root/root    etc/modprobe.d/
 -rw-r--r-- root/root    etc/modprobe.d/nvidia.conf
 drwxr-xr-x root/root    etc/revdep.d/
+-rw-r--r-- root/root    etc/revdep.d/nvidia-open.conf
 drwxr-xr-x root/root    etc/vulkan/
 drwxr-xr-x root/root    etc/vulkan/icd.d/
 -rw-r--r-- root/root    etc/vulkan/icd.d/nvidia_icd.json
