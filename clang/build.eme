@@ -6,7 +6,7 @@ homepage="https://clang.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=clang
-version=22.1.3
+version=22.1.4
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
@@ -32,7 +32,7 @@ build() {
 
     jobs=
 
-    while : ; do
+    while :; do
         echo "Try ${jobs:-default} parallel jobs ..."
         cmake --build build -j "${jobs}" && break
 
