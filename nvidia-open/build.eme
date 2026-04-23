@@ -214,12 +214,11 @@ build() {
     cd kernel
     IGNORE_CC_MISMATCH=1 make module
 
-    # shellcheck disable=SC2045
-    for kver in $(ls /lib/modules/); do
-        install -d "${PKG}/lib/modules/${kver}/extra"
-        # shellcheck disable=SC2035
-        install -m0644 *.ko "${PKG}/lib/modules/${kver}/extra/"
-    done
+    kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
+
+    install -d "${PKG}/lib/modules/${kernver}/extra"
+    # shellcheck disable=SC2035
+    install -m0644 *.ko "${PKG}/lib/modules/${kernver}/extra/"
 
     install -d "${PKG}/etc/revdep.d/"
     echo "/usr/lib/libnvidia-gtk2.so.595.58.03" > "${PKG}/etc/revdep.d/${name}.conf"
