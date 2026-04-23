@@ -14,7 +14,7 @@ while [ "$(pgrep -f /usr/bin/pipewire)" = "" ]; do
 done
 
 # Start pipewire-pulse, replacement for the PulseAudio daemon
-[ -f "/usr/share/pipewire/pipewire-pulse.conf" ] && exec /usr/bin/pipewire-pulse &
+[ -f /usr/share/pipewire/pipewire-pulse.conf ] && exec /usr/bin/pipewire-pulse &
 
 # Start wireplumber, replacement for pipewire-media-session 
 [ -x /usr/bin/wireplumber ] && exec /usr/bin/wireplumber &
