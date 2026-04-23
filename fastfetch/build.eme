@@ -6,7 +6,7 @@ homepage="https://github.com/fastfetch-cli/fastfetch"
 maintainer="Vylen Linux Team"
 
 name=fastfetch
-version=2.62.0
+version=2.62.1
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/fastfetch-cli/fastfetch/archive/${version}.tar.gz
@@ -17,7 +17,7 @@ build() {
     cd "${name}-${version}"
     patch -p1 < "${SRC}/add-vylen-support.patch"
 
-    cmake -B build -S . \
+    cmake -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
