@@ -1,4 +1,4 @@
-linux-api-headers-6.19-2
+linux-api-headers-7.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/asm-generic/
@@ -409,6 +409,7 @@ drwxr-xr-x root/root    usr/include/linux/iio/
 -rw-r--r-- root/root    usr/include/linux/input.h
 -rw-r--r-- root/root    usr/include/linux/io_uring.h
 drwxr-xr-x root/root    usr/include/linux/io_uring/
+-rw-r--r-- root/root    usr/include/linux/io_uring/bpf_filter.h
 -rw-r--r-- root/root    usr/include/linux/io_uring/mock_file.h
 -rw-r--r-- root/root    usr/include/linux/io_uring/query.h
 -rw-r--r-- root/root    usr/include/linux/ioam6.h
@@ -886,6 +887,7 @@ drwxr-xr-x root/root    usr/include/linux/tc_ematch/
 -rw-r--r-- root/root    usr/include/linux/trace_mmap.h
 -rw-r--r-- root/root    usr/include/linux/tty.h
 -rw-r--r-- root/root    usr/include/linux/tty_flags.h
+-rw-r--r-- root/root    usr/include/linux/typelimits.h
 -rw-r--r-- root/root    usr/include/linux/types.h
 -rw-r--r-- root/root    usr/include/linux/ublk_cmd.h
 -rw-r--r-- root/root    usr/include/linux/udf_fs_i.h
