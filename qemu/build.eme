@@ -6,7 +6,7 @@ homepage="https://www.qemu.org"
 maintainer="Vylen Linux Team"
 
 name=qemu
-version=10.2.2
+version=11.0.0
 release=1
 
 commit=ece408818d27f745ef1b05fb3cc99a1e7a5bf580
