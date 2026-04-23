@@ -1,3 +1,4 @@
 #!/bin/sh
 
+modprobe nvidia
 sh /var/lib/dkms/buildmodules-nvidia-open.sh
