@@ -1,4 +1,4 @@
-ntfs-3g-2022.10.3-1
+ntfs-3g-2026.2.25-1
 drwxr-xr-x root/root    bin/
 -rwxr-xr-x root/root    bin/lowntfs-3g
 -rwsr-xr-x root/root    bin/ntfs-3g
@@ -95,10 +95,5 @@ lrwxrwxrwx root/root    usr/share/man/man8/mount.ntfs.8.gz -> ntfs-3g.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ntfslabel.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ntfsls.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ntfsprogs.8.gz
--rw-r--r-- root/root    usr/share/man/man8/ntfsrecover.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ntfsresize.8.gz
--rw-r--r-- root/root    usr/share/man/man8/ntfssecaudit.8.gz
--rw-r--r-- root/root    usr/share/man/man8/ntfstruncate.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/ntfsundelete.8.gz
--rw-r--r-- root/root    usr/share/man/man8/ntfsusermap.8.gz
--rw-r--r-- root/root    usr/share/man/man8/ntfswipe.8.gz

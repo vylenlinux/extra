@@ -1,27 +1,32 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="NTFS filesystem driver and utilities"
 homepage="https://www.tuxera.com/community/open-source-ntfs-3g/"
 maintainer="Vylen Linux Team"
 
 name=ntfs-3g
-version=2022.10.3
+version=2026.2.25
 release=1
-source="$name-$version.tar.gz::https://github.com/tuxera/ntfs-3g/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/tuxera/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	autoreconf -fvi
-	./configure \
-		--prefix=/usr \
-		--disable-static \
-		--with-fuse=external \
-		--disable-ldconfig
-	make
-	install -d $PKG/lib
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fvi
 
-	ln -sv ../bin/ntfs-3g $PKG/sbin/mount.ntfs
-	ln -sv ntfs-3g.8 $PKG/usr/share/man/man8/mount.ntfs.8
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --with-fuse=external \
+        --disable-ldconfig
 
-	chmod -v 4755 $PKG/sbin/mount.ntfs
+    make
+    install -d "${PKG}/lib"
+    make DESTDIR="${PKG}" install
 
+    ln -sv ../bin/ntfs-3g "${PKG}/sbin/mount.ntfs"
+    ln -sv ntfs-3g.8 "${PKG}/usr/share/man/man8/mount.ntfs.8"
+
+    chmod -v 4755 "${PKG}/sbin/mount.ntfs"
 }
