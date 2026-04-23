@@ -13,7 +13,7 @@ dkms_remove() {
 
 dkms_install() {
     # shellcheck disable=SC2045
-    for KVER in $(ls /lib/modules/); do
+    for KVER in $(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1); do
         [ -z "${KVER}" ] || KVER=$(uname -r)
         echo "dkms: building nvidia modules for kernel ${KVER}..."
 
