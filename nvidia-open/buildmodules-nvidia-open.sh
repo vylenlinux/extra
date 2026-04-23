@@ -13,14 +13,14 @@ dkms_remove() {
 
 dkms_install() {
     # shellcheck disable=SC2045
-    for KVER in $(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1); do
-        [ -z "${KVER}" ] || KVER=$(uname -r)
-        echo "dkms: building nvidia modules for kernel ${KVER}..."
+    kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
 
-        dkms add     -m @name@ -v @version@ -k "${KVER}" >/dev/null 2>&1
-        dkms build   -m @name@ -v @version@ -k "${KVER}" >/dev/null 2>&1
-        dkms install -m @name@ -v @version@ -k "${KVER}" >/dev/null 2>&1
-    done
+    [ -z "${kernver}" ] || kernver=$(uname -r)
+    echo "dkms: building nvidia modules for kernel ${kernver}..."
+
+    dkms add     -m @name@ -v @version@ -k "${kernver}" >/dev/null 2>&1
+    dkms build   -m @name@ -v @version@ -k "${kernver}" >/dev/null 2>&1
+    dkms install -m @name@ -v @version@ -k "${kernver}" >/dev/null 2>&1
 }
 
 case "${1}" in
