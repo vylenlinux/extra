@@ -1,4 +1,4 @@
-man-pages-6.17-1
+man-pages-6.18-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/diffman-git
@@ -137,6 +137,7 @@ drwxr-xr-x root/root    usr/share/man/man2/
 -rw-r--r-- root/root    usr/share/man/man2/ftruncate.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/ftruncate64.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/futex.2.gz
+-rw-r--r-- root/root    usr/share/man/man2/futex_waitv.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/futimesat.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/get_kernel_syms.2.gz
 -rw-r--r-- root/root    usr/share/man/man2/get_mempolicy.2.gz
@@ -1090,6 +1091,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/aligned_alloc.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/alloca.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/alphasort.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/aprintf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/arc4random.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/arc4random_buf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/arc4random_uniform.3.gz
@@ -1723,6 +1725,8 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/innetgr.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/insque.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/intro.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/io_destroy.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/io_setup.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/iruserok.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/iruserok_af.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/isalnum.3.gz
@@ -2355,6 +2359,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/strndup.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/strndupa.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/strnlen.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/strnul.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/strpbrk.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/strptime.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/strrchr.3.gz
@@ -2493,6 +2498,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/va_end.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/va_start.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/valloc.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/vaprintf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/vasprintf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/vdprintf.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/verr.3.gz
