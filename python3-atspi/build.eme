@@ -1,14 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python3 bindings for the core components of the GNOME Accessibility"
 homepage="https://gitlab.gnome.org/GNOME/pyatspi2"
 maintainer="Vylen Linux Team"
 
 name=python3-atspi
-version=2.58.1
+version=2.58.2
 release=1
-source="$name-$version.tar.gz::https://download.gnome.org/sources/pyatspi/${version%.*}/pyatspi-$version.tar.xz"
+source="${name}-${version}.tar.gz::https://download.gnome.org/sources/pyatspi/${version%.*}/pyatspi-${version}.tar.xz"
 
 build() {
-	vylen-meson pyatspi-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "pyatspi-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
