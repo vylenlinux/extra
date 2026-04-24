@@ -1,14 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Python package for providing Mozilla's CA Bundle"
 homepage="https://github.com/certifi/python-certifi"
 maintainer="Vylen Linux Team"
 
 name=python3-certifi
-version=2026.2.25
+version=2026.4.22
 release=1
-source="$name-$version.tar.gz::https://pypi.io/packages/source/c/certifi/certifi-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.io/packages/source/c/certifi/certifi-${version}.tar.gz"
 
 build() {
-  cd certifi-$version
-  python3 setup.py build
-  python3 setup.py install --prefix=/usr --root=$PKG --skip-build -O1
+    # shellcheck disable=SC2164
+    cd "certifi-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
