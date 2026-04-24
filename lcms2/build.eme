@@ -1,17 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Small-footprint color management engine, with special focus on accuracy and performance"
 homepage="http://www.littlecms.com/"
 maintainer="Vylen Linux Team"
 
 name=lcms2
-version=2.18
+version=2.19
 release=1
-source="https://downloads.sourceforge.net/lcms/$name-$version.tar.gz"
+source="https://downloads.sourceforge.net/lcms/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
