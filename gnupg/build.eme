@@ -1,28 +1,34 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="GNU's tool for secure communication and data storage"
 homepage="https://gnupg.org"
 maintainer="Vylen Linux Team"
 
 name=gnupg
-version=2.5.18
+version=2.5.19
 release=1
-source="https://gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2"
+source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure $GPUPG \
-		--prefix=/usr \
-		--libexecdir=/usr/lib/$name \
-		--disable-ldap \
-		--disable-nls \
-		--disable-tests 
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --libexecdir="/usr/lib/${name}" \
+        --disable-ldap \
+        --disable-nls \
+        --disable-tests
 
-	rm -rf $PKG/usr/share/info
-	rm -rf $PKG/usr/share/doc
-	rm -f $PKG/usr/share/gnupg/FAQ
-        rm -f $PKG/usr/share/gnupg/faq.html
-        rm -f $PKG/usr/share/gnupg/qualified.txt
-	rm -f $PKG/usr/share/gnupg/help*
+    make
+    make DESTDIR="${PKG}" install
+
+    rm -rf "${PKG}/usr/share/info" \
+        "${PKG}/usr/share/doc"
+
+    rm -f "${PKG}/usr/share/gnupg/FAQ" \
+        "${PKG}/usr/share/gnupg/faq.html" \
+        "${PKG}/usr/share/gnupg/qualified.txt" \
+        "${PKG}/usr/share/gnupg"/help*
 }
