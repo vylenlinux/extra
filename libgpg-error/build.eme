@@ -1,23 +1,30 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Library that defines common error values for all GnuPG components"
 homepage="https://www.gnupg.org/"
 maintainer="Vylen Linux Team"
 
 name=libgpg-error
-version=1.59
+version=1.60
 release=1
-source="https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2"
+source="https://www.gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# allow building with gawk-5.0
-	sed -i 's/namespace/pkg_&/' src/Makefile.am src/Makefile.in src/mkstrtable.awk
+    # allow building with gawk-5.0
+    sed -i 's/namespace/pkg_&/' \
+        src/Makefile.am \
+        src/Makefile.in \
+        src/mkstrtable.awk
 
-  	./configure \
-		--prefix=/usr \
-		--disable-nls \
-		--enable-install-gpg-error-config
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --enable-install-gpg-error-config
 
+    make
+    make DESTDIR="${PKG}" install
 }
