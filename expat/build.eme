@@ -9,7 +9,7 @@ name=expat
 version=2.8.0
 release=1
 
-_version=$(printf "%s" "${version}" | sed 's/\./_/g')
+_version="$(printf "%s" "${version}" | sed 's/\./_/g')"
 source="https://github.com/libexpat/libexpat/archive/R_${_version}/${name}-${version}.tar.gz"
 
 build() {
