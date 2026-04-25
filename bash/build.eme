@@ -1,51 +1,57 @@
+#!/usr/bn/env sh
+
+# shellcheck disable=SC2034
 description="The GNU Bourne Again shell"
 homepage="https://www.gnu.org/software/bash/bash.html"
 maintainer="Vylen Linux Team"
 
 name=bash
 version=5.3.9
-release=1
-patchname=$(printf '%s' "$version" | awk -F. '{print "bash"$1$2"-00"}')
+release=2
+
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version%.*}.tar.gz
+    bashrc
+    profile"
+
+patchname=$(printf '%s' "${version}" | awk -F. '{print "bash"$1$2"-00"}')
 patchver=${version##*.}
-source="https://ftp.gnu.org/gnu/bash/$name-${version%.*}.tar.gz
-	bashrc 
-	profile"
 
 # Download bash patches
 if [ "${patchver}" -gt 0 ] 2>/dev/null; then
-  _p=1
-  while [ "$_p" -le "${patchver}" ]; do
-    source="${source} https://ftp.gnu.org/gnu/bash/bash-${version%.*}-patches/${patchname}$_p"
-    _p=$((_p + 1))
-  done
+    _p=1
+
+    while [ "${_p}" -le "${patchver}" ]; do
+        source="${source} https://ftp.gnu.org/gnu/${name}/${name}-${version%.*}-patches/${patchname}${_p}"
+        _p=$((_p + 1))
+    done
 fi
 
 backup="etc/profile
-	etc/bashrc"
+    etc/bashrc"
 
 build() {
-	cd $name-${version%.*}
+    # shellcheck disable=SC2164
+    cd "${name}-${version%.*}"
 
-	# Apply bash patches
-	if [ "${patchver}" -gt 0 ] 2>/dev/null; then
-		for p in "$SRC/${patchname}"*; do
-			patch -Np0 -i $p
-		done
-	fi
+    # Apply bash patches
+    if [ "${patchver}" -gt 0 ] 2>/dev/null; then
+        for p in "${SRC}/${patchname}"*; do
+            patch -Np0 -i "${p}"
+        done
+    fi
 
-	./configure \
-		--prefix=/usr \
-		--with-curses \
-		--enable-readline \
-		--without-bash-malloc \
-		--with-installed-readline
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-curses \
+        --enable-readline \
+        --without-bash-malloc \
+        --with-installed-readline
 
-	mkdir -p $PKG/bin
-	mv $PKG/usr/bin/bash $PKG/bin
+    make
+    make DESTDIR="${PKG}" install
 
-	install -d $PKG/etc
-	install -m644 $SRC/bashrc $PKG/etc
-	install -m644 $SRC/profile $PKG/etc
+    mkdir -p "${PKG}/bin"
+    mv "${PKG}/usr/bin/bash" "${PKG}/bin"
+
+    install -Dm644 "${SRC}/bashrc" "${SRC}/profile" -t "${PKG}/etc/"
 }
