@@ -14,7 +14,7 @@ source="https://ftp.gnu.org/gnu/${name}/${name}-${version%.*}.tar.gz
     profile"
 
 patchname=$(printf '%s' "${version}" | awk -F. '{print "bash"$1$2"-00"}')
-patchver=${version##*.}
+patchver="${version##*.}"
 
 # Download bash patches
 if [ "${patchver}" -gt 0 ] 2>/dev/null; then
