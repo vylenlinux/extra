@@ -27,7 +27,7 @@ command="${commandB:-"${commandUL}"}"
 command_args_foreground="-nl /usr/bin/ly-dm ${TTY} ${BAUD} ${TERM}"
 
 depend() {
-    after agetty
+    after *
     provide display-manager
     want elogind
 }
