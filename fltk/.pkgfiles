@@ -1,11 +1,13 @@
-fltk-1.4.4-1
+fltk-1.4.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/blocks
 -rwxr-xr-x root/root    usr/bin/checkers
 -rwxr-xr-x root/root    usr/bin/fltk-config
 -rwxr-xr-x root/root    usr/bin/fltk-options
+-rwxr-xr-x root/root    usr/bin/fltk-options-shared
 -rwxr-xr-x root/root    usr/bin/fluid
+-rwxr-xr-x root/root    usr/bin/fluid-shared
 -rwxr-xr-x root/root    usr/bin/glpuzzle
 -rwxr-xr-x root/root    usr/bin/sudoku
 drwxr-xr-x root/root    usr/include/
@@ -177,9 +179,21 @@ drwxr-xr-x root/root    usr/include/FL/
 -rw-rw-r-- root/root    usr/include/FL/x11.H
 drwxr-xr-x root/root    usr/lib/
 -rw-r--r-- root/root    usr/lib/libfltk.a
+lrwxrwxrwx root/root    usr/lib/libfltk.so -> libfltk.so.1.4
+lrwxrwxrwx root/root    usr/lib/libfltk.so.1.4 -> libfltk.so.1.4.5
+-rwxr-xr-x root/root    usr/lib/libfltk.so.1.4.5
 -rw-r--r-- root/root    usr/lib/libfltk_forms.a
+lrwxrwxrwx root/root    usr/lib/libfltk_forms.so -> libfltk_forms.so.1.4
+lrwxrwxrwx root/root    usr/lib/libfltk_forms.so.1.4 -> libfltk_forms.so.1.4.5
+-rwxr-xr-x root/root    usr/lib/libfltk_forms.so.1.4.5
 -rw-r--r-- root/root    usr/lib/libfltk_gl.a
+lrwxrwxrwx root/root    usr/lib/libfltk_gl.so -> libfltk_gl.so.1.4
+lrwxrwxrwx root/root    usr/lib/libfltk_gl.so.1.4 -> libfltk_gl.so.1.4.5
+-rwxr-xr-x root/root    usr/lib/libfltk_gl.so.1.4.5
 -rw-r--r-- root/root    usr/lib/libfltk_images.a
+lrwxrwxrwx root/root    usr/lib/libfltk_images.so -> libfltk_images.so.1.4
+lrwxrwxrwx root/root    usr/lib/libfltk_images.so.1.4 -> libfltk_images.so.1.4.5
+-rwxr-xr-x root/root    usr/lib/libfltk_images.so.1.4.5
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/fltk-options.desktop
