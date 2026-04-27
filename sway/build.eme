@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Tiling Wayland compositor and replacement for the i3 window manager "
 homepage="https://github.com/swaywm/sway"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,32 @@ maintainer="Vylen Linux Team"
 name=sway
 version=1.11
 release=1
-source="https://github.com/swaywm/sway/releases/download/$version/sway-$version.tar.gz
-	sway-portals.conf
-	sway.desktop"
+
+source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-${version}.tar.gz
+    ${name}-portals.conf
+    ${name}.desktop"
 
 build() {
-	vylen-meson $name-$version build -Dwerror=false 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    # CBUILD: enable or disable options, source CBUILD_SWAY_OPTS from "sway.opt" file
+    CBUILD_SWAY_OPTS="-Ddefault-wallpaper=true \
+        -Dzsh-completions=true \
+        -Dbash-completions=true \
+        -Dfish-completions=true \
+        -Dswaybar=true \
+        -Dswaynag=true \
+        -Dtray=auto \
+        -Dgdk-pixbuf=auto \
+        -Dman-pages=auto"
 
-	install -Dm644 $SRC/sway.desktop $PKG/usr/share/wayland-sessions/sway.desktop
-	install -Dm644 $SRC/sway-portals.conf -t $PKG/usr/share/xdg-desktop-portal/portals/
+    cbuild_options
+
+    vylen-meson "${name}-${version}" build \
+        -Dwerror=false \
+        "${CBUILD_SWAY_OPTS}"
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/wayland-sessions/"
+    install -Dm644 "${SRC}/${name}-portals.conf" -t "${PKG}/usr/share/xdg-desktop-portal/portals/"
 }
