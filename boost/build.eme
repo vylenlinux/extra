@@ -6,15 +6,15 @@ homepage="https://www.boost.org/"
 maintainer="Vylen Linux Team"
 
 name=boost
-version=1.90.0
+version=1.91.0
 release=1
 
-vrsn="$(printf "%s" "${version}" | sed 's/\./_/g')"
-source="${name}-${version}.tar.bz2::https://archives.boost.io/release/${version}/source/${name}_${vrsn}.tar.bz2"
+_version="$(printf "%s" "${version}" | sed 's/\./_/g')"
+source="${name}-${version}.tar.bz2::https://archives.boost.io/release/${version}/source/${name}_${_version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
-    cd "boost_${vrsn}"
+    cd "boost_${_version}"
 
     ./bootstrap.sh \
         --prefix=/usr \
