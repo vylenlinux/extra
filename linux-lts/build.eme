@@ -18,7 +18,6 @@ source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${versio
 }
 
 noextract="patch-${version}.xz"
-NO_STRIP=yes
 
 build() {
     # shellcheck disable=SC2164
@@ -27,22 +26,27 @@ build() {
     xzcat "${SRC}/patch-${version}.xz" | patch -sNp1 -F0
     make mrproper
 
-    [ -f "${SRC}/config" ] && cp "${SRC}/config" .config || cp "${SRC}/x86_64-dotconfig" .config
+    cbuild_restore "${SRC}/${name}-${version%.*}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
     echo 'CONFIG_LOCALVERSION="-'${name}'"' >> .config
 
-    kernver="${version}-${name}"
-
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
-    export KCFLAGS="${CFLAGS}"
-    export KCPPFLAGS="${CXXFLAGS}"
+    # CBUILD: add custom KCFLAGS and KCPPFLAGS, source linux.opt
+    CBUILD_LINUX_KCFLAGS="${CFLAGS}"
+    CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS}"
+
+    cbuild_options linux
+
+    export KCFLAGS="${CBUILD_LINUX_KCFLAGS}"
+    export KCPPFLAGS="${CBUILD_LINUX_KCPPFLAGS}"
 
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}" modules_install
 
+    cbuild_save "${SRC}/${name}-${version%.*}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
@@ -88,6 +92,7 @@ build() {
         [ "${i}" = "objtool" ] || rm -fr "tools/objtool/${i}"
     done
 
+    kernver="${version}-${name}"
     rm "${PKG}/lib/modules/${kernver}/build "
     mv "${SRC}/linux-${version%.*}" "${PKG}/lib/modules/${kernver}/build"
     ln -sv build "${PKG}/lib/modules/${kernver}/source"

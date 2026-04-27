@@ -1,0 +1,9 @@
+CBUILD_LINUX_KCFLAGS="${CFLAGS} \
+    -fno-tree-vectorize \
+    -fivopts \
+    -fmodulo-sched"
+
+CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS} \
+    -fno-tree-vectorize \
+    -fivopts \
+    -fmodulo-sched"

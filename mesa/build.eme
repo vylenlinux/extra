@@ -50,24 +50,30 @@ build() {
     emerald isinstalled libva && OPT_MESA_VAAPI='-Dgallium-va=enabled' || OPT_MESA_VAAPI='-Dgallium-va=disabled'
     emerald isinstalled wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
-    vylen-meson build \
-        -Db_lto=false \
-        -Degl=enabled \
-        -Dllvm=enabled \
-        -Dshared-llvm=enabled \
-        -Dgbm=enabled \
-        -Dgles1=disabled \
-        -Dgles2=enabled \
+    # CBUILD: enable o disable CBUILD_MESA_OPTS, source CBUILD_MESA_OPTS from mesa.opt file
+    CBUILD_MESA_OPTS="-Dshared-llvm=enabled \
         -Dglx=dri \
-        -Dgallium-drivers="${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915" \
-        -Dplatforms="${OPT_MESA_PLATFORMS}" \
+        -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915 \
+        -Dplatforms=${OPT_MESA_PLATFORMS} \
         -Dgallium-mediafoundation=disabled \
         -Dintel-rt=enabled \
         -Dgallium-rusticl=true \
         -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau \
-        -Dvulkan-layers=device-select,intel-nullhw,overlay \
+        ${OPT_MESA_VAAPI}"
+
+    cbuild_options
+
+    vylen-meson build \
+        -Db_lto=false \
+        -Degl=enabled \
+        -Dgbm=enabled \
+        -Dgles1=disabled \
+        -Dgles2=enabled \
+        -Dllvm=enabled \
+        -Dglvnd=enabled \
         -Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
-        -Dglvnd=enabled "${OPT_MESA_VAAPI}"
+        -Dvulkan-layers=device-select,overlay \
+        "${CBUILD_MESA_OPTS}"
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

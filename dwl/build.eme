@@ -18,7 +18,11 @@ build() {
     # sed -i -e '/-DXWAYLAND/s/^#//' config.mk
 
     # Use a custom config.h if the file is not empty
-    [ -e "${SRC}/config.h" ] && cp -f "${SRC}/config.h" config.h
+    cbuild_restore "${SRC}/${name}-${version}/config.h" || {
+        if [ -e "${SRC}/config.h" ]; then
+            cp -f "${SRC}/config.h" config.h
+        fi
+    }
 
     make PREFIX=/usr
     make PREFIX=/usr DESTDIR="${PKG}" install

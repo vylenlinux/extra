@@ -19,6 +19,10 @@ build() {
     # Fix Python scripts which use /usr/bin/env python to access the system Python:
     grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
 
+    # CBUILD: enable o disable LLVM_TARGETS_TO_BUILD, source CBUILD_LLVM_TARGETS from "llvm.opt" file
+    CBUILD_LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
+    CBUILD_LLVM_TARGETS="${CBUILD_LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
+
     cmake -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
@@ -39,6 +43,7 @@ build() {
         -DLLVM_INCLUDE_EXAMPLES=OFF \
         -DLLVM_INSTALL_UTILS=ON \
         -DLLVM_LINK_LLVM_DYLIB=ON \
+        -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
         -Wno-dev
 
     jobs=

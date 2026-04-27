@@ -8,37 +8,37 @@ maintainer="Vylen Linux Team"
 name=qemu
 version=11.0.0
 release=1
-
-commit=ece408818d27f745ef1b05fb3cc99a1e7a5bf580
-
-source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${commit}.tar.gz
-    notest.patch"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${commit}"
-    patch -Np1 -i "${SRC}/notest.patch"
+    cd "${name}-${version}"
+
+    # CBUILD: enable o disable CBUILD_QEMU_OPTS, source CBUILD_QEMU_OPTS from "qemu.opt" file
+    CBUILD_QEMU_OPTS="--enable-spice \
+        --enable-tpm"
+
+    cbuild_options
 
     ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
         --libdir="/usr/lib/${name}" \
         --libexecdir="/usr/lib/${name}" \
-        --disable-docs \
-        --disable-gtk \
         --localstatedir=/var \
         --python=/usr/bin/python3 \
+        --disable-docs \
+        --disable-gtk \
         --enable-kvm \
+        --enable-modules \
+        --enable-sdl \
         --enable-slirp \
-        --enable-spice \
         --enable-usb-redir \
         --enable-vhost-net \
         --enable-virglrenderer \
-        --enable-modules \
-        --enable-sdl \
-        --enable-tpm \
         --smbd=/usr/bin/smbd \
-        --with-coroutine=ucontext
+        --with-coroutine=ucontext \
+        "${CBUILD_QEMU_OPTS}"
 
     make
     make DESTDIR="${PKG}" install

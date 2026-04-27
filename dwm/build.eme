@@ -1,3 +1,6 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="A dynamic window manager for X"
 homepage="https://dwm.suckless.org/"
 maintainer="Vylen Linux Team"
@@ -5,22 +8,18 @@ maintainer="Vylen Linux Team"
 name=dwm
 version=6.8
 release=1
-source="https://dl.suckless.org/dwm/dwm-$version.tar.gz"
-
-_portdir=$PWD
+source="https://dl.suckless.org/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    cbuild_restore "${SRC}/${name}-${version}/config.h" || cp config.def.h config.h
 
-	if [ -f $_portdir/config.h ]; then
-		cp $_portdir/config.h .
-	fi
+    for p in "${SRC}"/*.patch "${SRC}"/*.diff; do
+        [ -f "${p}" ] || continue
+        patch -Np1 -i "${p}"
+    done
 
-	for p in $_portdir/*.patch $_portdir/*.diff; do
-		[ -f $p ] || continue
-		patch -Np1 -i $p
-	done
-
-	make PREFIX=/usr
-	make PREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr
+    make PREFIX=/usr DESTDIR="${PKG}" install
 }

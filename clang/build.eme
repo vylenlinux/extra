@@ -13,6 +13,12 @@ source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version
 build() {
     mv "llvm-project-${version}.src/clang-tools-extra" "llvm-project-${version}.src/clang/tools/extra"
 
+    # CBUILD: enable o disable LLVM_TARGETS_TO_BUILD, source CBUILD_LLVM_TARGETS from "llvm.opt" file
+    CBUILD_LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
+    CBUILD_LLVM_TARGETS="${CBUILD_LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
+
+    cbuild_options "llvm"
+
     cmake -S "llvm-project-${version}.src/clang" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
@@ -28,6 +34,7 @@ build() {
         -DLLVM_ENABLE_LIBXML2=OFF \
         -DLLVM_ENABLE_RTTI=ON \
         -DLLVM_INCLUDE_TESTS=OFF \
+        -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
         -Wno-dev
 
     jobs=

@@ -18,7 +18,14 @@ for i in /lib/modules/*; do
     esac
 done
 
-if [ "$(command -v mkinitramfs)" ]; then
+# check if kernel was build with initrd support
+initrd_enabled=0
+
+if grep -q "^CONFIG_BLK_DEV_INITRD=y" /boot/config-linux-lts 2>/dev/null; then
+    initrd_enabled=1
+fi
+
+if [ "${initrd_enabled}" -eq 1 ] && [ "$(command -v mkinitramfs)" ]; then
     echo "mkinitramfs: generating initramfs for kernel ${kernver}..."
     mkinitramfs -q -k "${kernver}" -o /boot/initrd-linux-lts.img
 fi

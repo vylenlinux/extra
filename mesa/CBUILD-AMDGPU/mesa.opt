@@ -1,0 +1,10 @@
+CBUILD_MESA_OPTS="-Damdgpu-virtio=true \
+    -Dgallium-drivers=radeonsi,virgl \
+    -Dgallium-rusticl=false \
+    -Dgallium-va=enabled \
+    -Dglx=auto \
+    -Dintel-rt=disabled \
+    -Dplatforms=wayland,x11 \
+    -Dvalgrind=disabled \
+    -Dvulkan-drivers=amd \
+    -Dzstd=disabled"
