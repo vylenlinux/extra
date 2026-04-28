@@ -6,12 +6,12 @@ homepage="https://github.com/intel/media-driver/"
 maintainer="Vylen Linux Team"
 
 name=intel-media-driver
-version=26.1.6
+version=26.2.0
 release=1
 source="https://github.com/intel/media-driver/archive/${name%-*}-${version}.tar.gz"
 
 build() {
-    cmake -B build -S "${name#*-}-${name%-*}-${version}" -G Ninja \
+    cmake -S "${name#*-}-${name%-*}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=/usr/lib \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
