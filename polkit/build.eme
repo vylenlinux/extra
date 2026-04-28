@@ -1,29 +1,49 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Toolkit for defining and handling authorizations"
 homepage="https://freedesktop.org/software/polkit"
 maintainer="Vylen Linux Team"
 
 name=polkit
 version=127
-release=1
-source="$name-$version.tar.gz::https://github.com/polkit-org/$name/archive/refs/tags/$version.tar.gz
-	agent.helper.patch"
+release=2
+
+source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz
+    22193ca2cc0f4e023d331cc1391f55143ef9cade.patch
+    patch-src_polkit_polkitunixsession.c.patch
+    patch-src_polkitbackend_polkitbackendsessionmonitor.c.patch"
 
 build() {
-	export XML_CATALOG_FILES=/etc/xml/catalog
+    export XML_CATALOG_FILES=/etc/xml/catalog
 
-	patch -Np1 -d $name-$version -i $SRC/agent.helper.patch
+    patch -Rp1 -d "${name}-${version}" -i "${SRC}/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
+    patch -Np0 -d "${name}-${version}" -i "${SRC}/patch-src_polkit_polkitunixsession.c.patch"
+    patch -Np0 -d "${name}-${version}" -i "${SRC}/patch-src_polkitbackend_polkitbackendsessionmonitor.c.patch"
 
-  	vylen-meson $name-$version build \
-		-Dsystemdsystemunitdir=/trash \
-		-Dsession_tracking="ConsoleKit" \
-		-Dman=false \
-		-Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        --prefix=/usr \
+        -Dsession_tracking="ConsoleKit" \
+        --buildtype=plain \
+        --wrap-mode nodownload \
+        -Db_lto=true \
+        -Db_pie=true \
+        -Dos_type=suse
 
-	chown polkitd $PKG/etc/polkit-1/rules.d
-	chown polkitd $PKG/usr/share/polkit-1/rules.d
-	chmod 700 $PKG/etc/polkit-1/rules.d
-	chmod 700 $PKG/usr/share/polkit-1/rules.d
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
+    chown polkitd "${PKG}/etc/polkit-1/rules.d" \
+        "${PKG}/usr/share/polkit-1/rules.d"
+
+    chmod 700 "${PKG}/etc/polkit-1/rules.d" \
+        "${PKG}/usr/share/polkit-1/rules.d"
+
+    chmod 4775 "${PKG}/usr/bin/pkexec" \
+        "${PKG}/usr/lib/polkit-1/polkit-agent-helper-1"
+
+    rm -r "${PKG}/usr/lib/systemd" \
+        "${PKG}/usr/lib/sysusers.d" \
+        "${PKG}/usr/lib/tmpfiles.d" \
+        "${PKG}/usr/share/locale"
 }

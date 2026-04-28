@@ -1,16 +1,14 @@
-polkit-127-1
+polkit-127-2
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/pam.d/
+-rw-r--r-- root/root    etc/pam.d/polkit-1
 drwxr-xr-x root/root    etc/polkit-1/
 drwx------ polkitd/polkitd    etc/polkit-1/rules.d/
-drwxr-xr-x root/root    trash/
--rw-r--r-- root/root    trash/polkit-agent-helper.socket
--rw-r--r-- root/root    trash/polkit-agent-helper@.service
--rw-r--r-- root/root    trash/polkit.service
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/pkaction
 -rwxr-xr-x root/root    usr/bin/pkcheck
--rwsr-xr-x root/root    usr/bin/pkexec
+-rwsrwxr-x root/root    usr/bin/pkexec
 -rwxr-xr-x root/root    usr/bin/pkttyagent
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/polkit-1/
@@ -54,18 +52,12 @@ lrwxrwxrwx root/root    usr/lib/libpolkit-agent-1.so.0 -> libpolkit-agent-1.so.0
 lrwxrwxrwx root/root    usr/lib/libpolkit-gobject-1.so -> libpolkit-gobject-1.so.0
 lrwxrwxrwx root/root    usr/lib/libpolkit-gobject-1.so.0 -> libpolkit-gobject-1.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libpolkit-gobject-1.so.0.0.0
-drwxr-xr-x root/root    usr/lib/pam.d/
--rw-r--r-- root/root    usr/lib/pam.d/polkit-1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/polkit-agent-1.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/polkit-gobject-1.pc
 drwxr-xr-x root/root    usr/lib/polkit-1/
--rwsr-xr-x root/root    usr/lib/polkit-1/polkit-agent-helper-1
+-rwsrwxr-x root/root    usr/lib/polkit-1/polkit-agent-helper-1
 -rwxr-xr-x root/root    usr/lib/polkit-1/polkitd
-drwxr-xr-x root/root    usr/lib/sysusers.d/
--rw-r--r-- root/root    usr/lib/sysusers.d/polkit.conf
-drwxr-xr-x root/root    usr/lib/tmpfiles.d/
--rw-r--r-- root/root    usr/lib/tmpfiles.d/polkit-tmpfiles.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/system-services/
