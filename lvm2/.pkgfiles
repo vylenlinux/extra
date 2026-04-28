@@ -1,4 +1,4 @@
-lvm2-2.03.39-1
+lvm2-2.03.40-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/lvm/
 -rw-r--r-- root/root    etc/lvm/lvm.conf.epkgnew
@@ -24,6 +24,7 @@ drwxr-xr-x root/root    sbin/
 -r-xr-xr-x root/root    sbin/blkdeactivate
 -r-xr-xr-x root/root    sbin/dmsetup
 lrwxrwxrwx root/root    sbin/dmstats -> dmsetup
+lrwxrwxrwx root/root    sbin/dmvdostats -> dmsetup
 -r-xr-xr-x root/root    sbin/fsadm
 lrwxrwxrwx root/root    sbin/lvchange -> lvm
 lrwxrwxrwx root/root    sbin/lvconvert -> lvm
@@ -106,6 +107,7 @@ drwxr-xr-x root/root    usr/share/man/man8/
 -r--r--r-- root/root    usr/share/man/man8/blkdeactivate.8.gz
 -r--r--r-- root/root    usr/share/man/man8/dmsetup.8.gz
 -r--r--r-- root/root    usr/share/man/man8/dmstats.8.gz
+-r--r--r-- root/root    usr/share/man/man8/dmvdostats.8.gz
 -r--r--r-- root/root    usr/share/man/man8/fsadm.8.gz
 -r--r--r-- root/root    usr/share/man/man8/lvchange.8.gz
 -r--r--r-- root/root    usr/share/man/man8/lvconvert.8.gz

@@ -1,25 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Set of tools that manage logical partitions"
 homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team"
 
 name=lvm2
-version=2.03.39
+version=2.03.40
 release=1
+source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
+
 backup="etc/lvm/lvm.conf
-	etc/lvm/lvmlocal.conf"
-source="$name-$version.tgz::https://sourceware.org/pub/lvm2/LVM2.$version.tgz"
+    etc/lvm/lvmlocal.conf"
 
 build() {
-	cd LVM2.$version
-	
-	CONFIG_SHELL=/bin/bash  \
-	./configure --prefix=/usr \
-		--libdir=/usr/lib \
-		--with-libexecdir=/usr/lib/lvm2 \
-		--exec-prefix= \
-		--enable-cmdlib \
-		--enable-pkgconfig \
-		--enable-udev_sync
-	make 
-	make DESTDIR=$PKG install_lvm2 install_device-mapper
+    # shellcheck disable=SC2164
+    cd "LVM2.${version}"
+
+    CONFIG_SHELL=/bin/bash ./configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --with-libexecdir="/usr/lib/${name}" \
+        --exec-prefix= \
+        --enable-cmdlib \
+        --enable-pkgconfig \
+        --enable-udev_sync
+
+    make
+    make DESTDIR="${PKG}" install_lvm2 install_device-mapper
 }
