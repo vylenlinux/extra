@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts
-version=6.18.24
+version=6.18.25
 release=1
 
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz
@@ -46,7 +46,7 @@ build() {
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}" modules_install
 
-    cbuild_save "${SRC}/${name}-${version%.*}/.config"
+    cbuild_save "${SRC}/${name%-*}-${version%.*}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
