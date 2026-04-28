@@ -1,0 +1,11 @@
+#!/bin/sh
+
+initrd_file="/boot/initrd-linux.img"
+
+# clean initrd
+[ -f "${initrd_file}" ] && {
+    printf "%s\n" "'${initrd_file}' found! Cleaning..."
+    rm -f "${initrd_file}"
+
+    printf "%s\n" "==> '${initrd_file}' removed!"
+}
