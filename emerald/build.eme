@@ -6,7 +6,7 @@ homepage="https://gitlab.com/vylen/emerald"
 maintainer="Vylen Linux Team"
 
 name=emerald
-version=20260419
+version=20260428
 release=1
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
@@ -17,7 +17,17 @@ backup="etc/${name}.conf
     etc/revdep.conf"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-    DESTDIR="${PKG}" ./INSTALL.sh
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    for dir in usr/bin etc usr/ports etc/revdep.d; do
+        install -d "${PKG}/${dir}"
+    done
+
+    for dir in packages sources work; do
+        install -dm777 "${PKG}/var/cache/${name}/${dir}"
+    done
+
+    install -dm755 "${PKG}/var/lib/${name}/cbuild"
 }
