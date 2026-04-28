@@ -1,4 +1,4 @@
-linux-lts-api-headers-6.18.24-1
+linux-lts-api-headers-6.12.25-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/asm-generic/
@@ -106,13 +106,9 @@ drwxr-xr-x root/root    usr/include/asm/
 -rw-r--r-- root/root    usr/include/asm/vm86.h
 -rw-r--r-- root/root    usr/include/asm/vmx.h
 -rw-r--r-- root/root    usr/include/asm/vsyscall.h
-drwxr-xr-x root/root    usr/include/cxl/
--rw-r--r-- root/root    usr/include/cxl/features.h
 drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/amdgpu_drm.h
--rw-r--r-- root/root    usr/include/drm/amdxdna_accel.h
 -rw-r--r-- root/root    usr/include/drm/armada_drm.h
--rw-r--r-- root/root    usr/include/drm/asahi_drm.h
 -rw-r--r-- root/root    usr/include/drm/drm.h
 -rw-r--r-- root/root    usr/include/drm/drm_fourcc.h
 -rw-r--r-- root/root    usr/include/drm/drm_mode.h
@@ -125,7 +121,6 @@ drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/lima_drm.h
 -rw-r--r-- root/root    usr/include/drm/msm_drm.h
 -rw-r--r-- root/root    usr/include/drm/nouveau_drm.h
--rw-r--r-- root/root    usr/include/drm/nova_drm.h
 -rw-r--r-- root/root    usr/include/drm/omap_drm.h
 -rw-r--r-- root/root    usr/include/drm/panfrost_drm.h
 -rw-r--r-- root/root    usr/include/drm/panthor_drm.h
@@ -133,7 +128,6 @@ drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/qaic_accel.h
 -rw-r--r-- root/root    usr/include/drm/qxl_drm.h
 -rw-r--r-- root/root    usr/include/drm/radeon_drm.h
--rw-r--r-- root/root    usr/include/drm/rocket_accel.h
 -rw-r--r-- root/root    usr/include/drm/tegra_drm.h
 -rw-r--r-- root/root    usr/include/drm/v3d_drm.h
 -rw-r--r-- root/root    usr/include/drm/vc4_drm.h
@@ -141,11 +135,6 @@ drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/virtgpu_drm.h
 -rw-r--r-- root/root    usr/include/drm/vmwgfx_drm.h
 -rw-r--r-- root/root    usr/include/drm/xe_drm.h
-drwxr-xr-x root/root    usr/include/fwctl/
--rw-r--r-- root/root    usr/include/fwctl/cxl.h
--rw-r--r-- root/root    usr/include/fwctl/fwctl.h
--rw-r--r-- root/root    usr/include/fwctl/mlx5.h
--rw-r--r-- root/root    usr/include/fwctl/pds.h
 -rwxr-xr-x root/root    usr/include/headers_check.pl
 drwxr-xr-x root/root    usr/include/linux/
 -rw-r--r-- root/root    usr/include/linux/a.out.h
@@ -160,7 +149,6 @@ drwxr-xr-x root/root    usr/include/linux/
 -rw-r--r-- root/root    usr/include/linux/amt.h
 drwxr-xr-x root/root    usr/include/linux/android/
 -rw-r--r-- root/root    usr/include/linux/android/binder.h
--rw-r--r-- root/root    usr/include/linux/android/binder_netlink.h
 -rw-r--r-- root/root    usr/include/linux/android/binderfs.h
 -rw-r--r-- root/root    usr/include/linux/apm_bios.h
 -rw-r--r-- root/root    usr/include/linux/arcfb.h
@@ -200,7 +188,6 @@ drwxr-xr-x root/root    usr/include/linux/android/
 -rw-r--r-- root/root    usr/include/linux/bfs_fs.h
 -rw-r--r-- root/root    usr/include/linux/binfmts.h
 -rw-r--r-- root/root    usr/include/linux/bits.h
--rw-r--r-- root/root    usr/include/linux/blk-crypto.h
 -rw-r--r-- root/root    usr/include/linux/blkdev.h
 -rw-r--r-- root/root    usr/include/linux/blkpg.h
 -rw-r--r-- root/root    usr/include/linux/blktrace_api.h
@@ -252,11 +239,8 @@ drwxr-xr-x root/root    usr/include/linux/cifs/
 -rw-r--r-- root/root    usr/include/linux/comedi.h
 -rw-r--r-- root/root    usr/include/linux/connector.h
 -rw-r--r-- root/root    usr/include/linux/const.h
--rw-r--r-- root/root    usr/include/linux/coredump.h
 -rw-r--r-- root/root    usr/include/linux/coresight-stm.h
 -rw-r--r-- root/root    usr/include/linux/counter.h
-drwxr-xr-x root/root    usr/include/linux/counter/
--rw-r--r-- root/root    usr/include/linux/counter/microchip-tcb-capture.h
 -rw-r--r-- root/root    usr/include/linux/cramfs_fs.h
 -rw-r--r-- root/root    usr/include/linux/cryptouser.h
 -rw-r--r-- root/root    usr/include/linux/cuda.h
@@ -297,7 +281,6 @@ drwxr-xr-x root/root    usr/include/linux/dvb/
 -rw-r--r-- root/root    usr/include/linux/erspan.h
 -rw-r--r-- root/root    usr/include/linux/ethtool.h
 -rw-r--r-- root/root    usr/include/linux/ethtool_netlink.h
--rw-r--r-- root/root    usr/include/linux/ethtool_netlink_generated.h
 -rw-r--r-- root/root    usr/include/linux/eventfd.h
 -rw-r--r-- root/root    usr/include/linux/eventpoll.h
 -rw-r--r-- root/root    usr/include/linux/exfat.h
@@ -367,6 +350,7 @@ drwxr-xr-x root/root    usr/include/linux/hsi/
 -rw-r--r-- root/root    usr/include/linux/if_arp.h
 -rw-r--r-- root/root    usr/include/linux/if_bonding.h
 -rw-r--r-- root/root    usr/include/linux/if_bridge.h
+-rw-r--r-- root/root    usr/include/linux/if_cablemodem.h
 -rw-r--r-- root/root    usr/include/linux/if_eql.h
 -rw-r--r-- root/root    usr/include/linux/if_ether.h
 -rw-r--r-- root/root    usr/include/linux/if_fc.h
@@ -404,9 +388,6 @@ drwxr-xr-x root/root    usr/include/linux/iio/
 -rw-r--r-- root/root    usr/include/linux/input-event-codes.h
 -rw-r--r-- root/root    usr/include/linux/input.h
 -rw-r--r-- root/root    usr/include/linux/io_uring.h
-drwxr-xr-x root/root    usr/include/linux/io_uring/
--rw-r--r-- root/root    usr/include/linux/io_uring/mock_file.h
--rw-r--r-- root/root    usr/include/linux/io_uring/query.h
 -rw-r--r-- root/root    usr/include/linux/ioam6.h
 -rw-r--r-- root/root    usr/include/linux/ioam6_genl.h
 -rw-r--r-- root/root    usr/include/linux/ioam6_iptunnel.h
@@ -455,7 +436,6 @@ drwxr-xr-x root/root    usr/include/linux/isdn/
 -rw-r--r-- root/root    usr/include/linux/lirc.h
 -rw-r--r-- root/root    usr/include/linux/llc.h
 -rw-r--r-- root/root    usr/include/linux/loadpin.h
--rw-r--r-- root/root    usr/include/linux/lockd_netlink.h
 -rw-r--r-- root/root    usr/include/linux/loop.h
 -rw-r--r-- root/root    usr/include/linux/lp.h
 -rw-r--r-- root/root    usr/include/linux/lsm.h
@@ -471,13 +451,9 @@ drwxr-xr-x root/root    usr/include/linux/isdn/
 -rw-r--r-- root/root    usr/include/linux/media-bus-format.h
 -rw-r--r-- root/root    usr/include/linux/media.h
 drwxr-xr-x root/root    usr/include/linux/media/
-drwxr-xr-x root/root    usr/include/linux/media/amlogic/
--rw-r--r-- root/root    usr/include/linux/media/amlogic/c3-isp-config.h
 drwxr-xr-x root/root    usr/include/linux/media/raspberrypi/
 -rw-r--r-- root/root    usr/include/linux/media/raspberrypi/pisp_be_config.h
 -rw-r--r-- root/root    usr/include/linux/media/raspberrypi/pisp_common.h
--rw-r--r-- root/root    usr/include/linux/media/raspberrypi/pisp_fe_config.h
--rw-r--r-- root/root    usr/include/linux/media/raspberrypi/pisp_fe_statistics.h
 -rw-r--r-- root/root    usr/include/linux/mei.h
 -rw-r--r-- root/root    usr/include/linux/mei_uuid.h
 -rw-r--r-- root/root    usr/include/linux/membarrier.h
@@ -503,7 +479,6 @@ drwxr-xr-x root/root    usr/include/linux/mmc/
 -rw-r--r-- root/root    usr/include/linux/mrp_bridge.h
 -rw-r--r-- root/root    usr/include/linux/msdos_fs.h
 -rw-r--r-- root/root    usr/include/linux/msg.h
--rw-r--r-- root/root    usr/include/linux/mshv.h
 -rw-r--r-- root/root    usr/include/linux/mtio.h
 -rw-r--r-- root/root    usr/include/linux/nbd-netlink.h
 -rw-r--r-- root/root    usr/include/linux/nbd.h
@@ -513,7 +488,6 @@ drwxr-xr-x root/root    usr/include/linux/mmc/
 -rw-r--r-- root/root    usr/include/linux/net.h
 -rw-r--r-- root/root    usr/include/linux/net_dropmon.h
 -rw-r--r-- root/root    usr/include/linux/net_namespace.h
--rw-r--r-- root/root    usr/include/linux/net_shaper.h
 -rw-r--r-- root/root    usr/include/linux/net_tstamp.h
 -rw-r--r-- root/root    usr/include/linux/netconf.h
 -rw-r--r-- root/root    usr/include/linux/netdev.h
@@ -701,7 +675,6 @@ drwxr-xr-x root/root    usr/include/linux/nfsd/
 -rw-r--r-- root/root    usr/include/linux/oom.h
 -rw-r--r-- root/root    usr/include/linux/openat2.h
 -rw-r--r-- root/root    usr/include/linux/openvswitch.h
--rw-r--r-- root/root    usr/include/linux/ovpn.h
 -rw-r--r-- root/root    usr/include/linux/packet_diag.h
 -rw-r--r-- root/root    usr/include/linux/papr_pdsm.h
 -rw-r--r-- root/root    usr/include/linux/param.h
@@ -731,18 +704,14 @@ drwxr-xr-x root/root    usr/include/linux/nfsd/
 -rw-r--r-- root/root    usr/include/linux/ppp-ioctl.h
 -rw-r--r-- root/root    usr/include/linux/ppp_defs.h
 -rw-r--r-- root/root    usr/include/linux/pps.h
--rw-r--r-- root/root    usr/include/linux/pps_gen.h
 -rw-r--r-- root/root    usr/include/linux/pr.h
 -rw-r--r-- root/root    usr/include/linux/prctl.h
 -rw-r--r-- root/root    usr/include/linux/psample.h
 -rw-r--r-- root/root    usr/include/linux/psci.h
 -rw-r--r-- root/root    usr/include/linux/psp-dbc.h
 -rw-r--r-- root/root    usr/include/linux/psp-sev.h
--rw-r--r-- root/root    usr/include/linux/psp-sfs.h
--rw-r--r-- root/root    usr/include/linux/psp.h
 -rw-r--r-- root/root    usr/include/linux/ptp_clock.h
 -rw-r--r-- root/root    usr/include/linux/ptrace.h
--rw-r--r-- root/root    usr/include/linux/pwm.h
 -rw-r--r-- root/root    usr/include/linux/qemu_fw_cfg.h
 -rw-r--r-- root/root    usr/include/linux/qnx4_fs.h
 -rw-r--r-- root/root    usr/include/linux/qnxtypes.h
@@ -755,6 +724,8 @@ drwxr-xr-x root/root    usr/include/linux/raid/
 -rw-r--r-- root/root    usr/include/linux/random.h
 -rw-r--r-- root/root    usr/include/linux/rds.h
 -rw-r--r-- root/root    usr/include/linux/reboot.h
+-rw-r--r-- root/root    usr/include/linux/reiserfs_fs.h
+-rw-r--r-- root/root    usr/include/linux/reiserfs_xattr.h
 -rw-r--r-- root/root    usr/include/linux/remoteproc_cdev.h
 -rw-r--r-- root/root    usr/include/linux/resource.h
 -rw-r--r-- root/root    usr/include/linux/rfkill.h
@@ -957,16 +928,13 @@ drwxr-xr-x root/root    usr/include/linux/usb/
 -rw-r--r-- root/root    usr/include/linux/virtio_pmem.h
 -rw-r--r-- root/root    usr/include/linux/virtio_ring.h
 -rw-r--r-- root/root    usr/include/linux/virtio_rng.h
--rw-r--r-- root/root    usr/include/linux/virtio_rtc.h
 -rw-r--r-- root/root    usr/include/linux/virtio_scmi.h
 -rw-r--r-- root/root    usr/include/linux/virtio_scsi.h
 -rw-r--r-- root/root    usr/include/linux/virtio_snd.h
--rw-r--r-- root/root    usr/include/linux/virtio_spi.h
 -rw-r--r-- root/root    usr/include/linux/virtio_types.h
 -rw-r--r-- root/root    usr/include/linux/virtio_vsock.h
 -rw-r--r-- root/root    usr/include/linux/vm_sockets.h
 -rw-r--r-- root/root    usr/include/linux/vm_sockets_diag.h
--rw-r--r-- root/root    usr/include/linux/vmclock-abi.h
 -rw-r--r-- root/root    usr/include/linux/vmcore.h
 -rw-r--r-- root/root    usr/include/linux/vsockmon.h
 -rw-r--r-- root/root    usr/include/linux/vt.h
@@ -986,7 +954,7 @@ drwxr-xr-x root/root    usr/include/linux/usb/
 -rw-r--r-- root/root    usr/include/linux/zorro.h
 -rw-r--r-- root/root    usr/include/linux/zorro_ids.h
 drwxr-xr-x root/root    usr/include/misc/
--rw-r--r-- root/root    usr/include/misc/amd-apml.h
+-rw-r--r-- root/root    usr/include/misc/cxl.h
 -rw-r--r-- root/root    usr/include/misc/fastrpc.h
 -rw-r--r-- root/root    usr/include/misc/mrvl_cn10k_dpi.h
 -rw-r--r-- root/root    usr/include/misc/ocxl.h
@@ -1015,7 +983,6 @@ drwxr-xr-x root/root    usr/include/rdma/hfi/
 -rw-r--r-- root/root    usr/include/rdma/ib_user_mad.h
 -rw-r--r-- root/root    usr/include/rdma/ib_user_sa.h
 -rw-r--r-- root/root    usr/include/rdma/ib_user_verbs.h
--rw-r--r-- root/root    usr/include/rdma/ionic-abi.h
 -rw-r--r-- root/root    usr/include/rdma/irdma-abi.h
 -rw-r--r-- root/root    usr/include/rdma/mana-abi.h
 -rw-r--r-- root/root    usr/include/rdma/mlx4-abi.h
@@ -1036,6 +1003,7 @@ drwxr-xr-x root/root    usr/include/rdma/hfi/
 drwxr-xr-x root/root    usr/include/regulator/
 -rw-r--r-- root/root    usr/include/regulator/regulator.h
 drwxr-xr-x root/root    usr/include/scsi/
+-rw-r--r-- root/root    usr/include/scsi/cxlflash_ioctl.h
 drwxr-xr-x root/root    usr/include/scsi/fc/
 -rw-r--r-- root/root    usr/include/scsi/fc/fc_els.h
 -rw-r--r-- root/root    usr/include/scsi/fc/fc_fs.h
@@ -1054,7 +1022,6 @@ drwxr-xr-x root/root    usr/include/sound/
 -rw-r--r-- root/root    usr/include/sound/compress_offload.h
 -rw-r--r-- root/root    usr/include/sound/compress_params.h
 -rw-r--r-- root/root    usr/include/sound/emu10k1.h
--rw-r--r-- root/root    usr/include/sound/fcp.h
 -rw-r--r-- root/root    usr/include/sound/firewire.h
 -rw-r--r-- root/root    usr/include/sound/hdsp.h
 -rw-r--r-- root/root    usr/include/sound/hdspm.h
