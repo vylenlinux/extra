@@ -37,6 +37,5 @@ build() {
 
     for versions in 3 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
         ln -s "${name}.so.${lib_version}" "${PKG}/usr/lib/libcurl.so.${versions}"
-        ln -s "${name}.so.${lib_version}" "${PKG}/usr/lib/${name}.so.${versions}"
     done
 }
