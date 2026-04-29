@@ -6,7 +6,7 @@ homepage="https://www.x.org/wiki"
 maintainer="Vylen Linux Team"
 
 name=xwayland
-version=24.1.10
+version=24.1.11
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz"
 
@@ -26,7 +26,8 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    rm "${PKG}/usr/lib/xorg/protocol.txt"
     rmdir "${PKG}/usr/lib/xorg"
-    rm "${PKG}/usr/share/man/man1/Xserver.1"
+
+    rm "${PKG}/usr/lib/xorg/protocol.txt" \
+        "${PKG}/usr/share/man/man1/Xserver.1"
 }
