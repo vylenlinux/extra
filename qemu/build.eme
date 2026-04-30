@@ -20,6 +20,7 @@ build() {
 
     cbuild_options
 
+    # shellcheck disable=SC2086
     ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
@@ -38,7 +39,7 @@ build() {
         --enable-virglrenderer \
         --smbd=/usr/bin/smbd \
         --with-coroutine=ucontext \
-        "${CBUILD_QEMU_OPTS}"
+        ${CBUILD_QEMU_OPTS}
 
     make
     make DESTDIR="${PKG}" install
