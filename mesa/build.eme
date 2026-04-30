@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.0.5
+version=26.0.6
 release=1
 
 ### BEGIN Rust crates
@@ -63,6 +63,7 @@ build() {
 
     cbuild_options
 
+    # shellcheck disable=SC2086
     vylen-meson build \
         -Db_lto=false \
         -Degl=enabled \
@@ -73,7 +74,7 @@ build() {
         -Dglvnd=enabled \
         -Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
         -Dvulkan-layers=device-select,overlay \
-        "${CBUILD_MESA_OPTS}"
+        ${CBUILD_MESA_OPTS}
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
@@ -81,4 +82,3 @@ build() {
     # Indirect rendering symlink
     ln -s libGLX_mesa.so.0 "${PKG}/usr/lib/libGLX_indirect.so.0"
 }
-
