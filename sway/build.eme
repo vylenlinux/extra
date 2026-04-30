@@ -27,9 +27,10 @@ build() {
 
     cbuild_options
 
+    # shellcheck disable=SC2086
     vylen-meson "${name}-${version}" build \
         -Dwerror=false \
-        "${CBUILD_SWAY_OPTS}"
+        ${CBUILD_SWAY_OPTS}
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
