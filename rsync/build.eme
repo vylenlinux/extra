@@ -6,11 +6,10 @@ homepage="https://rsync.samba.org/"
 maintainer="Vylen Linux Team"
 
 name=rsync
-version=3.4.1
+version=3.4.2
 release=1
 
 source="https://download.samba.org/pub/${name}/${name}-${version}.tar.gz
-    fix-invalid-acces-array.patch
     rsyncd.conf"
 
 backup="etc/rsyncd.conf"
@@ -18,7 +17,6 @@ backup="etc/rsyncd.conf"
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    patch -Np1 -i "${SRC}/fix-invalid-acces-array.patch"
 
     ./configure \
         --prefix=/usr \
