@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Modular Wayland compositor library"
+homepage="https://gitlab.freedesktop.org/wlroots/wlroots"
+maintainer="Vylen Linux Team"
+
+name=wlroots-20
+version=0.20.0
+release=1
+source="https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/${version}/wlroots-${version}.tar.gz"
+
+build() {
+    vylen-meson "wlroots-${version}" build \
+        -Dwerror=false \
+        -Dexamples=false \
+        -Dxwayland="$(emerald isinstalled xwayland && printf "enabled" || printf "disabled")" \
+        -Dbackends=drm,libinput,x11 \
+        -Dlibliftoff=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

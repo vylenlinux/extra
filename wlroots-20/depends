@@ -1,0 +1,11 @@
+libdisplay-info
+libinput
+libxkbcommon
+mesa
+pixman
+seatd
+wayland-protocols
+xcb-util-errors
+xcb-util-image
+xcb-util-renderutil
+xcb-util-wm
