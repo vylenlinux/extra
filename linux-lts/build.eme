@@ -9,22 +9,15 @@ name=linux-lts
 version=6.18.26
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.*}.tar.xz
+source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.0}.x/linux-${version%.*}.tar.xz
     x86_64-dotconfig"
-
-[ "${version##*.}" != 0 ] && {
-    source="${source}
-        https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/patch-${version}.xz"
-}
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name%-*}-${version%.*}"
-
-    xzcat "${SRC}/patch-${version}.xz" | patch -sNp1 -F0
+    cd "${name%-*}-${version%.0}"
     make mrproper
 
-    cbuild_restore "${SRC}/${name}-${version%.*}/.config" || cp "${SRC}/x86_64-dotconfig" .config
+    cbuild_restore "${SRC}/${name}-${version%.0}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
@@ -44,7 +37,7 @@ build() {
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}" modules_install
 
-    cbuild_save "${SRC}/${name%-*}-${version%.*}/.config"
+    cbuild_save "${SRC}/${name%-*}-${version%.0}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
@@ -91,8 +84,8 @@ build() {
     done
 
     kernver="${version}-${name}"
-    rm "${PKG}/lib/modules/${kernver}/build "
-    mv "${SRC}/linux-${version%.*}" "${PKG}/lib/modules/${kernver}/build"
+    rm "${PKG}/lib/modules/${kernver}/build"
+    mv "${SRC}/linux-${version%.0}" "${PKG}/lib/modules/${kernver}/build"
     ln -sv build "${PKG}/lib/modules/${kernver}/source"
 
     # remove now broken symlinks
