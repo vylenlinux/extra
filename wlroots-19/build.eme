@@ -5,13 +5,13 @@ description="Modular Wayland compositor library"
 homepage="https://gitlab.freedesktop.org/wlroots/wlroots"
 maintainer="Vylen Linux Team"
 
-name=wlroots
+name=wlroots-19
 version=0.19.3
 release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+source="https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/${version}/wlroots-${version}.tar.gz"
 
 build() {
-    vylen-meson "${name}-${version}" build \
+    vylen-meson "wlroots-${version}" build \
         -Dwerror=false \
         -Dexamples=false \
         -Dxwayland="$(emerald isinstalled xwayland && printf "enabled" || printf "disabled")" \
