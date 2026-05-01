@@ -6,10 +6,10 @@ homepage="https://github.com/swaywm/sway"
 maintainer="Vylen Linux Team"
 
 name=sway
-version=1.11
+version=1.12
 release=1
 
-source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-${version}.tar.gz
+source="https://github.com/swaywm/sway/releases/download/${version}-rc${release}/${name}-${version}-rc${release}.tar.gz
     ${name}-portals.conf
     ${name}.desktop"
 
@@ -25,10 +25,11 @@ build() {
         -Dgdk-pixbuf=auto \
         -Dman-pages=auto"
 
-    cbuild_options
+    cbuild_options "${name}"
 
     # shellcheck disable=SC2086
-    vylen-meson "${name}-${version}" build \
+    vylen-meson "${name}-${version}-rc${release}" build \
+        -Dsd-bus-provider=basu \
         -Dwerror=false \
         ${CBUILD_SWAY_OPTS}
 
