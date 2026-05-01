@@ -1,28 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
 description="Source code documentation generator tool"
 homepage="https://www.doxygen.nl/"
 maintainer="Vylen Linux Team"
 
 name=doxygen
 version=1.16.1
-vrsn=$(printf "$version" | sed 's/\./_/g')
 release=1
-source="$name-$version.tar.gz::https://github.com/doxygen/doxygen/archive/Release_$vrsn.tar.gz"
 
-bsdtar() {
-	tar $@
-}
+_version="$(printf "%s" "${version}" | sed 's/\./_/g')"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/Release_${_version}.tar.gz"
 
 build() {
+    cmake -S "${name}-Release_${_version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
 
-	cmake -S ${name}-Release_${vrsn} -B build -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-		-D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 
-	install -D -m 0755 $SRC/${name}-Release_${vrsn}/doc/${name}.1 \
-				$PKG/usr/share/man/man1/${name}.1
+    install -Dm755 "${SRC}/${name}-Release_${_version}/doc/${name}.1" -t "${PKG}/usr/share/man/man1/"
 }
