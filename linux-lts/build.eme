@@ -17,8 +17,6 @@ source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${versio
         https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/patch-${version}.xz"
 }
 
-noextract="patch-${version}.xz"
-
 build() {
     # shellcheck disable=SC2164
     cd "${name%-*}-${version%.*}"
