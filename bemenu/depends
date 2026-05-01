@@ -1,5 +1,5 @@
 pango
-wlroots
+wlroots-19
 libxkbcommon
 wayland
 wayland-protocols
