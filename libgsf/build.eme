@@ -1,17 +1,24 @@
-description="libgsf "
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Extensible I/O abstraction library for dealing with structured file formats"
 homepage="https://gitlab.gnome.org/GNOME/libgsf"
 maintainer="Vylen Linux Team"
 
 name=libgsf
-version=1.14.56
-vrsn=$(printf "$version" | sed 's/\./_/g')
+version=1.14.58
 release=1
-source="$name-$version.tar.gz::https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_${vrsn}/${name}-LIBGSF_${vrsn}.tar.gz"
+
+_version="$(printf "%s" "${version}" | sed 's/\./_/g')"
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/archive/LIBGSF_${_version}/${name}-LIBGSF_${_version}.tar.gz"
 
 build() {
-	cd ${name}-LIBGSF_${vrsn}
-	NOCONFIGURE=1 ./autogen.sh
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-LIBGSF_${_version}"
+
+    NOCONFIGURE=1 ./autogen.sh
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
