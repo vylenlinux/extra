@@ -6,11 +6,9 @@ homepage="https://roy.marples.name/projects/dhcpcd/"
 maintainer="Vylen Linux Team"
 
 name=dhcpcd
-version=10.3.1
+version=10.3.2
 release=1
-
-source="https://github.com/NetworkConfiguration/${name}/releases/download/v${version}/${name}-${version}.tar.xz
-    50-ntp.conf"
+source="https://github.com/NetworkConfiguration/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -23,6 +21,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    [ ! -f "${PKG}/lib/dhcpcd/dhcpcd-hooks/50-ntp.conf" ] && install -Dm444 "${SRC}/50-ntp.conf" -t "${PKG}/lib/dhcpcd/dhcpcd-hooks/"
     openrc_add dhcpcd
 }
