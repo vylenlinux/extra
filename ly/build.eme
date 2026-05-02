@@ -6,9 +6,11 @@ homepage="https://codeberg.org/fairyglade/ly"
 maintainer="Vylen Linux Team"
 
 name=ly
-version=1.3.2
+version=1.4.0
 release=1
-source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz
+    ${name}.pam"
 
 build() {
     # shellcheck disable=SC2164
@@ -28,15 +30,7 @@ build() {
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe
 
-    cat <<'EOF' > "${PKG}/etc/pam.d/ly"
-auth        include     system-auth
--auth       optional    pam_kwallet5.so
-account     include     system-account
-password    include     system-password
-session     optional    pam_keyinit.so force revoke
-session     include     system-session
--session    optional    pam_kwallet5.so auto_start
-EOF
+    install -Dm644 "${SRC}/${name}.pam" "${PKG}/etc/pam.d/${name}"
 
     openrc_add "${name}"
     rm -rf "${PKG}/usr/lib/"

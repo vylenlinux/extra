@@ -1,0 +1,7 @@
+auth        include     system-auth
+-auth       optional    pam_kwallet5.so
+account     include     system-account
+password    include     system-password
+session     optional    pam_keyinit.so force revoke
+session     include     system-session
+-session    optional    pam_kwallet5.so auto_start
