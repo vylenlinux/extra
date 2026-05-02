@@ -1,0 +1,59 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Additional support for proprietary codecs for Vivaldi"
+homepage="https://chromium.googlesource.com/chromium/third_party/ffmpeg"
+maintainer="Vylen Linux Team"
+
+name=vivaldi-ffmpeg-codecs
+version=146.0.7680.189
+release=1
+
+_vivaldi_major_version=7.9
+commit="ae11d2ba5c835b822a61d6a99eeb853ca30d41d8"
+
+source="${name}-${version}.tar.gz::https://chromium.googlesource.com/chromium/third_party/ffmpeg/+archive/${commit}.tar.gz"
+
+build() {
+    grep -o 'av[a-z0-9_]*(' chromium/ffmpeg.sigs | sed 's/($//' > sigs.txt
+    printf '%s\n' "avformat_version" "avutil_version" "ff_h264_decode_init_vlc" >> sigs.txt
+    printf '{\nglobal:\n' > export.map
+    sed 's/$/;/' "sigs.txt" >> export.map
+    printf 'local:\n*;\n};\n' >> export.map
+    sed -i.bak 's/^ *\.p\.name *=.*/.p.name="libopus",/' libavcodec/opus/dec.c
+    diff libavcodec/opus/dec.c.bak libavcodec/opus/dec.c || :
+
+    ./configure \
+        --prefix=/usr \
+        --disable-debug \
+        --disable-all \
+        --disable-autodetect \
+        --disable-doc \
+        --disable-iconv \
+        --disable-network \
+        --disable-symver \
+        --disable-large-tests \
+        --disable-error-resilience \
+        --disable-faan \
+        --disable-iamf \
+        --disable-shared \
+        --enable-static \
+        --enable-avformat \
+        --enable-avcodec \
+        --enable-avutil \
+        --enable-swresample \
+        --enable-pic \
+        --enable-asm \
+        --enable-hardcoded-tables \
+        --enable-demuxer=ogg,matroska,webm,wav,flac,mp3,mov,aac \
+        --enable-decoder=vorbis,opus,flac,pcm_s16le,mp3,aac,h264 \
+        --enable-parser=aac,flac,h264,mpegaudio,opus,vorbis,vp9 \
+        --extra-cflags="-DCHROMIUM_NO_LOGGING -fno-math-errno -fno-signed-zeros -fno-semantic-interposition -fomit-frame-pointer $LTOFLAGS" \
+        --libdir=/
+
+    DESTDIR=build make install
+
+    # shellcheck disable=SC2086
+    gcc $LTOFLAGS -shared $LDFLAGS -Wl,--start-group build/libavcodec.a build/libavformat.a build/libavutil.a build/libswresample.a -Wl,--end-group "$(sed 's/^/-Wl,-u,/' "sigs.txt" | paste -sd ' ' -)" -Wl,--version-script=export.map -lm -Wl,-Bsymbolic -o build/libffmpeg.so
+    install -Dm644 build/libffmpeg.so "${PKG}/opt/vivaldi/libffmpeg.so.${_vivaldi_major_version}"
+}

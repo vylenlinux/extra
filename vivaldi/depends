@@ -1,0 +1,8 @@
+gtk3
+font-bh-ttf
+cups
+nss
+alsa-utils
+desktop-file-utils
+hicolor-icon-theme
+imagemagick

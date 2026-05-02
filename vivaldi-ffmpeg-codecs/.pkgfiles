@@ -1,0 +1,4 @@
+vivaldi-ffmpeg-codecs-146.0.7680.189-1
+drwxr-xr-x root/root    opt/
+drwxr-xr-x root/root    opt/vivaldi/
+-rw-r--r-- root/root    opt/vivaldi/libffmpeg.so.7.9
