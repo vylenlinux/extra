@@ -1,4 +1,4 @@
-assimp-6.0.4-1
+assimp-6.0.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/assimp
@@ -102,7 +102,7 @@ drwxr-xr-x root/root    usr/lib/cmake/assimp-6.0/
 -rw-r--r-- root/root    usr/lib/cmake/assimp-6.0/assimpTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/assimp-6.0/assimpTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libassimp.so -> libassimp.so.6
-lrwxrwxrwx root/root    usr/lib/libassimp.so.6 -> libassimp.so.6.0.4
--rwxr-xr-x root/root    usr/lib/libassimp.so.6.0.4
+lrwxrwxrwx root/root    usr/lib/libassimp.so.6 -> libassimp.so.6.0.5
+-rwxr-xr-x root/root    usr/lib/libassimp.so.6.0.5
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/assimp.pc

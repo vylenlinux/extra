@@ -6,7 +6,7 @@ homepage="https://assimp.sourceforge.net/index.html"
 maintainer="Vylen Linux Team"
 
 name=assimp
-version=6.0.4
+version=6.0.5
 release=1
 source="https://github.com/assimp/assimp/archive/v${version}/${name}-${version}.tar.gz"
 
