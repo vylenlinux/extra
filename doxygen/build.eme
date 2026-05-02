@@ -6,7 +6,7 @@ homepage="https://www.doxygen.nl/"
 maintainer="Vylen Linux Team"
 
 name=doxygen
-version=1.16.1
+version=1.17.0
 release=1
 
 _version="$(printf "%s" "${version}" | sed 's/\./_/g')"
