@@ -1,20 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software"
 homepage="https://ziglang.org/"
 maintainer="Vylen Linux Team"
 
 name=zig
-version=0.15.2
+version=0.16.0
 release=1
-source="${name}-${version}.tar.xz::https://ziglang.org/download/$version/${name}-x86_64-linux-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://ziglang.org/download/${version}/${name}-x86_64-linux-${version}.tar.xz"
 
 build() {
-	cd ${name}-x86_64-linux-$version
+    # shellcheck disable=SC2164
+    cd "${name}-x86_64-linux-${version}"
+    install -Dm755 "${name}" -t "${PKG}/usr/bin/"
 
-	install -Dm755 -t "$PKG/usr/bin/" zig
+    install -d "${PKG}/usr/lib/${name}/"
+    cp -r lib/* -t "${PKG}/usr/lib/${name}/"
 
-	install -d "$PKG/usr/lib/zig/"
-	cp -r -t "$PKG/usr/lib/zig/" lib/*
-
-	install -d "$PKG/usr/include/"
-	ln -srf -t "$PKG/usr/include/" "$PKG/usr/lib/zig/zig.h"
+    install -d "${PKG}/usr/include/"
+    ln -srf "${PKG}/usr/lib/${name}/${name}.h" -t "${PKG}/usr/include/"
 }
