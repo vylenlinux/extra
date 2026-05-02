@@ -221,5 +221,5 @@ build() {
     install -m0644 *.ko "${PKG}/lib/modules/${kernver}/extra/"
 
     install -d "${PKG}/etc/revdep.d/"
-    echo "/usr/lib/libnvidia-gtk2.so.595.58.03" > "${PKG}/etc/revdep.d/${name}.conf"
+    echo "/usr/lib/libnvidia-gtk2.so.${version}" > "${PKG}/etc/revdep.d/${name}.conf"
 }
