@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="SignOn Daemon (Qt)"
 homepage="https://gitlab.com/accounts-sso/signond/"
 maintainer="Vylen Linux Team"
@@ -5,21 +8,21 @@ maintainer="Vylen Linux Team"
 name=signond
 version=8.61
 release=1
-source="https://gitlab.com/accounts-sso/signond/-/archive/VERSION_$version/$name-VERSION_$version.tar.gz
-  36.patch"
+
+source="${name}-${version}.tar.gz::https://gitlab.com/accounts-sso/${name}/-/archive/VERSION_${version}/${name}-VERSION_${version}.tar.gz
+    36.patch"
 
 build() {
-    cd $name-VERSION_$version
-
-    patch -Np1 -i $SRC/36.patch
+    # shellcheck disable=SC2164
+    cd "${name}-VERSION_${version}"
+    patch -Np1 -i "${SRC}/36.patch"
 
     sed -i \
         -e '/doc/d' \
         signon.pro lib/SignOn/SignOn.pro lib/plugins/plugins.pro
 
     qmake6 PREFIX=/usr LIBDIR=/usr/lib
-    make
-    make INSTALL_ROOT=$PKG install
 
-    rm -r $PKG/usr/share/doc
+    make
+    make INSTALL_ROOT="${PKG}" install
 }

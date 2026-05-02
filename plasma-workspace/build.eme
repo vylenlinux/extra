@@ -30,5 +30,4 @@ build() {
     DESTDIR="${PKG}" cmake --install build
 
     sed -i -e 's,^Exec=\(/usr/lib/plasma-dbus.*\),Exec=/usr/bin/ck-launch-session \1,' "${PKG}/usr/share/wayland-sessions/plasma.desktop"
-    rm -rf "${PKG}/usr/lib/systemd"
 }

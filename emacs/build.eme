@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The extensible, customizable, self-documenting real-time display editor"
 homepage="https://www.gnu.org/software/emacs/emacs.html"
 maintainer="Vylen Linux Team"
@@ -5,21 +8,19 @@ maintainer="Vylen Linux Team"
 name=emacs
 version=30.2
 release=1
-source="ftp://ftp.gnu.org/gnu/emacs/$name-$version.tar.xz"
+source="ftp://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	IMAGEMAGICK_CFLAGS=-I/usr/include/ImageMagick-7 \
-	IMAGEMAGICK_LIBS="-lMagickCore-7.Q16HDRI -lMagick++-7.Q16HDRI -lMagickWand-7.Q16HDRI" \
-	./configure --prefix=/usr \
-		    --libexecdir=/usr/lib \
-		    --with-gnutls=ifavailable \
-		    --with-tiff=no \
-		    --localstatedir=/var	
-	make
-	make DESTDIR=$PKG install
+    IMAGEMAGICK_CFLAGS=-I/usr/include/ImageMagick-7 IMAGEMAGICK_LIBS="-lMagickCore-7.Q16HDRI -lMagick++-7.Q16HDRI -lMagickWand-7.Q16HDRI" ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+        --with-gnutls=ifavailable \
+        --with-tiff=no \
+        --localstatedir=/var
 
-	rm -r $PKG/usr/lib/systemd
-
+    make
+    make DESTDIR="${PKG}" install
 }

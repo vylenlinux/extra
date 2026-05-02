@@ -23,6 +23,4 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
-
-    rm -rf "${PKG}/usr/lib/systemd"
 }

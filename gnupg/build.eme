@@ -24,8 +24,7 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    rm -rf "${PKG}/usr/share/info" \
-        "${PKG}/usr/share/doc"
+    rm -rf "${PKG}/usr/share/info"
 
     rm -f "${PKG}/usr/share/gnupg/FAQ" \
         "${PKG}/usr/share/gnupg/faq.html" \

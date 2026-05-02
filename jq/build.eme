@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Lightweight and flexible command-line JSON processor"
 homepage="https://jqlang.github.io/jq/"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,17 @@ maintainer="Vylen Linux Team"
 name=jq
 version=1.8.1
 release=1
-source="https://github.com/stedolan/jq/releases/download/jq-$version/$name-$version.tar.gz"
+source="https://github.com/stedolan/${name}/releases/download/${name}-${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -i
 
-	autoreconf -i
-	./configure --prefix=/usr --disable-docs
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-docs
 
-	rm -r $PKG/usr/share/doc
+    make
+    make DESTDIR="${PKG}" install
 }

@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A GTK+ backend for xdg-desktop-portal"
 homepage="https://github.com/flatpak/xdg-desktop-portal-gtk"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,10 @@ maintainer="Vylen Linux Team"
 name=xdg-desktop-portal-gtk
 version=1.15.3
 release=1
-source="https://github.com/flatpak/xdg-desktop-portal-gtk/archive/$version/$name-$version.tar.gz"
+source="https://github.com/flatpak/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
-
-	rm -fr $PKG/usr/lib/systemd
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 }

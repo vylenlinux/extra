@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Lightweight PDF and XPS viewer "
 homepage="https://mupdf.com/"
 maintainer="Vylen Linux Team"
@@ -5,21 +8,20 @@ maintainer="Vylen Linux Team"
 name=mupdf
 version=1.27.2
 release=1
-source="https://mupdf.com/downloads/archive/$name-$version-source.tar.gz"
+source="${name}-${version}.tar.gz::https://mupdf.com/downloads/archive/${name}-${version}-source.tar.gz"
 
 build() {
-	cd $name-$version-source
+    # shellcheck disable=SC2164
+    cd "${name}-${version}-source"
+    export USE_SYSTEM_LIBS='yes'
 
-	export USE_SYSTEM_LIBS='yes'
+    make install prefix="${PKG}/usr" \
+        mandir="${PKG}/usr/share/man" \
+        XCFLAGS="-fpic -fcommon" \
+        USE_SYSTEM_JBIG2DEC='no' \
+        USE_SYSTEM_OPENJPEG='no' \
+        USE_SYSTEM_GLUT='no' \
+        USE_SYSTEM_GUMBO='no'
 
-	make install prefix=$PKG/usr \
-		mandir=$PKG/usr/share/man \
-		XCFLAGS="-fpic -fcommon" \
-		USE_SYSTEM_JBIG2DEC='no' \
-		USE_SYSTEM_OPENJPEG='no' \
-		USE_SYSTEM_GLUT='no' \
-		USE_SYSTEM_GUMBO='no'
-
-	ln -s mupdf-gl $PKG/usr/bin/mupdf
-	rm -r $PKG/usr/share/doc
+	ln -s mupdf-gl "${PKG}/usr/bin/mupdf"
 }

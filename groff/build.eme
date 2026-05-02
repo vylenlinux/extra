@@ -29,6 +29,5 @@ build() {
     ln -s tbl "${PKG}/usr/bin/gtbl"
     ln -s soelim "${PKG}/usr/bin/zsoelim"
 
-    rm -rf "${PKG}/usr/share/info" \
-        "${PKG}/usr/share/doc"
+    rm -rf "${PKG}/usr/share/info"
 }

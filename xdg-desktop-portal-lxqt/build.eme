@@ -27,5 +27,4 @@ build() {
 
     # fix detection with x-d-p 1.18
     install -Dm644 "${SRC}/lxqt-portals.conf" -t "${PKG}/usr/share/xdg-desktop-portal/"
-    rm -rf "${PKG}/usr/lib/systemd"
 }

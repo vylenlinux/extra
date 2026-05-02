@@ -16,6 +16,4 @@ build() {
     vylen-meson "${name}-${version}" build --libexecdir="/usr/lib/${name}"
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    rm -rf "${PKG}/usr/lib/systemd"
 }

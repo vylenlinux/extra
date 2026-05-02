@@ -37,7 +37,4 @@ build() {
 
     # install desktop file
     install -Dm644 "${SRC}/pipewire.desktop" -t "${PKG}/etc/xdg/autostart/"
-
-    # remove leftovers
-    rm -r "${PKG}/usr/share/locale"
 }

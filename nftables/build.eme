@@ -37,6 +37,5 @@ build() {
     python3 -m installer -d "${PKG}" .dist/*.whl
     install -Dm600 "${SRC}/${name}.nft" -t "${PKG}/etc/"
 
-    rm -r "${PKG}/usr/share/doc"
     openrc_add "${name}"
 }

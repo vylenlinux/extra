@@ -36,7 +36,4 @@ build() {
 
     install -Dm644 "${SRC}/${name}-bindir.sh"   -t "${PKG}/etc/profile.d/"
     install -Dm644 "${SRC}/flathub.flatpakrepo" -t "${PKG}/usr/share/${name}/remotes.d/"
-
-    # clean cruft
-    rm -rf "${PKG}/usr/lib/systemd"
 }

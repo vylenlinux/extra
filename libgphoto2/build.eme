@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A library designed to allow access to digital cameras to external programs"
 homepage="http://www.gphoto.org/proj/libgphoto2/"
 maintainer="Vylen Linux Team"
@@ -5,20 +8,19 @@ maintainer="Vylen Linux Team"
 name=libgphoto2
 version=2.5.33
 release=1
-source="http://downloads.sourceforge.net/project/gphoto/libgphoto/$version/$name-$version.tar.bz2"
+source="http://downloads.sourceforge.net/project/gphoto/libgphoto/${version}/${name}-${version}.tar.bz2"
 
 build() {
-  cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  udevscriptdir=/lib/udev \
-  ./configure \
-    --prefix=/usr \
-    --disable-nls  \
-    --with-doc-dir=/usr/share/doc
+    udevscriptdir=/lib/udev ./configure \
+        --prefix=/usr \
+        --disable-nls  \
+        --with-doc-dir=/usr/share/doc
 
-  make
-  make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-  rm -r $PKG/usr/share/doc
-  rm $PKG/usr/lib/libgphoto2*/*/*.la
+    rm "${PKG}/usr/lib"/libgphoto2*/*/*.la
 }

@@ -20,6 +20,4 @@ build() {
         --with-openssl install \
         --root="${PKG}" \
         --skip-build
-
-    rm -rf "${PKG}/usr/share/doc"
 }

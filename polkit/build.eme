@@ -41,9 +41,4 @@ build() {
 
     chmod 4775 "${PKG}/usr/bin/pkexec" \
         "${PKG}/usr/lib/polkit-1/polkit-agent-helper-1"
-
-    rm -r "${PKG}/usr/lib/systemd" \
-        "${PKG}/usr/lib/sysusers.d" \
-        "${PKG}/usr/lib/tmpfiles.d" \
-        "${PKG}/usr/share/locale"
 }

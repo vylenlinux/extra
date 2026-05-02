@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="System's hardware information of your BIOS according to SMBIOS/DMI standard."
 homepage="https://www.nongnu.org/dmidecode/"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,12 @@ maintainer="Vylen Linux Team"
 name=dmidecode
 version=3.7
 release=1
-source="https://download.savannah.gnu.org/releases/$name/$name-$version.tar.xz"
+source="https://download.savannah.gnu.org/releases/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	make prefix=/usr CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
-	make prefix=/usr DESTDIR=$PKG install
-	rm -r $PKG/usr/share/doc
+    make prefix=/usr CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+    make prefix=/usr DESTDIR="${PKG}" install
 }

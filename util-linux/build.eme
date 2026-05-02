@@ -34,8 +34,6 @@ build() {
     meson compile -C build -j "${JOBS:-1}"
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    rm -r "${PKG}/usr/share/doc"
-
     # move from /usr/bin to /bin
     install -d "${PKG}/bin"
 
@@ -45,9 +43,9 @@ build() {
 
     # move from /usr/sbin to /sbin
     install -d "${PKG}/sbin"
-    mv "${PKG}/usr/sbin"/* "${PKG}/sbin"
+    mv "${PKG}/usr/sbin"/* "${PKG}/sbin/"
 
     for p in addpart delpart ldattach partx readprofile resizepart rfkill rtcwake uuidd; do
-        mv "${PKG}/sbin/${p}" "${PKG}/usr/sbin"
+        mv "${PKG}/sbin/${p}" "${PKG}/usr/sbin/"
     done
 }

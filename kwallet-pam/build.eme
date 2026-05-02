@@ -25,6 +25,4 @@ build() {
 
     mkdir -p "${PKG}/lib"
     mv "${PKG}/usr/lib/security" "${PKG}/lib/"
-
-    rm -fr "${PKG}/usr/lib/systemd"
 }

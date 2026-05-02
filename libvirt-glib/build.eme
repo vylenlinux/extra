@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Glib bindings for libvirt"
 homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team"
@@ -5,18 +8,14 @@ maintainer="Vylen Linux Team"
 name=libvirt-glib
 version=5.0.0
 release=1
-source="https://libvirt.org/sources/glib/$name-$version.tar.xz"
+source="https://libvirt.org/sources/glib/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build \
-		--prefix=/usr \
-		--buildtype=plain \
-		-Ddocs=disabled \
-		-Dtests=disabled \
-		-Dvapi=disabled
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Ddocs=disabled \
+        -Dtests=disabled \
+        -Dvapi=disabled
 
-	rm -r $PKG/usr/share/locale
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
-

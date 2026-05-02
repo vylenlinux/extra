@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="fstrcmp - a library that is used to make fuzzy comparisons of strings and byte arrays"
 homepage="http://fstrcmp.sourceforge.net/"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,13 @@ maintainer="Vylen Linux Team"
 name=fstrcmp
 version=0.7.D001
 release=1
-source=http://fstrcmp.sourceforge.net/fstrcmp-$version.tar.gz
+source="http://fstrcmp.sourceforge.net/${name}-${version}.tar.gz"
 
 build() {
-  cd $name-$version
-  ./configure --prefix=/usr
-  make
-  make DESTDIR=$PKG install
-  rm -fr $PKG/usr/share/doc
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }

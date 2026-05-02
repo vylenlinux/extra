@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="High level abstract threading library"
 homepage="https://www.threadingbuildingblocks.org"
 maintainer="Vylen Linux Team"
@@ -5,23 +8,19 @@ maintainer="Vylen Linux Team"
 name=tbb
 version=2022.3.0
 release=1
-source="https://github.com/oneapi-src/oneTBB/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/oneapi-src/oneTBB/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd oneTBB-$version
-
-	cmake -B build -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-D TBB4PY_BUILD=ON \
-		-D TBB_STRICT=OFF \
-		-D TBB_TEST=OFF \
-		-Wno-dev
+    cmake -S "oneTBB-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DTBB4PY_BUILD=ON \
+        -DTBB_STRICT=OFF \
+        -DTBB_TEST=OFF \
+        -Wno-dev
 
 	cmake --build build --target all python_build
-	DESTDIR=$PKG cmake --install build
-
-	rm -r $PKG/usr/share/doc	
+	DESTDIR="${PKG}" cmake --install build
 }

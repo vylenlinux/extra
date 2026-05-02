@@ -14,7 +14,4 @@ build() {
     vylen-meson "${name}-AT_SPI2_CORE_2_54_0" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    # remove junk files
-    rm -fr "${PKG}/usr/lib/systemd/"
 }
