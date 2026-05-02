@@ -1,0 +1,25 @@
+description="A C++ library to decode QRCode"
+homepage="https://github.com/nu-book/zxing-cpp"
+maintainer="Vylen Linux Team"
+
+name=zxing-cpp
+version=3.0.2
+release=1
+source="https://github.com/nu-book/zxing-cpp/archive/v$version/$name-$version.tar.gz
+       system-stb.patch"
+
+build() {
+    patch -Np1 -d $name-$version -i $SRC/system-stb.patch
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D ZXING_C_API=ON \
+        -D ZXING_USE_BUNDLED_ZINT=OFF \
+        -D ZXING_EXAMPLES=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+}

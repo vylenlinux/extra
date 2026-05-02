@@ -1,0 +1,14 @@
+description="A JavaScript display engine for mathematics that works in all browsers"
+homepage="https://www.mathjax.org/"
+maintainer="Vylen Linux Team"
+
+name=mathjax
+version=4.1.1
+release=1
+source="https://github.com/mathjax/MathJax/archive/$version/MathJax-$version.tar.gz"
+
+build() {
+	cd MathJax-$version
+	mkdir -p $PKG/usr/share/mathjax
+	cp -ar * $PKG/usr/share/mathjax
+}

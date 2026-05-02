@@ -1,0 +1,24 @@
+description="Tools for accessing and converting various ebook file formats"
+homepage="http://ebook-tools.sourceforge.net/"
+maintainer="Vylen Linux Team"
+
+name=ebook-tools
+version=0.2.2
+release=1
+source="http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+	crash-fix.patch"
+
+build() {
+	# https://sourceforge.net/p/ebook-tools/bugs/8/
+	patch -Np2 -d $name-$version -i $SRC/crash-fix.patch
+
+	cmake -S $name-$version -B build -G Ninja \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_BUILD_TYPE=Release \
+		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}

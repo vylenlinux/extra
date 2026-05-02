@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Session manager for Xfce"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-session
+version=4.20.4
+release=1
+source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --enable-x11 \
+        --enable-wayland \
+        --disable-debug \
+        --disable-legacy-sm \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

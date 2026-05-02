@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="KDE Partition Manager is a utility to help you manage the disks"
+homepage="https://apps.kde.org/partitionmanager/"
+maintainer="Vylen Linux Team"
+
+name=partitionmanager
+version=26.04.0
+release=1
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

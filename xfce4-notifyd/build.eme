@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Themable notification daemon with transparency effects"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-notifyd
+version=0.9.7
+release=1
+source="https://archive.xfce.org/src/apps/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --libexecdir="/usr/lib/${name}" \
+        --disable-debug
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm "${PKG}/usr/lib/xfce4/panel/plugins"/*.la
+}

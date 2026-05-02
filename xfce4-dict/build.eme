@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A dictionary plugin for the Xfce panel"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-dict
+version=0.8.9
+release=1
+source="${name}-${version}.tar.gz::https://gitlab.xfce.org/apps/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

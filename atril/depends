@@ -1,0 +1,11 @@
+gtk3
+libsecret
+caja
+poppler-glib
+zlib
+libtiff
+libsm
+libice
+libx11
+gtk-doc
+yelp-tools

@@ -1,0 +1,49 @@
+kdecoration-6.6.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KDecoration3/
+drwxr-xr-x root/root    usr/include/KDecoration3/KDecoration3/
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecoratedWindow
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/Decoration
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecorationButton
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecorationButtonGroup
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecorationSettings
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecorationShadow
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/DecorationThemeProvider
+drwxr-xr-x root/root    usr/include/KDecoration3/KDecoration3/Private/
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/Private/DecoratedWindowPrivate
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/Private/DecorationBridge
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/Private/DecorationSettingsPrivate
+-rw-r--r-- root/root    usr/include/KDecoration3/KDecoration3/ScaleHelpers
+drwxr-xr-x root/root    usr/include/KDecoration3/kdecoration3/
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decoratedwindow.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decoration.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationbutton.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationbuttongroup.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationdefines.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationsettings.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationshadow.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/decorationthemeprovider.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/kdecoration3_export.h
+drwxr-xr-x root/root    usr/include/KDecoration3/kdecoration3/private/
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/private/decoratedwindowprivate.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/private/decorationbridge.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/private/decorationsettingsprivate.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/private/kdecoration3_private_export.h
+-rw-r--r-- root/root    usr/include/KDecoration3/kdecoration3/scalehelpers.h
+drwxr-xr-x root/root    usr/include/KF6/
+-rw-r--r-- root/root    usr/include/KF6/kdecoration3_version.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/KDecoration3/
+-rw-r--r-- root/root    usr/lib/cmake/KDecoration3/KDecoration3Config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KDecoration3/KDecoration3ConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KDecoration3/KDecoration3Targets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KDecoration3/KDecoration3Targets.cmake
+lrwxrwxrwx root/root    usr/lib/libkdecorations3.so -> libkdecorations3.so.6
+lrwxrwxrwx root/root    usr/lib/libkdecorations3.so.6 -> libkdecorations3.so.6.6.4
+-rwxr-xr-x root/root    usr/lib/libkdecorations3.so.6.6.4
+lrwxrwxrwx root/root    usr/lib/libkdecorations3private.so -> libkdecorations3private.so.2
+lrwxrwxrwx root/root    usr/lib/libkdecorations3private.so.2 -> libkdecorations3private.so.6.6.4
+-rwxr-xr-x root/root    usr/lib/libkdecorations3private.so.6.6.4
+drwxr-xr-x root/root    usr/share/

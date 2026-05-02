@@ -1,0 +1,22 @@
+description="Multi-platform sound framework for application developers"
+homepage="https://community.kde.org/Phonon"
+maintainer="Vylen Linux Team"
+
+name=phonon
+version=4.12.0
+release=1
+source="https://download.kde.org/stable/$name/$version/$name-$version.tar.xz"
+
+build() {
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D PHONON_BUILD_QT5=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+
+}

@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A set of applications for productivity and creative usage"
+homepage="https://calligra.org/"
+maintainer="Vylen Linux Team"
+
+name=calligra
+version=26.04.0
+release=1
+
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz
+    https://invent.kde.org/office/${name}/-/commit/2ddb27bd.patch"
+
+build() {
+    patch -d "${name}-${version}" -p1 < "${SRC}/2ddb27bd.patch" # poppler 26.04
+
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DRELEASE_BUILD=ON \
+        -DPRODUCTSET=DESKTOP \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

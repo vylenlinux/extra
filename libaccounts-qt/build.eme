@@ -1,0 +1,21 @@
+description="Qt-based client library for the accounts database"
+homepage="https://gitlab.com/accounts-sso/libaccounts-qt"
+maintainer="Vylen Linux Team"
+
+name=libaccounts-qt
+version=1.17
+release=1
+source="https://gitlab.com/accounts-sso/libaccounts-qt/-/archive/VERSION_$version/$name-VERSION_$version.tar.gz"
+
+build() {
+    cd $name-VERSION_$version
+
+    sed -i \
+        -e 's,SUBDIRS  += Accounts tests,SUBDIRS += Accounts,' \
+        -e '/doc/d' \
+        accounts-qt.pro
+
+    qmake6 PREFIX=/usr LIBDIR=/usr/lib
+    make
+    make INSTALL_ROOT=$PKG install
+}

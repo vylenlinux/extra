@@ -1,0 +1,6 @@
+glib
+libx11
+libxext
+mate-panel
+gtk3
+libnotify

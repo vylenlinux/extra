@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A library that allows developers to access PolicyKit API with a nice Qt-style API"
+homepage="https://www.kde.org/"
+maintainer="Vylen Linux Team"
+
+name=polkit-qt-1
+version=0.200.0
+release=1
+source="http://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DLIB_DESTINATION=/usr/lib \
+        -DQT_MAJOR_VERSION=6 \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DOPTION=ON/OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

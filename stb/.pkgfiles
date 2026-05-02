@@ -1,0 +1,23 @@
+stb-0_git20231012-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/stb_c_lexer.h
+-rw-r--r-- root/root    usr/include/stb_connected_components.h
+-rw-r--r-- root/root    usr/include/stb_divide.h
+-rw-r--r-- root/root    usr/include/stb_ds.h
+-rw-r--r-- root/root    usr/include/stb_dxt.h
+-rw-r--r-- root/root    usr/include/stb_easy_font.h
+-rw-r--r-- root/root    usr/include/stb_herringbone_wang_tile.h
+-rw-r--r-- root/root    usr/include/stb_hexwave.h
+-rw-r--r-- root/root    usr/include/stb_image.h
+-rw-r--r-- root/root    usr/include/stb_image_resize2.h
+-rw-r--r-- root/root    usr/include/stb_image_write.h
+-rw-r--r-- root/root    usr/include/stb_include.h
+-rw-r--r-- root/root    usr/include/stb_leakcheck.h
+-rw-r--r-- root/root    usr/include/stb_perlin.h
+-rw-r--r-- root/root    usr/include/stb_rect_pack.h
+-rw-r--r-- root/root    usr/include/stb_sprintf.h
+-rw-r--r-- root/root    usr/include/stb_textedit.h
+-rw-r--r-- root/root    usr/include/stb_tilemap_editor.h
+-rw-r--r-- root/root    usr/include/stb_truetype.h
+-rw-r--r-- root/root    usr/include/stb_voxel_render.h

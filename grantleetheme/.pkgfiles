@@ -1,0 +1,46 @@
+grantleetheme-26.04.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KPim6/
+drwxr-xr-x root/root    usr/include/KPim6/GrantleeTheme/
+drwxr-xr-x root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/GenericFormatter
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/GrantleeKi18nLocalizer
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/GrantleeTheme
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/GrantleeThemeEngine
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/GrantleeThemeManager
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/GrantleeTheme/QtResourceTemplateLoader
+drwxr-xr-x root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/GenericFormatter
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/GrantleeKi18nLocalizer
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/GrantleeTheme
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/GrantleeThemeEngine
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/GrantleeThemeManager
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/QtResourceTemplateLoader
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/genericformatter.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/grantleeki18nlocalizer.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/grantleetheme.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/grantleetheme_export.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/grantleethemeengine.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/grantleethememanager.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme/qtresourcetemplateloader.h
+-rw-r--r-- root/root    usr/include/KPim6/GrantleeTheme/grantleetheme_version.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/KPim6GrantleeTheme/
+-rw-r--r-- root/root    usr/lib/cmake/KPim6GrantleeTheme/KPim6GrantleeThemeConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6GrantleeTheme/KPim6GrantleeThemeConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6GrantleeTheme/KPim6GrantleeThemeTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6GrantleeTheme/KPim6GrantleeThemeTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libKPim6GrantleeTheme.so -> libKPim6GrantleeTheme.so.6
+lrwxrwxrwx root/root    usr/lib/libKPim6GrantleeTheme.so.6 -> libKPim6GrantleeTheme.so.6.7.0
+-rwxr-xr-x root/root    usr/lib/libKPim6GrantleeTheme.so.6.7.0
+drwxr-xr-x root/root    usr/lib/qt6/
+drwxr-xr-x root/root    usr/lib/qt6/plugins/
+drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
+drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/ktexttemplate/
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/ktexttemplate/kde_grantlee_plugin.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/grantleetheme.categories
+-rw-r--r-- root/root    usr/share/qlogging-categories6/grantleetheme.renamecategories

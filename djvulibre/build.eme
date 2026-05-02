@@ -1,0 +1,20 @@
+description="library for reading DjVu files"
+homepage="https://djvu.sourceforge.net"
+maintainer="Vylen Linux Team"
+
+name=djvulibre
+version=3.5.29
+release=1
+source="https://sourceforge.net/projects/djvu/files/DjVuLibre/$version/$name-$version.tar.gz"
+
+build() {
+    cd $name-$version
+
+    ./configure \
+	--prefix=/usr \
+	--libdir=/usr/lib \
+        --disable-static \
+        --disable-desktopfiles
+    make
+    make DESTDIR=$PKG install
+}

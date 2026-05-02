@@ -1,0 +1,10 @@
+caja
+gtk3
+glib
+dbus-glib
+libnotify
+libcanberra
+libsm
+libice
+libx11
+itstool

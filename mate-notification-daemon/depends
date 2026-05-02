@@ -1,0 +1,13 @@
+gtk3
+pango
+harfbuzz
+at-spi2-core
+cairo
+libnotify
+gdk-pixbuf
+glib
+libcanberra
+libwnck3
+libx11
+mate-desktop
+mate-panel

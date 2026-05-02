@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="a style for Qt Quick Controls 2 (QQC2) which uses QStyle"
+homepage="https://community.kde.org/Frameworks"
+maintainer="Vylen Linux Team"
+
+name=qqc2-desktop-style
+version=6.25.0
+release=1
+source="https://download.kde.org/stable/frameworks/${version%.*}/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

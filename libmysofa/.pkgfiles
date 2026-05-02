@@ -1,0 +1,24 @@
+libmysofa-1.3.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/mysofa2json
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/mysofa.h
+-rw-r--r-- root/root    usr/include/mysofa_export.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/mysofa/
+-rw-r--r-- root/root    usr/lib/cmake/mysofa/mysofaConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mysofa/mysofaConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mysofa/mysofaTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mysofa/mysofaTargets.cmake
+-rw-r--r-- root/root    usr/lib/libmysofa.a
+lrwxrwxrwx root/root    usr/lib/libmysofa.so -> libmysofa.so.1
+lrwxrwxrwx root/root    usr/lib/libmysofa.so.1 -> libmysofa.so.1.3.3
+-rwxr-xr-x root/root    usr/lib/libmysofa.so.1.3.3
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libmysofa.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/libmysofa/
+-rw-r--r-- root/root    usr/share/libmysofa/MIT_KEMAR_normal_pinna.sofa
+lrwxrwxrwx root/root    usr/share/libmysofa/default.sofa -> MIT_KEMAR_normal_pinna.sofa

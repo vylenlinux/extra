@@ -1,0 +1,20 @@
+description="SSH library"
+homepage="https://libssh.org"
+maintainer="Vylen Linux Team"
+
+name=libssh
+version=0.12.0
+release=1
+source="https://www.libssh.org/files/${version%.*}/libssh-${version}.tar.xz"
+
+build() {
+  cmake -S $name-$version -B build -G Ninja \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_LIBDIR=lib \
+    -D CMAKE_BUILD_TYPE=Release \
+    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+    -Wno-dev
+  cmake --build build
+  DESTDIR=$PKG cmake --install build
+}

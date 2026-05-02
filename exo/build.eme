@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Support library used in the Xfce desktop"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=exo
+version=4.20.0
+release=1
+source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc
+
+    make
+    make DESTDIR="${PKG}" install
+}

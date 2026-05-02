@@ -1,0 +1,12 @@
+glib
+libgtop
+libwnck3
+gtkmm3
+gtk3
+cairomm
+libxml2
+librsvg
+gdk-pixbuf
+glibmm
+itstool
+polkit

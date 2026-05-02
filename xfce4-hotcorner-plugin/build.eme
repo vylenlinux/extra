@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Provides an easy way to set up hot corners in the Xfce desktop environment"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-hotcorner-plugin
+version=0.0.4
+release=1
+source="${name}-${version}.tar.gz::https://github.com/christopherkobayashi/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    CFLAGS="${CFLAGS} -w"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-debug
+
+    make
+    make DESTDIR="${PKG}" install
+}

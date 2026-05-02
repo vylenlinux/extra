@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings"
+homepage="https://mate-desktop.org"
+maintainer="Vylen Linux Team"
+
+name=mate-sensors-applet
+version=1.28.0
+release=1
+
+source="https://pub.mate-desktop.org/releases/${version%.*}/${name}-${version}.tar.xz
+    fix-build-locale-error.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/fix-build-locale-error.patch"
+
+    ./configure \
+        --prefix=/usr \
+        --libexecdir="/usr/lib/${name}" \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

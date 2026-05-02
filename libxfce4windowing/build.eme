@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Windowing concept abstraction library for X11 and Wayland"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=libxfce4windowing
+version=4.20.5
+release=1
+source="${name}-${version}.tar.bz2::https://gitlab.xfce.org/xfce/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.bz2"
+
+build() {
+    vylen-meson "${name}-${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

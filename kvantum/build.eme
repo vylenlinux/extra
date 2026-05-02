@@ -1,0 +1,24 @@
+description="Theme engine for Qt4/Qt5 and KDE"
+homepage="https://github.com/tsujan/Kvantum/"
+maintainer="Vylen Linux Team"
+
+name=kvantum
+version=1.1.6
+release=1
+source="https://github.com/tsujan/Kvantum/archive/V$version/Kvantum-v$version.tar.gz"
+
+build() {
+    cmake -S Kvantum-$version/Kvantum -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+
+    rm -fr $PKG/usr/share/kvantumpreview/translations \
+           $PKG/usr/share/kvantummanager/translations
+
+}
+

@@ -1,0 +1,21 @@
+description="KDE scientific calculator"
+homepage="https://apps.kde.org/filelight/"
+maintainer="Vylen Linux Team"
+
+name=kcalc
+version=26.04.0
+release=1
+source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+
+build() {
+	cmake -S $name-$version -B build \
+	        -D CMAKE_INSTALL_PREFIX=/usr \
+	        -D CMAKE_INSTALL_LIBDIR=lib \
+	        -D CMAKE_BUILD_TYPE=Release \
+	        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+	        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+	        -Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+
+}

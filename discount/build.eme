@@ -1,0 +1,21 @@
+description="C implementation of John Gruber's Markdown markup language"
+homepage="https://github.com/Orc/discount"
+maintainer="Vylen Linux Team"
+
+name=discount
+version=3.0.1.2
+release=1
+source="https://github.com/Orc/discount/archive/v$version/$name-$version.tar.gz"
+
+build() {
+    cd $name-$version
+
+    ./configure.sh \
+        --prefix=/usr \
+        --enable-all-features \
+        --with-fenced-code \
+        --shared
+    sed -i '/ldconfig/d' librarian.sh
+    make
+    make DESTDIR=$PKG install
+}

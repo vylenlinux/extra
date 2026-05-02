@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Daemon providing a Polkit authentication UI for Plasma"
+homepage="https://invent.kde.org/plasma/polkit-kde-agent-1"
+maintainer="Vylen Linux Team"
+
+name=polkit-kde-agent-1
+version=6.6.4
+release=1
+source="${name}-${version}.tar.bz2::https://invent.kde.org/plasma/${name}/-/archive/v${version}/${name}-v${version}.tar.bz2"
+
+build() {
+    cmake -S "${name}-v${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR="lib/${name}" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    rm -r "${PKG}/usr/share/locale" \
+        "${PKG}/usr/lib/systemd"
+}

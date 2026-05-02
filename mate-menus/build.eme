@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A library that implements the Desktop Menu Specifications from freedesktop.org"
+homepage="https://mate-desktop.org"
+maintainer="Vylen Linux Team"
+
+name=mate-menus
+version=1.28.1
+release=1
+source="https://github.com/mate-desktop/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

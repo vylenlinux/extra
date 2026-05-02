@@ -1,0 +1,10 @@
+layer-shell-qt
+libdbusmenu-lxqt
+lxqt-menu-data
+pipewire
+libqtxdg
+lxqt-globalkeys
+solid
+libstatgrab
+libsysstat
+lm_sensors

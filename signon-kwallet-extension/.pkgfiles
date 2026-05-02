@@ -1,0 +1,6 @@
+signon-kwallet-extension-26.04.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/signon/
+drwxr-xr-x root/root    usr/lib/signon/extensions/
+-rwxr-xr-x root/root    usr/lib/signon/extensions/libkeyring-kwallet.so

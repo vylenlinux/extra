@@ -1,0 +1,40 @@
+incidenceeditor-26.04.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KPim6/
+drwxr-xr-x root/root    usr/include/KPim6/IncidenceEditor/
+drwxr-xr-x root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/EditorItemManager
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/GroupwareUiDelegate
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceDefaults
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceDialog
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceDialogFactory
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceEditor-Ng
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IncidenceEditorSettings
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/IncidenceEditor/IndividualMailComponentFactory
+drwxr-xr-x root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/editoritemmanager.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/globalsettings_incidenceeditor.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/groupwareuidelegate.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidencedefaults.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidencedialog.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidencedialogfactory.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidenceeditor-ng.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidenceeditor_export.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/incidenceeditorsettings.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor/individualmailcomponentfactory.h
+-rw-r--r-- root/root    usr/include/KPim6/IncidenceEditor/incidenceeditor_version.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/KPim6IncidenceEditor/
+-rw-r--r-- root/root    usr/lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6IncidenceEditor/KPim6IncidenceEditorTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libKPim6IncidenceEditor.so -> libKPim6IncidenceEditor.so.6
+lrwxrwxrwx root/root    usr/lib/libKPim6IncidenceEditor.so.6 -> libKPim6IncidenceEditor.so.6.7.0
+-rwxr-xr-x root/root    usr/lib/libKPim6IncidenceEditor.so.6.7.0
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/incidenceeditor.categories
+-rw-r--r-- root/root    usr/share/qlogging-categories6/incidenceeditor.renamecategories

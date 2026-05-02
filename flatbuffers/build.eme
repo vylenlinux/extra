@@ -1,0 +1,21 @@
+description="An efficient cross platform serialization library for C++, with support for Java, C# and Go"
+homepage="https://google.github.io/flatbuffers/"
+maintainer="Vylen Linux Team"
+
+name=flatbuffers
+version=25.12.19
+release=1
+source="https://github.com/google/flatbuffers/archive/v$version/$name-$version.tar.gz"
+
+build() {
+	cmake -S $name-$version -B build -G Ninja \
+		-D CMAKE_INSTALL_PREFIX=/usr \
+		-D CMAKE_INSTALL_LIBDIR=lib \
+		-D CMAKE_BUILD_TYPE=Release \
+		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+		-D FLATBUFFERS_BUILD_FLATLIB=OFF \
+		-D FLATBUFFERS_BUILD_SHAREDLIB=ON \
+		-Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}

@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Google's common library for parsing, formatting, and validating international phone numbers"
+homepage="https://github.com/googlei18n/libphonenumber"
+maintainer="Vylen Linux Team"
+
+name=libphonenumber
+version=9.0.29
+release=1
+
+source="https://github.com/google/libphonenumber/archive/v${version}/${name}-${version}.tar.gz
+    0001-Use-find_package-for-protobuf.patch
+    0002-Remove-Werror.patch
+    0003-Fix-BUILD_STATIC_LIB-OFF.patch"
+
+build() {
+    export PATH="/usr/lib/jvm/java-25-openjdk/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    export CXXFLAGS="${CXXFLAGS} -Wno-error=cpp"
+
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    patch -Np1 -i "${SRC}/0001-Use-find_package-for-protobuf.patch"
+    patch -Np1 -i "${SRC}/0002-Remove-Werror.patch"
+    patch -Np1 -i "${SRC}/0003-Fix-BUILD_STATIC_LIB-OFF.patch"
+
+    # shellcheck disable=SC2153
+    cmake -S cpp -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_STANDARD=17 \
+        -DUSE_BOOST=OFF \
+        -DUSE_STDMUTEX=ON \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

@@ -1,0 +1,29 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="The MATE control center"
+homepage="https://mate-desktop.org"
+maintainer="Vylen Linux Team"
+
+name=mate-control-center
+version=1.28.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/mate-desktop/${name}/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fvi
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --disable-systemd \
+        --enable-static=no \
+        --disable-update-mimedb
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm "${PKG}/usr/share/applications/mimeinfo.cache"
+}

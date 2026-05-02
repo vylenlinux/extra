@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Audio Effects for Pipewire applications"
+homepage="https://github.com/wwmm/easyeffects"
+maintainer="Vylen Linux Team"
+
+name=easyeffects
+version=8.2.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/wwmm/${name}/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

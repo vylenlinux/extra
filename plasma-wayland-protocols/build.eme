@@ -1,0 +1,21 @@
+description="Provides the xml files of the non-standard wayland protocols we use in Plasma"
+homepage="https://kde.org/plasma-desktop/"
+maintainer="Vylen Linux Team"
+
+name=plasma-wayland-protocols
+version=1.20.0
+release=1
+source="https://download.kde.org/stable/$name/$name-$version.tar.xz"
+
+build() {
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D BUILD_TESTING=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+}

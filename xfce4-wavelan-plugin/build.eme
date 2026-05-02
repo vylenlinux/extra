@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Display stats from a wireless lan interface"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-wavelan-plugin
+version=0.7.0
+release=1
+source="https://archive.xfce.org/src/panel-plugins/${name}/${version%.*}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

@@ -1,0 +1,15 @@
+description="ANSI color to HTML converter"
+homepage="https://github.com/theZiz/ah"
+maintainer="Vylen Linux Team"
+
+name=aha
+version=0.5.1
+release=1
+source="$name-$version.tar.gz::https://github.com/theZiz/aha/archive/$version.tar.gz"
+
+build() {
+	cd ${name}-${version}
+	make
+	install -Dm 755 aha $PKG/usr/bin/aha
+	install -Dm 644 aha.1 $PKG/usr/share/man/man1/aha.1
+}

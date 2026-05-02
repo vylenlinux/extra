@@ -1,0 +1,16 @@
+description="Automatic proxy configuration management library"
+homepage="https://libproxy.github.io/libproxy/"
+maintainer="Vylen Linux Team"
+
+name=libproxy
+version=0.5.12
+release=1
+source="https://github.com/libproxy/libproxy/archive/$version/$name-$version.tar.gz"
+
+build() {
+	vylen-meson $name-$version build \
+		-D release=true \
+	        -D docs=false
+	meson compile -C build
+	DESTDIR=$PKG meson install -C build
+}

@@ -1,0 +1,8 @@
+clinfo-3.0.25.02.14-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-r-xr-xr-x root/root    usr/bin/clinfo
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-r--r--r-- root/root    usr/share/man/man1/clinfo.1.gz

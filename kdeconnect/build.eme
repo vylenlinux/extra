@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Adds communication between KDE and your smartphone"
+homepage="https://kdeconnect.kde.org/"
+maintainer="Vylen Linux Team"
+
+name=kdeconnect
+version=26.04.0
+release=1
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/release-service/${version}/src/${name}-kde-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-kde-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -DBLUETOOTH_ENABLE=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

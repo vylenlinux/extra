@@ -1,0 +1,14 @@
+polkit-kde-agent-1-6.6.4-1
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/xdg/
+drwxr-xr-x root/root    etc/xdg/autostart/
+-rw-r--r-- root/root    etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/polkit-kde-agent-1/
+-rwxr-xr-x root/root    usr/lib/polkit-kde-agent-1/polkit-kde-authentication-agent-1
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/org.kde.polkit-kde-authentication-agent-1.desktop
+drwxr-xr-x root/root    usr/share/knotifications6/
+-rw-r--r-- root/root    usr/share/knotifications6/polkit-kde-authentication-agent-1.notifyrc

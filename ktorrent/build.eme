@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A powerful BitTorrent client for KDE"
+homepage="https://apps.kde.org/ktorrent/"
+maintainer="Vylen Linux Team"
+
+name=ktorrent
+version=26.04.0
+release=1
+source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+
+build() {
+    cmake -S $name-$version -B build -G Ninja \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+        -D ENABLE_INFOWIDGET_PLUGIN=FALSE \
+        -Wno-dev
+    cmake --build build
+    DESTDIR=$PKG cmake --install build
+
+}

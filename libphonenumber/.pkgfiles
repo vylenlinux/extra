@@ -1,0 +1,57 @@
+libphonenumber-9.0.29-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/phonenumbers/
+-rw-r--r-- root/root    usr/include/phonenumbers/asyoutypeformatter.h
+drwxr-xr-x root/root    usr/include/phonenumbers/base/
+-rw-r--r-- root/root    usr/include/phonenumbers/base/basictypes.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/logging.h
+drwxr-xr-x root/root    usr/include/phonenumbers/base/memory/
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/scoped_ptr.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton_boost.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton_posix.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton_stdmutex.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton_unsafe.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/memory/singleton_win32.h
+drwxr-xr-x root/root    usr/include/phonenumbers/base/synchronization/
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock_boost.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock_posix.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock_stdmutex.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock_unsafe.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/synchronization/lock_win32.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/template_util.h
+-rw-r--r-- root/root    usr/include/phonenumbers/base/thread_checker.h
+-rw-r--r-- root/root    usr/include/phonenumbers/callback.h
+drwxr-xr-x root/root    usr/include/phonenumbers/geocoding/
+-rw-r--r-- root/root    usr/include/phonenumbers/geocoding/phonenumber_offline_geocoder.h
+-rw-r--r-- root/root    usr/include/phonenumbers/logger.h
+-rw-r--r-- root/root    usr/include/phonenumbers/matcher_api.h
+-rw-r--r-- root/root    usr/include/phonenumbers/phonemetadata.pb.h
+-rw-r--r-- root/root    usr/include/phonenumbers/phonenumber.pb.h
+-rw-r--r-- root/root    usr/include/phonenumbers/phonenumbermatch.h
+-rw-r--r-- root/root    usr/include/phonenumbers/phonenumbermatcher.h
+-rw-r--r-- root/root    usr/include/phonenumbers/phonenumberutil.h
+-rw-r--r-- root/root    usr/include/phonenumbers/regexp_adapter.h
+-rw-r--r-- root/root    usr/include/phonenumbers/regexp_cache.h
+-rw-r--r-- root/root    usr/include/phonenumbers/region_code.h
+-rw-r--r-- root/root    usr/include/phonenumbers/shortnumberinfo.h
+-rw-r--r-- root/root    usr/include/phonenumbers/unicodestring.h
+drwxr-xr-x root/root    usr/include/phonenumbers/utf/
+-rw-r--r-- root/root    usr/include/phonenumbers/utf/unicodetext.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/libphonenumber/
+-rw-r--r-- root/root    usr/lib/cmake/libphonenumber/libphonenumber-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libphonenumber/libphonenumber-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libphonenumber/libphonenumber-targets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libphonenumber/libphonenumber-targets.cmake
+-rw-r--r-- root/root    usr/lib/libgeocoding.a
+lrwxrwxrwx root/root    usr/lib/libgeocoding.so -> libgeocoding.so.9
+lrwxrwxrwx root/root    usr/lib/libgeocoding.so.9 -> libgeocoding.so.9.0
+-rwxr-xr-x root/root    usr/lib/libgeocoding.so.9.0
+-rw-r--r-- root/root    usr/lib/libphonenumber.a
+lrwxrwxrwx root/root    usr/lib/libphonenumber.so -> libphonenumber.so.9
+lrwxrwxrwx root/root    usr/lib/libphonenumber.so.9 -> libphonenumber.so.9.0
+-rwxr-xr-x root/root    usr/lib/libphonenumber.so.9.0

@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Plugin for the Xfce4 panel displaying instant disk/partition performance"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfce4-diskperf-plugin
+version=2.8.0
+release=1
+source="${name}-${version}.tar.gz::https://gitlab.xfce.org/panel-plugins/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

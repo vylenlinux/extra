@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A simple calendar application with reminders for Xfce"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=orage
+version=4.21.0
+release=1
+source="${name}-${version}.tar.gz::https://gitlab.xfce.org/apps/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${name}-${version}" build -Dx11-tray-icon=true
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

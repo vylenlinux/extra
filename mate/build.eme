@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Meta package for mate desktop"
+homepage="https://mate-desktop.org"
+maintainer="Vylen Linux Team"
+
+name=mate
+version=1.28.0
+release=1
+
+build() {
+	mkdir -p "${PKG}/usr"
+}

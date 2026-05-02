@@ -1,0 +1,20 @@
+description="A cool desktop panel for Linux desktop"
+homepage="https://github.com/dangvd/crystal-dock"
+maintainer="Vylen Linux Team"
+
+name=crystal-dock
+version=2.16
+release=1
+source="$name-$version.tar.gz::https://github.com/dangvd/crystal-dock/archive/refs/tags/v$version.tar.gz"
+build() {
+    cd $name-$version
+	mkdir -p build
+	cd build
+	cmake  \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    ../src
+  make
+  cd ..
+  DESTDIR=$PKG cmake --install build
+}

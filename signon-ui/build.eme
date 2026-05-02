@@ -1,0 +1,23 @@
+description="Component responsible for handling the user interactions which can happen during the login process of an online account"
+homepage="https://gitlab.com/accounts-sso/signon-ui"
+maintainer="Vylen Linux Team"
+
+name=signon-ui
+version=0.17
+release=1
+source="https://gitlab.com/accounts-sso/signon-ui/-/archive/master/signon-ui-eef943f0edf3beee8ecb85d4a9dae3656002fc24.tar.bz2
+    fake-user-agent.patch"
+
+build() {
+    cd $name-master-eef943f0edf3beee8ecb85d4a9dae3656002fc24
+
+    sed -e 's|src \\|src|' -e '/tests/d' -i signon-ui.pro
+    patch -Np1 -i $SRC/fake-user-agent.patch
+
+    qmake6-qt6 \
+        PREFIX=/usr \
+        LIBDIR=/usr/lib
+    make
+    make INSTALL_ROOT=$PKG install
+}
+

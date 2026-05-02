@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A non-linear video editor for Linux using the MLT video framework"
+homepage="https://apps.kde.org/kdenlive/"
+maintainer="Vylen Linux Team"
+
+name=kdenlive
+version=26.04.0
+release=1
+source="http://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_QCH=ON \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    emerald isinstalled imath && {
+        rm -fr "${PKG}/usr/include/Imath" \
+            "${PKG}/usr/lib/cmake/Imath"
+
+        rm -f "${PKG}/usr/lib/pkgconfig/Imath.pc"
+    }
+}

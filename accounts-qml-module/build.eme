@@ -1,0 +1,19 @@
+description="Expose the Online Accounts API to QML applications"
+homepage="https://gitlab.com/accounts-sso/accounts-qml-module"
+maintainer="Vylen Linux Team"
+
+name=accounts-qml-module
+version=0.7
+_commit="05e79ebbbf3784a87f72b7be571070125c10dfe3"
+release=1
+source="https://gitlab.com/accounts-sso/accounts-qml-module/-/archive/$_commit/$name-$_commit.tar.gz"
+
+build() {
+	cd $name-$_commit
+
+	qmake6 PREFIX=/usr LIBDIR=/usr/lib
+	make
+
+    make INSTALL_ROOT="$PKG" install_subtargets
+	rm -r $PKG/usr/bin
+}

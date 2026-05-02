@@ -1,0 +1,14 @@
+description="Simple OpenCL application that enumerates all available platform and device properties"
+homepage="https://github.com/Oblomov/clinfo"
+maintainer="Vylen Linux Team"
+
+name=clinfo
+version=3.0.25.02.14
+release=1
+source=" https://github.com/Oblomov/clinfo/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+     cd ${name}-${version}
+     make
+     make BINDIR=$PKG/usr/bin MANDIR=$PKG/usr/share/man  install
+}

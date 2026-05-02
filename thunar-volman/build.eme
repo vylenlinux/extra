@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Extension for the Thunar file manager for enables automatic management of removable drives and media"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=thunar-volman
+version=4.20.0
+release=1
+source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

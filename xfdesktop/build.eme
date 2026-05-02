@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Desktop manager for the Xfce Desktop Environment"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfdesktop
+version=4.20.2
+release=1
+source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-nls \
+        --enable-thunarx \
+        --enable-x11 \
+        --enable-wayland \
+        --enable-notifications
+
+    make
+    make DESTDIR="${PKG}" install
+}

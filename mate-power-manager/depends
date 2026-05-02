@@ -1,0 +1,11 @@
+dbus-glib
+mate-panel
+gtk3
+libxrandr
+libx11
+libxext
+upower
+libgnome-keyring
+libcanberra
+libnotify
+libsecret

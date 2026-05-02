@@ -1,0 +1,46 @@
+description="Lightweight Directory Access Protocol (LDAP) Toolkit"
+homepage="https://www.openldap.org/"
+maintainer="Vylen Linux Team"
+
+name=openldap
+version=2.6.13
+release=1
+source="https://www.openldap.org/software/download/OpenLDAP/openldap-release/$name-$version.tgz
+	slapd"
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--libexecdir=/usr/sbin \
+		--localstatedir=/var/openldap \
+		--enable-syslog \
+		--with-threads \
+		--with-tls \
+		--with-cyrus-sasl \
+		--enable-spasswd \
+		--enable-dynamic \
+		--enable-ipv6 \
+		--enable-modules \
+		--enable-crypt \
+		--enable-ldap \
+		--enable-meta \
+		--enable-dnssrv \
+		--enable-null \
+		--enable-perl \
+		--enable-dynacl \
+		--enable-aci \
+		--enable-shared
+
+	make depend
+	make
+	make DESTDIR=$PKG install
+
+	ln -sf liblber.so $PKG/usr/lib/liblber.so.2
+	ln -sf libldap.so $PKG/usr/lib/libldap.so.2
+
+	install -D -m 0755 $SRC/slapd $PKG/etc/rc.d/slapd
+	rm -f $PKG/etc/openldap/schema/README
+}

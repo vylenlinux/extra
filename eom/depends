@@ -1,0 +1,14 @@
+glib
+mate-desktop
+libpeas1
+gtk3
+gobject-introspection
+libexif
+lcms2
+dbus-glib
+librsvg
+zlib
+libjpeg-turbo
+libxml2
+libx11
+itstool

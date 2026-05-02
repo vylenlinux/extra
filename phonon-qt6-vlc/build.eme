@@ -1,0 +1,21 @@
+description="Phonon VLC backend"
+homepage="https://community.kde.org/Phonon"
+maintainer="Vylen Linux Team"
+
+name=phonon-qt6-vlc
+version=0.12.0
+release=1
+source="https://download.kde.org/stable/phonon/phonon-backend-vlc/$version/phonon-backend-vlc-$version.tar.xz"
+
+build() {
+	cmake -S phonon-backend-vlc-$version -B build -G Ninja \
+	        -DCMAKE_INSTALL_PREFIX=/usr \
+	        -DCMAKE_INSTALL_LIBDIR=lib \
+	        -DCMAKE_BUILD_TYPE=Release \
+	        -DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
+	        -DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
+	        -DPHONON_BUILD_QT5=OFF \
+	        -Wno-dev
+	cmake --build build
+	DESTDIR=$PKG cmake --install build
+}

@@ -1,0 +1,15 @@
+libx11
+libxscrnsaver
+dbus-glib
+mate-desktop
+gtk3
+mate-menus
+mesa
+libsm
+libice
+libxext
+libxxf86vm
+linux-pam
+libmatekbd
+libxklavier
+libnotify

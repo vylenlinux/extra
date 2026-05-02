@@ -1,0 +1,24 @@
+libprocps-3.3.17-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/proc/
+-rw-r--r-- root/root    usr/include/proc/alloc.h
+-rw-r--r-- root/root    usr/include/proc/devname.h
+-rw-r--r-- root/root    usr/include/proc/escape.h
+-rw-r--r-- root/root    usr/include/proc/numa.h
+-rw-r--r-- root/root    usr/include/proc/procps.h
+-rw-r--r-- root/root    usr/include/proc/pwcache.h
+-rw-r--r-- root/root    usr/include/proc/readproc.h
+-rw-r--r-- root/root    usr/include/proc/sig.h
+-rw-r--r-- root/root    usr/include/proc/slab.h
+-rw-r--r-- root/root    usr/include/proc/sysinfo.h
+-rw-r--r-- root/root    usr/include/proc/version.h
+-rw-r--r-- root/root    usr/include/proc/wchan.h
+-rw-r--r-- root/root    usr/include/proc/whattime.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libprocps.a
+lrwxrwxrwx root/root    usr/lib/libprocps.so -> libprocps.so.8.0.3
+lrwxrwxrwx root/root    usr/lib/libprocps.so.8 -> libprocps.so.8.0.3
+-rwxr-xr-x root/root    usr/lib/libprocps.so.8.0.3
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libprocps.pc

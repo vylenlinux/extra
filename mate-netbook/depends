@@ -1,0 +1,7 @@
+mate-panel
+libwnck3
+gtk3
+glib
+libx11
+libxtst
+libfakekey

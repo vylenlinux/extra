@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="The configuration storage system for Xfce"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfconf
+version=4.20.0
+release=2
+source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
+}

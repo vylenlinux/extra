@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Window manager for Xfce"
+homepage="https://xfce.org"
+maintainer="Vylen Linux Team"
+
+name=xfwm4
+version=4.20.0
+release=1
+source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --enable-randr \
+        --enable-compositor \
+        --enable-xsync \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

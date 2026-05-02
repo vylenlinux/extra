@@ -1,0 +1,9 @@
+dconf
+gdk-pixbuf
+gtk3
+iso-codes
+librsvg
+startup-notification
+libxkbcommon
+wayland
+wayland-protocols

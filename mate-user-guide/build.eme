@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="MATE User Guide"
+homepage="https://mate-desktop.org"
+maintainer="Vylen Linux Team"
+
+name=mate-user-guide
+version=1.28.0
+release=1
+source="https://pub.mate-desktop.org/releases/${version%.*}/${name}-${version}.tar.xz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
+}

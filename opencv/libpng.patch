@@ -1,0 +1,21 @@
+diff -Naur opencv-4.12.0.orig/modules/imgcodecs/CMakeLists.txt opencv-4.12.0/modules/imgcodecs/CMakeLists.txt
+--- opencv-4.12.0.orig/modules/imgcodecs/CMakeLists.txt	2025-10-21 21:02:21.511496864 +0200
++++ opencv-4.12.0/modules/imgcodecs/CMakeLists.txt	2025-10-21 21:07:14.741541678 +0200
+@@ -37,8 +37,15 @@
+ 
+ if(HAVE_PNG)
+   add_definitions(${PNG_DEFINITIONS})
+-  ocv_include_directories(${PNG_INCLUDE_DIR})
+-  list(APPEND GRFMT_LIBS ${PNG_LIBRARIES})
++  if(TARGET PNG::PNG)
++    list(APPEND GRFMT_LIBS PNG::PNG)
++  else()
++    ocv_include_directories(${PNG_INCLUDE_DIR})
++    list(APPEND GRFMT_LIBS ${PNG_LIBRARIES})
++  endif()
++elseif(TARGET PNG::PNG)
++  set(HAVE_PNG TRUE)
++  list(APPEND GRFMT_LIBS PNG::PNG)
+ endif()
+ 
+ if(HAVE_GDCM)
