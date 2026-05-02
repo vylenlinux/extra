@@ -6,7 +6,7 @@ homepage="https://github.com/libsdl-org/SDL_image"
 maintainer="Vylen Linux Team"
 
 name=sdl2_image
-version=2.8.10
+version=2.8.12
 release=1
 source="https://github.com/libsdl-org/SDL_image/releases/download/release-${version}/SDL2_image-${version}.tar.gz"
 
