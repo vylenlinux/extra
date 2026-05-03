@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=libxfce4util
 version=4.20.1
-release=1
+release=2
 source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
 
 build() {
@@ -17,4 +17,6 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    rm -f "${PKG}/usr/include/xfce4/${name}/xfce-systemd.h"
 }
