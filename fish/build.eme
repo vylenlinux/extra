@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=fish
 version=4.6.0
-release=1
+release=2
 source="https://github.com/fish-shell/fish-shell/releases/download/${version}/${name}-${version}.tar.xz"
 
 build() {
@@ -25,4 +25,6 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
+
+    rm -f "${PKG}/usr/share/fish/functions"/*systemd* "${PKG}/usr/share/fish/completions"/systemd*
 }
