@@ -1,25 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="QtKeychain is a QT API to store passwords and other secret data securely"
 homepage="https://github.com/frankosterfeld/qtkeychain"
 maintainer="Vylen Linux Team"
 
 name=qtkeychain6
-version=0.15.0
+version=0.16.0
 release=1
-source="https://github.com/frankosterfeld/qtkeychain/archive/$version/qtkeychain-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/frankosterfeld/qtkeychain/archive/${version}/qtkeychain-${version}.tar.gz"
 
 build() {
-  cmake -S qtkeychain-$version -B build -G Ninja \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_INSTALL_LIBEXECDIR=lib/$name \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -D BUILD_WITH_QT6=ON \
-    -D BUILD_WITH_QT5=OFF \
-    -Wno-dev
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+    cmake -S "qtkeychain-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR="lib/${name}" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_WITH_QT6=ON \
+        -DBUILD_WITH_QT5=OFF \
+        -Wno-dev
 
-  rm -fr $PKG/usr/share/qt6*
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    rm -fr "${PKG}/usr/share"/qt6*
 }
