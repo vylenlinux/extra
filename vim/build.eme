@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=vim
 version=9.2.0428
-release=1
+release=2
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/v$version/${name}-v${version}.tar.gz
     vimrc"
@@ -46,4 +46,6 @@ build() {
 
     install -Dm644 "${SRC}/vimrc" -t "${PKG}/etc/"
     ln -sv vim "${PKG}/usr/bin/vi"
+
+    rm -f "${PKG}/usr/share/vim/vim92"/*/systemd.vim
 }
