@@ -1,8 +1,0 @@
-#!/bin/sh
-
-checkgiv() {
-    giv=$(emerald info gobject-introspection | awk '/Installed/{print $2}' | awk -F "-" '{print $1}')
-    [ "$giv" = "1.78.1" ] && emerald remove -y gobject-introspection
-}
-
-emerald isinstalled gobject-introspection && checkgiv
