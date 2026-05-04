@@ -11,10 +11,7 @@ release=1
 source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-    vylen-meson "${name}-${version}" build \
-        --libexecdir=lib \
-        -Dsd-bus-provider=basu
-
+    vylen-meson "${name}-${version}" build -Dsd-bus-provider=basu
     meson compile -C build
     DESTDIR="${PKG}" meson install -C build
 }
