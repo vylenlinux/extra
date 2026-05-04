@@ -1,83 +1,88 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="FFmpeg is a solution to record, convert and stream audio and video"
 homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team"
 
 name=ffmpeg
-version=8.1
+version=8.1.1
 release=1
+
 source="https://ffmpeg.org/releases/$name-$version.tar.xz
-	add-av_stream_get_first_dts-for-chromium.patch
-	ffmpeg-x264-10bit.sh"
+    add-av_stream_get_first_dts-for-chromium.patch
+    ffmpeg-x264-10bit.sh"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    _opt=""
 
-	_opt=""
+    add_opt() {
+        if [ "${_opt}" = "" ]; then
+            emerald isinstalled "${1}" && _opt="--enable-${2}" || _opt="--disable-${2}"
+        elif [ ! "${_opt}" = "" ]; then
+            emerald isinstalled "${1}" && _opt="${_opt} --enable-${2}" || _opt="${_opt} --disable-${2}"
+        fi
+    }
 
-	addopt() {
-		if [ "$_opt" = "" ]; then
-			emerald isinstalled $1 && _opt="--enable-$2" || _opt="--disable-$2"
-		elif [ ! "$_opt" = "" ]; then
-			emerald isinstalled $1 && _opt="$_opt --enable-$2" || _opt="$_opt --disable-$2"
-		fi
-	}
+    ## $1 is package name
+    ## $2 is feature
+    add_opt libvdpau vdpau
+    add_opt libva vaapi
+    add_opt nvidia-open cuda
+    add_opt nvidia-open cuvid
+    add_opt nv-codec-headers nvenc
+    add_opt amf-headers amf
+    add_opt svt-av1 libsvtav1
+    add_opt vulkan-icd-loader vulkan
 
-	## $1 is package name
-	## $2 is feature
-	addopt libvdpau vdpau
-	addopt libva vaapi
-	addopt nvidia cuda
-	addopt nvidia cuvid 
-	addopt nv-codec-headers nvenc
-	addopt amf-headers amf
-	addopt svt-av1 libsvtav1
-	addopt vulkan-icd-loader vulkan
+    # Adds an API necessary for some packages to build
+    patch -Np1 -i "${SRC}/add-av_stream_get_first_dts-for-chromium.patch"
 
-	# Adds an API necessary for some packages to build
-	patch -Np1 -i $SRC/add-av_stream_get_first_dts-for-chromium.patch
+    # adds the ALSA library to the Flite LDFLAGS variable and
+    # enables the discovery of Flite
+    sed -i 's/-lflite"/-lflite -lasound"/' configure
 
-	# adds the ALSA library to the Flite LDFLAGS variable and
-	# enables the discovery of Flite
-	sed -i 's/-lflite"/-lflite -lasound"/' configure
+    # shellcheck disable=SC2086
+    ./configure \
+        --prefix=/usr \
+        --enable-gpl \
+        --enable-gnutls \
+        --enable-version3 \
+        --enable-nonfree \
+        --disable-static \
+        --enable-shared \
+        --disable-debug \
+        --disable-libcelt \
+        --disable-optimizations \
+        --disable-stripping \
+        --disable-doc \
+        --enable-swresample \
+        --enable-avfilter \
+        --enable-pic \
+        --enable-pthreads \
+        --enable-libass \
+        --enable-libfdk-aac \
+        --enable-libfreetype \
+        --enable-libmp3lame \
+        --enable-libopus \
+        --enable-libtheora \
+        --enable-libvorbis \
+        --enable-libvpx \
+        --enable-libx264 \
+        --enable-libx265 \
+        --enable-libaom \
+        --enable-libdav1d \
+        ${_opt}
 
-	./configure --prefix=/usr        \
-	            --enable-gpl         \
-		    --enable-gnutls      \
-	            --enable-version3    \
-	            --enable-nonfree     \
-	            --disable-static     \
-	            --enable-shared      \
-	            --disable-debug      \
-		    --disable-libcelt    \
-		    --disable-optimizations \
-		    --disable-stripping  \
-		    --disable-doc  \
-		    --enable-swresample  \
-		    --enable-avfilter    \
-		    --enable-pic         \
-		    --enable-pthreads    \
-	            --enable-libass      \
-	            --enable-libfdk-aac  \
-	            --enable-libfreetype \
-	            --enable-libmp3lame  \
-	            --enable-libopus     \
-	            --enable-libtheora   \
-	            --enable-libvorbis   \
-	            --enable-libvpx      \
-	            --enable-libx264     \
-	            --enable-libx265	 \
-	            --enable-libaom      \
-		    --enable-libdav1d    \
-		    $_opt                
-	make
-	gcc tools/qt-faststart.c -o tools/qt-faststart
-	make DESTDIR=$PKG install
+    make
+    make tools/qt-faststart
 
-	install -m755 tools/qt-faststart $PKG/usr/bin
+    make DESTDIR="${PKG}" install
 
-	[ -e '/usr/lib/pkgconfig/x264.pc' ] && \
-		install -m 0755 -D $SRC/ffmpeg-x264-10bit.sh \
-			$PKG/usr/bin/ffmpeg-x264-10bit
+    install -m755 tools/qt-faststart -t "${PKG}/usr/bin/"
 
-	rm -r $PKG/usr/share/ffmpeg/examples
+    [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/ffmpeg-x264-10bit.sh" "${PKG}/usr/bin/ffmpeg-x264-10bit"
+    rm -r "${PKG}/usr/share/ffmpeg/examples"
 }
