@@ -1,16 +1,21 @@
-description="Common build files of the C++ bindings. "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Common build files of the C++ bindings."
 homepage="https://gtkmm.org/"
 maintainer="Vylen Linux Team"
 
 name=mm-common
 version=1.0.7
 release=1
-source="https://gitlab.gnome.org/GNOME/mm-common/-/archive/$version/$name-$version.tar.gz
-	https://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/libstdc++.tag"
 
-build(){
-	cp $SRC/libstdc++.tag $name-$version/doctags
-	vylen-meson $name-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz
+    https://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/libstdc++.tag"
+
+build() {
+    cp "${SRC}/libstdc++.tag" "${name}-${version}/doctags"
+
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
