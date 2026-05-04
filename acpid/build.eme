@@ -33,5 +33,5 @@ EOF
 EOF
 
     chmod +x "${PKG}/etc/acpi/lid.sh"
-    openrc_add "${name}"
+    do_service "${name}"
 }

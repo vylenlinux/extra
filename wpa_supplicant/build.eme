@@ -42,5 +42,5 @@ build() {
 
     # wpa_supplicant.conf
     install -Dm600 "${SRC}/wpa_supplicant.conf" -t "${PKG}/etc/"
-    openrc_add "${name}"
+    do_service "${name}"
 }

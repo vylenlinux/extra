@@ -25,5 +25,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 syslog.conf -t "${PKG}/etc/"
-    openrc_add "${name}"
+    do_service "${name}"
 }

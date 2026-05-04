@@ -50,5 +50,5 @@ build() {
     install -Dm0644 "${SRC}/qemu.conf"     -t "${PKG}/etc/libvirt/"
 
     rm -fr "${PKG}/run"
-    openrc_add libvirt-guests libvirtd virtlockd virtlogd
+    do_service libvirt-guests libvirtd virtlockd virtlogd
 }

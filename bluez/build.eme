@@ -57,5 +57,5 @@ EOF
 # End of uart.conf
 EOF
 
-    openrc_add bluetoothd
+    do_service bluetoothd
 }

@@ -119,5 +119,5 @@ session		required pam_unix.so
 session		optional pam_ck_connector.so
 EOF
 
-    openrc_add "${name}"
+    do_service "${name}"
 }

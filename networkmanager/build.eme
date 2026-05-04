@@ -38,5 +38,5 @@ build() {
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
     install -Dm644 "${SRC}/NetworkManager.conf" -t "${PKG}/etc/NetworkManager/"
-    openrc_add "${name}"
+    do_service "${name}"
 }

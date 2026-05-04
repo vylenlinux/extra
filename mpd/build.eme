@@ -48,5 +48,5 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    openrc_add "${name}"
+    do_service "${name}"
 }

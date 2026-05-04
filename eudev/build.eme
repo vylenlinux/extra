@@ -40,7 +40,7 @@ build() {
 
     make DESTDIR="${PKG}" install
 
-    openrc_add udev udev-trigger
+    do_service udev udev-trigger
     install -d "${PKG}/etc/runlevels/sysinit"
 
     ln -sf "/etc/init.d/udev" "${PKG}/etc/runlevels/sysinit/udev"

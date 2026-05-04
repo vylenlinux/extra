@@ -32,6 +32,6 @@ build() {
 
     install -Dm644 "${SRC}/${name}.pam" "${PKG}/etc/pam.d/${name}"
 
-    openrc_add "${name}"
+    do_service "${name}"
     rm -rf "${PKG}/usr/lib/"
 }
