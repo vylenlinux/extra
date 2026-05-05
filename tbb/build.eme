@@ -6,7 +6,7 @@ homepage="https://www.threadingbuildingblocks.org"
 maintainer="Vylen Linux Team"
 
 name=tbb
-version=2022.3.0
+version=2023.0.0
 release=1
 source="https://github.com/oneapi-src/oneTBB/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -21,6 +21,6 @@ build() {
         -DTBB_TEST=OFF \
         -Wno-dev
 
-	cmake --build build --target all python_build
-	DESTDIR="${PKG}" cmake --install build
+    cmake --build build --target all python_build
+    DESTDIR="${PKG}" cmake --install build
 }
