@@ -6,7 +6,7 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xterm
-version=409
+version=410
 release=1
 source="http://invisible-mirror.net/archives/${name}/${name}-${version}.tgz"
 
