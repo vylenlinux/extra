@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team"
 
 name=nodejs
-version=25.9.0
+version=26.0.0
 release=1
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
 
