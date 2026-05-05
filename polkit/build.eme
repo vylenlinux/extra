@@ -22,12 +22,7 @@ build() {
     patch -Np0 -d "${name}-${version}" -i "${SRC}/patch-src_polkitbackend_polkitbackendsessionmonitor.c.patch"
 
     vylen-meson "${name}-${version}" build \
-        --prefix=/usr \
         -Dsession_tracking="ConsoleKit" \
-        --buildtype=plain \
-        --wrap-mode nodownload \
-        -Db_lto=true \
-        -Db_pie=true \
         -Dos_type=suse
 
     meson compile -C build
