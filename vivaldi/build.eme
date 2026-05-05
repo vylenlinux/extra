@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team"
 
 name=vivaldi
-version=7.9.3970.59
+version=7.9.3970.60
 release=1
 
 source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/vivaldi-stable-${version}-${release}.x86_64.rpm
@@ -46,4 +46,6 @@ build() {
 
     install -Dm644 "usr/share/appdata/${name}.appdata.xml" -t "${PKG}/usr/share/metainfo/"
     rm -rv "${PKG}/usr/share/appdata"
+
+    ! emerald isinstalled xfce4 && rm -rf "${PKG}/usr/share/xfce4"
 }
