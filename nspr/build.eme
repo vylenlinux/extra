@@ -1,25 +1,32 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Netscape Portable Runtime"
 homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR"
 maintainer="Vylen Linux Team"
 
 name=nspr
-version=4.38.2
+version=4.39
 release=1
-source="https://archive.mozilla.org/pub/$name/releases/v$version/src/$name-$version.tar.gz"
+source="https://archive.mozilla.org/pub/${name}/releases/v${version}/src/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version/$name
+    # shellcheck disable=SC2164
+    cd "${name}-${version}/${name}"
 
-	# disables installing two unneeded scripts
-	sed -ri 's#^(RELEASE_BINS =).*#\1#' pr/src/misc/Makefile.in
+    # disables installing two unneeded scripts
+    sed -ri 's#^(RELEASE_BINS =).*#\1#' pr/src/misc/Makefile.in
 
-	# disables installing the static libraries
-	sed -i 's#$(LIBRARY) ##' config/rules.mk
+    # disables installing the static libraries
+    # shellcheck disable=SC2016
+    sed -i 's#$(LIBRARY) ##' config/rules.mk
 
-	./configure --prefix=/usr \
-	            --with-mozilla \
-	            --with-pthreads \
-	            --enable-64bit
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-mozilla \
+        --with-pthreads \
+        --enable-64bit
+
+    make
+    make DESTDIR="${PKG}" install
 }
