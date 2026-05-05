@@ -6,7 +6,7 @@ homepage="https://github.com/python-poetry/poetry-core"
 maintainer="Vylen Linux Team"
 
 name=python3-poetry-core
-version=2.3.2
+version=2.4.0
 release=1
 source="https://github.com/python-poetry/poetry-core/archive/${version}/${name}-${version}.tar.gz"
 
@@ -21,6 +21,6 @@ build() {
     python3 -m installer -d "${PKG}" .dist/*.whl
 
     # remove vendored versions of installed modules
-    sitedir=$(python3 -c "import site; print(site.getsitepackages()[0])")
+    sitedir="$(python3 -c "import site; print(site.getsitepackages()[0])")"
     rm -r "${PKG}/${sitedir}/poetry/core/_vendor"
 }

@@ -1,4 +1,4 @@
-python3-poetry-core-2.3.2-1
+python3-poetry-core-2.4.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
@@ -203,9 +203,9 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/poetry/core/version/pep
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry/core/version/pep440/segments.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry/core/version/pep440/version.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry/core/version/requirements.py
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.3.2.dist-info/licenses/LICENSE
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/poetry_core-2.4.0.dist-info/licenses/LICENSE
