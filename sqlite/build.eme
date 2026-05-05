@@ -6,14 +6,14 @@ homepage="https://www.sqlite.org/"
 maintainer="Vylen Linux Team"
 
 name=sqlite
-version=3.53.0
+version=3.53.1
 release=1
 
 # shellcheck disable=SC2046
 set -- $(printf '%s' "${version}" | tr '.' ' ')
 _version="${1}${2}0${3}00"
 
-source="https://sqlite.org/2026/${name}-src-${_version}.zip"
+source="${name}-${version}.zip::https://sqlite.org/2026/${name}-src-${_version}.zip"
 
 build() {
     export CPPFLAGS="${CPPFLAGS} \
