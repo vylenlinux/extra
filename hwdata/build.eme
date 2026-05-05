@@ -6,7 +6,7 @@ homepage="https://github.com/vcrhonek/hwdata"
 maintainer="Vylen Linux Team"
 
 name=hwdata
-version=0.406
+version=0.407
 release=1
 source="https://github.com/vcrhonek/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -20,5 +20,5 @@ build() {
         --datadir=/usr/share \
         --disable-blacklist
 
-    make DESTDIR="${PKG}" install
+    DESTDIR="${PKG}" make install
 }
