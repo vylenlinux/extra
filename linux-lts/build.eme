@@ -29,7 +29,7 @@ build() {
     CBUILD_LINUX_KCFLAGS="${CFLAGS}"
     CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS}"
 
-    cbuild_options linux
+    cbuild_options
 
     export KCFLAGS="${CBUILD_LINUX_KCFLAGS}"
     export KCPPFLAGS="${CBUILD_LINUX_KCPPFLAGS}"
