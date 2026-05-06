@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Wallpaper & color manager for wlroots-based compositors and some X11 WMs"
 homepage="https://github.com/nwg-piotr/azote"
 maintainer="Vylen Linux Team"
@@ -5,19 +8,19 @@ maintainer="Vylen Linux Team"
 name=azote
 version=1.16.0
 release=1
-source="$name-$version.tar.gz::https://github.com/nwg-piotr/$name/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/nwg-piotr/${name}/archive/v${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	/usr/bin/python3 -m build --wheel --no-isolation
+    python3 -m build \
+        --wheel \
+        --no-isolation
 
-	install -D -t $PKG/usr/share/pixmaps dist/azote.svg
-	install -D -t $PKG/usr/share/$name dist/indicator*.png
-	install -D -t $PKG/usr/share/applications dist/azote.desktop
+    install -Dm644 "dist/${name}.svg" -t "${PKG}/usr/share/pixmaps/"
+    install -Dm644 dist/indicator*.png -t "${PKG}/usr/share/${name}/"
+    install -Dm644 "dist/${name}.desktop" -t "${PKG}/usr/share/applications/"
 
-	/usr/bin/python3 -m installer --destdir=$PKG dist/*.whl
-
-	rm -rf $PKG/usr/share/licenses
+    python3 -m installer --destdir="${PKG}" dist/*.whl
 }
-

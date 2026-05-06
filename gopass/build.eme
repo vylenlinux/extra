@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The slightly more awesome standard unix password manager for teams."
 homepage="https://github.com/gopasspw/gopass"
 maintainer="Vylen Linux Team"
@@ -5,19 +8,23 @@ maintainer="Vylen Linux Team"
 name=gopass
 version=1.16.1
 release=1
-source="https://github.com/gopasspw/gopass/releases/download/v$version/gopass-$version.tar.gz"
+source="https://github.com/gopasspw/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
+    export CGO_CPPFLAGS="${CPPFLAGS}"
+    export CGO_CFLAGS="${CFLAGS}"
+    export CGO_CXXFLAGS="${CXXFLAGS}"
+    export CGO_LDFLAGS="${LDFLAGS}"
 
-	export CGO_CPPFLAGS="${CPPFLAGS}"
-	export CGO_CFLAGS="${CFLAGS}"
-	export CGO_CXXFLAGS="${CXXFLAGS}"
-	export CGO_LDFLAGS="${LDFLAGS}"
-	export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+    export GOFLAGS="-buildmode=pie \
+        -trimpath \
+        -ldflags=-linkmode=external \
+        -mod=readonly \
+        -modcacherw"
 
-	sed -i 's|-gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"||' Makefile
-	sed -i 's|CGO_ENABLED=0||' Makefile
+    # shellcheck disable=SC2016
+    sed -i 's|-gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"||' Makefile
+    sed -i 's|CGO_ENABLED=0||' Makefile
 
-  make DESTDIR="${PKG}" PREFIX="/usr" install
-  install -Dm644 LICENSE "${PKG}/usr/share/licenses/${name}/LICENSE"
+    make DESTDIR="${PKG}" PREFIX="/usr" install
 }

@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Open Source Computer Vision Library"
 homepage="https://opencv.org"
 maintainer="Vylen Linux Team"
@@ -5,52 +8,54 @@ maintainer="Vylen Linux Team"
 name=opencv
 version=4.13.0
 release=1
-source="https://github.com/$name/$name/archive/$version/$name-$version.tar.gz
-	https://github.com/opencv/opencv_contrib/archive/$version/opencv_contrib-$version.tar.gz
-        libpng.patch"
+
+source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz
+    https://github.com/opencv/opencv_contrib/archive/${version}/opencv_contrib-${version}.tar.gz
+    libpng.patch"
 
 build() {
-        patch -Np1 -d $name-$version -i $SRC/libpng.patch
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/libpng.patch"
 
-	cd $name-$version
-	# https://github.com/opencv/opencv/issues/27223
-	# https://bugreports.qt.io/browse/QTBUG-134774
-	sed -i 's/add_definitions(${Qt${QT_VERSION_MAJOR}${dt_dep}_DEFINITIONS})/link_libraries(${Qt${QT_VERSION_MAJOR}${dt_dep}})/' modules/highgui/CMakeLists.txt
+    # https://github.com/opencv/opencv/issues/27223
+    # https://bugreports.qt.io/browse/QTBUG-134774
+    # shellcheck disable=SC2016
+    sed -i 's/add_definitions(${Qt${QT_VERSION_MAJOR}${dt_dep}_DEFINITIONS})/link_libraries(${Qt${QT_VERSION_MAJOR}${dt_dep}})/' modules/highgui/CMakeLists.txt
 
-	cmake -B build -G Ninja \
-                -D CMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DWITH_OPENCL=ON \
-		-DWITH_OPENGL=ON \
-		-DWITH_TBB=ON \
-		-DWITH_VULKAN=ON \
-		-DWITH_QT=ON \
-		-DWITH_ADE=OFF \
-		-DWITH_opencv_gapi=OFF \
-		-DWITH_IPP=OFF \
-		-DBUILD_WITH_DEBUG_INFO=ON \
-		-DBUILD_TESTS=OFF \
-		-DBUILD_PERF_TESTS=OFF \
-		-DBUILD_EXAMPLES=OFF \
-		-DINSTALL_C_EXAMPLES=OFF \
-		-DINSTALL_PYTHON_EXAMPLES=OFF \
-		-DOPENCV_SKIP_PYTHON_LOADER=OFF \
-		-DOPENCV_GENERATE_PKGCONFIG=ON \
-		-DOPENCV_ENABLE_NONFREE=OFF \
-		-DOPENCV_GENERATE_SETUPVARS=OFF \
-		-DEIGEN_INCLUDE_PATH=/usr/include/eigen3 \
-		-DCMAKE_SKIP_INSTALL_RPATH=ON \
-		-DPYTHON_EXECUTABLE=/usr/bin/python3 \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DWITH_OPENCL=ON \
+        -DWITH_OPENGL=ON \
+        -DWITH_TBB=ON \
+        -DWITH_VULKAN=ON \
+        -DWITH_QT=ON \
+        -DWITH_ADE=OFF \
+        -DWITH_opencv_gapi=OFF \
+        -DWITH_IPP=OFF \
+        -DBUILD_WITH_DEBUG_INFO=ON \
+        -DBUILD_TESTS=OFF \
+        -DBUILD_PERF_TESTS=OFF \
+        -DBUILD_EXAMPLES=OFF \
+        -DINSTALL_C_EXAMPLES=OFF \
+        -DINSTALL_PYTHON_EXAMPLES=OFF \
+        -DOPENCV_SKIP_PYTHON_LOADER=OFF \
+        -DOPENCV_GENERATE_PKGCONFIG=ON \
+        -DOPENCV_ENABLE_NONFREE=OFF \
+        -DOPENCV_GENERATE_SETUPVARS=OFF \
+        -DEIGEN_INCLUDE_PATH=/usr/include/eigen3 \
+        -DCMAKE_SKIP_INSTALL_RPATH=ON \
+        -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -Wno-dev
 
-	# python3 bindings
-	cd build/python_loader
-	python3 setup.py install --root=$PKG
-	rm -rf $PKG/usr/python
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 
-	rm -rf $PKG/usr/share/licenses
+    # python3 bindings
+    # shellcheck disable=SC2164
+    cd build/python_loader
+    python3 setup.py install --root="${PKG}"
 }
