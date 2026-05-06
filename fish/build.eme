@@ -26,5 +26,6 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    rm -f "${PKG}/usr/share/fish/functions"/*systemd* "${PKG}/usr/share/fish/completions"/systemd*
+    rm -f "${PKG}/usr/share/fish/functions"/*systemd* \
+        "${PKG}/usr/share/fish/completions"/systemd*
 }
