@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.0.6
+version=26.1.0
 release=1
 
 ### BEGIN Rust crates
@@ -16,11 +16,6 @@ rust_crates="paste 1.0.14
     rustc-hash 2.1.1
     syn 2.0.87
     unicode-ident 1.0.12"
-
-# Full list crates
-gen_rust_crates() {
-    grep crates.io subprojects/*.wrap | sed -r 's|.*crates/([^/]+)/([0-9.]+)/download|\1 \2|'
-}
 
 rcrate=""
 
@@ -37,7 +32,8 @@ ${rust_crates}
 EOF
 ### END Rust crates
 
-source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz ${rcrate}"
+source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz
+    ${rcrate}"
 
 build() {
     # shellcheck disable=SC2164
