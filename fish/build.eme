@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="The user-friendly command line shell "
+description="The user-friendly command line shell"
 homepage="https://fishshell.com/"
 maintainer="Vylen Linux Team"
 
 name=fish
-version=4.6.0
-release=2
+version=4.7.0
+release=1
 source="https://github.com/fish-shell/fish-shell/releases/download/${version}/${name}-${version}.tar.xz"
 
 build() {
