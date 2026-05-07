@@ -6,7 +6,7 @@ homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=xfsprogs
-version=6.19.0
+version=7.0.0
 release=1
 source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
