@@ -23,6 +23,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    rm "${PKG}/sbin/iptables"
-    ln -s iptables-nft "${PKG}/sbin/iptables"
+    ln -sf iptables-nft "${PKG}/sbin/iptables"
 }
