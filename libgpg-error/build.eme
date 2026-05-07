@@ -6,7 +6,7 @@ homepage="https://www.gnupg.org/"
 maintainer="Vylen Linux Team"
 
 name=libgpg-error
-version=1.60
+version=1.61
 release=1
 source="https://www.gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
