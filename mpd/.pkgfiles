@@ -1,4 +1,4 @@
-mpd-0.24.9-1
+mpd-0.24.10-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/mpd
