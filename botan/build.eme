@@ -6,7 +6,7 @@ homepage="https://botan.randombit.net/"
 maintainer="Vylen Linux Team"
 
 name=botan
-version=3.11.1
+version=3.12.0
 release=1
 source="${name}-${version}.tar.xz::https://botan.randombit.net/releases/Botan-${version}.tar.xz"
 
@@ -21,9 +21,6 @@ build() {
         --with-sqlite3 \
         --with-os-feature=getrandom
 
-	make
-	make DESTDIR="${PKG}" install
-
-	# shellcheck disable=SC2115
-	rm -r "${PKG}/usr/share"
+    make
+    make DESTDIR="${PKG}" install
 }
