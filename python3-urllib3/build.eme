@@ -1,20 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="HTTP library with thread-safe connection pooling and file post support"
 homepage="https://github.com/urllib3/urllib3"
 maintainer="Vylen Linux Team"
 
 name=python3-urllib3
-_name=${name#*-}
-_n=${_name%${_name#?}}
 version=2.6.3
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/u/urllib3/urllib3-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
+    # shellcheck disable=SC2164
+    cd "urllib3-${version}"
 
-	gpep517 build-wheel \
-                --wheel-dir .dist \
-                --output-fd 3 3>&1 >&2
-        python3 -m installer -d $PKG \
-                .dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }

@@ -1,14 +1,14 @@
-python3-urllib3-2.6.3-1
+python3-urllib3-2.7.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/WHEEL
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.6.3.dist-info/licenses/LICENSE.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/WHEEL
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3-2.7.0.dist-info/licenses/LICENSE.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/urllib3/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/urllib3/__pycache__/
