@@ -6,7 +6,7 @@ homepage="https://github.com/dell/dkms"
 maintainer="Vylen Linux Team"
 
 name=dkms
-version=3.4.0
+version=3.4.1
 release=1
 backup="etc/dkms/framework.conf"
 
