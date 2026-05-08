@@ -1,4 +1,4 @@
-libxfce4util-4.20.1-2
+libxfce4util-4.20.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/xfce4/
@@ -18,6 +18,7 @@ drwxr-xr-x root/root    usr/include/xfce4/libxfce4util/
 -rw-r--r-- root/root    usr/include/xfce4/libxfce4util/xfce-rc.h
 -rw-r--r-- root/root    usr/include/xfce4/libxfce4util/xfce-resource.h
 -rw-r--r-- root/root    usr/include/xfce4/libxfce4util/xfce-string.h
+-rw-r--r-- root/root    usr/include/xfce4/libxfce4util/xfce-systemd.h
 -rw-r--r-- root/root    usr/include/xfce4/libxfce4util/xfce-utf8.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/girepository-1.0/
