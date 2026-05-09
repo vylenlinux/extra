@@ -1,14 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A JavaScript display engine for mathematics that works in all browsers"
 homepage="https://www.mathjax.org/"
 maintainer="Vylen Linux Team"
 
 name=mathjax
-version=4.1.1
+version=4.1.2
 release=1
-source="https://github.com/mathjax/MathJax/archive/$version/MathJax-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${version}/MathJax-${version}.tar.gz"
 
 build() {
-	cd MathJax-$version
-	mkdir -p $PKG/usr/share/mathjax
-	cp -ar * $PKG/usr/share/mathjax
+    # shellcheck disable=SC2164
+    cd "MathJax-${version}"
+
+    mkdir -p "${PKG}/usr/share/${name}"
+    # shellcheck disable=SC2035
+    cp -ar * "${PKG}/usr/share/${name}/"
+
+    rm -f "${PKG}/usr/share/${name}/LICENSE" \
+        "${PKG}/usr/share/${name}/CONTRIBUTING.md" \
+        "${PKG}/usr/share/${name}/README.md"
 }
