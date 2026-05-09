@@ -1,4 +1,4 @@
-purpose-6.25.0-1
+purpose-6.26.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
@@ -31,11 +31,11 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Purpose/
 drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/purposeprocess
 lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so -> libKF6Purpose.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so.6 -> libKF6Purpose.so.6.25.0
--rwxr-xr-x root/root    usr/lib/libKF6Purpose.so.6.25.0
+lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so.6 -> libKF6Purpose.so.6.26.0
+-rwxr-xr-x root/root    usr/lib/libKF6Purpose.so.6.26.0
 lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so -> libKF6PurposeWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so.6 -> libKF6PurposeWidgets.so.6.25.0
--rwxr-xr-x root/root    usr/lib/libKF6PurposeWidgets.so.6.25.0
+lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so.6 -> libKF6PurposeWidgets.so.6.26.0
+-rwxr-xr-x root/root    usr/lib/libKF6PurposeWidgets.so.6.26.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
@@ -62,6 +62,11 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/AlternativesView.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/JobView.qml
+drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/accountshelper/
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/accountshelper/accountshelper.qmltypes
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/accountshelper/kde-qmlmodule.version
+-rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/accountshelper/libaccountshelper.so
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/accountshelper/qmldir
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/kde-qmlmodule.version
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/kdeconnect/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/kdeconnect/kde-qmlmodule.version
