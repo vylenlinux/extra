@@ -1,32 +1,32 @@
-kpkpass-26.04.0-1
+kpkpass-26.04.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KPim6/
 drwxr-xr-x root/root    usr/include/KPim6/KPkPass/
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/Barcode
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/BoardingPass
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/Field
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/Location
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/Pass
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/Passes
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/barcode.h
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/BoardingPass
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/boardingpass.h
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/Field
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/field.h
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/kpkpass_export.h
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/kpkpass_version.h
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/Location
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/location.h
--rw-r--r-- root/root    usr/include/KPim6/KPkPass/pass.h
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/Pass
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/Passes
 -rw-r--r-- root/root    usr/include/KPim6/KPkPass/passes.h
+-rw-r--r-- root/root    usr/include/KPim6/KPkPass/pass.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KPim6PkPass/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassTargets.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib/libKPim6PkPass.so.6.7.1
+lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so.6 -> libKPim6PkPass.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so -> libKPim6PkPass.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so.6 -> libKPim6PkPass.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libKPim6PkPass.so.6.7.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/

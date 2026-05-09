@@ -3,7 +3,7 @@ homepage="https://apps.kde.org/ark/"
 maintainer="Vylen Linux Team"
 
 name=ark
-version=26.04.0
+version=26.04.1
 release=1
 source="http://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 

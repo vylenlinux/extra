@@ -3,7 +3,7 @@ homepage="https://apps.kde.org/ktorrent/"
 maintainer="Vylen Linux Team"
 
 name=libktorrent
-version=26.04.0
+version=26.04.1
 release=1
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 
