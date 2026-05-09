@@ -6,10 +6,10 @@ homepage="https://github.com/googlei18n/libphonenumber"
 maintainer="Vylen Linux Team"
 
 name=libphonenumber
-version=9.0.29
+version=9.0.30
 release=1
 
-source="https://github.com/google/libphonenumber/archive/v${version}/${name}-${version}.tar.gz
+source="https://github.com/google/${name}/archive/v${version}/${name}-${version}.tar.gz
     0001-Use-find_package-for-protobuf.patch
     0002-Remove-Werror.patch
     0003-Fix-BUILD_STATIC_LIB-OFF.patch"
