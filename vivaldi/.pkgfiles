@@ -1,4 +1,4 @@
-vivaldi-7.9.3970.60-1
+vivaldi-7.9.3970.64-1
 drwxr-xr-x root/root    opt/
 drwxr-xr-x root/root    opt/vivaldi/
 -rwxr-xr-x root/root    opt/vivaldi/chrome_crashpad_handler
@@ -351,7 +351,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-0ffc86eefb5989818888752154fdec6c.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-b9df0c6b4a2d43f61c84973177a7d1cb.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
