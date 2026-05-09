@@ -1,4 +1,4 @@
-ktextaddons-2.0.1-1
+ktextaddons-2.0.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
@@ -477,51 +477,51 @@ drwxr-xr-x root/root    usr/lib/cmake/textutils-cmark-rc-copy/
 -rw-r--r-- root/root    usr/lib/cmake/textutils-cmark-rc-copy/textutils-cmark-rc-copy-targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/textutils-cmark-rc-copy/textutils-cmark-rc-copy-targets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so -> libKF6TextAddonsWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so.1 -> libKF6TextAddonsWidgets.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextAddonsWidgets.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so.1 -> libKF6TextAddonsWidgets.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextAddonsWidgets.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so -> libKF6TextAutoCorrectionCore.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so.1 -> libKF6TextAutoCorrectionCore.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionCore.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so.1 -> libKF6TextAutoCorrectionCore.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionCore.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so -> libKF6TextAutoCorrectionWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.1 -> libKF6TextAutoCorrectionWidgets.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.1 -> libKF6TextAutoCorrectionWidgets.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so -> libKF6TextAutoGenerateText.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so.1 -> libKF6TextAutoGenerateText.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateText.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so.1 -> libKF6TextAutoGenerateText.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateText.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so -> libKF6TextCustomEditor.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so.1 -> libKF6TextCustomEditor.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextCustomEditor.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so.1 -> libKF6TextCustomEditor.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextCustomEditor.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so -> libKF6TextEditTextToSpeech.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so.1 -> libKF6TextEditTextToSpeech.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextEditTextToSpeech.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so.1 -> libKF6TextEditTextToSpeech.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextEditTextToSpeech.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so -> libKF6TextEmoticonsCore.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so.1 -> libKF6TextEmoticonsCore.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsCore.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so.1 -> libKF6TextEmoticonsCore.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsCore.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so -> libKF6TextEmoticonsWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so.1 -> libKF6TextEmoticonsWidgets.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsWidgets.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so.1 -> libKF6TextEmoticonsWidgets.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsWidgets.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so -> libKF6TextGrammarCheck.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so.1 -> libKF6TextGrammarCheck.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextGrammarCheck.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so.1 -> libKF6TextGrammarCheck.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextGrammarCheck.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so -> libKF6TextSpeechToText.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so.1 -> libKF6TextSpeechToText.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextSpeechToText.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so.1 -> libKF6TextSpeechToText.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextSpeechToText.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so -> libKF6TextTranslator.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so.1 -> libKF6TextTranslator.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextTranslator.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so.1 -> libKF6TextTranslator.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextTranslator.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so -> libKF6TextUtils.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so.1 -> libKF6TextUtils.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libKF6TextUtils.so.2.0.1
-lrwxrwxrwx root/root    usr/lib/libtextautogenerategenericnetwork.so.1 -> libtextautogenerategenericnetwork.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libtextautogenerategenericnetwork.so.2.0.1
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollama.so.1 -> libtextautogenerateollama.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollama.so.2.0.1
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacloud.so.1 -> libtextautogenerateollamacloud.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacloud.so.2.0.1
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacommon.so.1 -> libtextautogenerateollamacommon.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacommon.so.2.0.1
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamaonline.so.1 -> libtextautogenerateollamaonline.so.2.0.1
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamaonline.so.2.0.1
+lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so.1 -> libKF6TextUtils.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libKF6TextUtils.so.2.0.2
+lrwxrwxrwx root/root    usr/lib/libtextautogenerategenericnetwork.so.1 -> libtextautogenerategenericnetwork.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libtextautogenerategenericnetwork.so.2.0.2
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollama.so.1 -> libtextautogenerateollama.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollama.so.2.0.2
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacloud.so.1 -> libtextautogenerateollamacloud.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacloud.so.2.0.2
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacommon.so.1 -> libtextautogenerateollamacommon.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacommon.so.2.0.2
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamaonline.so.1 -> libtextautogenerateollamaonline.so.2.0.2
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamaonline.so.2.0.2
 lrwxrwxrwx root/root    usr/lib/libtextutils-cmark-rc-copy.so -> libtextutils-cmark-rc-copy.so.0
 lrwxrwxrwx root/root    usr/lib/libtextutils-cmark-rc-copy.so.0 -> libtextutils-cmark-rc-copy.so.0.31.0
 -rwxr-xr-x root/root    usr/lib/libtextutils-cmark-rc-copy.so.0.31.0
