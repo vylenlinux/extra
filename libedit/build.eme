@@ -1,19 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Command line editor library providing generic line editing, history, and tokenization functions"
 homepage="https://thrysoee.dk/editline/"
 maintainer="Vylen Linux Team"
 
 name=libedit
-version=20251016_3.1
-_version=$(printf '%s' "$version" | sed "s/_/-/g")
+version=20260508_3.1
 release=1
-source="https://thrysoee.dk/editline/$name-$_version.tar.gz"
+
+_version="$(printf '%s' "${version}" | sed "s/_/-/g")"
+source="${name}-${version}.tar.gz::https://thrysoee.dk/editline/${name}-${_version}.tar.gz"
 
 build() {
-	cd $name-$_version
+    # shellcheck disable=SC2164
+    cd "${name}-${_version}"
+    ./configure --prefix=/usr
 
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-	ln -s editline.3 $PKG/usr/share/man/man3/el.3
+    ln -s editline.3 "${PKG}/usr/share/man/man3/el.3"
 }
