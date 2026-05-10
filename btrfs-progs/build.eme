@@ -6,12 +6,12 @@ homepage="https://btrfs.readthedocs.io/"
 maintainer="Vylen Linux Team"
 
 name=btrfs-progs
-version=6.19.1
+version=7.0
 release=1
 source="https://www.kernel.org/pub/linux/kernel/people/kdave/${name}/${name}-v${version}.tar.xz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "${name}-v${version}"
 
     ./configure \
