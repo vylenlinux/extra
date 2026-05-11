@@ -6,7 +6,7 @@ homepage="https://github.com/PyO3/maturin"
 maintainer="Vylen Linux Team"
 
 name=maturin
-version=1.13.1
+version=1.13.2
 release=1
 source="https://github.com/PyO3/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
