@@ -1,15 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Message Digest functions from BSD systems"
 homepage="https://www.hadrons.org/software/libmd"
 maintainer="Vylen Linux Team"
 
 name=libmd
-version=1.1.0
+version=1.2.0
 release=1
-source="https://libbsd.freedesktop.org/releases/libmd-$version.tar.xz"
+source="https://libbsd.freedesktop.org/releases/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
