@@ -1,15 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="PDF plug-in for zathura"
 homepage="https://pwmt.org/projects/zathura-pdf-poppler"
 maintainer="Vylen Linux Team"
 
 name=zathura-pdf-poppler
-version=2026.02.03
+version=2026.05.10
 release=1
-source="https://github.com/pwmt/zathura-pdf-poppler/archive/$version/$name-$version.tar.gz"
+source="https://github.com/pwmt/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-	    --wrap-mode=nopromote
-        meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build --wrap-mode=nopromote
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
