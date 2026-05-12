@@ -1,20 +1,21 @@
-python3-requests-2.33.1-1
+python3-requests-2.34.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/requires.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.33.1-py3.14.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests-2.34.0-py3.14.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/__init__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/__version__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/_internal_utils.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/_types.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/adapters.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/api.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/auth.cpython-314.pyc
@@ -32,6 +33,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__pycache__/utils.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/__version__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/_internal_utils.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/_types.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/adapters.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/api.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/auth.py
@@ -43,6 +45,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/requests/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/hooks.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/models.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/packages.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/py.typed
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/sessions.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/status_codes.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/requests/structures.py

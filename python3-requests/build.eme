@@ -8,15 +8,11 @@ maintainer="Vylen Linux Team"
 name=python3-requests
 version=2.33.1
 release=1
-
-_name="${name#*-}"
-_n="${_name%"${_name#?}"}"
-
-source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/${_n}/${name#*-}/${name#*-}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/r/requests/requests-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name#*-}-${version}"
+    cd "requests-${version}"
 
     sed -e '/certifi/d' -i setup.py
     python3 setup.py build
