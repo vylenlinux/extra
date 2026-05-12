@@ -6,7 +6,7 @@ homepage="https://requests.readthedocs.io"
 maintainer="Vylen Linux Team"
 
 name=python3-requests
-version=2.33.1
+version=2.34.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/r/requests/requests-${version}.tar.gz"
 
