@@ -6,7 +6,7 @@ homepage="https://thrysoee.dk/editline/"
 maintainer="Vylen Linux Team"
 
 name=libedit
-version=20260508_3.1
+version=20260512_3.1
 release=1
 
 _version="$(printf '%s' "${version}" | sed "s/_/-/g")"
