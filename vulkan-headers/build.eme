@@ -1,17 +1,21 @@
-description="Vulkan header files "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Vulkan header files"
 homepage="https://www.khronos.org/vulkan/"
 maintainer="Vylen Linux Team"
 
 name=vulkan-headers
-version=1.4.341
+version=1.4.350
 release=1
-source="$name-$version.tar.gz::https://github.com/KhronosGroup/Vulkan-Headers/archive/${name%-*}-sdk-$version/Vulkan-Headers-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/${name%-*}-sdk-${version}/Vulkan-Headers-${version}.tar.gz"
 
 build() {
-	cmake -S Vulkan-Headers-${name%-*}-sdk-$version -B build -G Ninja \
-		-DCMAKE_BUILD_TYPE=None \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "Vulkan-Headers-${name%-*}-sdk-${version}" -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
