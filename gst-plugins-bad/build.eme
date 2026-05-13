@@ -1,17 +1,17 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Set of plug-ins that aren't up to par compared to the rest"
+description="Set of plugins that aren't up to par compared to the rest"
 homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=gst-plugins-bad
-version=1.28.2
+version=1.28.3
 release=1
 source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
 build() {
-    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types -Wno-implicit-int -Wno-declaration-missing-parameter-type"
 
     vylen-meson "${name}-${version}" build \
         -Ddoc=disabled \
@@ -34,7 +34,8 @@ build() {
         -Dgobject-cast-checks=disabled \
         -Dpackage-name="GStreamer Bad Plugins ${version} (Vylen Linux)" \
         -Dgpl=enabled \
-        -Dintrospection=enabled
+        -Dintrospection=enabled \
+        -Dtests=disabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
