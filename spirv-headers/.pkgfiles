@@ -1,4 +1,4 @@
-spirv-headers-1.4.341.0-1
+spirv-headers-1.4.350.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/spirv/
@@ -53,6 +53,7 @@ drwxr-xr-x root/root    usr/include/spirv/unified1/
 -rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticClspvReflection.h
 -rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticDebugBreak.h
 -rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticDebugPrintf.h
+-rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticShaderDebugInfo.h
 -rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticShaderDebugInfo100.h
 -rw-r--r-- root/root    usr/include/spirv/unified1/NonSemanticVkspReflection.h
 -rw-r--r-- root/root    usr/include/spirv/unified1/OpenCL.std.h
@@ -65,6 +66,7 @@ drwxr-xr-x root/root    usr/include/spirv/unified1/
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.nonsemantic.debugbreak.grammar.json
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.nonsemantic.debugprintf.grammar.json
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.nonsemantic.shader.debuginfo.100.grammar.json
+-rw-r--r-- root/root    usr/include/spirv/unified1/extinst.nonsemantic.shader.debuginfo.grammar.json
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.nonsemantic.vkspreflection.grammar.json
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.opencl.debuginfo.100.grammar.json
 -rw-r--r-- root/root    usr/include/spirv/unified1/extinst.opencl.std.100.grammar.json
