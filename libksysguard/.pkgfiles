@@ -1,4 +1,4 @@
-libksysguard-6.6.4-1
+libksysguard-6.6.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/ksysguard/
@@ -8,70 +8,70 @@ drwxr-xr-x root/root    usr/include/ksysguard/faces/
 -rw-r--r-- root/root    usr/include/ksysguard/faces/SensorFace_p.h
 -rw-r--r-- root/root    usr/include/ksysguard/faces/sensorfaces_export.h
 drwxr-xr-x root/root    usr/include/ksysguard/formatter/
+-rw-r--r-- root/root    usr/include/ksysguard/formatter/formatter_export.h
 -rw-r--r-- root/root    usr/include/ksysguard/formatter/Formatter.h
 -rw-r--r-- root/root    usr/include/ksysguard/formatter/FormatterWrapper.h
 -rw-r--r-- root/root    usr/include/ksysguard/formatter/Unit.h
--rw-r--r-- root/root    usr/include/ksysguard/formatter/formatter_export.h
 drwxr-xr-x root/root    usr/include/ksysguard/processcore/
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/enums.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/formatter.h
--rw-r--r-- root/root    usr/include/ksysguard/processcore/process.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/process_attribute.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/process_attribute_model.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/process_controller.h
+-rw-r--r-- root/root    usr/include/ksysguard/processcore/processcore_export.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/process_data_model.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/process_data_provider.h
--rw-r--r-- root/root    usr/include/ksysguard/processcore/processcore_export.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/processes.h
+-rw-r--r-- root/root    usr/include/ksysguard/processcore/process.h
 -rw-r--r-- root/root    usr/include/ksysguard/processcore/unit.h
 drwxr-xr-x root/root    usr/include/ksysguard/sensors/
--rw-r--r-- root/root    usr/include/ksysguard/sensors/Sensor.h
 -rw-r--r-- root/root    usr/include/ksysguard/sensors/SensorDataModel.h
+-rw-r--r-- root/root    usr/include/ksysguard/sensors/Sensor.h
 -rw-r--r-- root/root    usr/include/ksysguard/sensors/SensorInfo_p.h
 -rw-r--r-- root/root    usr/include/ksysguard/sensors/SensorQuery.h
+-rw-r--r-- root/root    usr/include/ksysguard/sensors/sensors_export.h
 -rw-r--r-- root/root    usr/include/ksysguard/sensors/SensorTreeModel.h
 -rw-r--r-- root/root    usr/include/ksysguard/sensors/SensorUnitModel.h
--rw-r--r-- root/root    usr/include/ksysguard/sensors/sensors_export.h
 drwxr-xr-x root/root    usr/include/ksysguard/systemstats/
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/AggregateSensor.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/DBusInterface.h
+-rw-r--r-- root/root    usr/include/ksysguard/systemstats/org.kde.ksystemstats1.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorContainer.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorInfo.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorObject.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorPlugin.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorProperty.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SensorsFeatureSensor.h
--rw-r--r-- root/root    usr/include/ksysguard/systemstats/SysFsSensor.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/SysctlSensor.h
--rw-r--r-- root/root    usr/include/ksysguard/systemstats/org.kde.ksystemstats1.h
+-rw-r--r-- root/root    usr/include/ksysguard/systemstats/SysFsSensor.h
 -rw-r--r-- root/root    usr/include/ksysguard/systemstats/systemstats_export.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KSysGuard/
 -rw-r--r-- root/root    usr/lib/cmake/KSysGuard/KSysGuardConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KSysGuard/KSysGuardConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KSysGuard/KSysGuardLibraryTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KSysGuard/KSysGuardLibraryTargets.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KSysGuard/KSysGuardLibraryTargets-release.cmake
 drwxr-xr-x root/root    usr/lib/kf6/
 drwxr-xr-x root/root    usr/lib/kf6/kauth/
 -rwxr-xr-x root/root    usr/lib/kf6/kauth/ksysguardprocesslist_helper
 drwxr-xr-x root/root    usr/lib/ksysguard/
 -rwxr-xr-x root/root    usr/lib/ksysguard/ksgrd_network_helper
+lrwxrwxrwx root/root    usr/lib/libKSysGuardFormatter.so.2 -> libKSysGuardFormatter.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libKSysGuardFormatter.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libKSysGuardFormatter.so -> libKSysGuardFormatter.so.2
-lrwxrwxrwx root/root    usr/lib/libKSysGuardFormatter.so.2 -> libKSysGuardFormatter.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libKSysGuardFormatter.so.6.6.4
+lrwxrwxrwx root/root    usr/lib/libKSysGuardSensorFaces.so.2 -> libKSysGuardSensorFaces.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libKSysGuardSensorFaces.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libKSysGuardSensorFaces.so -> libKSysGuardSensorFaces.so.2
-lrwxrwxrwx root/root    usr/lib/libKSysGuardSensorFaces.so.2 -> libKSysGuardSensorFaces.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libKSysGuardSensorFaces.so.6.6.4
+lrwxrwxrwx root/root    usr/lib/libKSysGuardSensors.so.2 -> libKSysGuardSensors.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libKSysGuardSensors.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libKSysGuardSensors.so -> libKSysGuardSensors.so.2
-lrwxrwxrwx root/root    usr/lib/libKSysGuardSensors.so.2 -> libKSysGuardSensors.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libKSysGuardSensors.so.6.6.4
+lrwxrwxrwx root/root    usr/lib/libKSysGuardSystemStats.so.2 -> libKSysGuardSystemStats.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libKSysGuardSystemStats.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libKSysGuardSystemStats.so -> libKSysGuardSystemStats.so.2
-lrwxrwxrwx root/root    usr/lib/libKSysGuardSystemStats.so.2 -> libKSysGuardSystemStats.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libKSysGuardSystemStats.so.6.6.4
+lrwxrwxrwx root/root    usr/lib/libprocesscore.so.10 -> libprocesscore.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libprocesscore.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libprocesscore.so -> libprocesscore.so.10
-lrwxrwxrwx root/root    usr/lib/libprocesscore.so.10 -> libprocesscore.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libprocesscore.so.6.6.4
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
@@ -89,18 +89,18 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/Choices.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/CompactSensorFace.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/ExtendedLegend.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/kde-qmlmodule.version
+-rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/libSensorFacesplugin.so
+drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/kde-qmlmodule.version
+-rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/libSensorFacesPrivate.so
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/qmldir
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/SensorFacesPrivate.qmltypes
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/qmldir
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/SensorFace.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/SensorFaces.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/SensorRangeSpinBox.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/SuffixSpinBox.qml
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/kde-qmlmodule.version
--rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/libSensorFacesplugin.so
-drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/SensorFacesPrivate.qmltypes
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/kde-qmlmodule.version
--rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/libSensorFacesPrivate.so
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/private/qmldir
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/faces/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/formatter/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/formatter/Formatter.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/formatter/kde-qmlmodule.version
@@ -112,18 +112,18 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/process/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/process/processcore.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/process/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/Sensors.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/libSensorsplugin.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/qmldir
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/ksysguard/sensors/Sensors.qmltypes
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.kde.ksystemstats1.xml
-drwxr-xr-x root/root    usr/share/dbus-1/system-services/
--rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.ksysguard.processlisthelper.service
 drwxr-xr-x root/root    usr/share/dbus-1/system.d/
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
+drwxr-xr-x root/root    usr/share/dbus-1/system-services/
+-rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.ksysguard.processlisthelper.service
 drwxr-xr-x root/root    usr/share/knsrcfiles/
 -rw-r--r-- root/root    usr/share/knsrcfiles/systemmonitor-faces.knsrc
 -rw-r--r-- root/root    usr/share/knsrcfiles/systemmonitor-presets.knsrc

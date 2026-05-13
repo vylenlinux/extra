@@ -1,10 +1,10 @@
-knighttime-6.6.4-1
+knighttime-6.6.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KNightTime/
 -rw-r--r-- root/root    usr/include/KNightTime/KDarkLightSchedule
--rw-r--r-- root/root    usr/include/KNightTime/KDarkLightScheduleProvider
 -rw-r--r-- root/root    usr/include/KNightTime/kdarklightschedule.h
+-rw-r--r-- root/root    usr/include/KNightTime/KDarkLightScheduleProvider
 -rw-r--r-- root/root    usr/include/KNightTime/kdarklightscheduleprovider.h
 -rw-r--r-- root/root    usr/include/KNightTime/knighttime_export.h
 drwxr-xr-x root/root    usr/lib/
@@ -12,12 +12,12 @@ drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KNightTime/
 -rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeTargets.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeTargets-release.cmake
 -rwxr-xr-x root/root    usr/lib/knighttimed
+lrwxrwxrwx root/root    usr/lib/libKNightTime.so.0 -> libKNightTime.so.6.6.5
+-rwxr-xr-x root/root    usr/lib/libKNightTime.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libKNightTime.so -> libKNightTime.so.0
-lrwxrwxrwx root/root    usr/lib/libKNightTime.so.0 -> libKNightTime.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libKNightTime.so.6.6.4
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/org.kde.knighttimed.desktop

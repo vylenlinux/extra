@@ -1,51 +1,51 @@
-plasma5support-6.6.4-1
+plasma5support-6.6.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/plasma/
+drwxr-xr-x root/root    usr/include/plasma5support/
 drwxr-xr-x root/root    usr/include/Plasma5Support/
+drwxr-xr-x root/root    usr/include/Plasma5Support/plasma5support/
 drwxr-xr-x root/root    usr/include/Plasma5Support/Plasma5Support/
 -rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/DataContainer
+-rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/datacontainer.h
 -rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/DataEngine
 -rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/DataEngineConsumer
--rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/Plasma5Support
--rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/PluginLoader
--rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/Service
--rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/ServiceJob
-drwxr-xr-x root/root    usr/include/Plasma5Support/plasma5support/
--rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/datacontainer.h
--rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/dataengine.h
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/dataengineconsumer.h
--rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/plasma5support.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/dataengine.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/Plasma5Support
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/plasma5support_export.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/plasma5support.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/PluginLoader
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/pluginloader.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/Service
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/service.h
+-rw-r--r-- root/root    usr/include/Plasma5Support/Plasma5Support/ServiceJob
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/servicejob.h
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support/version.h
 -rw-r--r-- root/root    usr/include/Plasma5Support/plasma5support_version.h
-drwxr-xr-x root/root    usr/include/plasma/
+drwxr-xr-x root/root    usr/include/plasma5support/weather/
+-rw-r--r-- root/root    usr/include/plasma5support/weather/ion_export.h
+-rw-r--r-- root/root    usr/include/plasma5support/weather/ion.h
 drwxr-xr-x root/root    usr/include/plasma/geolocation/
 -rw-r--r-- root/root    usr/include/plasma/geolocation/geolocation_export.h
 -rw-r--r-- root/root    usr/include/plasma/geolocation/geolocationprovider.h
-drwxr-xr-x root/root    usr/include/plasma5support/
-drwxr-xr-x root/root    usr/include/plasma5support/weather/
--rw-r--r-- root/root    usr/include/plasma5support/weather/ion.h
--rw-r--r-- root/root    usr/include/plasma5support/weather/ion_export.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/Plasma5Support/
 -rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportConfigVersion.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportMacros.cmake
--rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportTargets.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Plasma5Support/Plasma5SupportTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib/libPlasma5Support.so.6.6.5
+lrwxrwxrwx root/root    usr/lib/libPlasma5Support.so.6 -> libPlasma5Support.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libPlasma5Support.so -> libPlasma5Support.so.6
-lrwxrwxrwx root/root    usr/lib/libPlasma5Support.so.6 -> libPlasma5Support.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libPlasma5Support.so.6.6.4
+-rwxr-xr-x root/root    usr/lib/libplasma-geolocation-interface.so.6.6.5
+lrwxrwxrwx root/root    usr/lib/libplasma-geolocation-interface.so.6 -> libplasma-geolocation-interface.so.6.6.5
 lrwxrwxrwx root/root    usr/lib/libplasma-geolocation-interface.so -> libplasma-geolocation-interface.so.6
-lrwxrwxrwx root/root    usr/lib/libplasma-geolocation-interface.so.6 -> libplasma-geolocation-interface.so.6.6.4
--rwxr-xr-x root/root    usr/lib/libplasma-geolocation-interface.so.6.6.4
-lrwxrwxrwx root/root    usr/lib/libweather_ion.so -> libweather_ion.so.7
-lrwxrwxrwx root/root    usr/lib/libweather_ion.so.7 -> libweather_ion.so.7.0.0
 -rwxr-xr-x root/root    usr/lib/libweather_ion.so.7.0.0
+lrwxrwxrwx root/root    usr/lib/libweather_ion.so.7 -> libweather_ion.so.7.0.0
+lrwxrwxrwx root/root    usr/lib/libweather_ion.so -> libweather_ion.so.7
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/plasma5support/
@@ -84,8 +84,6 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/plasma/plasma5support/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/plasma/plasma5support/qmldir
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/plasma/
-drwxr-xr-x root/root    usr/share/plasma/weather_legacy/
--rw-r--r-- root/root    usr/share/plasma/weather_legacy/noaa_station_list.xml
 drwxr-xr-x root/root    usr/share/plasma5support/
 drwxr-xr-x root/root    usr/share/plasma5support/services/
 -rw-r--r-- root/root    usr/share/plasma5support/services/activities.operations
@@ -100,6 +98,8 @@ drwxr-xr-x root/root    usr/share/plasma5support/services/
 -rw-r--r-- root/root    usr/share/plasma5support/services/soliddevice.operations
 -rw-r--r-- root/root    usr/share/plasma5support/services/statusnotifieritem.operations
 -rw-r--r-- root/root    usr/share/plasma5support/services/storage.operations
+drwxr-xr-x root/root    usr/share/plasma/weather_legacy/
+-rw-r--r-- root/root    usr/share/plasma/weather_legacy/noaa_station_list.xml
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/plasma5support.categories
 -rw-r--r-- root/root    usr/share/qlogging-categories6/plasma5support.renamecategories

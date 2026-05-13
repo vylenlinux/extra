@@ -1,4 +1,4 @@
-kinfocenter-6.6.4-1
+kinfocenter-6.6.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/kinfocenter -> /usr/bin/systemsettings
@@ -40,8 +40,8 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kinfocenter/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/KInfoCenterInternal.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/kde-qmlmodule.version
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/KInfoCenterInternal.qmltypes
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/libKInfoCenterInternalplugin.so
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/qml/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kinfocenter/private/qml/CommandOutputKCM.qml
@@ -52,10 +52,10 @@ drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/kcm_energyinfo.desktop
 -rwxr-xr-x root/root    usr/share/applications/org.kde.kinfocenter.desktop
 drwxr-xr-x root/root    usr/share/dbus-1/
-drwxr-xr-x root/root    usr/share/dbus-1/system-services/
--rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.kinfocenter.dmidecode.service
 drwxr-xr-x root/root    usr/share/dbus-1/system.d/
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kinfocenter.dmidecode.conf
+drwxr-xr-x root/root    usr/share/dbus-1/system-services/
+-rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.kinfocenter.dmidecode.service
 drwxr-xr-x root/root    usr/share/kinfocenter/
 drwxr-xr-x root/root    usr/share/kinfocenter/categories/
 -rw-r--r-- root/root    usr/share/kinfocenter/categories/basicinformation.desktop
