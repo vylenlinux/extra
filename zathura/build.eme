@@ -6,7 +6,7 @@ homepage="https://pwmt.org/projects/zathura/"
 maintainer="Vylen Linux Team"
 
 name=zathura
-version=2026.05.10
+version=2026.05.11
 release=1
 source="https://github.com/pwmt/${name}/archive/${version}/${name}-${version}.tar.gz"
 
