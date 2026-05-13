@@ -1,15 +1,15 @@
-qt6-webview-6.11.0-1
+qt6-webview-6.11.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtWebView/
-drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.0/
-drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/
-drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/
--rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/qtwebview-config_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/qwebview_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/qwebviewfactory_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/qwebviewplugin_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.1/
+drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/
+drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/private/
+-rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/private/qtwebview-config_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/private/qwebview_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/private/qwebviewfactory_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebView/6.11.1/QtWebView/private/qwebviewplugin_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtWebView/QWebView
 -rw-r--r-- root/root    usr/include/qt6/QtWebView/QWebViewLoadingInfo
 -rw-r--r-- root/root    usr/include/qt6/QtWebView/QWebViewSettings
@@ -24,13 +24,13 @@ drwxr-xr-x root/root    usr/include/qt6/QtWebView/6.11.0/QtWebView/private/
 -rw-r--r-- root/root    usr/include/qt6/QtWebView/qwebviewloadinginfo.h
 -rw-r--r-- root/root    usr/include/qt6/QtWebView/qwebviewsettings.h
 drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/
-drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.0/
-drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/
-drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/private/
--rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/private/qquickwebview_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/private/qquickwebviewloadrequest_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/private/qquickwebviewsettings_p.h
--rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.0/QtWebViewQuick/private/qtwebviewquickglobal_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.1/
+drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/
+drwxr-xr-x root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/private/
+-rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/private/qquickwebview_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/private/qquickwebviewloadrequest_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/private/qquickwebviewsettings_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/6.11.1/QtWebViewQuick/private/qtwebviewquickglobal_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/QtWebViewQuick
 -rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/QtWebViewQuickDepends
 -rw-r--r-- root/root    usr/include/qt6/QtWebViewQuick/QtWebViewQuickVersion
@@ -104,12 +104,12 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6WebViewQuickPrivate/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6WebViewQuickPrivate/Qt6WebViewQuickPrivateVersionlessTargets.cmake
 -rw-r--r-- root/root    usr/lib/libQt6WebView.prl
 lrwxrwxrwx root/root    usr/lib/libQt6WebView.so -> libQt6WebView.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6WebView.so.6 -> libQt6WebView.so.6.11.0
--rwxr-xr-x root/root    usr/lib/libQt6WebView.so.6.11.0
+lrwxrwxrwx root/root    usr/lib/libQt6WebView.so.6 -> libQt6WebView.so.6.11.1
+-rwxr-xr-x root/root    usr/lib/libQt6WebView.so.6.11.1
 -rw-r--r-- root/root    usr/lib/libQt6WebViewQuick.prl
 lrwxrwxrwx root/root    usr/lib/libQt6WebViewQuick.so -> libQt6WebViewQuick.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6WebViewQuick.so.6 -> libQt6WebViewQuick.so.6.11.0
--rwxr-xr-x root/root    usr/lib/libQt6WebViewQuick.so.6.11.0
+lrwxrwxrwx root/root    usr/lib/libQt6WebViewQuick.so.6 -> libQt6WebViewQuick.so.6.11.1
+-rwxr-xr-x root/root    usr/lib/libQt6WebViewQuick.so.6.11.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6WebView.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6WebViewQuick.pc
@@ -135,6 +135,6 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/QtWebView/
 -rw-r--r-- root/root    usr/lib/qt6/qml/QtWebView/plugins.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/QtWebView/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
--rw-r--r-- root/root    usr/lib/qt6/sbom/qtwebview-6.11.0.spdx
+-rw-r--r-- root/root    usr/lib/qt6/sbom/qtwebview-6.11.1.spdx
 drwxr-xr-x root/root    usr/usr/
 drwxr-xr-x root/root    usr/usr/bin/
