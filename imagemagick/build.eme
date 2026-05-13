@@ -6,19 +6,20 @@ homepage="https://imagemagick.org/ "
 maintainer="Vylen Linux Team"
 
 name=imagemagick
-version=7.1.2.21
+version=7.1.2.22
 release=1
 
-vrsn="${version%.*}-${version##*.}"
-source="${name}-${version}.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/${vrsn}.tar.gz"
+_version="${version%.*}-${version##*.}"
+source="${name}-${version}.tar.gz::https://github.com/ImageMagick/ImageMagick/archive/refs/tags/${_version}.tar.gz"
 
 KEEP_LIBTOOL="yes"
 
 build() {
     # shellcheck disable=SC2164
-    cd "ImageMagick-${vrsn}"
+    cd "ImageMagick-${_version}"
 
-    ./configure --prefix=/usr \
+    ./configure \
+        --prefix=/usr \
         --sysconfdir=/etc \
         --enable-hdri \
         --with-modules \

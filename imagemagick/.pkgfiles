@@ -1,4 +1,4 @@
-imagemagick-7.1.2.21-1
+imagemagick-7.1.2.22-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/ImageMagick-7/
 -rw-r--r-- root/root    etc/ImageMagick-7/colors.xml
@@ -17,9 +17,6 @@ drwxr-xr-x root/root    etc/ImageMagick-7/
 -rw-r--r-- root/root    etc/ImageMagick-7/type.xml
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
--rwxr-xr-x root/root    usr/bin/Magick++-config
--rwxr-xr-x root/root    usr/bin/MagickCore-config
--rwxr-xr-x root/root    usr/bin/MagickWand-config
 lrwxrwxrwx root/root    usr/bin/animate -> magick
 lrwxrwxrwx root/root    usr/bin/compare -> magick
 lrwxrwxrwx root/root    usr/bin/composite -> magick
@@ -29,39 +26,27 @@ lrwxrwxrwx root/root    usr/bin/display -> magick
 lrwxrwxrwx root/root    usr/bin/identify -> magick
 lrwxrwxrwx root/root    usr/bin/import -> magick
 -rwxr-xr-x root/root    usr/bin/magick
+-rwxr-xr-x root/root    usr/bin/Magick++-config
+-rwxr-xr-x root/root    usr/bin/MagickCore-config
 lrwxrwxrwx root/root    usr/bin/magick-script -> magick
+-rwxr-xr-x root/root    usr/bin/MagickWand-config
 lrwxrwxrwx root/root    usr/bin/mogrify -> magick
 lrwxrwxrwx root/root    usr/bin/montage -> magick
 lrwxrwxrwx root/root    usr/bin/stream -> magick
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/ImageMagick-7/
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++.h
 drwxr-xr-x root/root    usr/include/ImageMagick-7/Magick++/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Blob.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/CoderInfo.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Color.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Drawable.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Exception.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Functions.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Geometry.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Image.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Include.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Montage.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Pixels.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/ResourceLimits.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/STL.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/SecurityPolicy.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Statistic.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/TypeMetric.h
 drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickCore/
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/MagickCore.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/animate.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/annotate.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/artifact.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/attribute.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/blob.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/cache-view.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/cache.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/cache-view.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/channel.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/cipher.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/client.h
@@ -91,8 +76,8 @@ drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickCore/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/geometry.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/histogram.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/identify.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/image-view.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/image.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/image-view.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/layer.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/linked-list.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/list.h
@@ -101,8 +86,9 @@ drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickCore/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magic.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magick-baseconfig.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magick-config.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magick-type.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/MagickCore.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magick.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/magick-type.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/matrix.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/memory_.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/method-attribute.h
@@ -151,8 +137,21 @@ drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickCore/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/widget.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/xml-tree.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickCore/xwindow.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Drawable.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Exception.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Functions.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Geometry.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Image.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Include.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Montage.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Pixels.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/ResourceLimits.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/SecurityPolicy.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/Statistic.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/STL.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/Magick++/TypeMetric.h
 drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickWand/
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/MagickWand.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/animate.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/compare.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/composite.h
@@ -165,6 +164,7 @@ drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickWand/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/magick-cli.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/magick-image.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/magick-property.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/MagickWand.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/method-attribute.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/mogrify.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/montage.h
@@ -172,8 +172,8 @@ drwxr-xr-x root/root    usr/include/ImageMagick-7/MagickWand/
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/pixel-iterator.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/pixel-wand.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/stream.h
--rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/wand-view.h
 -rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/wandcli.h
+-rw-r--r-- root/root    usr/include/ImageMagick-7/MagickWand/wand-view.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/
 drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/config-Q16HDRI/
@@ -342,14 +342,14 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/png.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/pnm.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/pnm.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps2.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps2.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps3.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps3.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/psd.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/psd.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps.la
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ps.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/pwp.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/pwp.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/qoi.la
@@ -392,10 +392,10 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tiff.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tile.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tile.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim2.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim2.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim.la
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/tim.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ttf.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/ttf.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/txt.la
@@ -408,10 +408,10 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/uyvy.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vicar.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vicar.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vid.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vid.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/video.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/video.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vid.la
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vid.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/viff.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/viff.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/vips.la
@@ -422,18 +422,18 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/webp.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/wpg.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/wpg.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/x.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/x.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xbm.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xbm.so
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xc.la
--rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xc.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xcf.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xcf.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xc.la
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xc.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/x.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xpm.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xpm.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xps.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xps.so
+-rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/x.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xwd.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/xwd.so
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/coders/yaml.la
@@ -446,41 +446,42 @@ drwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/filters/
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/filters/analyze.la
 -rwxr-xr-x root/root    usr/lib/ImageMagick-7.1.2/modules-Q16HDRI/filters/analyze.so
 -rwxr-xr-x root/root    usr/lib/libMagick++-7.Q16HDRI.la
-lrwxrwxrwx root/root    usr/lib/libMagick++-7.Q16HDRI.so -> libMagick++-7.Q16HDRI.so.5.0.0
-lrwxrwxrwx root/root    usr/lib/libMagick++-7.Q16HDRI.so.5 -> libMagick++-7.Q16HDRI.so.5.0.0
 -rwxr-xr-x root/root    usr/lib/libMagick++-7.Q16HDRI.so.5.0.0
+lrwxrwxrwx root/root    usr/lib/libMagick++-7.Q16HDRI.so.5 -> libMagick++-7.Q16HDRI.so.5.0.0
+lrwxrwxrwx root/root    usr/lib/libMagick++-7.Q16HDRI.so -> libMagick++-7.Q16HDRI.so.5.0.0
 -rwxr-xr-x root/root    usr/lib/libMagickCore-7.Q16HDRI.la
-lrwxrwxrwx root/root    usr/lib/libMagickCore-7.Q16HDRI.so -> libMagickCore-7.Q16HDRI.so.10.0.2
-lrwxrwxrwx root/root    usr/lib/libMagickCore-7.Q16HDRI.so.10 -> libMagickCore-7.Q16HDRI.so.10.0.2
 -rwxr-xr-x root/root    usr/lib/libMagickCore-7.Q16HDRI.so.10.0.2
+lrwxrwxrwx root/root    usr/lib/libMagickCore-7.Q16HDRI.so.10 -> libMagickCore-7.Q16HDRI.so.10.0.2
+lrwxrwxrwx root/root    usr/lib/libMagickCore-7.Q16HDRI.so -> libMagickCore-7.Q16HDRI.so.10.0.2
 -rwxr-xr-x root/root    usr/lib/libMagickWand-7.Q16HDRI.la
-lrwxrwxrwx root/root    usr/lib/libMagickWand-7.Q16HDRI.so -> libMagickWand-7.Q16HDRI.so.10.0.2
-lrwxrwxrwx root/root    usr/lib/libMagickWand-7.Q16HDRI.so.10 -> libMagickWand-7.Q16HDRI.so.10.0.2
 -rwxr-xr-x root/root    usr/lib/libMagickWand-7.Q16HDRI.so.10.0.2
+lrwxrwxrwx root/root    usr/lib/libMagickWand-7.Q16HDRI.so.10 -> libMagickWand-7.Q16HDRI.so.10.0.2
+lrwxrwxrwx root/root    usr/lib/libMagickWand-7.Q16HDRI.so -> libMagickWand-7.Q16HDRI.so.10.0.2
 drwxr-xr-x root/root    usr/lib/perl5/
 drwxr-xr-x root/root    usr/lib/perl5/5.42/
 drwxr-xr-x root/root    usr/lib/perl5/5.42/x86_64-linux-thread-multi/
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/
-drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/
--r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick.pm
-drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick/
--r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick/Q16HDRI.pm
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/
+-r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/autosplit.ix
 -r-xr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/Magick.so
 drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/Q16HDRI/
--r-xr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/Q16HDRI/Q16HDRI.so
 -r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/Q16HDRI/autosplit.ix
+-r-xr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Image/Magick/Q16HDRI/Q16HDRI.so
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/
+drwxr-xr-x root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick/
+-r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick.pm
+-r--r--r-- root/root    usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/Image/Magick/Q16HDRI.pm
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/ImageMagick-7.Q16HDRI.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/ImageMagick.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/Magick++-7.Q16HDRI.pc
--rw-r--r-- root/root    usr/lib/pkgconfig/Magick++.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/MagickCore-7.Q16HDRI.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/MagickCore.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/Magick++.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/MagickWand-7.Q16HDRI.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/MagickWand.pc
 drwxr-xr-x root/root    usr/share/
@@ -488,25 +489,3 @@ drwxr-xr-x root/root    usr/share/ImageMagick-7/
 -rw-r--r-- root/root    usr/share/ImageMagick-7/english.xml
 -rw-r--r-- root/root    usr/share/ImageMagick-7/francais.xml
 -rw-r--r-- root/root    usr/share/ImageMagick-7/locale.xml
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/ImageMagick.1.gz
--rw-r--r-- root/root    usr/share/man/man1/Magick++-config.1.gz
--rw-r--r-- root/root    usr/share/man/man1/MagickCore-config.1.gz
--rw-r--r-- root/root    usr/share/man/man1/MagickWand-config.1.gz
--rw-r--r-- root/root    usr/share/man/man1/animate.1.gz
--rw-r--r-- root/root    usr/share/man/man1/compare.1.gz
--rw-r--r-- root/root    usr/share/man/man1/composite.1.gz
--rw-r--r-- root/root    usr/share/man/man1/conjure.1.gz
--rw-r--r-- root/root    usr/share/man/man1/convert.1.gz
--rw-r--r-- root/root    usr/share/man/man1/display.1.gz
--rw-r--r-- root/root    usr/share/man/man1/identify.1.gz
--rw-r--r-- root/root    usr/share/man/man1/import.1.gz
--rw-r--r-- root/root    usr/share/man/man1/magick-script.1.gz
--rw-r--r-- root/root    usr/share/man/man1/magick.1.gz
--rw-r--r-- root/root    usr/share/man/man1/mogrify.1.gz
--rw-r--r-- root/root    usr/share/man/man1/montage.1.gz
--rw-r--r-- root/root    usr/share/man/man1/stream.1.gz
-drwxr-xr-x root/root    usr/share/man/man3/
--r--r--r-- root/root    usr/share/man/man3/Image::Magick.3.gz
--r--r--r-- root/root    usr/share/man/man3/Image::Magick::Q16HDRI.3.gz
