@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Meta loader for Vulkan API"
 homepage="https://github.com/zeux/volk"
 maintainer="Vylen Linux Team"
@@ -5,16 +8,17 @@ maintainer="Vylen Linux Team"
 name=volk
 version=1.4.341.0
 release=1
-source="$name-$version.tar.gz::https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/zeux/${name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 
 build() {
-	cmake -S volk-vulkan-sdk-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DVOLK_INSTALL=True \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-vulkan-sdk-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DVOLK_INSTALL=True \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
