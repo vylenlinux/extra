@@ -6,7 +6,7 @@ homepage="https://gnupg.org"
 maintainer="Vylen Linux Team"
 
 name=gnupg
-version=2.5.19
+version=2.5.20
 release=1
 source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
