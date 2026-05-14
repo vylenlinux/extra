@@ -6,7 +6,7 @@ homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team"
 
 name=pipewire
-version=1.6.4
+version=1.6.5
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz
@@ -30,7 +30,7 @@ build() {
     mkdir -p "${PKG}/etc/alsa/conf.d"
 
     ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf -t "${PKG}/etc/alsa/conf.d"
-    ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf         -t "${PKG}/etc/alsa/conf.d"
+    ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf -t "${PKG}/etc/alsa/conf.d"
 
     # install vylen pipewire launcher
     install -Dm755 "${SRC}/vylen-pipewire-launcher" -t "${PKG}/usr/bin/"
