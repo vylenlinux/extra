@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=nvidia-open
 version=595.71.05
-release=2
+release=3
 
 source="${name}-${version}.run::http://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
     buildmodules-${name}.sh
