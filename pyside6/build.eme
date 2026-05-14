@@ -7,19 +7,15 @@ maintainer="Vylen Linux Team"
 
 name=pyside6
 version=6.11.1
-release=1
+release=2
 
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/QtForPython/${name}/PySide6-${version}-src/pyside-setup-everywhere-src-${version}.tar.xz
     fix-header-install-dir.patch"
 
 build() {
-    patch -d "pyside-setup-everywhere-src-${version}" -Np1 -i "${SRC}/fix-header-install-dir.patch"
-
     # shellcheck disable=SC2164
     cd "pyside-setup-everywhere-src-${version}"
-
-    export CLANG_INSTALL_DIR=/usr/lib/llvm21
-    export LLVM_INSTALL_DIR=/usr/lib/llvm21
+    patch -Np1 -i "${SRC}/fix-header-install-dir.patch"
 
     cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=None \
