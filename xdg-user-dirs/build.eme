@@ -7,13 +7,11 @@ maintainer="Vylen Linux Team"
 
 name=xdg-user-dirs
 version=0.20
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xdg/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-v${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    rm -rf "${PKG}/usr/lib"
 }
