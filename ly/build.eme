@@ -6,8 +6,8 @@ homepage="https://codeberg.org/fairyglade/ly"
 maintainer="Vylen Linux Team"
 
 name=ly
-version=1.4.0
-release=2
+version=1.4.1
+release=1
 
 source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz
     ${name}.pam"
