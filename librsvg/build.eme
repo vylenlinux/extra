@@ -1,22 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library and tools used to manipulate, convert and view Scalable Vector Graphic (SVG) images"
 homepage="https://wiki.gnome.org/Projects/LibRsvg"
 maintainer="Vylen Linux Team"
 
 name=librsvg
-version=2.62.1
+version=2.62.2
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	export CARGO_PROFILE_RELEASE_LTO=true 
-	export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
-	
-	vylen-meson $name-$version build \
-		-Ddocs=disabled \
-		-Dpixbuf=enabled \
-		-Dpixbuf-loader=enabled \
-		-Dtests=false \
-		-Dvala=enabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    export CARGO_PROFILE_RELEASE_LTO=true
+    export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+
+    vylen-meson "${name}-${version}" build \
+        -Ddocs=disabled \
+        -Dpixbuf=enabled \
+        -Dpixbuf-loader=enabled \
+        -Dtests=false \
+        -Dvala=enabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
