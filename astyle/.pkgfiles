@@ -1,11 +1,11 @@
-astyle-3.6.15-1
+astyle-3.6.16-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/astyle
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/astyle.h
 drwxr-xr-x root/root    usr/lib/
--rwxr-xr-x root/root    usr/lib/libastyle.so.3.6.13
-lrwxrwxrwx root/root    usr/lib/libastyle.so.3 -> libastyle.so.3.6.13
 lrwxrwxrwx root/root    usr/lib/libastyle.so -> libastyle.so.3
+lrwxrwxrwx root/root    usr/lib/libastyle.so.3 -> libastyle.so.3.6.13
+-rwxr-xr-x root/root    usr/lib/libastyle.so.3.6.13
 drwxr-xr-x root/root    usr/share/
