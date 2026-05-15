@@ -1,4 +1,4 @@
-networkmanager-1.56.1-1
+networkmanager-1.56.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/NetworkManager/
 -rw-r--r-- root/root    etc/NetworkManager/NetworkManager.conf.epkgnew
@@ -49,7 +49,6 @@ drwxr-xr-x root/root    usr/include/libnm/
 -rw-r--r-- root/root    usr/include/libnm/nm-device-dummy.h
 -rw-r--r-- root/root    usr/include/libnm/nm-device-ethernet.h
 -rw-r--r-- root/root    usr/include/libnm/nm-device-generic.h
--rw-r--r-- root/root    usr/include/libnm/nm-device-geneve.h
 -rw-r--r-- root/root    usr/include/libnm/nm-device-hsr.h
 -rw-r--r-- root/root    usr/include/libnm/nm-device-infiniband.h
 -rw-r--r-- root/root    usr/include/libnm/nm-device-ip-tunnel.h
@@ -98,7 +97,6 @@ drwxr-xr-x root/root    usr/include/libnm/
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-dummy.h
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-ethtool.h
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-generic.h
--rw-r--r-- root/root    usr/include/libnm/nm-setting-geneve.h
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-gsm.h
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-hostname.h
 -rw-r--r-- root/root    usr/include/libnm/nm-setting-hsr.h
@@ -160,12 +158,12 @@ drwxr-xr-x root/root    usr/include/libnm/
 -rw-r--r-- root/root    usr/include/libnm/nm-wimax-nsp.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/NetworkManager/
-drwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/
--rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/libnm-device-plugin-adsl.so
--rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/libnm-device-plugin-bluetooth.so
--rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/libnm-device-plugin-wifi.so
--rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/libnm-device-plugin-wwan.so
--rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.1/libnm-wwan.so
+drwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/
+-rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/libnm-device-plugin-adsl.so
+-rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/libnm-device-plugin-bluetooth.so
+-rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/libnm-device-plugin-wifi.so
+-rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/libnm-device-plugin-wwan.so
+-rwxr-xr-x root/root    usr/lib/NetworkManager/1.56.0/libnm-wwan.so
 drwxr-xr-x root/root    usr/lib/NetworkManager/VPN/
 drwxr-xr-x root/root    usr/lib/NetworkManager/conf.d/
 drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/
@@ -210,7 +208,6 @@ drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Bridge.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Dummy.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Generic.xml
--rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Geneve.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Hsr.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.IPTunnel.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Infiniband.xml
