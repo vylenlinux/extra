@@ -7,9 +7,11 @@ let skip_defaults_vim=1
 set nocompatible
 set backspace=2
 set mouse=
+
 syntax on
+
 if (&term == "xterm") || (&term == "putty")
-  set background=dark
+    set background=dark
 endif
 
 " End /etc/vimrc
