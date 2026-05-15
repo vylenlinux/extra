@@ -1,25 +1,32 @@
-description="Shared library for mediainfo "
-homepage="https://mediaarea.net "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Shared library for mediainfo"
+homepage="https://mediaarea.net"
 maintainer="Vylen Linux Team"
 
 name=libmediainfo
-version=26.01
+version=26.05
 release=1
-source="https://mediaarea.net/download/source/libmediainfo/$version/libmediainfo_$version.tar.xz
-	graphviz-13.patch" 
+
+source="${name}-${version}.tar.xz::https://mediaarea.net/download/source/${name}/${version}/${name}_${version}.tar.xz
+    graphviz-13.patch"
 
 build() {
-	patch -d MediaInfoLib -p1 < graphviz-13.patch # Fix build with GraphViz 13
+    patch -d MediaInfoLib -p1 < graphviz-13.patch # Fix build with GraphViz 13
 
-	cd MediaInfoLib/Project/GNU/Library
+    # shellcheck disable=SC2164
+    cd MediaInfoLib/Project/GNU/Library
+    ./autogen.sh
 
-	./autogen.sh
-	./configure --prefix=/usr \
-              --enable-shared \
-              --disable-static \
-              --with-libcurl \
-              --with-libmms \
-              --with-libtinyxml2
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        --disable-static \
+        --with-libcurl \
+        --with-libmms \
+        --with-libtinyxml2
+
+    make
+    make DESTDIR="${PKG}" install
 }
