@@ -6,9 +6,9 @@ homepage="https://codeberg.org/dnkl/foot"
 maintainer="Vylen Linux Team"
 
 name=foot
-version=1.26.1
+version=1.27.0
 release=1
-source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/foot/archive/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
 
 build() {
     # doing the lto dance
@@ -18,18 +18,18 @@ build() {
         -Dgrapheme-clustering=enabled \
         -Dtests=false
 
-	find . -name "*.gcda" -delete
-	meson compile -C build
+    find . -name "*.gcda" -delete
+    meson compile -C build
 
-	meson configure -D b_pgo=use build
-	meson compile -C build
+    meson configure -D b_pgo=use build
+    meson compile -C build
 
-	DESTDIR="${PKG}" meson install --no-rebuild -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	mv "${PKG}/usr/share/terminfo/f/foot" "${PKG}/usr/share/terminfo/f/foot-extra"
-	mv "${PKG}/usr/share/terminfo/f/foot-direct" "${PKG}/usr/share/terminfo/f/foot-extra-direct"
+    mv "${PKG}/usr/share/terminfo/f/foot" "${PKG}/usr/share/terminfo/f/foot-extra"
+    mv "${PKG}/usr/share/terminfo/f/foot-direct" "${PKG}/usr/share/terminfo/f/foot-extra-direct"
 
     emerald isinstalled fish || rm -r "${PKG}/usr/share/fish"
-	emerald isinstalled bash-completion || rm -r "${PKG}/usr/share/bash-completion"
-	emerald isinstalled zsh || rm -r "${PKG}/usr/share/zsh"
+    emerald isinstalled bash-completion || rm -r "${PKG}/usr/share/bash-completion"
+    emerald isinstalled zsh || rm -r "${PKG}/usr/share/zsh"
 }
