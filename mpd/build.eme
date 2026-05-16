@@ -6,9 +6,9 @@ homepage="https://www.musicpd.org/"
 maintainer="Vylen Linux Team"
 
 name=mpd
-version=0.24.10
+version=0.24.12
 release=1
-source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/MPD/archive/v${version}.tar.gz"
 
 build() {
     vylen-meson "MPD-${version}" build \
