@@ -6,7 +6,7 @@ homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
 maintainer="Vylen Linux Team"
 
 name=nss
-version=3.123.1
+version=3.124
 release=1
 
 source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz
@@ -36,7 +36,7 @@ build() {
     install -d "${PKG}/usr/lib"
     install -v -m755 Linux*/lib/*.so "${PKG}/usr/lib"
 
-    for xx in Linux*/lib/*.chk Linux*/lib/libcrmf.a; do
+    for xx in Linux*/lib/*.chk Linux*/lib/libfreebl.a; do
         install -v -m644 "${xx}" "${PKG}/usr/lib"
     done
 
