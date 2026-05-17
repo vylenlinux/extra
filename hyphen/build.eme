@@ -1,15 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library for high quality hyphenation and justification"
 homepage="https://hunspell.sf.net/"
 maintainer="Vylen Linux Team"
 
 name=hyphen
-version=2.8.8
+version=2.8.9
 release=1
-source="https://downloads.sourceforge.net/hunspell/$name-$version.tar.gz"
+source="https://github.com/hunspell/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --disable-static
+	# shellcheck disable=SC2164
+	cd "${name}-${version}"
+
+	./configure \
+        --prefix=/usr \
+        --disable-static
+
 	make
-	make DESTDIR=$PKG install
+	make DESTDIR="${PKG}" install
 }
