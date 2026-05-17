@@ -6,7 +6,7 @@ homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team"
 
 name=lvm2
-version=2.03.40
+version=2.03.41
 release=1
 source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
 
@@ -16,6 +16,9 @@ backup="etc/lvm/lvm.conf
 build() {
     # shellcheck disable=SC2164
     cd "LVM2.${version}"
+
+    # fix the install_lvm2 make target
+    sed '/SIMPLE_RECURSIVE_TARGETS/s/=/= install_lvm2/' -i libdm/make.tmpl.in
 
     CONFIG_SHELL=/bin/bash ./configure \
         --prefix=/usr \
