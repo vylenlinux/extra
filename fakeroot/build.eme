@@ -1,22 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Tool for simulating superuser privileges"
 homepage="https://wiki.debian.org/FakeRoot"
 maintainer="Vylen Linux Team"
 
 name=fakeroot
-version=1.37.2
+version=1.38
 release=1
-source="$name-$version.tar.gz::http://ftp.debian.org/debian/pool/main/f/$name/${name}_${version}.orig.tar.gz"
+source="${name}-${version}.tar.gz::http://ftp.debian.org/debian/pool/main/f/${name}/${name}_${version}.orig.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -i '/^SUBDIRS/d' doc/Makefile.am
+    sed -i '/^SUBDIRS/d' doc/Makefile.am
+    ./bootstrap
 
-	./bootstrap
-	./configure \
-		--prefix=/usr \
-		--disable-static \
-		--with-ipc=sysv
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --with-ipc=sysv
+
+    make
+    make DESTDIR="${PKG}" install
 }
