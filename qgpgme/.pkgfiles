@@ -1,4 +1,4 @@
-qgpgme-2.0.0-1
+qgpgme-2.1.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qgpgme-qt5/
@@ -224,8 +224,8 @@ drwxr-xr-x root/root    usr/lib/cmake/QGpgmeQt6/
 -rw-r--r-- root/root    usr/lib/cmake/QGpgmeQt6/QGpgmeQt6Targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/QGpgmeQt6/QGpgmeQt6Targets.cmake
 lrwxrwxrwx root/root    usr/lib/libqgpgme.so -> libqgpgme.so.15
-lrwxrwxrwx root/root    usr/lib/libqgpgme.so.15 -> libqgpgme.so.15.7.0
--rwxr-xr-x root/root    usr/lib/libqgpgme.so.15.7.0
+lrwxrwxrwx root/root    usr/lib/libqgpgme.so.15 -> libqgpgme.so.15.8.0
+-rwxr-xr-x root/root    usr/lib/libqgpgme.so.15.8.0
 lrwxrwxrwx root/root    usr/lib/libqgpgmeqt6.so -> libqgpgmeqt6.so.15
-lrwxrwxrwx root/root    usr/lib/libqgpgmeqt6.so.15 -> libqgpgmeqt6.so.15.7.0
--rwxr-xr-x root/root    usr/lib/libqgpgmeqt6.so.15.7.0
+lrwxrwxrwx root/root    usr/lib/libqgpgmeqt6.so.15 -> libqgpgmeqt6.so.15.8.0
+-rwxr-xr-x root/root    usr/lib/libqgpgmeqt6.so.15.8.0
