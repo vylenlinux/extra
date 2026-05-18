@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team"
 
 name=vivaldi
-version=7.9.3970.64
+version=7.9.3970.67
 release=1
 
 source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/vivaldi-stable-${version}-${release}.x86_64.rpm
