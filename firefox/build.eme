@@ -6,14 +6,13 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team"
 
 name=firefox
-version=150.0.3
+version=151.0
 release=1
 
-source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
+source="
     ${name}.desktop
-    0002-Bug-2033279-Make-enable-rust-simd-work-with-Rust-1.9.patch
-    0003-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch
-    0004-Bug-2023597-Use-wasm32-wasip1-target-for-clang-22.1-.patch
+    0001-Install-under-remoting-name.patch
+    0002-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch
     config
     distribution.ini
     vendor.js"
@@ -25,17 +24,10 @@ build() {
     # Make different channels installable in parallel
     patch -Np1 -i "${SRC}/0001-Install-under-remoting-name.patch"
 
-    # Fix build with Rust 1.95.0
-    # https://bugzilla.mozilla.org/show_bug.cgi?id=2033279
-    patch -Np1 -i "${SRC}/0002-Bug-2033279-Make-enable-rust-simd-work-with-Rust-1.9.patch"
-
     # Fix build with glibc 2.43
     # https://bugzilla.mozilla.org/show_bug.cgi?id=1999625
-    patch -Np1 -i "${SRC}/0003-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch"
+    patch -Np1 -i "${SRC}/0002-Patch-glsl-optimizer-to-build-with-glibc-2.43.patch"
 
-    # Fix build with Clang 22
-    # https://bugzilla.mozilla.org/show_bug.cgi?id=2023597
-    patch -Np1 -i "${SRC}/0004-Bug-2023597-Use-wasm32-wasip1-target-for-clang-22.1-.patch"
     sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
 
     mkdir "${SRC}/rust"
