@@ -1,17 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library used by some applications for USB device access"
 homepage="https://libusb.info/"
 maintainer="Vylen Linux Team"
 
 name=libusb
-version=1.0.29
+version=1.0.30
 release=1
-source="https://github.com/libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2"
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i "s/^PROJECT_LOGO/#&/" doc/doxygen.cfg.in
 
-	sed -i "s/^PROJECT_LOGO/#&/" doc/doxygen.cfg.in
-	./configure --prefix=/usr --disable-static
-	make -j1
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make -j1
+    make DESTDIR="${PKG}" install
 }
