@@ -1,16 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library to enable user space application programs to communicate with USB devices "
 homepage="http://libusb.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=libusb-compat
-version=0.1.8
+version=0.1.9
 release=1
-source="https://github.com/libusb/libusb-compat-0.1/releases/download/v$version/libusb-compat-$version.tar.bz2"
+source="https://github.com/libusb/${name}-0.1/releases/download/v${version}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
-	autoreconf -fvi
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    autoreconf -fvi
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
