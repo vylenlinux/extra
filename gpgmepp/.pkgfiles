@@ -1,4 +1,4 @@
-gpgmepp-2.0.0-1
+gpgmepp-2.1.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/gpgme++/
@@ -13,6 +13,7 @@ drwxr-xr-x root/root    usr/include/gpgme++/
 -rw-r--r-- root/root    usr/include/gpgme++/error.h
 -rw-r--r-- root/root    usr/include/gpgme++/eventloopinteractor.h
 -rw-r--r-- root/root    usr/include/gpgme++/exception.h
+-rw-r--r-- root/root    usr/include/gpgme++/flags.h
 -rw-r--r-- root/root    usr/include/gpgme++/global.h
 -rw-r--r-- root/root    usr/include/gpgme++/gpgaddexistingsubkeyeditinteractor.h
 -rw-r--r-- root/root    usr/include/gpgme++/gpgadduserideditinteractor.h
@@ -55,7 +56,7 @@ drwxr-xr-x root/root    usr/lib/cmake/Gpgmepp/
 -rw-r--r-- root/root    usr/lib/cmake/Gpgmepp/GpgmeppTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Gpgmepp/GpgmeppTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libgpgmepp.so -> libgpgmepp.so.7
-lrwxrwxrwx root/root    usr/lib/libgpgmepp.so.7 -> libgpgmepp.so.7.0.0
--rwxr-xr-x root/root    usr/lib/libgpgmepp.so.7.0.0
+lrwxrwxrwx root/root    usr/lib/libgpgmepp.so.7 -> libgpgmepp.so.7.1.0
+-rwxr-xr-x root/root    usr/lib/libgpgmepp.so.7.1.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/gpgmepp.pc

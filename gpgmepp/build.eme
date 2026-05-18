@@ -1,21 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C++ bindings for GPGME"
 homepage="https://www.gnupg.org/related_software/gpgme/"
 maintainer="Vylen Linux Team"
 
 name=gpgmepp
-version=2.0.0
+version=2.1.0
 release=1
-source="https://gnupg.org/ftp/gcrypt/gpgmepp/$name-$version.tar.xz"
+source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cmake -S $name-$version -B build \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-Wno-dev 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
