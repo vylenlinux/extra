@@ -1,4 +1,4 @@
-gpgme-2.0.1-1
+gpgme-2.1.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/gnupg-key-manage
@@ -8,9 +8,9 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/gpgme.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libgpgme.so -> libgpgme.so.45.0.1
-lrwxrwxrwx root/root    usr/lib/libgpgme.so.45 -> libgpgme.so.45.0.1
--rwxr-xr-x root/root    usr/lib/libgpgme.so.45.0.1
+lrwxrwxrwx root/root    usr/lib/libgpgme.so -> libgpgme.so.45.1.0
+lrwxrwxrwx root/root    usr/lib/libgpgme.so.45 -> libgpgme.so.45.1.0
+-rwxr-xr-x root/root    usr/lib/libgpgme.so.45.1.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/gpgme-glib.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/gpgme.pc
@@ -28,6 +28,3 @@ drwxr-xr-x root/root    usr/share/info/
 -rw-r--r-- root/root    usr/share/info/gpgme.info-1.gz
 -rw-r--r-- root/root    usr/share/info/gpgme.info-2.gz
 -rw-r--r-- root/root    usr/share/info/gpgme.info.gz
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/gpgme-json.1.gz

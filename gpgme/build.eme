@@ -1,24 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C library that allows cryptography support to be added to a program"
 homepage="https://www.gnupg.org/related_software/gpgme/"
 maintainer="Vylen Linux Team"
 
 name=gpgme
-version=2.0.1
+version=2.1.0
 release=1
-source="https://gnupg.org/ftp/gcrypt/gpgme/$name-$version.tar.bz2"
+source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -i 's/-unknown//' autogen.sh
+    sed -i 's/-unknown//' autogen.sh
+    autoreconf -fi
 
-	autoreconf -fi
-	./configure \
-		--prefix=/usr \
-		--disable-fd-passing \
-		--disable-static \
-		--disable-gpgsm-test
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-fd-passing \
+        --disable-static \
+        --disable-gpgsm-test
 
+    make
+    make DESTDIR="${PKG}" install
 }
