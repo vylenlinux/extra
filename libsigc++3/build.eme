@@ -1,18 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Implements a typesafe callback system for standard C++"
 homepage="https://libsigcplusplus.github.io/libsigcplusplus/"
 maintainer="Vylen Linux Team"
 
 name=libsigc++3
-bname=libsigc++
-version=3.8.0
+version=3.8.1
 release=1
-source="$name-$version.tar.gz::https://github.com/libsigcplusplus/libsigcplusplus/archive/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/libsigcplusplus/libsigcplusplus/archive/${version}.tar.gz"
 
 build() {
-	vylen-meson libsigcplusplus-$version build \
-		-Dbuild-documentation=false \
-		-Dbuild-examples=false \
-		-Dbuild-tests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "libsigcplusplus-${version}" build \
+        -Dbuild-documentation=false \
+        -Dbuild-examples=false \
+        -Dbuild-tests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
