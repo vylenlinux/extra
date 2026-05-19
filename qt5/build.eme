@@ -1,15 +1,15 @@
 #!/bin/sh
 
+# shellcheck disable=SC2034
 description="Cross-platform application framework that is widely used for developing application"
 homepage="https://www.qt.io/"
 maintainer="Vylen Linux Team"
 
 name=qt5
-version=5.15.18
+version=5.15.19
 release=1
 
-source="https://download.qt.io/archive/qt/5.15/$version/single/qt-everywhere-opensource-src-$version.tar.xz
-    qtbase-5.15.8-fix-missing-qtsan-include.patch
+source="${name}-${version}.tar.xz::https://download.qt.io/archive/qt/5.15/${version}/single/qt-everywhere-opensource-src-${version}.tar.xz
     qt5-cflags.patch
     qt5-logo.png
     qtbase-everywhere-src-5.14.2-no_relocatable.patch
@@ -28,7 +28,6 @@ build() {
     patch -d qtbase -p1 -i "${SRC}/qtbase-everywhere-src-5.14.2-no_relocatable.patch"
     patch -d qtbase -p1 -i "${SRC}/qtbase-everywhere-src-5.15.2-libglvnd.patch"
     patch -d qtbase -p1 -i "${SRC}/qtbase-use-wayland-on-gnome.patch"
-    patch -d qtbase -p1 -i "${SRC}/qtbase-5.15.8-fix-missing-qtsan-include.patch"
 
     export PYTHON='/usr/bin/python3'
     mkdir "${SRC}/bin"
@@ -40,9 +39,9 @@ build() {
     export LD_LIBRARY_PATH="${QTDIR}/qtbase/lib:${QTDIR}/qttools/lib:${LD_LIBRARY_PATH}"
     export QT_PLUGIN_PATH="${QTDIR}/qtbase/plugins"
 
-    sed -i '/utility/a #include <limits>'     qtbase/src/corelib/global/qglobal.h
-    sed -i '/string/a #include <limits>'      qtbase/src/corelib/global/qfloat16.h
-    sed -i '/qbytearray/a #include <limits>'  qtbase/src/corelib/text/qbytearraymatcher.h
+    sed -i '/utility/a #include <limits>' qtbase/src/corelib/global/qglobal.h
+    sed -i '/string/a #include <limits>' qtbase/src/corelib/global/qfloat16.h
+    sed -i '/qbytearray/a #include <limits>' qtbase/src/corelib/text/qbytearraymatcher.h
     sed -i '/type_traits/a #include <limits>' qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h
 
     # shellcheck disable=SC2010
