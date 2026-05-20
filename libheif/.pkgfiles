@@ -1,4 +1,4 @@
-libheif-1.21.2-1
+libheif-1.22.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/heif-convert -> heif-dec
@@ -11,6 +11,7 @@ drwxr-xr-x root/root    usr/include/libheif/
 -rw-r--r-- root/root    usr/include/libheif/heif_aux_images.h
 -rw-r--r-- root/root    usr/include/libheif/heif_brands.h
 -rw-r--r-- root/root    usr/include/libheif/heif_color.h
+-rw-r--r-- root/root    usr/include/libheif/heif_components.h
 -rw-r--r-- root/root    usr/include/libheif/heif_context.h
 -rw-r--r-- root/root    usr/include/libheif/heif_cxx.h
 -rw-r--r-- root/root    usr/include/libheif/heif_decoding.h
@@ -22,6 +23,7 @@ drwxr-xr-x root/root    usr/include/libheif/
 -rw-r--r-- root/root    usr/include/libheif/heif_items.h
 -rw-r--r-- root/root    usr/include/libheif/heif_library.h
 -rw-r--r-- root/root    usr/include/libheif/heif_metadata.h
+-rw-r--r-- root/root    usr/include/libheif/heif_omaf.h
 -rw-r--r-- root/root    usr/include/libheif/heif_plugin.h
 -rw-r--r-- root/root    usr/include/libheif/heif_properties.h
 -rw-r--r-- root/root    usr/include/libheif/heif_regions.h
@@ -39,14 +41,9 @@ drwxr-xr-x root/root    usr/lib/cmake/libheif/
 -rw-r--r-- root/root    usr/lib/cmake/libheif/libheif-config-version.cmake
 -rw-r--r-- root/root    usr/lib/cmake/libheif/libheif-config.cmake
 lrwxrwxrwx root/root    usr/lib/libheif.so -> libheif.so.1
-lrwxrwxrwx root/root    usr/lib/libheif.so.1 -> libheif.so.1.21.2
--rwxr-xr-x root/root    usr/lib/libheif.so.1.21.2
+lrwxrwxrwx root/root    usr/lib/libheif.so.1 -> libheif.so.1.22.0
+-rwxr-xr-x root/root    usr/lib/libheif.so.1.22.0
 drwxr-xr-x root/root    usr/lib/libheif/
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libheif.pc
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/heif-dec.1.gz
--rw-r--r-- root/root    usr/share/man/man1/heif-enc.1.gz
--rw-r--r-- root/root    usr/share/man/man1/heif-info.1.gz
