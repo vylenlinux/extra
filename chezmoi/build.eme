@@ -6,7 +6,7 @@ homepage="https://www.chezmoi.io/"
 maintainer="Vylen Linux Team"
 
 name=chezmoi
-version=2.70.3
+version=2.70.4
 release=1
 source="${name}-${version}.tar.gz::https://github.com/twpayne/${name}/archive/v${version}.tar.gz"
 
@@ -31,7 +31,7 @@ build() {
 
     install -Dm755 "${name}" -t "${PKG}/usr/bin/"
 
-    install -Dm644 completions/chezmoi-completion.bash "${PKG}/usr/share/bash-completion/completions/chezmoi"
+    install -Dm644 completions/chezmoi-completion.bash "${PKG}/usr/share/bash-completion/completions/${name}"
     install -Dm644 completions/chezmoi.fish -t "${PKG}/usr/share/fish/vendor_completions.d/"
     install -Dm644 completions/chezmoi.zsh "${PKG}/usr/share/zsh/site-functions/_chezmoi"
 }
