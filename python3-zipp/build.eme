@@ -1,20 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Backport of pathlib-compatible object wrapper for zip files"
 homepage="https://pypi.org/project/zipp/"
 maintainer="Vylen Linux Team"
 
 name=python3-zipp
-version=3.23.0
+version=4.1.0
 release=1
-source="https://pypi.python.org/packages/source/z/zipp/zipp-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/z/zipp/zipp-${version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
+    cd "zipp-${version}"
+    export SETUPTOOLS_SCM_PRETEND_VERSION="${version}"
 
-	 cd zipp-$version
-	 export SETUPTOOLS_SCM_PRETEND_VERSION=$pkgver
-        gpep517 build-wheel \
-                --wheel-dir .dist \
-                --output-fd 3 3>&1 >&2
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-        python3 -m installer -d $PKG \
-                .dist/zipp*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
