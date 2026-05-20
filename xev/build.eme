@@ -6,7 +6,7 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xev
-version=1.2.6
+version=1.2.7
 release=1
 source="http://ftp.x.org/pub/individual/app/${name}-${version}.tar.xz"
 
