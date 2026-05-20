@@ -6,7 +6,7 @@ homepage="https://rsync.samba.org/"
 maintainer="Vylen Linux Team"
 
 name=rsync
-version=3.4.2
+version=3.4.3
 release=1
 
 source="https://download.samba.org/pub/${name}/${name}-${version}.tar.gz
