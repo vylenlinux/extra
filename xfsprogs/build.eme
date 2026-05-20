@@ -6,12 +6,12 @@ homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=xfsprogs
-version=7.0.0
+version=7.0.1
 release=1
 source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "${name}-${version}"
     make configure
 
