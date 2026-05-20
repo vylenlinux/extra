@@ -1,39 +1,47 @@
-description="Postscript interpreter "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Postscript interpreter"
 homepage="https://www.ghostscript.com/"
 maintainer="Vylen Linux Team"
 
 name=ghostscript
-version=10.07.0
-_vrsn=$(printf "$version" | sed 's/\.//g')
+version=10.07.1
 release=1
-source="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${_vrsn}/$name-$version.tar.xz
-	https://downloads.sourceforge.net/sourceforge/gs-fonts/$name-fonts-std-8.11.tar.gz"
+
+source="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$(printf "%s" "${version}" | sed 's/\.//g')/${name}-${version}.tar.xz
+    https://downloads.sourceforge.net/sourceforge/gs-fonts/${name}-fonts-std-8.11.tar.gz"
 
 build() {
-	cd $name-$version
-	
-	export CFLAGS="$CFLAGS -fPIC"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    export CFLAGS="${CFLAGS} -fPIC"
 
-	./configure --prefix=/usr \
-		--enable-cups \
-		--disable-gtk \
-		--with-drivers=ALL \
-		--with-ijs \
-		--with-fontpath=/usr/share/ghostscript/fonts:/usr/share/fonts
+    ./configure \
+        --prefix=/usr \
+        --enable-cups \
+        --disable-gtk \
+        --with-drivers=ALL \
+        --with-ijs \
+        --with-fontpath=/usr/share/ghostscript/fonts:/usr/share/fonts
 
-	make so all 
-	make DESTDIR=$PKG install-so install
+    make so all
+    make DESTDIR="${PKG}" install-so install
 
-	cd ijs
+    # shellcheck disable=SC2164
+    cd ijs
+    ./autogen.sh
 
-	./autogen.sh
-	./configure --prefix=/usr --enable-shared
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-shared
 
-	cp -r $SRC/fonts $PKG/usr/share/ghostscript
+    make
+    make DESTDIR="${PKG}" install
 
-	rm $PKG/usr/share/ghostscript/fonts/[CRT]*
-	rm $PKG/usr/bin/ijs_client_example \
-	   $PKG/usr/bin/ijs_server_example
+    cp -r "${SRC}/fonts" "${PKG}/usr/share/ghostscript/"
+
+    rm "${PKG}/usr/share/ghostscript/fonts"/[CRT]* \
+        "${PKG}/usr/bin/ijs_client_example" \
+        "${PKG}/usr/bin/ijs_server_example"
 }
