@@ -6,7 +6,7 @@ homepage="https://github.com/pypa/trove-classifiers"
 maintainer="Vylen Linux Team"
 
 name=python3-trove-classifiers
-version=2026.5.7.17
+version=2026.5.20.13
 release=1
 source="${name}-${version}.tar.gz::https://github.com/pypa/trove-classifiers/archive/refs/tags/${version}.tar.gz"
 
