@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team"
 
 name=nodejs
-version=26.1.0
+version=26.2.0
 release=1
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
 
@@ -28,11 +28,12 @@ build() {
     make DESTDIR="${PKG}" install
 
     # clean up
-    find $PKG -type f \( \
+    find "${PKG}" -type f \( \
         -name 'README.md' -o \
         -name 'AUTHORS.md' -o \
         -name 'INSTALL.md' -o \
         -name 'TODO.org' -o \
         -name 'ChangeLog' -o \
-        -name 'NEWS' \) -delete
+        -name 'NEWS' \
+    \) -delete
 }
