@@ -1,23 +1,30 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A library and support programs used for configuring and customizing font access"
 homepage="https://www.freedesktop.org/wiki/Software/fontconfig/"
 maintainer="Vylen Linux Team"
 
 name=fontconfig
-version=2.17.1
+version=2.18.0
 release=1
-source="https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/$version/$name-$version.tar.bz2"
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# make sure the system regenerates src/fcobjshash.h
-	rm -f src/fcobjshash.h
-	./autogen.sh
-	./configure --prefix=/usr        \
-	            --sysconfdir=/etc    \
-	            --localstatedir=/var \
-	            --disable-docs \
-		    --with-default-fonts=/usr/share/fonts
-	make
-	make DESTDIR=$PKG install
+    # make sure the system regenerates src/fcobjshash.h
+    rm -f src/fcobjshash.h
+    ./autogen.sh
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-docs \
+        --with-default-fonts=/usr/share/fonts
+
+    make
+    make DESTDIR="${PKG}" install
 }
