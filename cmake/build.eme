@@ -6,7 +6,7 @@ homepage="https://www.cmake.org/"
 maintainer="Vylen Linux Team"
 
 name=cmake
-version=4.3.2
+version=4.3.3
 release=1
 source="https://www.cmake.org/files/v${version%.*}/${name}-${version}.tar.gz"
 
@@ -25,11 +25,9 @@ build() {
         --no-system-cppdap   \
         --no-system-librhash \
         --system-libs \
-        -- -D Cmake_BUILD_LTO=ON \
-        -D BUILD_TESTING=OFF
+        -- -DCmake_BUILD_LTO=ON \
+        -DBUILD_TESTING=OFF
 
     make
     make DESTDIR="${PKG}" install
-
-    rm -r "${PKG}/usr/doc"
 }
