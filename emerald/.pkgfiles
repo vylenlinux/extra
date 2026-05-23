@@ -1,4 +1,4 @@
-emerald-20260513-1
+emerald-20260523-1
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/emerald.alias.epkgnew
 -rw-r--r-- root/root    etc/emerald.conf.epkgnew
@@ -28,4 +28,4 @@ drwxrwxrwx root/root    var/cache/emerald/sources/
 drwxrwxrwx root/root    var/cache/emerald/work/
 drwxr-xr-x root/root    var/lib/
 drwxr-xr-x root/root    var/lib/emerald/
-drwxr-xr-x root/root    var/lib/emerald/cbuild/
+drwxrwxrwx root/root    var/lib/emerald/cbuild/
