@@ -6,7 +6,7 @@ homepage="https://aomedia.googlesource.com/aom"
 maintainer="Vylen Linux Team"
 
 name=aom
-version=3.14.0
+version=3.14.1
 release=1
 source="${name}-${version}.tar.gz::https://storage.googleapis.com/aom-releases/libaom-${version}.tar.gz"
 
