@@ -1,18 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Open Source h264 codec implementation"
 homepage="https://www.openh264.org/"
 maintainer="Vylen Linux Team"
 
 name=openh264
 version=2.6.0
-release=1
-source="https://github.com/cisco/openh264/archive/v$version/$name-$version.tar.gz"
+release=2
+source="https://github.com/cisco/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  vylen-meson $name-$version build -D tests=disabled
+    vylen-meson "${name}-${version}" build -Dtests=disabled
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 
-  meson compile -C build
-  DESTDIR=$PKG meson install -C build
+    install -Dm755 build/codec/console/dec/h264dec -t "${PKG}/usr/bin/"
+    install -Dm755 build/codec/console/enc/h264enc -t "${PKG}/usr/bin/"
 
-  install -Dm755 build/codec/console/dec/h264dec $PKG/usr/bin/h264dec
-  install -Dm755 build/codec/console/enc/h264enc $PKG/usr/bin/h264enc
+    ln -s libopenh264.so.2.6.0 "${PKG}/usr/lib/libopenh264.so.8"
 }
