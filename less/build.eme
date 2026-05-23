@@ -1,16 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A text file viewer"
 homepage="https://www.greenwoodsoftware.com/less/"
 maintainer="Vylen Linux Team"
 
 name=less
-version=692
+version=702
 release=1
-source="$name-$version.tar.gz::http://greenwoodsoftware.com/$name/$name-$version-beta.tar.gz"
+source="${name}-${version}.tar.gz::http://greenwoodsoftware.com/${name}/${name}-${version}-beta.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr --sysconfdir=/etc
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib
+
+    make
+    make DESTDIR="${PKG}" install
 }
