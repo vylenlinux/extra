@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=emerald
 version=20260523
-release=1
+release=2
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 backup="etc/${name}.conf
