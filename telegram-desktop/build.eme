@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=telegram-desktop
 version=6.8.2
-release=1
+release=2
 
 td_commit=49b3bcbb6bfebf2ed44dd9f25102d2e1a94a58c4
 
