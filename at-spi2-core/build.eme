@@ -6,12 +6,12 @@ homepage="https://gitlab.gnome.org/GNOME/at-spi2-core"
 maintainer="Vylen Linux Team"
 
 name=at-spi2-core
-version=2.60.3
+version=2.60.4
 release=1
-source="${name}-${version}.tar.bz2::https://gitlab.gnome.org/GNOME/${name}/-/archive/AT_SPI2_CORE_2_54_0/${name}-AT_SPI2_CORE_2_54_0.tar.bz2"
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
-    vylen-meson "${name}-AT_SPI2_CORE_2_54_0" build
+    vylen-meson "${name}-${version}" build -Ddocs=false
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
