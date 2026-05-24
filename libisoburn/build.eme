@@ -6,13 +6,13 @@ homepage="https://dev.lovelyhq.com/libburnia"
 maintainer="Vylen Linux Team"
 
 name=libisoburn
-version=1.5.8
+version=1.5.8.pl02
 release=1
 source="http://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}-${version%.*}"
 
     ./configure \
         --prefix=/usr \
