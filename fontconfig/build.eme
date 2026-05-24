@@ -7,15 +7,16 @@ maintainer="Vylen Linux Team"
 
 name=fontconfig
 version=2.18.0
-release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
+release=2
+
+source="https://gitlab.com/freedesktop-sdk/mirrors/freedesktop/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz
+    c215e6e012f006ba810c80a06c0a2177ac7f033d.diff"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    # make sure the system regenerates src/fcobjshash.h
-    rm -f src/fcobjshash.h
+    patch -Np1 -i "${SRC}/c215e6e012f006ba810c80a06c0a2177ac7f033d.diff"
     ./autogen.sh
 
     ./configure \
