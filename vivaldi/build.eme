@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team"
 
 name=vivaldi
-version=8.0.4033.26
+version=8.0.4033.34
 release=1
 
 source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/vivaldi-stable-${version}-${release}.x86_64.rpm
@@ -38,7 +38,7 @@ build() {
         install -d "${PKG}/usr/share/icons/hicolor/${_res}x${_res}/apps"
 
         magick "${PKG}/opt/${name}/product_logo_256.png" -resize "${_res}x${_res}" "${PKG}/usr/share/icons/hicolor/${_res}x${_res}/apps/${name}.png"
-        chmod 0644 "${PKG}/usr/share/icons/hicolor/${_res}x${_res}/apps/${name}.png"
+        chmod 644 "${PKG}/usr/share/icons/hicolor/${_res}x${_res}/apps/${name}.png"
     done
 
     install -Dm644 "${PKG}/opt/${name}/product_logo_256.png" "${PKG}/usr/share/pixmaps/${name}.png"
