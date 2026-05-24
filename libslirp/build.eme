@@ -1,14 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A general purpose TCP-IP emulator"
 homepage="https://gitlab.freedesktop.org/slirp/libslirp"
 maintainer="Vylen Linux Team"
 
 name=libslirp
-version=4.9.1
+version=4.9.2
 release=1
-source="$name-$version.tar.gz::https://gitlab.freedesktop.org/slirp/libslirp/-/archive/v$version/$name-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/slirp/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
-        vylen-meson $name-v$version build 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-v${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
