@@ -6,7 +6,7 @@ homepage="https://archlinux.org/packages/extra/x86_64/libisofs/"
 maintainer="Vylen Linux Team"
 
 name=libisofs
-version=1.5.8.pl01
+version=1.5.8.pl02
 release=1
 source="https://files.libburnia-project.org/releases/${name}-${version}.tar.gz"
 
