@@ -1,4 +1,4 @@
-kbd-2.9.0-1
+kbd-2.10.0-1
 drwxr-xr-x root/root    bin/
 -rwxr-xr-x root/root    bin/dumpkeys
 -rwxr-xr-x root/root    bin/kbd_mode
@@ -385,6 +385,7 @@ drwxr-xr-x root/root    usr/share/keymaps/i386/dvorak/
 -rw-r--r-- root/root    usr/share/keymaps/i386/dvorak/dvorak.map.gz
 drwxr-xr-x root/root    usr/share/keymaps/i386/fgGIod/
 -rw-r--r-- root/root    usr/share/keymaps/i386/fgGIod/tr_f-latin5.map.gz
+-rw-r--r-- root/root    usr/share/keymaps/i386/fgGIod/tr_f-latin5.map.orig
 -rw-r--r-- root/root    usr/share/keymaps/i386/fgGIod/trf.map.gz
 drwxr-xr-x root/root    usr/share/keymaps/i386/hcesar/
 -rw-r--r-- root/root    usr/share/keymaps/i386/hcesar/hcesar.map.gz
@@ -476,6 +477,7 @@ drwxr-xr-x root/root    usr/share/keymaps/i386/qwerty/
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/lt.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/lv-tilde.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/lv.map.gz
+-rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/mac-no.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/mk-cp1251.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/mk-utf.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/mk.map.gz
@@ -528,6 +530,7 @@ drwxr-xr-x root/root    usr/share/keymaps/i386/qwerty/
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/sv-latin1.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/tj_alt-UTF8.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/tr_q-latin5.map.gz
+-rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/tr_q-latin5.map.orig
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/tralt.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/trf.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/i386/qwerty/trq.map.gz
@@ -630,36 +633,6 @@ drwxr-xr-x root/root    usr/share/keymaps/sun/
 -rw-r--r-- root/root    usr/share/keymaps/sun/sunt5-uk.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/sun/sunt5-us-cz.map.gz
 -rw-r--r-- root/root    usr/share/keymaps/sun/sunt6-uk.map.gz
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/chvt.1.gz
--rw-r--r-- root/root    usr/share/man/man1/deallocvt.1.gz
--rw-r--r-- root/root    usr/share/man/man1/dumpkeys.1.gz
--rw-r--r-- root/root    usr/share/man/man1/fgconsole.1.gz
--rw-r--r-- root/root    usr/share/man/man1/kbd_mode.1.gz
--rw-r--r-- root/root    usr/share/man/man1/kbdinfo.1.gz
--rw-r--r-- root/root    usr/share/man/man1/loadkeys.1.gz
--rw-r--r-- root/root    usr/share/man/man1/openvt.1.gz
--rw-r--r-- root/root    usr/share/man/man1/psfaddtable.1.gz
--rw-r--r-- root/root    usr/share/man/man1/psfgettable.1.gz
--rw-r--r-- root/root    usr/share/man/man1/psfstriptable.1.gz
--rw-r--r-- root/root    usr/share/man/man1/psfxtable.1.gz
--rw-r--r-- root/root    usr/share/man/man1/setleds.1.gz
--rw-r--r-- root/root    usr/share/man/man1/setmetamode.1.gz
--rw-r--r-- root/root    usr/share/man/man1/showkey.1.gz
--rw-r--r-- root/root    usr/share/man/man1/unicode_start.1.gz
--rw-r--r-- root/root    usr/share/man/man1/unicode_stop.1.gz
-drwxr-xr-x root/root    usr/share/man/man5/
--rw-r--r-- root/root    usr/share/man/man5/keymaps.5.gz
-drwxr-xr-x root/root    usr/share/man/man8/
--rw-r--r-- root/root    usr/share/man/man8/getkeycodes.8.gz
--rw-r--r-- root/root    usr/share/man/man8/kbdrate.8.gz
--rw-r--r-- root/root    usr/share/man/man8/loadunimap.8.gz
--rw-r--r-- root/root    usr/share/man/man8/mapscrn.8.gz
--rw-r--r-- root/root    usr/share/man/man8/setfont.8.gz
--rw-r--r-- root/root    usr/share/man/man8/setkeycodes.8.gz
--rw-r--r-- root/root    usr/share/man/man8/setvtrgb.8.gz
--rw-r--r-- root/root    usr/share/man/man8/showconsolefont.8.gz
 drwxr-xr-x root/root    usr/share/unimaps/
 -rw-r--r-- root/root    usr/share/unimaps/8859-1.a0-ff.uni
 -rw-r--r-- root/root    usr/share/unimaps/8859-10.a0-ff.uni
