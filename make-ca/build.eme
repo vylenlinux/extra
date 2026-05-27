@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Shell script that adapts a current version of certdata.txt, and prepares it for use as the system trust store"
 maintainer="Vylen Linux Team"
 homepage="https://github.com/lfs-book/make-ca" 
@@ -5,10 +8,12 @@ homepage="https://github.com/lfs-book/make-ca"
 name=make-ca
 version=1.16.1
 release=1
-source="https://github.com/lfs-book/make-ca/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/lfs-book/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	make DESTDIR=$PKG LIBEXECDIR=/usr/lib install
-	install -vdm755 "$PKG/etc/ssl/local"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make DESTDIR="${PKG}" LIBEXECDIR=/usr/lib install
+    install -dm755 "${PKG}/etc/ssl/local"
 }
