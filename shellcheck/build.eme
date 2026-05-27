@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Shell script analysis tool, without the 130MB haskell dependencies"
+maintainer="Vylen Linux Team"
+homepage="https://www.shellcheck.net/"
+
+name=shellcheck
+version=0.11.0
+release=1
+source="${name}-${version}.tar.xz::https://github.com/koalaman/${name}/releases/download/v${version}/${name}-v${version}.linux.x86_64.tar.xz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-v${version}"
+    install -Dm755 "${name}" -t "${PKG}/usr/bin/"
+}
