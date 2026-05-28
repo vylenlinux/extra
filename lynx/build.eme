@@ -1,24 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Text based web browser"
 homepage="https://lynx.invisible-island.net/"
 maintainer="Vylen Linux Team"
 
 name=lynx
-version=2.9.2
+version=2.9.3
 release=1
-source="https://invisible-mirror.net/archives/lynx/tarballs/${name}${version}.tar.bz2"
+source="${name}-${version}.tar.bz2::https://invisible-mirror.net/archives/${name}/tarballs/${name}${version}.tar.bz2"
 
 build() {
-	cd ${name}${version}
+    # shellcheck disable=SC2164
+    cd "${name}${version}"
 
-	./configure --prefix=/usr          \
-	            --sysconfdir=/etc/lynx \
-            	    --datadir=/usr/share/doc/$name \
-	            --with-zlib            \
-	            --with-bzlib           \
-	            --with-ssl             \
-	            --with-screen=ncursesw \
-	            --enable-locale-charset
-	make
-	make DESTDIR=$PKG install-full
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir="/etc/${name}" \
+        --datadir="/usr/share/doc/${name}" \
+        --with-zlib \
+        --with-bzlib \
+        --with-ssl \
+        --with-screen=ncursesw \
+        --enable-locale-charset
 
+    make
+    make DESTDIR="${PKG}" install-full
 }
