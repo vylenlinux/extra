@@ -6,8 +6,8 @@ homepage="https://www.nvidia.com/ "
 maintainer="Vylen Linux Team"
 
 name=nvidia-open
-version=595.71.05
-release=5
+version=595.80
+release=1
 
 source="${name}-${version}.run::http://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
     buildmodules-${name}.sh
@@ -16,15 +16,15 @@ source="${name}-${version}.run::http://us.download.nvidia.com/XFree86/Linux-x86_
 
 build() {
     install_lib() {
-        install -Dm0755 "${1}" "${PKG}/usr/lib/${2}/${1##*/}"
+        install -Dm755 "${1}" "${PKG}/usr/lib/${2}/${1##*/}"
     }
 
     install_bin() {
-        install -Dm0755 "${1}" "${PKG}/usr/bin/${2}/${1##*/}"
+        install -Dm755 "${1}" "${PKG}/usr/bin/${2}/${1##*/}"
     }
 
     install_file() {
-        install -Dm"${3:-0644}" "${1}" "${PKG}/${2}/${1##*/}"
+        install -Dm"${3:-644}" "${1}" "${PKG}/${2}/${1##*/}"
     }
 
     symlink_lib() {
@@ -182,7 +182,7 @@ build() {
         BUILT_MODULE_NAME[3]="nvidia-drm" \
         DEST_MODULE_LOCATION[3]="/kernel/drivers/video"' kernel/dkms.conf
 
-    install -dm 755 "${PKG}/usr/src"
+    install -dm755 "${PKG}/usr/src"
     cp -dr --no-preserve='ownership' kernel "${PKG}/usr/src/nvidia-${version}"
 
     # blacklist conflict module
@@ -215,10 +215,8 @@ build() {
     IGNORE_CC_MISMATCH=1 make module
 
     kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
-
-    install -d "${PKG}/lib/modules/${kernver}/extra"
     # shellcheck disable=SC2035
-    install -m0644 *.ko "${PKG}/lib/modules/${kernver}/extra/"
+    install -Dm644 *.ko -t "${PKG}/lib/modules/${kernver}/extra/"
 
     install -d "${PKG}/etc/revdep.d/"
     echo "/usr/lib/libnvidia-gtk2.so.${version}" > "${PKG}/etc/revdep.d/${name}.conf"
