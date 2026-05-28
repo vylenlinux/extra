@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="A shell tool for executing jobs in parallel"
+homepage="https://www.gnu.org/software/parallel/"
+maintainer="Vylen Linux Team"
+
+name=parallel
+version=20260422
+release=1
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
+}

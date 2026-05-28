@@ -1,0 +1,29 @@
+parallel-20260422-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/env_parallel
+-rwxr-xr-x root/root    usr/bin/env_parallel.ash
+-rwxr-xr-x root/root    usr/bin/env_parallel.bash
+-rwxr-xr-x root/root    usr/bin/env_parallel.csh
+-rwxr-xr-x root/root    usr/bin/env_parallel.dash
+-rwxr-xr-x root/root    usr/bin/env_parallel.fish
+-rwxr-xr-x root/root    usr/bin/env_parallel.ksh
+-rwxr-xr-x root/root    usr/bin/env_parallel.mksh
+-rwxr-xr-x root/root    usr/bin/env_parallel.pdksh
+-rwxr-xr-x root/root    usr/bin/env_parallel.sh
+-rwxr-xr-x root/root    usr/bin/env_parallel.tcsh
+-rwxr-xr-x root/root    usr/bin/env_parallel.zsh
+-rwxr-xr-x root/root    usr/bin/niceload
+-rwxr-xr-x root/root    usr/bin/parallel
+-rwxr-xr-x root/root    usr/bin/parcat
+-rwxr-xr-x root/root    usr/bin/parset
+-rwxr-xr-x root/root    usr/bin/parsort
+lrwxrwxrwx root/root    usr/bin/sem -> parallel
+-rwxr-xr-x root/root    usr/bin/sql
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/bash-completion/
+drwxr-xr-x root/root    usr/share/bash-completion/completions/
+-rw-r--r-- root/root    usr/share/bash-completion/completions/parallel
+drwxr-xr-x root/root    usr/share/zsh/
+drwxr-xr-x root/root    usr/share/zsh/site-functions/
+-rw-r--r-- root/root    usr/share/zsh/site-functions/_parallel
