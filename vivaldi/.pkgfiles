@@ -1,4 +1,4 @@
-vivaldi-8.0.4033.34-1
+vivaldi-8.0.4033.35-1
 drwxr-xr-x root/root    opt/
 drwxr-xr-x root/root    opt/vivaldi/
 -rw-r--r-- root/root    opt/vivaldi/LICENSE.html
@@ -543,7 +543,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-9c5a526c9743934d40101742adc3a025.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-9567491b38d101971077a1ceff057b7c.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
