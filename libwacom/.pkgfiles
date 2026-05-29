@@ -1,4 +1,4 @@
-libwacom-2.18.0-1
+libwacom-2.19.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/libwacom-list-devices
@@ -92,6 +92,7 @@ drwxr-xr-x root/root    usr/share/libwacom/
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m10k-pro.tablet
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m1220.tablet
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m1230.tablet
+-rw-r--r-- root/root    usr/share/libwacom/gaomon-m5v2.tablet
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m6.tablet
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m62022.tablet
 -rw-r--r-- root/root    usr/share/libwacom/gaomon-m7.tablet
@@ -134,6 +135,7 @@ drwxr-xr-x root/root    usr/share/libwacom/
 -rw-r--r-- root/root    usr/share/libwacom/huion-gc610-710.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-h1060p.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-h420.tablet
+-rw-r--r-- root/root    usr/share/libwacom/huion-h610-pro-v2.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-h610-pro.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-h640p.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-h950p-igg.tablet
@@ -149,6 +151,7 @@ drwxr-xr-x root/root    usr/share/libwacom/
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-2-s---h641p.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-dial-2.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-dial-q620m.tablet
+-rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-frego-s---l310.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-g10t.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-giano.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-inspiroy-h1161.tablet
@@ -192,6 +195,7 @@ drwxr-xr-x root/root    usr/share/libwacom/
 -rw-r--r-- root/root    usr/share/libwacom/huion-kamvas-pro-22-gt-221.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-kamvas-pro-24-gt2401.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-kamvas-pro-24.tablet
+-rw-r--r-- root/root    usr/share/libwacom/huion-kamvas-pro-27-gt2701.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-kamvas-rds-220.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-keydial-k20.tablet
 -rw-r--r-- root/root    usr/share/libwacom/huion-kizuna-hs952.tablet
@@ -235,6 +239,7 @@ drwxr-xr-x root/root    usr/share/libwacom/layouts/
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m10k-pro.svg
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m1220.svg
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m1230.svg
+-rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m5v2.svg
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m6.svg
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m62022.svg
 -rw-r--r-- root/root    usr/share/libwacom/layouts/gaomon-m7.svg
@@ -501,6 +506,7 @@ drwxr-xr-x root/root    usr/share/libwacom/layouts/
 -rw-r--r-- root/root    usr/share/libwacom/wacom-graphire4-6x8.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-hid-5334-pen.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-hid-5362.tablet
+-rw-r--r-- root/root    usr/share/libwacom/wacom-hid-53fd-pen.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-intuos-12x12.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-intuos-12x18.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-intuos-4x5.tablet
@@ -756,6 +762,7 @@ drwxr-xr-x root/root    usr/share/libwacom/layouts/
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-525c.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-525d.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-5269.tablet
+-rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-526a.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-526c.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-5276.tablet
 -rw-r--r-- root/root    usr/share/libwacom/wacom-isdv4-5277.tablet
@@ -822,6 +829,7 @@ drwxr-xr-x root/root    usr/share/libwacom/layouts/
 -rw-r--r-- root/root    usr/share/libwacom/wacom.stylus
 -rw-r--r-- root/root    usr/share/libwacom/waltop-batteryless-tablet.tablet
 -rw-r--r-- root/root    usr/share/libwacom/waltop-slim-tablet-12-1.tablet
+-rw-r--r-- root/root    usr/share/libwacom/xencelabs-pen-display-16.tablet
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-ack05-remote.tablet
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-artist-22r-pro.tablet
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-artist-24-pro.tablet
@@ -844,8 +852,3 @@ drwxr-xr-x root/root    usr/share/libwacom/layouts/
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-g640.tablet
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-innovator-16.tablet
 -rw-r--r-- root/root    usr/share/libwacom/xp-pen-star03.tablet
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/libwacom-list-devices.1.gz
--rw-r--r-- root/root    usr/share/man/man1/libwacom-list-local-devices.1.gz
--rw-r--r-- root/root    usr/share/man/man1/libwacom-show-stylus.1.gz
