@@ -6,7 +6,7 @@ homepage="https://dri.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=libdrm
-version=2.4.133
+version=2.4.134
 release=1
 source="https://dri.freedesktop.org/${name}/${name}-${version}.tar.xz"
 
