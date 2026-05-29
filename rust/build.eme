@@ -6,18 +6,17 @@ homepage="https://www.rust-lang.org/"
 maintainer="Vylen Linux Team"
 
 name=rust
-version=1.95.0
+version=1.96.0
 release=1
 
-_date=2026-03-05
-_rust=1.94.0
-_cargo="${_rust}"
+_date=2026-04-16
+_rust=1.95.0
 _triplet=x86_64-unknown-linux-gnu
 
 source="https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
     https://static.rust-lang.org/dist/${_date}/rust-std-${_rust}-${_triplet}.tar.xz
     https://static.rust-lang.org/dist/${_date}/rustc-${_rust}-${_triplet}.tar.xz
-    https://static.rust-lang.org/dist/${_date}/cargo-${_cargo}-${_triplet}.tar.xz
+    https://static.rust-lang.org/dist/${_date}/cargo-${_rust}-${_triplet}.tar.xz
     0001-bootstrap-Change-libexec-dir.patch
     0002-bootstrap-Change-bash-completion-dir.patch
     0003-bootstrap-Workaround-for-system-stage0.patch
@@ -28,7 +27,7 @@ source="https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
 
 noextract="rust-std-${_rust}-${_triplet}.tar.xz
     rustc-${_rust}-${_triplet}.tar.xz
-    cargo-${_cargo}-${_triplet}.tar.xz"
+    cargo-${_rust}-${_triplet}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -56,7 +55,7 @@ build() {
 
     mkdir -p "build/cache/${_date}"
 
-    for tarball in "rust-std-${_rust}-${_triplet}.tar.xz" "rustc-${_rust}-${_triplet}.tar.xz" "cargo-${_cargo}-${_triplet}.tar.xz"; do
+    for tarball in "rust-std-${_rust}-${_triplet}.tar.xz" "rustc-${_rust}-${_triplet}.tar.xz" "cargo-${_rust}-${_triplet}.tar.xz"; do
         cp "${SRC}/${tarball}" "build/cache/${_date}/"
     done
 
@@ -72,7 +71,8 @@ build() {
     python3 ./x.py build
     DESTDIR="${PKG}" python3 ./x.py install -v
 
-    unset LIBSSH2_SYS_USE_PKG_CONFIG LIBSQLITE3_SYS_USE_PKG_CONFIG
+    unset LIBSSH2_SYS_USE_PKG_CONFIG \
+        LIBSQLITE3_SYS_USE_PKG_CONFIG
 
     # shellcheck disable=SC2115
     rm -rf "${PKG}/usr/lib/rustlib/components" \
