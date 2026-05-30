@@ -1,4 +1,4 @@
-lxqt-wayland-session-0.4.0-1
+lxqt-wayland-session-0.4.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/lxqt-qdbus
@@ -20,7 +20,7 @@ drwxr-xr-x root/root    usr/share/lxqt/wayland/labwc/
 -rw-r--r-- root/root    usr/share/lxqt/wayland/labwc/rc.xml
 -rw-r--r-- root/root    usr/share/lxqt/wayland/labwc/themerc
 -rw-r--r-- root/root    usr/share/lxqt/wayland/labwc/themerc-override
--rw-r--r-- root/root    usr/share/lxqt/wayland/lxqt-hyprland.conf
+-rw-r--r-- root/root    usr/share/lxqt/wayland/lxqt-hyprland.lua
 -rw-r--r-- root/root    usr/share/lxqt/wayland/lxqt-niri.kdl
 -rw-r--r-- root/root    usr/share/lxqt/wayland/lxqt-niri.kdl.full
 -rw-r--r-- root/root    usr/share/lxqt/wayland/lxqt-river-init
