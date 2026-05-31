@@ -6,8 +6,8 @@ homepage="https://gitlab.com/vylen/emerald"
 maintainer="Vylen Linux Team"
 
 name=emerald
-version=20260523
-release=2
+version=20260531
+release=1
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 backup="etc/${name}.conf
