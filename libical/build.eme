@@ -6,7 +6,7 @@ homepage="https://archlinux.org/packages/extra/x86_64/libical/"
 maintainer="Vylen Linux Team"
 
 name=libical
-version=4.0.1
+version=4.0.2
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
@@ -19,7 +19,7 @@ build() {
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DLIBICAL_JAVA_BINDINGS=OFF \
-        -DICAL_BUILD_DOCS=OFF \
+        -DLIBICAL_BUILD_DOCS=OFF \
         -DLIBICAL_GLIB_BUILD_DOCS=OFF \
         -Wno-dev
 
