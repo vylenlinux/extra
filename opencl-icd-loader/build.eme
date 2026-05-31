@@ -1,22 +1,26 @@
-description="OpenCL Installable Client Driver (ICD) Loader "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="OpenCL Installable Client Driver (ICD) Loader"
 homepage="https://www.khronos.org/opencl/"
 maintainer="Vylen Linux Team"
 
 name=opencl-icd-loader
-version=2025.07.22
+version=2026.05.29
 release=1
-source="$name-$version.tar.gz::https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-	cmake -S OpenCL-ICD-Loader-$version -B build \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DOPTION=ON/OFF \
-		-Wno-dev 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "OpenCL-ICD-Loader-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DOPTION=ON/OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
