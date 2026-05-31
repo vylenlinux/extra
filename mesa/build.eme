@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=mesa
 version=26.1.1
-release=1
+release=2
 
 ### BEGIN Rust crates
 rust_crates="paste 1.0.14
@@ -49,12 +49,12 @@ build() {
     # CBUILD: enable o disable CBUILD_MESA_OPTS, source CBUILD_MESA_OPTS from mesa.opt file
     CBUILD_MESA_OPTS="-Dshared-llvm=enabled \
         -Dglx=dri \
-        -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915 \
+        -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
         -Dplatforms=${OPT_MESA_PLATFORMS} \
         -Dgallium-mediafoundation=disabled \
         -Dintel-rt=enabled \
         -Dgallium-rusticl=true \
-        -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau \
+        -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau,swrast \
         ${OPT_MESA_VAAPI}"
 
     cbuild_options
