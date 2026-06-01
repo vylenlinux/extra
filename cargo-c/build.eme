@@ -6,7 +6,7 @@ homepage="https://github.com/lu-zero/cargo-c/"
 maintainer="Vylen Linux Team"
 
 name=cargo-c
-version=0.10.22
+version=0.10.23
 release=1
 
 source="https://github.com/lu-zero/${name}/archive/v${version}/${name}-${version}.tar.gz
@@ -18,8 +18,15 @@ build() {
 
     ln -sf "${SRC}/${name}-${version}.Cargo.lock" "${name}-${version}/Cargo.lock"
 
-    cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')" --manifest-path="${name}-${version}/Cargo.toml"
-    cargo build --release --frozen --manifest-path="${name}-${version}/Cargo.toml"
+    cargo fetch \
+        --locked \
+        --target "$(rustc -vV | sed -n 's/host: //p')" \
+        --manifest-path="${name}-${version}/Cargo.toml"
+
+    cargo build \
+        --release \
+        --frozen \
+        --manifest-path="${name}-${version}/Cargo.toml"
 
     find "${name}-${version}/target/release" -maxdepth 1 -type f -executable -exec install -Dm755 -t "${PKG}/usr/bin" {} +
 }
