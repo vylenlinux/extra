@@ -6,7 +6,7 @@ homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team"
 
 name=libvirt
-version=12.3.0
+version=12.4.0
 release=1
 
 backup="etc/libvirt/libvirtd.conf
@@ -40,15 +40,15 @@ build() {
         -Dstorage_vstorage=disabled \
         -Ddtrace=disabled \
         -Dnumad=disabled \
-        -Dstorage_zfs=disabled\
+        -Dstorage_zfs=disabled \
         -Dstorage_rbd=disabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm0644 "${SRC}/libvirtd.conf" -t "${PKG}/etc/libvirt/"
-    install -Dm0644 "${SRC}/qemu.conf"     -t "${PKG}/etc/libvirt/"
+    install -Dm644 "${SRC}/libvirtd.conf" -t "${PKG}/etc/libvirt/"
+    install -Dm644 "${SRC}/qemu.conf"     -t "${PKG}/etc/libvirt/"
 
-    rm -fr "${PKG}/run"
+    rm -rf "${PKG}/run"
     do_service libvirt-guests libvirtd virtlockd virtlogd
 }
