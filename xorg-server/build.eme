@@ -6,7 +6,7 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xorg-server
-version=21.1.22
+version=21.1.23
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz"
 
@@ -21,6 +21,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -m 755 -d "${PKG}/etc/X11/xorg.conf.d"
+    install -dm755 "${PKG}/etc/X11/xorg.conf.d"
     echo "needs_root_rights = yes" >> "${PKG}/etc/X11/Xwrapper.config"
 }
