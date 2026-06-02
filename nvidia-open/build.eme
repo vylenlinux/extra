@@ -94,7 +94,6 @@ build() {
     symlink_lib /usr/lib/libnvidia-ptxjitcompiler.so
 
     # OpenCL libraries and config
-    # install_lib libOpenCL.so.1.0.0
     install_lib "libnvidia-opencl.so.${version}"
     symlink_lib /usr/lib/libnvidia-opencl.so.1
     symlink_lib /usr/lib/libnvidia-opencl.so
@@ -149,7 +148,7 @@ build() {
     install_lib "libnvidia-fbc.so.${version}"
 
     # OptiX ray tracing engine
-    install -Dm755 nvoptix.bin "${PKG}/usr/share/nvidia/nvoptix.bin"
+    install -Dm755 nvoptix.bin -t "${PKG}/usr/share/nvidia/"
     install_lib "libnvoptix.so.${version}"
     symlink_lib /usr/lib/libnvoptix.so.1
     symlink_lib /usr/lib/libnvoptix.so
@@ -162,7 +161,10 @@ build() {
     install_file "nvidia-application-profiles-${version}-key-documentation" usr/share/nvidia/
 
     # desktop file and icon
-    sed -i -e 's,__UTILS_PATH__,/usr/bin,' -e 's,__PIXMAP_PATH__,/usr/share/pixmaps,' nvidia-settings.desktop
+    sed -i \
+        -e 's,__UTILS_PATH__,/usr/bin,' \
+        -e 's,__PIXMAP_PATH__,/usr/share/pixmaps,' nvidia-settings.desktop
+
     install_file nvidia-settings.desktop usr/share/applications/
     install_file nvidia-settings.png usr/share/pixmaps/
 
@@ -209,14 +211,6 @@ build() {
     install_lib "libnvidia-nvvm.so.${version}"
     symlink_lib /usr/lib/libnvidia-nvvm.so.1
     symlink_lib /usr/lib/libnvidia-nvvm.so
-
-    # shellcheck disable=SC2164
-    cd kernel
-    IGNORE_CC_MISMATCH=1 make module
-
-    kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
-    # shellcheck disable=SC2035
-    install -Dm644 *.ko -t "${PKG}/lib/modules/${kernver}/extra/"
 
     install -d "${PKG}/etc/revdep.d/"
     echo "/usr/lib/libnvidia-gtk2.so.${version}" > "${PKG}/etc/revdep.d/${name}.conf"
