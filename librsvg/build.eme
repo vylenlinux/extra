@@ -6,7 +6,7 @@ homepage="https://wiki.gnome.org/Projects/LibRsvg"
 maintainer="Vylen Linux Team"
 
 name=librsvg
-version=2.62.2
+version=2.62.3
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
