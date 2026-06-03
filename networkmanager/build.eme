@@ -6,7 +6,7 @@ homepage="https://networkmanager.dev/"
 maintainer="Vylen Linux Team"
 
 name=networkmanager
-version=1.56.0
+version=1.56.1
 release=1
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz
@@ -28,6 +28,7 @@ build() {
         -Dsystemdsystemunitdir=no \
         -Dsystemd_journal=false \
         -Dmodify_system=true \
+        -Dpolkit_noauth_group=wheel \
         -Ddocs=false \
         -Dqt=false \
         -Dtests=no \
