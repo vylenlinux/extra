@@ -1,15 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Distribution utilities"
 homepage="https://github.com/pypa/distlib"
 maintainer="Vylen Linux Team"
 
 name=python3-distlib
-version=0.4.0
+version=0.4.1
 release=1
-source="$name-$version.tar.gz::https://github.com/pypa/distlib/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/pypa/distlib/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
-	gpep517 build-wheel --wheel-dir .dist --output-fd 3 3>&1 >&2
-	python3 -m installer -d "$PKG" .dist/distlib*.whl
-	rm "$PKG"/usr/lib/python3*/site-packages/distlib/*.exe
+    # shellcheck disable=SC2164
+    cd "distlib-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+
+    python_version="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')"
+    rm "${PKG}/usr/lib/python${python_version}/site-packages/distlib"/*.exe
 }
