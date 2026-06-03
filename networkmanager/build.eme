@@ -15,25 +15,23 @@ source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name
 backup="etc/NetworkManager/NetworkManager.conf"
 
 build() {
-    emerald isinstalled modemmanager && OPT='-Dmodem_manager=true' || OPT='-Dmodem_manager=false'
-
     vylen-meson "NetworkManager-${version}" build \
+        -Ddocs=false \
         -Dlibaudit=no \
+        -Dmodem_manager="$(emerald isinstalled modemmanager && printf "true" || printf "false")" \
+        -Dmodify_system=true \
         -Dnmtui=true \
         -Dovs=false \
-        -Dppp=false \
-        -Dselinux=false \
-        -Dudev_dir=/lib/udev \
-        -Dsession_tracking=no \
-        -Dsystemdsystemunitdir=no \
-        -Dsystemd_journal=false \
-        -Dmodify_system=true \
         -Dpolkit_noauth_group=wheel \
-        -Ddocs=false \
+        -Dppp=false \
         -Dqt=false \
+        -Dselinux=false \
+        -Dsession_tracking=no \
+        -Dsystemd_journal=false \
+        -Dsystemdsystemunitdir=no \
         -Dtests=no \
-        -Dvapi=false \
-        "${OPT}"
+        -Dudev_dir=/lib/udev \
+        -Dvapi=false
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
