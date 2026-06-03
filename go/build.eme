@@ -6,7 +6,7 @@ homepage="https://golang.org/"
 maintainer="Vylen Linux Team"
 
 name=go
-version=1.26.3
+version=1.26.4
 release=1
 
 source="${name}-${version}.src.tar.gz::https://golang.org/dl/${name}${version}.src.tar.gz
@@ -33,7 +33,12 @@ build() {
     ln -s /usr/lib/go/bin/gofmt "${PKG}/usr/bin/"
 
     rm -rf "${SRC}/go/pkg/obj/go-build"/*
-    find "${PKG}" \( -name "README*" -o -name "AUTHORS" -o -name "TODO" \) -delete
+
+    find "${PKG}" \( \
+        -name "README*" -o \
+        -name "AUTHORS" -o \
+        -name "TODO" \
+    \) -delete
 
     rm "${PKG}/usr/lib/go/src"/*.bat
 }
