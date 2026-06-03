@@ -6,7 +6,7 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team"
 
 name=php
-version=8.5.6
+version=8.5.7
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
@@ -63,9 +63,10 @@ build() {
         --with-zip=shared \
         --with-zlib"
 
+    # shellcheck disable=SC2086
     EXTENSION_DIR=/usr/lib/php/extensions ./configure \
-        "${PHP_CONFIG}" \
-        "${PHP_SHARED}" \
+        ${PHP_CONFIG} \
+        ${PHP_SHARED} \
         --enable-cli \
         --disable-cgi \
         --with-readline
@@ -74,11 +75,11 @@ build() {
     make INSTALL_ROOT="${PKG}" install
 
     ln -sf phar.phar "${PKG}/usr/bin/phar"
-
     sed -i '/^extension_dir/s|=.*$|= "/usr/lib/php/extensions"|' php.ini-*
 
     install -d "${PKG}/etc/php/conf.d"
-    install -m 644 php.ini-* "${PKG}/etc/php"
+    install -m644 php.ini-* "${PKG}/etc/php"
 
-    rm -fr "${PKG}/run" "${PKG}/var/run"
+    rm -rf "${PKG}/run" \
+        "${PKG}/var/run"
 }
