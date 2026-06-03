@@ -6,7 +6,7 @@ homepage="https://github.com/intel/media-driver/"
 maintainer="Vylen Linux Team"
 
 name=intel-media-driver
-version=26.2.0
+version=26.2.1
 release=1
 source="https://github.com/intel/media-driver/archive/${name%-*}-${version}.tar.gz"
 
