@@ -1,6 +1,6 @@
 libarchive
 libcap
-libxml
+libxml2
 ostree
 json-glib
 libseccomp
