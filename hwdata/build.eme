@@ -6,7 +6,7 @@ homepage="https://github.com/vcrhonek/hwdata"
 maintainer="Vylen Linux Team"
 
 name=hwdata
-version=0.407
+version=0.408
 release=1
 source="https://github.com/vcrhonek/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
