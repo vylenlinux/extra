@@ -1,20 +1,20 @@
-ksmtp-26.04.1-1
+ksmtp-26.04.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KPim6/
 drwxr-xr-x root/root    usr/include/KPim6/KSMTP/
-drwxr-xr-x root/root    usr/include/KPim6/KSMTP/ksmtp/
 drwxr-xr-x root/root    usr/include/KPim6/KSMTP/KSMTP/
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/Job
+-rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/LoginJob
+-rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/SendJob
+-rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/Session
+-rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/SessionUiProxy
+drwxr-xr-x root/root    usr/include/KPim6/KSMTP/ksmtp/
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/job.h
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/ksmtp_export.h
--rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/LoginJob
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/loginjob.h
--rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/SendJob
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/sendjob.h
--rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/Session
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/session.h
--rw-r--r-- root/root    usr/include/KPim6/KSMTP/KSMTP/SessionUiProxy
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp/sessionuiproxy.h
 -rw-r--r-- root/root    usr/include/KPim6/KSMTP/ksmtp_version.h
 drwxr-xr-x root/root    usr/lib/
@@ -22,11 +22,11 @@ drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KPim6SMTP/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPTargets-release.cmake
--rwxr-xr-x root/root    usr/lib/libKPim6SMTP.so.6.7.1
-lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so.6 -> libKPim6SMTP.so.6.7.1
+-rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so -> libKPim6SMTP.so.6
+lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so.6 -> libKPim6SMTP.so.6.7.2
+-rwxr-xr-x root/root    usr/lib/libKPim6SMTP.so.6.7.2
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/ksmtp.categories

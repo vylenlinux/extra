@@ -1,18 +1,18 @@
-kunifiedpush-26.04.1-2
+kunifiedpush-26.04.2-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
-drwxr-xr-x root/root    etc/xdg/autostart/
--rw-r--r-- root/root    etc/xdg/autostart/org.kde.kunifiedpush-distributor.desktop
 drwxr-xr-x root/root    etc/xdg/KDE/
 -rw-r--r-- root/root    etc/xdg/KDE/kunifiedpush-distributor.conf
+drwxr-xr-x root/root    etc/xdg/autostart/
+-rw-r--r-- root/root    etc/xdg/autostart/org.kde.kunifiedpush-distributor.desktop
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/kunifiedpush-distributor
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KUnifiedPush/
-drwxr-xr-x root/root    usr/include/KUnifiedPush/kunifiedpush/
 drwxr-xr-x root/root    usr/include/KUnifiedPush/KUnifiedPush/
 -rw-r--r-- root/root    usr/include/KUnifiedPush/KUnifiedPush/Connector
+drwxr-xr-x root/root    usr/include/KUnifiedPush/kunifiedpush/
 -rw-r--r-- root/root    usr/include/KUnifiedPush/kunifiedpush/connector.h
 -rw-r--r-- root/root    usr/include/KUnifiedPush/kunifiedpush/kunifiedpush_export.h
 -rw-r--r-- root/root    usr/include/KUnifiedPush/kunifiedpush_version.h
@@ -21,11 +21,11 @@ drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KUnifiedPush/
 -rw-r--r-- root/root    usr/lib/cmake/KUnifiedPush/KUnifiedPushConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KUnifiedPush/KUnifiedPushConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KUnifiedPush/KUnifiedPushTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KUnifiedPush/KUnifiedPushTargets-release.cmake
-lrwxrwxrwx root/root    usr/lib/libKUnifiedPush.so.1 -> libKUnifiedPush.so.26.04.1
--rwxr-xr-x root/root    usr/lib/libKUnifiedPush.so.26.04.1
+-rw-r--r-- root/root    usr/lib/cmake/KUnifiedPush/KUnifiedPushTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKUnifiedPush.so -> libKUnifiedPush.so.1
+lrwxrwxrwx root/root    usr/lib/libKUnifiedPush.so.1 -> libKUnifiedPush.so.26.04.2
+-rwxr-xr-x root/root    usr/lib/libKUnifiedPush.so.26.04.2
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/

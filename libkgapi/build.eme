@@ -6,7 +6,7 @@ homepage="https://kde.org/"
 maintainer="Vylen Linux Team"
 
 name=libkgapi
-version=26.04.1
+version=26.04.2
 release=1
 source="http://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 

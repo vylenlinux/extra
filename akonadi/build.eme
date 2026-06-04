@@ -3,7 +3,7 @@ homepage="https://userbase.kde.org/Akonadi"
 maintainer="Vylen Linux Team"
 
 name=akonadi
-version=26.04.1
+version=26.04.2
 release=1
 source="http://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 

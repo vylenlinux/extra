@@ -1,4 +1,4 @@
-libktorrent-26.04.1-1
+libktorrent-26.04.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
@@ -19,15 +19,15 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/dht/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/announcersp.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/announcetask.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/database.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/dhtbase.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/dht.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/dhtbase.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/dhtpeersource.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/findnodereq.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/findnodersp.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/getpeersreq.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/getpeersrsp.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/kbucketentry.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/kbucket.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/kbucketentry.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/kbuckettable.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/kclosestnodessearch.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/key.h
@@ -37,15 +37,15 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/dht/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/pingreq.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/pingrsp.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpccall.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpcmsgfactory.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpcmsg.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpcmsgfactory.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpcserver.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/rpcserverinterface.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/task.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/dht/taskmanager.h
 drwxr-xr-x root/root    usr/include/KF6/libktorrent/diskio/
--rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/cachefile.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/cache.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/cachefile.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/chunk.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/chunkmanager.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/diskio/deletedatafilesjob.h
@@ -105,9 +105,9 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/net/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/portlist.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/reverseresolver.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/serversocket.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socket.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socketdevice.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socketgroup.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socket.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socketmonitor.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/socks.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/speed.h
@@ -117,15 +117,15 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/net/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/net/wakeuppipe.h
 drwxr-xr-x root/root    usr/include/KF6/libktorrent/peer/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/accessmanager.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/authenticatebase.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/authenticate.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/authenticatebase.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/authenticationmonitor.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/chunkcounter.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/connectionlimit.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/packetreader.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peer.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peerconnector.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peerdownloader.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peer.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peerid.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peermanager.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/peer/peerprotocolextension.h
@@ -144,11 +144,11 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/torrent/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/server.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/statsfile.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/timeestimator.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrent.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrentcontrol.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrentcreator.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrentfile.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrentfilestream.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrent.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/torrentstats.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/torrent/uploader.h
 drwxr-xr-x root/root    usr/include/KF6/libktorrent/tracker/
@@ -180,8 +180,8 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/util/
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/pipe.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/ptrmap.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/resourcemanager.h
--rw-r--r-- root/root    usr/include/KF6/libktorrent/util/sha1hashgen.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/sha1hash.h
+-rw-r--r-- root/root    usr/include/KF6/libktorrent/util/sha1hashgen.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/signalcatcher.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/timer.h
 -rw-r--r-- root/root    usr/include/KF6/libktorrent/util/urlencoder.h
@@ -203,13 +203,13 @@ drwxr-xr-x root/root    usr/include/KF6/libktorrent/utp/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KTorrent6/
--rw-r--r-- root/root    usr/lib/cmake/KTorrent6/FindLibGcrypt.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KTorrent6/FindLibGMP.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KTorrent6/FindLibGcrypt.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KTorrent6/KTorrent6Config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KTorrent6/KTorrent6ConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KTorrent6/KTorrent6Targets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KTorrent6/KTorrent6Targets-release.cmake
--rwxr-xr-x root/root    usr/lib/libKTorrent6.so.26.04.1
-lrwxrwxrwx root/root    usr/lib/libKTorrent6.so.6 -> libKTorrent6.so.26.04.1
+-rw-r--r-- root/root    usr/lib/cmake/KTorrent6/KTorrent6Targets.cmake
 lrwxrwxrwx root/root    usr/lib/libKTorrent6.so -> libKTorrent6.so.6
+-rwxr-xr-x root/root    usr/lib/libKTorrent6.so.26.04.2
+lrwxrwxrwx root/root    usr/lib/libKTorrent6.so.6 -> libKTorrent6.so.26.04.2
 drwxr-xr-x root/root    usr/share/

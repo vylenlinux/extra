@@ -1,4 +1,4 @@
-kpmcore-26.04.1-1
+kpmcore-26.04.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/kpmcore/
@@ -13,8 +13,8 @@ drwxr-xr-x root/root    usr/include/kpmcore/core/
 -rw-r--r-- root/root    usr/include/kpmcore/core/lvmdevice.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/operationrunner.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/operationstack.h
--rw-r--r-- root/root    usr/include/kpmcore/core/partitionalignment.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/partition.h
+-rw-r--r-- root/root    usr/include/kpmcore/core/partitionalignment.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/partitionnode.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/partitionrole.h
 -rw-r--r-- root/root    usr/include/kpmcore/core/partitiontable.h
@@ -35,8 +35,8 @@ drwxr-xr-x root/root    usr/include/kpmcore/fs/
 -rw-r--r-- root/root    usr/include/kpmcore/fs/fat12.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/fat16.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/fat32.h
--rw-r--r-- root/root    usr/include/kpmcore/fs/filesystemfactory.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/filesystem.h
+-rw-r--r-- root/root    usr/include/kpmcore/fs/filesystemfactory.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/freebsdswap.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/hfs.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/hfsplus.h
@@ -45,8 +45,8 @@ drwxr-xr-x root/root    usr/include/kpmcore/fs/
 -rw-r--r-- root/root    usr/include/kpmcore/fs/jfs.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/linuxraidmember.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/linuxswap.h
--rw-r--r-- root/root    usr/include/kpmcore/fs/luks2.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/luks.h
+-rw-r--r-- root/root    usr/include/kpmcore/fs/luks2.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/lvm2_pv.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/minix.h
 -rw-r--r-- root/root    usr/include/kpmcore/fs/nilfs2.h
@@ -62,8 +62,8 @@ drwxr-xr-x root/root    usr/include/kpmcore/fs/
 -rw-r--r-- root/root    usr/include/kpmcore/fs/zfs.h
 drwxr-xr-x root/root    usr/include/kpmcore/gui/
 -rw-r--r-- root/root    usr/include/kpmcore/gui/partresizerwidget.h
--rw-r--r-- root/root    usr/include/kpmcore/gui/partwidgetbase.h
 -rw-r--r-- root/root    usr/include/kpmcore/gui/partwidget.h
+-rw-r--r-- root/root    usr/include/kpmcore/gui/partwidgetbase.h
 drwxr-xr-x root/root    usr/include/kpmcore/jobs/
 -rw-r--r-- root/root    usr/include/kpmcore/jobs/job.h
 drwxr-xr-x root/root    usr/include/kpmcore/ops/
@@ -97,12 +97,12 @@ drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KPMcore/
 -rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreTargets.cmake
 -rwxr-xr-x root/root    usr/lib/kpmcore_externalcommand
-lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.04.1
--rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.04.1
 lrwxrwxrwx root/root    usr/lib/libkpmcore.so -> libkpmcore.so.13
+lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.04.2
+-rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.04.2
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kpmcore/
@@ -110,10 +110,10 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/kpmcore/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kpmcore/pmsfdiskbackendplugin.so
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
-drwxr-xr-x root/root    usr/share/dbus-1/system.d/
--rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kpmcore.helperinterface.conf
 drwxr-xr-x root/root    usr/share/dbus-1/system-services/
 -rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.kpmcore.helperinterface.service
+drwxr-xr-x root/root    usr/share/dbus-1/system.d/
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kpmcore.helperinterface.conf
 drwxr-xr-x root/root    usr/share/polkit-1/
 drwxr-xr-x root/root    usr/share/polkit-1/actions/
 -rw-r--r-- root/root    usr/share/polkit-1/actions/org.kde.kpmcore.externalcommand.policy

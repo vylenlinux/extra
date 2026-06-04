@@ -1,44 +1,44 @@
-kaccounts-integration-26.04.1-1
+kaccounts-integration-26.04.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KAccounts6/
-drwxr-xr-x root/root    usr/include/KAccounts6/kaccounts/
 drwxr-xr-x root/root    usr/include/KAccounts6/KAccounts/
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/AccountServiceToggleJob
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/accountservicetogglejob.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/AccountsModel
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/accountsmodel.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/ChangeAccountDisplayNameJob
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/changeaccountdisplaynamejob.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/Core
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/core.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/CreateAccountJob
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/createaccountjob.h
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts_export.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/GetCredentialsJob
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/getcredentialsjob.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/KAccountsDPlugin
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/kaccountsdplugin.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/KAccountsUiPlugin
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/kaccountsuiplugin.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/ProvidersModel
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/providersmodel.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/RemoveAccountJob
--rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/removeaccountjob.h
 -rw-r--r-- root/root    usr/include/KAccounts6/KAccounts/ServicesModel
+drwxr-xr-x root/root    usr/include/KAccounts6/kaccounts/
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/accountservicetogglejob.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/accountsmodel.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/changeaccountdisplaynamejob.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/core.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/createaccountjob.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/getcredentialsjob.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/kaccountsdplugin.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/kaccountsuiplugin.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/providersmodel.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/removeaccountjob.h
 -rw-r--r-- root/root    usr/include/KAccounts6/kaccounts/servicesmodel.h
+-rw-r--r-- root/root    usr/include/KAccounts6/kaccounts_export.h
 -rw-r--r-- root/root    usr/include/KAccounts6/kaccounts_version.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KAccounts6/
 -rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccounts6Config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccounts6ConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccounts6Targets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccounts6Targets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccounts6Targets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KAccounts6/KAccountsMacros.cmake
--rwxr-xr-x root/root    usr/lib/libkaccounts6.so.26.04.1
-lrwxrwxrwx root/root    usr/lib/libkaccounts6.so.2 -> libkaccounts6.so.26.04.1
 lrwxrwxrwx root/root    usr/lib/libkaccounts6.so -> libkaccounts6.so.2
+lrwxrwxrwx root/root    usr/lib/libkaccounts6.so.2 -> libkaccounts6.so.26.04.2
+-rwxr-xr-x root/root    usr/lib/libkaccounts6.so.26.04.2
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kaccounts/

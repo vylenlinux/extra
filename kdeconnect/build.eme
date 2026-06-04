@@ -6,7 +6,7 @@ homepage="https://kdeconnect.kde.org/"
 maintainer="Vylen Linux Team"
 
 name=kdeconnect
-version=26.04.1
+version=26.04.2
 release=1
 source="${name}-${version}.tar.xz::https://download.kde.org/stable/release-service/${version}/src/${name}-kde-${version}.tar.xz"
 
