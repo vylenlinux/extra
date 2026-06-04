@@ -6,7 +6,7 @@ homepage="https://www.chezmoi.io/"
 maintainer="Vylen Linux Team"
 
 name=chezmoi
-version=2.70.4
+version=2.70.5
 release=1
 source="${name}-${version}.tar.gz::https://github.com/twpayne/${name}/archive/v${version}.tar.gz"
 
@@ -19,19 +19,20 @@ build() {
     export CGO_CPPFLAGS="${CPPFLAGS}"
     export CGO_CXXFLAGS="${CXXFLAGS}"
 
+    # shellcheck disable=SC2086
     go build \
         -buildmode=pie \
         -mod=readonly \
         -tags noupgrade \
         -ldflags "-compressdwarf=false \
-            -X github.com/twpayne/chezmoi/cmd.DocsDir=/usr/share/doc/${name} \
+            -X github.com/twpayne/${name}/cmd.DocsDir=/usr/share/doc/${name} \
             -X main.version=${version} \
-            -X main.date=$(date -u +'%Y-%m-%dT%H:%M:%SZ' --date=@$SOURCE_DATE_EPOCH) \
+            -X main.date=$(date -u +'%Y-%m-%dT%H:%M:%SZ' --date=@${SOURCE_DATE_EPOCH}) \
             -extldflags \"${LDFLAGS}\"" .
 
     install -Dm755 "${name}" -t "${PKG}/usr/bin/"
 
-    install -Dm644 completions/chezmoi-completion.bash "${PKG}/usr/share/bash-completion/completions/${name}"
-    install -Dm644 completions/chezmoi.fish -t "${PKG}/usr/share/fish/vendor_completions.d/"
-    install -Dm644 completions/chezmoi.zsh "${PKG}/usr/share/zsh/site-functions/_chezmoi"
+    install -Dm644 "completions/${name}-completion.bash" "${PKG}/usr/share/bash-completion/completions/${name}"
+    install -Dm644 "completions/${name}.fish" -t "${PKG}/usr/share/fish/vendor_completions.d/"
+    install -Dm644 "completions/${name}.zsh" "${PKG}/usr/share/zsh/site-functions/_${name}"
 }
