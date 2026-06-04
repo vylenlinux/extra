@@ -6,7 +6,7 @@ homepage="http://www.thekelleys.org.uk/dnsmasq/doc.html"
 maintainer="Vylen Linux Team"
 
 name=dnsmasq
-version=2.92rel2
+version=2.93
 release=1
 source="http://www.thekelleys.org.uk/${name}/${name}-${version}.tar.xz"
 backup="etc/${name}.conf"

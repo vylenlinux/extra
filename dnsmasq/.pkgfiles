@@ -1,4 +1,4 @@
-dnsmasq-2.92rel2-1
+dnsmasq-2.93-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
 -rw-r--r-- root/root    etc/conf.d/dnsmasq
