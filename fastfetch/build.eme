@@ -6,7 +6,7 @@ homepage="https://github.com/fastfetch-cli/fastfetch"
 maintainer="Vylen Linux Team"
 
 name=fastfetch
-version=2.64.0
+version=2.64.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/${name}-cli/${name}/archive/${version}.tar.gz"
 
