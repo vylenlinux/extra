@@ -6,7 +6,7 @@ homepage="https://www.greenwoodsoftware.com/less/"
 maintainer="Vylen Linux Team"
 
 name=less
-version=702
+version=704
 release=1
 source="${name}-${version}.tar.gz::http://greenwoodsoftware.com/${name}/${name}-${version}-beta.tar.gz"
 
