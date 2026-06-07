@@ -6,8 +6,8 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=6.8.2
-release=2
+version=6.8.5
+release=1
 
 td_commit=49b3bcbb6bfebf2ed44dd9f25102d2e1a94a58c4
 
@@ -21,8 +21,8 @@ build() {
     cmake -S "${SRC}/td-${td_commit}" -B "${SRC}/td-${td_commit}/build" \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX="${SRC}/td-${td_commit}/install" \
-        -Wno-dev \
-        -DTD_E2E_ONLY=ON
+        -DTD_E2E_ONLY=ON \
+        -Wno-dev
 
     cmake --build "${SRC}/td-${td_commit}/build"
     cmake --install "${SRC}/td-${td_commit}/build"
