@@ -1,4 +1,4 @@
-mpg123-1.33.5-1
+mpg123-1.33.6-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/mpg123
@@ -26,7 +26,6 @@ drwxr-xr-x root/root    usr/lib/mpg123/
 -rwxr-xr-x root/root    usr/lib/mpg123/output_jack.so
 -rwxr-xr-x root/root    usr/lib/mpg123/output_openal.so
 -rwxr-xr-x root/root    usr/lib/mpg123/output_oss.so
--rwxr-xr-x root/root    usr/lib/mpg123/output_portaudio.so
 -rwxr-xr-x root/root    usr/lib/mpg123/output_pulse.so
 -rwxr-xr-x root/root    usr/lib/mpg123/output_sdl.so
 drwxr-xr-x root/root    usr/lib/pkgconfig/
@@ -34,7 +33,3 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libout123.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libsyn123.pc
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/mpg123.1.gz
--rw-r--r-- root/root    usr/share/man/man1/out123.1.gz
