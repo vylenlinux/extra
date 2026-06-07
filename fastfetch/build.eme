@@ -6,7 +6,7 @@ homepage="https://github.com/fastfetch-cli/fastfetch"
 maintainer="Vylen Linux Team"
 
 name=fastfetch
-version=2.64.1
+version=2.64.2
 release=1
 source="${name}-${version}.tar.gz::https://github.com/${name}-cli/${name}/archive/${version}.tar.gz"
 
@@ -18,10 +18,10 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DBUILD_TESTS='OFF' \
-        -DENABLE_SQLITE3='OFF' \
-        -DENABLE_RPM='OFF' \
-        -DENABLE_IMAGEMAGICK6='OFF' \
+        -DBUILD_TESTS=OFF \
+        -DENABLE_SQLITE3=OFF \
+        -DENABLE_RPM=OFF \
+        -DENABLE_IMAGEMAGICK6=OFF \
         -Wno-dev
 
     cmake --build build
