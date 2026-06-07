@@ -6,7 +6,7 @@ homepage="https://www.vim.org/"
 maintainer="Vylen Linux Team"
 
 name=vim
-version=9.2.0555
+version=9.2.0600
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/v$version/${name}-v${version}.tar.gz
@@ -40,12 +40,12 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
+    install -Dm644 "${SRC}/vimrc" -t "${PKG}/etc/"
+    ln -s vim "${PKG}/usr/bin/vi"
+
     # no desktop files and icons
     rm -r "${PKG}/usr/share/applications" \
         "${PKG}/usr/share/icons"
-
-    install -Dm644 "${SRC}/vimrc" -t "${PKG}/etc/"
-    ln -sv vim "${PKG}/usr/bin/vi"
 
     rm -f "${PKG}/usr/share/vim/vim92"/*/systemd.vim
 }
