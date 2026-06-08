@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Termcap file implementation for terminal emulators"
 homepage="https://gitlab.gnome.org/GNOME/vte"
 maintainer="Vylen Linux Team"
@@ -5,16 +8,16 @@ maintainer="Vylen Linux Team"
 name=vte3
 version=0.84.0
 release=1
-source="https://gitlab.gnome.org/GNOME/vte/-/archive/$version/vte-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/vte/-/archive/${version}/vte-${version}.tar.gz"
 
 build() {
-    vylen-meson vte-$version build \
+    vylen-meson "vte-${version}" build \
         -Db_lto=false \
-	    -Db_pie=false \
-	    -D_systemd=false \
-	    -Dgtk3=true \
-	    -Dgtk4=$(emerald isinstalled gtk4 && printf "true" || printf "false")
+        -Db_pie=false \
+        -D_systemd=false \
+        -Dgtk3=true \
+        -Dgtk4="$(emerald is-installed gtk4 && printf "true" || printf "false")"
 
     meson compile -C build
-    DESTDIR=$PKG meson install --no-rebuild -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

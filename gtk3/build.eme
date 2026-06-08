@@ -8,13 +8,15 @@ maintainer="Vylen Linux Team"
 name=gtk3
 version=3.24.52
 release=1
-source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.gz
+    settings.ini"
 
 build() {
     vylen-meson gtk-$version build \
         -Dbroadway_backend=true \
-        -Dcolord="$(emerald isinstalled colord && echo "yes" || echo "no")" \
-        -Dwayland_backend="$(emerald isinstalled libxkbcommon && emerald isinstalled wayland-protocols && printf "true" || printf "false")" \
+        -Dcolord="$(emerald is-installed colord && echo "yes" || echo "no")" \
+        -Dwayland_backend="$(emerald is-installed libxkbcommon && emerald is-installed wayland-protocols && printf "true" || printf "false")" \
         -Dman=false \
         -Dgtk_doc=false \
         -Dexamples=false \
@@ -25,10 +27,5 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    cat > "${PKG}/etc/gtk-3.0/settings.ini" <<"EOF"
-[Settings]
-gtk-icon-theme-name = Adwaita
-gtk-theme-name = Adwaita
-gtk-font-name = Cantarell 10
-EOF
+    install -Dm644 "${SRC}/settings.ini" -t "${PKG}/etc/gtk-3.0/"
 }

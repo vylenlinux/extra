@@ -25,7 +25,7 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DQT_USE_CCACHE="$(emerald isinstalled ccache && printf "ON" || printf "OFF")" \
+        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
@@ -34,8 +34,8 @@ build() {
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
         -DQT_FEATURE_webengine_ozone_x11=ON \
         -DQT_FEATURE_webengine_system_re2=OFF \
-        -DQT_FEATURE_webengine_webrtc_pipewire="$(emerald isinstalled pipewire && printf "ON" || printf "OFF")" \
-        -DQT_FEATURE_webengine_kerberos="$(emerald isinstalled krb5 && printf "ON" || printf "OFF")"
+        -DQT_FEATURE_webengine_webrtc_pipewire="$(emerald is-installed pipewire && printf "ON" || printf "OFF")" \
+        -DQT_FEATURE_webengine_kerberos="$(emerald is-installed krb5 && printf "ON" || printf "OFF")"
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

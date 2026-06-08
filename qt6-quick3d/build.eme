@@ -12,7 +12,7 @@ source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/$
 
 build() {
     cmake -S "qtquick3d-everywhere-src-${version}" -B build  -G Ninja \
-        -DQT_USE_CCACHE="$(emerald isinstalled ccache && printf "ON" || printf "OFF")" \
+        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}"

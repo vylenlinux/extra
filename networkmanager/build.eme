@@ -18,7 +18,7 @@ build() {
     vylen-meson "NetworkManager-${version}" build \
         -Ddocs=false \
         -Dlibaudit=no \
-        -Dmodem_manager="$(emerald isinstalled modemmanager && printf "true" || printf "false")" \
+        -Dmodem_manager="$(emerald is-installed modemmanager && printf "true" || printf "false")" \
         -Dmodify_system=true \
         -Dnmtui=true \
         -Dovs=false \

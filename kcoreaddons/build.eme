@@ -18,7 +18,7 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DBUILD_PYTHON_BINDINGS="$(emerald isinstalled pyside6 && printf "ON" || printf "OFF")" \
+        -DBUILD_PYTHON_BINDINGS="$(emerald is-installed pyside6 && printf "ON" || printf "OFF")" \
         -DBUILD_TESTING=OFF \
         -Wno-dev
 

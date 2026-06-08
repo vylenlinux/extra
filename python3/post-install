@@ -1,10 +1,10 @@
 #!/bin/sh
 
-PYVERSION=$(awk -F'[=.]' '/^version=/{print $2"."$3}' build.eme)
+PYTHON_VERSION="$(awk -F'[=.]' '/^version=/{print $2"."$3}' build.eme)"
 
 # Rebuild with a mayor version upgrade
-if [ "${PYVERSION}" != "3.14" ]; then
-    PYREBUILD="python3-setuptools
+if [ "${PYTHON_VERSION}" != "3.14" ]; then
+    PYTHON_REBUILD="python3-setuptools
         meson
         python3-gpep517
         python3-installer
@@ -22,7 +22,7 @@ if [ "${PYVERSION}" != "3.14" ]; then
         python3-pygments
         python3-markupsafe"
 
-    for p in $PYREBUILD; do
-        emerald isinstalled "${p}" && emerald install -fr "${p}"
+    for p in $PYTHON_REBUILD; do
+        emerald is-installed "${p}" && emerald install -fr "${p}"
     done
 fi

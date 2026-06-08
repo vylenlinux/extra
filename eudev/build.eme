@@ -13,9 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/eudev-project/${name}/arch
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    OPTS=""
-    emerald isinstalled libxslt && OPTS="--enable-manpages"
+    emerald is-installed libxslt && OPTS="--enable-manpages"
 
     # remove an unneeded group 'sgx'
     sed -i -e 's/GROUP="sgx", //' rules/50-udev-default.rules
@@ -35,8 +33,8 @@ build() {
 
     make
 
-    mkdir -pv "${PKG}/lib/udev/rules.d"
-    mkdir -pv "${PKG}/etc/udev/rules.d"
+    mkdir -p "${PKG}/lib/udev/rules.d"
+    mkdir -p "${PKG}/etc/udev/rules.d"
 
     make DESTDIR="${PKG}" install
 

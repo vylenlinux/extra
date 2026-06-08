@@ -36,12 +36,12 @@ build() {
     install -Dm644 "${SRC}/config" .mozconfig
 
     # audio
-    emerald isinstalled alsa-lib && echo 'ac_add_options --enable-alsa' >> .mozconfig
-    emerald isinstalled jack && echo 'ac_add_options --enable-jack' >> .mozconfig
-    emerald isinstalled pulseaudio && echo 'ac_add_options --enable-pulseaudio' >> .mozconfig
+    emerald is-installed alsa-lib && echo 'ac_add_options --enable-alsa' >> .mozconfig
+    emerald is-installed jack && echo 'ac_add_options --enable-jack' >> .mozconfig
+    emerald is-installed pulseaudio && echo 'ac_add_options --enable-pulseaudio' >> .mozconfig
 
     # wayland
-    emerald isinstalled wayland-protocols && \
+    emerald is-installed wayland-protocols && \
         echo 'ac_add_options --enable-default-toolkit=cairo-gtk3-wayland' >> .mozconfig || \
         echo 'ac_add_options --enable-default-toolkit=cairo-gtk3' >> .mozconfig
 

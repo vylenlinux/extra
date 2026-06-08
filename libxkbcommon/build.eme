@@ -13,7 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/xkbcommon/${name}/archive/
 build() {
     vylen-meson "${name}-xkbcommon-${version}" build \
         -Denable-docs=false \
-        -Denable-wayland="$(emerald isinstalled wayland-protocols && printf "true" || printf "false")"
+        -Denable-wayland="$(emerald is-installed wayland-protocols && printf "true" || printf "false")"
 
     meson compile -C build
     DESTDIR=$PKG meson install --no-rebuild -C build

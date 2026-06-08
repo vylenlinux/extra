@@ -24,8 +24,8 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    emerald isinstalled imath && {
-        rm -fr "${PKG}/usr/include/Imath" \
+    emerald is-installed imath && {
+        rm -rf "${PKG}/usr/include/Imath" \
             "${PKG}/usr/lib/cmake/Imath"
 
         rm -f "${PKG}/usr/lib/pkgconfig/Imath.pc"

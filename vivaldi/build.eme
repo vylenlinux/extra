@@ -47,5 +47,5 @@ build() {
         "${PKG}/opt/${name}"/product_logo_*.png
 
     rm -r "${PKG}/usr/share/appdata"
-    ! emerald isinstalled xfce4 && rm -rf "${PKG}/usr/share/xfce4"
+    emerald is-installed xfce4 || rm -rf "${PKG}/usr/share/xfce4"
 }

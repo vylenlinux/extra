@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Collection of simple PIN or pass-phrase entry dialogs which utilize the Assuan protocol"
 homepage="https://gnupg.org/related_software/pinentry/"
 maintainer="Vylen Linux Team"
@@ -5,27 +8,28 @@ maintainer="Vylen Linux Team"
 name=pinentry
 version=1.3.2
 release=1
-source="https://www.gnupg.org/ftp/gcrypt/$name/$name-$version.tar.bz2"
+source="https://www.gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	opt=""
-	emerald isinstalled emacs || opt="$opt --disable-pinentry-emacs"
-	emerald isinstalled gtk2 || opt="$opt --disable-pinentry-gtk2"
-	emerald isinstalled qt5 || opt="$opt --disable-pinentry-qt5"
-	emerald isinstalled qt6-base || opt="$opt --disable-pinentry-qt"
-	emerald isinstalled gcr || opt="$opt --disable-pinentry-gnome3"
+    emerald is-installed emacs || opt="${opt} --disable-pinentry-emacs"
+    emerald is-installed gtk2 || opt="${opt} --disable-pinentry-gtk2"
+    emerald is-installed qt5 || opt="${opt} --disable-pinentry-qt5"
+    emerald is-installed qt6-base || opt="${opt} --disable-pinentry-qt"
+    emerald is-installed gcr || opt="${opt} --disable-pinentry-gnome3"
 
-	CXXFLAGS="$CXXFLAGS -fPIC"
+    CXXFLAGS="${CXXFLAGS} -fPIC"
 
-	./configure --prefix=/usr \
-	    --enable-pinentry-tty \
-	    --enable-pinentry-curses \
-	    --enable-fallback-curses \
-	    $opt
+    # shellcheck disable=SC2086
+    ./configure \
+        --prefix=/usr \
+        --enable-pinentry-tty \
+        --enable-pinentry-curses \
+        --enable-fallback-curses \
+        ${opt}
+
 	make
-	make DESTDIR=$PKG install
-
-	rm -r $PKG/usr/share
+	make DESTDIR="${PKG}" install
 }

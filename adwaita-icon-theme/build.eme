@@ -11,8 +11,8 @@ release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
 build() {
-    emerald isinstalled gtk4 || sed -i '49d' "${name}-${version}/meson.build"
-    emerald isinstalled gtk3 || sed -i '50d' "${name}-${version}/meson.build"
+    emerald is-installed gtk4 || sed -i '49d' "${name}-${version}/meson.build"
+    emerald is-installed gtk3 || sed -i '50d' "${name}-${version}/meson.build"
 
     vylen-meson "${name}-${version}" build
     meson compile -C build

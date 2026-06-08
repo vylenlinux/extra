@@ -29,7 +29,7 @@ build() {
     mv "${PKG}/usr/share/terminfo/f/foot" "${PKG}/usr/share/terminfo/f/foot-extra"
     mv "${PKG}/usr/share/terminfo/f/foot-direct" "${PKG}/usr/share/terminfo/f/foot-extra-direct"
 
-    emerald isinstalled fish || rm -r "${PKG}/usr/share/fish"
-    emerald isinstalled bash-completion || rm -r "${PKG}/usr/share/bash-completion"
-    emerald isinstalled zsh || rm -r "${PKG}/usr/share/zsh"
+    emerald is-installed fish || rm -r "${PKG}/usr/share/fish"
+    emerald is-installed bash-completion || rm -r "${PKG}/usr/share/bash-completion"
+    emerald is-installed zsh || rm -r "${PKG}/usr/share/zsh"
 }

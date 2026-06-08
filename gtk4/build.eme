@@ -15,7 +15,7 @@ build() {
 
     vylen-meson "gtk-${version}" build \
         -Dbroadway-backend=true \
-        -Dwayland-backend="$(emerald isinstalled wayland-protocols && printf "true" || printf "false")" \
+        -Dwayland-backend="$(emerald is-installed wayland-protocols && printf "true" || printf "false")" \
         -Dintrospection=enabled \
         -Dman-pages=false \
         -Dbuild-tests=false \

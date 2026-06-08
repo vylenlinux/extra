@@ -14,14 +14,14 @@ build() {
     vylen-meson "${name}-${version}" build \
         -Djpeg=enabled \
         -Dpng=enabled \
-        -Dheif="$(emerald isinstalled libheif && printf "enabled" || printf "disabled")" \
-        -Djxl="$(emerald isinstalled libjxl && printf "enabled" || printf "disabled")" \
-        -Dsvg="$(emerald isinstalled librsvg && printf "enabled" || printf "disabled")" \
-        -Dwebp="$(emerald isinstalled libwebp && printf "enabled" || printf "disabled")" \
-        -Dexr="$(emerald isinstalled openxr && printf "enabled" || printf "disabled")" \
-        -Dtiff="$(emerald isinstalled libtiff && printf "enabled" || printf "disabled")" \
-        -Dbash="$(emerald isinstalled bash-completion && printf "enabled" || printf "disabled")" \
-        -Dzsh="$(emerald isinstalled zsh && printf "enabled" || printf "disabled")" \
+        -Dheif="$(emerald is-installed libheif && printf "enabled" || printf "disabled")" \
+        -Djxl="$(emerald is-installed libjxl && printf "enabled" || printf "disabled")" \
+        -Dsvg="$(emerald is-installed librsvg && printf "enabled" || printf "disabled")" \
+        -Dwebp="$(emerald is-installed libwebp && printf "enabled" || printf "disabled")" \
+        -Dexr="$(emerald is-installed openxr && printf "enabled" || printf "disabled")" \
+        -Dtiff="$(emerald is-installed libtiff && printf "enabled" || printf "disabled")" \
+        -Dbash="$(emerald is-installed bash-completion && printf "enabled" || printf "disabled")" \
+        -Dzsh="$(emerald is-installed zsh && printf "enabled" || printf "disabled")" \
         -Dversion="${version}"
 
     meson compile -C build

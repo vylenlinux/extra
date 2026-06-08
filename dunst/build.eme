@@ -11,13 +11,12 @@ release=1
 source="https://github.com/dunst-project/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	# shellcheck disable=SC2164
+    # shellcheck disable=SC2164
     cd "${name}-${version}"
-    emerald isinstalled wayland && make all || export WAYLAND=0 make
+
+    # shellcheck disable=SC2015
+    emerald is-installed wayland && make all || export WAYLAND=0 make
 
     make PREFIX=/usr SYSCONFDIR=/etc DESTDIR="${PKG}" install
     install -Dm755 dunstify "${PKG}/usr/bin/dunstify"
-
-    # remove systemd trash file
-    rm -fr "${PKG}/usr/lib/"
 }

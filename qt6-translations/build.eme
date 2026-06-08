@@ -18,7 +18,7 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DQT_USE_CCACHE="$(emerald isinstalled ccache && printf "ON" || printf "OFF")"
+        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")"
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Panel applet used to configure wired and wireless network connections"
 homepage="https://gitlab.gnome.org/GNOME/network-manager-applet"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,14 @@ maintainer="Vylen Linux Team"
 name=network-manager-applet
 version=1.36.0
 release=1
-source="https://gitlab.gnome.org/GNOME/network-manager-applet/-/archive/$version/$name-$version.tar.gz"
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-		-Dselinux=false \
-		-Dteam=false \
-		-Dwwan=$(emerald isinstalled modemmanager && printf "true" || printf "false")
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dselinux=false \
+        -Dteam=false \
+        -Dwwan="$(emerald is-installed modemmanager && printf "true" || printf "false")"
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

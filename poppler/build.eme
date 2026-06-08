@@ -23,17 +23,17 @@ build() {
         -DENABLE_CPP=ON \
         -DBUILD_CPP_TESTS=OFF \
         -DBUILD_MANUAL_TESTS=OFF \
-        -DENABLE_QT5="$(emerald isinstalled qt5 && printf "ON" || printf "OFF")" \
+        -DENABLE_QT5="$(emerald is-installed qt5 && printf "ON" || printf "OFF")" \
         -DBUILD_QT5_TESTS=OFF \
-        -DENABLE_QT6="$(emerald isinstalled qt6-base && printf "ON" || printf "OFF")" \
+        -DENABLE_QT6="$(emerald is-installed qt6-base && printf "ON" || printf "OFF")" \
         -DBUILD_QT6_TESTS=OFF \
         -DENABLE_GPGME=OFF \
-        -DENABLE_BOOST="$(emerald isinstalled boost && printf "ON" || printf "OFF")" \
-        -DENABLE_GLIB="$(emerald isinstalled gobject-introspection && printf "ON" || printf "OFF")" \
-        -DENABLE_LCMS="$(emerald isinstalled lcms2 && printf "ON" || printf "OFF")" \
-        -DENABLE_LIBTIFF="$(emerald isinstalled libtiff && printf "ON" || printf "OFF")" \
-        -DENABLE_NSS3="$(emerald isinstalled nss && printf "ON" || printf "OFF")" \
-        -DENABLE_LIBOPENJPEG="$(emerald isinstalled openjpeg2 && echo "openjpeg2" || echo "none")" \
+        -DENABLE_BOOST="$(emerald is-installed boost && printf "ON" || printf "OFF")" \
+        -DENABLE_GLIB="$(emerald is-installed gobject-introspection && printf "ON" || printf "OFF")" \
+        -DENABLE_LCMS="$(emerald is-installed lcms2 && printf "ON" || printf "OFF")" \
+        -DENABLE_LIBTIFF="$(emerald is-installed libtiff && printf "ON" || printf "OFF")" \
+        -DENABLE_NSS3="$(emerald is-installed nss && printf "ON" || printf "OFF")" \
+        -DENABLE_LIBOPENJPEG="$(emerald is-installed openjpeg2 && echo "openjpeg2" || echo "none")" \
         -Wno-dev
 
     cmake --build build

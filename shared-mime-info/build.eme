@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Freedesktop.org Shared MIME Info"
 homepage="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,15 @@ maintainer="Vylen Linux Team"
 name=shared-mime-info
 version=2.4
 release=1
-source="https://gitlab.freedesktop.org/xdg/$name/-/archive/$version/shared-mime-info-$version.tar.gz"
+source="https://gitlab.freedesktop.org/xdg/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-    emerald isinstalled xmlto &&  export XML_CATALOG_FILES=/etc/xml/catalog
-	vylen-meson $name-$version build \
-		-Dupdate-mimedb=false \
-		-Dbuild-tests=false 
-		meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    emerald is-installed xmlto && export XML_CATALOG_FILES=/etc/xml/catalog
+
+    vylen-meson "${name}-${version}" build \
+        -Dupdate-mimedb=false \
+        -Dbuild-tests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

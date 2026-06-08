@@ -50,7 +50,7 @@ build() {
         -DQT_FEATURE_reduce_relocations=OFF \
         -DQT_FEATURE_androiddeployqt=OFF \
         -DQT_FEATURE_rpath=OFF \
-        -DQT_USE_CCACHE="$(emerald isinstalled ccache && printf "ON" || printf "OFF")" \
+        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
         -DQT_AVOID_CMAKE_ARCHIVING_API=ON \
         -Wno-dev
 

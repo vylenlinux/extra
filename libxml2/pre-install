@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # The port 'python3-libxml2' conflicts with 'libxml2', now build with Python
-emerald isinstalled python3-libxml2 && emerald remove -y python3-libxml2
+emerald is-installed python3-libxml2 && emerald remove -y python3-libxml2

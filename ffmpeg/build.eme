@@ -20,9 +20,9 @@ build() {
 
     add_opt() {
         if [ "${_opt}" = "" ]; then
-            emerald isinstalled "${1}" && _opt="--enable-${2}" || _opt="--disable-${2}"
+            emerald is-installed "${1}" && _opt="--enable-${2}" || _opt="--disable-${2}"
         elif [ ! "${_opt}" = "" ]; then
-            emerald isinstalled "${1}" && _opt="${_opt} --enable-${2}" || _opt="${_opt} --disable-${2}"
+            emerald is-installed "${1}" && _opt="${_opt} --enable-${2}" || _opt="${_opt} --disable-${2}"
         fi
     }
 
