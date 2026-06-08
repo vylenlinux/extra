@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Utilities for synchronizing large file archives over a network"
@@ -6,7 +6,7 @@ homepage="https://rsync.samba.org/"
 maintainer="Vylen Linux Team"
 
 name=rsync
-version=3.4.3
+version=3.4.4
 release=1
 
 source="https://download.samba.org/pub/${name}/${name}-${version}.tar.gz
