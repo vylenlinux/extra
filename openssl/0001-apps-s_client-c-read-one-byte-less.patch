@@ -1,0 +1,48 @@
+From 222c74b3861177546b8e30de4eb26edbfc5bd29a Mon Sep 17 00:00:00 2001
+From: Eugene Syromiatnikov <esyr@openssl.org>
+Date: Mon, 8 Jun 2026 09:39:31 +0200
+Subject: [PATCH] apps/s_client.c: read one byte less to avoid triggerring
+ overflow protection
+
+Commit e0e276b50a1e "Fix a one byte buffer overflow in s_client" added
+a check for the buffer size before adding a terminating \0, which led
+to full reads of BUFSIZZ resulting in session termination.  Avoid that
+by requesting one byte less.
+
+Co-Autherd-by: Tomas Mraz <tomas@openssl.foundation>
+Resolves: https://github.com/openssl/openssl/issues/30925
+Fixes: e0e276b50a1e "Fix a one byte buffer overflow in s_client"
+Signed-off-by: Eugene Syromiatnikov <esyr@openssl.org>
+
+Reviewed-by: Matt Caswell <matt@openssl.foundation>
+Reviewed-by: Tomas Mraz <tomas@openssl.foundation>
+MergeDate: Mon Jun  8 09:12:53 2026
+(Merged from https://github.com/openssl/openssl/pull/31413)
+
+(cherry picked from commit 037ed103129e6ae7bf5d15d8dc8bf3573f05ac50)
+---
+ apps/s_client.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/apps/s_client.c b/apps/s_client.c
+index 5fb367a373219..2857ea8f60e18 100644
+--- a/apps/s_client.c
++++ b/apps/s_client.c
+@@ -3303,7 +3303,7 @@ int s_client_main(int argc, char **argv)
+             if (crlf) {
+                 int j, lf_num;
+
+-                i = raw_read_stdin(cbuf, BUFSIZZ / 2);
++                i = raw_read_stdin(cbuf, (BUFSIZZ - 1) / 2);
+                 lf_num = 0;
+                 /* both loops are skipped when i <= 0 */
+                 for (j = 0; j < i; j++)
+@@ -3319,7 +3319,7 @@ int s_client_main(int argc, char **argv)
+                 }
+                 assert(lf_num == 0);
+             } else
+-                i = raw_read_stdin(cbuf, BUFSIZZ);
++                i = raw_read_stdin(cbuf, BUFSIZZ - 1);
+ #if !defined(OPENSSL_SYS_WINDOWS) && !defined(OPENSSL_SYS_MSDOS)
+             if (i == 0)
+                 at_eof = 1;
