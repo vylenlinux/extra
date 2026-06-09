@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux
-version=7.0.11
+version=7.0.12
 release=1
 
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/${name%-*}-${version%.0}.tar.xz
