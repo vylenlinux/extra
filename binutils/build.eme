@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=binutils
 version=2.46.1
 release=1
-source="https://ftp.gnu.org/gnu/binutils/$name-$version.tar.xz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
