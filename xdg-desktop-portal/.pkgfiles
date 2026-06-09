@@ -1,4 +1,4 @@
-xdg-desktop-portal-1.20.4-1
+xdg-desktop-portal-1.22.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/xdg-desktop-portal/
@@ -72,8 +72,5 @@ drwxr-xr-x root/root    usr/share/dbus-1/services/
 -rw-r--r-- root/root    usr/share/dbus-1/services/org.freedesktop.impl.portal.PermissionStore.service
 -rw-r--r-- root/root    usr/share/dbus-1/services/org.freedesktop.portal.Desktop.service
 -rw-r--r-- root/root    usr/share/dbus-1/services/org.freedesktop.portal.Documents.service
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man5/
--rw-r--r-- root/root    usr/share/man/man5/portals.conf.5.gz
 drwxr-xr-x root/root    usr/share/pkgconfig/
 -rw-r--r-- root/root    usr/share/pkgconfig/xdg-desktop-portal.pc
