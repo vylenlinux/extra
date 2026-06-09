@@ -1,4 +1,4 @@
-frei0r-plugins-3.1.3-1
+frei0r-plugins-3.2.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/frei0r.h
@@ -49,6 +49,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/color_only.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/coloradj_RGB.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/colordistance.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/colorenhance.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/colorhalftone.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/colorize.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/colortap.so
