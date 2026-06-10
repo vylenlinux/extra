@@ -6,7 +6,7 @@ homepage="https://www.python.org"
 maintainer="Vylen Linux Team"
 
 name=python3
-version=3.14.5
+version=3.14.6
 release=1
 
 source="${name}-${version}.tar.xz::https://www.python.org/ftp/python/${version}/Python-${version}.tar.xz
@@ -17,11 +17,11 @@ build() {
     cd "Python-${version}"
 
     # Ensure that we are using the system copy of various libraries
-    rm -rv Modules/expat
-    # rm -rv Modules/_decimal/libmpdec
+    rm -r Modules/expat
+    # rm -r Modules/_decimal/libmpdec
 
     # Remove tests
-    rm -rvf Lib/test \
+    rm -rf Lib/test \
         Lib/*/test \
         Lib/*/tests \
         Lib/*/idle_test
@@ -46,7 +46,7 @@ build() {
     make EXTRA_CFLAGS="${CFLAGS}"
     make EXTRA_CFLAGS="${CFLAGS}" DESTDIR="${PKG}" install maninstall
 
-    chmod -v 755 "${PKG}/usr/lib/libpython${version%.*}.so" \
+    chmod 755 "${PKG}/usr/lib/libpython${version%.*}.so" \
         "${PKG}/usr/lib/libpython3.so"
 
     mv "${PKG}/usr/include/python${version%.*}/pyconfig.h" \
