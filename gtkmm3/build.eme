@@ -1,15 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C++ interface to GTK+ 3"
 homepage="http://www.gtkmm.org/"
 maintainer="Vylen Linux Team"
 
 name=gtkmm3
-version=3.24.10
+version=3.24.11
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/gtkmm/${version%.*}/gtkmm-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.gnome.org/pub/gnome/sources/gtkmm/${version%.*}/gtkmm-${version}.tar.xz"
 
 build() {
-	vylen-meson gtkmm-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
-
+    vylen-meson "gtkmm-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
