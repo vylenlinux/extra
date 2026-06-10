@@ -6,7 +6,7 @@ homepage="https://github.com/pypa/distlib"
 maintainer="Vylen Linux Team"
 
 name=python3-distlib
-version=0.4.1
+version=0.4.2
 release=1
 source="${name}-${version}.tar.gz::https://github.com/pypa/distlib/archive/refs/tags/${version}.tar.gz"
 
