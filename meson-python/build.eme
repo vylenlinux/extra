@@ -6,7 +6,7 @@ homepage="https://github.com/mesonbuild/meson-python"
 maintainer="Vylen Linux Team"
 
 name=meson-python
-version=0.19.0
+version=0.20.0
 release=1
 source="${name}-${version}.tar.gz::https://pypi.org/packages/source/m/meson_python/meson_python-${version}.tar.gz"
 
