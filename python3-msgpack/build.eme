@@ -1,14 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Efficient binary serialization format"
 homepage="https://pypi.org/project/msgpack/"
 maintainer="Vylen Linux Team"
 
 name=python3-msgpack
-version=1.1.2
+version=1.2.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-${version}.tar.gz"
 
 build() {
-	cd msgpack-$version
-	python3 setup.py build
-	python3 setup.py install -O1 --root="$PKG" --skip-build
+    # shellcheck disable=SC2164
+    cd "msgpack-${version}"
+    python3 setup.py build
+
+    python3 setup.py install -O1 \
+        --root="${PKG}" \
+        --skip-build
 }
