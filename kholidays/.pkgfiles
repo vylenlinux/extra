@@ -1,38 +1,38 @@
-kholidays-6.26.0-1
+kholidays-6.27.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
 drwxr-xr-x root/root    usr/include/KF6/KHolidays/
-drwxr-xr-x root/root    usr/include/KF6/KHolidays/kholidays/
 drwxr-xr-x root/root    usr/include/KF6/KHolidays/KHolidays/
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/AstroSeasons
--rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/astroseasons.h
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/Holiday
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/HolidayCategories
--rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/holidaycategories.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/holiday.h
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/HolidayRegion
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/LunarPhase
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/SunEvents
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/SunRiseSet
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/Zodiac
+drwxr-xr-x root/root    usr/include/KF6/KHolidays/kholidays/
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/astroseasons.h
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/holiday.h
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/holidaycategories.h
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/holidayregion.h
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/kholidays_export.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/LunarPhase
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/lunarphase.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/SunEvents
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/sunevents.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/SunRiseSet
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/sunriseset.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays_version.h
--rw-r--r-- root/root    usr/include/KF6/KHolidays/KHolidays/Zodiac
 -rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays/zodiac.h
+-rw-r--r-- root/root    usr/include/KF6/KHolidays/kholidays_version.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KF6Holidays/
 -rw-r--r-- root/root    usr/lib/cmake/KF6Holidays/KF6HolidaysConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6Holidays/KF6HolidaysConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KF6Holidays/KF6HolidaysTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6Holidays/KF6HolidaysTargets-release.cmake
--rwxr-xr-x root/root    usr/lib/libKF6Holidays.so.6.26.0
-lrwxrwxrwx root/root    usr/lib/libKF6Holidays.so.6 -> libKF6Holidays.so.6.26.0
+-rw-r--r-- root/root    usr/lib/cmake/KF6Holidays/KF6HolidaysTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6Holidays.so -> libKF6Holidays.so.6
+lrwxrwxrwx root/root    usr/lib/libKF6Holidays.so.6 -> libKF6Holidays.so.6.27.0
+-rwxr-xr-x root/root    usr/lib/libKF6Holidays.so.6.27.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/

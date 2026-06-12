@@ -1,4 +1,4 @@
-kpackage-6.26.0-1
+kpackage-6.27.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/kpackagetool6
@@ -30,8 +30,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Package/
 -rw-r--r-- root/root    usr/lib/cmake/KF6Package/KF6PackageToolsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6Package/KF6PackageToolsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6Package.so -> libKF6Package.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Package.so.6 -> libKF6Package.so.6.26.0
--rwxr-xr-x root/root    usr/lib/libKF6Package.so.6.26.0
+lrwxrwxrwx root/root    usr/lib/libKF6Package.so.6 -> libKF6Package.so.6.27.0
+-rwxr-xr-x root/root    usr/lib/libKF6Package.so.6.27.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/ca/

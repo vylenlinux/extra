@@ -3,7 +3,7 @@ homepage="https://community.kde.org/Frameworks"
 maintainer="Vylen Linux Team"
 
 name=prison
-version=6.26.0
+version=6.27.0
 release=1
 source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
 

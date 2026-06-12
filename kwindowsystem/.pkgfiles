@@ -1,40 +1,40 @@
-kwindowsystem-6.26.0-1
+kwindowsystem-6.27.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
 drwxr-xr-x root/root    usr/include/KF6/KWindowSystem/
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/config-kwindowsystem.h
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/fixx11h.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KKeyServer
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kkeyserver.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KSelectionOwner
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kselectionowner.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KSelectionWatcher
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kselectionwatcher.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KStartupInfo
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kstartupinfo.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KUserTimestamp
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kusertimestamp.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWaylandExtras
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwaylandextras.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWindowEffects
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindoweffects.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWindowInfo
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowinfo.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWindowShadow
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowshadow.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWindowShadowTile
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KWindowSystem
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem_export.h
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem.h
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem_version.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KX11Extras
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kx11extras.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/KXMessages
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kxmessages.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/NETWM
--rw-r--r-- root/root    usr/include/KF6/KWindowSystem/netwm_def.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/config-kwindowsystem.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/fixx11h.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kkeyserver.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kselectionowner.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kselectionwatcher.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kstartupinfo.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kusertimestamp.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwaylandextras.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindoweffects.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowinfo.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowshadow.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem_export.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kwindowsystem_version.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kx11extras.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/kxmessages.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/netwm.h
+-rw-r--r-- root/root    usr/include/KF6/KWindowSystem/netwm_def.h
 drwxr-xr-x root/root    usr/include/KF6/KWindowSystem/private/
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/private/kwindoweffects_p.h
 -rw-r--r-- root/root    usr/include/KF6/KWindowSystem/private/kwindowshadow_p.h
@@ -45,11 +45,11 @@ drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KF6WindowSystem/
 -rw-r--r-- root/root    usr/lib/cmake/KF6WindowSystem/KF6WindowSystemConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6WindowSystem/KF6WindowSystemConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KF6WindowSystem/KF6WindowSystemTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6WindowSystem/KF6WindowSystemTargets-release.cmake
--rwxr-xr-x root/root    usr/lib/libKF6WindowSystem.so.6.26.0
-lrwxrwxrwx root/root    usr/lib/libKF6WindowSystem.so.6 -> libKF6WindowSystem.so.6.26.0
+-rw-r--r-- root/root    usr/lib/cmake/KF6WindowSystem/KF6WindowSystemTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6WindowSystem.so -> libKF6WindowSystem.so.6
+lrwxrwxrwx root/root    usr/lib/libKF6WindowSystem.so.6 -> libKF6WindowSystem.so.6.27.0
+-rwxr-xr-x root/root    usr/lib/libKF6WindowSystem.so.6.27.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/KF6WindowSystem.pc
 drwxr-xr-x root/root    usr/lib/qt6/
@@ -62,8 +62,8 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/kde-qmlmodule.version
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/KWindowSystem.qmltypes
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/libKWindowSystem.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kwindowsystem/qmldir
 drwxr-xr-x root/root    usr/share/

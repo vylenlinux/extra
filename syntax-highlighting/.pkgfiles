@@ -1,4 +1,4 @@
-syntax-highlighting-6.26.0-1
+syntax-highlighting-6.27.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ksyntaxhighlighter6
@@ -7,37 +7,37 @@ drwxr-xr-x root/root    usr/include/KF6/
 drwxr-xr-x root/root    usr/include/KF6/KSyntaxHighlighting/
 drwxr-xr-x root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/AbstractHighlighter
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/abstracthighlighter.h
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Definition
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/DefinitionDownloader
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/definitiondownloader.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/definition.h
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/FoldingRegion
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/foldingregion.h
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Format
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Repository
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/State
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/SyntaxHighlighter
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Theme
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/WildcardMatcher
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/abstracthighlighter.h
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/definition.h
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/definitiondownloader.h
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/foldingregion.h
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/format.h
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/ksyntaxhighlighting_export.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Repository
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/repository.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/State
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/state.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/SyntaxHighlighter
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/syntaxhighlighter.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/Theme
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/theme.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/ksyntaxhighlighting_version.h
--rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/WildcardMatcher
 -rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting/wildcardmatcher.h
+-rw-r--r-- root/root    usr/include/KF6/KSyntaxHighlighting/ksyntaxhighlighting_version.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KF6SyntaxHighlighting/
 -rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingTargets-release.cmake
--rwxr-xr-x root/root    usr/lib/libKF6SyntaxHighlighting.so.6.26.0
-lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so.6 -> libKF6SyntaxHighlighting.so.6.26.0
+-rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so -> libKF6SyntaxHighlighting.so.6
+lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so.6 -> libKF6SyntaxHighlighting.so.6.27.0
+-rwxr-xr-x root/root    usr/lib/libKF6SyntaxHighlighting.so.6.27.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/

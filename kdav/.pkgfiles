@@ -1,10 +1,11 @@
-kdav-6.26.0-1
+kdav-6.27.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
 drwxr-xr-x root/root    usr/include/KF6/KDAV/
 drwxr-xr-x root/root    usr/include/KF6/KDAV/KDAV/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavCollection
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavCollectionCreateJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavCollectionDeleteJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavCollectionModifyJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavCollectionsFetchJob
@@ -26,6 +27,7 @@ drwxr-xr-x root/root    usr/include/KF6/KDAV/KDAV/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/ProtocolInfo
 drwxr-xr-x root/root    usr/include/KF6/KDAV/kdav/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davcollection.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davcollectioncreatejob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davcollectiondeletejob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davcollectionmodifyjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davcollectionsfetchjob.h
@@ -55,8 +57,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6DAV/
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6DAV.so -> libKF6DAV.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.26.0
--rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.26.0
+lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.27.0
+-rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.27.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/kdav.categories
