@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A GTK+ audio player for GNU/Linux"
 homepage="https://deadbeef.sourceforge.io/"
 maintainer="Vylen Linux Team"
@@ -5,52 +8,54 @@ maintainer="Vylen Linux Team"
 name=deadbeef
 version=1.10.2
 release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.bz2"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version 
+	# shellcheck disable=SC2164
+	cd "${name}-${version}"
 
-	export CC=clang CXX=clang++
-	export PKG_CONFIG_PATH="/usr/lib/ffmpeg6/pkgconfig/:$PKG_CONFIG_PATH"
+    export CC=clang CXX=clang++
+    export PKG_CONFIG_PATH="/usr/lib/ffmpeg6/pkgconfig/:${PKG_CONFIG_PATH}"
 
-	./configure \
-	 	--prefix=/usr \
-		--disable-static \
-		--disable-staticlink \
-		--disable-portable \
-		--disable-rpath \
-		--disable-libmad \
-		--disable-gtk2 \
-		--disable-adplug \
-		--disable-coreaudio \
-		--disable-dumb \
-		--disable-alac \
-		--disable-ffap \
-		--disable-gme \
-		--disable-mms \
-		--disable-mono2stereo \
-		--disable-psf \
-		--disable-rgscanner \
-		--disable-shn \
-		--disable-sid \
-		--disable-sndfile \
-		--disable-soundtouch \
-		--disable-src \
-		--disable-tta \
-		--disable-vfs-zip \
-		--disable-vtx \
-		--disable-wildmidi \
-		--disable-wma \
-		--enable-alsa \
-		--enable-vorbis \
-		--enable-threads \
-		--enable-flac \
-		--enable-ffmpeg \
-		--enable-gtk3 \
-		--enable-vfs-curl \
-		--enable-shared \
-		--enable-m3u \
-		--enable-pltbrowser 
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --disable-staticlink \
+        --disable-portable \
+        --disable-rpath \
+        --disable-libmad \
+        --disable-gtk2 \
+        --disable-adplug \
+        --disable-coreaudio \
+        --disable-dumb \
+        --disable-alac \
+        --disable-ffap \
+        --disable-gme \
+        --disable-mms \
+        --disable-mono2stereo \
+        --disable-psf \
+        --disable-rgscanner \
+        --disable-shn \
+        --disable-sid \
+        --disable-sndfile \
+        --disable-soundtouch \
+        --disable-src \
+        --disable-tta \
+        --disable-vfs-zip \
+        --disable-vtx \
+        --disable-wildmidi \
+        --disable-wma \
+        --enable-alsa \
+        --enable-vorbis \
+        --enable-threads \
+        --enable-flac \
+        --enable-ffmpeg \
+        --enable-gtk3 \
+        --enable-vfs-curl \
+        --enable-shared \
+        --enable-m3u \
+        --enable-pltbrowser
+
+    make
+    make DESTDIR="${PKG}" install
 }
