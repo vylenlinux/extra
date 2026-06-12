@@ -6,8 +6,8 @@ maintainer="Vylen Linux Team"
 homepage="https://flatpak.org"
 
 name=flatpak
-version=1.16.6
-release=2
+version=1.18.0
+release=1
 
 source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz
     https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -34,6 +34,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm644 "${SRC}/${name}-bindir.sh"   -t "${PKG}/etc/profile.d/"
+    install -Dm644 "${SRC}/${name}-bindir.sh" -t "${PKG}/etc/profile.d/"
     install -Dm644 "${SRC}/flathub.flatpakrepo" -t "${PKG}/usr/share/${name}/remotes.d/"
 }
