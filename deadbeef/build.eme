@@ -6,13 +6,13 @@ homepage="https://deadbeef.sourceforge.io/"
 maintainer="Vylen Linux Team"
 
 name=deadbeef
-version=1.10.2
+version=1.10.3
 release=1
 source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	# shellcheck disable=SC2164
-	cd "${name}-${version}"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
     export CC=clang CXX=clang++
     export PKG_CONFIG_PATH="/usr/lib/ffmpeg6/pkgconfig/:${PKG_CONFIG_PATH}"
