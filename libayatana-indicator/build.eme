@@ -1,23 +1,27 @@
-description="Ayatana Indicators Shared Library "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Ayatana Indicators Shared Library"
 homepage="https://github.com/AyatanaIndicators/libayatana-indicator"
 maintainer="Vylen Linux Team"
 
 name=libayatana-indicator
-version=0.9.4
+version=0.9.5
 release=1
-source="https://github.com/AyatanaIndicators/libayatana-indicator/archive/$version/${name}-${version}.tar.gz"
+source="https://github.com/AyatanaIndicators/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DBUILD_SHARED_LIBS=True \
-		-DENABLE_TESTS=OFF \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DBUILD_SHARED_LIBS=True \
+        -DENABLE_TESTS=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
