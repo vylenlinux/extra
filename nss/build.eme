@@ -6,7 +6,7 @@ homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
 maintainer="Vylen Linux Team"
 
 name=nss
-version=3.124
+version=3.125
 release=1
 
 source="https://ftp.mozilla.org/pub/security/nss/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz
@@ -33,22 +33,17 @@ build() {
     # shellcheck disable=SC2164
     cd ../dist
 
-    install -d "${PKG}/usr/lib"
-    install -v -m755 Linux*/lib/*.so "${PKG}/usr/lib"
-
-    for xx in Linux*/lib/*.chk Linux*/lib/libfreebl.a; do
-        install -v -m644 "${xx}" "${PKG}/usr/lib"
+    for xx in Linux*/lib/*.chk Linux*/lib/libfreebl.a Linux*/lib/*.so; do
+        install -Dm644 "${xx}" -t "${PKG}/usr/lib/"
     done
 
     install -dm755 "${PKG}/usr/include/nss"
-    cp -v -RL public/nss/* "${PKG}/usr/include/nss"
-    cp -v -RL private/nss/* "${PKG}/usr/include/nss"
+    cp -RL public/nss/* "${PKG}/usr/include/nss"
+    cp -RL private/nss/* "${PKG}/usr/include/nss"
     chmod 644 "${PKG}/usr/include/nss"/*
 
-    install -d "${PKG}/usr/bin"
-
     for xx in certutil nss-config pk12util; do
-        install -m755 Linux*/"bin/${xx}" "${PKG}/usr/bin"
+        install -Dm755 Linux*/"bin/${xx}" -t "${PKG}/usr/bin/"
     done
 
     install -Dm644 Linux*/lib/pkgconfig/nss.pc -t "${PKG}/usr/lib/pkgconfig/"
