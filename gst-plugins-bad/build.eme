@@ -6,12 +6,15 @@ homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=gst-plugins-bad
-version=1.28.3
+version=1.28.4
 release=1
 source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
 build() {
-    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types -Wno-implicit-int -Wno-declaration-missing-parameter-type"
+    export CFLAGS="${CFLAGS} \
+        -Wno-incompatible-pointer-types \
+        -Wno-implicit-int \
+        -Wno-declaration-missing-parameter-type"
 
     vylen-meson "${name}-${version}" build \
         -Ddoc=disabled \
