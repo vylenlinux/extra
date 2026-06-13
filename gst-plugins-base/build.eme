@@ -6,7 +6,7 @@ homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=gst-plugins-base
-version=1.28.3
+version=1.28.4
 release=1
 source="http://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
