@@ -23,7 +23,7 @@ build() {
     export CXX="g++ -m32 -mstackrealign"
     export CFLAGS="${CFLAGS} -Wno-error=parentheses"
 
-    mkdir -v build
+    mkdir build
     # shellcheck disable=SC2164
     cd build
 
@@ -50,16 +50,15 @@ build() {
     make install_root="${PWD}/DESTDIR" install
 
     install -dm755 "${PKG}/usr/lib32"
-    cp -Rv DESTDIR/usr/lib32/* "${PKG}/usr/lib32/"
+    cp -R DESTDIR/usr/lib32/* "${PKG}/usr/lib32/"
 
-    install -dm755 "${PKG}/usr/include/gnu/"
-    install -m644 DESTDIR/usr/include/gnu/lib-names-32.h DESTDIR/usr/include/gnu/stubs-32.h "${PKG}/usr/include/gnu/"
+    install -Dm644 DESTDIR/usr/include/gnu/lib-names-32.h DESTDIR/usr/include/gnu/stubs-32.h -t "${PKG}/usr/include/gnu/"
 
     install -d "${PKG}/lib"
     install -d "${PKG}/etc/ld.so.conf.d"
 
-    ln -sv ../usr/lib32/ld-linux.so.2 "${PKG}/lib/ld-linux.so.2"
-    ln -sv ../lib/locale "${PKG}/usr/lib32/locale"
+    ln -s ../usr/lib32/ld-linux.so.2 "${PKG}/lib/ld-linux.so.2"
+    ln -s ../lib/locale "${PKG}/usr/lib32/locale"
 
     echo "/usr/lib32" > "${PKG}/etc/ld.so.conf.d/lib32.conf"
 }

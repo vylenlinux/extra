@@ -24,7 +24,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    mkdir -v build
+    mkdir build
     # shellcheck disable=SC2164
     cd build
 
@@ -53,11 +53,7 @@ build() {
     # pregenerate C.UTF-8 locale until it is built into glibc
     # (https://sourceware.org/glibc/wiki/Proposals/C.UTF-8)
     elf/ld.so --library-path "${PWD}" locale/localedef -c -f ../localedata/charmaps/UTF-8 -i ../localedata/locales/C ../C.UTF-8/
-    install -d "${PKG}/usr/lib/locale"
-
-    install -m644 ../nscd/nscd.conf \
-        "${SRC}/nsswitch.conf" \
-        -t "${PKG}/etc/"
+    install -Dm644 ../nscd/nscd.conf "${SRC}/nsswitch.conf" -t "${PKG}/etc/"
 
     # supported locales
     sed -e '1,3d' -e 's|/| |g' -e 's|\\| |g' -e 's|^|#|g' ../localedata/SUPPORTED >> "${PKG}/etc/locales"
