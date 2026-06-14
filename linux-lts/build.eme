@@ -9,15 +9,15 @@ name=linux-lts
 version=6.18.35
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.0}.x/linux-${version%.*}.tar.xz
+source="https://cdn.kernel.org/pub/linux/kernel/v${version}.x/linux-${version%.*}.tar.xz
     x86_64-dotconfig"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name%-*}-${version%.0}"
+    cd "${name%-*}-${version}"
     make mrproper
 
-    cbuild_restore "${SRC}/${name}-${version%.0}/.config" || cp "${SRC}/x86_64-dotconfig" .config
+    cbuild_restore "${SRC}/${name}-${version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
@@ -37,7 +37,7 @@ build() {
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}" modules_install
 
-    cbuild_save "${SRC}/${name%-*}-${version%.0}/.config"
+    cbuild_save "${SRC}/${name%-*}-${version}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
@@ -52,7 +52,7 @@ build() {
     for file in $(ls arch); do
         case "${file}" in
             x86 | Kconfig) continue ;;
-            *) rm -fr "arch/${file}" ;;
+            *) rm -rf "arch/${file}" ;;
         esac
     done
 
@@ -63,30 +63,33 @@ build() {
 
     rm -f .*.d
 
-    rm -fr firmware ipc .config.old .version .cocciconfig \
+    rm -rf firmware ipc .config.old .version .cocciconfig \
         .get_maintainer.ignore .gitattributes .gitignore .mailmap \
         COPYING CREDITS MAINTAINERS README Documentation
 
     find . -name ".gitignore" -exec rm "{}" \;
 
     for dir in block certs crypto drivers fs init kernel lib mm net samples security sound usr virt; do
-        find "${dir}" -type f \( -name "*.c" -o -name "*.h" \) -exec rm "{}" \;
+        find "${dir}" -type f \( \
+            -name "*.c" -o \
+            -name "*.h" \
+        \) -exec rm "{}" \;
     done
 
     # shellcheck disable=SC2045
     for i in $(ls tools); do
-        [ "${i}" = "objtool" ] || rm -fr "tools/${i}"
+        [ "${i}" = "objtool" ] || rm -rf "tools/${i}"
     done
 
     # shellcheck disable=SC2045
     for i in $(ls tools/objtool); do
-        [ "${i}" = "objtool" ] || rm -fr "tools/objtool/${i}"
+        [ "${i}" = "objtool" ] || rm -rf "tools/objtool/${i}"
     done
 
     kernver="${version}-${name}"
     rm "${PKG}/lib/modules/${kernver}/build"
-    mv "${SRC}/linux-${version%.0}" "${PKG}/lib/modules/${kernver}/build"
-    ln -sv build "${PKG}/lib/modules/${kernver}/source"
+    mv "${SRC}/linux-${version}" "${PKG}/lib/modules/${kernver}/build"
+    ln -s build "${PKG}/lib/modules/${kernver}/source"
 
     # remove now broken symlinks
     find -L "${PKG}/lib/modules/${kernver}/build" -type l -exec rm -f "{}" \;
