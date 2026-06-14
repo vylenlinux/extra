@@ -6,13 +6,13 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-api-headers
-version=7.1.0
+version=7.1
 release=1
-source="https://www.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version%.0}.tar.xz"
+source="https://www.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "linux-${version%.0}"
+    cd "linux-${version}"
 
     make mrproper
     make headers
