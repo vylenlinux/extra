@@ -1,4 +1,4 @@
-linux-api-headers-7.0-1
+linux-api-headers-7.1.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/asm-generic/
@@ -116,6 +116,7 @@ drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/drm.h
 -rw-r--r-- root/root    usr/include/drm/drm_fourcc.h
 -rw-r--r-- root/root    usr/include/drm/drm_mode.h
+-rw-r--r-- root/root    usr/include/drm/drm_ras.h
 -rw-r--r-- root/root    usr/include/drm/drm_sarea.h
 -rw-r--r-- root/root    usr/include/drm/ethosu_accel.h
 -rw-r--r-- root/root    usr/include/drm/etnaviv_drm.h
@@ -143,6 +144,7 @@ drwxr-xr-x root/root    usr/include/drm/
 -rw-r--r-- root/root    usr/include/drm/vmwgfx_drm.h
 -rw-r--r-- root/root    usr/include/drm/xe_drm.h
 drwxr-xr-x root/root    usr/include/fwctl/
+-rw-r--r-- root/root    usr/include/fwctl/bnxt.h
 -rw-r--r-- root/root    usr/include/fwctl/cxl.h
 -rw-r--r-- root/root    usr/include/fwctl/fwctl.h
 -rw-r--r-- root/root    usr/include/fwctl/mlx5.h
@@ -196,7 +198,6 @@ drwxr-xr-x root/root    usr/include/linux/android/
 -rw-r--r-- root/root    usr/include/linux/ax25.h
 -rw-r--r-- root/root    usr/include/linux/batadv_packet.h
 -rw-r--r-- root/root    usr/include/linux/batman_adv.h
--rw-r--r-- root/root    usr/include/linux/baycom.h
 -rw-r--r-- root/root    usr/include/linux/bcm933xx_hcs.h
 -rw-r--r-- root/root    usr/include/linux/bfs_fs.h
 -rw-r--r-- root/root    usr/include/linux/binfmts.h
@@ -219,9 +220,6 @@ drwxr-xr-x root/root    usr/include/linux/byteorder/
 -rw-r--r-- root/root    usr/include/linux/byteorder/big_endian.h
 -rw-r--r-- root/root    usr/include/linux/byteorder/little_endian.h
 -rw-r--r-- root/root    usr/include/linux/cachefiles.h
-drwxr-xr-x root/root    usr/include/linux/caif/
--rw-r--r-- root/root    usr/include/linux/caif/caif_socket.h
--rw-r--r-- root/root    usr/include/linux/caif/if_caif.h
 -rw-r--r-- root/root    usr/include/linux/can.h
 drwxr-xr-x root/root    usr/include/linux/can/
 -rw-r--r-- root/root    usr/include/linux/can/bcm.h
@@ -233,7 +231,6 @@ drwxr-xr-x root/root    usr/include/linux/can/
 -rw-r--r-- root/root    usr/include/linux/can/raw.h
 -rw-r--r-- root/root    usr/include/linux/can/vxcan.h
 -rw-r--r-- root/root    usr/include/linux/capability.h
--rw-r--r-- root/root    usr/include/linux/capi.h
 -rw-r--r-- root/root    usr/include/linux/cciss_defs.h
 -rw-r--r-- root/root    usr/include/linux/cciss_ioctl.h
 -rw-r--r-- root/root    usr/include/linux/ccs.h
@@ -344,7 +341,6 @@ drwxr-xr-x root/root    usr/include/linux/genwqe/
 -rw-r--r-- root/root    usr/include/linux/hdlc.h
 drwxr-xr-x root/root    usr/include/linux/hdlc/
 -rw-r--r-- root/root    usr/include/linux/hdlc/ioctl.h
--rw-r--r-- root/root    usr/include/linux/hdlcdrv.h
 -rw-r--r-- root/root    usr/include/linux/hdreg.h
 -rw-r--r-- root/root    usr/include/linux/hid.h
 -rw-r--r-- root/root    usr/include/linux/hiddev.h
@@ -412,6 +408,7 @@ drwxr-xr-x root/root    usr/include/linux/io_uring/
 -rw-r--r-- root/root    usr/include/linux/io_uring/bpf_filter.h
 -rw-r--r-- root/root    usr/include/linux/io_uring/mock_file.h
 -rw-r--r-- root/root    usr/include/linux/io_uring/query.h
+-rw-r--r-- root/root    usr/include/linux/io_uring/zcrx.h
 -rw-r--r-- root/root    usr/include/linux/ioam6.h
 -rw-r--r-- root/root    usr/include/linux/ioam6_genl.h
 -rw-r--r-- root/root    usr/include/linux/ioam6_iptunnel.h
@@ -430,8 +427,6 @@ drwxr-xr-x root/root    usr/include/linux/io_uring/
 -rw-r--r-- root/root    usr/include/linux/ipv6.h
 -rw-r--r-- root/root    usr/include/linux/ipv6_route.h
 -rw-r--r-- root/root    usr/include/linux/irqnr.h
-drwxr-xr-x root/root    usr/include/linux/isdn/
--rw-r--r-- root/root    usr/include/linux/isdn/capicmd.h
 -rw-r--r-- root/root    usr/include/linux/iso_fs.h
 -rw-r--r-- root/root    usr/include/linux/isst_if.h
 -rw-r--r-- root/root    usr/include/linux/ivtv.h
@@ -445,7 +440,6 @@ drwxr-xr-x root/root    usr/include/linux/isdn/
 -rw-r--r-- root/root    usr/include/linux/kdev_t.h
 -rw-r--r-- root/root    usr/include/linux/kernel-page-flags.h
 -rw-r--r-- root/root    usr/include/linux/kernel.h
--rw-r--r-- root/root    usr/include/linux/kernelcapi.h
 -rw-r--r-- root/root    usr/include/linux/kexec.h
 -rw-r--r-- root/root    usr/include/linux/keyboard.h
 -rw-r--r-- root/root    usr/include/linux/keyctl.h
@@ -502,6 +496,7 @@ drwxr-xr-x root/root    usr/include/linux/mmc/
 -rw-r--r-- root/root    usr/include/linux/mmc/ioctl.h
 -rw-r--r-- root/root    usr/include/linux/mmtimer.h
 -rw-r--r-- root/root    usr/include/linux/module.h
+-rw-r--r-- root/root    usr/include/linux/module_signature.h
 -rw-r--r-- root/root    usr/include/linux/mount.h
 -rw-r--r-- root/root    usr/include/linux/mpls.h
 -rw-r--r-- root/root    usr/include/linux/mpls_iptunnel.h
@@ -676,7 +671,6 @@ drwxr-xr-x root/root    usr/include/linux/netfilter_ipv6/
 -rw-r--r-- root/root    usr/include/linux/netfilter_ipv6/ip6t_srh.h
 -rw-r--r-- root/root    usr/include/linux/netlink.h
 -rw-r--r-- root/root    usr/include/linux/netlink_diag.h
--rw-r--r-- root/root    usr/include/linux/netrom.h
 -rw-r--r-- root/root    usr/include/linux/nexthop.h
 -rw-r--r-- root/root    usr/include/linux/nfc.h
 -rw-r--r-- root/root    usr/include/linux/nfs.h
@@ -772,7 +766,6 @@ drwxr-xr-x root/root    usr/include/linux/raid/
 -rw-r--r-- root/root    usr/include/linux/rio_mport_cdev.h
 -rw-r--r-- root/root    usr/include/linux/rkisp1-config.h
 -rw-r--r-- root/root    usr/include/linux/romfs_fs.h
--rw-r--r-- root/root    usr/include/linux/rose.h
 -rw-r--r-- root/root    usr/include/linux/route.h
 -rw-r--r-- root/root    usr/include/linux/rpl.h
 -rw-r--r-- root/root    usr/include/linux/rpl_iptunnel.h
@@ -782,7 +775,6 @@ drwxr-xr-x root/root    usr/include/linux/raid/
 -rw-r--r-- root/root    usr/include/linux/rtc.h
 -rw-r--r-- root/root    usr/include/linux/rtnetlink.h
 -rw-r--r-- root/root    usr/include/linux/rxrpc.h
--rw-r--r-- root/root    usr/include/linux/scc.h
 -rw-r--r-- root/root    usr/include/linux/sched.h
 drwxr-xr-x root/root    usr/include/linux/sched/
 -rw-r--r-- root/root    usr/include/linux/sched/types.h
