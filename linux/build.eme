@@ -6,10 +6,10 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux
-version=7.0.12
+version=7.1.0
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/${name%-*}-${version%.0}.tar.xz
+source="https://cdn.kernel.org/pub/${name}/kernel/v${version%%.*}.x/${name%-*}-${version%.0}.tar.xz
     x86_64-dotconfig"
 
 build() {
