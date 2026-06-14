@@ -6,11 +6,11 @@ homepage="https://chromium.googlesource.com/chromium/third_party/ffmpeg"
 maintainer="Vylen Linux Team"
 
 name=vivaldi-ffmpeg-codecs
-version=148.0.7778.183
+version=148.0.7778.256
 release=1
 
 _vivaldi_major_version=8.0
-commit="b5e18fb9da84e26ceef30d4e4886696bf59337c0"
+commit="f45bab87ce4c5fafc67fd53fcde777578d01bfa0"
 
 source="${name}-${version}.tar.gz::https://chromium.googlesource.com/chromium/third_party/ffmpeg/+archive/${commit}.tar.gz"
 
@@ -54,6 +54,6 @@ build() {
     DESTDIR=build make install
 
     # shellcheck disable=SC2086
-    gcc $LTOFLAGS -shared $LDFLAGS -Wl,--start-group build/libavcodec.a build/libavformat.a build/libavutil.a build/libswresample.a -Wl,--end-group "$(sed 's/^/-Wl,-u,/' "sigs.txt" | paste -sd ' ' -)" -Wl,--version-script=export.map -lm -Wl,-Bsymbolic -o build/libffmpeg.so
+    gcc ${LTOFLAGS} -shared ${LDFLAGS} -Wl,--start-group build/libavcodec.a build/libavformat.a build/libavutil.a build/libswresample.a -Wl,--end-group "$(sed 's/^/-Wl,-u,/' sigs.txt | paste -sd ' ' -)" -Wl,--version-script=export.map -lm -Wl,-Bsymbolic -o build/libffmpeg.so
     install -Dm644 build/libffmpeg.so "${PKG}/opt/vivaldi/libffmpeg.so.${_vivaldi_major_version}"
 }
