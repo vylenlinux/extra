@@ -17,8 +17,9 @@ source="${name}-${version}.tar.gz::https://chromium.googlesource.com/chromium/th
 build() {
     grep -o 'av[a-z0-9_]*(' chromium/ffmpeg.sigs | sed 's/($//' > sigs.txt
     printf '%s\n' "avformat_version" "avutil_version" "ff_h264_decode_init_vlc" >> sigs.txt
+
     printf '{\nglobal:\n' > export.map
-    sed 's/$/;/' "sigs.txt" >> export.map
+    sed 's/$/;/' sigs.txt >> export.map
     printf 'local:\n*;\n};\n' >> export.map
     sed -i.bak 's/^ *\.p\.name *=.*/.p.name="libopus",/' libavcodec/opus/dec.c
     diff libavcodec/opus/dec.c.bak libavcodec/opus/dec.c || :
@@ -48,7 +49,7 @@ build() {
         --enable-demuxer=ogg,matroska,webm,wav,flac,mp3,mov,aac \
         --enable-decoder=vorbis,opus,flac,pcm_s16le,mp3,aac,h264 \
         --enable-parser=aac,flac,h264,mpegaudio,opus,vorbis,vp9 \
-        --extra-cflags="-DCHROMIUM_NO_LOGGING -fno-math-errno -fno-signed-zeros -fno-semantic-interposition -fomit-frame-pointer $LTOFLAGS" \
+        --extra-cflags="-DCHROMIUM_NO_LOGGING -fno-math-errno -fno-signed-zeros -fno-semantic-interposition -fomit-frame-pointer ${LTOFLAGS}" \
         --libdir=/
 
     DESTDIR=build make install
