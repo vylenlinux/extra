@@ -9,7 +9,7 @@ name=linux-lts
 version=6.18.35
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v${version}.x/linux-${version%.*}.tar.xz
+source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz
     x86_64-dotconfig"
 
 build() {
@@ -86,7 +86,7 @@ build() {
         [ "${i}" = "objtool" ] || rm -rf "tools/objtool/${i}"
     done
 
-    kernver="${version}-${name}"
+    kernver="$(make -s kernelrelease)-lts"
     rm "${PKG}/lib/modules/${kernver}/build"
     mv "${SRC}/linux-${version}" "${PKG}/lib/modules/${kernver}/build"
     ln -s build "${PKG}/lib/modules/${kernver}/source"
