@@ -61,7 +61,7 @@ build() {
 
     # vendor
     vendorjs="${PKG}/usr/lib/${name}/browser/defaults/preferences/"
-    install -Dvm644 /dev/stdin "${SRC}/vendor.js" -t "${vendorjs}"
+    install -Dm644 /dev/stdin "${SRC}/vendor.js" -t "${vendorjs}"
 
     # distribution
     distini="${PKG}/usr/lib/${name}/distribution/"
@@ -70,7 +70,7 @@ build() {
          -e "s|@VERSION@|${version}|" \
          -e "s|@NAME@|${name}|" \
          "${SRC}/distribution.ini" \
-    | install -Dvm644 /dev/stdin "${SRC}/distribution.ini" -t "${distini}"
+    | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${distini}"
 
     # add icons
     for i in 16 22 24 32 48 64 128 256; do
@@ -80,7 +80,6 @@ build() {
     install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/applications/"
 
     # remove crap
-    # rm -r $PKG/usr/lib/firefox/browser/features
     rm -f "${PKG}/usr/lib/firefox/removed-files"
 
     # exclude library for revdep.
