@@ -1,4 +1,4 @@
-firefox-151.0.4-1
+firefox-152.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/revdep.d/
 -rw-r--r-- root/root    etc/revdep.d/firefox.conf
@@ -50,6 +50,7 @@ drwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/0.1/
 -rwxr-xr-x root/root    usr/lib/firefox/pingsender
 -rw-r--r-- root/root    usr/lib/firefox/platform.ini
 -rwxr-xr-x root/root    usr/lib/firefox/vaapitest
+-rwxr-xr-x root/root    usr/lib/firefox/vulkantest
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/firefox.desktop
