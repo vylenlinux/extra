@@ -6,18 +6,15 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=6.8.5
+version=6.9.3
 release=1
 
-td_commit=49b3bcbb6bfebf2ed44dd9f25102d2e1a94a58c4
+td_commit=51743dfd01dff6179e2d8f7095729caa4e2222e9
 
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
-    https://github.com/tdlib/td/archive/${td_commit}.tar.gz
-    minizip.patch"
+    https://github.com/tdlib/td/archive/${td_commit}.tar.gz"
 
 build() {
-    patch -Np1 -d "tdesktop-${version}-full/Telegram/lib_base" -i "${SRC}/minizip.patch"
-
     cmake -S "${SRC}/td-${td_commit}" -B "${SRC}/td-${td_commit}/build" \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX="${SRC}/td-${td_commit}/install" \
