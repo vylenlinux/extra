@@ -86,7 +86,7 @@ build() {
         [ "${i}" = "objtool" ] || rm -rf "tools/objtool/${i}"
     done
 
-    kernver="$(make -s kernelrelease)-lts"
+    kernver="$(make -s kernelrelease)"
     rm "${PKG}/lib/modules/${kernver}/build"
     mv "${SRC}/linux-${version}" "${PKG}/lib/modules/${kernver}/build"
     ln -s build "${PKG}/lib/modules/${kernver}/source"
