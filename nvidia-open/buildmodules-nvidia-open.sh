@@ -15,7 +15,7 @@ dkms_install() {
     # shellcheck disable=SC2045
     kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
 
-    [ -z "${kernver}" ] || kernver=$(uname -r)
+    [ -n "${kernver}" ] || kernver=$(uname -r)
     echo "dkms: building nvidia modules for kernel ${kernver}..."
 
     dkms add     -m @name@ -v @version@ -k "${kernver}" >/dev/null 2>&1
