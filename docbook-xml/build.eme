@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Document type definitions for verification of XML data files against the DocBook rule set"
 homepage="https://www.oasis-open.org/docbook/"
 maintainer="Vylen Linux Team"
@@ -5,85 +8,85 @@ maintainer="Vylen Linux Team"
 name=docbook-xml
 version=4.5
 release=1
-noextract="docbook-xml-4.5.zip
-	docbook-xml-4.4.zip
-	docbook-xml-4.3.zip
-	docbook-xml-4.2.zip
-	docbkx412.zip"
-source="https://www.oasis-open.org/docbook/xml/4.5/$name-$version.zip
-        https://www.oasis-open.org/docbook/xml/4.4/$name-4.4.zip
-        https://www.oasis-open.org/docbook/xml/4.3/$name-4.3.zip
-        https://www.oasis-open.org/docbook/xml/4.2/$name-4.2.zip
-        https://www.oasis-open.org/docbook/xml/4.1.2/docbkx412.zip"
+
+source="https://www.oasis-open.org/docbook/xml/${version}/${name}-${version}.zip
+    https://www.oasis-open.org/docbook/xml/4.4/${name}-4.4.zip
+    https://www.oasis-open.org/docbook/xml/4.3/${name}-4.3.zip
+    https://www.oasis-open.org/docbook/xml/4.2/${name}-4.2.zip
+    ${name}-4.1.2.zip::https://www.oasis-open.org/docbook/xml/4.1.2/docbkx412.zip"
+
+noextract="${name}-${version}.zip
+    ${name}-4.4.zip
+    ${name}-4.3.zip
+    ${name}-4.2.zip
+    ${name}-4.1.2.zip"
 
 build() {
-	for ver in 4.5 4.4 4.3 4.2; do
-		mkdir docbook-xml-$ver
-		cd docbook-xml-$ver
-		bsdtar -xf $SRC/docbook-xml-$ver.zip
-		install -v -d -m755 $PKG/usr/share/xml/docbook/xml-dtd-$ver
-		chown -R root:root .
-		cp -v -af docbook.cat *.dtd ent/ *.mod \
-			$PKG/usr/share/xml/docbook/xml-dtd-$ver/
-		cd -
-	done
+    for file in "${name}:${version}" "${name}:4.4" "${name}:4.3" "${name}:4.2" "${name}:4.1.2"; do
+        file_name="${file%%:*}"
+        file_version="${file##*:}"
 
-	mkdir docbook-xml-4.1.2
-	cd docbook-xml-4.1.2
-	bsdtar -xf $SRC/docbkx412.zip
-	install -v -d -m755 $PKG/usr/share/xml/docbook/xml-dtd-4.1.2
-	chown -R root:root .
-	cp -v -af docbook.cat *.dtd ent/ *.mod \
-		$PKG/usr/share/xml/docbook/xml-dtd-4.1.2/
-	cd -
+        dir="${file_name}-${file_version}"
+        mkdir "${dir}"
 
-	install -v -d -m755 $PKG/etc/xml
-	xmlcatalog --noout --create $PKG/etc/xml/docbook
+        # shellcheck disable=SC2164
+        cd "${dir}"
+            bsdtar -xf "${SRC}/${dir}.zip"
+            install -dm755 "${PKG}/usr/share/xml/docbook/xml-dtd-${file_version}"
 
-	for vers in 4.1.2 4.2 4.3 4.4 4.5; do
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//DTD DocBook XML V$vers//EN" \
-	    "http://www.oasis-open.org/docbook/xml/$vers/docbookx.dtd" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//DTD DocBook XML CALS Table Model V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/calstblx.dtd" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//DTD XML Exchange Table Model 19990315//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/soextblx.dtd" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ELEMENTS DocBook XML Information Pool V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/dbpoolx.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ELEMENTS DocBook XML Document Hierarchy V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/dbhierx.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ELEMENTS DocBook XML HTML Tables V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/htmltblx.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ENTITIES DocBook XML Notations V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/dbnotnx.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ENTITIES DocBook XML Character Entities V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/dbcentx.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "public" \
-	    "-//OASIS//ENTITIES DocBook XML Additional General Entities V$vers//EN" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers/dbgenent.mod" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "rewriteSystem" \
-	    "http://www.oasis-open.org/docbook/xml/$vers" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers" \
-	    $PKG/etc/xml/docbook
-	xmlcatalog --noout --add "rewriteURI" \
-	    "http://www.oasis-open.org/docbook/xml/$vers" \
-	    "file:///usr/share/xml/docbook/xml-dtd-$vers" \
-	    $PKG/etc/xml/docbook
-	done
+            chown -R root:root .
+            # shellcheck disable=SC2035
+            cp -af docbook.cat *.dtd ent/ *.mod "${PKG}/usr/share/xml/docbook/xml-dtd-${file_version}"
+        # shellcheck disable=SC2103
+        cd ..
+    done
+
+    install -dm755 "${PKG}/etc/xml"
+    xmlcatalog --noout --create "${PKG}/etc/xml/docbook"
+
+    for _version in 4.1.2 4.2 4.3 4.4 "${version}"; do
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//DTD DocBook XML V${_version}//EN" \
+            "http://www.oasis-open.org/docbook/xml/${_version}/docbookx.dtd" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//DTD DocBook XML CALS Table Model V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/calstblx.dtd" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//DTD XML Exchange Table Model 19990315//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/soextblx.dtd" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ELEMENTS DocBook XML Information Pool V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/dbpoolx.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ELEMENTS DocBook XML Document Hierarchy V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/dbhierx.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ELEMENTS DocBook XML HTML Tables V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/htmltblx.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ENTITIES DocBook XML Notations V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/dbnotnx.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ENTITIES DocBook XML Character Entities V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/dbcentx.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "public" \
+            "-//OASIS//ENTITIES DocBook XML Additional General Entities V${_version}//EN" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}/dbgenent.mod" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "rewriteSystem" \
+            "http://www.oasis-open.org/docbook/xml/${_version}" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}" "${PKG}/etc/xml/docbook"
+
+        xmlcatalog --noout --add "rewriteURI" \
+            "http://www.oasis-open.org/docbook/xml/${_version}" \
+            "file:///usr/share/xml/docbook/xml-dtd-${_version}" "${PKG}/etc/xml/docbook"
+    done
 }
