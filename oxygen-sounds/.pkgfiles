@@ -1,8 +1,7 @@
-oxygen-sounds-6.6.5-1
+oxygen-sounds-6.7.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/sounds/
-drwxr-xr-x root/root    usr/share/sounds/oxygen/
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Cant-Connect.ogg -> oxygen/stereo/message-connectivity-error.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Connection-Lost.ogg -> oxygen/stereo/message-connectivity-lost.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Contact-In.ogg -> oxygen/stereo/message-contact-in.ogg
@@ -20,17 +19,48 @@ lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Nudge.ogg -> oxygen/stereo/me
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Phone-Ring.ogg -> oxygen/stereo/phone-incoming-call.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-Sms.ogg -> oxygen/stereo/message-new-sms.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Im-User-Auth.ogg -> oxygen/stereo/service-login.ogg
--rw-r--r-- root/root    usr/share/sounds/oxygen/index.theme
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-K3B-Finish-Error.ogg -> oxygen/stereo/complete-media-error.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-K3B-Finish-Success.ogg -> oxygen/stereo/complete-media-burn.ogg
 lrwxrwxrwx root/root    usr/share/sounds/Oxygen-K3B-Insert-Medium.ogg -> oxygen/stereo/device-added.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Critical.ogg -> oxygen/stereo/dialog-error-critical.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Serious-Very.ogg -> oxygen/stereo/dialog-error-veryserious.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Serious.ogg -> oxygen/stereo/dialog-error-serious.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error.ogg -> oxygen/stereo/dialog-error.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Message.ogg -> oxygen/stereo/dialog-information.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Negative.ogg -> oxygen/stereo/outcome-failure.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Positive.ogg -> oxygen/stereo/outcome-success.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Error-Printing.ogg -> oxygen/stereo/print-error.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-File-Open-Foes.ogg -> oxygen/stereo/file-error.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-End.ogg -> oxygen/stereo/completion-rotation.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-Match-Multiple.ogg -> oxygen/stereo/completion-success.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-Match-No.ogg -> oxygen/stereo/completion-fail.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In-Long.ogg -> oxygen/stereo/desktop-login-long.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In-Short.ogg -> oxygen/stereo/desktop-login-short.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In.ogg -> oxygen/stereo/desktop-login.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-Out-Long.ogg -> oxygen/stereo/desktop-logout.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-Out.ogg -> oxygen/stereo/service-logout.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Question.ogg -> oxygen/stereo/dialog-question.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Special.ogg -> oxygen/stereo/dialog-special.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Trash-Emptied.ogg -> oxygen/stereo/trash-empty.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Warning.ogg -> oxygen/stereo/dialog-warning.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-All-Desktops-Not.ogg -> oxygen/stereo/window-unpin.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-All-Desktops.ogg -> oxygen/stereo/window-pin.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Close.ogg -> oxygen/stereo/window-close.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Maximize.ogg -> oxygen/stereo/window-maximized.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Minimize.ogg -> oxygen/stereo/window-minimized.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Move-Stop.ogg -> oxygen/stereo/window-move-end.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Move.ogg -> oxygen/stereo/window-move-start.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Shade-Down.ogg -> oxygen/stereo/window-shaded.ogg
+lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Shade-Up.ogg -> oxygen/stereo/window-unshaded.ogg
+drwxr-xr-x root/root    usr/share/sounds/oxygen/
+-rw-r--r-- root/root    usr/share/sounds/oxygen/index.theme
 drwxr-xr-x root/root    usr/share/sounds/oxygen/stereo/
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/alarm-clock-elapsed.ogg -> message-new-sms.ogg
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/battery-caution.ogg -> dialog-warning.ogg
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/battery-full.ogg -> outcome-success.ogg
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/battery-low.ogg -> dialog-error-critical.ogg
-lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/bell.ogg -> message-contact-out.ogg
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/bell-window-system.ogg -> message-contact-out.ogg
+lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/bell.ogg -> message-contact-out.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/camera-shutter.wav
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/complete-media-burn.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/complete-media-error.ogg
@@ -38,15 +68,15 @@ lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/bell-window-system.ogg ->
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/completion-rotation.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/completion-success.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/desktop-login-long.ogg
--rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/desktop-login.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/desktop-login-short.ogg
+-rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/desktop-login.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/desktop-logout.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/device-added.ogg
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/device-removed.ogg -> message-new-email.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-error-critical.ogg
--rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-error.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-error-serious.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-error-veryserious.ogg
+-rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-error.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-information.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-question.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/dialog-special.ogg
@@ -57,8 +87,8 @@ lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/game-over-winner.ogg -> o
 lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/media-insert-request.ogg -> device-added.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-attention.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-conectivity-problem.ogg
--rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-connectivity-error.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-connectivity-error-serious.ogg
+-rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-connectivity-error.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-connectivity-lost.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-contact-in.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/message-contact-out.ogg
@@ -89,33 +119,3 @@ lrwxrwxrwx root/root    usr/share/sounds/oxygen/stereo/theme-demo.ogg -> desktop
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/window-shaded.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/window-unpin.ogg
 -rw-r--r-- root/root    usr/share/sounds/oxygen/stereo/window-unshaded.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Critical.ogg -> oxygen/stereo/dialog-error-critical.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error.ogg -> oxygen/stereo/dialog-error.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Serious.ogg -> oxygen/stereo/dialog-error-serious.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Error-Serious-Very.ogg -> oxygen/stereo/dialog-error-veryserious.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Message.ogg -> oxygen/stereo/dialog-information.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Negative.ogg -> oxygen/stereo/outcome-failure.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-App-Positive.ogg -> oxygen/stereo/outcome-success.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Error-Printing.ogg -> oxygen/stereo/print-error.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-File-Open-Foes.ogg -> oxygen/stereo/file-error.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-End.ogg -> oxygen/stereo/completion-rotation.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-Match-Multiple.ogg -> oxygen/stereo/completion-success.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-List-Match-No.ogg -> oxygen/stereo/completion-fail.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In-Long.ogg -> oxygen/stereo/desktop-login-long.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In.ogg -> oxygen/stereo/desktop-login.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-In-Short.ogg -> oxygen/stereo/desktop-login-short.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-Out-Long.ogg -> oxygen/stereo/desktop-logout.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Log-Out.ogg -> oxygen/stereo/service-logout.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Question.ogg -> oxygen/stereo/dialog-question.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Special.ogg -> oxygen/stereo/dialog-special.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Trash-Emptied.ogg -> oxygen/stereo/trash-empty.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Sys-Warning.ogg -> oxygen/stereo/dialog-warning.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-All-Desktops-Not.ogg -> oxygen/stereo/window-unpin.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-All-Desktops.ogg -> oxygen/stereo/window-pin.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Close.ogg -> oxygen/stereo/window-close.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Maximize.ogg -> oxygen/stereo/window-maximized.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Minimize.ogg -> oxygen/stereo/window-minimized.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Move.ogg -> oxygen/stereo/window-move-start.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Move-Stop.ogg -> oxygen/stereo/window-move-end.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Shade-Down.ogg -> oxygen/stereo/window-shaded.ogg
-lrwxrwxrwx root/root    usr/share/sounds/Oxygen-Window-Shade-Up.ogg -> oxygen/stereo/window-unshaded.ogg

@@ -1,4 +1,4 @@
-plasma-disks-6.6.5-1
+plasma-disks-6.7.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/kf6/
@@ -17,10 +17,10 @@ drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/kcm_disks.desktop
 drwxr-xr-x root/root    usr/share/dbus-1/
-drwxr-xr-x root/root    usr/share/dbus-1/system.d/
--rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kded.smart.conf
 drwxr-xr-x root/root    usr/share/dbus-1/system-services/
 -rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.kded.smart.service
+drwxr-xr-x root/root    usr/share/dbus-1/system.d/
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kded.smart.conf
 drwxr-xr-x root/root    usr/share/knotifications6/
 -rw-r--r-- root/root    usr/share/knotifications6/org.kde.kded.smart.notifyrc
 drwxr-xr-x root/root    usr/share/metainfo/

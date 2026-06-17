@@ -1,4 +1,4 @@
-kglobalacceld-6.6.5-1
+kglobalacceld-6.7.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
@@ -6,20 +6,20 @@ drwxr-xr-x root/root    etc/xdg/autostart/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KGlobalAccelD/
--rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld_export.h
--rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld.h
 -rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalaccel_interface.h
+-rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld.h
+-rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld_export.h
 -rw-r--r-- root/root    usr/include/KGlobalAccelD/shortcutkeystate.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KGlobalAccelD/
 -rw-r--r-- root/root    usr/lib/cmake/KGlobalAccelD/KGlobalAccelDConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KGlobalAccelD/KGlobalAccelDConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/KGlobalAccelD/KGlobalAccelDTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KGlobalAccelD/KGlobalAccelDTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/KGlobalAccelD/KGlobalAccelDTargets.cmake
 -rwxr-xr-x root/root    usr/lib/kglobalacceld
-lrwxrwxrwx root/root    usr/lib/libKGlobalAccelD.so.0 -> libKGlobalAccelD.so.6.6.5
--rwxr-xr-x root/root    usr/lib/libKGlobalAccelD.so.6.6.5
+lrwxrwxrwx root/root    usr/lib/libKGlobalAccelD.so.0 -> libKGlobalAccelD.so.6.7.0
+-rwxr-xr-x root/root    usr/lib/libKGlobalAccelD.so.6.7.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/org.kde.kglobalacceld.platforms/
