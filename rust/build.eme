@@ -65,11 +65,11 @@ build() {
     export CARGO_HOME="${SRC}/rust"
     export RUST_BACKTRACE=1
 
-    [ ! -e /usr/include/libssh2.h ] || export LIBSSH2_SYS_USE_PKG_CONFIG=1
-    [ ! -e /usr/include/sqlite3.h ] || export LIBSQLITE3_SYS_USE_PKG_CONFIG=1
+    [ -e /usr/include/libssh2.h ] && export LIBSSH2_SYS_USE_PKG_CONFIG=1
+    [ -e /usr/include/sqlite3.h ] && export LIBSQLITE3_SYS_USE_PKG_CONFIG=1
 
     python3 ./x.py build
-    DESTDIR="${PKG}" python3 ./x.py install -v
+    DESTDIR="${PKG}" python3 ./x.py install
 
     unset LIBSSH2_SYS_USE_PKG_CONFIG \
         LIBSQLITE3_SYS_USE_PKG_CONFIG
