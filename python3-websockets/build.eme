@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Python implementation of the WebSocket Protocol (RFC 6455)"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/aaugustin/websockets"
+
+name=python3-websockets
+version=16.0
+release=1
+source="https://github.com/aaugustin/websockets/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "websockets-${version}"
+
+    python3 -m build --wheel --skip-dependency-check --no-isolation
+    python3 -m installer --destdir="${PKG}" dist/*.whl
+}
