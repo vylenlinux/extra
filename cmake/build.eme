@@ -6,7 +6,7 @@ homepage="https://www.cmake.org/"
 maintainer="Vylen Linux Team"
 
 name=cmake
-version=4.3.3
+version=4.3.4
 release=1
 source="https://www.cmake.org/files/v${version%.*}/${name}-${version}.tar.gz"
 
@@ -21,11 +21,12 @@ build() {
     ./bootstrap \
         --prefix=/usr \
         --datadir="/share/${name}" \
-        --no-system-jsoncpp  \
-        --no-system-cppdap   \
+        --no-system-jsoncpp \
+        --no-system-cppdap \
         --no-system-librhash \
         --system-libs \
-        -- -DCmake_BUILD_LTO=ON \
+        -- \
+        -DCmake_BUILD_LTO=ON \
         -DBUILD_TESTING=OFF
 
     make
