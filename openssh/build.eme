@@ -7,8 +7,10 @@ maintainer="Vylen Linux Team"
 
 name=openssh
 version=10.3p1
-release=2
+release=3
+
 source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz"
+backup="etc/ssh/sshd_config"
 
 build() {
     # shellcheck disable=SC2164
