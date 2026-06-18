@@ -1,4 +1,4 @@
-wireplumber-0.5.14-1
+wireplumber-0.5.15-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/wireplumber
@@ -30,6 +30,7 @@ drwxr-xr-x root/root    usr/include/wireplumber-0.5/wp/
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/object-interest.h
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/object-manager.h
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/object.h
+-rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/permission-manager.h
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/plugin.h
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/port.h
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/proc-utils.h
@@ -50,8 +51,8 @@ drwxr-xr-x root/root    usr/include/wireplumber-0.5/wp/
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/wpversion.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so -> libwireplumber-0.5.so.0
-lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.514.0
--rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.514.0
+lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.515.0
+-rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.515.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/wireplumber-0.5.pc
 drwxr-xr-x root/root    usr/lib/wireplumber-0.5/
@@ -78,9 +79,13 @@ drwxr-xr-x root/root    usr/share/bash-completion/completions/
 drwxr-xr-x root/root    usr/share/wireplumber/
 drwxr-xr-x root/root    usr/share/wireplumber/scripts/
 drwxr-xr-x root/root    usr/share/wireplumber/scripts/client/
--rw-r--r-- root/root    usr/share/wireplumber/scripts/client/access-default.lua
--rw-r--r-- root/root    usr/share/wireplumber/scripts/client/access-portal.lua
--rw-r--r-- root/root    usr/share/wireplumber/scripts/client/access-snap.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/apply-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/find-config-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/find-default-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/find-flatpak-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/find-portal-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/find-snap-access.lua
+-rw-r--r-- root/root    usr/share/wireplumber/scripts/client/select-access.lua
 drwxr-xr-x root/root    usr/share/wireplumber/scripts/default-nodes/
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/default-nodes/apply-default-node.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/default-nodes/find-best-default-node.lua
