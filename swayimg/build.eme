@@ -6,7 +6,7 @@ homepage="https://github.com/artemsen/swayimg"
 maintainer="Vylen Linux Team"
 
 name=swayimg
-version=5.2
+version=5.3
 release=1
 source="https://github.com/artemsen/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
