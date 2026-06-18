@@ -6,16 +6,20 @@ homepage="https://pypi.org/project/greenlet/"
 maintainer="Vylen Linux Team"
 
 name=python3-greenlet
-version=3.5.1
+version=3.5.2
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "greenlet-${version}"
-    python3 setup.py build
 
-    python3 setup.py install -O1 \
-        --root="${PKG}" \
-        --skip-build
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+
+    python_site_packages="$(python3 -c 'import site; print(site.getsitepackages()[0])')"
+    rm -r "${PKG}/${python_site_packages}/greenlet/tests/"
 }
