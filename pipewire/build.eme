@@ -6,7 +6,7 @@ homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team"
 
 name=pipewire
-version=1.6.6
+version=1.6.7
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz
@@ -14,7 +14,8 @@ source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/re
     ${name}.desktop"
 
 build() {
-    export CFLAGS="${CFLAGS} -Wno-error=discarded-qualifiers"
+    export CFLAGS="${CFLAGS} \
+        -Wno-error=discarded-qualifiers"
 
     vylen-meson "${name}-${version}" build \
         -Ddocs=disabled \
@@ -29,8 +30,8 @@ build() {
     install -Dm644 /dev/null "${PKG}/usr/share/pipewire/media-session.d/with-alsa"
     mkdir -p "${PKG}/etc/alsa/conf.d"
 
-    ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf -t "${PKG}/etc/alsa/conf.d"
-    ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf -t "${PKG}/etc/alsa/conf.d"
+    ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf -t "${PKG}/etc/alsa/conf.d/"
+    ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf -t "${PKG}/etc/alsa/conf.d/"
 
     # install vylen pipewire launcher
     install -Dm755 "${SRC}/vylen-pipewire-launcher" -t "${PKG}/usr/bin/"
