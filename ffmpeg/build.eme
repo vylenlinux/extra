@@ -6,10 +6,10 @@ homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team"
 
 name=ffmpeg
-version=8.1.1
+version=8.1.2
 release=1
 
-source="https://ffmpeg.org/releases/$name-$version.tar.xz
+source="https://ffmpeg.org/releases/${name}-${version}.tar.xz
     add-av_stream_get_first_dts-for-chromium.patch
     ffmpeg-x264-10bit.sh"
 
@@ -80,7 +80,6 @@ build() {
     make tools/qt-faststart
 
     make DESTDIR="${PKG}" install
-
     install -m755 tools/qt-faststart -t "${PKG}/usr/bin/"
 
     [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/ffmpeg-x264-10bit.sh" "${PKG}/usr/bin/ffmpeg-x264-10bit"
