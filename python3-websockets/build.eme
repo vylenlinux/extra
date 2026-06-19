@@ -14,6 +14,10 @@ build() {
     # shellcheck disable=SC2164
     cd "websockets-${version}"
 
-    python3 -m build --wheel --skip-dependency-check --no-isolation
+    python3 -m build \
+        --wheel \
+        --skip-dependency-check \
+        --no-isolation
+
     python3 -m installer --destdir="${PKG}" dist/*.whl
 }
