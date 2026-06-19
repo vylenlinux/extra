@@ -1,13 +1,13 @@
-python3-msgpack-1.2.0-1
+python3-msgpack-1.2.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/msgpack-1.2.0-py3.14.egg-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.0-py3.14.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.0-py3.14.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.0-py3.14.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.0-py3.14.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/msgpack-1.2.1-py3.14.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.1-py3.14.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.1-py3.14.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.1-py3.14.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack-1.2.1-py3.14.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/msgpack/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/msgpack/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/msgpack/__pycache__/
