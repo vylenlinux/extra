@@ -8,8 +8,7 @@ maintainer="Vylen Linux Team"
 name=plasma-meta
 version=6.7.0
 release=1
-IGNORE_CHECKSUM="yes"
 
 build() {
-    mkdir "${PKG}/usr"
+    mkdir -p "${PKG}/usr"
 }

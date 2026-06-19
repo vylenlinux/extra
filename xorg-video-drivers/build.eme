@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Meta port for xorg video drivers"
 homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
@@ -5,8 +8,7 @@ maintainer="Vylen Linux Team"
 name=xorg-video-drivers
 version=1.0
 release=1
-IGNORE_CHECKSUM="yes"
 
 build() {
-	mkdir -pv $PKG/etc
+    mkdir -p "${PKG}/etc"
 }
