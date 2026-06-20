@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A tool for passing the include path and/or library paths to build tools during the configure and make file execution"
 homepage="https://pkg-config.freedesktop.org"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,18 @@ maintainer="Vylen Linux Team"
 name=pkg-config
 version=0.29.2
 release=1
-source="https://pkg-config.freedesktop.org/releases/$name-$version.tar.gz"
+
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz
+    copy-m4.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${name}-${version}"
+    patch -Np1 -i "${SRC}/copy-m4.patch"
 
-	./configure --prefix=/usr              \
-	            --with-internal-glib       \
-	            --disable-host-tool
-	make
-	make DESTDIR=$PKG install
+    ./autogen.sh --no-configure
+    ./configure --prefix=/usr
 
+    make
+    make DESTDIR="${PKG}" install
 }
