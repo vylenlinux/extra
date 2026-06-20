@@ -1,30 +1,32 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Grand central dispatch, from swift corelibs"
 homepage="https://github.com/apple/swift-corelibs-libdispatch"
 maintainer="Vylen Linux Team"
 
 name=libdispatch
-version=6.2.2
+version=6.3.2
 release=1
-source="$name-$version.tar.gz::https://github.com/apple/swift-corelibs-libdispatch/archive/swift-${version}-RELEASE.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/apple/swift-corelibs-${name}/archive/swift-${version}-RELEASE.tar.gz"
+
 build() {
-	export CC=clang
-	export CXX=clang++
+    export CC=clang
+    export CXX=clang++
 
-     find swift-corelibs-* -name DispatchCompilerWarnings.cmake \
-    	-exec sed -i "/-Werror/d" '{}' \;
-   
-	mkdir build && cd build
+    find "swift-corelibs-${name}-swift-${version}-RELEASE" -name DispatchCompilerWarnings.cmake -exec sed -i "/-Werror/d" '{}' \;
 
-        cmake -G Ninja \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-	        -DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DBlocksRuntime_INCLUDE_DIR=/usr/include \
-		-DCMAKE_BUILD_WITH_INSTALL_RPATH=on ../swift-corelibs-$name-* \
-		-Wno-dev
-	ninja
-	DESTDIR=$PKG ninja install
+    cmake -S "swift-corelibs-${name}-swift-${version}-RELEASE" -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DBlocksRuntime_INCLUDE_DIR=/usr/include \
+        -DCMAKE_BUILD_WITH_INSTALL_RPATH=on \
+        -Wno-dev
+
+    ninja
+    DESTDIR="${PKG}" ninja install
 }
