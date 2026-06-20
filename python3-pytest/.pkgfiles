@@ -1,4 +1,4 @@
-python3-pytest-9.1.0-1
+python3-pytest-9.1.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/py.test
@@ -180,12 +180,12 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/_pytest/mark/__pycache_
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/_pytest/warning_types.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/_pytest/warnings.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/py.py
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/entry_points.txt
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.0.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/entry_points.txt
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest-9.1.1.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pytest/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pytest/__main__.py

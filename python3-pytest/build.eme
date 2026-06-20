@@ -6,7 +6,7 @@ homepage="https://pytest.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-pytest
-version=9.1.0
+version=9.1.1
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pytest/pytest-${version}.tar.gz"
 
