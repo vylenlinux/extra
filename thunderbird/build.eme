@@ -6,11 +6,10 @@ homepage="https://www.thunderbird.net/"
 maintainer="Vylen Linux Team"
 
 name=thunderbird
-version=151.0.1
+version=152.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
-    0024-bgo-969412-glibc-2.43.patch
     clang22-wasm32-wasip1.patch
     metainfo.patch
     missing-include.patch
