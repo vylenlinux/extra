@@ -1,12 +1,8 @@
-xkeyboard-config-2.47-1
+xkeyboard-config-2.48-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/X11/
 lrwxrwxrwx root/root    usr/share/X11/xkb -> /usr/share/xkeyboard-config-2
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man7/
--rw-r--r-- root/root    usr/share/man/man7/xkeyboard-config-2.7.gz
-lrwxrwxrwx root/root    usr/share/man/man7/xkeyboard-config.7.gz -> xkeyboard-config-2.7.gz
 drwxr-xr-x root/root    usr/share/pkgconfig/
 -rw-r--r-- root/root    usr/share/pkgconfig/xkeyboard-config-2.pc
 lrwxrwxrwx root/root    usr/share/pkgconfig/xkeyboard-config.pc -> xkeyboard-config-2.pc
