@@ -6,13 +6,13 @@ kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux-lts' -printf "%f
 for i in /lib/modules/*; do
     [ -d "${i}" ] || continue
 
-    case ${i##*/} in
+    case "${i##*/}" in
         "${kernver}") continue;;
 
         *-linux-lts)
             [ -d "${i}/build/include" ] && continue
 
-            echo "post-install: removing kernel ${i##*/}"
+            printf "post-install: removing kernel %s\n" "${i##*/}"
             rm -fr "${i}"
         ;;
     esac
@@ -26,7 +26,7 @@ if grep -q "^CONFIG_BLK_DEV_INITRD=y" /boot/config-linux-lts 2>/dev/null; then
 fi
 
 if [ "${initrd_enabled}" -eq 1 ] && [ "$(command -v mkinitramfs)" ]; then
-    echo "mkinitramfs: generating initramfs for kernel ${kernver}..."
+    printf "mkinitramfs: generating initramfs for kernel %s...\n" "${kernver}"
     mkinitramfs -q -k "${kernver}" -o /boot/initrd-linux-lts.img
 fi
 
