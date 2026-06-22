@@ -6,7 +6,7 @@ homepage="https://frei0r.dyne.org/"
 maintainer="Vylen Linux Team"
 
 name=frei0r-plugins
-version=3.2.1
+version=3.2.2
 release=1
 source="${name}-${version}.tar.gz::https://github.com/dyne/frei0r/archive/v${version}.tar.gz"
 
