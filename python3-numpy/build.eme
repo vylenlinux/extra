@@ -6,7 +6,7 @@ homepage="https://numpy.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-numpy
-version=2.4.6
+version=2.5.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/numpy/numpy/releases/download/v${version}/numpy-${version}.tar.gz"
 
@@ -24,6 +24,10 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    find "${PKG}" \( -iname "LICENSE.txt" -o -iname "*README*" \) -delete
+    find "${PKG}" \( \
+        -iname "LICENSE.txt" -o \
+        -iname "*README*" \
+    \) -delete
+
     chmod -R g-w "${PKG}"
 }
