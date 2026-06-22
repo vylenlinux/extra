@@ -1,17 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C++ library for interacting with JSON"
 homepage="https://github.com/open-source-parsers/jsoncpp"
 maintainer="Vylen Linux Team"
 
 name=jsoncpp
-version=1.9.6
+version=1.9.8
 release=1
-source="https://github.com/open-source-parsers/jsoncpp/archive/$version/$name-$version.tar.gz"
+source="https://github.com/open-source-parsers/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	echo ${version} > $name-$version/version
+    echo "${version}" > "${name}-${version}/version"
 
-	vylen-meson $name-$version build \
-		--default-library shared
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build --default-library shared
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
