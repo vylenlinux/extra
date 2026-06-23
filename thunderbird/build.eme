@@ -57,10 +57,8 @@ build() {
 
     install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/applications/"
 
-    mkdir -pv "${PKG}/usr/share/pixmaps"
-    ln -sfv /usr/lib/thunderbird/chrome/icons/default/default256.png "${PKG}/usr/share/pixmaps/thunderbird.png"
+    mkdir -p "${PKG}/usr/share/pixmaps"
+    ln -sf /usr/lib/thunderbird/chrome/icons/default/default256.png "${PKG}/usr/share/pixmaps/thunderbird.png"
 
-    # exclude library for revdep
-    install -d "${PKG}/etc/revdep.d"
-    echo "/usr/lib/thunderbird/" > "${PKG}/etc/revdep.d/${name}.conf"
+    do_revdep
 }

@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Modular text mode IRC client with Perl scripting"
 homepage="https://irssi.org/"
 maintainer="Vylen Linux Team"
@@ -5,22 +8,20 @@ maintainer="Vylen Linux Team"
 name=irssi
 version=1.4.5
 release=1
-backup="etc/irssi.conf"
-source="https://github.com/irssi/irssi/releases/download/$version/$name-$version.tar.xz"
+
+source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz"
+backup="etc/${name}.conf"
 
 build() {
+    vylen-meson "${name}-${version}" build \
+        -Dwith-perl-lib=vendor \
+        -Dwith-proxy=yes \
+        -Dwith-perl=yes \
+        -Denable-true-color=yes
 
-	vylen-meson $name-$version build \
-		-Dwith-perl-lib=vendor \
-		-Dwith-proxy=yes \
-		-Dwith-perl=yes \
-		-Denable-true-color=yes
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
-	install -Dm 644 $name-$version/irssi.conf "$PKG"/etc/irssi.conf
-	
-	# exclude library for revdep.
-        install -d $PKG/etc/revdep.d
-        echo "/usr/lib/perl5/site_perl/5.42/x86_64-linux-thread-multi/auto/Irssi/" > $PKG/etc/revdep.d/$name.conf
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
+    install -Dm644 "${name}-${version}/${name}.conf" -t "${PKG}/etc/"
+    do_revdep
 }

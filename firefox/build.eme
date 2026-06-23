@@ -83,6 +83,5 @@ build() {
     rm -f "${PKG}/usr/lib/firefox/removed-files"
 
     # exclude library for revdep.
-    install -d "${PKG}/etc/revdep.d"
-    echo "/usr/lib/firefox/" > "${PKG}/etc/revdep.d/${name}.conf"
+    do_revdep
 }
