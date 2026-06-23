@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=pyside6
 version=6.11.1
-release=2
+release=1
 
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/QtForPython/${name}/PySide6-${version}-src/pyside-setup-everywhere-src-${version}.tar.xz
     fix-header-install-dir.patch"
