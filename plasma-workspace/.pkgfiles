@@ -1,4 +1,4 @@
-plasma-workspace-6.7.0-1
+plasma-workspace-6.7.1-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
@@ -137,32 +137,32 @@ drwxr-xr-x root/root    usr/lib/kf6/kauth/
 -rwxr-xr-x root/root    usr/lib/ksecretprompter
 -rwxr-xr-x root/root    usr/lib/ksmserver-logout-greeter
 lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so -> libbatterycontrol.so.6
-lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so.6 -> libbatterycontrol.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libbatterycontrol.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so.6 -> libbatterycontrol.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libbatterycontrol.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libkfontinst.so -> libkfontinst.so.6
-lrwxrwxrwx root/root    usr/lib/libkfontinst.so.6 -> libkfontinst.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libkfontinst.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libkfontinst.so.6 -> libkfontinst.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libkfontinst.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libkfontinstui.so -> libkfontinstui.so.6
-lrwxrwxrwx root/root    usr/lib/libkfontinstui.so.6 -> libkfontinstui.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libkfontinstui.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libkfontinstui.so.6 -> libkfontinstui.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libkfontinstui.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libklipper.so -> libklipper.so.6
-lrwxrwxrwx root/root    usr/lib/libklipper.so.6 -> libklipper.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libklipper.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libklipper.so.6 -> libklipper.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libklipper.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libklookandfeel.so -> libklookandfeel.so.6
-lrwxrwxrwx root/root    usr/lib/libklookandfeel.so.6 -> libklookandfeel.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libklookandfeel.so.6.7.0
-lrwxrwxrwx root/root    usr/lib/libkmpris.so.6 -> libkmpris.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libkmpris.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libklookandfeel.so.6 -> libklookandfeel.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libklookandfeel.so.6.7.1
+lrwxrwxrwx root/root    usr/lib/libkmpris.so.6 -> libkmpris.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libkmpris.so.6.7.1
 -rwxr-xr-x root/root    usr/lib/libkrdb.so
 lrwxrwxrwx root/root    usr/lib/libkworkspace6.so -> libkworkspace6.so.6
-lrwxrwxrwx root/root    usr/lib/libkworkspace6.so.6 -> libkworkspace6.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libkworkspace6.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libkworkspace6.so.6 -> libkworkspace6.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libkworkspace6.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so -> libnotificationmanager.so.1
-lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so.1 -> libnotificationmanager.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libnotificationmanager.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so.1 -> libnotificationmanager.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libnotificationmanager.so.6.7.1
 lrwxrwxrwx root/root    usr/lib/libtaskmanager.so -> libtaskmanager.so.6
-lrwxrwxrwx root/root    usr/lib/libtaskmanager.so.6 -> libtaskmanager.so.6.7.0
--rwxr-xr-x root/root    usr/lib/libtaskmanager.so.6.7.0
+lrwxrwxrwx root/root    usr/lib/libtaskmanager.so.6 -> libtaskmanager.so.6.7.1
+-rwxr-xr-x root/root    usr/lib/libtaskmanager.so.6.7.1
 -rwxr-xr-x root/root    usr/lib/plasma-changeicons
 -rwxr-xr-x root/root    usr/lib/plasma-dbus-run-session-if-needed
 -rwxr-xr-x root/root    usr/lib/plasma-fallback-session-restore
