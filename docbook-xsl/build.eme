@@ -1,27 +1,34 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="XML stylesheets for Docbook-xml transformations"
 homepage="https://docbook.org/"
 maintainer="Vylen Linux Team"
 
 name=docbook-xsl
-version=1.79.2
+version=2020.06.03
 release=1
-source="https://github.com/docbook/xslt10-stylesheets/releases/download/release/$version/$name-nons-$version.tar.bz2
-	docbook-xsl-stack_fix-1.patch"
+
+_version="$(printf "%s" "${version}"| sed 's/\./-/g')"
+source="${name}-${version}.zip::https://github.com/docbook/xslt10-stylesheets/releases/download/snapshot/${_version}/${name}-nons-snapshot.zip"
 
 build() {
-	cd $name-nons-$version
+    # shellcheck disable=SC2164
+    cd "${name}-nons-snapshot"
+    install -dm755 "${PKG}/usr/share/xml/docbook/xsl-stylesheets-${_version}"
 
-	patch -Np1 -i ../docbook-xsl-stack_fix-1.patch
+    cp -R VERSION common eclipse epub epub3 fo \
+        highlighting html htmlhelp images javahelp lib manpages \
+        params profiling roundtrip slides template tests tools website \
+        xhtml xhtml-1_1 xhtml5 \
+    -t "${PKG}/usr/share/xml/docbook/xsl-stylesheets-${_version}"
 
-	for i in xsl-stylesheets xsl-stylesheets-nons; do
-		install -v -m755 -d $PKG/usr/share/xml/docbook/$i-$version	
-		cp -v -R VERSION assembly common eclipse epub epub3 extensions fo        \
-		         highlighting html htmlhelp images javahelp lib manpages params  \
-		         profiling roundtrip slides template tests tools webhelp website \
-		         xhtml xhtml-1_1 xhtml5                                          \
-		    $PKG/usr/share/xml/docbook/$i-$version	
-		ln -s VERSION $PKG/usr/share/xml/docbook/$i-$version/VERSION.xsl
-	done
+    ln -s VERSION "${PKG}/usr/share/xml/docbook/xsl-stylesheets-${_version}/VERSION.xsl"
+    ln -sf "xsl-stylesheets-${version}" "${PKG}/usr/share/xml/docbook/xsl-stylesheets"
 
-	install -v -m755 -d $PKG/etc/xml
+    find "${PKG}" \( \
+        -name "NEWS*" -o \
+        -name "README*" -o \
+        -name "ChangeLog*" \
+    \) -delete
 }
