@@ -12,8 +12,7 @@ release=3
 source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz
     22193ca2cc0f4e023d331cc1391f55143ef9cade.patch
     patch-src_polkit_polkitunixsession.c.patch
-    patch-src_polkitbackend_polkitbackendsessionmonitor.c.patch
-    ${name}-1.pam"
+    patch-src_polkitbackend_polkitbackendsessionmonitor.c.patch"
 
 build() {
     export XML_CATALOG_FILES=/etc/xml/catalog
@@ -38,5 +37,5 @@ build() {
     chmod 4775 "${PKG}/usr/bin/pkexec" \
         "${PKG}/usr/lib/polkit-1/polkit-agent-helper-1"
 
-    install -Dm644 "${SRC}/${name}-1.pam" "${PKG}/etc/pam.d/${name}-1"
+    do_pam "${name}-1"
 }

@@ -8,9 +8,7 @@ maintainer="Vylen Linux Team"
 name=ly
 version=1.4.1
 release=1
-
-source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz
-    ${name}.pam"
+source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
@@ -30,6 +28,6 @@ build() {
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe
 
-    install -Dm644 "${SRC}/${name}.pam" "${PKG}/etc/pam.d/${name}"
     do_service "${name}"
+    do_pam "${name}"
 }

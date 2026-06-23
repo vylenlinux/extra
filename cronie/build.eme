@@ -11,8 +11,7 @@ release=1
 
 source="https://github.com/${name}-crond/${name}/releases/download/${name}-${version}/${name}-${version}.tar.gz
     gcc15.patch
-    ${name}.deny
-    ${name}.pam"
+    ${name}.deny"
 
 build() {
     # shellcheck disable=SC2164
@@ -41,12 +40,11 @@ build() {
         "${PKG}/etc/cron.weekly" \
         "${PKG}/etc/cron.monthly"
 
-    install -Dm0644 "${SRC}/${name}.deny" "${PKG}/etc/cron.deny"
-    install -Dm0644 "${SRC}/${name}.pam" "${PKG}/etc/pam.d/crond"
-
-    install -Dm0644 contrib/anacrontab -t "${PKG}/etc/"
-    install -Dm0644 contrib/0hourly    -t "${PKG}/etc/cron.d/"
-    install -Dm0755 contrib/0anacron   -t "${PKG}/etc/cron.hourly/"
+    install -Dm644 "${SRC}/${name}.deny" "${PKG}/etc/cron.deny"
+    install -Dm644 contrib/anacrontab -t "${PKG}/etc/"
+    install -Dm644 contrib/0hourly    -t "${PKG}/etc/cron.d/"
+    install -Dm755 contrib/0anacron   -t "${PKG}/etc/cron.hourly/"
 
     do_service "${name}"
+    do_pam crond
 }
