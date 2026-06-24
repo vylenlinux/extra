@@ -7,9 +7,9 @@ maintainer="Vylen Linux Team"
 
 name=spirv-headers
 version=1.4.350.1
-release=2
+release=3
 
-commit=ad9184e76a66b1001c29db9b0a3e87f646c64de0
+commit=daa093dd29aab8cbb6562b808370562f56e399fb
 source="${name}-${version}-${commit}.tar.gz::https://github.com/KhronosGroup/${name}/archive/${commit}.tar.gz"
 #source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 
