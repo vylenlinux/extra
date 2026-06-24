@@ -6,7 +6,7 @@ homepage="https://invent.kde.org/libraries/ktextaddons"
 maintainer="Vylen Linux Team"
 
 name=ktextaddons
-version=2.0.2
+version=2.1.0
 release=1
 source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
