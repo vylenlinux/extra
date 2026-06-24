@@ -6,9 +6,9 @@ homepage="https://github.com/intel/media-driver/"
 maintainer="Vylen Linux Team"
 
 name=intel-media-driver
-version=26.2.2
+version=26.2.3
 release=1
-source="https://github.com/intel/media-driver/archive/${name%-*}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/intel/media-driver/archive/${name%-*}-${version}.tar.gz"
 
 build() {
     cmake -S "${name#*-}-${name%-*}-${version}" -B build -G Ninja \
