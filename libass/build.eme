@@ -1,17 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format"
 homepage="https://github.com/libass/libass/"
 maintainer="Vylen Linux Team"
 
 name=libass
-version=0.17.4
+version=0.17.5
 release=1
-source="https://github.com/$name/$name/releases/download/$version/$name-$version.tar.xz"
+source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
