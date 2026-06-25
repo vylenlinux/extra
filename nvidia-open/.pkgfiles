@@ -7,9 +7,6 @@ drwxr-xr-x root/root    etc/modprobe.d/
 -rw-r--r-- root/root    etc/modprobe.d/nvidia.conf
 drwxr-xr-x root/root    etc/revdep.d/
 -rw-r--r-- root/root    etc/revdep.d/nvidia-open.conf
-drwxr-xr-x root/root    etc/vulkan/
-drwxr-xr-x root/root    etc/vulkan/icd.d/
--rw-r--r-- root/root    etc/vulkan/icd.d/nvidia_icd.json
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/firmware/
 drwxr-xr-x root/root    lib/firmware/nvidia/
@@ -118,6 +115,9 @@ drwxr-xr-x root/root    usr/share/nvidia/
 -rwxr-xr-x root/root    usr/share/nvidia/nvoptix.bin
 drwxr-xr-x root/root    usr/share/pixmaps/
 -rw-r--r-- root/root    usr/share/pixmaps/nvidia-settings.png
+drwxr-xr-x root/root    usr/share/vulkan/
+drwxr-xr-x root/root    usr/share/vulkan/icd.d/
+-rw-r--r-- root/root    usr/share/vulkan/icd.d/nvidia_icd.json
 drwxr-xr-x root/root    usr/src/
 drwxr-xr-x root/root    usr/src/nvidia-610.43.02/
 -rw-r--r-- root/root    usr/src/nvidia-610.43.02/Kbuild

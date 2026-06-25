@@ -66,7 +66,7 @@ build() {
     symlink_lib /usr/lib/libEGL_nvidia.so.0
 
     # vulkan ICD config
-    install_file nvidia_icd.json etc/vulkan/icd.d
+    install_file nvidia_icd.json usr/share/vulkan/icd.d
 
     # driver component libraries
     install_lib "libnvidia-cfg.so.${version}"
