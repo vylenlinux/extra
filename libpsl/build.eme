@@ -1,16 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library for accessing and resolving information from the Public Suffix List"
 homepage="https://github.com/rockdaboot/libpsl"
 maintainer="Vylen Linux Team"
 
 name=libpsl
-version=0.21.5
+version=0.22.0
 release=1
-source="https://github.com/rockdaboot/libpsl/releases/download/$version/libpsl-$version.tar.gz"
+source="https://github.com/rockdaboot/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	sed -i 's/env python/&3/' src/psl-make-dafsa
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i 's/env python/&3/' src/psl-make-dafsa
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
