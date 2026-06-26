@@ -6,7 +6,7 @@ homepage="https://www.mltframework.org/"
 maintainer="Vylen Linux Team"
 
 name=mlt
-version=7.38.0
+version=7.40.0
 release=1
 source="https://github.com/mltframework/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
