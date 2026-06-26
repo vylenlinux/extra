@@ -6,7 +6,7 @@ homepage="https://gitlab.gnome.org/GNOME/glib"
 maintainer="Vylen Linux Team"
 
 name=glib
-version=2.88.1
+version=2.88.2
 release=1
 
 girv=1.86.0
