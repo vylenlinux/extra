@@ -18,7 +18,7 @@ build() {
     _prefix="${PWD}/boostrap-glib"
     mkdir "${_prefix}"
 
-    echo "build bootstrap glib"
+    msg_info "build bootstrap glib"
 
     meson setup "${name}-${version}" output \
         --default-library=shared \
@@ -36,7 +36,7 @@ build() {
     meson compile -C output
     meson install --no-rebuild -C output
 
-    echo "build bootstrap gobject-introspection"
+    msg_info "build bootstrap gobject-introspection"
 
     meson setup "gobject-introspection-${girv}" gioutput \
         --pkg-config-path="${_prefix}/lib/pkgconfig" \
@@ -51,7 +51,7 @@ build() {
     meson compile -C gioutput
     meson install --no-rebuild -C gioutput
 
-    echo "re-build glib with introspection"
+    msg_info "re-build glib with introspection"
 
     PATH="${_prefix}/bin:${PATH}" LD_LIBRARY_PATH="${_prefix}/lib" meson setup "${name}-${version}" build \
         --reconfigure \
