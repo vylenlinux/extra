@@ -6,13 +6,13 @@ homepage="https://www.avahi.org/"
 maintainer="Vylen Linux Team"
 
 name=avahi
-version=0.9.rc4
+version=0.9rc5
 release=1
-source="https://github.com/${name}/${name}/archive/refs/tags/v${version%.*}-${version##*.}.tar.gz"
+source="https://github.com/avahi/avahi/archive/refs/tags/v${version%rc*}-${version#"${version%rc*}"}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version%.*}-${version##*.}"
+    cd "${name}-${version%rc*}-${version#"${version%rc*}"}"
     NOCONFIGURE=1 ./autogen.sh
 
     ./configure \
