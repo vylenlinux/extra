@@ -6,7 +6,7 @@ homepage="https://www.gnupg.org/related_software/gpgme/"
 maintainer="Vylen Linux Team"
 
 name=gpgme
-version=2.1.0
+version=2.1.1
 release=1
 source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
