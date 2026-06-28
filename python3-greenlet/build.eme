@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Lightweight in-process concurrent programming "
+description="Lightweight in-process concurrent programming"
 homepage="https://pypi.org/project/greenlet/"
 maintainer="Vylen Linux Team"
 
 name=python3-greenlet
-version=3.5.2
+version=3.5.3
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-${version}.tar.gz"
 
