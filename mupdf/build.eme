@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="Lightweight PDF and XPS viewer "
+description="Lightweight PDF and XPS viewer"
 homepage="https://mupdf.com/"
 maintainer="Vylen Linux Team"
 
 name=mupdf
-version=1.27.2
+version=1.28.0
 release=1
 source="${name}-${version}.tar.gz::https://mupdf.com/downloads/archive/${name}-${version}-source.tar.gz"
 
@@ -23,5 +23,5 @@ build() {
         USE_SYSTEM_GLUT='no' \
         USE_SYSTEM_GUMBO='no'
 
-	ln -s mupdf-gl "${PKG}/usr/bin/mupdf"
+    ln -s mupdf-gl "${PKG}/usr/bin/${name}"
 }
