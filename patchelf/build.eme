@@ -1,16 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A small utility to modify the dynamic linker and RPATH of ELF executables."
 homepage="https://github.com/Nixos/patchelf"
 maintainer="Vylen Linux Team"
 
 name=patchelf
-version=0.18.0
+version=0.19.0
 release=1
-source="https://github.com/Nixos/$name/archive/$version/$name-$version.tar.gz"
+source="https://github.com/Nixos/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./bootstrap.sh
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./bootstrap.sh
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
