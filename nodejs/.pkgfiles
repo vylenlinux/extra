@@ -1,4 +1,4 @@
-nodejs-26.3.1-1
+nodejs-26.4.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/node
@@ -3624,6 +3624,7 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/lib/commands/trust/
 -rw-r--r-- root/root    usr/lib/node_modules/npm/lib/trust-cmd.js
 drwxr-xr-x root/root    usr/lib/node_modules/npm/lib/utils/
 -rw-r--r-- root/root    usr/lib/node_modules/npm/lib/utils/allow-scripts-cmd.js
+-rw-r--r-- root/root    usr/lib/node_modules/npm/lib/utils/allow-scripts-remediation.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/lib/utils/allow-scripts-writer.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/lib/utils/audit-error.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/lib/utils/auth.js
@@ -3850,6 +3851,7 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/l
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/printable.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/query-selector-all.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/realpath.js
+-rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/release-age-exclude.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/relpath.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/reset-dep-flags.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/retire-path.js
@@ -3860,6 +3862,7 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/l
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/spec-from-lock.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/tracker.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/tree-check.js
+-rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/unreviewed-scripts.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/version-from-tgz.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/vuln.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/yarn-lock.js
@@ -4623,6 +4626,7 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/is-windows.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/no-tty.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/run-script.js
+-rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/strict-allow-scripts-preflight.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/lib/with-lock.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/libnpmexec/package.json
 drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/libnpmfund/
@@ -5093,6 +5097,7 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-p
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/ensureObject.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/getProp.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/index.js
+-rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/maxNestingDepth.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/stripComments.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/dist/util/unesc.js
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/postcss-selector-parser/package.json
