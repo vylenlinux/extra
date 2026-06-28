@@ -1,25 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="JSON implementation in C"
 homepage="https://github.com/json-c/json-c/wiki"
 maintainer="Vylen Linux Team"
 
 name=json-c
-version=0.18
+version=0.19
 release=1
-source="https://s3.amazonaws.com/json-c_releases/releases/$name-$version.tar.gz"
+source="https://s3.amazonaws.com/json-c_releases/releases/${name}-${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-	        -DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	        -DBUILD_TESTING=OFF \
-	        -DBUILD_SHARED_LIBS=ON \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
-}
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -Wno-dev
 
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
