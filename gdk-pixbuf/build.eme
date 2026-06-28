@@ -6,7 +6,7 @@ homepage="https://wiki.gnome.org/Projects/GdkPixbuf"
 maintainer="Vylen Linux Team"
 
 name=gdk-pixbuf
-version=2.44.6
+version=2.44.7
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
