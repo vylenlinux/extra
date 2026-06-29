@@ -5,7 +5,7 @@ _xml_catalog() {
 }
 
 version=1.79.2
-[ -e /etc/xml/catalog ] || _xml_catalog --create
+[ -f /etc/xml/catalog ] || _xml_catalog --create
 
 for _version in "${version}" current; do
     for rw in rewriteSystem rewriteURI; do
