@@ -1,4 +1,4 @@
-upower-1.91.2-1
+upower-1.91.2-2
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/UPower/
 -rw-r--r-- root/root    etc/UPower/UPower.conf
@@ -61,13 +61,6 @@ drwxr-xr-x root/root    usr/share/gir-1.0/
 drwxr-xr-x root/root    usr/share/installed-tests/
 drwxr-xr-x root/root    usr/share/installed-tests/upower/
 -rw-r--r-- root/root    usr/share/installed-tests/upower/upower-integration.test
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/upower.1.gz
-drwxr-xr-x root/root    usr/share/man/man7/
--rw-r--r-- root/root    usr/share/man/man7/UPower.7.gz
-drwxr-xr-x root/root    usr/share/man/man8/
--rw-r--r-- root/root    usr/share/man/man8/upowerd.8.gz
 drwxr-xr-x root/root    usr/share/polkit-1/
 drwxr-xr-x root/root    usr/share/polkit-1/actions/
 -rw-r--r-- root/root    usr/share/polkit-1/actions/org.freedesktop.upower.policy
