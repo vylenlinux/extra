@@ -1,40 +1,16 @@
 #!/bin/sh
 
-PREV="1.79.2"
-CUR="2020-06-03"
-CATALOG=/etc/xml/catalog
+_xml_catalog() {
+    xmlcatalog --noout "${@}" /etc/xml/catalog
+}
 
-[ -d /etc/xml ] || install -dm755 /etc/xml
-[ -f "${CATALOG}" ] || xmlcatalog --noout --create "${CATALOG}"
+version=1.79.2
+[ -f /etc/xml/catalog ] || _xml_catalog --create
 
-xmlcatalog --noout --del "/usr/share/xml/docbook/xsl-stylesheets-${PREV}" "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteSystem" \
-    "http://docbook.sourceforge.net/release/xsl/${CUR}" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteURI" \
-    "http://docbook.sourceforge.net/release/xsl/${CUR}" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteSystem" \
-    "http://docbook.sourceforge.net/release/xsl/current" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteURI" \
-    "http://docbook.sourceforge.net/release/xsl/current" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteSystem" \
-    "http://docbook.sourceforge.net/release/xsl-ns/current" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
-
-xmlcatalog --noout --add "rewriteURI" \
-    "http://docbook.sourceforge.net/release/xsl-ns/current" \
-    "/usr/share/xml/docbook/xsl-stylesheets" \
-    "${CATALOG}"
+for _version in "${version}" current; do
+    for x in rewriteSystem rewriteURI; do
+        _xml_catalog --add "${x}" "http://cdn.docbook.org/release/xsl/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-${version}"
+        _xml_catalog --add "${x}" "http://docbook.sourceforge.net/release/xsl-ns/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-${version}"
+        _xml_catalog --add "${x}" "http://docbook.sourceforge.net/release/xsl/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-nons-${version}"
+    done
+done
