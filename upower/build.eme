@@ -7,17 +7,17 @@ maintainer="Vylen Linux Team"
 
 name=upower
 version=1.91.2
-release=2
+release=1
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/v${version}/${name}-v${version}.tar.gz
     reduce-gudev.patch"
 
 build() {
     patch -Np1 -d "${name}-v${version}" -i "${SRC}/reduce-gudev.patch"
+    export XML_CATALOG_FILES=/etc/xml/catalog
 
     vylen-meson "${name}-v${version}" build \
         -Dgtk-doc=false \
-        -Dman=false \
         -Dsystemdsystemunitdir=no
 
     meson compile -C build
