@@ -5,12 +5,18 @@ _xml_catalog() {
 }
 
 version=1.79.2
-[ -f /etc/xml/catalog ] || _xml_catalog --create
+[ -e /etc/xml/catalog ] || _xml_catalog --create
 
 for _version in "${version}" current; do
-    for x in rewriteSystem rewriteURI; do
-        _xml_catalog --add "${x}" "http://cdn.docbook.org/release/xsl/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-${version}"
-        _xml_catalog --add "${x}" "http://docbook.sourceforge.net/release/xsl-ns/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-${version}"
-        _xml_catalog --add "${x}" "http://docbook.sourceforge.net/release/xsl/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-nons-${version}"
+    for rw in rewriteSystem rewriteURI; do
+        for proto in http https; do
+            _xmlcatalog --add "${rw}" "${proto}://cdn.docbook.org/release/xsl-nons/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-nons-${version}"
+        done
+    done
+done
+
+for _version in current "${version}"; do
+    for rw in rewriteSystem rewriteURI; do
+        _xmlcatalog --add "${rw}" "http://docbook.sourceforge.net/release/xsl/${_version}" "/usr/share/xml/docbook/xsl-stylesheets-nons-${version}"
     done
 done
