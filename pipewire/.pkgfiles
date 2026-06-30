@@ -15,6 +15,7 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/pipewire
 lrwxrwxrwx root/root    usr/bin/pipewire-aes67 -> pipewire
 lrwxrwxrwx root/root    usr/bin/pipewire-avb -> pipewire
+-rwxr-xr-x root/root    usr/bin/pipewire-launcher
 lrwxrwxrwx root/root    usr/bin/pipewire-pulse -> pipewire
 -rwxr-xr-x root/root    usr/bin/pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-cli
@@ -46,7 +47,6 @@ lrwxrwxrwx root/root    usr/bin/pw-sysex -> pw-cat
 -rwxr-xr-x root/root    usr/bin/spa-json-dump
 -rwxr-xr-x root/root    usr/bin/spa-monitor
 -rwxr-xr-x root/root    usr/bin/spa-resample
--rwxr-xr-x root/root    usr/bin/vylen-pipewire-launcher
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/pipewire-0.3/
 drwxr-xr-x root/root    usr/include/pipewire-0.3/pipewire/
