@@ -6,15 +6,12 @@ homepage="https://www.musicpd.org/libs/libmpdclient/"
 maintainer="Vylen Linux Team"
 
 name=libmpdclient
-version=2.25
+version=2.26
 release=1
 source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-
-    vylen-meson build
+    vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
