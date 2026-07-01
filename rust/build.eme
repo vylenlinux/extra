@@ -6,28 +6,18 @@ homepage="https://www.rust-lang.org/"
 maintainer="Vylen Linux Team"
 
 name=rust
-version=1.96.0
+version=1.96.1
 release=1
 
-_date=2026-04-16
-_rust=1.95.0
-_triplet=x86_64-unknown-linux-gnu
-
-source="https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
-    https://static.rust-lang.org/dist/${_date}/rust-std-${_rust}-${_triplet}.tar.xz
-    https://static.rust-lang.org/dist/${_date}/rustc-${_rust}-${_triplet}.tar.xz
-    https://static.rust-lang.org/dist/${_date}/cargo-${_rust}-${_triplet}.tar.xz
+source="${name}-${version}.tar.xz::https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
     0001-bootstrap-Change-libexec-dir.patch
     0002-bootstrap-Change-bash-completion-dir.patch
     0003-bootstrap-Workaround-for-system-stage0.patch
     0004-compiler-Change-LLVM-targets.patch
     0005-compiler-Use-ld.lld-by-default.patch
     0008-compiler-Swap-primary-and-secondary-lib-dirs.patch
+    0009-compiler-rt-sanitizer-Remove-linux-scc-h.patch
     config.toml"
-
-noextract="rust-std-${_rust}-${_triplet}.tar.xz
-    rustc-${_rust}-${_triplet}.tar.xz
-    cargo-${_rust}-${_triplet}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -53,16 +43,13 @@ build() {
     # Prefer "lib" over "lib64"
     patch -Np1 -i "${SRC}/0008-compiler-Swap-primary-and-secondary-lib-dirs.patch"
 
-    mkdir -p "build/cache/${_date}"
-
-    for tarball in "rust-std-${_rust}-${_triplet}.tar.xz" "rustc-${_rust}-${_triplet}.tar.xz" "cargo-${_rust}-${_triplet}.tar.xz"; do
-        cp "${SRC}/${tarball}" "build/cache/${_date}/"
-    done
+    # Fix build of sanitizers with linux-api-headers 7.1
+    patch -Np1 -i "${SRC}/0009-compiler-rt-sanitizer-Remove-linux-scc-h.patch"
 
     install -Dm644 "${SRC}/config.toml" -t .
-    mkdir "${SRC}/rust"
+    mkdir .cargo
 
-    export CARGO_HOME="${SRC}/rust"
+    export CARGO_HOME="${PWD}/.cargo"
     export RUST_BACKTRACE=1
 
     [ -e /usr/include/libssh2.h ] && export LIBSSH2_SYS_USE_PKG_CONFIG=1
