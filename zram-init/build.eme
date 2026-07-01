@@ -8,11 +8,15 @@ homepage="https://github.com/vaeth/zram-init"
 name=zram-init
 version=13.3
 release=1
-source="${name}-${version}.tar.gz::https://github.com/vaeth/${name}/archive/refs/tags/v${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/vaeth/${name}/archive/refs/tags/v${version}.tar.gz
+    zram-single.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    patch -Np1 -i "${SRC}/zram-single.patch"
     make PREFIX=/usr
 
     make install \
