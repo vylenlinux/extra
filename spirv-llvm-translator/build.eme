@@ -6,7 +6,7 @@ homepage="https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
 maintainer="Vylen Linux Team"
 
 name=spirv-llvm-translator
-version=22.1.3
+version=22.1.4
 release=1
 source="https://github.com/KhronosGroup/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
