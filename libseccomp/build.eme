@@ -1,15 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Enhanced seccomp library"
 homepage="https://github.com/seccomp/libseccomp"
 maintainer="Vylen Linux Team"
 
 name=libseccomp
-version=2.6.0
+version=2.6.1
 release=1
-source="https://github.com/seccomp/$name/releases/download/v$version/$name-$version.tar.gz"
+source="https://github.com/seccomp/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
