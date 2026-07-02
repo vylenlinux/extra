@@ -6,7 +6,7 @@ homepage="https://gnupg.org/related_software/pinentry/"
 maintainer="Vylen Linux Team"
 
 name=pinentry
-version=1.3.2
+version=1.3.3
 release=1
 source="https://www.gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
@@ -14,11 +14,11 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    emerald is-installed emacs || opt="${opt} --disable-pinentry-emacs"
-    emerald is-installed gtk2 || opt="${opt} --disable-pinentry-gtk2"
-    emerald is-installed qt5 || opt="${opt} --disable-pinentry-qt5"
-    emerald is-installed qt6-base || opt="${opt} --disable-pinentry-qt"
-    emerald is-installed gcr || opt="${opt} --disable-pinentry-gnome3"
+    emerald is-installed emacs || disable_emacs="--disable-pinentry-emacs"
+    emerald is-installed gtk2 || disable_gtk2="--disable-pinentry-gtk2"
+    emerald is-installed qt5 || disable_qt5="--disable-pinentry-qt5"
+    emerald is-installed qt6-base || disable_qt6_base="--disable-pinentry-qt"
+    emerald is-installed gcr || disable_gcr="--disable-pinentry-gnome3"
 
     CXXFLAGS="${CXXFLAGS} -fPIC"
 
@@ -28,8 +28,12 @@ build() {
         --enable-pinentry-tty \
         --enable-pinentry-curses \
         --enable-fallback-curses \
-        ${opt}
+        "${disable_emacs}" \
+        "${disable_gtk2}" \
+        "${disable_qt5}" \
+        "${disable_qt6_base}" \
+        "${disable_gcr}"
 
-	make
-	make DESTDIR="${PKG}" install
+    make
+    make DESTDIR="${PKG}" install
 }
