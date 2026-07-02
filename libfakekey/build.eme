@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="X virtual keyboard library"
 homepage="https://www.yoctoproject.org/tools-resources/projects/matchbox"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,19 @@ maintainer="Vylen Linux Team"
 name=libfakekey
 version=0.3
 release=1
-source="http://git.yoctoproject.org/cgit/cgit.cgi/$name/snapshot/$name-$version.tar.gz"
+source="https://mirror.ihost.md/slackware/slackware64-15.0/source/l/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	./autogen.sh
-	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./autogen.sh
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
