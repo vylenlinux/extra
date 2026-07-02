@@ -1,4 +1,4 @@
-mm-common-1.0.7-1
+mm-common-1.0.8-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/mm-common-get
@@ -13,10 +13,6 @@ drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/mm-module.m4
 -rw-r--r-- root/root    usr/share/aclocal/mm-pkg.m4
 -rw-r--r-- root/root    usr/share/aclocal/mm-warnings.m4
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/mm-common-get.1.gz
--rw-r--r-- root/root    usr/share/man/man1/mm-common-prepare.1.gz
 drwxr-xr-x root/root    usr/share/mm-common/
 drwxr-xr-x root/root    usr/share/mm-common/build/
 -rw-r--r-- root/root    usr/share/mm-common/build/check-dllexport-usage.py
