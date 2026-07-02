@@ -6,7 +6,7 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team"
 
 name=php
-version=8.5.7
+version=8.5.8
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
