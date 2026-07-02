@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.1.3
+version=26.1.4
 release=1
 
 ### BEGIN Rust crates
@@ -27,7 +27,7 @@ while IFS= read -r line; do
     crate_version="${2}"
 
     rcrate="${rcrate}
-        ${crate_name}-${crate_version}.tar.gz::https://crates.io/api/v1/crates/${crate_name}/${crate_version}/download"
+        ${crate_name}-${crate_version}.tar.gz::https://static.crates.io/crates/${crate_name}/${crate_version}/download"
 done <<EOF
 ${rust_crates}
 EOF
@@ -43,14 +43,14 @@ build() {
     # Add subproject sources
     export MESON_PACKAGE_CACHE_DIR="${SRC}"
 
-    emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
+    emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink'
     emerald is-installed libva && OPT_MESA_VAAPI='-Dgallium-va=enabled' || OPT_MESA_VAAPI='-Dgallium-va=disabled'
     emerald is-installed wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
     # CBUILD: enable o disable CBUILD_MESA_OPTS, source CBUILD_MESA_OPTS from mesa.opt file
     CBUILD_MESA_OPTS="-Dshared-llvm=enabled \
         -Dglx=dri \
-        -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
+        -Dgallium-drivers=${OPT_MESA_GALLIUM},crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
         -Dplatforms=${OPT_MESA_PLATFORMS} \
         -Dgallium-mediafoundation=disabled \
         -Dintel-rt=enabled \
