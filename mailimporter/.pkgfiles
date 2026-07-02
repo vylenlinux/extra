@@ -1,4 +1,4 @@
-mailimporter-26.04.2-1
+mailimporter-26.04.3-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KPim6/
@@ -83,11 +83,11 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6MailImporterAkonadi/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6MailImporterAkonadi/KPim6MailImporterAkonadiTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6MailImporterAkonadi/KPim6MailImporterAkonadiTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6MailImporter.so -> libKPim6MailImporter.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6MailImporter.so.6 -> libKPim6MailImporter.so.6.7.2
--rwxr-xr-x root/root    usr/lib/libKPim6MailImporter.so.6.7.2
+lrwxrwxrwx root/root    usr/lib/libKPim6MailImporter.so.6 -> libKPim6MailImporter.so.6.7.3
+-rwxr-xr-x root/root    usr/lib/libKPim6MailImporter.so.6.7.3
 lrwxrwxrwx root/root    usr/lib/libKPim6MailImporterAkonadi.so -> libKPim6MailImporterAkonadi.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6MailImporterAkonadi.so.6 -> libKPim6MailImporterAkonadi.so.6.7.2
--rwxr-xr-x root/root    usr/lib/libKPim6MailImporterAkonadi.so.6.7.2
+lrwxrwxrwx root/root    usr/lib/libKPim6MailImporterAkonadi.so.6 -> libKPim6MailImporterAkonadi.so.6.7.3
+-rwxr-xr-x root/root    usr/lib/libKPim6MailImporterAkonadi.so.6.7.3
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/mailimporter.categories

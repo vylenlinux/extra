@@ -1,4 +1,4 @@
-akonadi-calendar-26.04.2-1
+akonadi-calendar-26.04.3-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
@@ -76,11 +76,11 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6AkonadiCalendarCore/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6AkonadiCalendarCore/KPim6AkonadiCalendarCoreTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6AkonadiCalendarCore/KPim6AkonadiCalendarCoreTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendar.so -> libKPim6AkonadiCalendar.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendar.so.6 -> libKPim6AkonadiCalendar.so.6.7.2
--rwxr-xr-x root/root    usr/lib/libKPim6AkonadiCalendar.so.6.7.2
+lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendar.so.6 -> libKPim6AkonadiCalendar.so.6.7.3
+-rwxr-xr-x root/root    usr/lib/libKPim6AkonadiCalendar.so.6.7.3
 lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendarCore.so -> libKPim6AkonadiCalendarCore.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendarCore.so.6 -> libKPim6AkonadiCalendarCore.so.6.7.2
--rwxr-xr-x root/root    usr/lib/libKPim6AkonadiCalendarCore.so.6.7.2
+lrwxrwxrwx root/root    usr/lib/libKPim6AkonadiCalendarCore.so.6 -> libKPim6AkonadiCalendarCore.so.6.7.3
+-rwxr-xr-x root/root    usr/lib/libKPim6AkonadiCalendarCore.so.6.7.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/akonadi_serializer_kcalcore.so

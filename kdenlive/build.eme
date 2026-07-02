@@ -6,7 +6,7 @@ homepage="https://apps.kde.org/kdenlive/"
 maintainer="Vylen Linux Team"
 
 name=kdenlive
-version=26.04.2
+version=26.04.3
 release=1
 source="http://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 

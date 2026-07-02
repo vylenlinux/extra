@@ -1,4 +1,4 @@
-konqueror-26.04.2-1
+konqueror-26.04.3-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
@@ -45,10 +45,10 @@ lrwxrwxrwx root/root    usr/lib/libKF6KonqSettings.so -> libKF6KonqSettings.so.7
 -rwxr-xr-x root/root    usr/lib/libKF6KonqSettings.so.5.97.0
 lrwxrwxrwx root/root    usr/lib/libKF6KonqSettings.so.7 -> libKF6KonqSettings.so.5.97.0
 lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so -> libkonqsidebarplugin.so.6
--rwxr-xr-x root/root    usr/lib/libkonqsidebarplugin.so.26.04.2
-lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so.6 -> libkonqsidebarplugin.so.26.04.2
--rwxr-xr-x root/root    usr/lib/libkonquerorprivate.so.26.04.2
-lrwxrwxrwx root/root    usr/lib/libkonquerorprivate.so.5 -> libkonquerorprivate.so.26.04.2
+-rwxr-xr-x root/root    usr/lib/libkonqsidebarplugin.so.26.04.3
+lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so.6 -> libkonqsidebarplugin.so.26.04.3
+-rwxr-xr-x root/root    usr/lib/libkonquerorprivate.so.26.04.3
+lrwxrwxrwx root/root    usr/lib/libkonquerorprivate.so.5 -> libkonquerorprivate.so.26.04.3
 -rwxr-xr-x root/root    usr/lib/libkwebenginepart.so
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
