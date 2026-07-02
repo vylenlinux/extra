@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="GNU GRand Unified Bootloader"
 homepage="https://www.gnu.org/software/grub/"
 maintainer="Vylen Linux Team"
@@ -5,40 +8,44 @@ maintainer="Vylen Linux Team"
 name=grub
 version=2.14
 release=1
-backup="etc/default/grub"
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
-	vylen-tweaks.patch
-	grub.default
-	grub.cfg"
+
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
+    initrd.patch
+    ${name}.default
+    ${name}.cfg"
+
+backup="etc/default/${name}"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	# Unset any environment variables which may affect the build
-	unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
+    # Unset any environment variables which may affect the build
+    unset CFLAGS \
+        CPPFLAGS \
+        CXXFLAGS \
+        LDFLAGS
 
-	# Vylen multikernel support
-	patch -Np1 -i $SRC/vylen-tweaks.patch
+    patch -Np1 -i "${SRC}/initrd.patch"
 
 	# Add a file missing from the release tarball
-	echo depends bli part_gpt > grub-core/extra_deps.lst
-	
-	# Fix os name
-	sed 's|GNU/Linux|Linux|' -i "util/grub.d/10_linux.in"
+	printf "depends bli part_gpt\n" > grub-core/extra_deps.lst
 
-	./configure --prefix=/usr \
-		--sbindir=/sbin \
-		--sysconfdir=/etc \
-		--disable-efiemu \
-		--disable-werror \
-		--enable-device-mapper \
-		--enable-grub-mount
-	make
-	make DESTDIR=$PKG install
+    # Fix os name
+    sed 's|GNU/Linux|Linux|' -i "util/grub.d/10_linux.in"
 
-	# Borrow from Arch
-	install -D -m0644 $SRC/grub.default $PKG/etc/default/grub
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/sbin \
+        --sysconfdir=/etc \
+        --disable-efiemu \
+        --disable-werror \
+        --enable-device-mapper \
+        --enable-grub-mount
 
-	# Liveiso stuff
-	cp $SRC/grub.cfg $PKG/usr/share/$name
+    make
+    make DESTDIR="${PKG}" install
+
+    install -Dm644 "${SRC}/${name}.default" "${PKG}/etc/default/${name}"
+    cp "${SRC}/${name}.cfg" -t "${PKG}/usr/share/${name}/"
 }
