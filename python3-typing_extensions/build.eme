@@ -1,19 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Backported and Experimental Type Hints for Python 3.5+"
 homepage="https://github.com/python/typing/tree/master/typing_extensions"
 maintainer="Vylen Linux Team"
 
 name=python3-typing_extensions
-version=4.15.0
+version=4.16.0
 release=1
-source="$name-$version.tar.gz::https://pypi.org/packages/source/t/typing_extensions/typing_extensions-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.org/packages/source/t/typing_extensions/typing_extensions-${version}.tar.gz"
 
 build() {
-	cd typing_extensions-$version
+    # shellcheck disable=SC2164
+    cd "typing_extensions-${version}"
 
-	gpep517 build-wheel \
-                --wheel-dir .dist \
-                --output-fd 3 3>&1 >&2
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-        python3 -m installer -d $PKG \
-                .dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
