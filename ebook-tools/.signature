@@ -1,6 +1,0 @@
-untrusted comment: verify with /etc/ports/contrib.pub
-RWSagIOpLGJF31G3vPvEG2LXd9dVF29NAhd7dWmjyvcFk7o6H1jf8l6GNBTtXUZhX3Wb1TGT2tqdj4EMF6DHpjav82AFe8Od8QA=
-SHA256 (Pkgfile) = 2ed5c657929b5444dc21f8e9eebc9dc1b303cbb6ec64fe6cc4b197268967918c
-SHA256 (.footprint) = 92ae33d88d0810e6c90dca4fe6da8a93ac9c63dd9af197515795dd65d5e0abee
-SHA256 (ebook-tools-0.2.2.tar.gz) = cbc35996e911144fa62925366ad6a6212d6af2588f1e39075954973bbee627ae
-SHA256 (crash-fix.patch) = ad556ce08909727a6022c9f1632086ccb8623a81a4f39cd34722e22116e14527
