@@ -1,1 +1,1 @@
-Vylen Linux MAIN ports used by emerald
+Vylen Linux EXTRA ports used by emerald
