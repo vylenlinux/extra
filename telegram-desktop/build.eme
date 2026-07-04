@@ -7,12 +7,13 @@ maintainer="Vylen Linux Team"
 
 name=telegram-desktop
 version=6.9.3
-release=1
+release=2
 
 td_commit=51743dfd01dff6179e2d8f7095729caa4e2222e9
 
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
-    https://github.com/tdlib/td/archive/${td_commit}.tar.gz"
+    https://github.com/tdlib/td/archive/${td_commit}.tar.gz
+    2ed2083b5509d848980379fb6ee7584a978d70e3.patch"
 
 build() {
     cmake -S "${SRC}/td-${td_commit}" -B "${SRC}/td-${td_commit}/build" \
@@ -23,6 +24,8 @@ build() {
 
     cmake --build "${SRC}/td-${td_commit}/build"
     cmake --install "${SRC}/td-${td_commit}/build"
+
+    patch -d "tdesktop-${version}-full" -Np1 -i "${SRC}/2ed2083b5509d848980379fb6ee7584a978d70e3.patch"
 
     cmake -S "tdesktop-${version}-full" -B build -G Ninja \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
