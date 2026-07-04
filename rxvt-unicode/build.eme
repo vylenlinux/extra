@@ -1,54 +1,51 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Unicode enabled rxvt-clone terminal emulator (urxvt)"
 homepage="http://software.schmorp.de/pkg/rxvt-unicode.html"
 maintainer="Vylen Linux Team"
 
 name=rxvt-unicode
 version=9.31
-release=1
-source="http://dist.schmorp.de/$name/Attic/$name-$version.tar.bz2
-	fix-for-tmux-34.patch
-	perl.5.38.patch
-	URxvt"
+release=2
+
+source="http://dist.schmorp.de/${name}/Attic/${name}-${version}.tar.bz2
+    perl-5.38.patch
+    urxvt-lerp.patch
+    urxvt-osc.patch
+    URxvt
+    urxvt.desktop"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	patch -Np1 -i $SRC/perl.5.38.patch
-	patch -Np1 -i $SRC/fix-for-tmux-34.patch
-    
-  	./configure \
-		--prefix=/usr \
-		--enable-utmp \
-		--enable-wtmp \
-		--enable-transparency \
-		--enable-fading \
-		--enable-mousewheel \
-		--enable-256-color \
-		--enable-xft \
-		--enable-font-styles \
-		--enable-unicode3
-	make
-	mkdir -p $PKG/usr/share/terminfo
-	TERMINFO=$PKG/usr/share/terminfo make DESTDIR=$PKG install
+    # Locale fix for perl 5.38
+    patch -Np1 -i "${SRC}/perl-5.38.patch"
 
-	install -Dm 644 $SRC/URxvt $PKG/etc/X11/app-defaults/URxvt
+    # Fix lerp() error with C++20 / GCC16
+    patch -Np1 -i "${SRC}/urxvt-lerp.patch"
 
-	install -d $PKG/usr/share/applications
+    # Fix OSC with 7-bit ST.
+    patch -Np1 -i "${SRC}/urxvt-osc.patch"
 
-cat > $PKG/usr/share/applications/urxvt.desktop << "EOF"
-[Desktop Entry]
-Encoding=UTF-8
-Name=Rxvt-Unicode Terminal
-Comment=Use the command line
-GenericName=Terminal
-Exec=urxvt
-Terminal=false
-Type=Application
-Icon=utilities-terminal
-Categories=GTK;Utility;TerminalEmulator;
-#StartupNotify=true
-Keywords=console;command line;execute;
-EOF
+    ./configure \
+        --prefix=/usr \
+        --enable-utmp \
+        --enable-wtmp \
+        --enable-transparency \
+        --enable-fading \
+        --enable-mousewheel \
+        --enable-256-color \
+        --enable-xft \
+        --enable-font-styles \
+        --enable-unicode3
 
+    make
+
+    mkdir -p "${PKG}/usr/share/terminfo"
+    TERMINFO="${PKG}/usr/share/terminfo" make DESTDIR="${PKG}" install
+
+    install -Dm644 "${SRC}/URxvt" -t "${PKG}/etc/X11/app-defaults/"
+    install -Dm644 "${SRC}/urxvt.desktop" -t "${PKG}/usr/share/applications/"
 }
-
