@@ -1,4 +1,4 @@
-mathjax-4.1.2-1
+mathjax-4.1.3-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/mathjax/
@@ -18,18 +18,19 @@ drwxrwxr-x root/root    usr/share/mathjax/adaptors/
 -rw-rw-r-- root/root    usr/share/mathjax/core.js
 drwxrwxr-x root/root    usr/share/mathjax/input/
 -rw-rw-r-- root/root    usr/share/mathjax/input/asciimath.js
+-rw-rw-r-- root/root    usr/share/mathjax/input/mml.js
 drwxrwxr-x root/root    usr/share/mathjax/input/mml/
 -rw-rw-r-- root/root    usr/share/mathjax/input/mml/entities.js
 drwxrwxr-x root/root    usr/share/mathjax/input/mml/extensions/
 -rw-rw-r-- root/root    usr/share/mathjax/input/mml/extensions/mml3.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/mml/extensions/mml3.sef.json
--rw-rw-r-- root/root    usr/share/mathjax/input/mml.js
-drwxrwxr-x root/root    usr/share/mathjax/input/tex/
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex-base.js
+-rw-rw-r-- root/root    usr/share/mathjax/input/tex.js
+drwxrwxr-x root/root    usr/share/mathjax/input/tex/
 drwxrwxr-x root/root    usr/share/mathjax/input/tex/extensions/
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/action.js
--rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/amscd.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/ams.js
+-rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/amscd.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/autoload.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/bbm.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/bboldx.js
@@ -68,16 +69,15 @@ drwxrwxr-x root/root    usr/share/mathjax/input/tex/extensions/
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/units.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/upgreek.js
 -rw-rw-r-- root/root    usr/share/mathjax/input/tex/extensions/verb.js
--rw-rw-r-- root/root    usr/share/mathjax/input/tex.js
 -rw-rw-r-- root/root    usr/share/mathjax/loader.js
--rw-rw-r-- root/root    usr/share/mathjax/mml-chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/mml-chtml-nofont.js
--rw-rw-r-- root/root    usr/share/mathjax/mml-svg.js
+-rw-rw-r-- root/root    usr/share/mathjax/mml-chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/mml-svg-nofont.js
+-rw-rw-r-- root/root    usr/share/mathjax/mml-svg.js
+-rw-rw-r-- root/root    usr/share/mathjax/node-main-setup.cjs
 -rw-rw-r-- root/root    usr/share/mathjax/node-main.cjs
 -rw-rw-r-- root/root    usr/share/mathjax/node-main.js
 -rw-rw-r-- root/root    usr/share/mathjax/node-main.mjs
--rw-rw-r-- root/root    usr/share/mathjax/node-main-setup.cjs
 drwxrwxr-x root/root    usr/share/mathjax/output/
 -rw-rw-r-- root/root    usr/share/mathjax/output/chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/output/svg.js
@@ -105,14 +105,14 @@ drwxrwxr-x root/root    usr/share/mathjax/sre/mathmaps/
 -rw-rw-r-- root/root    usr/share/mathjax/sre/require.mjs
 -rw-rw-r-- root/root    usr/share/mathjax/sre/speech-worker.js
 -rw-rw-r-- root/root    usr/share/mathjax/startup.js
--rw-rw-r-- root/root    usr/share/mathjax/tex-chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/tex-chtml-nofont.js
--rw-rw-r-- root/root    usr/share/mathjax/tex-mml-chtml.js
+-rw-rw-r-- root/root    usr/share/mathjax/tex-chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/tex-mml-chtml-nofont.js
--rw-rw-r-- root/root    usr/share/mathjax/tex-mml-svg.js
+-rw-rw-r-- root/root    usr/share/mathjax/tex-mml-chtml.js
 -rw-rw-r-- root/root    usr/share/mathjax/tex-mml-svg-nofont.js
--rw-rw-r-- root/root    usr/share/mathjax/tex-svg.js
+-rw-rw-r-- root/root    usr/share/mathjax/tex-mml-svg.js
 -rw-rw-r-- root/root    usr/share/mathjax/tex-svg-nofont.js
+-rw-rw-r-- root/root    usr/share/mathjax/tex-svg.js
 drwxrwxr-x root/root    usr/share/mathjax/ui/
 -rw-rw-r-- root/root    usr/share/mathjax/ui/lazy.js
 -rw-rw-r-- root/root    usr/share/mathjax/ui/menu.js
