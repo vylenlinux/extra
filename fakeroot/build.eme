@@ -6,7 +6,7 @@ homepage="https://wiki.debian.org/FakeRoot"
 maintainer="Vylen Linux Team"
 
 name=fakeroot
-version=1.38.1
+version=2.0
 release=1
 source="${name}-${version}.tar.gz::http://ftp.debian.org/debian/pool/main/f/${name}/${name}_${version}.orig.tar.gz"
 
