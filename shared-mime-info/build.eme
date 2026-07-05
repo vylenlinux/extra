@@ -15,7 +15,8 @@ build() {
 
     vylen-meson "${name}-${version}" build \
         -Dupdate-mimedb=false \
-        -Dbuild-tests=false
+        -Dbuild-tests=false \
+        -Dbuild-spec=false
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
