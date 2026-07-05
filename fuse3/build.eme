@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=fuse3
 version=3.18.2
-release=2
+release=3
 source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
 
 build() {
@@ -22,4 +22,5 @@ build() {
 
     # move to fuse-common
     rm -f "${PKG}/etc/fuse.conf"
+    do_service fuse
 }
