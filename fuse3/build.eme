@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=fuse3
 version=3.18.2
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
 
 build() {
@@ -15,7 +15,10 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
+    # static device nodes are handled by eudev
     # shellcheck disable=SC2115
-    rm -r "${PKG}/dev" "${PKG}/etc/fuse.conf"
-    rm -fr "${PKG}/etc/init.d"
+    rm -r "${PKG}/dev"
+
+    # move to fuse-common
+    rm -f "${PKG}/etc/fuse.conf"
 }
