@@ -1,30 +1,40 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Simple interface for userspace programs to export a virtual filesystem to the Linux kernel"
 homepage="https://github.com/libfuse/libfuse"
 maintainer="Vylen Linux Team"
 
 name=fuse2
 version=2.9.9
-release=1
-source="https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz
-	fuse.conf
-	glibc-2.34-fix.patch"
+release=2
+
+source="https://github.com/libfuse/libfuse/releases/download/fuse-${version}/fuse-${version}.tar.gz
+    glibc-2.34-fix.patch"
 
 build() {
-	cd fuse-$version
+    # shellcheck disable=SC2164
+    cd "fuse-${version}"
 
-	patch -Np1 -i ../glibc-2.34-fix.patch
+    autoreconf -fi -I /usr/share/gettext/m4
+    patch -Np1 -i "${SRC}/glibc-2.34-fix.patch"
 
-	autoreconf -vfi  -I /usr/share/gettext/m4
-	./configure --prefix=/usr    \
-	            --disable-static \
-	            INIT_D_PATH=/tmp/init.d
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
 
-	install -d $PKG/lib
-	mv -v   $PKG/usr/lib/libfuse.so.* $PKG/lib
-	ln -sfv ../../lib/libfuse.so.2.9.9 $PKG/usr/lib/libfuse.so
-	rm -rf $PKG/tmp $PKG/dev
+    make
+    make DESTDIR="${PKG}" install
 
-	install -Dm 644 $SRC/fuse.conf $PKG/etc/fuse.conf
+    install -d "${PKG}/lib"
+
+    mv "${PKG}/usr/lib"/libfuse.so.* "${PKG}/lib"
+    ln -sf ../../lib/libfuse.so.2.9.9 "${PKG}/usr/lib/libfuse.so"
+
+    # static device nodes are handled by eudev
+    # shellcheck disable=SC2115
+    rm -rf "${PKG}/dev"
+
+    # move to fuse-common
+    rm -rf "${PKG}/etc/init.d"
 }
