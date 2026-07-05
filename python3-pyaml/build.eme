@@ -6,7 +6,7 @@ homepage="https://github.com/mk-fg/pretty-yaml"
 maintainer="Vylen Linux Team"
 
 name=python3-pyaml
-version=26.2.1
+version=26.7.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mk-fg/pretty-yaml/archive/refs/tags/${version}.tar.gz"
 
