@@ -17,9 +17,9 @@ build() {
 
     # static device nodes are handled by eudev
     # shellcheck disable=SC2115
-    rm -r "${PKG}/dev"
+    rm -r "${PKG}/dev" \
+        "${PKG}/etc/init.d"
 
     # move to fuse-common
-    rm -rf "${PKG}/etc/init.d"
     rm -f "${PKG}/etc/fuse.conf"
 }
