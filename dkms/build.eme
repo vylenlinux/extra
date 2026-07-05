@@ -16,8 +16,7 @@ source="${name}-${version}.tar.gz::https://github.com/dell/${name}/archive/v${ve
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    make DESTDIR="${PKG}" install
 
-    mkdir -pv "${PKG}/usr/lib/dkms"
-    install -m644 "${SRC}/buildmodules-template.sh" "${PKG}/usr/lib/dkms/"
+    make DESTDIR="${PKG}" install
+    install -Dm644 "${SRC}/buildmodules-template.sh" -t "${PKG}/usr/lib/dkms/"
 }
