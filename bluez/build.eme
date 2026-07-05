@@ -6,8 +6,8 @@ homepage="http://www.bluez.org/"
 maintainer="Vylen Linux Team"
 
 name=bluez
-version=5.86
-release=2
+version=5.87
+release=1
 
 source="https://www.kernel.org/pub/linux/bluetooth/${name}-${version}.tar.xz
     rfcomm.conf
@@ -35,8 +35,8 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -d "${PKG}/usr/sbin"
-    ln -svf ../lib/bluetooth/bluetoothd "${PKG}/usr/sbin/bluetoothd"
-    ln -svf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/sbin/bluetooth-meshd"
+    ln -sf ../lib/bluetooth/bluetoothd "${PKG}/usr/sbin/bluetoothd"
+    ln -sf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/sbin/bluetooth-meshd"
 
     # main configuration
     install -Dm644 src/main.conf -t "${PKG}/etc/bluetooth/"

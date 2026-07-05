@@ -1,4 +1,4 @@
-bluez-5.86-2
+bluez-5.87-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/bluetooth/
 -rw-r--r-- root/root    etc/bluetooth/input.conf
@@ -45,27 +45,27 @@ drwxr-xr-x root/root    usr/include/bluetooth/
 -rw-r--r-- root/root    usr/include/bluetooth/sdp_lib.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/bluetooth/
--rwxr-xr-x root/root    usr/lib/bluetooth/bluetoothd
 -rwxr-xr-x root/root    usr/lib/bluetooth/bluetooth-meshd
+-rwxr-xr-x root/root    usr/lib/bluetooth/bluetoothd
 -rwxr-xr-x root/root    usr/lib/bluetooth/obexd
 drwxr-xr-x root/root    usr/lib/cups/
 drwxr-xr-x root/root    usr/lib/cups/backend/
 -rwxr-xr-x root/root    usr/lib/cups/backend/bluetooth
--rwxr-xr-x root/root    usr/lib/libbluetooth.so.3.19.16
-lrwxrwxrwx root/root    usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.16
 lrwxrwxrwx root/root    usr/lib/libbluetooth.so -> libbluetooth.so.3.19.16
+lrwxrwxrwx root/root    usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.16
+-rwxr-xr-x root/root    usr/lib/libbluetooth.so.3.19.16
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/bluez.pc
 drwxr-xr-x root/root    usr/sbin/
-lrwxrwxrwx root/root    usr/sbin/bluetoothd -> ../lib/bluetooth/bluetoothd
 lrwxrwxrwx root/root    usr/sbin/bluetooth-meshd -> ../lib/bluetooth/bluetooth-meshd
+lrwxrwxrwx root/root    usr/sbin/bluetoothd -> ../lib/bluetooth/bluetoothd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/services/
 -rw-r--r-- root/root    usr/share/dbus-1/services/org.bluez.obex.service
 drwxr-xr-x root/root    usr/share/dbus-1/system.d/
--rw-r--r-- root/root    usr/share/dbus-1/system.d/bluetooth.conf
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/bluetooth-mesh.conf
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/bluetooth.conf
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/obex.conf
 drwxr-xr-x root/root    usr/share/zsh/
 drwxr-xr-x root/root    usr/share/zsh/site-functions/
