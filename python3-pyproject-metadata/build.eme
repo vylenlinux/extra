@@ -1,18 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="PEP 621 metadata parsing"
 homepage="https://github.com/FFY00/python-pyproject-metadata"
 maintainer="Vylen Linux Team"
 
 name=python3-pyproject-metadata
-version=0.11.0
+version=0.12.1
 release=1
-source="https://pypi.org/packages/source/p/pyproject_metadata/pyproject_metadata-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.org/packages/source/p/pyproject_metadata/pyproject_metadata-${version}.tar.gz"
 
 build() {
-  cd pyproject_metadata-$version
+    # shellcheck disable=SC2164
+    cd "pyproject_metadata-${version}"
 
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		.dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
