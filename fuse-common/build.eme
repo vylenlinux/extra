@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Common files for fuse2/3 packages"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/libfuse/libfuse"
+
+name=fuse-common
+version=3.18.2
+release=1
+
+source="fuse3-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
+backup="etc/fuse.conf"
+
+build() {
+    install -Dm644 "libfuse-fuse-${version}/util/fuse.conf" -t "${PKG}/etc/"
+}
