@@ -1,19 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A low-level cryptographic library"
 homepage="https://www.lysator.liu.se/~nisse/nettle"
 maintainer="Vylen Linux Team"
 
 name=nettle
-version=3.10.2
+version=4.0
 release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr \
-		    --libdir=/usr/lib \
-		    --disable-static \
-		    --disable-documentation
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --disable-static \
+        --disable-documentation
+
+    make
+    make DESTDIR="${PKG}" install
 }
