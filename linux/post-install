@@ -12,7 +12,7 @@ for i in /lib/modules/*; do
         *-linux)
             [ -d "${i}/build/include" ] && continue
 
-            printf "post-install: removing kernel %s" "${i##*/}"
+            printf "post-install: removing kernel %s\n" "${i##*/}"
             rm -fr "${i}"
         ;;
     esac
