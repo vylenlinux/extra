@@ -6,7 +6,7 @@ homepage="https://numpy.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-numpy
-version=2.5.0
+version=2.5.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/numpy/numpy/releases/download/v${version}/numpy-${version}.tar.gz"
 
