@@ -1,7 +1,5 @@
 fuse3-3.18.2-2
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/fuse3
 drwxr-xr-x root/root    lib/
 drwxr-xr-x root/root    lib/udev/
 drwxr-xr-x root/root    lib/udev/rules.d/

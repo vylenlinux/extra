@@ -20,5 +20,6 @@ build() {
     rm -r "${PKG}/dev"
 
     # move to fuse-common
+    rm -rf "${PKG}/etc/init.d"
     rm -f "${PKG}/etc/fuse.conf"
 }
