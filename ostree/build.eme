@@ -8,7 +8,7 @@ homepage="https://ostreedev.github.io/ostree/"
 name=ostree
 version=2026.2
 release=1
-source="https://github.com/ostreedev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://github.com/ostreedev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
