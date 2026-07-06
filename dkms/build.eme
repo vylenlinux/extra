@@ -7,16 +7,16 @@ maintainer="Vylen Linux Team"
 
 name=dkms
 version=3.4.1
-release=1
+release=2
 backup="etc/dkms/framework.conf"
 
 source="${name}-${version}.tar.gz::https://github.com/dell/${name}/archive/v${version}.tar.gz
-    buildmodules-template.sh"
+    buildmodules-template.sh.in"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
     make DESTDIR="${PKG}" install
-    install -Dm644 "${SRC}/buildmodules-template.sh" -t "${PKG}/usr/lib/dkms/"
+    install -Dm644 "${SRC}/buildmodules-template.sh.in" -t "${PKG}/usr/lib/dkms/"
 }
