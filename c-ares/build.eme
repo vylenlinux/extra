@@ -1,20 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C library for asynchronous DNS requests"
 homepage="https://c-ares.org/"
 maintainer="Vylen Linux Team"
 
 name=c-ares
-version=1.34.6
+version=1.34.7
 release=1
-source="https://github.com/c-ares/c-ares/releases/download/v$version/$name-$version.tar.gz"
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-	        -DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-Wno-dev 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
