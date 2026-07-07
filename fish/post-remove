@@ -1,0 +1,4 @@
+#!/bin/sh
+
+shell=/usr/bin/fish
+sed -i "\|^$shell\$|d" /etc/shells
