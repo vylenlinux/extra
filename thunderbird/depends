@@ -1,4 +1,5 @@
 autoconf2.13
+botan
 gtk3
 rust
 yasm
