@@ -6,7 +6,7 @@ homepage="https://github.com/frankosterfeld/qtkeychain"
 maintainer="Vylen Linux Team"
 
 name=qtkeychain6
-version=0.16.0
+version=0.17.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/frankosterfeld/qtkeychain/archive/${version}/qtkeychain-${version}.tar.gz"
 
@@ -25,5 +25,5 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    rm -fr "${PKG}/usr/share"/qt6*
+    rm -rf "${PKG}/usr/share"/qt6*
 }
