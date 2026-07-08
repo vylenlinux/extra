@@ -6,7 +6,7 @@ homepage="https://01.org/linuxmedia/vaapi"
 maintainer="Vylen Linux Team"
 
 name=libva
-version=2.24.0
+version=2.24.1
 release=1
 source="https://github.com/intel/${name}/archive/${version}/${name}-${version}.tar.gz"
 
