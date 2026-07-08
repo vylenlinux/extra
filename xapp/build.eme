@@ -1,19 +1,20 @@
-description="Common library for X-Apps project "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Common library for X-Apps project"
 homepage="https://github.com/linuxmint/xapp"
 maintainer="Vylen Linux Team"
 
 name=xapp
 version=3.2.2
 release=1
-source="https://github.com/linuxmint/xapp/archive/master.lmde5/$name-$version.tar.gz"
+source="https://github.com/linuxmint/${name}/archive/master.lmde5/${name}-${version}.tar.gz"
 
 build() {
+    vylen-meson xapp-master.lmde5 build
+    samu -C build
+    DESTDIR="${PKG}" samu -C build install
 
-	vylen-meson xapp-master.lmde5 build 
-	samu -C build
-	DESTDIR=$PKG samu -C build install
-
-	local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
-	python3 -m compileall -o 0 -o 1 -o 2 --hardlink-dupes -s "$PKG" "$PKG"${site_packages}
-
+    site_packages="$(python3 -c "import site; print(site.getsitepackages()[0])")"
+    python3 -m compileall -o 0 -o 1 -o 2 --hardlink-dupes -s "${PKG}" "${PKG}/${site_packages}"
 }
