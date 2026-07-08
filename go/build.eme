@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=go
 version=1.26.5
-release=1
+release=2
 
 source="${name}-${version}.src.tar.gz::https://golang.org/dl/${name}${version}.src.tar.gz
     ${name}-${version}.linux-amd64.tar.gz::https://golang.org/dl/${name}${version}.linux-amd64.tar.gz"
@@ -29,15 +29,21 @@ build() {
     mv "${SRC}/${name}" "${PKG}/usr/lib/"
 
     install -d "${PKG}/usr/bin"
-    ln -s /usr/lib/go/bin/go "${PKG}/usr/bin/"
-    ln -s /usr/lib/go/bin/gofmt "${PKG}/usr/bin/"
+    ln -s /usr/lib/go/bin/go -t "${PKG}/usr/bin/"
+    ln -s /usr/lib/go/bin/gofmt -t "${PKG}/usr/bin/"
 
-    rm -rf "${SRC}/go/pkg/obj/go-build"/*
+    rm -rf "${SRC}/go/pkg/obj/go-build"/* \
+        "${PKG}/usr/lib/go/test" \
+        "${PKG}/usr/lib/go/api"
 
     find "${PKG}" \( \
         -name "README*" -o \
         -name "AUTHORS" -o \
-        -name "TODO" \
+        -name "TODO" -o \
+        -name "LICENSE" -o \
+        -name "PATENTS" -o \
+        -name "SECURITY*" -o \
+        -name "CONTRIBUTING*" \
     \) -delete
 
     rm "${PKG}/usr/lib/go/src"/*.bat
