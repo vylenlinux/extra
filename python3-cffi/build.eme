@@ -6,7 +6,7 @@ homepage="http://cffi.readthedocs.org"
 maintainer="Vylen Linux Team"
 
 name=python3-cffi
-version=2.0.0
+version=2.1.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/c/cffi/cffi-${version}.tar.gz"
 
