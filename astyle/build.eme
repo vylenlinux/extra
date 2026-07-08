@@ -6,7 +6,7 @@ homepage="https://sourceforge.net/projects/astyle/"
 maintainer="Vylen Linux Team"
 
 name=astyle
-version=3.6.16
+version=3.6.17
 release=1
 
 source="https://gitlab.com/saalen/${name}/-/archive/${version}/${name}-${version}.tar.bz2
