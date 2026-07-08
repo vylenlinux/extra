@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Encoding and language detection alternative to chardet "
+description="Encoding and language detection alternative to chardet"
 homepage="https://github.com/Ousret/charset_normalizer"
 maintainer="Vylen Linux Team"
 
 name=python3-charset-normalizer
-version=3.4.7
+version=3.4.9
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/c/charset_normalizer/charset_normalizer-${version}.tar.gz"
 
