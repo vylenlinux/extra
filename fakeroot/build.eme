@@ -6,9 +6,9 @@ homepage="https://wiki.debian.org/FakeRoot"
 maintainer="Vylen Linux Team"
 
 name=fakeroot
-version=2.0
+version=2.1.3
 release=1
-source="${name}-${version}.tar.gz::http://ftp.debian.org/debian/pool/main/f/${name}/${name}_${version}.orig.tar.gz"
+source="${name}-${version}.tar.gz::http://ftp.debian.org/debian/pool/main/f/${name}/${name}_${version}.orig.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
