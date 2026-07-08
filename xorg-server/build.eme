@@ -6,9 +6,11 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xorg-server
-version=21.1.23
+version=21.1.24
 release=1
-source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz
+    Xwrapper.config"
 
 build() {
     vylen-meson "xserver-${name}-${version}" build \
@@ -22,5 +24,5 @@ build() {
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
     install -dm755 "${PKG}/etc/X11/xorg.conf.d"
-    echo "needs_root_rights = yes" >> "${PKG}/etc/X11/Xwrapper.config"
+    install -Dm644 "${SRC}/Xwrapper.config" -t "${PKG}/etc/X11/"
 }
