@@ -1,17 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="UI library that focuses on simplicity and minimalism"
 homepage="https://pwmt.org/projects/girara"
 maintainer="Vylen Linux Team"
 
 name=girara
-version=2026.02.04
+version=2026.07.07
 release=1
-source="https://pwmt.org/projects/girara/download/$name-$version.tar.xz"
+source="https://pwmt.org/projects/${name}/download/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build \
-		--libexecdir=/usr/lib/$name \
-		-Ddocs=disabled \
-		-Dtests=disabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        --libexecdir="/usr/lib/${name}" \
+        -Ddocs=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
