@@ -1,16 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Simple man page generator for POSIX systems written in C99"
 homepage="https://git.sr.ht/~sircmpwn/scdoc"
 maintainer="Vylen Linux Team"
 
 name=scdoc
-version=1.11.4
+version=1.11.5
 release=1
-source="$name-$version.tar.gz::https://git.sr.ht/~sircmpwn/scdoc/archive/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://git.sr.ht/~sircmpwn/${name}/archive/${version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	cd $name-$version
-
-	make PREFIX=/usr
-	make PREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr
+    make PREFIX=/usr DESTDIR="${PKG}" install
 }
