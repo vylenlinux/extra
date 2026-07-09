@@ -6,7 +6,7 @@ homepage="https://www.chezmoi.io/"
 maintainer="Vylen Linux Team"
 
 name=chezmoi
-version=2.70.5
+version=2.71.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/twpayne/${name}/archive/v${version}.tar.gz"
 
