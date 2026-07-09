@@ -2,12 +2,12 @@
 
 # shellcheck disable=SC2034
 description="NVIDIA Linux Display Driver (Latest Production Branch)"
-homepage="https://www.nvidia.com/ "
+homepage="https://www.nvidia.com/"
 maintainer="Vylen Linux Team"
 
 name=nvidia-open
-version=610.43.02
-release=2
+version=610.43.03
+release=1
 
 source="${name}-${version}.run::http://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
     buildmodules-${name}.sh
