@@ -1,4 +1,4 @@
-vivaldi-ffmpeg-codecs-148.0.7778.256-1
+vivaldi-ffmpeg-codecs-150.0.7871.113-1
 drwxr-xr-x root/root    opt/
 drwxr-xr-x root/root    opt/vivaldi/
--rw-r--r-- root/root    opt/vivaldi/libffmpeg.so.8.0
+-rw-r--r-- root/root    opt/vivaldi/libffmpeg.so.8.1

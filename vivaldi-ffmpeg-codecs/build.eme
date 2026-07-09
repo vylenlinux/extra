@@ -6,11 +6,11 @@ homepage="https://chromium.googlesource.com/chromium/third_party/ffmpeg"
 maintainer="Vylen Linux Team"
 
 name=vivaldi-ffmpeg-codecs
-version=148.0.7778.256
+version=150.0.7871.113
 release=1
 
-_vivaldi_major_version=8.0
-commit="f45bab87ce4c5fafc67fd53fcde777578d01bfa0"
+_vivaldi_major_version=8.1
+commit=ad41607c61898cf7150e0fb20fe4bbabd44922a3
 
 source="${name}-${version}.tar.gz::https://chromium.googlesource.com/chromium/third_party/ffmpeg/+archive/${commit}.tar.gz"
 
