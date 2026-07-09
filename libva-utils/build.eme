@@ -1,13 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Intel VA-API Media Applications and Scripts for libva"
 homepage="https://01.org/linuxmedia/vaapi"
 maintainer="Vylen Linux Team"
 
 name=libva-utils
-version=2.23.0
+version=2.24.0
 release=1
-source="https://github.com/intel/libva-utils/archive/$version/$name-$version.tar.gz"
+source="https://github.com/intel/${name}/archive/${version}/${name}-${version}.tar.gz"
+
 build() {
-	vylen-meson $name-$version build -Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build -Dtests=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
