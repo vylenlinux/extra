@@ -6,11 +6,15 @@ homepage="https://pwmt.org/projects/zathura/"
 maintainer="Vylen Linux Team"
 
 name=zathura
-version=2026.07.02
+version=2026.07.08
 release=1
-source="https://github.com/pwmt/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+source="https://github.com/pwmt/${name}/archive/${version}/${name}-${version}.tar.gz
+    https://github.com/pwmt/${name}/commit/9abd4b74b5b08c89f1bcd50d890c72cf4c6252c2.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/9abd4b74b5b08c89f1bcd50d890c72cf4c6252c2.patch"
+
     vylen-meson "${name}-${version}" build \
         -Dconvert-icon=disabled \
         -Dmanpages=disabled \
