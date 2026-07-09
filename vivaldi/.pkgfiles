@@ -1,4 +1,4 @@
-vivaldi-8.0.4033.57-1
+vivaldi-8.1.4087.46-1
 drwxr-xr-x root/root    opt/
 drwxr-xr-x root/root    opt/vivaldi/
 -rw-r--r-- root/root    opt/vivaldi/LICENSE.html
@@ -8,6 +8,8 @@ drwxr-xr-x root/root    opt/vivaldi/MEIPreload/
 drwxr-xr-x root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/
 -rw-r--r-- root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/manifest.json
 -rw-r--r-- root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat
+drwxr-xr-x root/root    opt/vivaldi/apparmor.d/
+-rw-r--r-- root/root    opt/vivaldi/apparmor.d/vivaldi-stable
 -rwxr-xr-x root/root    opt/vivaldi/chrome_crashpad_handler
 -rwxr-xr-x root/root    opt/vivaldi/libEGL.so
 -rwxr-xr-x root/root    opt/vivaldi/libGLESv2.so
@@ -29,14 +31,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/ar_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/ar_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/ar_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/az.pak
--rw-r--r-- root/root    opt/vivaldi/locales/az_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/az_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/az_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/be.pak
--rw-r--r-- root/root    opt/vivaldi/locales/be_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/be_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/be_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/bg.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/bg_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/bg_MASCULINE.pak
@@ -101,10 +95,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/et_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/et_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/et_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/eu.pak
--rw-r--r-- root/root    opt/vivaldi/locales/eu_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/eu_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/eu_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/fa.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/fa_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/fa_MASCULINE.pak
@@ -129,10 +119,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/gd_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/gd_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/gd_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/gl.pak
--rw-r--r-- root/root    opt/vivaldi/locales/gl_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/gl_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/gl_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/gu.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/gu_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/gu_MASCULINE.pak
@@ -153,10 +139,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/hu_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/hu_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/hu_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/hy.pak
--rw-r--r-- root/root    opt/vivaldi/locales/hy_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/hy_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/hy_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/id.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/id_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/id_MASCULINE.pak
@@ -165,10 +147,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/io_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/io_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/io_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/is.pak
--rw-r--r-- root/root    opt/vivaldi/locales/is_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/is_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/is_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/it.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/it_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/it_MASCULINE.pak
@@ -185,10 +163,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/jbo_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/jbo_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/jbo_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/ka.pak
--rw-r--r-- root/root    opt/vivaldi/locales/ka_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/ka_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/ka_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/kab.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/kab_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/kab_MASCULINE.pak
@@ -213,10 +187,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/lv_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/lv_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/lv_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/mk.pak
--rw-r--r-- root/root    opt/vivaldi/locales/mk_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/mk_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/mk_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/ml.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/ml_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/ml_MASCULINE.pak
@@ -241,10 +211,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/nn_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/nn_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/nn_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/pa.pak
--rw-r--r-- root/root    opt/vivaldi/locales/pa_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/pa_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/pa_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/pl.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/pl_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/pl_MASCULINE.pak
@@ -277,14 +243,6 @@ drwxr-xr-x root/root    opt/vivaldi/locales/
 -rw-r--r-- root/root    opt/vivaldi/locales/sl_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/sl_MASCULINE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/sl_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sq.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sq_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sq_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sq_NEUTER.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sr-Latn.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sr-Latn_FEMININE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sr-Latn_MASCULINE.pak
--rw-r--r-- root/root    opt/vivaldi/locales/sr-Latn_NEUTER.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/sr.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/sr_FEMININE.pak
 -rw-r--r-- root/root    opt/vivaldi/locales/sr_MASCULINE.pak
@@ -543,7 +501,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-fa2575a02ba83eda494c98dcdc974be8.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-305b897d8c2bdf16a5855c303179fc80.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
@@ -888,6 +846,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-eye.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-more.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-open.svg
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-profile-managed.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-reload.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-remove.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/new_gift.svg
