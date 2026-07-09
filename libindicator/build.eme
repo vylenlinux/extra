@@ -1,27 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Set of symbols and convenience functions for Ayatana indicators"
 homepage="https://launchpad.net/libindicator"
 maintainer="Vylen Linux Team"
 
 name=libindicator
 version=12.10.1
-release=1
-source="https://launchpad.net/libindicator/${version%.*}/$version/+download/libindicator-$version.tar.gz"
+release=2
+source="https://launchpad.net/libindicator/${version%.*}/${version}/+download/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -i 's/-Werror//' libindicator/Makefile.am tools/Makefile.am
-	autoreconf -fi
+    sed -i 's/-Werror//' libindicator/Makefile.am tools/Makefile.am
+    autoreconf -fi
 
-	./configure \
-		--prefix=/usr \
-		--localstatedir=/var \
-		--libexecdir=/usr/lib/libindicator \
-		--sysconfdir=/etc \
-		--with-gtk=3 \
-		--disable-static \
-		--disable-tests
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --localstatedir=/var \
+        --libexecdir="/usr/lib/${name}" \
+        --sysconfdir=/etc \
+        --with-gtk=3 \
+        --disable-static \
+        --disable-tests
+
+    sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
+
+    make -j1
+    make -j1 DESTDIR="${PKG}" install
 }
