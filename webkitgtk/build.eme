@@ -6,13 +6,13 @@ homepage="https://webkitgtk.org"
 maintainer="Vylen Linux Team"
 
 name=webkitgtk
-version=2.52.4
+version=2.52.5
 release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
     # failed build with ccache, remove reom path
-    PATH="$(echo "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')"
+    PATH="$(echo "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {next;} {print;}' | sed 's/:*$//')"
 
     # build with GCC
     export CC=gcc CXX=g++
