@@ -31,7 +31,7 @@ lto = "fat"
 
 [build]
 target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
-description = "Vylen"
+description = "Vylen Linux"
 tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
 docs = false
 extended = true
