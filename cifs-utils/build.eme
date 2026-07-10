@@ -6,7 +6,7 @@ homepage="https://wiki.samba.org/index.php/LinuxCIFS_utils"
 maintainer="Vylen Linux Team"
 
 name=cifs-utils
-version=7.6
+version=7.7
 release=1
 source="https://download.samba.org/pub/linux-cifs/${name}/${name}-${version}.tar.bz2"
 
