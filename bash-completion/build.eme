@@ -6,7 +6,7 @@ homepage="https://github.com/scop/bash-completion"
 maintainer="Vylen Linux Team"
 
 name=bash-completion
-version=2.17.0
+version=2.18.0
 release=1
 source="https://github.com/scop/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
@@ -23,10 +23,4 @@ build() {
 
     # bash-completion is sourced in /etc/bash.bashrc so that non-bash shell don't source it
     rm "${PKG}/etc/profile.d/bash_completion.sh"
-
-    # remove Slackware's makepkg completion
-    rm "${PKG}/usr/share/${name}/completions/makepkg"
-
-    # remove libsecret provided completion
-    # rm "${PKG}/usr/share/${name}/completions/secret-tool"
 }
