@@ -6,12 +6,12 @@ homepage="https://github.com/swaywm/swaylock"
 maintainer="Vylen Linux Team"
 
 name=swaylock
-version=1.8.5
+version=1.8.6
 release=1
 source="https://github.com/swaywm/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson "${name}-${version}" build \
+    vylen-meson "${name}-${version}" build \
         -Dpam=enabled \
         -Dbash-completions="$(emerald is-installed bash-completions && printf "true" || printf "false")" \
         -Dfish-completions="$(emerald is-installed fish-completions && printf "true" || printf "false")" \
