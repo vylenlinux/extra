@@ -12,7 +12,7 @@ source="https://download.kde.org/stable/frameworks/${version%.*}/${name}-${versi
 
 build() {
     cmake -S "${name}-${version}" -B build -G Ninja \
-        -DCMAKE_INSTALL_PREFIX=/usr\
+        -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
