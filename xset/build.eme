@@ -1,21 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="User preference utility for X"
 homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=xset
-version=1.2.5
+version=1.2.6
 release=1
-source="http://ftp.x.org/pub/individual/app/xset-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/app/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
