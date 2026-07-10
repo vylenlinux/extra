@@ -1,20 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="An MP3 encoder and optionally, an MP3 frame analyzer"
 homepage="http://lame.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=lame
-version=3.100
+version=3.101
 release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure \
-		--prefix=/usr \
-		--enable-mp3rtp \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    export CFLAGS="${CFLAGS} \
+        -Wno-incompatible-pointer-types \
+        -Wno-implicit-function-declaration"
 
+    ./configure \
+        --prefix=/usr \
+        --disable-analyzer-hooks \
+        --disable-gtktest \
+        --enable-nasm
+
+    make
+    make DESTDIR="${PKG}" install
 }
