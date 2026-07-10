@@ -1,4 +1,4 @@
-kcodecs-6.27.0-1
+kcodecs-6.28.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
@@ -21,8 +21,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Codecs/
 -rw-r--r-- root/root    usr/lib/cmake/KF6Codecs/KF6CodecsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6Codecs/KF6CodecsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6Codecs.so -> libKF6Codecs.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Codecs.so.6 -> libKF6Codecs.so.6.27.0
--rwxr-xr-x root/root    usr/lib/libKF6Codecs.so.6.27.0
+lrwxrwxrwx root/root    usr/lib/libKF6Codecs.so.6 -> libKF6Codecs.so.6.28.0
+-rwxr-xr-x root/root    usr/lib/libKF6Codecs.so.6.28.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/kcodecs.categories

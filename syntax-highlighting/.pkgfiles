@@ -1,4 +1,4 @@
-syntax-highlighting-6.27.0-1
+syntax-highlighting-6.28.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ksyntaxhighlighter6
@@ -36,8 +36,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6SyntaxHighlighting/
 -rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6SyntaxHighlighting/KF6SyntaxHighlightingTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so -> libKF6SyntaxHighlighting.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so.6 -> libKF6SyntaxHighlighting.so.6.27.0
--rwxr-xr-x root/root    usr/lib/libKF6SyntaxHighlighting.so.6.27.0
+lrwxrwxrwx root/root    usr/lib/libKF6SyntaxHighlighting.so.6 -> libKF6SyntaxHighlighting.so.6.28.0
+-rwxr-xr-x root/root    usr/lib/libKF6SyntaxHighlighting.so.6.28.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/
