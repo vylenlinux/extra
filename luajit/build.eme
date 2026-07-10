@@ -6,7 +6,7 @@ homepage="https://github.com/openresty/luajit2"
 maintainer="Vylen Linux Team"
 
 name=luajit
-version=2.1.20260415
+version=2.1.20260701
 release=1
 source="${name}-${version}.tar.gz::https://github.com/openresty/luajit2/archive/v${version%.*}-${version##*.}.tar.gz"
 
