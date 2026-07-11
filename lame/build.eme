@@ -6,7 +6,7 @@ homepage="http://lame.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=lame
-version=3.101
+version=4.0
 release=1
 source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.gz"
 
