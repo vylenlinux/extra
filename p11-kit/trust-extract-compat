@@ -1,0 +1,8 @@
+# Copy existing anchor modifications to /etc/ssl/local
+/usr/lib/make-ca/copy-trust-modifications 2>/dev/null
+
+# Generate a new trust store
+/usr/sbin/make-ca -f -g
+
+# Compatibility symlink for software expecting ca-certificates.crt (e.g. Steam)
+ln -sf /etc/ssl/cert.pem /etc/ssl/certs/ca-certificates.crt

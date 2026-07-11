@@ -1,4 +1,4 @@
-p11-kit-0.26.2-1
+p11-kit-0.26.4-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/pkcs11/
 -rw-r--r-- root/root    etc/pkcs11/pkcs11.conf.example
@@ -21,8 +21,8 @@ drwxr-xr-x root/root    usr/include/p11-kit-1/p11-kit/
 -rw-r--r-- root/root    usr/include/p11-kit-1/p11-kit/version.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libp11-kit.so -> libp11-kit.so.0
-lrwxrwxrwx root/root    usr/lib/libp11-kit.so.0 -> libp11-kit.so.0.4.8
--rwxr-xr-x root/root    usr/lib/libp11-kit.so.0.4.8
+lrwxrwxrwx root/root    usr/lib/libp11-kit.so.0 -> libp11-kit.so.0.4.10
+-rwxr-xr-x root/root    usr/lib/libp11-kit.so.0.4.10
 lrwxrwxrwx root/root    usr/lib/p11-kit-proxy.so -> libp11-kit.so.0
 drwxr-xr-x root/root    usr/lib/p11-kit/
 -rwxr-xr-x root/root    usr/lib/p11-kit/p11-kit-remote

@@ -1,31 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules"
 homepage="https://github.com/p11-glue/p11-kit"
 maintainer="Vylen Linux Team"
 
 name=p11-kit
-version=0.26.2
+version=0.26.4
 release=1
-source="https://github.com/p11-glue/p11-kit/releases/download/$version/$name-$version.tar.xz"
+
+source="https://github.com/p11-glue/${name}/releases/download/${version}/${name}-${version}.tar.xz
+    trust-extract-compat"
 
 build() {
-	sed '20,$ d' -i $name-$version/trust/trust-extract-compat
+    sed '20,$ d' -i "${name}-${version}/trust/trust-extract-compat"
+    cat trust-extract-compat >> "${name}-${version}/trust/trust-extract-compat"
 
-cat >> $name-$version/trust/trust-extract-compat << "EOF"
-# Copy existing anchor modifications to /etc/ssl/local
-/usr/lib/make-ca/copy-trust-modifications 2>/dev/null
-# Generate a new trust store
-/usr/sbin/make-ca -f -g
-# Compatibility symlink for software expecting ca-certificates.crt (e.g. Steam)
-ln -sf /etc/ssl/cert.pem /etc/ssl/certs/ca-certificates.crt
-EOF
-	vylen-meson $name-$version build \
-		-D trust_paths=/etc/pki/anchors \
-		-D module_path=/usr/lib/pkcs11 \
-		-D nls=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dtrust_paths=/etc/pki/anchors \
+        -Dmodule_path=/usr/lib/pkcs11 \
+        -Dnls=false
 
-	ln -s /usr/lib/p11-kit/trust-extract-compat \
-		$PKG/usr/bin/update-ca-trust
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    ln -s "/usr/lib/${name}/trust-extract-compat" "${PKG}/usr/bin/update-ca-trust"
 }
-
