@@ -6,8 +6,8 @@ homepage="http://www.zsh.org"
 maintainer="Vylen Linux Team"
 
 name=zsh
-version=5.9.1
-release=2
+version=5.9.2
+release=1
 source="http://www.zsh.org/pub/${name}-${version}.tar.xz"
 
 build() {
