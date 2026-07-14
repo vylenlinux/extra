@@ -6,7 +6,7 @@ homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=xfsprogs
-version=7.0.1
+version=7.1.0
 release=1
 source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
@@ -27,9 +27,5 @@ build() {
     make
     make -j1 DIST_ROOT="${PKG}" install install-dev
 
-    mkdir -p "${PKG}/sbin"
-    mv "${PKG}/usr/sbin/fsck.xfs" "${PKG}/sbin"
-
-    mv "${PKG}/usr/sbin/xfs_repair" "${PKG}/sbin"
     rm -rf "${PKG}/usr/var"
 }
