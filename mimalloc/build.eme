@@ -6,7 +6,7 @@ homepage="https://github.com/microsoft/mimalloc"
 maintainer="Vylen Linux Team"
 
 name=mimalloc
-version=3.3.2
+version=3.4.1
 release=1
 source="https://github.com/microsoft/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -17,7 +17,6 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DMI_BUILD_OBJECT=OFF \
         -DMI_INSTALL_TOPLEVEL=ON \
         -Wno-dev
