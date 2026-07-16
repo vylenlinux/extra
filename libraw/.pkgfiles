@@ -1,4 +1,4 @@
-libraw-0.22.1-1
+libraw-0.22.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/4channels
@@ -31,3 +31,4 @@ lrwxrwxrwx root/root    usr/lib/libraw_r.so.25 -> libraw_r.so.25.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libraw.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libraw_r.pc
+drwxr-xr-x root/root    usr/share/

@@ -6,7 +6,7 @@ homepage="https://www.libraw.org/"
 maintainer="Vylen Linux Team"
 
 name=libraw
-version=0.22.1
+version=0.22.2
 release=1
 source="${name}-${version}.tar.gz::https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 
@@ -24,7 +24,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    # shellcheck disable=SC2115
-    rm -r "${PKG}/usr/share"
 }
