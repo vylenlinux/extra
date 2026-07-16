@@ -6,7 +6,7 @@ homepage="https://www.tuxera.com/community/open-source-ntfs-3g/"
 maintainer="Vylen Linux Team"
 
 name=ntfs-3g
-version=2026.2.25
+version=2026.7.7
 release=1
 source="${name}-${version}.tar.gz::https://github.com/tuxera/${name}/archive/refs/tags/${version}.tar.gz"
 
@@ -21,8 +21,9 @@ build() {
         --with-fuse=external \
         --disable-ldconfig
 
-    make
     install -d "${PKG}/lib"
+
+    make
     make DESTDIR="${PKG}" install
 
     ln -sv ../bin/ntfs-3g "${PKG}/sbin/mount.ntfs"
