@@ -6,15 +6,15 @@ homepage="https://wayland.freedesktop.org/"
 maintainer="Vylen Linux Team"
 
 name=wayland
-version=1.25.0
+version=1.26.0
 release=1
 source="http://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	# shellcheck disable=SC2164
-    cd "${name}-${version}"
+    vylen-meson "${name}-${version}" build \
+        -Dtests=false \
+        -Ddocumentation=false
 
-    vylen-meson -Dtests=false -Ddocumentation=false build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
