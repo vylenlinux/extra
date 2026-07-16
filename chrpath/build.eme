@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Chrpath modify the dynamic library load path (rpath and runpath) of compiled programs and libraries"
 homepage="https://codeberg.org/pere/chrpath"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,15 @@ maintainer="Vylen Linux Team"
 name=chrpath
 version=0.18
 release=1
-source="$name-$version.tar.gz::https://codeberg.org/pere/chrpath/archive/release-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/pere/${name}/archive/release-${version}.tar.gz"
 
 build() {
-	cd $name
-	sh bootstrap
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
-	rm -r $PKG/usr/doc
+    # shellcheck disable=SC2164
+    cd "${name}"
+
+    sh bootstrap
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
