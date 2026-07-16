@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Kirigami YouTube video player based on QtMultimedia and youtube-dl"
+homepage="https://apps.kde.org/plasmatube/"
+maintainer="Vylen Linux Team"
+
+name=plasmatube
+version=26.04.3
+release=1
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
