@@ -6,7 +6,7 @@ homepage="https://btrfs.readthedocs.io/"
 maintainer="Vylen Linux Team"
 
 name=btrfs-progs
-version=7.0
+version=7.1
 release=1
 source="https://www.kernel.org/pub/linux/kernel/people/kdave/${name}/${name}-v${version}.tar.xz"
 
