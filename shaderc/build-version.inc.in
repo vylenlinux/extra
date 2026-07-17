@@ -1,0 +1,3 @@
+"%VERSION%\n"
+"%SPIRV_TOOLS%"
+"%GLSLANG%"

@@ -6,11 +6,12 @@ homepage="https://github.com/google/shaderc"
 maintainer="Vylen Linux Team"
 
 name=shaderc
-version=2026.2
+version=2026.3
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/v${version}/${name}-v${version}.tar.gz
-    no-vk14.patch"
+    no-vk14.patch
+    build-version.inc.in"
 
 build() {
     # shellcheck disable=SC2164
@@ -21,11 +22,11 @@ build() {
     sed '/examples/d;/third_party/d' -i CMakeLists.txt
     sed '/build-version/d' -i glslc/CMakeLists.txt
 
-    cat <<-EOF > glslc/src/build-version.inc
-"${version}\\n"
-"$(prt-get printf '%v\n' --filter=spirv-tools)"
-"$(prt-get printf '%v\n' --filter=glslang)"
-EOF
+    sed \
+        -e "s|%VERSION%|${version}|g" \
+        -e "s|%SPIRV_TOOLS%|$(emerald info --field=installed spirv-tools)|g" \
+        -e "s|%GLSLANG%|$(emerald info --field=installed glslang)|g" \
+    "${SRC}/build-version.inc.in" > glslc/src/build-version.inc
 
     sed -i -e "s|\$<TARGET_FILE:spirv-dis>|spirv-dis|" glslc/test/CMakeLists.txt
 
