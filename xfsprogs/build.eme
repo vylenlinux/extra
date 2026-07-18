@@ -6,7 +6,7 @@ homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=xfsprogs
-version=7.1.0
+version=7.1.1
 release=1
 source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
@@ -15,7 +15,7 @@ build() {
     cd "${name}-${version}"
     make configure
 
-    export DEBUG=-DNDEBUG
+    export DEBUG="-DNDEBUG"
     export OPTIMIZER="${CFLAGS}"
 
     ./configure \
