@@ -6,7 +6,7 @@ homepage="https://git.pwmt.org/pwmt/zathura-pdf-mupdf"
 maintainer="Vylen Linux Team"
 
 name=zathura-pdf-mupdf
-version=2026.05.10
+version=2026.07.18
 release=1
 source="https://pwmt.org/projects/${name}/download/${name}-${version}.tar.xz"
 
