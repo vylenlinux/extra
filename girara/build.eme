@@ -6,7 +6,7 @@ homepage="https://pwmt.org/projects/girara"
 maintainer="Vylen Linux Team"
 
 name=girara
-version=2026.07.07
+version=2026.07.18
 release=1
 source="https://pwmt.org/projects/${name}/download/${name}-${version}.tar.xz"
 
