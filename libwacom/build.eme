@@ -6,7 +6,7 @@ homepage="https://github.com/linuxwacom/libwacom/wiki"
 maintainer="Vylen Linux Team"
 
 name=libwacom
-version=2.19.0
+version=2.19.1
 release=1
 source="https://github.com/linuxwacom/${name}/releases/download/${name}-${version}/${name}-${version}.tar.xz"
 
