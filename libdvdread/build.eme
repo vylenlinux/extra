@@ -6,7 +6,7 @@ homepage="https://www.videolan.org/developers/libdvdnav.html"
 maintainer="Vylen Linux Team"
 
 name=libdvdread
-version=7.1.0
+version=7.1.1
 release=1
 source="https://code.videolan.org/videolan/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
