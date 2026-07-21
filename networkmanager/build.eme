@@ -6,20 +6,20 @@ homepage="https://networkmanager.dev/"
 maintainer="Vylen Linux Team"
 
 name=networkmanager
-version=1.56.1
+version=1.58.0
 release=1
+backup="etc/NetworkManager/NetworkManager.conf"
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz
     NetworkManager.conf"
 
-backup="etc/NetworkManager/NetworkManager.conf"
-
 build() {
     vylen-meson "NetworkManager-${version}" build \
+        -Dclat=false \
+        -Debpf=false \
         -Ddocs=false \
         -Dlibaudit=no \
         -Dmodem_manager="$(emerald is-installed modemmanager && printf "true" || printf "false")" \
-        -Dmodify_system=true \
         -Dnmtui=true \
         -Dovs=false \
         -Dpolkit_noauth_group=wheel \
@@ -28,6 +28,7 @@ build() {
         -Dselinux=false \
         -Dsession_tracking=no \
         -Dsystemd_journal=false \
+        -Dsystemdsystemgeneratordir=no \
         -Dsystemdsystemunitdir=no \
         -Dtests=no \
         -Dudev_dir=/lib/udev \
