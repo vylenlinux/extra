@@ -6,7 +6,7 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=7.0.3
+version=7.0.4
 release=1
 
 td_commit=51743dfd01dff6179e2d8f7095729caa4e2222e9
@@ -15,14 +15,14 @@ source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/r
     https://github.com/tdlib/td/archive/${td_commit}.tar.gz"
 
 build() {
-    cmake -S "${SRC}/td-${td_commit}" -B "${SRC}/td-${td_commit}/build" \
+    cmake -S "td-${td_commit}" -B "td-${td_commit}/build" \
         -DCMAKE_BUILD_TYPE=None \
         -DCMAKE_INSTALL_PREFIX="${SRC}/td-${td_commit}/install" \
         -DTD_E2E_ONLY=ON \
         -Wno-dev
 
-    cmake --build "${SRC}/td-${td_commit}/build"
-    cmake --install "${SRC}/td-${td_commit}/build"
+    cmake --build "td-${td_commit}/build"
+    cmake --install "td-${td_commit}/build"
 
     cmake -S "tdesktop-${version}-full" -B build -G Ninja \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
