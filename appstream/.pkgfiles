@@ -1,27 +1,34 @@
-appstream-1.1.3-2
+appstream-1.1.4-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/appstreamcli
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/AppStreamQt/
+-rw-r--r-- root/root    usr/include/AppStreamQt/agreement-section.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/agreement.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/appstreamqt_export.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/artifact.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/branding.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/bundle.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/category.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/checksum.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/component-box.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/component.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/contentrating.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/developer.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/icon.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/image.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/issue.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/launchable.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/metadata.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/pool.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/provided.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/reference.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/relation-check-result.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/relation.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/release-list.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/release.h
+-rw-r--r-- root/root    usr/include/AppStreamQt/review.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/screenshot.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/spdx.h
 -rw-r--r-- root/root    usr/include/AppStreamQt/suggested.h
@@ -72,6 +79,7 @@ drwxr-xr-x root/root    usr/include/appstream/
 -rw-r--r-- root/root    usr/include/appstream/as-release-list.h
 -rw-r--r-- root/root    usr/include/appstream/as-release.h
 -rw-r--r-- root/root    usr/include/appstream/as-review.h
+-rw-r--r-- root/root    usr/include/appstream/as-reviews-client.h
 -rw-r--r-- root/root    usr/include/appstream/as-screenshot.h
 -rw-r--r-- root/root    usr/include/appstream/as-spdx.h
 -rw-r--r-- root/root    usr/include/appstream/as-suggested.h
@@ -93,14 +101,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.1.3
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.1.3
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.1.4
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.1.4
 lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.0
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.0 -> libappstream-compose.so.1.1.3
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.1.3
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.0 -> libappstream-compose.so.1.1.4
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.1.4
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.1.3
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.1.3
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.1.4
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.1.4
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
