@@ -6,7 +6,7 @@ homepage="https://github.com/certifi/python-certifi"
 maintainer="Vylen Linux Team"
 
 name=python3-certifi
-version=2026.6.17
+version=2026.7.22
 release=1
 source="${name}-${version}.tar.gz::https://pypi.io/packages/source/c/certifi/certifi-${version}.tar.gz"
 
