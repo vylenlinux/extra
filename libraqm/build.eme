@@ -6,7 +6,7 @@ homepage="https://github.com/HOST-Oman/libraqm/"
 maintainer="Vylen Linux Team"
 
 name=libraqm
-version=0.10.5
+version=0.11.0
 release=1
 source="https://github.com/HOST-Oman/${name}/releases/download/v${version}/raqm-${version}.tar.xz"
 
