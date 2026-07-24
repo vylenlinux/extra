@@ -1,8 +1,3 @@
 pango
-wlroots-19
-libxkbcommon
-wayland
-wayland-protocols
+wlroots-20
 libxinerama
-xcb-util-renderutil
-ncurses
