@@ -1,4 +1,4 @@
-appstream-1.1.4-1
+appstream-1.1.5-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/appstreamcli
@@ -101,14 +101,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.1.4
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.1.4
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.1.5
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.1.5
 lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.0
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.0 -> libappstream-compose.so.1.1.4
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.1.4
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.0 -> libappstream-compose.so.1.1.5
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.1.5
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.1.4
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.1.4
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.1.5
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.1.5
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
