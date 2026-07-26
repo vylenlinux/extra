@@ -8,13 +8,13 @@ maintainer="Vylen Linux Team"
 name=grub
 version=2.14
 release=1
+backup="etc/default/${name}"
 
 source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
     initrd.patch
     ${name}.default
-    ${name}.cfg"
-
-backup="etc/default/${name}"
+    ${name}.cfg
+    extra_deps.lst"
 
 build() {
     # shellcheck disable=SC2164
@@ -28,8 +28,8 @@ build() {
 
     patch -Np1 -i "${SRC}/initrd.patch"
 
-	# Add a file missing from the release tarball
-	printf "depends bli part_gpt\n" > grub-core/extra_deps.lst
+    # Add a file missing from the release tarball
+    install -Dm644 "${SRC}/extra_deps.lst" -t grub-core/
 
     # Fix os name
     sed 's|GNU/Linux|Linux|' -i "util/grub.d/10_linux.in"
@@ -47,5 +47,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/${name}.default" "${PKG}/etc/default/${name}"
-    cp "${SRC}/${name}.cfg" -t "${PKG}/usr/share/${name}/"
+    install -Dm644 "${SRC}/${name}.cfg" -t "${PKG}/usr/share/${name}/"
 }
