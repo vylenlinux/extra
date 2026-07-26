@@ -2,11 +2,11 @@
 
 # shellcheck disable=SC2034
 description="Implementation of the iCalendar protocols and data formats"
-homepage="https://archlinux.org/packages/extra/x86_64/libical/"
+homepage="https://github.com/libical/libical"
 maintainer="Vylen Linux Team"
 
 name=libical
-version=4.0.3
+version=4.0.4
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
