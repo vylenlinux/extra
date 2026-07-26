@@ -1,19 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Fast JSON schema validator"
 homepage="https://horejsek.github.io/python-fastjsonschema/"
 maintainer="Vylen Linux Team"
 
 name=python3-fastjsonschema
-version=2.21.2
+version=2.22.0
 release=1
-source="$name-$version.tar.gz::https://github.com/horejsek/python-fastjsonschema/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/horejsek/python-fastjsonschema/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-	cd python-fastjsonschema-$version
+    # shellcheck disable=SC2164
+    cd "python-fastjsonschema-${version}"
 
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d "$PKG" \
-		.dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
