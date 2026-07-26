@@ -1,17 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="utility to manage SSH and GPG keys in a convenient and secure manner"
 homepage="https://www.funtoo.org/Keychain"
 maintainer="Vylen Linux Team"
 
 name=keychain
-version=2.9.8
+version=3.0.0
 release=1
-source="$name-$version.tar.gz::https://github.com/funtoo/keychain/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/funtoo/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	make
-	mkdir -p "$PKG"/usr/bin
-	cp keychain $PKG/usr/bin/
-	mkdir -p "$PKG"/usr/share/man/1
-	cp keychain.1 "$PKG"/usr/share/man/1/
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make
+    install -Dm755 "${name}.pyz" "${PKG}/usr/bin/${name}"
 }
