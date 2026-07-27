@@ -6,7 +6,7 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=7.0.5
+version=7.0.6
 release=1
 
 td_commit=51743dfd01dff6179e2d8f7095729caa4e2222e9
