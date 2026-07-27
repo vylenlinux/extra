@@ -6,7 +6,7 @@ homepage="https://github.com/hughsie/libxmlb"
 maintainer="Vylen Linux Team"
 
 name=libxmlb
-version=0.3.28
+version=0.3.29
 release=1
 source="https://github.com/hughsie/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
