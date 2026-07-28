@@ -1,17 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Objects and methods for reading and writing AppStream metadata"
 homepage="https://people.freedesktop.org/~hughsient/appstream-glib/"
 maintainer="Vylen Linux Team"
 
 name=appstream-glib
-version=0.8.3
-_version=$(printf '%s' "$version" | sed 's/\./_/g')
+version=0.8.4
 release=1
-source="$name-$version.tar.gz::https://github.com/hughsie/appstream-glib/archive/appstream_glib_${_version}.tar.gz"
+
+_version="$(printf '%s' "${version}" | sed 's/\./_/g')"
+source="${name}-${version}.tar.gz::https://github.com/hughsie/${name}/archive/appstream_glib_${_version}.tar.gz"
 
 build() {
-	cd appstream-glib-appstream_glib_${_version}	
+    vylen-meson "appstream-glib-appstream_glib_${_version}" build \
+        -Dman=false \
+        -Drpm=false
 
-	vylen-meson -Dman=false -Drpm=false build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
