@@ -1,4 +1,4 @@
-ada-3.4.4-1
+ada-4.0.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/ada.h
@@ -33,6 +33,7 @@ drwxr-xr-x root/root    usr/include/ada/
 -rw-r--r-- root/root    usr/include/ada/url_base.h
 -rw-r--r-- root/root    usr/include/ada/url_components-inl.h
 -rw-r--r-- root/root    usr/include/ada/url_components.h
+-rw-r--r-- root/root    usr/include/ada/url_ip-inl.h
 -rw-r--r-- root/root    usr/include/ada/url_pattern-inl.h
 -rw-r--r-- root/root    usr/include/ada/url_pattern.h
 -rw-r--r-- root/root    usr/include/ada/url_pattern_helpers-inl.h
@@ -49,8 +50,8 @@ drwxr-xr-x root/root    usr/lib/cmake/ada/
 -rw-r--r-- root/root    usr/lib/cmake/ada/ada-config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/ada/ada_targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/ada/ada_targets.cmake
-lrwxrwxrwx root/root    usr/lib/libada.so -> libada.so.3
-lrwxrwxrwx root/root    usr/lib/libada.so.3 -> libada.so.3.4.4
--rwxr-xr-x root/root    usr/lib/libada.so.3.4.4
+lrwxrwxrwx root/root    usr/lib/libada.so -> libada.so.4
+lrwxrwxrwx root/root    usr/lib/libada.so.4 -> libada.so.4.0.0
+-rwxr-xr-x root/root    usr/lib/libada.so.4.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/ada.pc

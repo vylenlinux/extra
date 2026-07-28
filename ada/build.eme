@@ -6,7 +6,7 @@ homepage="https://github.com/ada-url/ada"
 maintainer="Vylen Linux Team"
 
 name=ada
-version=3.4.4
+version=4.0.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/ada-url/${name}/archive/refs/tags/v${version}.tar.gz"
 
