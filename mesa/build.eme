@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team"
 
 name=mesa
-version=26.1.5
+version=26.1.6
 release=1
 
 ### BEGIN Rust crates
@@ -43,20 +43,20 @@ build() {
     # Add subproject sources
     export MESON_PACKAGE_CACHE_DIR="${SRC}"
 
-    emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink'
-    emerald is-installed libva && OPT_MESA_VAAPI='-Dgallium-va=enabled' || OPT_MESA_VAAPI='-Dgallium-va=disabled'
+    emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
+    emerald is-installed libva && OPT_MESA_VAAPI='enabled' || OPT_MESA_VAAPI='disabled'
     emerald is-installed wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
     # CBUILD: enable o disable CBUILD_MESA_OPTS, source CBUILD_MESA_OPTS from mesa.opt file
     CBUILD_MESA_OPTS="-Dshared-llvm=enabled \
         -Dglx=dri \
-        -Dgallium-drivers=${OPT_MESA_GALLIUM},crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
+        -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
         -Dplatforms=${OPT_MESA_PLATFORMS} \
         -Dgallium-mediafoundation=disabled \
         -Dintel-rt=enabled \
         -Dgallium-rusticl=true \
         -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau,swrast \
-        ${OPT_MESA_VAAPI}"
+        -Dgallium-va=$(emerald is-installed libva && printf 'enabled' || printf 'disabled')"
 
     cbuild_options
 
