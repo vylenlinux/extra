@@ -6,7 +6,7 @@ homepage="https://libssh.org"
 maintainer="Vylen Linux Team"
 
 name=libssh
-version=0.12.1
+version=0.12.2
 release=1
 source="https://www.libssh.org/files/${version%.*}/${name}-${version}.tar.xz"
 
