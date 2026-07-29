@@ -6,7 +6,7 @@ homepage="https://www.khronos.org/vulkan"
 maintainer="Vylen Linux Team"
 
 name=spirv-tools
-version=1.4.350.1
+version=1.4.357.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 
