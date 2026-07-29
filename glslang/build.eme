@@ -6,15 +6,18 @@ homepage="https://github.com/KhronosGroup/glslang"
 maintainer="Vylen Linux Team"
 
 name=glslang
-version=1.4.350
+version=1.4.357
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/vulkan-sdk-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-vulkan-sdk-${version}"
-    export CXXFLAGS="${CXXFLAGS} -ffat-lto-objects"
 
+    export CXXFLAGS="${CXXFLAGS} \
+        -ffat-lto-objects"
+
+    # shellcheck disable=SC2153
     cmake -B build-shared -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
