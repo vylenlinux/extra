@@ -6,15 +6,12 @@ homepage="https://www.khronos.org/registry/spir-v"
 maintainer="Vylen Linux Team"
 
 name=spirv-headers
-version=1.4.350.1
-release=3
-
-commit=daa093dd29aab8cbb6562b808370562f56e399fb
-source="${name}-${version}-${commit}.tar.gz::https://github.com/KhronosGroup/${name}/archive/${commit}.tar.gz"
-#source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
+version=1.4.357.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 
 build() {
-    cmake -S "SPIRV-Headers-${commit}" -B build -G Ninja \
+    cmake -S "SPIRV-Headers-vulkan-sdk-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
