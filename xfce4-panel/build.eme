@@ -6,7 +6,7 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team"
 
 name=xfce4-panel
-version=4.20.7
+version=4.20.8
 release=1
 source="https://archive.xfce.org/src/xfce/xfce4-panel/${version%.*}/${name}-${version}.tar.bz2"
 
@@ -25,8 +25,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    # shellcheck disable=SC2038
-    find "${PKG}/usr/lib"/* -name "*.la" -type f | xargs rm -f
-    rm -r "${PKG}/usr/share/gtk-doc"
 }
