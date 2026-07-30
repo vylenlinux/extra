@@ -6,8 +6,8 @@ homepage="https://docs.xfce.org/xfce/tumbler/start"
 maintainer="Vylen Linux Team"
 
 name=tumbler
-version=4.20.1
-release=2
+version=4.20.2
+release=1
 source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
 
 build() {
