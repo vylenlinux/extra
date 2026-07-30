@@ -7,13 +7,11 @@ maintainer="Vylen Linux Team"
 
 name=syslinux
 version=6.03
-release=1
+release=2
 
 source="http://www.kernel.org/pub/linux/utils/boot/${name}/${name}-${version}.tar.xz
     ${name}-sysmacros.patch
-    fix-build-with-glibc-2.36.patch
-    isolinux.cfg
-    splash.png"
+    isolinux.cfg"
 
 build() {
     # shellcheck disable=SC2164
@@ -30,12 +28,9 @@ build() {
         cp "$(find bios -name "${i}")" build
     done
 
-    patch -p1 -i "${SRC}/fix-build-with-glibc-2.36.patch"
     patch -p1 -i "${SRC}/${name}-sysmacros.patch"
-
-    make OPTFLAGS="${CFLAGS}" installer
     make OPTFLAGS="${CFLAGS}" INSTALLROOT="${PKG}" MANDIR=/usr/share/man install
 
-    cp build/* "${PKG}/usr/share/${name}"
-    cp "${SRC}/isolinux.cfg" "${SRC}/splash.png" -t "${PKG}/usr/share/${name}/"
+    cp build/* "${PKG}/usr/share/${name}/"
+    install -Dm644 "${SRC}/isolinux.cfg" -t "${PKG}/usr/share/${name}/"
 }
