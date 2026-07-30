@@ -1,8 +1,9 @@
-vid.stab-1.1.1-1
+vid.stab-1.1.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/vid.stab/
 -rw-r--r-- root/root    usr/include/vid.stab/boxblur.h
+-rw-r--r-- root/root    usr/include/vid.stab/compat.h
 -rw-r--r-- root/root    usr/include/vid.stab/frameinfo.h
 -rw-r--r-- root/root    usr/include/vid.stab/libvidstab.h
 -rw-r--r-- root/root    usr/include/vid.stab/localmotion2transform.h
@@ -10,12 +11,14 @@ drwxr-xr-x root/root    usr/include/vid.stab/
 -rw-r--r-- root/root    usr/include/vid.stab/motiondetect_internal.h
 -rw-r--r-- root/root    usr/include/vid.stab/motiondetect_opt.h
 -rw-r--r-- root/root    usr/include/vid.stab/serialize.h
+-rw-r--r-- root/root    usr/include/vid.stab/sse2neon.h
 -rw-r--r-- root/root    usr/include/vid.stab/transform.h
 -rw-r--r-- root/root    usr/include/vid.stab/transform_internal.h
 -rw-r--r-- root/root    usr/include/vid.stab/transformfixedpoint.h
 -rw-r--r-- root/root    usr/include/vid.stab/transformfloat.h
 -rw-r--r-- root/root    usr/include/vid.stab/transformtype.h
 -rw-r--r-- root/root    usr/include/vid.stab/transformtype_operations.h
+-rw-r--r-- root/root    usr/include/vid.stab/vidstab_api.h
 -rw-r--r-- root/root    usr/include/vid.stab/vidstabdefines.h
 -rw-r--r-- root/root    usr/include/vid.stab/vsvector.h
 drwxr-xr-x root/root    usr/lib/

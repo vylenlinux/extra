@@ -1,22 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Video stabilization library"
 homepage="http://public.hronopik.de/vid.stab"
 maintainer="Vylen Linux Team"
 
 name=vid.stab
-version=1.1.1
+version=1.1.2
 release=1
-source="$name-$version.tar.gz::https://github.com/georgmartius/vid.stab/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/georgmartius/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
