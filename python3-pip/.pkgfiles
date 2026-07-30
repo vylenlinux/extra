@@ -1,4 +1,4 @@
-python3-pip-26.1.2-1
+python3-pip-26.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/pip
@@ -6,11 +6,11 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip-26.1.2.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.1.2.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.1.2.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.1.2.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.1.2.dist-info/entry_points.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/entry_points.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/__main__.py
@@ -23,7 +23,6 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/__init__.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/build_env.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/cache.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/configuration.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/exceptions.cpython-314.pyc
@@ -31,7 +30,20 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/pyproject.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/self_outdated_check.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/__pycache__/wheel_builder.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env.py
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__init__.py
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/__init__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/base.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/installer.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/noop.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/venv.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__/virtual.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/base.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/installer.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/noop.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/venv.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/build_env/virtual.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/cache.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_internal/cli/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_internal/cli/__init__.py
@@ -358,6 +370,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/__pycache__/__init__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/bom.cdx.json
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/cachecontrol/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/cachecontrol/LICENSE.txt
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/cachecontrol/__init__.py
@@ -431,8 +444,11 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/distro/__py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/LICENSE.md
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__init__.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__main__.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/__init__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/__main__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/cli.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/codec.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/compat.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/core.cpython-314.pyc
@@ -440,6 +456,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pyca
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/intranges.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/package_data.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__/uts46data.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/cli.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/codec.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/compat.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/idna/core.py
@@ -519,12 +536,14 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdir
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/__init__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/__main__.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/_xdg.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/android.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/api.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/macos.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/unix.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/version.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__/windows.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/_xdg.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/android.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/api.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/platformdirs/macos.py
@@ -610,6 +629,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/__init__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/__version__.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/_internal_utils.cpython-314.pyc
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/_types.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/adapters.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/api.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/auth.cpython-314.pyc
@@ -627,6 +647,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__/utils.cpython-314.pyc
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__version__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/_internal_utils.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/_types.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/adapters.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/api.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/auth.py
@@ -638,6 +659,7 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/__
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/hooks.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/models.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/packages.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/py.typed
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/sessions.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/status_codes.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/_vendor/requests/structures.py
