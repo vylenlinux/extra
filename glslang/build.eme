@@ -6,7 +6,7 @@ homepage="https://github.com/KhronosGroup/glslang"
 maintainer="Vylen Linux Team"
 
 name=glslang
-version=1.4.357
+version=1.4.357.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/vulkan-sdk-${version}.tar.gz"
 
