@@ -6,7 +6,7 @@ homepage="https://github.com/nu-book/zxing-cpp"
 maintainer="Vylen Linux Team"
 
 name=zxing-cpp
-version=3.1.0
+version=3.1.1
 release=1
 source="https://github.com/nu-book/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
