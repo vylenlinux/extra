@@ -6,7 +6,7 @@ homepage="https://www.thunderbird.net/"
 maintainer="Vylen Linux Team"
 
 name=thunderbird
-version=153.0
+version=153.0.1esr
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
