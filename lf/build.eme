@@ -1,17 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Terminal file manager"
 homepage="https://github.com/gokcehan/lf"
 maintainer="Vylen Linux Team"
 
 name=lf
-version=41
+version=42
 release=1
-source="https://github.com/gokcehan/$name/archive/r$version/$name-r$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/gokcehan/${name}/archive/r${version}/${name}-r${version}.tar.gz"
 
 build() {
-	cd $name-r$version
+    # shellcheck disable=SC2164
+    cd "${name}-r${version}"
 
-	go mod tidy
-	go build -v -o bin/$name
+    go mod tidy
+    go build -o "bin/${name}"
 
-	install -Dt $PKG/usr/bin bin/$name
+    install -Dm755 "bin/${name}" -t "${PKG}/usr/bin/"
 }
