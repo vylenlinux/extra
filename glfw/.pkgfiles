@@ -1,4 +1,4 @@
-glfw-3.4-1
+glfw-3.5.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/GLFW/
@@ -12,8 +12,8 @@ drwxr-xr-x root/root    usr/lib/cmake/glfw3/
 -rw-r--r-- root/root    usr/lib/cmake/glfw3/glfw3Targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/glfw3/glfw3Targets.cmake
 lrwxrwxrwx root/root    usr/lib/libglfw.so -> libglfw.so.3
-lrwxrwxrwx root/root    usr/lib/libglfw.so.3 -> libglfw.so.3.4
--rwxr-xr-x root/root    usr/lib/libglfw.so.3.4
+lrwxrwxrwx root/root    usr/lib/libglfw.so.3 -> libglfw.so.3.5
+-rwxr-xr-x root/root    usr/lib/libglfw.so.3.5
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/glfw3.pc
 drwxr-xr-x root/root    usr/share/
