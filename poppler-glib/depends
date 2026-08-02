@@ -1,6 +1,5 @@
 poppler
 glib
 gobject-introspection
-openjpeg2
 gtk3
 ninja
