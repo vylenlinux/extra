@@ -6,7 +6,7 @@ homepage="https://www.riverbankcomputing.com/software/sip/intro"
 maintainer="Vylen Linux Team"
 
 name=python3-sip
-version=6.15.3
+version=6.16.0
 release=1
 source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/s/sip/sip-${version}.tar.gz"
 
@@ -18,5 +18,5 @@ build() {
         --wheel-dir .dist \
         --output-fd 3 3>&1 >&2
 
-    python3 -m installer -d "${PKG}" .dist/sip-*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
