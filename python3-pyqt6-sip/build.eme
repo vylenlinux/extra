@@ -1,14 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The sip module support for PyQt6"
 homepage="https://pypi.org/project/PyQt6-sip/"
 maintainer="Vylen Linux Team"
 
 name=python3-pyqt6-sip
-version=13.11.1
+version=13.12.0
 release=1
-source="$name-$version.tar.gz::https://pypi.python.org/packages/source/P/PyQt6-sip/pyqt6_sip-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/P/PyQt6-sip/pyqt6_sip-${version}.tar.gz"
 
 build() {
-	cd pyqt6_sip-$version
-	python3 -m build --wheel --no-isolation
-	python3 -m installer --destdir=$PKG dist/*.whl
+    # shellcheck disable=SC2164
+    cd "pyqt6_sip-${version}"
+
+    python3 -m build \
+        --wheel \
+        --no-isolation
+
+    python3 -m installer --destdir="${PKG}" dist/*.whl
 }
