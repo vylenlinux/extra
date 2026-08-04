@@ -6,12 +6,13 @@ homepage="https://www.libsdl.org/"
 maintainer="Vylen Linux Team"
 
 name=sdl3
-version=3.4.12
+version=3.4.14
 release=1
 source="${name}-${version}.tar.gz::https://github.com/libsdl-org/SDL/releases/download/release-${version}/SDL3-${version}.tar.gz"
 
 build() {
-    CFLAGS="${CFLAGS} -ffat-lto-objects"
+    CFLAGS="${CFLAGS} \
+        -ffat-lto-objects"
 
     cmake -S "SDL3-${version}" -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=None \
