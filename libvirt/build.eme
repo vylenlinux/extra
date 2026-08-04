@@ -6,15 +6,15 @@ homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team"
 
 name=libvirt
-version=12.5.0
+version=12.6.0
 release=1
+
+backup="etc/libvirt/libvirtd.conf
+    etc/libvirt/qemu.conf"
 
 source="https://libvirt.org/sources/${name}-${version}.tar.xz
     libvirtd.conf
     qemu.conf"
-
-backup="etc/libvirt/libvirtd.conf
-    etc/libvirt/qemu.conf"
 
 build() {
     vylen-meson "${name}-${version}" build \
@@ -46,9 +46,8 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm644 "${SRC}/libvirtd.conf" -t "${PKG}/etc/libvirt/"
-    install -Dm644 "${SRC}/qemu.conf"     -t "${PKG}/etc/libvirt/"
-
+    install -Dm644 "${SRC}/libvirtd.conf" "${SRC}/qemu.conf" -t "${PKG}/etc/libvirt/"
     rm -rf "${PKG}/run"
+
     do_service libvirt-guests libvirtd virtlockd virtlogd
 }
