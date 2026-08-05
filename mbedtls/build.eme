@@ -6,13 +6,13 @@ homepage="https://tls.mbed.org/"
 maintainer="Vylen Linux Team"
 
 name=mbedtls
-version=3.6.6
+version=3.6.7
 release=1
 
 _framework_commit="893ad9e8450a8e7459679d952abd5d6df26c41c4"
 
 source="https://github.com/ARMmbed/${name}/archive/v${version}/${name}-${version}.tar.gz
-	https://github.com/Mbed-TLS/mbedtls-framework/archive/${_framework_commit}/${name}-framework-${_framework_commit}.tar.gz"
+    https://github.com/Mbed-TLS/mbedtls-framework/archive/${_framework_commit}/${name}-framework-${_framework_commit}.tar.gz"
 
 build() {
     rm -rf "${name}-${version}/framework"
