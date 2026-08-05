@@ -6,7 +6,7 @@ homepage="https://pip.pypa.io/"
 maintainer="Vylen Linux Team"
 
 name=python3-pip
-version=26.2
+version=26.2.1
 release=1
 source="${name}-${version}.tar.gz::https://pypi.io/packages/source/p/pip/pip-${version}.tar.gz"
 

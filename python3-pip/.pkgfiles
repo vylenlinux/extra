@@ -1,4 +1,4 @@
-python3-pip-26.2-1
+python3-pip-26.2.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/pip
@@ -6,11 +6,11 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.14/
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.dist-info/entry_points.txt
+drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip-26.2.1.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.1.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.1.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.1.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip-26.2.1.dist-info/entry_points.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/pip/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/pip/__main__.py
