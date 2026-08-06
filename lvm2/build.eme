@@ -6,7 +6,7 @@ homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team"
 
 name=lvm2
-version=2.03.41
+version=2.03.42
 release=1
 source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
 
