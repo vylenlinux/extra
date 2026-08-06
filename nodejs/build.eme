@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team"
 
 name=nodejs
-version=26.6.0
+version=26.7.0
 release=1
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
 
@@ -27,7 +27,6 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    # clean up
     find "${PKG}" -type f \( \
         -name 'README.md' -o \
         -name 'AUTHORS.md' -o \
