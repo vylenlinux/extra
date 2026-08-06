@@ -17,6 +17,8 @@ rust_crates="paste 1.0.14
     syn 2.0.87
     unicode-ident 1.0.12"
 
+rcrate=""
+
 while IFS= read -r line; do
     # shellcheck disable=SC2086
     set -- ${line}
