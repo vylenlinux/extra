@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="General-purpose allocator with excellent performance characteristics"
@@ -6,7 +6,7 @@ homepage="https://github.com/microsoft/mimalloc"
 maintainer="Vylen Linux Team"
 
 name=mimalloc
-version=3.4.4
+version=3.4.5
 release=1
 source="https://github.com/microsoft/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
