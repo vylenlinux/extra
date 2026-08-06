@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=networkmanager
 version=1.58.0
-release=1
+release=2
 backup="etc/NetworkManager/NetworkManager.conf"
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/NetworkManager-${version}.tar.gz
@@ -32,7 +32,8 @@ build() {
         -Dsystemdsystemunitdir=no \
         -Dtests=no \
         -Dudev_dir=/lib/udev \
-        -Dvapi=false
+        -Dvapi=false \
+        -Dnbft="$(emerald is-installed libnvme && printf "true" || printf "false")"
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
