@@ -6,7 +6,7 @@ homepage="https://github.com/chardet/chardet"
 maintainer="Vylen Linux Team"
 
 name=python3-chardet
-version=7.5.0
+version=7.5.1
 release=1
 
 _name="${name#*-}"
