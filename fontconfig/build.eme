@@ -6,7 +6,7 @@ homepage="https://www.freedesktop.org/wiki/Software/fontconfig/"
 maintainer="Vylen Linux Team"
 
 name=fontconfig
-version=2.18.2
+version=2.18.3
 release=1
 source="https://gitlab.com/freedesktop-sdk/mirrors/freedesktop/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
