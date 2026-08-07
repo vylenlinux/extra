@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Linux LTS kernel, sources and modules"
@@ -21,7 +21,7 @@ build() {
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
-    echo 'CONFIG_LOCALVERSION="-'${name}'"' >> .config
+    printf 'CONFIG_LOCALVERSION="-%s"' "${name}" >> .config
 
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
