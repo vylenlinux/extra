@@ -1,20 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Predictable and consistent interface to underlying client library interfaces"
 homepage="https://apr.apache.org/"
 maintainer="Vylen Linux Team"
 
 name=apr-util
-version=1.6.3
+version=1.6.4
 release=1
-source="https://archive.apache.org/dist/apr/$name-$version.tar.bz2"
+source="https://archive.apache.org/dist/apr/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr       \
-	            --with-apr=/usr     \
-	            --with-gdbm=/usr    \
-	            --with-openssl=/usr \
-	            --with-crypto
-	make
-	make DESTDIR=$PKG install
-}
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
+    ./configure \
+        --prefix=/usr \
+        --with-apr=/usr \
+        --with-gdbm=/usr \
+        --with-openssl=/usr \
+        --with-crypto
+
+    make
+    make DESTDIR="${PKG}" install
+}
