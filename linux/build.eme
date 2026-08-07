@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Linux kernel, sources and modules"
@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux
-version=7.1.6
+version=7.1.7
 release=1
 
 source="https://cdn.kernel.org/pub/${name}/kernel/v${version%%.*}.x/${name%-*}-${version}.tar.xz
@@ -21,11 +21,12 @@ build() {
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
-    echo 'CONFIG_LOCALVERSION="-'${name}'"' >> .config
+    printf 'CONFIG_LOCALVERSION="-%s"\n' "${name}" >> .config
 
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
     # CBUILD: add custom KCFLAGS and KCPPFLAGS, source linux.opt
+    # shellcheck disable=SC2153
     CBUILD_LINUX_KCFLAGS="${CFLAGS}"
     CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS}"
 
