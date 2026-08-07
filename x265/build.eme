@@ -6,16 +6,12 @@ homepage="https://bitbucket.org/multicoreware/x265_git"
 maintainer="Vylen Linux Team"
 
 name=x265
-version=4.2
+version=4.3
 release=1
-source="${name}-${version}.tar.gz::https://bitbucket.org/multicoreware/${name}_git/downloads/${name}_${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/Multicorewareinc/${name}/releases/download/${version}/${name}_${version}.tar.gz"
 
 build() {
-    # fix cmake 4
-    sed -r '/cmake_policy.*(0025|0054)/d' -i "${name}_${version}/source/CMakeLists.txt"
-
     cmake -S "${name}_${version}/source" -B build -G Ninja \
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
