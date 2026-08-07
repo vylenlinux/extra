@@ -1,22 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Daemon, tools and libraries to access and manipulate disks and storage devices"
 homepage="https://www.freedesktop.org/wiki/Software/udisks/"
 maintainer="Vylen Linux Team"
 
 name=udisks2
-version=2.11.1
+version=2.11.2
 release=1
-source="https://github.com/storaged-project/udisks/releases/download/udisks-$version/udisks-$version.tar.bz2"
+source="${name}-${version}.tar.bz2::https://github.com/storaged-project/udisks/releases/download/udisks-${version}/udisks-${version}.tar.bz2"
 
 build() {
-	cd udisks-$version
+    # shellcheck disable=SC2164
+    cd "udisks-${version}"
 
-	./configure --prefix=/usr \
-	            --sysconfdir=/etc \
-		    --libexecdir=/usr/lib \
-	            --localstatedir=/var \
-	            --disable-static \
-		    --disable-man
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib \
+        --localstatedir=/var \
+        --disable-static \
+        --disable-man
 
+    make
+    make DESTDIR="${PKG}" install
 }
