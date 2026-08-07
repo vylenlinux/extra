@@ -21,7 +21,7 @@ build() {
     make olddefconfig
 
     sed '/^CONFIG_LOCALVERSION=/d' -i .config
-    printf 'CONFIG_LOCALVERSION="-%s"' "${name}" >> .config
+    printf 'CONFIG_LOCALVERSION="-%s"\n' "${name}" >> .config
 
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
