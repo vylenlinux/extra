@@ -1,18 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Python3 bindings to Cairo"
 homepage="https://pycairo.readthedocs.io/en/latest/"
 maintainer="Vylen Linux Team"
 
 name=python3-cairo
-version=1.29.0
+version=1.29.1
 release=1
-source="$name-$version.tar.gz::https://github.com/pygobject/pycairo/releases/download/v$version/pycairo-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/pygobject/pycairo/releases/download/v${version}/pycairo-${version}.tar.gz"
 
 build() {
+    vylen-meson "pycairo-${version}" build -Dtests=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 
-	vylen-meson pycairo-$version build \
-	-Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
-	python3 -m compileall $PKG/usr/lib
-
+    python3 -m compileall "${PKG}/usr/lib"
 }
