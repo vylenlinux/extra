@@ -6,7 +6,7 @@ homepage="https://github.com/pybind/pybind11"
 maintainer="Vylen Linux Team"
 
 name=python3-pybind11
-version=3.0.4
+version=3.1.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/pybind/pybind11/archive/v${version}.tar.gz"
 
@@ -15,13 +15,15 @@ build() {
     cd "pybind11-${version}"
 
     # fails with lto due to fortify-headers
-    export CXXFLAGS="${CXXFLAGS} -U_FORTIFY_SOURCE"
+    export CXXFLAGS="${CXXFLAGS} \
+        -U_FORTIFY_SOURCE"
 
     python3 -m build \
         --wheel \
         --no-isolation
 
-    export CXXFLAGS="${CXXFLAGS} -flto=auto"
+    export CXXFLAGS="${CXXFLAGS} \
+        -flto=auto"
 
     cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=None \
