@@ -6,28 +6,23 @@ homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team"
 
 name=ffmpeg
-version=8.1.2
+version=9.0
 release=1
 
 source="https://ffmpeg.org/releases/${name}-${version}.tar.xz
     add-av_stream_get_first_dts-for-chromium.patch
-    ffmpeg-x264-10bit.sh"
+    ffmpeg-x264-10bit"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    _opt=""
-
-    add_opt() {
-        if [ "${_opt}" = "" ]; then
-            emerald is-installed "${1}" && _opt="--enable-${2}" || _opt="--disable-${2}"
-        elif [ ! "${_opt}" = "" ]; then
-            emerald is-installed "${1}" && _opt="${_opt} --enable-${2}" || _opt="${_opt} --disable-${2}"
-        fi
-    }
 
     ## $1 is package name
     ## $2 is feature
+    add_opt() {
+        emerald is-installed "${1}" && _opt="${_opt} --enable-${2}" || _opt="${_opt} --disable-${2}"
+    }
+
     add_opt libvdpau vdpau
     add_opt libva vaapi
     add_opt nvidia-open cuda
@@ -54,7 +49,6 @@ build() {
         --disable-static \
         --enable-shared \
         --disable-debug \
-        --disable-libcelt \
         --disable-optimizations \
         --disable-stripping \
         --disable-doc \
@@ -82,6 +76,6 @@ build() {
     make DESTDIR="${PKG}" install
     install -m755 tools/qt-faststart -t "${PKG}/usr/bin/"
 
-    [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/ffmpeg-x264-10bit.sh" "${PKG}/usr/bin/ffmpeg-x264-10bit"
+    [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/ffmpeg-x264-10bit" -t "${PKG}/usr/bin/"
     rm -r "${PKG}/usr/share/ffmpeg/examples"
 }
