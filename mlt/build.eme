@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="An open source multimedia framework"
@@ -7,10 +7,14 @@ maintainer="Vylen Linux Team"
 
 name=mlt
 version=7.40.0
-release=1
-source="https://github.com/mltframework/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
+release=2
+
+source="https://github.com/mltframework/${name}/releases/download/v${version}/${name}-${version}.tar.gz
+    ffmpeg-9.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/ffmpeg-9.patch"
+
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
