@@ -1,15 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Lightweight NTP client and server"
 homepage="https://chrony-project.org/"
 maintainer="Vylen Linux Team"
 
 name=chrony
 version=4.8
-release=1
-source="https://chrony-project.org/releases/$name-$version.tar.gz"
+release=2
+
+source="https://chrony-project.org/releases/${name}-${version}.tar.gz
+    https://gitlab.com/${name}/${name}/-/commit/fee12ec914cce805cc704a4c2804d75b4933ad2f.patch"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    # fix build with nettle 4
+    patch -Np1 -i "${SRC}/fee12ec914cce805cc704a4c2804d75b4933ad2f.patch"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
