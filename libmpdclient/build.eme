@@ -6,7 +6,7 @@ homepage="https://www.musicpd.org/libs/libmpdclient/"
 maintainer="Vylen Linux Team"
 
 name=libmpdclient
-version=2.26
+version=2.27
 release=1
 source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz"
 
