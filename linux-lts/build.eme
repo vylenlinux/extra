@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts
-version=6.18.43
+version=6.18.44
 release=1
 
 source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz
