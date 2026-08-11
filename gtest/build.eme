@@ -6,7 +6,7 @@ homepage="https://github.com/google/googletest"
 maintainer="Vylen Linux Team"
 
 name=gtest
-version=1.17.0
+version=1.18.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/google/googletest/archive/v${version}.tar.gz"
 
