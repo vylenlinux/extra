@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A library that feh uses as a wrapper to imlib2"
 homepage="http://freshmeat.net/projects/giblib/"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,13 @@ maintainer="Vylen Linux Team"
 name=giblib
 version=1.2.4
 release=1
-source="https://sourceforge.net/projects/slackbuildsdirectlinks/files/giblib/giblib-$version.tar.gz"
+source="https://sourceforge.net/projects/slackbuildsdirectlinks/files/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd giblib-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG docsdir=/usr/share/doc/giblib install
-	rm -r $PKG/usr/share
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" docsdir=/usr/share/doc/giblib install
 }
