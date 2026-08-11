@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library for finding WS-Discovery devices in the network using Qt5 and KDSoap"
 homepage="https://invent.kde.org/libraries/kdsoap-ws-discovery-client"
 maintainer="Vylen Linux Team"
@@ -5,19 +8,18 @@ maintainer="Vylen Linux Team"
 name=kdsoap-ws-discovery-client
 version=0.4.0
 release=1
-source="https://download.kde.org/stable/kdsoap-ws-discovery-client/kdsoap-ws-discovery-client-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cmake -S $name-$version -B build -G Ninja \
-        -D CMAKE_INSTALL_PREFIX=/usr \
-        -D CMAKE_INSTALL_LIBDIR=lib \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-        -D QT_MAJOR_VERSION=6 \
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DQT_MAJOR_VERSION=6 \
         -Wno-dev
-    cmake --build build
-    DESTDIR=$PKG cmake --install build
 
-    rm -rf $PKG/usr/share
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
