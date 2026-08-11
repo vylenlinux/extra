@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="High quality, one-dimensional sample-rate conversion library"
 homepage="https://sourceforge.net/p/soxr/wiki/Home/"
 maintainer="Vylen Linux Team"
@@ -5,20 +8,18 @@ maintainer="Vylen Linux Team"
 name=libsoxr
 version=0.1.3
 release=1
-source="https://downloads.sourceforge.net/soxr/soxr-$version-Source.tar.xz"
+source="${name}-${version}.tar.xz::https://downloads.sourceforge.net/soxr/soxr-${version}-Source.tar.xz"
 
 build() {
+    cmake -S "soxr-${version}-Source" -B build -G Ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_EXAMPLES=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -Wno-dev
 
-	cmake -S soxr-$version-Source -B build -G Ninja \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DBUILD_EXAMPLES=OFF \
-		-DBUILD_SHARED_LIBS=ON \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
-
-	rm -r $PKG/usr/share
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
