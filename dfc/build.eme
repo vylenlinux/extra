@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Display file system space usage using graphs and colors"
 homepage="http://projects.gw-computing.net/projects/dfc"
 maintainer="Vylen Linux Team"
@@ -5,20 +8,19 @@ maintainer="Vylen Linux Team"
 name=dfc
 version=3.1.1
 release=1
-source="$name-$version.tar.gz::https://github.com/Rolinh/dfc/archive/v${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/Rolinh/${name}/archive/v${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-Wno-dev 	
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Wno-dev
 
-	rm -r $PKG/usr/share/man/fr \
-	      $PKG/usr/share/man/nl
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
