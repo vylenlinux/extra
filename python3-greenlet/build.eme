@@ -6,7 +6,7 @@ homepage="https://pypi.org/project/greenlet/"
 maintainer="Vylen Linux Team"
 
 name=python3-greenlet
-version=3.5.4
+version=3.5.5
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-${version}.tar.gz"
 
