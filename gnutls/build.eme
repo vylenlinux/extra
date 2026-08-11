@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=gnutls
 version=3.8.13
 release=1
-source="https://www.gnupg.org/ftp/gcrypt/${name}/v$(printf "%s" "${version}" | awk -F. '{print $1"."$2}')/${name}-${version}.tar.xz"
+source="https://www.gnupg.org/ftp/gcrypt/${name}/v$(printf "%s" "${version}" | awk -F. '{printf "%s.%s", $1, $2;}')/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -28,6 +28,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    rm -rf "${PKG}/usr/share/info"
 }
