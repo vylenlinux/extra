@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Firmware files for Linux"
@@ -6,14 +6,14 @@ homepage="https://git.kernel.org/pub/scm/linux/kernel/git/firmware"
 maintainer="Vylen Linux Team"
 
 name=linux-firmware
-version=20260622
+version=20260810
 release=1
 source="https://gitlab.com/kernel-firmware/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    make DESTDIR="${PKG}" FIRMWAREDIR=/lib/firmware install-xz
+    make DESTDIR="${PKG}" install-xz
 
     find "${PKG}" \( \
         -name 'ChangeLog' -or \
