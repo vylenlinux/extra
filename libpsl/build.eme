@@ -6,7 +6,7 @@ homepage="https://github.com/rockdaboot/libpsl"
 maintainer="Vylen Linux Team"
 
 name=libpsl
-version=0.23.1
+version=0.23.2
 release=1
 source="https://github.com/rockdaboot/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
