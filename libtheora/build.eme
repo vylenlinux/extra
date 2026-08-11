@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Reference implementation of the Theora video compression format"
 homepage="https://www.theora.org/"
 maintainer="Vylen Linux Team"
@@ -5,14 +8,17 @@ maintainer="Vylen Linux Team"
 name=libtheora
 version=1.2.0
 release=1
-source="https://gitlab.xiph.org/xiph/theora/-/archive/v$version/theora-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.xiph.org/xiph/theora/-/archive/v${version}/theora-v${version}.tar.gz"
 
 build() {
-	cd theora-v$version
-	autoreconf -fvi
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "theora-v${version}"
+    autoreconf -fi
 
-	rm -r $PKG/usr/share
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
