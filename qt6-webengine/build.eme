@@ -11,14 +11,7 @@ release=1
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/${version}/submodules/qtwebengine-everywhere-src-${version}.tar.xz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "qtwebengine-everywhere-src-${version}"
-    # export PYTHON=/usr/bin/python3
-
-    # fix a build of ffmpeg does not use OpenH264
-    # sed -e '189 s/=/& false/' -e '190 d' -i.orig src/3rdparty/chromium/third_party/webrtc/webrtc.gni
-
-    cmake -B build -G Ninja \
+    cmake "qtwebengine-everywhere-src-${version}" -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
@@ -37,6 +30,6 @@ build() {
         -DQT_FEATURE_webengine_webrtc_pipewire="$(emerald is-installed pipewire && printf "ON" || printf "OFF")" \
         -DQT_FEATURE_webengine_kerberos="$(emerald is-installed krb5 && printf "ON" || printf "OFF")"
 
-    cmake --build build
+    cmake --build build --parallel "${CBUILD_JOBS}"
     DESTDIR="${PKG}" cmake --install build
 }
