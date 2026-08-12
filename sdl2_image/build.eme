@@ -19,8 +19,4 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
-
-    # delete installed license.txt
-    # shellcheck disable=SC2115
-    rm -rf "${PKG}/usr/share"
 }
