@@ -12,7 +12,11 @@ source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
     # failed build with ccache, remove reom path
-    PATH="$(echo "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {next;} {print;}' | sed 's/:*$//')"
+    PATH="$(echo "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {
+        next;
+    } {
+        print;
+    }' | sed 's/:*$//')"
 
     # build with GCC
     export CC=gcc CXX=g++
@@ -47,6 +51,6 @@ build() {
         -DUSE_SYSTEM_SYSPROF_CAPTURE=NO \
         -Wno-dev
 
-    cmake --build build
+    ninja -C build -j"${CBUILD_JOBS}"
     DESTDIR="${PKG}" cmake --install build
 }
