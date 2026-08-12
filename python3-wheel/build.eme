@@ -6,7 +6,7 @@ homepage="https://pypi.python.org/pypi/wheel"
 maintainer="Vylen Linux Team"
 
 name=python3-wheel
-version=0.47.0
+version=0.48.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/w/wheel/${name#*-}-${version}.tar.gz"
 
