@@ -6,7 +6,7 @@ homepage="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files "
 maintainer="Vylen Linux Team"
 
 name=intel-ucode
-version=20260512
+version=20260811
 release=1
 source="${name}-${version}.tar.gz::https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-${version}.tar.gz"
 
