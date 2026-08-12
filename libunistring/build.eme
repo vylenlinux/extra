@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library for manipulating Unicode strings and C strings"
 homepage="https://www.gnu.org/software/libunistring/"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,16 @@ maintainer="Vylen Linux Team"
 name=libunistring
 version=1.4.2
 release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr    \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
-	rm -r $PKG/usr/share
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
