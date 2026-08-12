@@ -5,3 +5,4 @@ drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/tllist.pc
+drwxr-xr-x root/root    usr/share/

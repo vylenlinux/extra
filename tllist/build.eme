@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A typed linked list C header file only library"
 homepage="https://codeberg.org/dnkl/tllist"
 maintainer="Vylen Linux Team"
@@ -5,12 +8,10 @@ maintainer="Vylen Linux Team"
 name=tllist
 version=1.1.0
 release=1
-source="$name-$version.tar.gz::https://codeberg.org/dnkl/tllist/archive/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
 
 build() {
-
-  vylen-meson $name build 
-  meson compile -C build
-  DESTDIR=$PKG meson install --no-rebuild -C build
-  rm -r $PKG/usr/share
+    vylen-meson "${name}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
