@@ -6,7 +6,7 @@ homepage="https://www.gtkmm.org/"
 maintainer="Vylen Linux Team"
 
 name=glibmm
-version=2.66.9
+version=2.66.10
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
