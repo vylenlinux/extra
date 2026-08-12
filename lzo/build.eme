@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Data compression library"
 homepage="https://www.oberhumer.com/opensource/lzo"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,17 @@ maintainer="Vylen Linux Team"
 name=lzo
 version=2.10
 release=1
-source="https://www.oberhumer.com/opensource/lzo/download/lzo-$version.tar.gz"
+source="https://www.oberhumer.com/opensource/${name}/download/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-	            --enable-shared \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	rm -r $PKG/usr/share
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }

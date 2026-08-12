@@ -21,3 +21,4 @@ lrwxrwxrwx root/root    usr/lib/liblzo2.so.2 -> liblzo2.so.2.0.0
 -rwxr-xr-x root/root    usr/lib/liblzo2.so.2.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/lzo2.pc
+drwxr-xr-x root/root    usr/share/
