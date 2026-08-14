@@ -6,10 +6,10 @@ homepage="https://golang.org/"
 maintainer="Vylen Linux Team"
 
 name=go
-version=1.26.5
-release=2
+version=1.26.6
+release=1
 
-source="${name}-${version}.src.tar.gz::https://golang.org/dl/${name}${version}.src.tar.gz
+source="${name}-${version}.tar.gz::https://golang.org/dl/${name}${version}.src.tar.gz
     ${name}-${version}.linux-amd64.tar.gz::https://golang.org/dl/${name}${version}.linux-amd64.tar.gz"
 
 NO_STRIP=yes
