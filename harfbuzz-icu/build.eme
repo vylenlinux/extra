@@ -6,7 +6,7 @@ homepage="https://harfbuzz.github.io/"
 maintainer="Vylen Linux Team"
 
 name=harfbuzz-icu
-version=14.3.0
+version=14.3.1
 release=1
 source="https://github.com/harfbuzz/harfbuzz/releases/download/${version}/harfbuzz-${version}.tar.xz"
 
@@ -20,8 +20,10 @@ build() {
     meson compile -C build
     DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
 
-    mkdir -p "${PKG}/usr/lib/pkgconfig" "${PKG}/usr/include/harfbuzz"
-    mv DESTDIR/usr/include/harfbuzz/hb-icu.h "${PKG}/usr/include/harfbuzz/"
-    mv DESTDIR/usr/lib/libharfbuzz-icu* "${PKG}/usr/lib/"
-    mv DESTDIR/usr/lib/pkgconfig/harfbuzz-icu.pc "${PKG}/usr/lib/pkgconfig/"
+    mkdir -p "${PKG}/usr/lib/pkgconfig" \
+        "${PKG}/usr/include/harfbuzz"
+
+    mv DESTDIR/usr/include/harfbuzz/hb-icu.h -t "${PKG}/usr/include/harfbuzz/"
+    mv DESTDIR/usr/lib/libharfbuzz-icu* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/pkgconfig/harfbuzz-icu.pc -t "${PKG}/usr/lib/pkgconfig/"
 }
