@@ -1,14 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A fully functional X client library for Python programs"
 homepage="https://github.com/python-xlib/python-xlib"
 maintainer="Vylen Linux Team"
 
 name=python3-xlib
 version=0.33
-release=1
-source="$name-$version.tar.gz::https://github.com/python-xlib/python-xlib/archive/$version/python-$version.tar.gz"
+release=2
+
+source="${name}-${version}.tar.gz::https://github.com/python-xlib/python-xlib/archive/${version}/python-${version}.tar.gz
+    pkg_resources-fix.patch"
 
 build() {
-	cd python-xlib-$version
-	python3 setup.py build
-	python3 setup.py install --root="$PKG" --optimize=1 --skip-build
+    # shellcheck disable=SC2164
+    cd "python-xlib-${version}"
+
+    patch -Np1 -i "${SRC}/pkg_resources-fix.patch"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 }
