@@ -6,13 +6,12 @@ homepage="https://rsync.samba.org/"
 maintainer="Vylen Linux Team"
 
 name=rsync
-version=3.4.4
+version=3.5.0
 release=1
+backup="etc/rsyncd.conf"
 
 source="https://download.samba.org/pub/${name}/${name}-${version}.tar.gz
     rsyncd.conf"
-
-backup="etc/rsyncd.conf"
 
 build() {
     # shellcheck disable=SC2164
