@@ -6,7 +6,7 @@ homepage="https://www.doxygen.nl/"
 maintainer="Vylen Linux Team"
 
 name=doxygen
-version=1.17.0
+version=1.18.0
 release=1
 
 _version="$(printf "%s" "${version}" | sed 's/\./_/g')"
@@ -23,5 +23,5 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    install -Dm755 "${SRC}/${name}-Release_${_version}/doc/${name}.1" -t "${PKG}/usr/share/man/man1/"
+    install -Dm755 "${name}-Release_${_version}/doc/${name}.1" -t "${PKG}/usr/share/man/man1/"
 }
