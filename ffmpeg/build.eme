@@ -6,7 +6,7 @@ homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team"
 
 name=ffmpeg
-version=9.0
+version=9.0.1
 release=1
 
 source="https://ffmpeg.org/releases/${name}-${version}.tar.xz
