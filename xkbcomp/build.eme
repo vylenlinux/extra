@@ -1,0 +1,20 @@
+description="X Keyboard description compiler"
+homepage="https://xorg.freedesktop.org"
+maintainer="Vylen Linux Team"
+
+name=xkbcomp
+version=1.5.0
+release=1
+source="http://ftp.x.org/pub/individual/app/xkbcomp-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+  	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PKG install
+}

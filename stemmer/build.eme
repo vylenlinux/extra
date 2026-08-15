@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Stemming library supporting several languages"
+homepage="https://snowballstem.org/"
+maintainer="Vylen Linux Team"
+
+name=stemmer
+version=3.1.1
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/snowballstem/snowball/archive/v${version}.tar.gz
+    share.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "snowball-${version}"
+
+    patch -Np1 -i "${SRC}/share.patch"
+    make
+
+    install -Dm644 include/libstemmer.h -t "${PKG}/usr/include/"
+    install -Dm755 libstemmer.so.0 "${PKG}/usr/lib/libstemmer.so.0.0.0"
+
+    ln -s libstemmer.so.0.0.0 "${PKG}/usr/lib/libstemmer.so.0"
+    ln -s libstemmer.so.0 "${PKG}/usr/lib/libstemmer.so"
+}

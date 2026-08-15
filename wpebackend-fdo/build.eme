@@ -1,0 +1,14 @@
+description="freedesktop.org backend for WPE WebKit"
+homepage="https://wpewebkit.org"
+maintainer="Vylen Linux Team"
+
+name=wpebackend-fdo
+version=1.16.1
+release=1
+source="https://wpewebkit.org/releases/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}

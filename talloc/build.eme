@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Hierarchical pool based memory allocator with destructors"
+homepage="https://talloc.samba.org/"
+maintainer="Vylen Linux Team"
+
+name=talloc
+version=2.5.0
+release=1
+source="https://samba.org/ftp/${name}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --bundled-libraries=none \
+        --enable-talloc-compat1
+
+    make
+    make DESTDIR="${PKG}" install
+}

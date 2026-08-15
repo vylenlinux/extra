@@ -1,0 +1,16 @@
+description="An LV2 Atom RDF serialisation library"
+homepage="https://drobilla.net/software/sratom.html"
+maintainer="Vylen Linux Team"
+
+name=sratom
+version=0.6.22
+release=1
+source="https://download.drobilla.net/$name-$version.tar.xz"
+
+build() {
+	vylen-meson $name-$version build \
+		-Ddocs=disabled \
+		-Dtests=disabled
+	meson compile -C build
+	DESTDIR=$PKG meson install --no-rebuild -C build
+}

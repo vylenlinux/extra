@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="DSP library derived from Speex"
+homepage="https://www.speex.org/"
+maintainer="Vylen Linux Team"
+
+name=speexdsp
+version=1.2.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/xiph/${name}/archive/refs/tags/SpeexDSP-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-SpeexDSP-${version}"
+    ./autogen.sh
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
+}

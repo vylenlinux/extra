@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Abseil Common Libraries (C++)"
+homepage="https://abseil.io/"
+maintainer="Vylen Linux Team"
+
+name=abseil-cpp
+version=20260526.0
+release=1
+
+source="https://github.com/abseil/${name}/archive/${version}/${name}-${version}.tar.gz
+    https://github.com/abseil/${name}/commit/d851fdd768b27c02b3fb786fd0987faddd279ece.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/d851fdd768b27c02b3fb786fd0987faddd279ece.patch"
+
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_CXX_STANDARD=17 \
+        -DBUILD_SHARED_LIBS=ON \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
+        -DABSL_PROPAGATE_CXX_STD=ON \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

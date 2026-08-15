@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="An audio processing library"
+homepage="https://www.surina.net/soundtouch/"
+maintainer="Vylen Linux Team"
+
+name=soundtouch
+version=2.4.1
+release=1
+source="https://www.surina.net/${name}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}"
+
+    ./bootstrap
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
+}

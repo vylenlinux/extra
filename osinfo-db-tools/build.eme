@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Tools for management of the osinfo database"
+homepage="https://libosinfo.org/"
+maintainer="Vylen Linux Team"
+
+name=osinfo-db-tools
+version=1.12.0
+release=1
+source="https://releases.pagure.org/libosinfo/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

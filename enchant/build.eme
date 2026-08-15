@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Generic interface into various existing spell checking libraries"
+homepage="https://abiword.github.io/enchant/"
+maintainer="Vylen Linux Team"
+
+name=enchant
+version=2.8.19
+release=1
+source="https://github.com/rrthomas/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    # remove a generated file that causes the build to fail
+    rm -f src/api.c
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
+
+    # Create symlinks for this package version so that other other packages
+    # can find it using the old name
+    ln -s enchant-2 "${PKG}/usr/include/enchant"
+    ln -s enchant-2 "${PKG}/usr/bin/enchant"
+    ln -s libenchant-2.so "${PKG}/usr/lib/libenchant.so"
+    ln -s enchant-2.pc "${PKG}/usr/lib/pkgconfig/enchant.pc"
+}

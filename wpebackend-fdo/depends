@@ -1,0 +1,5 @@
+libwpe
+glib
+libepoxy
+wayland-protocols
+meson

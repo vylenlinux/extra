@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Markup language and compiler for GTK 4 user interfaces"
+homepage="https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/"
+maintainer="Vylen Linux Team"
+
+name=blueprint-compiler
+version=0.22.2
+release=1
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/jwestman/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-v${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

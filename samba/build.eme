@@ -1,0 +1,49 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="File and print services to SMB/CIFS clients and Windows networking to Linux clients"
+homepage="https://www.samba.org"
+maintainer="Vylen Linux Team"
+
+name=samba
+version=4.24.6
+release=1
+source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir=/usr/lib/samba \
+        --localstatedir=/var \
+        --with-piddir=/run/samba \
+        --with-sockets-dir=/run/samba \
+        --with-pammodulesdir=/lib/security \
+        --bundled-libraries=!tdb,!talloc \
+        --enable-fhs \
+        --without-json \
+        --without-systemd \
+        --without-ad-dc \
+        --without-ads \
+        --without-ldap
+
+    make
+    make DESTDIR="${PKG}" install
+
+    install -d "${PKG}/lib"
+
+    mv "${PKG}/usr/lib"/libnss_wins.so* "${PKG}/lib"
+    mv "${PKG}/usr/lib"/libnss_winbind.so* "${PKG}/lib"
+
+    ln -sf ../../lib/libnss_winbind.so.2 "${PKG}/usr/lib/libnss_winbind.so"
+    ln -sf ../../lib/libnss_wins.so.2 "${PKG}/usr/lib/libnss_wins.so"
+
+    install -Dm644 examples/smb.conf.default -t "${PKG}/etc/${name}/"
+
+    do_revdep
+    do_service "${name}"
+    do_pam "${name}"
+}

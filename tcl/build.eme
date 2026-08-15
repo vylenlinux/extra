@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Powerful, easy-to-learn dynamic programming language"
+homepage="http://tcl.sourceforge.net/"
+maintainer="Vylen Linux Team"
+
+name=tcl
+version=8.6.18
+release=1
+source="https://downloads.sourceforge.net/${name}/${name}${version}-src.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}${version}/unix"
+
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man \
+        --without-tzdata
+
+    make
+    make INSTALL_ROOT="${PKG}" install install-private-headers
+
+    ln -sv "${name}sh${version%.*}" "${PKG}/usr/bin/${name}sh"
+
+    # conflict with perl
+    rm "${PKG}/usr/share/man/man3/Thread.3"
+}

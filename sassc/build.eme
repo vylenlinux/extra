@@ -1,0 +1,16 @@
+description="C implementation of Sass CSS preprocessor"
+homepage="https://sass-lang.com/"
+maintainer="Vylen Linux Team"
+
+name=sassc
+version=3.6.2
+release=1
+source="$name-$version.tar.gz::https://github.com/sass/$name/archive/$version.tar.gz"
+
+build() {
+	cd $name-$version
+	autoreconf -vfi
+	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+}

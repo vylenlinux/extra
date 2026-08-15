@@ -1,0 +1,15 @@
+description="Bluetooth Subband Codec (SBC) library"
+homepage="https://git.kernel.org/pub/scm/bluetooth/sbc.git"
+maintainer="Vylen Linux Team"
+
+name=sbc
+version=2.2
+release=1
+source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --disable-static --disable-tester
+	make
+	make DESTDIR=$PKG install
+}

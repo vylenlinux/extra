@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Protocol Buffers - Google's data interchange format"
+homepage="https://developers.google.com/protocol-buffers/"
+maintainer="Vylen Linux Team"
+
+name=protobuf
+version=35.1
+release=1
+source="https://github.com/protocolbuffers/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Dprotobuf_BUILD_SHARED_LIBS=ON \
+        -Dprotobuf_BUILD_TESTS=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
