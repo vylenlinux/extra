@@ -1,4 +1,4 @@
-kcalendarcore-6.28.0-1
+kcalendarcore-6.29.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/KF6/
@@ -28,6 +28,7 @@ drwxr-xr-x root/root    usr/include/KF6/KCalendarCore/KCalendarCore/
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/IncidenceBase
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/Journal
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/MemoryCalendar
+-rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/MimeData
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/OccurrenceIterator
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/Period
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/KCalendarCore/Person
@@ -64,6 +65,7 @@ drwxr-xr-x root/root    usr/include/KF6/KCalendarCore/kcalendarcore/
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/journal.h
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/kcalendarcore_export.h
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/memorycalendar.h
+-rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/mimedata.h
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/occurrenceiterator.h
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/period.h
 -rw-r--r-- root/root    usr/include/KF6/KCalendarCore/kcalendarcore/person.h
@@ -87,8 +89,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6CalendarCore/
 -rw-r--r-- root/root    usr/lib/cmake/KF6CalendarCore/KF6CalendarCoreTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6CalendarCore/KF6CalendarCoreTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6CalendarCore.so -> libKF6CalendarCore.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6CalendarCore.so.6 -> libKF6CalendarCore.so.6.28.0
--rwxr-xr-x root/root    usr/lib/libKF6CalendarCore.so.6.28.0
+lrwxrwxrwx root/root    usr/lib/libKF6CalendarCore.so.6 -> libKF6CalendarCore.so.6.29.0
+-rwxr-xr-x root/root    usr/lib/libKF6CalendarCore.so.6.29.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/KF6CalendarCore.pc
 drwxr-xr-x root/root    usr/lib/python3.14/
