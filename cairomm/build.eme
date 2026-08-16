@@ -6,7 +6,7 @@ homepage="https://www.cairographics.org/cairomm/"
 maintainer="Vylen Linux Team"
 
 name=cairomm
-version=1.14.6
+version=1.18.1
 release=1
 source="https://cairographics.org/releases/${name}-${version}.tar.xz"
 
