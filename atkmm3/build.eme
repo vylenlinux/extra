@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Official C++ interface for the ATK accessibility toolkit library"
+maintainer="Vylen Linux Team"
+homepage="https://www.gtkmm.org/"
+
+name=atkmm3
+version=2.28.4
+release=1
+source="${name}-${version}.tar.bz2::https://gitlab.gnome.org/GNOME/atkmm/-/archive/${version}/atkmm-${version}.tar.bz2"
+
+build() {
+    vylen-meson "atkmm-${version}" build -Dmaintainer-mode=true
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
