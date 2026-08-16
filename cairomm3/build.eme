@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Provides a C++ interface to Cairo"
+maintainer="Vylen Linux Team"
+homepage="https://www.cairographics.org/cairomm/"
+
+name=cairomm3
+version=1.14.6
+release=1
+source="${name}-${version}.tar.xz::https://cairographics.org/releases/cairomm-${version}.tar.xz"
+
+build() {
+    vylen-meson "cairomm-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
