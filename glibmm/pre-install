@@ -1,0 +1,3 @@
+#!/bin/sh
+
+emerald is-installed glibmm-gtk4 && emerald remove -y glibmm-gtk4

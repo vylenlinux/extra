@@ -1,6 +1,6 @@
 doxygen
 glib
-libsigc++
+libsigc++3
 meson
 graphviz
 libxslt
