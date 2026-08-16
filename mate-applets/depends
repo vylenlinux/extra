@@ -8,7 +8,7 @@ libx11
 libsm
 libice
 upower
-gtksourceview3
+gtksourceview4
 libwnck3
 libxml2
 libgtop
