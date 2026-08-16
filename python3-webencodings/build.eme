@@ -1,15 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Character encoding for the web."
 homepage="https://github.com/gsnedders/python-webencodings"
 maintainer="Vylen Linux Team"
 
 name=python3-webencodings
-version=0.5.1
+version=0.6.1
 release=1
-source="https://github.com/gsnedders/python-webencodings/archive/v$version/$name-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.org/packages/source/w/webencodings/webencodings-${version}.tar.gz"
 
 build() {
-	cd python-webencodings-$version
+    # shellcheck disable=SC2164
+    cd "${name#*-}-${version}"
 
-		python3 setup.py build
-		python3 setup.py install --root=$PKG --skip-build
+    python3 -m build \
+        --wheel \
+        --skip-dependency-check \
+        --no-isolation
+
+    python3 -m installer --destdir="${PKG}" dist/*.whl
 }
