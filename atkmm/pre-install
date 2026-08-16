@@ -1,0 +1,3 @@
+#!/bin/sh
+
+emerald is-installed atkmm-gtk4 && emerald remove -y atkmm-gtk4
