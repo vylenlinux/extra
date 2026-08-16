@@ -1,20 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Low level library that handles the details of audio and video formats"
-homepage="http://gmerlin.sourceforge.net/"
+homepage="https://github.com/bplaum/gavl"
 maintainer="Vylen Linux Team"
 
 name=gavl
-version=1.4.0
+version=2.0.1
 release=1
-source="https://downloads.sourceforge.net/gmerlin/$name-$version.tar.gz"
+
+commit=82f103205b3b378702008092c8716a0e64733047
+source="${name}-${version}-${commit}.tar.gz::https://github.com/bplaum/${name}/archive/${commit}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${commit}"
+    autoreconf -fi
 
-	# fix build with GCC 14
-	export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration"
+    ./configure \
+        --prefix=/usr \
+        --without-doxygen \
+        --with-cpuflags=none
 
-	LIBS=-lm \
-	./configure --prefix=/usr --without-doxygen --with-cpuflags=none
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
