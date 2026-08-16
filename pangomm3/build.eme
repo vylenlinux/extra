@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="C++ interface to pango"
+maintainer="Vylen Linux Team"
+homepage="https://gitlab.gnome.org/GNOME/pangomm"
+
+name=pangomm3
+version=2.46.5
+release=1
+
+source="${name}-${version}.tar.xz::https://ftp.gnome.org/pub/GNOME/sources/pangomm/${version%.*}/pangomm-${version}.tar.xz
+    pango.patch"
+
+build() {
+    patch -d "pangomm-${version}" -p1 -i "${SRC}/pango.patch"
+
+    vylen-meson "pangomm-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
