@@ -1,4 +1,4 @@
-frei0r-plugins-3.2.3-2
+frei0r-plugins-3.3.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/frei0r.h
@@ -112,6 +112,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/partik0l.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/perspective.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/pixeliz0r.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/pixels0rt.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/pixs0r.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/plasma.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/posterize.so

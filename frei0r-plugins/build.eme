@@ -6,13 +6,14 @@ homepage="https://frei0r.dyne.org/"
 maintainer="Vylen Linux Team"
 
 name=frei0r-plugins
-version=3.2.3
-release=2
+version=3.3.0
+release=1
 source="${name}-${version}.tar.gz::https://github.com/dyne/frei0r/archive/v${version}.tar.gz"
 
 build() {
     # Fix build with znver4 or newer
-    export CFLAGS="${CFLAGS} -march=x86-64"
+    export CFLAGS="${CFLAGS} \
+        -march=x86-64"
 
     # Disable plugins that still depend on removed OpenCV APIs
     sed -i '/facebl0r/d;/facedetect/d' "frei0r-${version}/src/filter/CMakeLists.txt"
