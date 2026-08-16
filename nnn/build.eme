@@ -1,13 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Free, fast, friendly file browser"
 homepage="https://github.com/jarun/nnn"
 maintainer="Vylen Linux Team"
 
 name=nnn
-version=5.2
+version=5.3
 release=1
-source="https://github.com/jarun/$name/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/jarun/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	make DESTDIR=$PKG PREFIX=/usr install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    make DESTDIR="${PKG}" PREFIX=/usr install
 }
