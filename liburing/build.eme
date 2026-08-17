@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team"
 homepage="https://github.com/axboe/liburing"
 
 name=liburing
-version=2.14
+version=2.15
 release=1
 source="https://github.com/axboe/${name}/archive/refs/tags/${name}-${version}.tar.gz"
 
