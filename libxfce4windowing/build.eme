@@ -6,7 +6,7 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team"
 
 name=libxfce4windowing
-version=4.20.6
+version=4.20.7
 release=1
 source="${name}-${version}.tar.bz2::https://gitlab.xfce.org/xfce/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.bz2"
 
