@@ -6,7 +6,7 @@ homepage="https://www.boost.org/"
 maintainer="Vylen Linux Team"
 
 name=boost
-version=1.91.0
+version=1.92.0
 release=1
 
 _version="$(printf "%s" "${version}" | sed 's/\./_/g')"
@@ -26,5 +26,5 @@ build() {
     rm -rf /usr/lib/cmake/[Bb]oost*
     ./b2 install --prefix="${PKG}/usr" threading=multi link=shared
 
-    ln -sv detail/sha1.hpp "${PKG}/usr/include/boost/uuid/sha1.hpp"
+    ln -s detail/sha1.hpp -t "${PKG}/usr/include/boost/uuid/"
 }
