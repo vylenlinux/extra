@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="An implementation-agnostic implementation of JSON reference resolution"
+maintainer="Vylen Linux Team"
+homepage="https://referencing.readthedocs.io"
+
+name=python3-referencing
+version=0.37.0
+release=1
+source="https://github.com/python-jsonschema/referencing/releases/download/v${version}/referencing-${version}-py3-none-any.whl"
+
+build() {
+    python3 -m installer -d "${PKG}" "referencing-${version}-py3-none-any.whl"
+}
