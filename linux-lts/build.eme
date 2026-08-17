@@ -20,17 +20,14 @@ build() {
     cbuild_restore "${SRC}/${name}-${version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
-    sed '/^CONFIG_LOCALVERSION=/d' -i .config
-    printf 'CONFIG_LOCALVERSION="-%s"\n' "${name}" >> .config
-
-    # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
-    # More info: https://docs.kernel.org/kbuild/kbuild.html
-    # CBUILD: add custom KCFLAGS and KCPPFLAGS, source linux.opt
+    # shellcheck disable=SC2153
     CBUILD_LINUX_KCFLAGS="${CFLAGS}"
     CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS}"
 
     cbuild_options
 
+    # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
+    # More info: https://docs.kernel.org/kbuild/kbuild.html
     export KCFLAGS="${CBUILD_LINUX_KCFLAGS}"
     export KCPPFLAGS="${CBUILD_LINUX_KCPPFLAGS}"
 
