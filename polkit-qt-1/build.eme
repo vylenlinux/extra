@@ -6,7 +6,7 @@ homepage="https://www.kde.org/"
 maintainer="Vylen Linux Team"
 
 name=polkit-qt-1
-version=0.200.0
+version=0.201.1
 release=1
 source="http://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
