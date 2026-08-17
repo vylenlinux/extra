@@ -9,7 +9,6 @@ libsm
 libice
 libxext
 libxxf86vm
-linux-pam
 libmatekbd
 libxklavier
 libnotify

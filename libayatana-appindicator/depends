@@ -5,5 +5,4 @@ gobject-introspection
 gtk3
 libayatana-indicator
 libdbusmenu
-ninja
 vala

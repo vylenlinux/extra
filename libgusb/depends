@@ -2,5 +2,4 @@ libusb
 usbutils
 gobject-introspection
 vala
-meson
 json-glib

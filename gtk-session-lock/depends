@@ -1,4 +1,3 @@
-meson
 gobject-introspection
 gtk3
 vala

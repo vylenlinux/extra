@@ -1,5 +1,4 @@
 cmake
 freetype2
 poppler-data
-ninja
 openjpeg2

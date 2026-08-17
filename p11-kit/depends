@@ -1,5 +1,2 @@
 libtasn1
-libffi
 make-ca
-meson
-ninja

@@ -1,5 +1,4 @@
 cmake
-ninja
 libxinerama
 libx11
 libxext

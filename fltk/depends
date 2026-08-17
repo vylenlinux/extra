@@ -1,7 +1,5 @@
 cmake
-ninja
 libjpeg-turbo
-zlib
 libpng
 fontconfig
 libglvnd

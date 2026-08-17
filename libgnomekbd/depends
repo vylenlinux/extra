@@ -1,5 +1,3 @@
-meson
-ninja
 libxklavier
 gtk3
 dconf

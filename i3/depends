@@ -7,6 +7,3 @@ yajl
 startup-notification
 pango
 libxkbcommon
-bison
-flex
-meson

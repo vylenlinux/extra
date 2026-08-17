@@ -1,5 +1,3 @@
-libcap
-linux-pam
 samba
 keyutils
 krb5

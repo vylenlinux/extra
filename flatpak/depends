@@ -1,17 +1,12 @@
-libarchive
-libcap
 libxml2
 ostree
 json-glib
 libseccomp
-curl
 python3-pyparsing
 xdg-dbus-proxy
 dconf
-zstd
 socat
 polkit
-gettext
 appstream
 bubblewrap
 gdk-pixbuf

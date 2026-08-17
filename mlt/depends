@@ -1,5 +1,4 @@
 cmake
-ninja
 qt6-svg
 qt6-5compat
 frei0r-plugins

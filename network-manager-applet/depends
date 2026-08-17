@@ -3,6 +3,5 @@ libsecret
 libnotify
 networkmanager
 gobject-introspection
-meson
 libnma
 libappindicator

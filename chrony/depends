@@ -1,6 +1,4 @@
 gnutls
 libedit
-libcap
-ncurses
 nettle
 nss

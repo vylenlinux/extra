@@ -1,6 +1,5 @@
 spice
 libxfont2
-python3
 xorg-server
 spice-protocol
 xorgproto

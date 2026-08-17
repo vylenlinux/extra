@@ -7,5 +7,4 @@ libxrender
 libx11
 libxext
 lzo
-zlib
 glib

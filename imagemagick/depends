@@ -1,8 +1,6 @@
 fontconfig
 lcms2
-libtool
 libxext
 libxt
-perl
 libxml2
 librsvg

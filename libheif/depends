@@ -1,5 +1,4 @@
 cmake
-ninja
 x265
 dav1d
 aom

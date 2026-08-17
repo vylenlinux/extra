@@ -1,7 +1,6 @@
 libgcrypt
 nettle
 nss
-openssl
 popt
 json-c
 lvm2

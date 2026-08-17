@@ -7,7 +7,6 @@ libexif
 lcms2
 dbus-glib
 librsvg
-zlib
 libjpeg-turbo
 libxml2
 libx11

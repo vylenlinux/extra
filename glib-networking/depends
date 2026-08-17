@@ -1,6 +1,4 @@
 glib
 gnutls
 gsettings-desktop-schemas
-ca-certificates
 p11-kit
-meson

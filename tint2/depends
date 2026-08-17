@@ -2,7 +2,6 @@ gtk3
 imlib2
 startup-notification
 cmake
-ninja
 libxdamage
 libxcomposite
 librsvg

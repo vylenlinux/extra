@@ -13,7 +13,6 @@ libwebp
 openjpeg2
 ruby
 unifdef
-which
 wpebackend-fdo
 xdg-dbus-proxy
 gtk3

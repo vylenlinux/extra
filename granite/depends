@@ -5,5 +5,4 @@ gtk3
 libgee
 pango
 gobject-introspection
-meson
 vala

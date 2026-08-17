@@ -6,7 +6,6 @@ perl-parse-yapp
 gnutls
 tdb
 talloc
-linux-pam
 dbus
 perl-json
 perl-parse-yapp

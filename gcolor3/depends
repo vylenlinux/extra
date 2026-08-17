@@ -5,4 +5,3 @@ glib
 gtk3
 hicolor-icon-theme
 appstream-glib
-meson

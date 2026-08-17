@@ -1,4 +1,3 @@
 gtk3
 startup-notification
 gobject-introspection
-meson

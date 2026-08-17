@@ -1,5 +1,3 @@
-curl
-openssl
 gpgme
 libsodium
 glib

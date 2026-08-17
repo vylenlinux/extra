@@ -4,7 +4,6 @@ mate-panel
 libxext
 libcanberra
 libx11
-zlib
 libgtop
 libsm
 libice

@@ -2,4 +2,3 @@ gobject-introspection
 gtk3
 python3-gobject3
 libxml2
-meson

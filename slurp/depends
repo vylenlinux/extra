@@ -1,4 +1,3 @@
-meson
 cairo
 wayland-protocols
 libxkbcommon

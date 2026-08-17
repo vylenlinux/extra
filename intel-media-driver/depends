@@ -1,4 +1,3 @@
 cmake
-ninja
 intel-gmmlib
 libva

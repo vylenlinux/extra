@@ -3,5 +3,4 @@ harfbuzz
 fribidi
 fontconfig
 gobject-introspection
-meson
 libxft

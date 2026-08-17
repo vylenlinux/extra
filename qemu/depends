@@ -1,6 +1,5 @@
 alsa-lib
 sdl2-compat
-coreutils
 libslirp
 orc
 spice
