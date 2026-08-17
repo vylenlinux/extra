@@ -1,18 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="GObject based plugins engine"
 homepage="https://wiki.gnome.org/Projects/Libpeas"
 maintainer="Vylen Linux Team"
 
 name=libpeas1
-_name=libpeas
-version=1.36.0
-commit=7f245fa5158204621c3469756a951b68a651c4fe
+version=1.38.1
 release=1
-source="https://gitlab.gnome.org/GNOME/libpeas/-/archive/$_name-$version/$_name-$version.tar.gz"
+source="https://gitlab.gnome.org/GNOME/libpeas/-/archive/libpeas-${version}/libpeas-libpeas-${version}.tar.gz"
 
 build() {
-	vylen-meson $_name-$_name-$version-$commit build \
-		-Dgtk_doc=false \
-		-Dlua51=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "libpeas-libpeas-${version}" build \
+        -Dgtk_doc=false \
+        -Dlua51=false \
+        -Dpython3=false \
+        -Dvapi=true
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
