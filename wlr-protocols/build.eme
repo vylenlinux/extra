@@ -6,10 +6,10 @@ homepage="https://gitlab.freedesktop.org/wlroots/wlr-protocols"
 maintainer="Vylen Linux Team"
 
 name=wlr-protocols
-version=240126
+version=20240126
 release=1
 
-commit=2b8d43325b7012cc3f9b55c08d26e50e42beac7d
+commit=bf4fc79abc359eea5a0edec0ac6d4a2b2955f82a
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/wlroots/${name}/-/archive/${commit}/${name}-${commit}.tar.gz"
 
 build() {
