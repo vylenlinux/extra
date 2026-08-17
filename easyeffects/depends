@@ -5,7 +5,7 @@ gsl
 libadwaita
 libbs2b
 libebur128
-libsigc++3
+libsigc++
 libmysofa
 lilv
 nlohmann-json
