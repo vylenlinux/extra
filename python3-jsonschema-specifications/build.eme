@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/python-jsonschema/jsonschema-specifications"
+
+name=python3-jsonschema-specifications
+version=2025.9.1
+release=1
+source="https://github.com/python-jsonschema/jsonschema-specifications/releases/download/v${version}/jsonschema_specifications-${version}-py3-none-any.whl"
+
+build() {
+    python3 -m installer -d "${PKG}" "jsonschema_specifications-${version}-py3-none-any.whl"
+}
