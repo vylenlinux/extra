@@ -17,15 +17,15 @@ drwxr-xr-x root/root    usr/include/nfsc/
 -rw-r--r-- root/root    usr/include/nfsc/libnfs-raw.h
 -rw-r--r-- root/root    usr/include/nfsc/libnfs-zdr.h
 -rw-r--r-- root/root    usr/include/nfsc/libnfs.h
-drwxr-xr-x root/root    usr/lib64/
-drwxr-xr-x root/root    usr/lib64/cmake/
-drwxr-xr-x root/root    usr/lib64/cmake/libnfs/
--rw-r--r-- root/root    usr/lib64/cmake/libnfs/FindNFS.cmake
--rw-r--r-- root/root    usr/lib64/cmake/libnfs/libnfs-config-release.cmake
--rw-r--r-- root/root    usr/lib64/cmake/libnfs/libnfs-config-version.cmake
--rw-r--r-- root/root    usr/lib64/cmake/libnfs/libnfs-config.cmake
-lrwxrwxrwx root/root    usr/lib64/libnfs.so -> libnfs.so.17.0.0
--rwxr-xr-x root/root    usr/lib64/libnfs.so.17.0.0
-drwxr-xr-x root/root    usr/lib64/pkgconfig/
--rw-r--r-- root/root    usr/lib64/pkgconfig/libnfs.pc
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/libnfs/
+-rw-r--r-- root/root    usr/lib/cmake/libnfs/FindNFS.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config.cmake
+lrwxrwxrwx root/root    usr/lib/libnfs.so -> libnfs.so.17.0.0
+-rwxr-xr-x root/root    usr/lib/libnfs.so.17.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libnfs.pc
 drwxr-xr-x root/root    usr/share/

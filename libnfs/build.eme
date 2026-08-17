@@ -13,6 +13,7 @@ source="https://github.com/sahlberg/${name}/archive/${name}-${version}.tar.gz"
 build() {
     cmake -S "${name}-${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DENABLE_DOCUMENTATION=ON \
