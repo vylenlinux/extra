@@ -6,9 +6,9 @@ homepage="http://tcl.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=tcl
-version=8.6.18
+version=9.0.4
 release=1
-source="https://downloads.sourceforge.net/${name}/${name}${version}-src.tar.gz"
+source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/${name}/${name}${version}-src.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
@@ -22,7 +22,7 @@ build() {
     make
     make INSTALL_ROOT="${PKG}" install install-private-headers
 
-    ln -sv "${name}sh${version%.*}" "${PKG}/usr/bin/${name}sh"
+    ln -s "${name}sh${version%.*}" "${PKG}/usr/bin/${name}sh"
 
     # conflict with perl
     rm "${PKG}/usr/share/man/man3/Thread.3"
