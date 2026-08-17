@@ -6,7 +6,7 @@ homepage="https://github.com/libconfuse/libconfuse"
 maintainer="Vylen Linux Team"
 
 name=confuse
-version=3.3
+version=3.4
 release=1
 source="https://github.com/martinh/libconfuse/releases/download/v${version}/${name}-${version}.tar.gz"
 
