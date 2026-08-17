@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python bindings to the Rust rpds crate for persistent data structures"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/crate-py/rpds"
+
+name=python3-rpds-py
+version=2026.6.3
+release=1
+source="${name}-${version}.tar.gz::https://github.com/crate-py/rpds/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "rpds-${version}"
+
+    cargo fetch \
+        --locked \
+        --target host-tuple
+
+    python3 -m build \
+        --wheel \
+        --no-isolation
+
+    python3 -m installer --destdir="${PKG}" dist/*.whl
+}
