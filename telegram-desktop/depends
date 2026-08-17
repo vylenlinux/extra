@@ -14,7 +14,7 @@ protobuf
 fmt
 graphviz
 boost
-libsigc++3
+libsigc++
 ada
 libheif
 libavif
