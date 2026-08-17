@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Open source implementation of jpegxr"
-homepage="https://archive.codeplex.com/?p=jxrlib"
+homepage="https://github.com/mircomir/jxrlib"
 maintainer="Vylen Linux Team"
 
 name=jxrlib
