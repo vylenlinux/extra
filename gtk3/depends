@@ -4,3 +4,4 @@ libepoxy
 libxcursor
 libxcomposite
 librsvg
+wayland-protocols
