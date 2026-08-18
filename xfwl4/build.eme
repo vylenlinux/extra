@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Wayland compositor for xfce4"
+maintainer="Vylen Linux Team"
+homepage="https://gitlab.xfce.org/xfce/xfwl4"
+
+name=xfwl4
+version=4.21.1
+release=1
+source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.xz"
+
+build() {
+    sed -i "s/'libudev': '>= 257'/'libudev': '>= 251'/" "${name}-${version}/meson.build"
+
+    vylen-meson "${name}-${version}" build -Duse-system-gettext=true
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
