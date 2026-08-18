@@ -5,6 +5,18 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/shiboken_tool.py
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/PySide6/
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DAnimation/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DAnimation/pyside6_qt3danimation_python.h
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DCore/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DCore/pyside6_qt3dcore_python.h
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DExtras/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DExtras/pyside6_qt3dextras_python.h
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DInput/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DInput/pyside6_qt3dinput_python.h
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DLogic/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DLogic/pyside6_qt3dlogic_python.h
+drwxr-xr-x root/root    usr/include/PySide6/Qt3DRender/
+-rw-r--r-- root/root    usr/include/PySide6/Qt3DRender/pyside6_qt3drender_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtBluetooth/
 -rw-r--r-- root/root    usr/include/PySide6/QtBluetooth/pyside6_qtbluetooth_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtCharts/
@@ -77,6 +89,8 @@ drwxr-xr-x root/root    usr/include/PySide6/QtScxml/
 -rw-r--r-- root/root    usr/include/PySide6/QtScxml/pyside6_qtscxml_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtSensors/
 -rw-r--r-- root/root    usr/include/PySide6/QtSensors/pyside6_qtsensors_python.h
+drwxr-xr-x root/root    usr/include/PySide6/QtSerialBus/
+-rw-r--r-- root/root    usr/include/PySide6/QtSerialBus/pyside6_qtserialbus_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtSerialPort/
 -rw-r--r-- root/root    usr/include/PySide6/QtSerialPort/pyside6_qtserialport_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtSpatialAudio/
@@ -234,12 +248,12 @@ drwxr-xr-x root/root    usr/lib/cmake/Shiboken6Tools/
 lrwxrwxrwx root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so -> libpyside6.cpython-314-x86_64-linux-gnu.so.6.11
 -rwxr-xr-x root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so.6.11
 lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11
-lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11 -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11 -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.2
 -rw-r--r-- root/root    usr/lib/libpyside6remoteobjects.a
 lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11
-lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11 -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11 -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/pyside6.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/shiboken6.pc
@@ -253,6 +267,18 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6.egg-info/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6.egg-info/requires.txt
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DAnimation.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DAnimation.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DCore.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DCore.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DExtras.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DExtras.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DInput.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DInput.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DLogic.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DLogic.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DRender.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/Qt3DRender.pyi
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/events.py
@@ -322,6 +348,8 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtScxml.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtSensors.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtSensors.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtSerialBus.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtSerialBus.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtSerialPort.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtSerialPort.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtSpatialAudio.cpython-314-x86_64-linux-gnu.so
@@ -394,6 +422,7 @@ drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/PySide6/
 drwxr-xr-x root/root    usr/share/PySide6/doc/
 -rw-r--r-- root/root    usr/share/PySide6/doc/qtcore.rst
+-rw-r--r-- root/root    usr/share/PySide6/doc/qtgui.rst
 -rw-r--r-- root/root    usr/share/PySide6/doc/qtqml.rst
 -rw-r--r-- root/root    usr/share/PySide6/doc/qtquicktest.rst
 -rw-r--r-- root/root    usr/share/PySide6/doc/qtuitools.rst
@@ -416,6 +445,7 @@ drwxr-xr-x root/root    usr/share/PySide6/glue/
 -rw-r--r-- root/root    usr/share/PySide6/glue/qtquick3d.cpp
 -rw-r--r-- root/root    usr/share/PySide6/glue/qtquicktest.cpp
 -rw-r--r-- root/root    usr/share/PySide6/glue/qtremoteobjects.cpp
+-rw-r--r-- root/root    usr/share/PySide6/glue/qtserialbus.cpp
 -rw-r--r-- root/root    usr/share/PySide6/glue/qtsql.cpp
 -rw-r--r-- root/root    usr/share/PySide6/glue/qtstatemachine.cpp
 -rw-r--r-- root/root    usr/share/PySide6/glue/qttest.cpp
@@ -433,6 +463,12 @@ drwxr-xr-x root/root    usr/share/PySide6/typesystems/glue/
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/glue/qeasingcurve_glue.cpp
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/glue/qeasingcurve_glue.h
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/gui_common.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3danimation.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3dcore.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3dextras.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3dinput.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3dlogic.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_3drender.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_bluetooth.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_charts.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_concurrent.xml
@@ -501,6 +537,7 @@ drwxr-xr-x root/root    usr/share/PySide6/typesystems/glue/
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_remoteobjects.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_scxml.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_sensors.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_serialbus.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_serialport.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_spatialaudio.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_sql.xml
