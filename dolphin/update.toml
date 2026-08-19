@@ -2,4 +2,4 @@ name = "dolphin"
 provider = "repology"
 
 [source]
-package = "dolphin-fm*"
+package = "dolphin-fm"
