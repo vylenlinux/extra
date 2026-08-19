@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Libtpms-based TPM emulator with socket, character device, and Linux CUSE interface"
 homepage="https://github.com/stefanberger/swtpm"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,23 @@ maintainer="Vylen Linux Team"
 name=swtpm
 version=0.10.1
 release=1
-source="$name-$version.tar.gz::https://github.com/stefanberger/swtpm/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/stefanberger/${name}/archive/v${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	autoreconf --install --force
-        ./configure --prefix=/usr --libexecdir=/usr/lib --with-cuse --with-gnutls --with-seccomp 
-        make
-        make DESTDIR=$PKG install
+    autoreconf \
+        --install \
+        --force
+
+    ./configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+        --with-cuse \
+        --with-gnutls \
+        --with-seccomp
+
+    make
+    make DESTDIR="${PKG}" install
 }
