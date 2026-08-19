@@ -1,4 +1,4 @@
-frei0r-plugins-3.3.2-1
+frei0r-plugins-3.4.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/frei0r.h
@@ -127,6 +127,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/scanline0r.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/screen.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/select0r.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/shake0scillate.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/sharpness.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/sigmoidaltransfer.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/sleid0r_push-down.so
