@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Style-preserving TOML library for Python"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/sdispater/tomlkit"
+
+name=python3-tomlkit
+version=0.15.1
+release=1
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/t/tomlkit/tomlkit-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "tomlkit-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
