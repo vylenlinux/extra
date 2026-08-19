@@ -1,21 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="iSound system for POSIX OSes"
 homepage="https://www.freedesktop.org/wiki/Software/PulseAudio/"
 maintainer="Vylen Linux Team"
 
 name=pulseaudio
 version=17.0
-release=1
-source="https://www.freedesktop.org/software/pulseaudio/releases/$name-$version.tar.xz"
+release=2
+source="https://www.freedesktop.org/software/${name}/releases/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build \
-		    -D tests=false \
-		    -D doxygen=false \
-                    -D bluez5=disabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dtests=false \
+        -Ddoxygen="$(emerald is-installed doxygen && printf 'true' || printf 'false')" \
+        -Dbluez5="$(emerald is-installed bluez && printf 'enabled' || printf 'disabled')"
 
-        # remove the D-Bus configuration file for the system wide daemon to avoid creating unnecessary system users and groups
-	rm -fv $PKG/etc/dbus-1/system.d/pulseaudio-system.conf
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
+    # remove the D-Bus configuration file for the system wide daemon to avoid creating unnecessary system users and groups
+    rm -f "${PKG}/etc/dbus-1/system.d/pulseaudio-system.conf"
 }
