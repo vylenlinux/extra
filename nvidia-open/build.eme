@@ -12,7 +12,8 @@ release=2
 source="${name}-${version}.run::http://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
     buildmodules-${name}.sh
     prime-run
-    10-nvidia-drm-outputclass.conf"
+    10-nvidia-drm-outputclass.conf
+    nvidia.conf"
 
 build() {
     install_lib() {
@@ -188,8 +189,7 @@ build() {
     cp -dr --no-preserve='ownership' kernel "${PKG}/usr/src/nvidia-${version}"
 
     # blacklist conflict module
-    install -d "${PKG}/etc/modprobe.d"
-    echo "blacklist nouveau" > "${PKG}/etc/modprobe.d/nvidia.conf"
+    install -Dm644 "${SRC}/nvidia.conf" -t "${PKG}/etc/modprobe.d/"
 
     # dkms build modules script
     mkdir -p "${PKG}/var/lib/dkms"
