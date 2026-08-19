@@ -1,0 +1,316 @@
+Submitted By:            Douglas R. Reno <renodr at linuxfromscratch dot org>
+Date:                    2026-05-13
+Initial Package Version: 2.3.10
+Upstream Status:         Submitted
+Origin:                  Self
+Description:             Ports QCA to work with OpenSSL-4.0 by adjusting types
+                         and using ASN_STRING_get0_data and ASN1_STRING_length
+                         to retrieve information about ASN1 strings. This does
+                         also work with OpenSSL-3.x, but drops support for
+                         OpenSSL-1.x.
+
+--- qca-2.3.10.orig/plugins/qca-ossl/qca-ossl.cpp	2025-03-09 07:09:03.000000000 -0500
++++ qca-2.3.10/plugins/qca-ossl/qca-ossl.cpp	2026-05-13 15:42:21.861365883 -0500
+@@ -304,20 +304,20 @@ static X509_NAME *new_cert_name(const Ce
+     return name;
+ }
+
+-static void try_get_name_item(X509_NAME *name, int nid, const CertificateInfoType &t, CertificateInfo *info)
++static void try_get_name_item(const X509_NAME *name, int nid, const CertificateInfoType &t, CertificateInfo *info)
+ {
+     int loc;
+     loc = -1;
+     while ((loc = X509_NAME_get_index_by_NID(name, nid, loc)) != -1) {
+-        X509_NAME_ENTRY *ne   = X509_NAME_get_entry(name, loc);
+-        ASN1_STRING     *data = X509_NAME_ENTRY_get_data(ne);
+-        QByteArray       cs((const char *)data->data, data->length);
++        const X509_NAME_ENTRY *ne   = X509_NAME_get_entry(name, loc);
++        const ASN1_STRING     *data = X509_NAME_ENTRY_get_data(ne);
++        QByteArray       cs((const char *)ASN1_STRING_get0_data(data), ASN1_STRING_length(data));
+         info->insert(t, QString::fromLatin1(cs));
+     }
+ }
+
+ static void
+-try_get_name_item_by_oid(X509_NAME *name, const QString &oidText, const CertificateInfoType &t, CertificateInfo *info)
++try_get_name_item_by_oid(const X509_NAME *name, const QString &oidText, const CertificateInfoType &t, CertificateInfo *info)
+ {
+     ASN1_OBJECT *oid = OBJ_txt2obj(oidText.toLatin1().data(), 1); // 1 = only accept dotted input
+     if (!oid)
+@@ -326,16 +326,16 @@ try_get_name_item_by_oid(X509_NAME *name
+     int loc;
+     loc = -1;
+     while ((loc = X509_NAME_get_index_by_OBJ(name, oid, loc)) != -1) {
+-        X509_NAME_ENTRY *ne   = X509_NAME_get_entry(name, loc);
+-        ASN1_STRING     *data = X509_NAME_ENTRY_get_data(ne);
+-        QByteArray       cs((const char *)data->data, data->length);
++        const X509_NAME_ENTRY *ne   = X509_NAME_get_entry(name, loc);
++        const ASN1_STRING     *data = X509_NAME_ENTRY_get_data(ne);
++        QByteArray       cs((const char *)ASN1_STRING_get0_data(data), ASN1_STRING_length(data));
+         info->insert(t, QString::fromLatin1(cs));
+         qDebug() << "oid: " << oidText << ",  result: " << cs;
+     }
+     ASN1_OBJECT_free(oid);
+ }
+
+-static CertificateInfo get_cert_name(X509_NAME *name)
++static CertificateInfo get_cert_name(const X509_NAME *name)
+ {
+     CertificateInfo info;
+     try_get_name_item(name, NID_commonName, CommonName, &info);
+@@ -389,7 +389,7 @@ static X509_EXTENSION *new_basic_constra
+     return ex;
+ }
+
+-static void get_basic_constraints(X509_EXTENSION *ex, bool *ca, int *pathlen)
++static void get_basic_constraints(const X509_EXTENSION *ex, bool *ca, int *pathlen)
+ {
+     BASIC_CONSTRAINTS *bs = (BASIC_CONSTRAINTS *)X509V3_EXT_d2i(ex);
+     *ca                   = (bs->ca ? true : false);
+@@ -641,7 +641,7 @@ static void try_get_general_name(GENERAL
+     }
+ }
+
+-static CertificateInfo get_cert_alt_name(X509_EXTENSION *ex)
++static CertificateInfo get_cert_alt_name(const X509_EXTENSION *ex)
+ {
+     CertificateInfo info;
+     GENERAL_NAMES  *gn = (GENERAL_NAMES *)X509V3_EXT_d2i(ex);
+@@ -704,7 +704,7 @@ static X509_EXTENSION *new_cert_key_usag
+     return ex;
+ }
+
+-static Constraints get_cert_key_usage(X509_EXTENSION *ex)
++static Constraints get_cert_key_usage(const X509_EXTENSION *ex)
+ {
+     Constraints constraints;
+     int         bit_table[9] = {DigitalSignature,
+@@ -778,7 +778,7 @@ static X509_EXTENSION *new_cert_ext_key_
+     return ex;
+ }
+
+-static Constraints get_cert_ext_key_usage(X509_EXTENSION *ex)
++static Constraints get_cert_ext_key_usage(const X509_EXTENSION *ex)
+ {
+     Constraints constraints;
+
+@@ -852,7 +852,7 @@ static X509_EXTENSION *new_cert_policies
+     return ex;
+ }
+
+-static QStringList get_cert_policies(X509_EXTENSION *ex)
++static QStringList get_cert_policies(const X509_EXTENSION *ex)
+ {
+     QStringList out;
+     STACK_OF(POLICYINFO) *pols = (STACK_OF(POLICYINFO) *)X509V3_EXT_d2i(ex);
+@@ -867,7 +867,7 @@ static QStringList get_cert_policies(X50
+     return out;
+ }
+
+-static QByteArray get_cert_subject_key_id(X509_EXTENSION *ex)
++static QByteArray get_cert_subject_key_id(const X509_EXTENSION *ex)
+ {
+     ASN1_OCTET_STRING *skid = (ASN1_OCTET_STRING *)X509V3_EXT_d2i(ex);
+     const QByteArray   out  = qca_ASN1_STRING_toByteArray(skid);
+@@ -877,7 +877,7 @@ static QByteArray get_cert_subject_key_i
+
+ // If you get any more crashes in this code, please provide a copy
+ // of the cert to bradh AT frogmouth.net
+-static QByteArray get_cert_issuer_key_id(X509_EXTENSION *ex)
++static QByteArray get_cert_issuer_key_id(const X509_EXTENSION *ex)
+ {
+     AUTHORITY_KEYID *akid = (AUTHORITY_KEYID *)X509V3_EXT_d2i(ex);
+     QByteArray       out;
+@@ -3342,8 +3342,8 @@ QDateTime ASN1_UTCTIME_QDateTime(const A
+     QDate     qdate;
+     QTime     qtime;
+
+-    i = tm->length;
+-    v = (char *)tm->data;
++    i = ASN1_STRING_length(tm);
++    v = (char *)ASN1_STRING_get0_data(tm);
+
+     if (i < 10)
+         goto auq_err;
+@@ -3672,42 +3672,42 @@ public:
+         p.pathLimit = 0;
+         int pos     = X509_get_ext_by_NID(x, NID_basic_constraints, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 get_basic_constraints(ex, &p.isCA, &p.pathLimit);
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_subject_alt_name, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 subject.unite(get_cert_alt_name(ex));
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_issuer_alt_name, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 issuer.unite(get_cert_alt_name(ex));
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_key_usage, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 p.constraints = get_cert_key_usage(ex);
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_ext_key_usage, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 p.constraints += get_cert_ext_key_usage(ex);
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_certificate_policies, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 p.policies = get_cert_policies(ex);
+         }
+@@ -3716,9 +3716,9 @@ public:
+
+         X509_get0_signature(&signature, nullptr, x);
+         if (signature) {
+-            p.sig = QByteArray(signature->length, 0);
+-            for (int i = 0; i < signature->length; i++)
+-                p.sig[i] = signature->data[i];
++            p.sig = QByteArray(ASN1_STRING_length(signature), 0);
++            for (int i = 0; i < ASN1_STRING_length(signature); i++)
++                p.sig[i] = ASN1_STRING_get0_data(signature)[i];
+         }
+
+         switch (X509_get_signature_nid(x)) {
+@@ -3758,14 +3758,14 @@ public:
+
+         pos = X509_get_ext_by_NID(x, NID_subject_key_identifier, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 p.subjectId += get_cert_subject_key_id(ex);
+         }
+
+         pos = X509_get_ext_by_NID(x, NID_authority_key_identifier, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_get_ext(x, pos);
+             if (ex)
+                 p.issuerId += get_cert_issuer_key_id(ex);
+         }
+@@ -4175,35 +4175,35 @@ public:
+         p.pathLimit = 0;
+         int pos     = X509v3_get_ext_by_NID(exts, NID_basic_constraints, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
++            const X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
+             if (ex)
+                 get_basic_constraints(ex, &p.isCA, &p.pathLimit);
+         }
+
+         pos = X509v3_get_ext_by_NID(exts, NID_subject_alt_name, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
++            const X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
+             if (ex)
+                 subject.unite(get_cert_alt_name(ex));
+         }
+
+         pos = X509v3_get_ext_by_NID(exts, NID_key_usage, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
++            const X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
+             if (ex)
+                 p.constraints = get_cert_key_usage(ex);
+         }
+
+         pos = X509v3_get_ext_by_NID(exts, NID_ext_key_usage, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
++            const X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
+             if (ex)
+                 p.constraints += get_cert_ext_key_usage(ex);
+         }
+
+         pos = X509v3_get_ext_by_NID(exts, NID_certificate_policies, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
++            const X509_EXTENSION *ex = X509v3_get_ext(exts, pos);
+             if (ex)
+                 p.policies = get_cert_policies(ex);
+         }
+@@ -4214,9 +4214,9 @@ public:
+
+         X509_REQ_get0_signature(x, &signature, nullptr);
+         if (signature) {
+-            p.sig = QByteArray(signature->length, 0);
+-            for (int i = 0; i < signature->length; i++)
+-                p.sig[i] = signature->data[i];
++            p.sig = QByteArray(ASN1_STRING_length(signature), 0);
++            for (int i = 0; i < ASN1_STRING_length(signature); i++)
++                p.sig[i] = ASN1_STRING_get0_data(signature)[i];
+         }
+
+         switch (X509_REQ_get_signature_nid(x)) {
+@@ -4363,7 +4363,7 @@ public:
+             QCA::CRLEntry::Reason reason = QCA::CRLEntry::Unspecified;
+             int                   pos    = X509_REVOKED_get_ext_by_NID(rev, NID_crl_reason, -1);
+             if (pos != -1) {
+-                X509_EXTENSION *ex = X509_REVOKED_get_ext(rev, pos);
++                const X509_EXTENSION *ex = X509_REVOKED_get_ext(rev, pos);
+                 if (ex) {
+                     ASN1_ENUMERATED *result = (ASN1_ENUMERATED *)X509V3_EXT_d2i(ex);
+                     switch (ASN1_ENUMERATED_get(result)) {
+@@ -4412,9 +4412,9 @@ public:
+
+         X509_CRL_get0_signature(x, &signature, nullptr);
+         if (signature) {
+-            p.sig = QByteArray(signature->length, 0);
+-            for (int i = 0; i < signature->length; i++)
+-                p.sig[i] = signature->data[i];
++            p.sig = QByteArray(ASN1_STRING_length(signature), 0);
++            for (int i = 0; i < ASN1_STRING_length(signature); i++)
++                p.sig[i] = ASN1_STRING_get0_data(signature)[i];
+         }
+
+         switch (X509_CRL_get_signature_nid(x)) {
+@@ -4454,7 +4454,7 @@ public:
+
+         int pos = X509_CRL_get_ext_by_NID(x, NID_authority_key_identifier, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_CRL_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_CRL_get_ext(x, pos);
+             if (ex)
+                 p.issuerId += get_cert_issuer_key_id(ex);
+         }
+@@ -4462,7 +4462,7 @@ public:
+         p.number = -1;
+         pos      = X509_CRL_get_ext_by_NID(x, NID_crl_number, -1);
+         if (pos != -1) {
+-            X509_EXTENSION *ex = X509_CRL_get_ext(x, pos);
++            const X509_EXTENSION *ex = X509_CRL_get_ext(x, pos);
+             if (ex) {
+                 ASN1_INTEGER *result = (ASN1_INTEGER *)X509V3_EXT_d2i(ex);
+                 p.number             = ASN1_INTEGER_get(result);
+@@ -4996,7 +4996,7 @@ public:
+         case TLS::SSL_v3:
+             // Here should be used TLS_client_method() but on Fedora
+             // it doesn't return any SSL ciphers.
+-            ctx = SSL_CTX_new(SSLv3_client_method());
++            ctx = SSL_CTX_new(SSLv23_client_method());
+             SSL_CTX_set_min_proto_version(ctx, SSL3_VERSION);
+             SSL_CTX_set_max_proto_version(ctx, SSL3_VERSION);
+             break;
