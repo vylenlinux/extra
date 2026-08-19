@@ -6,7 +6,7 @@ homepage="https://github.com/stefanberger/swtpm"
 maintainer="Vylen Linux Team"
 
 name=swtpm
-version=0.10.1
+version=0.10.2
 release=1
 source="${name}-${version}.tar.gz::https://github.com/stefanberger/${name}/archive/v${version}.tar.gz"
 
