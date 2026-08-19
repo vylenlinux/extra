@@ -1,43 +1,43 @@
-qt6-lottie-6.11.1-1
+qt6-lottie-6.11.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtLottie/
-drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.1/
-drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/
-drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qbatchrenderer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qbeziereasing_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieanimation_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiebase_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiebasictransform_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieconstants_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieellipse_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiefill_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiefilleffect_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieflatlayers_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiefreeformshape_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiegfill_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiegroup_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieimage_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottielayer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiepolystar_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieprecomplayer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieproperty_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottierasterrenderer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottierect_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottierenderer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottierepeater_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottierepeatertransform_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieroot_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieround_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieshape_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieshapelayer_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottieshapetransform_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiespatialproperty_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottiestroke_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qlottietrimpath_p.h
--rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/qtlottie-config_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.2/
+drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/
+drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qbatchrenderer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qbeziereasing_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieanimation_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiebase_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiebasictransform_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieconstants_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieellipse_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiefill_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiefilleffect_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieflatlayers_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiefreeformshape_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiegfill_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiegroup_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieimage_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottielayer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiepolystar_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieprecomplayer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieproperty_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottierasterrenderer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottierect_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottierenderer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottierepeater_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottierepeatertransform_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieroot_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieround_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieshape_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieshapelayer_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottieshapetransform_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiespatialproperty_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottiestroke_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qlottietrimpath_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtLottie/6.11.2/QtLottie/private/qtlottie-config_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtLottie/QtLottie
 -rw-r--r-- root/root    usr/include/qt6/QtLottie/QtLottieDepends
 -rw-r--r-- root/root    usr/include/qt6/QtLottie/QtLottieVersion
@@ -45,20 +45,20 @@ drwxr-xr-x root/root    usr/include/qt6/QtLottie/6.11.1/QtLottie/private/
 -rw-r--r-- root/root    usr/include/qt6/QtLottie/qtlottieexports.h
 -rw-r--r-- root/root    usr/include/qt6/QtLottie/qtlottieversion.h
 drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.1/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.1/QtLottieVectorImageGenerator/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.1/QtLottieVectorImageGenerator/private/
--rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.1/QtLottieVectorImageGenerator/private/qlottievisitor_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.2/
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.2/QtLottieVectorImageGenerator/
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.2/QtLottieVectorImageGenerator/private/
+-rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/6.11.2/QtLottieVectorImageGenerator/private/qlottievisitor_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/QtLottieVectorImageGenerator
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/QtLottieVectorImageGeneratorDepends
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/QtLottieVectorImageGeneratorVersion
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/qtlottievectorimagegeneratorexports.h
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageGenerator/qtlottievectorimagegeneratorversion.h
 drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.1/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.1/QtLottieVectorImageHelpers/
-drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.1/QtLottieVectorImageHelpers/private/
--rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.1/QtLottieVectorImageHelpers/private/qquicklayeritem_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.2/
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.2/QtLottieVectorImageHelpers/
+drwxr-xr-x root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.2/QtLottieVectorImageHelpers/private/
+-rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageHelpers/6.11.2/QtLottieVectorImageHelpers/private/qquicklayeritem_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageHelpers/QtLottieVectorImageHelpers
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageHelpers/QtLottieVectorImageHelpersDepends
 -rw-r--r-- root/root    usr/include/qt6/QtLottieVectorImageHelpers/QtLottieVectorImageHelpersVersion
@@ -159,16 +159,16 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6Quick/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Quick/Qt6QLottieVectorImagePluginTargetsPrecheck.cmake
 -rw-r--r-- root/root    usr/lib/libQt6Lottie.prl
 lrwxrwxrwx root/root    usr/lib/libQt6Lottie.so -> libQt6Lottie.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6Lottie.so.6 -> libQt6Lottie.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libQt6Lottie.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libQt6Lottie.so.6 -> libQt6Lottie.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libQt6Lottie.so.6.11.2
 -rw-r--r-- root/root    usr/lib/libQt6LottieVectorImageGenerator.prl
 lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageGenerator.so -> libQt6LottieVectorImageGenerator.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageGenerator.so.6 -> libQt6LottieVectorImageGenerator.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libQt6LottieVectorImageGenerator.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageGenerator.so.6 -> libQt6LottieVectorImageGenerator.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libQt6LottieVectorImageGenerator.so.6.11.2
 -rw-r--r-- root/root    usr/lib/libQt6LottieVectorImageHelpers.prl
 lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageHelpers.so -> libQt6LottieVectorImageHelpers.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageHelpers.so.6 -> libQt6LottieVectorImageHelpers.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libQt6LottieVectorImageHelpers.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libQt6LottieVectorImageHelpers.so.6 -> libQt6LottieVectorImageHelpers.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libQt6LottieVectorImageHelpers.so.6.11.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6Lottie.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6LottieVectorImageHelpers.pc
@@ -205,6 +205,6 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/Qt/labs/lottieqt/VectorImageHelpers/
 -rwxr-xr-x root/root    usr/lib/qt6/qml/Qt/labs/lottieqt/liblottieplugin.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/Qt/labs/lottieqt/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
--rw-r--r-- root/root    usr/lib/qt6/sbom/qtlottie-6.11.1.spdx
+-rw-r--r-- root/root    usr/lib/qt6/sbom/qtlottie-6.11.2.spdx
 drwxr-xr-x root/root    usr/usr/
 drwxr-xr-x root/root    usr/usr/bin/

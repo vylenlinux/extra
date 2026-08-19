@@ -6,7 +6,7 @@ homepage="https://www.qt.io/"
 maintainer="Vylen Linux Team"
 
 name=qt6-tools
-version=6.11.1
+version=6.11.2
 release=1
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/${version}/submodules/qttools-everywhere-src-${version}.tar.xz"
 

@@ -1,34 +1,34 @@
-qt6-svg-6.11.1-1
+qt6-svg-6.11.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtSvg/
-drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.1/
-drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/
-drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgabstractanimation_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvganimate_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvganimatedproperty_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvganimator_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgcssanimation_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgcsseasing_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgcsshandler_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgcssproperties_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgcssvalues_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgdocument_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgeasinginterface_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgfilter_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgfont_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvggraphics_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvghandler_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvghelper_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgnode_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgstructure_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgstyle_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgstyleselector_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgutils_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qsvgvisitor_p.h
--rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.1/QtSvg/private/qtsvgglobal_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.2/
+drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/
+drwxr-xr-x root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgabstractanimation_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvganimate_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvganimatedproperty_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvganimator_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgcssanimation_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgcsseasing_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgcsshandler_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgcssproperties_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgcssvalues_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgdocument_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgeasinginterface_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgfilter_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgfont_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvggraphics_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvghandler_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvghelper_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgnode_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgstructure_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgstyle_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgstyleselector_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgutils_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qsvgvisitor_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtSvg/6.11.2/QtSvg/private/qtsvgglobal_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtSvg/QSvgGenerator
 -rw-r--r-- root/root    usr/include/qt6/QtSvg/QSvgRenderer
 -rw-r--r-- root/root    usr/include/qt6/QtSvg/QtSvg
@@ -104,12 +104,12 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6SvgWidgets/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
 -rw-r--r-- root/root    usr/lib/libQt6Svg.prl
 lrwxrwxrwx root/root    usr/lib/libQt6Svg.so -> libQt6Svg.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libQt6Svg.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libQt6Svg.so.6 -> libQt6Svg.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libQt6Svg.so.6.11.2
 -rw-r--r-- root/root    usr/lib/libQt6SvgWidgets.prl
 lrwxrwxrwx root/root    usr/lib/libQt6SvgWidgets.so -> libQt6SvgWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.11.1
--rwxr-xr-x root/root    usr/lib/libQt6SvgWidgets.so.6.11.1
+lrwxrwxrwx root/root    usr/lib/libQt6SvgWidgets.so.6 -> libQt6SvgWidgets.so.6.11.2
+-rwxr-xr-x root/root    usr/lib/libQt6SvgWidgets.so.6.11.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6Svg.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6SvgWidgets.pc
@@ -131,6 +131,6 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/iconengines/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/imageformats/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/imageformats/libqsvg.so
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
--rw-r--r-- root/root    usr/lib/qt6/sbom/qtsvg-6.11.1.spdx
+-rw-r--r-- root/root    usr/lib/qt6/sbom/qtsvg-6.11.2.spdx
 drwxr-xr-x root/root    usr/usr/
 drwxr-xr-x root/root    usr/usr/bin/
