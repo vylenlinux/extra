@@ -6,7 +6,7 @@ homepage="https://pygments.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-pygments
-version=2.20.0
+version=2.21.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/P/Pygments/pygments-${version}.tar.gz"
 
