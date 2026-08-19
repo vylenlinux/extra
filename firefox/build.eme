@@ -6,24 +6,19 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team"
 
 name=firefox
-version=153.0.4
+version=154.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
     ${name}.desktop
     config
     distribution.ini
-    vendor.js
-    0001-Install-under-remoting-name.patch
-    0002-Bug-2057577-DOM-Media-Add-FFmpeg-63-support.-r-alwu-.patch"
+    vendor.js"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
     sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
-
-    patch -Np1 -i "${SRC}/0001-Install-under-remoting-name.patch"
-    patch -Np1 -i "${SRC}/0002-Bug-2057577-DOM-Media-Add-FFmpeg-63-support.-r-alwu-.patch"
 
     mkdir "${SRC}/rust"
     export CARGO_HOME="${SRC}/rust"
@@ -31,14 +26,14 @@ build() {
     install -Dm644 "${SRC}/config" .mozconfig
 
     # audio
-    emerald is-installed alsa-lib && echo 'ac_add_options --enable-alsa' >> .mozconfig
-    emerald is-installed jack && echo 'ac_add_options --enable-jack' >> .mozconfig
-    emerald is-installed pulseaudio && echo 'ac_add_options --enable-pulseaudio' >> .mozconfig
+    emerald is-installed alsa-lib && printf 'ac_add_options --enable-alsa\n' >> .mozconfig
+    emerald is-installed jack && printf 'ac_add_options --enable-jack\n' >> .mozconfig
+    emerald is-installed pulseaudio && printf 'ac_add_options --enable-pulseaudio\n' >> .mozconfig
 
     # wayland
     emerald is-installed wayland-protocols && \
-        echo 'ac_add_options --enable-default-toolkit=cairo-gtk3-wayland' >> .mozconfig || \
-        echo 'ac_add_options --enable-default-toolkit=cairo-gtk3' >> .mozconfig
+        printf 'ac_add_options --enable-default-toolkit=cairo-gtk3-wayland\n' >> .mozconfig || \
+        printf 'ac_add_options --enable-default-toolkit=cairo-gtk3\n' >> .mozconfig
 
     # build configuration
     #export CC=gcc CXX=g++ # build with GCC
