@@ -1,3 +1,4 @@
 dkms
 gtk3
 egl-wayland
+nv-codec-headers
