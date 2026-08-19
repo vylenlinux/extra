@@ -1,0 +1,5 @@
+name = "yaml"
+provider = "repology"
+
+[source]
+package = "libyaml"

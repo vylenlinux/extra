@@ -1,0 +1,5 @@
+name = "nspr"
+provider = "repology"
+
+[source]
+package = "nspr"

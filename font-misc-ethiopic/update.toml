@@ -1,0 +1,5 @@
+name = "font-misc-ethiopic"
+provider = "repology"
+
+[source]
+package = "fonts:misc-ethiopic"

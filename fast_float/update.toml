@@ -1,0 +1,5 @@
+name = "fast_float"
+provider = "repology"
+
+[source]
+package = "fast_float"

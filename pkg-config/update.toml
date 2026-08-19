@@ -1,0 +1,5 @@
+name = "pkg-config"
+provider = "repology"
+
+[source]
+package = "pkg-config"

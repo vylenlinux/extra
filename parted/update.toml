@@ -1,0 +1,5 @@
+name = "parted"
+provider = "repology"
+
+[source]
+package = "parted"

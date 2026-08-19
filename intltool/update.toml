@@ -1,0 +1,5 @@
+name = "intltool"
+provider = "repology"
+
+[source]
+package = "intltool"

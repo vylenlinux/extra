@@ -1,0 +1,5 @@
+name = "python3-scikit-build-core"
+provider = "repology"
+
+[source]
+package = "python:scikit-build-core"

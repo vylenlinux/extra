@@ -1,0 +1,5 @@
+name = "libcacard"
+provider = "repology"
+
+[source]
+package = "libcacard"

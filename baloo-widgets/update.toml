@@ -1,0 +1,5 @@
+name = "baloo-widgets"
+provider = "repology"
+
+[source]
+package = "baloo-widgets"

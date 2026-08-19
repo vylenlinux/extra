@@ -1,0 +1,5 @@
+name = "thunar-volman"
+provider = "repology"
+
+[source]
+package = "thunar-volman"

@@ -1,0 +1,5 @@
+name = "mtools"
+provider = "repology"
+
+[source]
+package = "mtools"

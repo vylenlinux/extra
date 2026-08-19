@@ -1,0 +1,5 @@
+name = "deadbeef"
+provider = "repology"
+
+[source]
+package = "deadbeef"

@@ -1,0 +1,5 @@
+name = "wpa_supplicant"
+provider = "repology"
+
+[source]
+package = "wpa-supplicant"

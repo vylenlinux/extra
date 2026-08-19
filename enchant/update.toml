@@ -1,0 +1,5 @@
+name = "enchant"
+provider = "repology"
+
+[source]
+package = "enchant"

@@ -1,0 +1,5 @@
+name = "kwin-x11"
+provider = "repology"
+
+[source]
+package = "kwin-x11"

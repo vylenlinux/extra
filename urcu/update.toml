@@ -1,0 +1,5 @@
+name = "urcu"
+provider = "repology"
+
+[source]
+package = "userspace-rcu"

@@ -1,0 +1,5 @@
+name = "libxslt"
+provider = "repology"
+
+[source]
+package = "libxslt"

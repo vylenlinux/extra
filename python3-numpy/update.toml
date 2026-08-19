@@ -1,0 +1,5 @@
+name = "python3-numpy"
+provider = "repology"
+
+[source]
+package = "python:numpy"

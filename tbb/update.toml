@@ -1,0 +1,5 @@
+name = "tbb"
+provider = "repology"
+
+[source]
+package = "onetbb"

@@ -1,0 +1,5 @@
+name = "obmenu3"
+provider = "repology"
+
+[source]
+package = "obmenu3"

@@ -1,0 +1,5 @@
+name = "lxqt-powermanagement"
+provider = "repology"
+
+[source]
+package = "lxqt-powermanagement"

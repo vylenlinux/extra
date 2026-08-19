@@ -1,0 +1,5 @@
+name = "libexif"
+provider = "repology"
+
+[source]
+package = "libexif"

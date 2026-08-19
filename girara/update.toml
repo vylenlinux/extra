@@ -1,0 +1,5 @@
+name = "girara"
+provider = "repology"
+
+[source]
+package = "girara"

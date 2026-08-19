@@ -1,0 +1,5 @@
+name = "mate-netbook"
+provider = "repology"
+
+[source]
+package = "mate-netbook"

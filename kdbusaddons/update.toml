@@ -1,0 +1,5 @@
+name = "kdbusaddons"
+provider = "repology"
+
+[source]
+package = "kdbusaddons"

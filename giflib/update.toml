@@ -1,0 +1,5 @@
+name = "giflib"
+provider = "repology"
+
+[source]
+package = "giflib"

@@ -1,0 +1,5 @@
+name = "kwallet-pam"
+provider = "repology"
+
+[source]
+package = "kwallet-pam"

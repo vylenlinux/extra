@@ -1,0 +1,5 @@
+name = "kquickimageeditor"
+provider = "repology"
+
+[source]
+package = "kquickimageeditor"

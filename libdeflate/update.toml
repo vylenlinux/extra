@@ -1,0 +1,5 @@
+name = "libdeflate"
+provider = "repology"
+
+[source]
+package = "libdeflate"

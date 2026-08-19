@@ -1,0 +1,5 @@
+name = "sord"
+provider = "repology"
+
+[source]
+package = "sord"

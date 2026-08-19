@@ -1,0 +1,5 @@
+name = "libsndfile"
+provider = "repology"
+
+[source]
+package = "libsndfile"

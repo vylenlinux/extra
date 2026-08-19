@@ -1,0 +1,5 @@
+name = "qca"
+provider = "repology"
+
+[source]
+package = "qca"

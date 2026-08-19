@@ -1,0 +1,5 @@
+name = "cbindgen"
+provider = "repology"
+
+[source]
+package = "cbindgen"

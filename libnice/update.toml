@@ -1,0 +1,5 @@
+name = "libnice"
+provider = "repology"
+
+[source]
+package = "libnice"

@@ -1,0 +1,5 @@
+name = "keychain"
+provider = "repology"
+
+[source]
+package = "keychain"

@@ -1,0 +1,5 @@
+name = "kconfig"
+provider = "repology"
+
+[source]
+package = "kconfig"

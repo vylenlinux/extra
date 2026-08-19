@@ -1,0 +1,5 @@
+name = "libsignal-protocol-c"
+provider = "repology"
+
+[source]
+package = "libsignal-protocol-c"

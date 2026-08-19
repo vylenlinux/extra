@@ -1,0 +1,5 @@
+name = "libfs"
+provider = "repology"
+
+[source]
+package = "libfs"

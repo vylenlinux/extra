@@ -1,0 +1,5 @@
+name = "cifs-utils"
+provider = "repology"
+
+[source]
+package = "cifs-utils"

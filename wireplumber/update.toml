@@ -1,0 +1,5 @@
+name = "wireplumber"
+provider = "repology"
+
+[source]
+package = "wireplumber"

@@ -1,0 +1,5 @@
+name = "libxxf86vm"
+provider = "repology"
+
+[source]
+package = "libxxf86vm"

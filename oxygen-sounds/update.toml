@@ -1,0 +1,5 @@
+name = "oxygen-sounds"
+provider = "repology"
+
+[source]
+package = "oxygen-sounds"

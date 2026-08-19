@@ -1,0 +1,5 @@
+name = "gnu-netcat"
+provider = "repology"
+
+[source]
+package = "gnu-netcat"

@@ -1,0 +1,5 @@
+name = "kpty"
+provider = "repology"
+
+[source]
+package = "kpty"

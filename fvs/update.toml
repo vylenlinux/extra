@@ -1,0 +1,5 @@
+name = "fvs"
+provider = "repology"
+
+[source]
+package = "python:fvs"

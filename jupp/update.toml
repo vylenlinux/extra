@@ -1,0 +1,5 @@
+name = "jupp"
+provider = "repology"
+
+[source]
+package = "jupp"

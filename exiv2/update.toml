@@ -1,0 +1,5 @@
+name = "exiv2"
+provider = "repology"
+
+[source]
+package = "exiv2"

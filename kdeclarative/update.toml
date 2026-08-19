@@ -1,0 +1,5 @@
+name = "kdeclarative"
+provider = "repology"
+
+[source]
+package = "kdeclarative"

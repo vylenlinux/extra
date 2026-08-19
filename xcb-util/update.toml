@@ -1,0 +1,5 @@
+name = "xcb-util"
+provider = "repology"
+
+[source]
+package = "xcb-util"

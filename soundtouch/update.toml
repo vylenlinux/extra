@@ -1,0 +1,5 @@
+name = "soundtouch"
+provider = "repology"
+
+[source]
+package = "soundtouch"

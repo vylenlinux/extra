@@ -1,0 +1,5 @@
+name = "libunique"
+provider = "repology"
+
+[source]
+package = "libunique"

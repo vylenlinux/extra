@@ -1,0 +1,5 @@
+name = "php"
+provider = "repology"
+
+[source]
+package = "php"

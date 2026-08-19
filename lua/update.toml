@@ -1,0 +1,5 @@
+name = "lua"
+provider = "repology"
+
+[source]
+package = "lua"

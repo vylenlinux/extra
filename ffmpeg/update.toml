@@ -1,0 +1,5 @@
+name = "ffmpeg"
+provider = "repology"
+
+[source]
+package = "ffmpeg"

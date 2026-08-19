@@ -1,0 +1,5 @@
+name = "libxcursor"
+provider = "repology"
+
+[source]
+package = "libxcursor"

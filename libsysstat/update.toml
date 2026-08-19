@@ -1,0 +1,5 @@
+name = "libsysstat"
+provider = "repology"
+
+[source]
+package = "libsysstat"

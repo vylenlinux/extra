@@ -1,0 +1,5 @@
+name = "kmail-account-wizard"
+provider = "repology"
+
+[source]
+package = "kmail-account-wizard"

@@ -1,0 +1,5 @@
+name = "vivaldi"
+provider = "repology"
+
+[source]
+package = "vivaldi"

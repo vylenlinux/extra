@@ -1,0 +1,5 @@
+name = "range-v3"
+provider = "repology"
+
+[source]
+package = "range-v3"

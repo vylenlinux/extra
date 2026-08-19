@@ -1,0 +1,5 @@
+name = "freeglut"
+provider = "repology"
+
+[source]
+package = "freeglut"

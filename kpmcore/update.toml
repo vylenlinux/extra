@@ -1,0 +1,5 @@
+name = "kpmcore"
+provider = "repology"
+
+[source]
+package = "kpmcore"

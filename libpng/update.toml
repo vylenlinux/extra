@@ -1,0 +1,5 @@
+name = "libpng"
+provider = "repology"
+
+[source]
+package = "libpng"

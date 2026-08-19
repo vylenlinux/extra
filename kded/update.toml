@@ -1,0 +1,5 @@
+name = "kded"
+provider = "repology"
+
+[source]
+package = "kded"

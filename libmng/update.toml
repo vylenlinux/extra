@@ -1,0 +1,5 @@
+name = "libmng"
+provider = "repology"
+
+[source]
+package = "libmng"

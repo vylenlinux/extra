@@ -1,0 +1,5 @@
+name = "bluez-qt"
+provider = "repology"
+
+[source]
+package = "bluez-qt"

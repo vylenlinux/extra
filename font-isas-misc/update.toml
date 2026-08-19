@@ -1,0 +1,5 @@
+name = "font-isas-misc"
+provider = "repology"
+
+[source]
+package = "fonts:isas-misc"

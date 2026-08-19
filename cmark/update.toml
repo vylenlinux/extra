@@ -1,0 +1,5 @@
+name = "cmark"
+provider = "repology"
+
+[source]
+package = "cmark"

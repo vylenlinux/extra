@@ -1,0 +1,5 @@
+name = "libxrandr"
+provider = "repology"
+
+[source]
+package = "libxrandr"

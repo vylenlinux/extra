@@ -1,0 +1,5 @@
+name = "asciidoctor"
+provider = "repology"
+
+[source]
+package = "asciidoctor"

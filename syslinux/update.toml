@@ -1,0 +1,5 @@
+name = "syslinux"
+provider = "repology"
+
+[source]
+package = "syslinux"

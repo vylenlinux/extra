@@ -1,0 +1,5 @@
+name = "giblib"
+provider = "repology"
+
+[source]
+package = "giblib"

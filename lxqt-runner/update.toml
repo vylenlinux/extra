@@ -1,0 +1,5 @@
+name = "lxqt-runner"
+provider = "repology"
+
+[source]
+package = "lxqt-runner"

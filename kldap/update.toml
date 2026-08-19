@@ -1,0 +1,5 @@
+name = "kldap"
+provider = "repology"
+
+[source]
+package = "kldap"

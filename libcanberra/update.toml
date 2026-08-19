@@ -1,0 +1,5 @@
+name = "libcanberra"
+provider = "repology"
+
+[source]
+package = "libcanberra"

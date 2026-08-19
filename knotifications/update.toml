@@ -1,0 +1,5 @@
+name = "knotifications"
+provider = "repology"
+
+[source]
+package = "knotifications"

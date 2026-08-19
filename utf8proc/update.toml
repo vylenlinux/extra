@@ -1,0 +1,5 @@
+name = "utf8proc"
+provider = "repology"
+
+[source]
+package = "utf8proc"

@@ -1,0 +1,5 @@
+name = "lxtask"
+provider = "repology"
+
+[source]
+package = "lxtask"

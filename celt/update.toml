@@ -1,0 +1,5 @@
+name = "celt"
+provider = "repology"
+
+[source]
+package = "celt"

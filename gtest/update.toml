@@ -1,0 +1,5 @@
+name = "gtest"
+provider = "repology"
+
+[source]
+package = "gtest"

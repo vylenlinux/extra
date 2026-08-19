@@ -1,0 +1,5 @@
+name = "libdecor"
+provider = "repology"
+
+[source]
+package = "libdecor"

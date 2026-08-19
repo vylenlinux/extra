@@ -1,0 +1,5 @@
+name = "libfakekey"
+provider = "repology"
+
+[source]
+package = "libfakekey"

@@ -1,0 +1,5 @@
+name = "lxqt-menu-data"
+provider = "repology"
+
+[source]
+package = "lxqt-menu-data"

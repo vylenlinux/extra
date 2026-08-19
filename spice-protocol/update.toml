@@ -1,0 +1,5 @@
+name = "spice-protocol"
+provider = "repology"
+
+[source]
+package = "spice-protocol"

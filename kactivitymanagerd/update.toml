@@ -1,0 +1,5 @@
+name = "kactivitymanagerd"
+provider = "repology"
+
+[source]
+package = "kactivitymanagerd"

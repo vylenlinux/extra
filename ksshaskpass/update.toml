@@ -1,0 +1,5 @@
+name = "ksshaskpass"
+provider = "repology"
+
+[source]
+package = "ksshaskpass"

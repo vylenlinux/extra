@@ -1,0 +1,5 @@
+name = "python3-typing_extensions"
+provider = "repology"
+
+[source]
+package = "python:typing-extensions"

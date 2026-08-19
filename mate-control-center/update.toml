@@ -1,0 +1,5 @@
+name = "mate-control-center"
+provider = "repology"
+
+[source]
+package = "mate-control-center"

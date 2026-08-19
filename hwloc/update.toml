@@ -1,0 +1,5 @@
+name = "hwloc"
+provider = "repology"
+
+[source]
+package = "hwloc"

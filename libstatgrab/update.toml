@@ -1,0 +1,5 @@
+name = "libstatgrab"
+provider = "repology"
+
+[source]
+package = "libstatgrab"

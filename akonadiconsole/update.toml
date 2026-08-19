@@ -1,0 +1,5 @@
+name = "akonadiconsole"
+provider = "repology"
+
+[source]
+package = "akonadiconsole"

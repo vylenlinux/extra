@@ -1,0 +1,5 @@
+name = "aha"
+provider = "repology"
+
+[source]
+package = "aha"

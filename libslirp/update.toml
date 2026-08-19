@@ -1,0 +1,5 @@
+name = "libslirp"
+provider = "repology"
+
+[source]
+package = "libslirp"

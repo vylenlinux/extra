@@ -1,0 +1,5 @@
+name = "polkit-kde-agent-1"
+provider = "repology"
+
+[source]
+package = "polkit-kde-agent-1"

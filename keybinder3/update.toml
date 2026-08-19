@@ -1,0 +1,5 @@
+name = "keybinder3"
+provider = "repology"
+
+[source]
+package = "keybinder"

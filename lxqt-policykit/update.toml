@@ -1,0 +1,5 @@
+name = "lxqt-policykit"
+provider = "repology"
+
+[source]
+package = "lxqt-policykit"

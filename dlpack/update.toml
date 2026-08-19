@@ -1,0 +1,5 @@
+name = "dlpack"
+provider = "repology"
+
+[source]
+package = "dlpack"

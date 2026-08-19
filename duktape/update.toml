@@ -1,0 +1,5 @@
+name = "duktape"
+provider = "repology"
+
+[source]
+package = "duktape"

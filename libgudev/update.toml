@@ -1,0 +1,5 @@
+name = "libgudev"
+provider = "repology"
+
+[source]
+package = "libgudev"

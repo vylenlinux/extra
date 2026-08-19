@@ -1,0 +1,5 @@
+name = "efivar"
+provider = "repology"
+
+[source]
+package = "efivar"

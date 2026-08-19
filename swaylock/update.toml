@@ -1,0 +1,5 @@
+name = "swaylock"
+provider = "repology"
+
+[source]
+package = "swaylock"

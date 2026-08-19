@@ -1,0 +1,5 @@
+name = "kontactinterface"
+provider = "repology"
+
+[source]
+package = "kontactinterface"

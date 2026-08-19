@@ -1,0 +1,5 @@
+name = "cairo"
+provider = "repology"
+
+[source]
+package = "cairo-graphics-library"

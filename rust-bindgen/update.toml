@@ -1,0 +1,5 @@
+name = "rust-bindgen"
+provider = "repology"
+
+[source]
+package = "bindgen"

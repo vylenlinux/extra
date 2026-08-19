@@ -1,0 +1,5 @@
+name = "libmtp"
+provider = "repology"
+
+[source]
+package = "libmtp"

@@ -1,0 +1,5 @@
+name = "kdav"
+provider = "repology"
+
+[source]
+package = "kdav"

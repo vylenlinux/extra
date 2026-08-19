@@ -1,0 +1,5 @@
+name = "akonadi-calendar"
+provider = "repology"
+
+[source]
+package = "akonadi-calendar"

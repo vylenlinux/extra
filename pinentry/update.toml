@@ -1,0 +1,5 @@
+name = "pinentry"
+provider = "repology"
+
+[source]
+package = "pinentry"

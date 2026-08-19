@@ -1,0 +1,5 @@
+name = "nettle"
+provider = "repology"
+
+[source]
+package = "nettle"

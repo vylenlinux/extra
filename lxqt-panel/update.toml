@@ -1,0 +1,5 @@
+name = "lxqt-panel"
+provider = "repology"
+
+[source]
+package = "lxqt-panel"

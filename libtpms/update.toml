@@ -1,0 +1,5 @@
+name = "libtpms"
+provider = "repology"
+
+[source]
+package = "libtpms"

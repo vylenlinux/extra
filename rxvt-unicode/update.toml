@@ -1,0 +1,5 @@
+name = "rxvt-unicode"
+provider = "repology"
+
+[source]
+package = "rxvt-unicode"

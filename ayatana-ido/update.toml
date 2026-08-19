@@ -1,0 +1,5 @@
+name = "ayatana-ido"
+provider = "repology"
+
+[source]
+package = "ayatana-ido"

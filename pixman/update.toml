@@ -1,0 +1,5 @@
+name = "pixman"
+provider = "repology"
+
+[source]
+package = "pixman"

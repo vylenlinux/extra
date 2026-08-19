@@ -1,0 +1,5 @@
+name = "mate-calc"
+provider = "repology"
+
+[source]
+package = "mate-calc"

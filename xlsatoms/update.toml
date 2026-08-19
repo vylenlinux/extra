@@ -1,0 +1,5 @@
+name = "xlsatoms"
+provider = "repology"
+
+[source]
+package = "xlsatoms"

@@ -1,0 +1,5 @@
+name = "python3-sphinxygen"
+provider = "repology"
+
+[source]
+package = "python:sphinxygen"

@@ -1,0 +1,5 @@
+name = "ktexteditor"
+provider = "repology"
+
+[source]
+package = "ktexteditor"

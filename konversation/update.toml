@@ -1,0 +1,5 @@
+name = "konversation"
+provider = "repology"
+
+[source]
+package = "konversation"

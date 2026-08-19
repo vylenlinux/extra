@@ -1,0 +1,5 @@
+name = "cryptsetup"
+provider = "repology"
+
+[source]
+package = "cryptsetup"

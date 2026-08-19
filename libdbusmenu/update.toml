@@ -1,0 +1,5 @@
+name = "libdbusmenu"
+provider = "repology"
+
+[source]
+package = "libdbusmenu"

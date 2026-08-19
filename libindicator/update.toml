@@ -1,0 +1,5 @@
+name = "libindicator"
+provider = "repology"
+
+[source]
+package = "libindicator"

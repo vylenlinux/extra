@@ -1,0 +1,5 @@
+name = "eglexternalplatform"
+provider = "repology"
+
+[source]
+package = "eglexternalplatform"

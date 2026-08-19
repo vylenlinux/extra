@@ -1,0 +1,5 @@
+name = "kde-cli-tools"
+provider = "repology"
+
+[source]
+package = "kde-cli-tools"

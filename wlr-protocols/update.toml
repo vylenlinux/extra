@@ -1,0 +1,5 @@
+name = "wlr-protocols"
+provider = "repology"
+
+[source]
+package = "wlr-protocols"

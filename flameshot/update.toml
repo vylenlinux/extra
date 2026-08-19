@@ -1,0 +1,5 @@
+name = "flameshot"
+provider = "repology"
+
+[source]
+package = "flameshot"

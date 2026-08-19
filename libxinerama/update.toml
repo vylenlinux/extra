@@ -1,0 +1,5 @@
+name = "libxinerama"
+provider = "repology"
+
+[source]
+package = "libxinerama"

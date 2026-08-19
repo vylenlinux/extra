@@ -1,0 +1,5 @@
+name = "patchelf"
+provider = "repology"
+
+[source]
+package = "patchelf"

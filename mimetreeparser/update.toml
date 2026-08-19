@@ -1,0 +1,5 @@
+name = "mimetreeparser"
+provider = "repology"
+
+[source]
+package = "mimetreeparser"

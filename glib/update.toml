@@ -1,0 +1,5 @@
+name = "glib"
+provider = "repology"
+
+[source]
+package = "glib"

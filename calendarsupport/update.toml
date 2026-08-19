@@ -1,0 +1,5 @@
+name = "calendarsupport"
+provider = "repology"
+
+[source]
+package = "calendarsupport"

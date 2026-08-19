@@ -1,0 +1,5 @@
+name = "libwebp"
+provider = "repology"
+
+[source]
+package = "libwebp"

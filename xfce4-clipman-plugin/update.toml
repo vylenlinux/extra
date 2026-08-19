@@ -1,0 +1,5 @@
+name = "xfce4-clipman-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-clipman-plugin"

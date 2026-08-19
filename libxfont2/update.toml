@@ -1,0 +1,5 @@
+name = "libxfont2"
+provider = "repology"
+
+[source]
+package = "libxfont2"

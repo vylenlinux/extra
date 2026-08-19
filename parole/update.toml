@@ -1,0 +1,5 @@
+name = "parole"
+provider = "repology"
+
+[source]
+package = "parole"

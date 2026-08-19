@@ -1,0 +1,5 @@
+name = "gc"
+provider = "repology"
+
+[source]
+package = "gc-large-config"

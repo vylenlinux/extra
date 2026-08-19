@@ -1,0 +1,5 @@
+name = "oniguruma"
+provider = "repology"
+
+[source]
+package = "oniguruma"

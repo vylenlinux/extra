@@ -1,0 +1,5 @@
+name = "xdg-dbus-proxy"
+provider = "repology"
+
+[source]
+package = "xdg-dbus-proxy"

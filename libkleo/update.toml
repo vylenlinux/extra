@@ -1,0 +1,5 @@
+name = "libkleo"
+provider = "repology"
+
+[source]
+package = "libkleo"

@@ -1,0 +1,5 @@
+name = "gnuplot"
+provider = "repology"
+
+[source]
+package = "gnuplot"

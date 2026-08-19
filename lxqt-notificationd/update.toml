@@ -1,0 +1,5 @@
+name = "lxqt-notificationd"
+provider = "repology"
+
+[source]
+package = "lxqt-notificationd"

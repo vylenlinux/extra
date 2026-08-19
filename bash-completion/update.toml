@@ -1,0 +1,5 @@
+name = "bash-completion"
+provider = "repology"
+
+[source]
+package = "bash-completion"

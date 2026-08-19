@@ -1,0 +1,5 @@
+name = "filelight"
+provider = "repology"
+
+[source]
+package = "filelight"

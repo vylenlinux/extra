@@ -1,0 +1,5 @@
+name = "libheif"
+provider = "repology"
+
+[source]
+package = "libheif"

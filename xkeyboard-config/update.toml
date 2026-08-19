@@ -1,0 +1,5 @@
+name = "xkeyboard-config"
+provider = "repology"
+
+[source]
+package = "xkeyboard-config"

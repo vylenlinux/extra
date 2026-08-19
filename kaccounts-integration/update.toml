@@ -1,0 +1,5 @@
+name = "kaccounts-integration"
+provider = "repology"
+
+[source]
+package = "kaccounts-integration"

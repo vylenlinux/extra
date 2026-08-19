@@ -1,0 +1,5 @@
+name = "nano"
+provider = "repology"
+
+[source]
+package = "nano"

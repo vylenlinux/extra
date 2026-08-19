@@ -1,0 +1,5 @@
+name = "font-alias"
+provider = "repology"
+
+[source]
+package = "font-alias"

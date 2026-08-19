@@ -1,0 +1,5 @@
+name = "mate-notification-daemon"
+provider = "repology"
+
+[source]
+package = "mate-notification-daemon"

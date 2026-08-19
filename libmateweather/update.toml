@@ -1,0 +1,5 @@
+name = "libmateweather"
+provider = "repology"
+
+[source]
+package = "libmateweather"

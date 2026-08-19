@@ -1,0 +1,5 @@
+name = "python3-isodate"
+provider = "repology"
+
+[source]
+package = "python:isodate"

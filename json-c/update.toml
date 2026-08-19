@@ -1,0 +1,5 @@
+name = "json-c"
+provider = "repology"
+
+[source]
+package = "json-c"

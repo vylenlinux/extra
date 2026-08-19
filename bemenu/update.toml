@@ -1,0 +1,5 @@
+name = "bemenu"
+provider = "repology"
+
+[source]
+package = "bemenu"

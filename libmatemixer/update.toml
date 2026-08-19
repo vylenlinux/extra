@@ -1,0 +1,5 @@
+name = "libmatemixer"
+provider = "repology"
+
+[source]
+package = "libmatemixer"

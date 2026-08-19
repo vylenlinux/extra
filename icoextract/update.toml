@@ -1,0 +1,5 @@
+name = "icoextract"
+provider = "repology"
+
+[source]
+package = "icoextract"

@@ -1,0 +1,5 @@
+name = "linux-lts"
+provider = "repology"
+
+[source]
+package = "linux-lts"

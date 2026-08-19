@@ -1,0 +1,5 @@
+name = "python3-pyparsing"
+provider = "repology"
+
+[source]
+package = "python:pyparsing"

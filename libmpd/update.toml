@@ -1,0 +1,5 @@
+name = "libmpd"
+provider = "repology"
+
+[source]
+package = "libmpd"

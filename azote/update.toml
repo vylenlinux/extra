@@ -1,0 +1,5 @@
+name = "azote"
+provider = "repology"
+
+[source]
+package = "azote"

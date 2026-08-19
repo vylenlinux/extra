@@ -1,0 +1,5 @@
+name = "mate-media"
+provider = "repology"
+
+[source]
+package = "mate-media"

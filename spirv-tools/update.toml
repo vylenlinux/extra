@@ -1,0 +1,5 @@
+name = "spirv-tools"
+provider = "repology"
+
+[source]
+package = "spirv-tools"

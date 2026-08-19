@@ -1,0 +1,5 @@
+name = "libraqm"
+provider = "repology"
+
+[source]
+package = "libraqm"

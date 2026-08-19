@@ -1,0 +1,5 @@
+name = "python3-hatchling"
+provider = "repology"
+
+[source]
+package = "hatchling"

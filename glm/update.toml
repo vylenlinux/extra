@@ -1,0 +1,5 @@
+name = "glm"
+provider = "repology"
+
+[source]
+package = "glm"

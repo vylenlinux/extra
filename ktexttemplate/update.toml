@@ -1,0 +1,5 @@
+name = "ktexttemplate"
+provider = "repology"
+
+[source]
+package = "ktexttemplate"

@@ -1,0 +1,5 @@
+name = "intel-media-driver"
+provider = "repology"
+
+[source]
+package = "intel-media-driver"

@@ -1,0 +1,5 @@
+name = "ebook-tools"
+provider = "repology"
+
+[source]
+package = "ebook-tools"

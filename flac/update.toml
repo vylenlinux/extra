@@ -1,0 +1,5 @@
+name = "flac"
+provider = "repology"
+
+[source]
+package = "flac"

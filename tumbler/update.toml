@@ -1,0 +1,5 @@
+name = "tumbler"
+provider = "repology"
+
+[source]
+package = "tumbler"

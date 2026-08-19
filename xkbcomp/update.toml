@@ -1,0 +1,5 @@
+name = "xkbcomp"
+provider = "repology"
+
+[source]
+package = "xkbcomp"

@@ -1,0 +1,5 @@
+name = "farbfeld"
+provider = "repology"
+
+[source]
+package = "farbfeld"

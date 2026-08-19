@@ -1,0 +1,5 @@
+name = "xdg-utils"
+provider = "repology"
+
+[source]
+package = "xdg-utils"

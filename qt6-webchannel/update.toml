@@ -1,0 +1,5 @@
+name = "qt6-webchannel"
+provider = "repology"
+
+[source]
+package = "qt6-webchannel"

@@ -1,0 +1,5 @@
+name = "python3-pyqt6"
+provider = "repology"
+
+[source]
+package = "python:pyqt6"

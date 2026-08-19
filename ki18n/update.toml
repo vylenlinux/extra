@@ -1,0 +1,5 @@
+name = "ki18n"
+provider = "repology"
+
+[source]
+package = "ki18n"

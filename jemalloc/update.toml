@@ -1,0 +1,5 @@
+name = "jemalloc"
+provider = "repology"
+
+[source]
+package = "jemalloc"

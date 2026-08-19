@@ -1,0 +1,5 @@
+name = "perl-xml-parser"
+provider = "repology"
+
+[source]
+package = "perl:xml-parser"

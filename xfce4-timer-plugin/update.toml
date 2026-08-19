@@ -1,0 +1,5 @@
+name = "xfce4-timer-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-timer-plugin"

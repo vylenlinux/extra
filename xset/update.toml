@@ -1,0 +1,5 @@
+name = "xset"
+provider = "repology"
+
+[source]
+package = "xset"

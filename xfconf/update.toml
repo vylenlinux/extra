@@ -1,0 +1,5 @@
+name = "xfconf"
+provider = "repology"
+
+[source]
+package = "xfconf"

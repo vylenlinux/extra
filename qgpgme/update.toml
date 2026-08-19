@@ -1,0 +1,5 @@
+name = "qgpgme"
+provider = "repology"
+
+[source]
+package = "libqgpgme"

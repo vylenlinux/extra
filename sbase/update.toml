@@ -1,0 +1,5 @@
+name = "sbase"
+provider = "repology"
+
+[source]
+package = "sbase"

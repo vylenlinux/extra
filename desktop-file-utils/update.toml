@@ -1,0 +1,5 @@
+name = "desktop-file-utils"
+provider = "repology"
+
+[source]
+package = "desktop-file-utils"

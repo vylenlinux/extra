@@ -1,0 +1,5 @@
+name = "isync"
+provider = "repology"
+
+[source]
+package = "isync"

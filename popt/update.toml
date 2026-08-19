@@ -1,0 +1,5 @@
+name = "popt"
+provider = "repology"
+
+[source]
+package = "popt"

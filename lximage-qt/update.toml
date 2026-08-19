@@ -1,0 +1,5 @@
+name = "lximage-qt"
+provider = "repology"
+
+[source]
+package = "lximage-qt"

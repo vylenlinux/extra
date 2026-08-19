@@ -1,0 +1,5 @@
+name = "imagemagick"
+provider = "repology"
+
+[source]
+package = "imagemagick"

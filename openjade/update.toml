@@ -1,0 +1,5 @@
+name = "openjade"
+provider = "repology"
+
+[source]
+package = "openjade"

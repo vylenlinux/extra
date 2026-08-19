@@ -1,0 +1,5 @@
+name = "xcb-util-keysyms"
+provider = "repology"
+
+[source]
+package = "xcb-util-keysyms"

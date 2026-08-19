@@ -1,0 +1,5 @@
+name = "libwacom"
+provider = "repology"
+
+[source]
+package = "libwacom"

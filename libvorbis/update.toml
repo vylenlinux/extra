@@ -1,0 +1,5 @@
+name = "libvorbis"
+provider = "repology"
+
+[source]
+package = "libvorbis"

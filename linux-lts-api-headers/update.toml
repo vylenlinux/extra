@@ -1,0 +1,5 @@
+name = "linux-lts-api-headers"
+provider = "repology"
+
+[source]
+package = "linux-lts-api-headers"

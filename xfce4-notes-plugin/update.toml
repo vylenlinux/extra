@@ -1,0 +1,5 @@
+name = "xfce4-notes-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-notes-plugin"

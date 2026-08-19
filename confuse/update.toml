@@ -1,0 +1,5 @@
+name = "confuse"
+provider = "repology"
+
+[source]
+package = "libconfuse"

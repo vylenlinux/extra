@@ -1,0 +1,5 @@
+name = "tcl"
+provider = "repology"
+
+[source]
+package = "tcl-lang"

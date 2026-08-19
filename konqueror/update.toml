@@ -1,0 +1,5 @@
+name = "konqueror"
+provider = "repology"
+
+[source]
+package = "konqueror"

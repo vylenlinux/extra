@@ -1,0 +1,5 @@
+name = "i3lock"
+provider = "repology"
+
+[source]
+package = "i3lock"

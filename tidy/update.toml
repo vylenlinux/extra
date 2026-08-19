@@ -1,0 +1,5 @@
+name = "tidy"
+provider = "repology"
+
+[source]
+package = "tidy"

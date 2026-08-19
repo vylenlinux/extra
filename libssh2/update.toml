@@ -1,0 +1,5 @@
+name = "libssh2"
+provider = "repology"
+
+[source]
+package = "libssh2"

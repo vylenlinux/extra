@@ -1,0 +1,5 @@
+name = "gvfs"
+provider = "repology"
+
+[source]
+package = "gvfs"

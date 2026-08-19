@@ -1,0 +1,5 @@
+name = "luit"
+provider = "repology"
+
+[source]
+package = "luit"

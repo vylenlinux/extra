@@ -1,0 +1,5 @@
+name = "alsa-topology-conf"
+provider = "repology"
+
+[source]
+package = "alsa-topology-conf"

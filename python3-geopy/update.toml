@@ -1,0 +1,5 @@
+name = "python3-geopy"
+provider = "repology"
+
+[source]
+package = "python:geopy"

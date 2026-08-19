@@ -1,0 +1,5 @@
+name = "xf86-input-wacom"
+provider = "repology"
+
+[source]
+package = "xf86-input-wacom"

@@ -1,0 +1,5 @@
+name = "qt6-quick3d"
+provider = "repology"
+
+[source]
+package = "qt6-quick3d"

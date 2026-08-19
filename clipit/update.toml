@@ -1,0 +1,5 @@
+name = "clipit"
+provider = "repology"
+
+[source]
+package = "clipit"

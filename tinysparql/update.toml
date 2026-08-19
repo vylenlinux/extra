@@ -1,0 +1,5 @@
+name = "tinysparql"
+provider = "repology"
+
+[source]
+package = "tinysparql"

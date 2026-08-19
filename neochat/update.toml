@@ -1,0 +1,5 @@
+name = "neochat"
+provider = "repology"
+
+[source]
+package = "neochat"

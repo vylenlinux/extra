@@ -1,0 +1,5 @@
+name = "libnl"
+provider = "repology"
+
+[source]
+package = "libnl"

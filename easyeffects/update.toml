@@ -1,0 +1,5 @@
+name = "easyeffects"
+provider = "repology"
+
+[source]
+package = "easyeffects"

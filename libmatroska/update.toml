@@ -1,0 +1,5 @@
+name = "libmatroska"
+provider = "repology"
+
+[source]
+package = "libmatroska"

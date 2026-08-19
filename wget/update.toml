@@ -1,0 +1,5 @@
+name = "wget"
+provider = "repology"
+
+[source]
+package = "wget"

@@ -1,0 +1,5 @@
+name = "perl-xml-sax-base"
+provider = "repology"
+
+[source]
+package = "perl:xml-sax-base"

@@ -1,0 +1,5 @@
+name = "zint"
+provider = "repology"
+
+[source]
+package = "zint"

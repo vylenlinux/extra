@@ -1,0 +1,5 @@
+name = "zathura"
+provider = "repology"
+
+[source]
+package = "zathura"

@@ -1,0 +1,5 @@
+name = "hunspell"
+provider = "repology"
+
+[source]
+package = "hunspell"

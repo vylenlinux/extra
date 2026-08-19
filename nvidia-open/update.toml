@@ -1,0 +1,5 @@
+name = "nvidia-open"
+provider = "repology"
+
+[source]
+package = "nvidia-open"

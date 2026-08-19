@@ -1,0 +1,5 @@
+name = "plasmatube"
+provider = "repology"
+
+[source]
+package = "plasmatube"

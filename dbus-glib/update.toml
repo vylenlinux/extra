@@ -1,0 +1,5 @@
+name = "dbus-glib"
+provider = "repology"
+
+[source]
+package = "dbus-glib"

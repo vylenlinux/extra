@@ -1,0 +1,5 @@
+name = "libatomic_ops"
+provider = "repology"
+
+[source]
+package = "libatomic-ops"

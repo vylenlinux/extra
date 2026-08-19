@@ -1,0 +1,5 @@
+name = "libnghttp3"
+provider = "repology"
+
+[source]
+package = "nghttp3"

@@ -1,0 +1,5 @@
+name = "mate-polkit"
+provider = "repology"
+
+[source]
+package = "mate-polkit"

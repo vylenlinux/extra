@@ -1,0 +1,5 @@
+name = "libplacebo"
+provider = "repology"
+
+[source]
+package = "libplacebo"

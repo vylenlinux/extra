@@ -1,0 +1,5 @@
+name = "libzen"
+provider = "repology"
+
+[source]
+package = "zenlib"

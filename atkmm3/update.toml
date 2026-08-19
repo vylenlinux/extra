@@ -1,0 +1,5 @@
+name = "atkmm3"
+provider = "repology"
+
+[source]
+package = "atkmm3"

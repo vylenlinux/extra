@@ -1,0 +1,5 @@
+name = "python3-pyproject-metadata"
+provider = "repology"
+
+[source]
+package = "python:pyproject-metadata"

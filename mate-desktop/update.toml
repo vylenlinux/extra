@@ -1,0 +1,5 @@
+name = "mate-desktop"
+provider = "repology"
+
+[source]
+package = "mate-desktop"

@@ -1,0 +1,5 @@
+name = "zzz"
+provider = "repology"
+
+[source]
+package = "zzz-jirutka"

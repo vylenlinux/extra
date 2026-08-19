@@ -1,0 +1,5 @@
+name = "maturin"
+provider = "repology"
+
+[source]
+package = "maturin"

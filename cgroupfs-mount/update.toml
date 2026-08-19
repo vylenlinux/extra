@@ -1,0 +1,5 @@
+name = "cgroupfs-mount"
+provider = "repology"
+
+[source]
+package = "cgroupfs-mount"

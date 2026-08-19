@@ -1,0 +1,5 @@
+name = "xfce4-dev-tools"
+provider = "repology"
+
+[source]
+package = "xfce4-dev-tools"

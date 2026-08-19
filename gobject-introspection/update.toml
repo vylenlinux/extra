@@ -1,0 +1,5 @@
+name = "gobject-introspection"
+provider = "repology"
+
+[source]
+package = "gobject-introspection"

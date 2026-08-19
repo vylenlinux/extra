@@ -1,0 +1,5 @@
+name = "libva-utils"
+provider = "repology"
+
+[source]
+package = "libva-utils"

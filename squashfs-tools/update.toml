@@ -1,0 +1,5 @@
+name = "squashfs-tools"
+provider = "repology"
+
+[source]
+package = "squashfs-tools"

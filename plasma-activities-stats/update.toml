@@ -1,0 +1,5 @@
+name = "plasma-activities-stats"
+provider = "repology"
+
+[source]
+package = "plasma-activities-stats"

@@ -1,0 +1,5 @@
+name = "dragon"
+provider = "repology"
+
+[source]
+package = "dragon-player*"

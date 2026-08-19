@@ -1,0 +1,5 @@
+name = "kcalutils"
+provider = "repology"
+
+[source]
+package = "kcalutils"

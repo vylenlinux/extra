@@ -1,0 +1,5 @@
+name = "kjobwidgets"
+provider = "repology"
+
+[source]
+package = "kjobwidgets"

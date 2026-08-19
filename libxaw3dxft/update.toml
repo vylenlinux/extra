@@ -1,0 +1,5 @@
+name = "libxaw3dxft"
+provider = "repology"
+
+[source]
+package = "libxaw3dxft"

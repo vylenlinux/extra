@@ -1,0 +1,5 @@
+name = "inih"
+provider = "repology"
+
+[source]
+package = "inih"

@@ -1,0 +1,5 @@
+name = "slang"
+provider = "repology"
+
+[source]
+package = "s-lang"

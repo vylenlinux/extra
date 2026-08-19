@@ -1,0 +1,5 @@
+name = "swappy"
+provider = "repology"
+
+[source]
+package = "swappy"

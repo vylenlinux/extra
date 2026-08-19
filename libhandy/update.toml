@@ -1,0 +1,5 @@
+name = "libhandy"
+provider = "repology"
+
+[source]
+package = "libhandy"

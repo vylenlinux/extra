@@ -1,0 +1,5 @@
+name = "libmatekbd"
+provider = "repology"
+
+[source]
+package = "libmatekbd"

@@ -1,0 +1,5 @@
+name = "menu-cache"
+provider = "repology"
+
+[source]
+package = "menu-cache"

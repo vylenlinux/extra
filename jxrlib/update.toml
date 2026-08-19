@@ -1,0 +1,5 @@
+name = "jxrlib"
+provider = "repology"
+
+[source]
+package = "jxrlib-glencoe"

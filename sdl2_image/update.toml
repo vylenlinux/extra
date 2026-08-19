@@ -1,0 +1,5 @@
+name = "sdl2_image"
+provider = "repology"
+
+[source]
+package = "sdl2-image"

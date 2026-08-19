@@ -1,0 +1,5 @@
+name = "perl-class-inspector"
+provider = "repology"
+
+[source]
+package = "perl:class-inspector"

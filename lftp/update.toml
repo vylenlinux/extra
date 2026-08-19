@@ -1,0 +1,5 @@
+name = "lftp"
+provider = "repology"
+
+[source]
+package = "lftp"

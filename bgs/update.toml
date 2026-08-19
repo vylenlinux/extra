@@ -1,0 +1,5 @@
+name = "bgs"
+provider = "repology"
+
+[source]
+package = "bgs"

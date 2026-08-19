@@ -1,0 +1,5 @@
+name = "phonon-qt6-vlc"
+provider = "repology"
+
+[source]
+package = "phonon-qt6-vlc"

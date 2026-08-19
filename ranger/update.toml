@@ -1,0 +1,5 @@
+name = "ranger"
+provider = "repology"
+
+[source]
+package = "ranger"

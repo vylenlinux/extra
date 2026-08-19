@@ -1,0 +1,5 @@
+name = "setxkbmap"
+provider = "repology"
+
+[source]
+package = "setxkbmap"

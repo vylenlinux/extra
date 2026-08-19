@@ -1,0 +1,5 @@
+name = "python3-installer"
+provider = "repology"
+
+[source]
+package = "python:installer"

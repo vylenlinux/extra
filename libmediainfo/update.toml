@@ -1,0 +1,5 @@
+name = "libmediainfo"
+provider = "repology"
+
+[source]
+package = "libmediainfo"

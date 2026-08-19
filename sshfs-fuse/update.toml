@@ -1,0 +1,5 @@
+name = "sshfs-fuse"
+provider = "repology"
+
+[source]
+package = "fusefs:sshfs"

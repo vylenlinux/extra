@@ -1,0 +1,5 @@
+name = "libdvdread"
+provider = "repology"
+
+[source]
+package = "libdvdread"

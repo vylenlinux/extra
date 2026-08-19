@@ -1,0 +1,5 @@
+name = "apr-util"
+provider = "repology"
+
+[source]
+package = "apr-util"

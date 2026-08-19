@@ -1,0 +1,5 @@
+name = "nvme-cli"
+provider = "repology"
+
+[source]
+package = "nvme-cli"

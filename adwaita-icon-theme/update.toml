@@ -1,0 +1,5 @@
+name = "adwaita-icon-theme"
+provider = "repology"
+
+[source]
+package = "adwaita-icon-theme"

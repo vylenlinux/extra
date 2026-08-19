@@ -1,0 +1,5 @@
+name = "networkmanager"
+provider = "repology"
+
+[source]
+package = "networkmanager"

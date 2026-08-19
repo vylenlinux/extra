@@ -1,0 +1,5 @@
+name = "libetpan"
+provider = "repology"
+
+[source]
+package = "libetpan"

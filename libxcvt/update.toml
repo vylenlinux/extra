@@ -1,0 +1,5 @@
+name = "libxcvt"
+provider = "repology"
+
+[source]
+package = "libxcvt"

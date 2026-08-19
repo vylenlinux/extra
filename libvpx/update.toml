@@ -1,0 +1,5 @@
+name = "libvpx"
+provider = "repology"
+
+[source]
+package = "libvpx"

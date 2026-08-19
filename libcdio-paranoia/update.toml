@@ -1,0 +1,5 @@
+name = "libcdio-paranoia"
+provider = "repology"
+
+[source]
+package = "libcdio-paranoia"

@@ -1,0 +1,5 @@
+name = "plasma-workspace"
+provider = "repology"
+
+[source]
+package = "plasma-workspace"

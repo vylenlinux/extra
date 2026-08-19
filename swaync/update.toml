@@ -1,0 +1,5 @@
+name = "swaync"
+provider = "repology"
+
+[source]
+package = "sway-notification-center"

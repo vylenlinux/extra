@@ -1,0 +1,5 @@
+name = "gconf"
+provider = "repology"
+
+[source]
+package = "gconf"

@@ -1,0 +1,5 @@
+name = "xpr"
+provider = "repology"
+
+[source]
+package = "xpr"

@@ -1,0 +1,5 @@
+name = "mate-applets"
+provider = "repology"
+
+[source]
+package = "mate-applets"

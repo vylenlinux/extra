@@ -1,0 +1,5 @@
+name = "json-glib"
+provider = "repology"
+
+[source]
+package = "json-glib"

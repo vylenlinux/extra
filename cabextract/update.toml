@@ -1,0 +1,5 @@
+name = "cabextract"
+provider = "repology"
+
+[source]
+package = "cabextract"

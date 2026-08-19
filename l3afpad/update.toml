@@ -1,0 +1,5 @@
+name = "l3afpad"
+provider = "repology"
+
+[source]
+package = "l3afpad"

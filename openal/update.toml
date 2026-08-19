@@ -1,0 +1,5 @@
+name = "openal"
+provider = "repology"
+
+[source]
+package = "openal-soft"

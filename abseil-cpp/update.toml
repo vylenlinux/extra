@@ -1,0 +1,5 @@
+name = "abseil-cpp"
+provider = "repology"
+
+[source]
+package = "abseil-cpp"

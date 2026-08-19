@@ -1,0 +1,5 @@
+name = "libglade"
+provider = "repology"
+
+[source]
+package = "libglade"

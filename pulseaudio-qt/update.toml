@@ -1,0 +1,5 @@
+name = "pulseaudio-qt"
+provider = "repology"
+
+[source]
+package = "pulseaudio-qt"

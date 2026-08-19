@@ -1,0 +1,5 @@
+name = "discover"
+provider = "repology"
+
+[source]
+package = "discover"

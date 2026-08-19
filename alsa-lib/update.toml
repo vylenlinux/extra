@@ -1,0 +1,5 @@
+name = "alsa-lib"
+provider = "repology"
+
+[source]
+package = "alsa-lib"

@@ -1,0 +1,5 @@
+name = "libxdg-basedir"
+provider = "repology"
+
+[source]
+package = "libxdg-basedir"

@@ -1,0 +1,5 @@
+name = "dmenu"
+provider = "repology"
+
+[source]
+package = "dmenu"

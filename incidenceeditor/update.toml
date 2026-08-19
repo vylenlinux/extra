@@ -1,0 +1,5 @@
+name = "incidenceeditor"
+provider = "repology"
+
+[source]
+package = "incidenceeditor"

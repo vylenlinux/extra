@@ -1,0 +1,5 @@
+name = "libass"
+provider = "repology"
+
+[source]
+package = "libass"

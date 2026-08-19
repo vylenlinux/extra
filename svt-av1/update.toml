@@ -1,0 +1,5 @@
+name = "svt-av1"
+provider = "repology"
+
+[source]
+package = "svt-av1"

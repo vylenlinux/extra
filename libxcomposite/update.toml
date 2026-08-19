@@ -1,0 +1,5 @@
+name = "libxcomposite"
+provider = "repology"
+
+[source]
+package = "libxcomposite"

@@ -1,0 +1,5 @@
+name = "kxmlgui"
+provider = "repology"
+
+[source]
+package = "kxmlgui"

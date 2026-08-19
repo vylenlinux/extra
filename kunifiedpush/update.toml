@@ -1,0 +1,5 @@
+name = "kunifiedpush"
+provider = "repology"
+
+[source]
+package = "kunifiedpush"

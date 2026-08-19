@@ -1,0 +1,5 @@
+name = "openjpeg2"
+provider = "repology"
+
+[source]
+package = "openjpeg"

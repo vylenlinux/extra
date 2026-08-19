@@ -1,0 +1,5 @@
+name = "lxqt-globalkeys"
+provider = "repology"
+
+[source]
+package = "lxqt-globalkeys"

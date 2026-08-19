@@ -1,0 +1,5 @@
+name = "qcoro"
+provider = "repology"
+
+[source]
+package = "qcoro"

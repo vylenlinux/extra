@@ -1,0 +1,5 @@
+name = "make-ca"
+provider = "repology"
+
+[source]
+package = "make-ca"

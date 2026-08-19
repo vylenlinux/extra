@@ -1,0 +1,5 @@
+name = "tint2"
+provider = "repology"
+
+[source]
+package = "tint2"

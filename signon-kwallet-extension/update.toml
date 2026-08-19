@@ -1,0 +1,5 @@
+name = "signon-kwallet-extension"
+provider = "repology"
+
+[source]
+package = "signon-kwallet-extension"

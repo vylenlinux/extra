@@ -1,0 +1,5 @@
+name = "libfyaml"
+provider = "repology"
+
+[source]
+package = "libfyaml"

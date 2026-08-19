@@ -1,0 +1,5 @@
+name = "gtk4"
+provider = "repology"
+
+[source]
+package = "gtk"

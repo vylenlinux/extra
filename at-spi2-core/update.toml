@@ -1,0 +1,5 @@
+name = "at-spi2-core"
+provider = "repology"
+
+[source]
+package = "at-spi2-core"

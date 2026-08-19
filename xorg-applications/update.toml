@@ -1,0 +1,5 @@
+name = "xorg-applications"
+provider = "repology"
+
+[source]
+package = "xorg-applications"

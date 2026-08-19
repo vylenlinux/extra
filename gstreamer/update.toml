@@ -1,0 +1,5 @@
+name = "gstreamer"
+provider = "repology"
+
+[source]
+package = "gstreamer"

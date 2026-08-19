@@ -1,0 +1,5 @@
+name = "libmicrohttpd"
+provider = "repology"
+
+[source]
+package = "libmicrohttpd"

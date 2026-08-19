@@ -1,0 +1,5 @@
+name = "libiptcdata"
+provider = "repology"
+
+[source]
+package = "libiptcdata"

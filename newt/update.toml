@@ -1,0 +1,5 @@
+name = "newt"
+provider = "repology"
+
+[source]
+package = "newt-tui"

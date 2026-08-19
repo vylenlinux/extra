@@ -1,0 +1,5 @@
+name = "iceauth"
+provider = "repology"
+
+[source]
+package = "iceauth"

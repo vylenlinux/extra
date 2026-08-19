@@ -1,0 +1,5 @@
+name = "kcrash"
+provider = "repology"
+
+[source]
+package = "kcrash"

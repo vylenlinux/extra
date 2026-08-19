@@ -1,0 +1,5 @@
+name = "gcr3"
+provider = "repology"
+
+[source]
+package = "gcr-3"

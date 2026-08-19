@@ -1,0 +1,5 @@
+name = "mate-user-guide"
+provider = "repology"
+
+[source]
+package = "mate-user-guide"

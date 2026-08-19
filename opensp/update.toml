@@ -1,0 +1,5 @@
+name = "opensp"
+provider = "repology"
+
+[source]
+package = "opensp"

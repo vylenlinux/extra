@@ -1,0 +1,5 @@
+name = "mpg123"
+provider = "repology"
+
+[source]
+package = "mpg123"

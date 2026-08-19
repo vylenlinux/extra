@@ -1,0 +1,5 @@
+name = "libepoxy"
+provider = "repology"
+
+[source]
+package = "libepoxy"

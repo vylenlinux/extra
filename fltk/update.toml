@@ -1,0 +1,5 @@
+name = "fltk"
+provider = "repology"
+
+[source]
+package = "fltk"

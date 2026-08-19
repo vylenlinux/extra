@@ -1,0 +1,5 @@
+name = "jfsutils"
+provider = "repology"
+
+[source]
+package = "jfsutils"

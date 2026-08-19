@@ -1,0 +1,5 @@
+name = "talloc"
+provider = "repology"
+
+[source]
+package = "talloc"

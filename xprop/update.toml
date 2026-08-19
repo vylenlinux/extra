@@ -1,0 +1,5 @@
+name = "xprop"
+provider = "repology"
+
+[source]
+package = "xprop"

@@ -1,0 +1,5 @@
+name = "signond"
+provider = "repology"
+
+[source]
+package = "signond"

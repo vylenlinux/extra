@@ -1,0 +1,5 @@
+name = "libdisplay-info"
+provider = "repology"
+
+[source]
+package = "libdisplay-info"

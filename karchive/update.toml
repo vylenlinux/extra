@@ -1,0 +1,5 @@
+name = "karchive"
+provider = "repology"
+
+[source]
+package = "karchive"

@@ -1,0 +1,5 @@
+name = "kcodecs"
+provider = "repology"
+
+[source]
+package = "kcodecs"

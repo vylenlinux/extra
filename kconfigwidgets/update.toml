@@ -1,0 +1,5 @@
+name = "kconfigwidgets"
+provider = "repology"
+
+[source]
+package = "kconfigwidgets"

@@ -1,0 +1,5 @@
+name = "qt5"
+provider = "repology"
+
+[source]
+package = "qt5"

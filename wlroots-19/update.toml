@@ -1,0 +1,5 @@
+name = "wlroots-19"
+provider = "repology"
+
+[source]
+package = "wlroots-19"

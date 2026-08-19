@@ -1,0 +1,5 @@
+name = "caja-actions"
+provider = "repology"
+
+[source]
+package = "caja-actions"

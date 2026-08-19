@@ -1,0 +1,5 @@
+name = "lxqt-admin"
+provider = "repology"
+
+[source]
+package = "lxqt-admin"

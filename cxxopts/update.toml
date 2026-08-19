@@ -1,0 +1,5 @@
+name = "cxxopts"
+provider = "repology"
+
+[source]
+package = "cxxopts"

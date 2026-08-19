@@ -1,0 +1,5 @@
+name = "xinit"
+provider = "repology"
+
+[source]
+package = "xinit"

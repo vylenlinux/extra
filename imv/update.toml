@@ -1,0 +1,5 @@
+name = "imv"
+provider = "repology"
+
+[source]
+package = "imv"

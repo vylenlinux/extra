@@ -1,0 +1,5 @@
+name = "emacs"
+provider = "repology"
+
+[source]
+package = "emacs"

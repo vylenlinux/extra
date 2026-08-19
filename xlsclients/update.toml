@@ -1,0 +1,5 @@
+name = "xlsclients"
+provider = "repology"
+
+[source]
+package = "xlsclients"

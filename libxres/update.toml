@@ -1,0 +1,5 @@
+name = "libxres"
+provider = "repology"
+
+[source]
+package = "libxres"

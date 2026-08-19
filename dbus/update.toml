@@ -1,0 +1,5 @@
+name = "dbus"
+provider = "repology"
+
+[source]
+package = "dbus"

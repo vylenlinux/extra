@@ -1,0 +1,5 @@
+name = "libkgapi"
+provider = "repology"
+
+[source]
+package = "libkgapi"

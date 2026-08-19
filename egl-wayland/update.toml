@@ -1,0 +1,5 @@
+name = "egl-wayland"
+provider = "repology"
+
+[source]
+package = "egl-wayland"

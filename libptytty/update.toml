@@ -1,0 +1,5 @@
+name = "libptytty"
+provider = "repology"
+
+[source]
+package = "libptytty"

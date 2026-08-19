@@ -1,0 +1,5 @@
+name = "xorg-fonts"
+provider = "repology"
+
+[source]
+package = "xorg-fonts"

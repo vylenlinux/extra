@@ -1,0 +1,5 @@
+name = "xfsprogs"
+provider = "repology"
+
+[source]
+package = "xfsprogs"

@@ -1,0 +1,5 @@
+name = "iso-codes"
+provider = "repology"
+
+[source]
+package = "iso-codes"

@@ -1,0 +1,5 @@
+name = "xfce4-xkb-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-xkb-plugin"

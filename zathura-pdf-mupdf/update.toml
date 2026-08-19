@@ -1,0 +1,5 @@
+name = "zathura-pdf-mupdf"
+provider = "repology"
+
+[source]
+package = "zathura-pdf-mupdf"

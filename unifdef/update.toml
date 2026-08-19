@@ -1,0 +1,5 @@
+name = "unifdef"
+provider = "repology"
+
+[source]
+package = "unifdef"

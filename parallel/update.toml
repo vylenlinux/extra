@@ -1,0 +1,5 @@
+name = "parallel"
+provider = "repology"
+
+[source]
+package = "parallel"

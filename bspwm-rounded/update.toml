@@ -1,0 +1,5 @@
+name = "bspwm-rounded"
+provider = "repology"
+
+[source]
+package = "bspwm-rounded-corners"

@@ -1,0 +1,5 @@
+name = "print-manager"
+provider = "repology"
+
+[source]
+package = "print-manager"

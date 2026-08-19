@@ -1,0 +1,5 @@
+name = "cyrus-sasl"
+provider = "repology"
+
+[source]
+package = "cyrus-sasl"

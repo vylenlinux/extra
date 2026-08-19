@@ -1,0 +1,5 @@
+name = "hicolor-icon-theme"
+provider = "repology"
+
+[source]
+package = "hicolor-icon-theme"

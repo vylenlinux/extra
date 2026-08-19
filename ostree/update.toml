@@ -1,0 +1,5 @@
+name = "ostree"
+provider = "repology"
+
+[source]
+package = "ostree"

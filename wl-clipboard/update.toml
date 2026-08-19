@@ -1,0 +1,5 @@
+name = "wl-clipboard"
+provider = "repology"
+
+[source]
+package = "wl-clipboard"

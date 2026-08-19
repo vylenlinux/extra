@@ -1,0 +1,5 @@
+name = "libxrender"
+provider = "repology"
+
+[source]
+package = "libxrender"

@@ -1,0 +1,5 @@
+name = "fdk-aac"
+provider = "repology"
+
+[source]
+package = "fdk-aac"

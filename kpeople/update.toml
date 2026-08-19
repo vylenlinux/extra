@@ -1,0 +1,5 @@
+name = "kpeople"
+provider = "repology"
+
+[source]
+package = "kpeople"

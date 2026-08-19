@@ -1,0 +1,5 @@
+name = "speexdsp"
+provider = "repology"
+
+[source]
+package = "speexdsp"

@@ -1,0 +1,5 @@
+name = "pciutils"
+provider = "repology"
+
+[source]
+package = "pciutils"

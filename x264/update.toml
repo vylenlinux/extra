@@ -1,0 +1,5 @@
+name = "x264"
+provider = "repology"
+
+[source]
+package = "x264"

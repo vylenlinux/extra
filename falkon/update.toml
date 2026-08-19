@@ -1,0 +1,5 @@
+name = "falkon"
+provider = "repology"
+
+[source]
+package = "falkon"

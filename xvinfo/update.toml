@@ -1,0 +1,5 @@
+name = "xvinfo"
+provider = "repology"
+
+[source]
+package = "xvinfo"

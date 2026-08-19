@@ -1,0 +1,5 @@
+name = "brotli"
+provider = "repology"
+
+[source]
+package = "brotli"

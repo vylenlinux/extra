@@ -1,0 +1,5 @@
+name = "libavif"
+provider = "repology"
+
+[source]
+package = "libavif"

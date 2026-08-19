@@ -1,0 +1,5 @@
+name = "libkdcraw"
+provider = "repology"
+
+[source]
+package = "libkdcraw"

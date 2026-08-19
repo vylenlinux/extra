@@ -1,0 +1,5 @@
+name = "kitinerary"
+provider = "repology"
+
+[source]
+package = "kitinerary"

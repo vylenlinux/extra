@@ -1,0 +1,5 @@
+name = "scrot"
+provider = "repology"
+
+[source]
+package = "scrot"

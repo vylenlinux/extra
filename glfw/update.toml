@@ -1,0 +1,5 @@
+name = "glfw"
+provider = "repology"
+
+[source]
+package = "glfw"

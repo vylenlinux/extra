@@ -1,0 +1,5 @@
+name = "perl-json"
+provider = "repology"
+
+[source]
+package = "perl:json"

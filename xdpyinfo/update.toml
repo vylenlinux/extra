@@ -1,0 +1,5 @@
+name = "xdpyinfo"
+provider = "repology"
+
+[source]
+package = "xdpyinfo"

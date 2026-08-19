@@ -1,0 +1,5 @@
+name = "dnsmasq"
+provider = "repology"
+
+[source]
+package = "dnsmasq"

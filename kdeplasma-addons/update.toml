@@ -1,0 +1,5 @@
+name = "kdeplasma-addons"
+provider = "repology"
+
+[source]
+package = "kdeplasma-addons"

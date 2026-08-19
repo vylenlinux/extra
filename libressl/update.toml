@@ -1,0 +1,5 @@
+name = "libressl"
+provider = "repology"
+
+[source]
+package = "libressl"

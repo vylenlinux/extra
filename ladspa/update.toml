@@ -1,0 +1,5 @@
+name = "ladspa"
+provider = "repology"
+
+[source]
+package = "ladspa"

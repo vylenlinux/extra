@@ -1,0 +1,5 @@
+name = "os-prober"
+provider = "repology"
+
+[source]
+package = "os-prober"

@@ -1,0 +1,5 @@
+name = "dosfstools"
+provider = "repology"
+
+[source]
+package = "dosfstools"

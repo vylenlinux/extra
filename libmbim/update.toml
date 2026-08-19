@@ -1,0 +1,5 @@
+name = "libmbim"
+provider = "repology"
+
+[source]
+package = "libmbim"

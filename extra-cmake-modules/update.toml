@@ -1,0 +1,5 @@
+name = "extra-cmake-modules"
+provider = "repology"
+
+[source]
+package = "extra-cmake-modules"

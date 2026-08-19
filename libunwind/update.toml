@@ -1,0 +1,5 @@
+name = "libunwind"
+provider = "repology"
+
+[source]
+package = "libunwind"

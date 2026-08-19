@@ -1,0 +1,5 @@
+name = "telegram-desktop"
+provider = "repology"
+
+[source]
+package = "telegram-desktop"

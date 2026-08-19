@@ -1,0 +1,5 @@
+name = "mate-sensors-applet"
+provider = "repology"
+
+[source]
+package = "mate-sensors-applet"

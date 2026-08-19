@@ -1,0 +1,5 @@
+name = "vulkan-icd-loader"
+provider = "repology"
+
+[source]
+package = "vulkan-loader"

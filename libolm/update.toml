@@ -1,0 +1,5 @@
+name = "libolm"
+provider = "repology"
+
+[source]
+package = "olm"

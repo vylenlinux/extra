@@ -1,0 +1,5 @@
+name = "xcb-proto"
+provider = "repology"
+
+[source]
+package = "xcb-proto"

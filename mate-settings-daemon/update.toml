@@ -1,0 +1,5 @@
+name = "mate-settings-daemon"
+provider = "repology"
+
+[source]
+package = "mate-settings-daemon"

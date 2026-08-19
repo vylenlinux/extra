@@ -1,0 +1,5 @@
+name = "fstrcmp"
+provider = "repology"
+
+[source]
+package = "fstrcmp"

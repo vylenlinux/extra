@@ -1,0 +1,5 @@
+name = "pamixer"
+provider = "repology"
+
+[source]
+package = "pamixer"

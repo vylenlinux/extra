@@ -1,0 +1,5 @@
+name = "kaddressbook"
+provider = "repology"
+
+[source]
+package = "kaddressbook"

@@ -1,0 +1,5 @@
+name = "kcolorscheme"
+provider = "repology"
+
+[source]
+package = "kcolorscheme"

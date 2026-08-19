@@ -1,0 +1,5 @@
+name = "opencl-headers"
+provider = "repology"
+
+[source]
+package = "opencl-icd-loader"

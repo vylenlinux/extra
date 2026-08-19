@@ -1,0 +1,5 @@
+name = "xdg-user-dirs"
+provider = "repology"
+
+[source]
+package = "xdg-user-dirs"

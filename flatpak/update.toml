@@ -1,0 +1,5 @@
+name = "flatpak"
+provider = "repology"
+
+[source]
+package = "flatpak"

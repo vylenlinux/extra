@@ -1,0 +1,5 @@
+name = "ktextaddons"
+provider = "repology"
+
+[source]
+package = "ktextaddons"

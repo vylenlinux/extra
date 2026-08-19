@@ -1,0 +1,5 @@
+name = "gtk4-layer-shell"
+provider = "repology"
+
+[source]
+package = "gtk4-layer-shell"

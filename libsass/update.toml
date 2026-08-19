@@ -1,0 +1,5 @@
+name = "libsass"
+provider = "repology"
+
+[source]
+package = "libsass"

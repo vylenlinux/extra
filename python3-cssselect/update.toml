@@ -1,0 +1,5 @@
+name = "python3-cssselect"
+provider = "repology"
+
+[source]
+package = "python:cssselect"

@@ -1,0 +1,5 @@
+name = "exfat-utils"
+provider = "repology"
+
+[source]
+package = "exfat-utils"

@@ -1,0 +1,5 @@
+name = "libmms"
+provider = "repology"
+
+[source]
+package = "libmms"

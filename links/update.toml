@@ -1,0 +1,5 @@
+name = "links"
+provider = "repology"
+
+[source]
+package = "links"

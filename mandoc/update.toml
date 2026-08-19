@@ -1,0 +1,5 @@
+name = "mandoc"
+provider = "repology"
+
+[source]
+package = "mandoc"

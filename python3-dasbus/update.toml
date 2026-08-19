@@ -1,0 +1,5 @@
+name = "python3-dasbus"
+provider = "repology"
+
+[source]
+package = "python:dasbus"

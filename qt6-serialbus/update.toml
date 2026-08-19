@@ -1,0 +1,5 @@
+name = "qt6-serialbus"
+provider = "repology"
+
+[source]
+package = "qt6-serialbus"

@@ -1,0 +1,5 @@
+name = "libxkbfile"
+provider = "repology"
+
+[source]
+package = "libxkbfile"

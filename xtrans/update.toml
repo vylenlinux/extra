@@ -1,0 +1,5 @@
+name = "xtrans"
+provider = "repology"
+
+[source]
+package = "xtrans"

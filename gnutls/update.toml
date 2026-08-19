@@ -1,0 +1,5 @@
+name = "gnutls"
+provider = "repology"
+
+[source]
+package = "gnutls"

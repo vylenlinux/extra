@@ -1,0 +1,5 @@
+name = "fftw"
+provider = "repology"
+
+[source]
+package = "fftw"

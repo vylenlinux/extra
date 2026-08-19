@@ -1,0 +1,5 @@
+name = "libnma"
+provider = "repology"
+
+[source]
+package = "libnma"

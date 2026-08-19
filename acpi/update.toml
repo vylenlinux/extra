@@ -1,0 +1,5 @@
+name = "acpi"
+provider = "repology"
+
+[source]
+package = "acpi"

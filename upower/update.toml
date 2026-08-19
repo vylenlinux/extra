@@ -1,0 +1,5 @@
+name = "upower"
+provider = "repology"
+
+[source]
+package = "upower"

@@ -1,0 +1,5 @@
+name = "python3-docopt"
+provider = "repology"
+
+[source]
+package = "python:docopt"

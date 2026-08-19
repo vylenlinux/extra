@@ -1,0 +1,5 @@
+name = "x11perf"
+provider = "repology"
+
+[source]
+package = "x11perf"

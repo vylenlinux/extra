@@ -1,0 +1,5 @@
+name = "wpebackend-fdo"
+provider = "repology"
+
+[source]
+package = "wpebackend-fdo"

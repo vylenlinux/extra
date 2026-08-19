@@ -1,0 +1,5 @@
+name = "granite"
+provider = "repology"
+
+[source]
+package = "granite"

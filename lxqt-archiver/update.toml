@@ -1,0 +1,5 @@
+name = "lxqt-archiver"
+provider = "repology"
+
+[source]
+package = "lxqt-archiver"

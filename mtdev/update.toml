@@ -1,0 +1,5 @@
+name = "mtdev"
+provider = "repology"
+
+[source]
+package = "mtdev"

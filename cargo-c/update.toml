@@ -1,0 +1,5 @@
+name = "cargo-c"
+provider = "repology"
+
+[source]
+package = "cargo-c"

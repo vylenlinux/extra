@@ -1,0 +1,5 @@
+name = "sxiv"
+provider = "repology"
+
+[source]
+package = "sxiv"

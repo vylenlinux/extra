@@ -1,0 +1,5 @@
+name = "xapp"
+provider = "repology"
+
+[source]
+package = "xapp"

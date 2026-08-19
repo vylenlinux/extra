@@ -1,0 +1,5 @@
+name = "libpsl"
+provider = "repology"
+
+[source]
+package = "libpsl"

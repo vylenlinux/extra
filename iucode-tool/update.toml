@@ -1,0 +1,5 @@
+name = "iucode-tool"
+provider = "repology"
+
+[source]
+package = "iucode-tool"

@@ -1,0 +1,5 @@
+name = "gsl"
+provider = "repology"
+
+[source]
+package = "gsl"

@@ -1,0 +1,5 @@
+name = "akregator"
+provider = "repology"
+
+[source]
+package = "akregator"

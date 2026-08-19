@@ -1,0 +1,5 @@
+name = "xterm"
+provider = "repology"
+
+[source]
+package = "xterm"

@@ -1,0 +1,5 @@
+name = "jwm"
+provider = "repology"
+
+[source]
+package = "jwm"

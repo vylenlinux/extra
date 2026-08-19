@@ -1,0 +1,5 @@
+name = "nasm"
+provider = "repology"
+
+[source]
+package = "nasm"

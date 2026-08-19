@@ -1,0 +1,5 @@
+name = "rpcsvc-proto"
+provider = "repology"
+
+[source]
+package = "rpcsvc-proto"

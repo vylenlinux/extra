@@ -1,0 +1,5 @@
+name = "akonadi-mime"
+provider = "repology"
+
+[source]
+package = "akonadi-mime"

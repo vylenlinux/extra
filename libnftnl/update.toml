@@ -1,0 +1,5 @@
+name = "libnftnl"
+provider = "repology"
+
+[source]
+package = "libnftnl"

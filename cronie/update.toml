@@ -1,0 +1,5 @@
+name = "cronie"
+provider = "repology"
+
+[source]
+package = "cronie"

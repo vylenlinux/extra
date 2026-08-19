@@ -1,0 +1,5 @@
+name = "spectacle"
+provider = "repology"
+
+[source]
+package = "spectacle"

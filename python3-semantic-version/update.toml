@@ -1,0 +1,5 @@
+name = "python3-semantic-version"
+provider = "repology"
+
+[source]
+package = "python:semantic-version"

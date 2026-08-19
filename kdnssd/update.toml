@@ -1,0 +1,5 @@
+name = "kdnssd"
+provider = "repology"
+
+[source]
+package = "kdnssd"

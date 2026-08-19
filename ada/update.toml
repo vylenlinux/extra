@@ -1,0 +1,5 @@
+name = "ada"
+provider = "repology"
+
+[source]
+package = "ada"

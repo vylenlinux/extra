@@ -1,0 +1,5 @@
+name = "wayland"
+provider = "repology"
+
+[source]
+package = "wayland"

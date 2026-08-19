@@ -1,0 +1,5 @@
+name = "xrdb"
+provider = "repology"
+
+[source]
+package = "xrdb"

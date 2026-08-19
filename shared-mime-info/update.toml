@@ -1,0 +1,5 @@
+name = "shared-mime-info"
+provider = "repology"
+
+[source]
+package = "shared-mime-info"

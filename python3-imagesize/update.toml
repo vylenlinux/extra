@@ -1,0 +1,5 @@
+name = "python3-imagesize"
+provider = "repology"
+
+[source]
+package = "python:imagesize"

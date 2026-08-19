@@ -1,0 +1,5 @@
+name = "btrfs-progs"
+provider = "repology"
+
+[source]
+package = "btrfs-progs"

@@ -1,0 +1,5 @@
+name = "libatasmart"
+provider = "repology"
+
+[source]
+package = "libatasmart"

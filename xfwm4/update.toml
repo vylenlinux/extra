@@ -1,0 +1,5 @@
+name = "xfwm4"
+provider = "repology"
+
+[source]
+package = "xfwm4"

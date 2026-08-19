@@ -1,0 +1,5 @@
+name = "ccache"
+provider = "repology"
+
+[source]
+package = "ccache"

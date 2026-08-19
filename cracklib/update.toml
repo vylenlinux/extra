@@ -1,0 +1,5 @@
+name = "cracklib"
+provider = "repology"
+
+[source]
+package = "cracklib"

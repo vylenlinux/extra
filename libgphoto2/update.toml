@@ -1,0 +1,5 @@
+name = "libgphoto2"
+provider = "repology"
+
+[source]
+package = "libgphoto2"

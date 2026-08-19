@@ -1,0 +1,5 @@
+name = "lf"
+provider = "repology"
+
+[source]
+package = "lf"

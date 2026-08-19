@@ -1,0 +1,5 @@
+name = "libcpuid"
+provider = "repology"
+
+[source]
+package = "libcpuid"

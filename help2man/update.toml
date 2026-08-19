@@ -1,0 +1,5 @@
+name = "help2man"
+provider = "repology"
+
+[source]
+package = "help2man"

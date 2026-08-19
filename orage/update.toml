@@ -1,0 +1,5 @@
+name = "orage"
+provider = "repology"
+
+[source]
+package = "orage"

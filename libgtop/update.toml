@@ -1,0 +1,5 @@
+name = "libgtop"
+provider = "repology"
+
+[source]
+package = "libgtop"

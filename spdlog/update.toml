@@ -1,0 +1,5 @@
+name = "spdlog"
+provider = "repology"
+
+[source]
+package = "spdlog"

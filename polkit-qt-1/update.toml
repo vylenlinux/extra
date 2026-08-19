@@ -1,0 +1,5 @@
+name = "polkit-qt-1"
+provider = "repology"
+
+[source]
+package = "polkit-qt-1"

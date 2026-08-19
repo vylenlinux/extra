@@ -1,0 +1,5 @@
+name = "flatbuffers"
+provider = "repology"
+
+[source]
+package = "flatbuffers"

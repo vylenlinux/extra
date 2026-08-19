@@ -1,0 +1,5 @@
+name = "kcalendarcore"
+provider = "repology"
+
+[source]
+package = "kcalendarcore"

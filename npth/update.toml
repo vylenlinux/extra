@@ -1,0 +1,5 @@
+name = "npth"
+provider = "repology"
+
+[source]
+package = "npth"

@@ -1,0 +1,5 @@
+name = "libayatana-appindicator"
+provider = "repology"
+
+[source]
+package = "libayatana-appindicator"

@@ -1,0 +1,5 @@
+name = "dconf"
+provider = "repology"
+
+[source]
+package = "dconf"

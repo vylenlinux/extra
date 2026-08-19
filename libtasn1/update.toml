@@ -1,0 +1,5 @@
+name = "libtasn1"
+provider = "repology"
+
+[source]
+package = "libtasn1"

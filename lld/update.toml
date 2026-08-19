@@ -1,0 +1,6 @@
+name = "lld"
+provider = "repology"
+
+[source]
+package = "llvm"
+dedup_key = "llvm"

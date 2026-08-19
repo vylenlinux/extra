@@ -1,0 +1,5 @@
+name = "vte3"
+provider = "repology"
+
+[source]
+package = "vte"

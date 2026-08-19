@@ -1,0 +1,5 @@
+name = "okular"
+provider = "repology"
+
+[source]
+package = "okular"

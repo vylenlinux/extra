@@ -1,0 +1,5 @@
+name = "libsecret"
+provider = "repology"
+
+[source]
+package = "libsecret"

@@ -1,0 +1,5 @@
+name = "http-parser"
+provider = "repology"
+
+[source]
+package = "http-parser"

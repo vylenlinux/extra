@@ -1,0 +1,5 @@
+name = "libreplaygain"
+provider = "repology"
+
+[source]
+package = "libreplaygain"

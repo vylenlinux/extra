@@ -1,0 +1,5 @@
+name = "zathura-pdf-poppler"
+provider = "repology"
+
+[source]
+package = "zathura-pdf-poppler"

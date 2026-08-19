@@ -1,0 +1,5 @@
+name = "colord-gtk"
+provider = "repology"
+
+[source]
+package = "colord-gtk"

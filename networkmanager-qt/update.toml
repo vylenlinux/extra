@@ -1,0 +1,5 @@
+name = "networkmanager-qt"
+provider = "repology"
+
+[source]
+package = "networkmanager-qt"

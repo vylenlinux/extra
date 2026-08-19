@@ -1,0 +1,5 @@
+name = "sway"
+provider = "repology"
+
+[source]
+package = "sway"

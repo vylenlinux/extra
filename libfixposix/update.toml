@@ -1,0 +1,5 @@
+name = "libfixposix"
+provider = "repology"
+
+[source]
+package = "libfixposix"

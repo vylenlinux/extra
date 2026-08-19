@@ -1,0 +1,5 @@
+name = "libblockdev"
+provider = "repology"
+
+[source]
+package = "libblockdev"

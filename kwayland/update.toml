@@ -1,0 +1,5 @@
+name = "kwayland"
+provider = "repology"
+
+[source]
+package = "kwayland"

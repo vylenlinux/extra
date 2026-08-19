@@ -1,0 +1,5 @@
+name = "font-xfree86-type1"
+provider = "repology"
+
+[source]
+package = "fonts:xfree86-type1"

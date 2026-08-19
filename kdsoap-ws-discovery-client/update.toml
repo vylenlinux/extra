@@ -1,0 +1,5 @@
+name = "kdsoap-ws-discovery-client"
+provider = "repology"
+
+[source]
+package = "kdsoap-ws-discovery-client"

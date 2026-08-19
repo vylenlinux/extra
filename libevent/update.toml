@@ -1,0 +1,5 @@
+name = "libevent"
+provider = "repology"
+
+[source]
+package = "libevent"

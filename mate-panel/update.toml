@@ -1,0 +1,5 @@
+name = "mate-panel"
+provider = "repology"
+
+[source]
+package = "mate-panel"

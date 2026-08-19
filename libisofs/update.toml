@@ -1,0 +1,5 @@
+name = "libisofs"
+provider = "repology"
+
+[source]
+package = "libisofs"

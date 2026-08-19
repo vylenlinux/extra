@@ -1,0 +1,5 @@
+name = "libxml2"
+provider = "repology"
+
+[source]
+package = "libxml2"

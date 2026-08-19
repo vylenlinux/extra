@@ -1,0 +1,5 @@
+name = "re2c"
+provider = "repology"
+
+[source]
+package = "re2c"

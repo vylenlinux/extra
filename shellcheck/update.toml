@@ -1,0 +1,5 @@
+name = "shellcheck"
+provider = "repology"
+
+[source]
+package = "shellcheck"

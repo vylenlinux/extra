@@ -1,0 +1,5 @@
+name = "libxpresent"
+provider = "repology"
+
+[source]
+package = "libxpresent"

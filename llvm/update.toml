@@ -1,0 +1,5 @@
+name = "llvm"
+provider = "repology"
+
+[source]
+package = "llvm"

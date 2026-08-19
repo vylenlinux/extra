@@ -1,0 +1,5 @@
+name = "bamf"
+provider = "repology"
+
+[source]
+package = "bamf"

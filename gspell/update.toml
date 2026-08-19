@@ -1,0 +1,5 @@
+name = "gspell"
+provider = "repology"
+
+[source]
+package = "gspell"

@@ -1,0 +1,5 @@
+name = "kuserfeedback"
+provider = "repology"
+
+[source]
+package = "kuserfeedback"

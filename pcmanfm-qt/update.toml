@@ -1,0 +1,5 @@
+name = "pcmanfm-qt"
+provider = "repology"
+
+[source]
+package = "pcmanfm-qt"

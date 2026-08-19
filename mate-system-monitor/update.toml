@@ -1,0 +1,5 @@
+name = "mate-system-monitor"
+provider = "repology"
+
+[source]
+package = "mate-system-monitor"

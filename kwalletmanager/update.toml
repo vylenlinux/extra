@@ -1,0 +1,5 @@
+name = "kwalletmanager"
+provider = "repology"
+
+[source]
+package = "kwalletmanager"

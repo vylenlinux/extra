@@ -1,0 +1,5 @@
+name = "assimp"
+provider = "repology"
+
+[source]
+package = "assimp"

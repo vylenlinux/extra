@@ -1,0 +1,5 @@
+name = "xcursorgen"
+provider = "repology"
+
+[source]
+package = "xcursorgen"

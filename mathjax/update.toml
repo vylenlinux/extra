@@ -1,0 +1,5 @@
+name = "mathjax"
+provider = "repology"
+
+[source]
+package = "mathjax"

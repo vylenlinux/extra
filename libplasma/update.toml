@@ -1,0 +1,5 @@
+name = "libplasma"
+provider = "repology"
+
+[source]
+package = "libplasma"

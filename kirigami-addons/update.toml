@@ -1,0 +1,5 @@
+name = "kirigami-addons"
+provider = "repology"
+
+[source]
+package = "kirigami-addons"

@@ -1,0 +1,5 @@
+name = "kwidgetsaddons"
+provider = "repology"
+
+[source]
+package = "kwidgetsaddons"

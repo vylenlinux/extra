@@ -1,0 +1,5 @@
+name = "kauth"
+provider = "repology"
+
+[source]
+package = "kauth"

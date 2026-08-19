@@ -1,0 +1,5 @@
+name = "mate-backgrounds"
+provider = "repology"
+
+[source]
+package = "mate-backgrounds"

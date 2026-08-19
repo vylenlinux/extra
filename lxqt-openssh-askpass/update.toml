@@ -1,0 +1,5 @@
+name = "lxqt-openssh-askpass"
+provider = "repology"
+
+[source]
+package = "lxqt-openssh-askpass"

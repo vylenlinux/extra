@@ -1,0 +1,5 @@
+name = "dcfldd"
+provider = "repology"
+
+[source]
+package = "dcfldd"

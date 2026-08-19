@@ -1,0 +1,5 @@
+name = "flite"
+provider = "repology"
+
+[source]
+package = "flite"

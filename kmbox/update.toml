@@ -1,0 +1,5 @@
+name = "kmbox"
+provider = "repology"
+
+[source]
+package = "kmbox"

@@ -1,0 +1,5 @@
+name = "kde-gtk-config"
+provider = "repology"
+
+[source]
+package = "kde-gtk-config"

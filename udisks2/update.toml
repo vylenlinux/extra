@@ -1,0 +1,5 @@
+name = "udisks2"
+provider = "repology"
+
+[source]
+package = "udisks"

@@ -1,0 +1,5 @@
+name = "webkitgtk"
+provider = "repology"
+
+[source]
+package = "webkitgtk"

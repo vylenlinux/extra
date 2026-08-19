@@ -1,0 +1,5 @@
+name = "libscfg"
+provider = "repology"
+
+[source]
+package = "libscfg"

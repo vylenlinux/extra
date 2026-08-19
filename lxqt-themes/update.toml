@@ -1,0 +1,5 @@
+name = "lxqt-themes"
+provider = "repology"
+
+[source]
+package = "lxqt-themes"

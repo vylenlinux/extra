@@ -1,0 +1,5 @@
+name = "lxqt-sudo"
+provider = "repology"
+
+[source]
+package = "lxqt-sudo"

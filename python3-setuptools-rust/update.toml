@@ -1,0 +1,5 @@
+name = "python3-setuptools-rust"
+provider = "repology"
+
+[source]
+package = "python:setuptools-rust"

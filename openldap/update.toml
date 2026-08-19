@@ -1,0 +1,5 @@
+name = "openldap"
+provider = "repology"
+
+[source]
+package = "openldap"

@@ -1,0 +1,5 @@
+name = "librsvg"
+provider = "repology"
+
+[source]
+package = "librsvg"

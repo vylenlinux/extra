@@ -1,0 +1,5 @@
+name = "astyle"
+provider = "repology"
+
+[source]
+package = "astyle"

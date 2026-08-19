@@ -1,0 +1,5 @@
+name = "kcmutils"
+provider = "repology"
+
+[source]
+package = "kcmutils"

@@ -1,0 +1,5 @@
+name = "makeself"
+provider = "repology"
+
+[source]
+package = "makeself"

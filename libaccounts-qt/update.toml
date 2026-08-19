@@ -1,0 +1,5 @@
+name = "libaccounts-qt"
+provider = "repology"
+
+[source]
+package = "libaccounts-qt"

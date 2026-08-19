@@ -1,0 +1,5 @@
+name = "mcabber"
+provider = "repology"
+
+[source]
+package = "mcabber"

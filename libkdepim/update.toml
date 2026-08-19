@@ -1,0 +1,5 @@
+name = "libkdepim"
+provider = "repology"
+
+[source]
+package = "libkdepim"

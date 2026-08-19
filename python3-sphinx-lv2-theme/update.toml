@@ -1,0 +1,5 @@
+name = "python3-sphinx-lv2-theme"
+provider = "repology"
+
+[source]
+package = "python:sphinx-lv2-theme"

@@ -1,0 +1,5 @@
+name = "pim-data-exporter"
+provider = "repology"
+
+[source]
+package = "pim-data-exporter"

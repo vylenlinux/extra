@@ -1,0 +1,5 @@
+name = "vid.stab"
+provider = "repology"
+
+[source]
+package = "vid.stab"

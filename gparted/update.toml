@@ -1,0 +1,5 @@
+name = "gparted"
+provider = "repology"
+
+[source]
+package = "gparted"

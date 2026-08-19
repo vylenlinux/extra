@@ -1,0 +1,5 @@
+name = "mimalloc"
+provider = "repology"
+
+[source]
+package = "mimalloc"

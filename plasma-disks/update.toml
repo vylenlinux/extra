@@ -1,0 +1,5 @@
+name = "plasma-disks"
+provider = "repology"
+
+[source]
+package = "plasma-disks"

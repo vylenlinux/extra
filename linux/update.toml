@@ -1,0 +1,5 @@
+name = "linux"
+provider = "repology"
+
+[source]
+package = "linux"

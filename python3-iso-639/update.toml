@@ -1,0 +1,5 @@
+name = "python3-iso-639"
+provider = "repology"
+
+[source]
+package = "python:iso-639"

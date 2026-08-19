@@ -1,0 +1,5 @@
+name = "kdoctools"
+provider = "repology"
+
+[source]
+package = "kdoctools"

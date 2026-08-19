@@ -1,0 +1,5 @@
+name = "xcb-util-errors"
+provider = "repology"
+
+[source]
+package = "xcb-util-errors"

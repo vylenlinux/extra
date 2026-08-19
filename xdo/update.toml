@@ -1,0 +1,5 @@
+name = "xdo"
+provider = "repology"
+
+[source]
+package = "xdo"

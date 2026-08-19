@@ -1,0 +1,5 @@
+name = "libinstpatch"
+provider = "repology"
+
+[source]
+package = "libinstpatch"

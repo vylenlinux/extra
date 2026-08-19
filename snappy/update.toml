@@ -1,0 +1,5 @@
+name = "snappy"
+provider = "repology"
+
+[source]
+package = "snappy-compression"

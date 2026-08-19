@@ -1,0 +1,5 @@
+name = "zsh"
+provider = "repology"
+
+[source]
+package = "zsh"

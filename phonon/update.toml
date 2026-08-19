@@ -1,0 +1,5 @@
+name = "phonon"
+provider = "repology"
+
+[source]
+package = "phonon"

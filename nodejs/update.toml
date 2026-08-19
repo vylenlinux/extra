@@ -1,0 +1,5 @@
+name = "nodejs"
+provider = "repology"
+
+[source]
+package = "nodejs"

@@ -1,0 +1,5 @@
+name = "glibmm3"
+provider = "repology"
+
+[source]
+package = "glibmm3"

@@ -1,0 +1,5 @@
+name = "atril"
+provider = "repology"
+
+[source]
+package = "atril"

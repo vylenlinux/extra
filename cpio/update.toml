@@ -1,0 +1,5 @@
+name = "cpio"
+provider = "repology"
+
+[source]
+package = "cpio"

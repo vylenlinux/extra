@@ -1,0 +1,5 @@
+name = "libxpm"
+provider = "repology"
+
+[source]
+package = "libxpm"

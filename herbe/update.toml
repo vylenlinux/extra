@@ -1,0 +1,5 @@
+name = "herbe"
+provider = "repology"
+
+[source]
+package = "herbe"

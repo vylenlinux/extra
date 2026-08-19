@@ -1,0 +1,5 @@
+name = "kimageformats"
+provider = "repology"
+
+[source]
+package = "kimageformats"

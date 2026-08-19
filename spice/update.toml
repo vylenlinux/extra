@@ -1,0 +1,5 @@
+name = "spice"
+provider = "repology"
+
+[source]
+package = "spice-remote-access"

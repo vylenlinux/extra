@@ -1,0 +1,5 @@
+name = "kwin"
+provider = "repology"
+
+[source]
+package = "kwin"

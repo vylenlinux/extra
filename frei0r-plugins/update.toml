@@ -1,0 +1,5 @@
+name = "frei0r-plugins"
+provider = "repology"
+
+[source]
+package = "frei0r"

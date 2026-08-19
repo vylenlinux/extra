@@ -1,0 +1,5 @@
+name = "ocean-sound-theme"
+provider = "repology"
+
+[source]
+package = "ocean-sound-theme"

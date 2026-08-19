@@ -1,0 +1,5 @@
+name = "fish"
+provider = "repology"
+
+[source]
+package = "fish"

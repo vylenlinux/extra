@@ -1,0 +1,5 @@
+name = "opendoas"
+provider = "repology"
+
+[source]
+package = "opendoas"

@@ -1,0 +1,5 @@
+name = "docbook2x"
+provider = "repology"
+
+[source]
+package = "docbook2x"

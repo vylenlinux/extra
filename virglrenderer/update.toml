@@ -1,0 +1,5 @@
+name = "virglrenderer"
+provider = "repology"
+
+[source]
+package = "virglrenderer"

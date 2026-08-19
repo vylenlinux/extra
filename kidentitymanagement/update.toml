@@ -1,0 +1,5 @@
+name = "kidentitymanagement"
+provider = "repology"
+
+[source]
+package = "kidentitymanagement"

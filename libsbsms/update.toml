@@ -1,0 +1,5 @@
+name = "libsbsms"
+provider = "repology"
+
+[source]
+package = "libsbsms"

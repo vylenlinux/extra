@@ -1,0 +1,5 @@
+name = "vulkan-headers"
+provider = "repology"
+
+[source]
+package = "vulkan-headers"

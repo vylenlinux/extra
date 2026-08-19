@@ -1,0 +1,5 @@
+name = "xhost"
+provider = "repology"
+
+[source]
+package = "xhost"

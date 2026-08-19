@@ -1,0 +1,5 @@
+name = "libseccomp"
+provider = "repology"
+
+[source]
+package = "libseccomp"

@@ -1,0 +1,5 @@
+name = "libdaemon"
+provider = "repology"
+
+[source]
+package = "libdaemon"

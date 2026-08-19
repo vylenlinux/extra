@@ -1,0 +1,5 @@
+name = "layer-shell-qt"
+provider = "repology"
+
+[source]
+package = "layer-shell-qt"

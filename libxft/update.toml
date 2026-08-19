@@ -1,0 +1,5 @@
+name = "libxft"
+provider = "repology"
+
+[source]
+package = "libxft"

@@ -1,0 +1,5 @@
+name = "libspiro"
+provider = "repology"
+
+[source]
+package = "libspiro"

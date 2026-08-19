@@ -1,0 +1,5 @@
+name = "libcdio"
+provider = "repology"
+
+[source]
+package = "libcdio"

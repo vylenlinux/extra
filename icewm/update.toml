@@ -1,0 +1,5 @@
+name = "icewm"
+provider = "repology"
+
+[source]
+package = "icewm"

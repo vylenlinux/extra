@@ -1,0 +1,5 @@
+name = "kcoreaddons"
+provider = "repology"
+
+[source]
+package = "kcoreaddons"

@@ -1,0 +1,5 @@
+name = "muparser"
+provider = "repology"
+
+[source]
+package = "muparser"

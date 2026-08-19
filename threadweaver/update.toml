@@ -1,0 +1,5 @@
+name = "threadweaver"
+provider = "repology"
+
+[source]
+package = "threadweaver"

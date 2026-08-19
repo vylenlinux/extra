@@ -1,0 +1,5 @@
+name = "libgusb"
+provider = "repology"
+
+[source]
+package = "libgusb"

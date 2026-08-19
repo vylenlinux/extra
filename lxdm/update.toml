@@ -1,0 +1,5 @@
+name = "lxdm"
+provider = "repology"
+
+[source]
+package = "lxdm"

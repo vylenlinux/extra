@@ -1,0 +1,5 @@
+name = "libid3tag"
+provider = "repology"
+
+[source]
+package = "libid3tag"

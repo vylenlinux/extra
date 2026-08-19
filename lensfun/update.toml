@@ -1,0 +1,5 @@
+name = "lensfun"
+provider = "repology"
+
+[source]
+package = "lensfun"

@@ -1,0 +1,5 @@
+name = "scdoc"
+provider = "repology"
+
+[source]
+package = "scdoc"

@@ -1,0 +1,5 @@
+name = "xfce4-session"
+provider = "repology"
+
+[source]
+package = "xfce4-session"

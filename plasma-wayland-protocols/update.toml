@@ -1,0 +1,5 @@
+name = "plasma-wayland-protocols"
+provider = "repology"
+
+[source]
+package = "plasma-wayland-protocols"

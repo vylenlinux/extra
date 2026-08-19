@@ -1,0 +1,5 @@
+name = "qqc2-desktop-style"
+provider = "repology"
+
+[source]
+package = "qqc2-desktop-style"

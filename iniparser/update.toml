@@ -1,0 +1,5 @@
+name = "iniparser"
+provider = "repology"
+
+[source]
+package = "iniparser"

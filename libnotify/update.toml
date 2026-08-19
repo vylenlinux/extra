@@ -1,0 +1,5 @@
+name = "libnotify"
+provider = "repology"
+
+[source]
+package = "libnotify"

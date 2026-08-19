@@ -1,0 +1,5 @@
+name = "libcroco"
+provider = "repology"
+
+[source]
+package = "libcroco"

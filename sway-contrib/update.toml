@@ -1,0 +1,5 @@
+name = "sway-contrib"
+provider = "repology"
+
+[source]
+package = "sway-contrib"

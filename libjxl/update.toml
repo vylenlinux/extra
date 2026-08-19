@@ -1,0 +1,5 @@
+name = "libjxl"
+provider = "repology"
+
+[source]
+package = "libjxl"

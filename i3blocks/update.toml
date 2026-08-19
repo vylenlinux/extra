@@ -1,0 +1,5 @@
+name = "i3blocks"
+provider = "repology"
+
+[source]
+package = "i3blocks"

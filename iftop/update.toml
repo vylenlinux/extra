@@ -1,0 +1,5 @@
+name = "iftop"
+provider = "repology"
+
+[source]
+package = "iftop"

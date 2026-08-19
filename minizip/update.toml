@@ -1,0 +1,5 @@
+name = "minizip"
+provider = "repology"
+
+[source]
+package = "zlib"

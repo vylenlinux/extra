@@ -1,0 +1,5 @@
+name = "fakeroot"
+provider = "repology"
+
+[source]
+package = "fakeroot"

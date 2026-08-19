@@ -1,0 +1,5 @@
+name = "samba"
+provider = "repology"
+
+[source]
+package = "samba"

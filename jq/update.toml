@@ -1,0 +1,5 @@
+name = "jq"
+provider = "repology"
+
+[source]
+package = "jq"

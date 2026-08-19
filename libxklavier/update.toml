@@ -1,0 +1,5 @@
+name = "libxklavier"
+provider = "repology"
+
+[source]
+package = "libxklavier"

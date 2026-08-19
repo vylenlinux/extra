@@ -1,0 +1,5 @@
+name = "chntpw"
+provider = "repology"
+
+[source]
+package = "chntpw"

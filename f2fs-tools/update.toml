@@ -1,0 +1,5 @@
+name = "f2fs-tools"
+provider = "repology"
+
+[source]
+package = "f2fs-tools"

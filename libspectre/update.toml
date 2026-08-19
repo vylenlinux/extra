@@ -1,0 +1,5 @@
+name = "libspectre"
+provider = "repology"
+
+[source]
+package = "libspectre"

@@ -1,0 +1,5 @@
+name = "libaccounts-glib"
+provider = "repology"
+
+[source]
+package = "libaccounts-glib"

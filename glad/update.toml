@@ -1,0 +1,5 @@
+name = "glad"
+provider = "repology"
+
+[source]
+package = "glad"

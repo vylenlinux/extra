@@ -1,0 +1,5 @@
+name = "sdl3"
+provider = "repology"
+
+[source]
+package = "sdl3"

@@ -1,0 +1,5 @@
+name = "chrony"
+provider = "repology"
+
+[source]
+package = "chrony"

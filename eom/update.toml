@@ -1,0 +1,5 @@
+name = "eom"
+provider = "repology"
+
+[source]
+package = "eom"

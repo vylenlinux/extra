@@ -1,0 +1,5 @@
+name = "jgmenu"
+provider = "repology"
+
+[source]
+package = "jgmenu"

@@ -1,0 +1,5 @@
+name = "sowm"
+provider = "repology"
+
+[source]
+package = "sowm"

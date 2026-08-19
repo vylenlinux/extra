@@ -1,0 +1,5 @@
+name = "spectrwm"
+provider = "repology"
+
+[source]
+package = "spectrwm"

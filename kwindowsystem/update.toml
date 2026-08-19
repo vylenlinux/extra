@@ -1,0 +1,5 @@
+name = "kwindowsystem"
+provider = "repology"
+
+[source]
+package = "kwindowsystem"

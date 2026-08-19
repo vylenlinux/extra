@@ -1,0 +1,5 @@
+name = "kfilemetadata"
+provider = "repology"
+
+[source]
+package = "kfilemetadata"

@@ -1,0 +1,5 @@
+name = "avahi"
+provider = "repology"
+
+[source]
+package = "avahi"

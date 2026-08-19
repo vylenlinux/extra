@@ -1,0 +1,5 @@
+name = "perl-parse-yapp"
+provider = "repology"
+
+[source]
+package = "perl:parse-yapp"

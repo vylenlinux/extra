@@ -1,0 +1,5 @@
+name = "libbpf"
+provider = "repology"
+
+[source]
+package = "libbpf"

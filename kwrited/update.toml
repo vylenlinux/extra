@@ -1,0 +1,5 @@
+name = "kwrited"
+provider = "repology"
+
+[source]
+package = "kwrited"

@@ -1,0 +1,5 @@
+name = "librsync"
+provider = "repology"
+
+[source]
+package = "librsync"

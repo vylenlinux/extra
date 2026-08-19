@@ -1,0 +1,5 @@
+name = "libmad"
+provider = "repology"
+
+[source]
+package = "libmad"

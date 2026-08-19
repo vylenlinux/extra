@@ -1,0 +1,5 @@
+name = "ksystemstats"
+provider = "repology"
+
+[source]
+package = "ksystemstats"

@@ -1,0 +1,5 @@
+name = "libadwaita"
+provider = "repology"
+
+[source]
+package = "libadwaita"

@@ -1,0 +1,6 @@
+name = "libvirt-python"
+provider = "repology"
+
+[source]
+package = "libvirt"
+dedup_key = "libvirt"

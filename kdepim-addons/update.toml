@@ -1,0 +1,5 @@
+name = "kdepim-addons"
+provider = "repology"
+
+[source]
+package = "kdepim-addons"

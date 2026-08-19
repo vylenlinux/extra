@@ -1,0 +1,5 @@
+name = "glslang"
+provider = "repology"
+
+[source]
+package = "glslang"

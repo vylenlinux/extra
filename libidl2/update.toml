@@ -1,0 +1,5 @@
+name = "libidl2"
+provider = "repology"
+
+[source]
+package = "libidl2"

@@ -1,0 +1,5 @@
+name = "sassc"
+provider = "repology"
+
+[source]
+package = "sassc"

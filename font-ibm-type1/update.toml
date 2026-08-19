@@ -1,0 +1,5 @@
+name = "font-ibm-type1"
+provider = "repology"
+
+[source]
+package = "fonts:ibm-type1"

@@ -1,0 +1,6 @@
+name = "libcurl-gnutls"
+provider = "repology"
+
+[source]
+package = "curl"
+dedup_key = "curl"

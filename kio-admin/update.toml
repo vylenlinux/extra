@@ -1,0 +1,5 @@
+name = "kio-admin"
+provider = "repology"
+
+[source]
+package = "kio-admin"

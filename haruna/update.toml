@@ -1,0 +1,5 @@
+name = "haruna"
+provider = "repology"
+
+[source]
+package = "haruna"

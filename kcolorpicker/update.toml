@@ -1,0 +1,5 @@
+name = "kcolorpicker"
+provider = "repology"
+
+[source]
+package = "kcolorpicker"

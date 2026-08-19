@@ -1,0 +1,5 @@
+name = "gtk-session-lock"
+provider = "repology"
+
+[source]
+package = "gtk-session-lock"

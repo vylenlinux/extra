@@ -1,0 +1,5 @@
+name = "perl-file-sharedir-install"
+provider = "repology"
+
+[source]
+package = "perl:file-sharedir-install"

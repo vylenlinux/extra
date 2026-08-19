@@ -1,0 +1,5 @@
+name = "purpose"
+provider = "repology"
+
+[source]
+package = "purpose"

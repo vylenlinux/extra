@@ -1,0 +1,5 @@
+name = "gpgme"
+provider = "repology"
+
+[source]
+package = "gpgme"

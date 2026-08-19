@@ -1,0 +1,5 @@
+name = "python3-docutils"
+provider = "repology"
+
+[source]
+package = "python:docutils"

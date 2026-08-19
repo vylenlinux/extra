@@ -1,0 +1,5 @@
+name = "lxqt-qtplugin"
+provider = "repology"
+
+[source]
+package = "lxqt-qtplugin"

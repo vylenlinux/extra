@@ -1,0 +1,5 @@
+name = "slock"
+provider = "repology"
+
+[source]
+package = "slock"

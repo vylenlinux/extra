@@ -1,0 +1,6 @@
+name = "openmp"
+provider = "repology"
+
+[source]
+package = "llvm"
+dedup_key = "llvm"

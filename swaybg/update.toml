@@ -1,0 +1,5 @@
+name = "swaybg"
+provider = "repology"
+
+[source]
+package = "swaybg"

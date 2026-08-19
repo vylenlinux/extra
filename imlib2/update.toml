@@ -1,0 +1,5 @@
+name = "imlib2"
+provider = "repology"
+
+[source]
+package = "imlib2"

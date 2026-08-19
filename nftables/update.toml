@@ -1,0 +1,5 @@
+name = "nftables"
+provider = "repology"
+
+[source]
+package = "nftables"

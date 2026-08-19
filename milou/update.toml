@@ -1,0 +1,5 @@
+name = "milou"
+provider = "repology"
+
+[source]
+package = "milou"

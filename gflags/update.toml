@@ -1,0 +1,5 @@
+name = "gflags"
+provider = "repology"
+
+[source]
+package = "gflags"

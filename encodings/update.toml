@@ -1,0 +1,5 @@
+name = "encodings"
+provider = "repology"
+
+[source]
+package = "encodings"

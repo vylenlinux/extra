@@ -1,0 +1,5 @@
+name = "fluxbox"
+provider = "repology"
+
+[source]
+package = "fluxbox"

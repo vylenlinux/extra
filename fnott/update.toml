@@ -1,0 +1,5 @@
+name = "fnott"
+provider = "repology"
+
+[source]
+package = "fnott"

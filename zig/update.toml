@@ -1,0 +1,5 @@
+name = "zig"
+provider = "repology"
+
+[source]
+package = "zig"

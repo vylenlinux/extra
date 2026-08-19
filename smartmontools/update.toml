@@ -1,0 +1,5 @@
+name = "smartmontools"
+provider = "repology"
+
+[source]
+package = "smartmontools"

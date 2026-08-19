@@ -1,0 +1,5 @@
+name = "libsoxr"
+provider = "repology"
+
+[source]
+package = "soxr"

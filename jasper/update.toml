@@ -1,0 +1,5 @@
+name = "jasper"
+provider = "repology"
+
+[source]
+package = "jasper"

@@ -1,0 +1,5 @@
+name = "libfontenc"
+provider = "repology"
+
+[source]
+package = "libfontenc"

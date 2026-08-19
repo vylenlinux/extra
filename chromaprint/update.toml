@@ -1,0 +1,5 @@
+name = "chromaprint"
+provider = "repology"
+
+[source]
+package = "chromaprint"

@@ -1,0 +1,5 @@
+name = "ruby"
+provider = "repology"
+
+[source]
+package = "ruby"

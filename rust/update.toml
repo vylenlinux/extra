@@ -1,0 +1,5 @@
+name = "rust"
+provider = "repology"
+
+[source]
+package = "rust"

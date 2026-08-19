@@ -1,0 +1,5 @@
+name = "python3-lark-parser"
+provider = "repology"
+
+[source]
+package = "python:lark-parser"

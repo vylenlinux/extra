@@ -1,0 +1,5 @@
+name = "libxcb"
+provider = "repology"
+
+[source]
+package = "libxcb"

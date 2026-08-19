@@ -1,0 +1,5 @@
+name = "perl-file-sharedir"
+provider = "repology"
+
+[source]
+package = "perl:file-sharedir"

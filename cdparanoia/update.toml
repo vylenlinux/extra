@@ -1,0 +1,5 @@
+name = "cdparanoia"
+provider = "repology"
+
+[source]
+package = "cdparanoia"

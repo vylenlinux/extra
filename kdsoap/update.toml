@@ -1,0 +1,5 @@
+name = "kdsoap"
+provider = "repology"
+
+[source]
+package = "kdsoap"

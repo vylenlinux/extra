@@ -1,0 +1,5 @@
+name = "libnfs"
+provider = "repology"
+
+[source]
+package = "libnfs"

@@ -1,0 +1,5 @@
+name = "gsettings-desktop-schemas"
+provider = "repology"
+
+[source]
+package = "gsettings-desktop-schemas"

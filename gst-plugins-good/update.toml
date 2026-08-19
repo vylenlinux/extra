@@ -1,0 +1,6 @@
+name = "gst-plugins-good"
+provider = "repology"
+
+[source]
+package = "gstreamer"
+dedup_key = "gstreamer"

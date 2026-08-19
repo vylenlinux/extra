@@ -1,0 +1,5 @@
+name = "irssi"
+provider = "repology"
+
+[source]
+package = "irssi"

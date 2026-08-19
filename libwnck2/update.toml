@@ -1,0 +1,5 @@
+name = "libwnck2"
+provider = "repology"
+
+[source]
+package = "libwnck2"

@@ -1,0 +1,5 @@
+name = "libgsf"
+provider = "repology"
+
+[source]
+package = "libgsf"

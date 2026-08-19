@@ -1,0 +1,5 @@
+name = "kidletime"
+provider = "repology"
+
+[source]
+package = "kidletime"

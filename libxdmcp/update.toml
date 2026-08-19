@@ -1,0 +1,5 @@
+name = "libxdmcp"
+provider = "repology"
+
+[source]
+package = "libxdmcp"

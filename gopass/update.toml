@@ -1,0 +1,5 @@
+name = "gopass"
+provider = "repology"
+
+[source]
+package = "gopass-gopasspw"

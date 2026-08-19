@@ -1,0 +1,5 @@
+name = "xf86-video-ati"
+provider = "repology"
+
+[source]
+package = "xf86-video-ati"

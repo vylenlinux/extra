@@ -1,0 +1,5 @@
+name = "syndication"
+provider = "repology"
+
+[source]
+package = "syndication"

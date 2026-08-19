@@ -1,0 +1,5 @@
+name = "gwenview"
+provider = "repology"
+
+[source]
+package = "gwenview"

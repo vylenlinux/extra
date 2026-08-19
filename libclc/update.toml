@@ -1,0 +1,6 @@
+name = "libclc"
+provider = "repology"
+
+[source]
+package = "llvm"
+dedup_key = "llvm"

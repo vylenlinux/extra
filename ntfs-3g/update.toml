@@ -1,0 +1,5 @@
+name = "ntfs-3g"
+provider = "repology"
+
+[source]
+package = "ntfs-3g"

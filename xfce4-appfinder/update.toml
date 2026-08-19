@@ -1,0 +1,5 @@
+name = "xfce4-appfinder"
+provider = "repology"
+
+[source]
+package = "xfce4-appfinder"

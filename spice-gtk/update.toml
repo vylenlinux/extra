@@ -1,0 +1,5 @@
+name = "spice-gtk"
+provider = "repology"
+
+[source]
+package = "spice-gtk"

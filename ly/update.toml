@@ -1,0 +1,5 @@
+name = "ly"
+provider = "repology"
+
+[source]
+package = "ly"

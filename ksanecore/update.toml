@@ -1,0 +1,5 @@
+name = "ksanecore"
+provider = "repology"
+
+[source]
+package = "ksanecore"

@@ -1,0 +1,5 @@
+name = "rnnoise"
+provider = "repology"
+
+[source]
+package = "rnnoise-xiph"

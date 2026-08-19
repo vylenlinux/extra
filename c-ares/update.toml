@@ -1,0 +1,5 @@
+name = "c-ares"
+provider = "repology"
+
+[source]
+package = "c-ares"

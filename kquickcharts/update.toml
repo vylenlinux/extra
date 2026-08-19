@@ -1,0 +1,5 @@
+name = "kquickcharts"
+provider = "repology"
+
+[source]
+package = "kquickcharts"

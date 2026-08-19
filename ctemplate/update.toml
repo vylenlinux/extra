@@ -1,0 +1,5 @@
+name = "ctemplate"
+provider = "repology"
+
+[source]
+package = "ctemplate"

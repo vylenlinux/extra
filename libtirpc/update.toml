@@ -1,0 +1,5 @@
+name = "libtirpc"
+provider = "repology"
+
+[source]
+package = "libtirpc"

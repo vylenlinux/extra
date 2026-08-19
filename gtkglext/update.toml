@@ -1,0 +1,5 @@
+name = "gtkglext"
+provider = "repology"
+
+[source]
+package = "gtkglext"

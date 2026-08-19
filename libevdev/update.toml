@@ -1,0 +1,5 @@
+name = "libevdev"
+provider = "repology"
+
+[source]
+package = "libevdev"

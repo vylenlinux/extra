@@ -1,0 +1,5 @@
+name = "xcb-util-renderutil"
+provider = "repology"
+
+[source]
+package = "xcb-util-renderutil"

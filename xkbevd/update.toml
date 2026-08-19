@@ -1,0 +1,5 @@
+name = "xkbevd"
+provider = "repology"
+
+[source]
+package = "xkbevd"

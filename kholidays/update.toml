@@ -1,0 +1,5 @@
+name = "kholidays"
+provider = "repology"
+
+[source]
+package = "kholidays"

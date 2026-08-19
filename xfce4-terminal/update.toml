@@ -1,0 +1,5 @@
+name = "xfce4-terminal"
+provider = "repology"
+
+[source]
+package = "xfce4-terminal"

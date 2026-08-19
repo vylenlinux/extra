@@ -1,0 +1,5 @@
+name = "gpicview"
+provider = "repology"
+
+[source]
+package = "gpicview"

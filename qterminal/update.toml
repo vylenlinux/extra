@@ -1,0 +1,5 @@
+name = "qterminal"
+provider = "repology"
+
+[source]
+package = "qterminal"

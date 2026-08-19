@@ -1,0 +1,5 @@
+name = "libinput"
+provider = "repology"
+
+[source]
+package = "libinput"

@@ -1,0 +1,5 @@
+name = "libgpg-error"
+provider = "repology"
+
+[source]
+package = "libgpg-error"

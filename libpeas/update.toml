@@ -1,0 +1,5 @@
+name = "libpeas"
+provider = "repology"
+
+[source]
+package = "libpeas"

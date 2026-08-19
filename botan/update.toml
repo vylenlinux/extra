@@ -1,0 +1,5 @@
+name = "botan"
+provider = "repology"
+
+[source]
+package = "botan"

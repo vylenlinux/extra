@@ -1,0 +1,5 @@
+name = "libxi"
+provider = "repology"
+
+[source]
+package = "libxi"

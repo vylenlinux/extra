@@ -1,0 +1,5 @@
+name = "kiconthemes"
+provider = "repology"
+
+[source]
+package = "kiconthemes"

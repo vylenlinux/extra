@@ -1,0 +1,5 @@
+name = "prison"
+provider = "repology"
+
+[source]
+package = "prison"

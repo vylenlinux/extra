@@ -1,0 +1,5 @@
+name = "lynx"
+provider = "repology"
+
+[source]
+package = "lynx"

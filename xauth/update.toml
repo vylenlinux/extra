@@ -1,0 +1,5 @@
+name = "xauth"
+provider = "repology"
+
+[source]
+package = "xauth"

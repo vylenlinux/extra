@@ -1,0 +1,5 @@
+name = "plasma-meta"
+provider = "repology"
+
+[source]
+package = "plasma-meta"

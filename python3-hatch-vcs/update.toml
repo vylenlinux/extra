@@ -1,0 +1,5 @@
+name = "python3-hatch-vcs"
+provider = "repology"
+
+[source]
+package = "python:hatch-vcs"

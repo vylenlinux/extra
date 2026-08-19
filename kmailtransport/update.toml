@@ -1,0 +1,5 @@
+name = "kmailtransport"
+provider = "repology"
+
+[source]
+package = "kmailtransport"

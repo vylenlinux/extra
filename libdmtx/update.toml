@@ -1,0 +1,5 @@
+name = "libdmtx"
+provider = "repology"
+
+[source]
+package = "libdmtx"

@@ -1,0 +1,5 @@
+name = "libnvme"
+provider = "repology"
+
+[source]
+package = "libnvme"

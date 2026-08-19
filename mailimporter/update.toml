@@ -1,0 +1,5 @@
+name = "mailimporter"
+provider = "repology"
+
+[source]
+package = "mailimporter"

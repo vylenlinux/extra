@@ -1,0 +1,5 @@
+name = "qtkeychain6"
+provider = "repology"
+
+[source]
+package = "qtkeychain6"

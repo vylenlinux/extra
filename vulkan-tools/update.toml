@@ -1,0 +1,5 @@
+name = "vulkan-tools"
+provider = "repology"
+
+[source]
+package = "vulkan-tools"

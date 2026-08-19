@@ -1,0 +1,5 @@
+name = "libquotient"
+provider = "repology"
+
+[source]
+package = "libquotient"

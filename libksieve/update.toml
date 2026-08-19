@@ -1,0 +1,5 @@
+name = "libksieve"
+provider = "repology"
+
+[source]
+package = "libksieve"

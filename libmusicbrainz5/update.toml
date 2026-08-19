@@ -1,0 +1,5 @@
+name = "libmusicbrainz5"
+provider = "repology"
+
+[source]
+package = "libmusicbrainz"

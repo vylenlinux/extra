@@ -1,0 +1,5 @@
+name = "kpipewire"
+provider = "repology"
+
+[source]
+package = "kpipewire"

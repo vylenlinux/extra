@@ -1,0 +1,5 @@
+name = "dunst"
+provider = "repology"
+
+[source]
+package = "dunst"

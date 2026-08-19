@@ -1,0 +1,5 @@
+name = "python3-six"
+provider = "repology"
+
+[source]
+package = "python:six"

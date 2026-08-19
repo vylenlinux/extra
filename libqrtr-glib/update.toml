@@ -1,0 +1,5 @@
+name = "libqrtr-glib"
+provider = "repology"
+
+[source]
+package = "libqrtr-glib"

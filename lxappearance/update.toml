@@ -1,0 +1,5 @@
+name = "lxappearance"
+provider = "repology"
+
+[source]
+package = "lxappearance"

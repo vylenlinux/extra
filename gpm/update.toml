@@ -1,0 +1,5 @@
+name = "gpm"
+provider = "repology"
+
+[source]
+package = "gpm"

@@ -1,0 +1,5 @@
+name = "cunit"
+provider = "repology"
+
+[source]
+package = "cunit"

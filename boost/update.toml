@@ -1,0 +1,5 @@
+name = "boost"
+provider = "repology"
+
+[source]
+package = "boost"

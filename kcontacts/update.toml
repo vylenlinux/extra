@@ -1,0 +1,5 @@
+name = "kcontacts"
+provider = "repology"
+
+[source]
+package = "kcontacts"

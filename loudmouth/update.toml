@@ -1,0 +1,5 @@
+name = "loudmouth"
+provider = "repology"
+
+[source]
+package = "loudmouth"

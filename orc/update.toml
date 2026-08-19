@@ -1,0 +1,5 @@
+name = "orc"
+provider = "repology"
+
+[source]
+package = "gstreamer-orc"

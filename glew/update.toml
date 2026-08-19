@@ -1,0 +1,5 @@
+name = "glew"
+provider = "repology"
+
+[source]
+package = "glew"

@@ -1,0 +1,5 @@
+name = "gmrun"
+provider = "repology"
+
+[source]
+package = "gmrun"

@@ -1,0 +1,5 @@
+name = "python3-pycryptodome"
+provider = "repology"
+
+[source]
+package = "python:pycryptodome"

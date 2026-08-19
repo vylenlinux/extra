@@ -1,0 +1,5 @@
+name = "appstream"
+provider = "repology"
+
+[source]
+package = "appstream"

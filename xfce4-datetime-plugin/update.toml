@@ -1,0 +1,5 @@
+name = "xfce4-datetime-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-datetime-plugin"

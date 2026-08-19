@@ -1,0 +1,5 @@
+name = "libsfdo"
+provider = "repology"
+
+[source]
+package = "libsfdo"

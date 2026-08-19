@@ -1,0 +1,5 @@
+name = "osinfo-db"
+provider = "repology"
+
+[source]
+package = "osinfo-db"

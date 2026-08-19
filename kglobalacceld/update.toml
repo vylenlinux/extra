@@ -1,0 +1,5 @@
+name = "kglobalacceld"
+provider = "repology"
+
+[source]
+package = "kglobalacceld"

@@ -1,0 +1,5 @@
+name = "libxext"
+provider = "repology"
+
+[source]
+package = "libxext"

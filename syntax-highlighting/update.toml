@@ -1,0 +1,5 @@
+name = "syntax-highlighting"
+provider = "repology"
+
+[source]
+package = "syntax-highlighting"

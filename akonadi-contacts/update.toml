@@ -1,0 +1,5 @@
+name = "akonadi-contacts"
+provider = "repology"
+
+[source]
+package = "akonadi-contacts"

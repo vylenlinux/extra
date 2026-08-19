@@ -1,0 +1,5 @@
+name = "libxau"
+provider = "repology"
+
+[source]
+package = "libxau"

@@ -1,0 +1,5 @@
+name = "nsxiv"
+provider = "repology"
+
+[source]
+package = "nsxiv"

@@ -1,0 +1,5 @@
+name = "fcft"
+provider = "repology"
+
+[source]
+package = "fcft"

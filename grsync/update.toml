@@ -1,0 +1,5 @@
+name = "grsync"
+provider = "repology"
+
+[source]
+package = "grsync"

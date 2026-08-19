@@ -1,0 +1,5 @@
+name = "plasma-pa"
+provider = "repology"
+
+[source]
+package = "plasma-pa"

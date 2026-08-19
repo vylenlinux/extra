@@ -1,0 +1,5 @@
+name = "libprocps"
+provider = "repology"
+
+[source]
+package = "libprocps"

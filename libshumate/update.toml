@@ -1,0 +1,5 @@
+name = "libshumate"
+provider = "repology"
+
+[source]
+package = "libshumate"

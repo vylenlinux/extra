@@ -1,0 +1,5 @@
+name = "libxshmfence"
+provider = "repology"
+
+[source]
+package = "libxshmfence"

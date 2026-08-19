@@ -1,0 +1,5 @@
+name = "libsamplerate"
+provider = "repology"
+
+[source]
+package = "libsamplerate"

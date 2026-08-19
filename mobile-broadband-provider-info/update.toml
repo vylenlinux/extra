@@ -1,0 +1,5 @@
+name = "mobile-broadband-provider-info"
+provider = "repology"
+
+[source]
+package = "mobile-broadband-provider-info"

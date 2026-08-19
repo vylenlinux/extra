@@ -1,0 +1,5 @@
+name = "signon-ui"
+provider = "repology"
+
+[source]
+package = "signon-ui"

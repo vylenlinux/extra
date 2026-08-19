@@ -1,0 +1,5 @@
+name = "libmpeg2"
+provider = "repology"
+
+[source]
+package = "libmpeg2"

@@ -1,0 +1,5 @@
+name = "libqtxdg"
+provider = "repology"
+
+[source]
+package = "libqtxdg"

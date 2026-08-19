@@ -1,0 +1,5 @@
+name = "gdb"
+provider = "repology"
+
+[source]
+package = "gdb"

@@ -1,0 +1,5 @@
+name = "python3-editables"
+provider = "repology"
+
+[source]
+package = "python:editables"

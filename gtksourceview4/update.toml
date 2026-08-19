@@ -1,0 +1,5 @@
+name = "gtksourceview4"
+provider = "repology"
+
+[source]
+package = "gtksourceview"

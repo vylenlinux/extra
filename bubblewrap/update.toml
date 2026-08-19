@@ -1,0 +1,5 @@
+name = "bubblewrap"
+provider = "repology"
+
+[source]
+package = "bubblewrap"

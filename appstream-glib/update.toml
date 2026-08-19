@@ -1,0 +1,5 @@
+name = "appstream-glib"
+provider = "repology"
+
+[source]
+package = "appstream-glib"

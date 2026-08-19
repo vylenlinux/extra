@@ -1,0 +1,5 @@
+name = "mlocate"
+provider = "repology"
+
+[source]
+package = "mlocate"

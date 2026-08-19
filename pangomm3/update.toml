@@ -1,0 +1,5 @@
+name = "pangomm3"
+provider = "repology"
+
+[source]
+package = "pangomm3"

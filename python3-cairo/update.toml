@@ -1,0 +1,5 @@
+name = "python3-cairo"
+provider = "repology"
+
+[source]
+package = "python:pycairo"

@@ -1,0 +1,5 @@
+name = "lxqt-session"
+provider = "repology"
+
+[source]
+package = "lxqt-session"

@@ -1,0 +1,5 @@
+name = "lxqt-wayland-session"
+provider = "repology"
+
+[source]
+package = "lxqt-wayland-session"

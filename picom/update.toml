@@ -1,0 +1,5 @@
+name = "picom"
+provider = "repology"
+
+[source]
+package = "picom"

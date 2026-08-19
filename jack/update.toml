@@ -1,0 +1,5 @@
+name = "jack"
+provider = "repology"
+
+[source]
+package = "jack-audio-connection-kit"

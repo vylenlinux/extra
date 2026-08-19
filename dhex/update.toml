@@ -1,0 +1,5 @@
+name = "dhex"
+provider = "repology"
+
+[source]
+package = "dhex"

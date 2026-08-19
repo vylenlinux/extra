@@ -1,0 +1,5 @@
+name = "hwdata"
+provider = "repology"
+
+[source]
+package = "hwdata"

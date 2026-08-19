@@ -1,0 +1,5 @@
+name = "libpciaccess"
+provider = "repology"
+
+[source]
+package = "libpciaccess"

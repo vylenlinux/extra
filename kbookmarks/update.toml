@@ -1,0 +1,5 @@
+name = "kbookmarks"
+provider = "repology"
+
+[source]
+package = "kbookmarks"

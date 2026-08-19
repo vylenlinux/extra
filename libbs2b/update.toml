@@ -1,0 +1,5 @@
+name = "libbs2b"
+provider = "repology"
+
+[source]
+package = "libbs2b"

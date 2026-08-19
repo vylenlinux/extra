@@ -1,0 +1,5 @@
+name = "jsoncpp"
+provider = "repology"
+
+[source]
+package = "jsoncpp"

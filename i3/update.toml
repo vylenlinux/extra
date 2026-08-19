@@ -1,0 +1,5 @@
+name = "i3"
+provider = "repology"
+
+[source]
+package = "i3"

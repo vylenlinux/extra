@@ -1,0 +1,5 @@
+name = "libqmi"
+provider = "repology"
+
+[source]
+package = "libqmi"

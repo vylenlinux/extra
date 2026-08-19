@@ -1,0 +1,5 @@
+name = "pango"
+provider = "repology"
+
+[source]
+package = "pango"

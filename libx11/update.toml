@@ -1,0 +1,5 @@
+name = "libx11"
+provider = "repology"
+
+[source]
+package = "libx11"

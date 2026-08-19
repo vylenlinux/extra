@@ -1,0 +1,5 @@
+name = "mate-icon-theme-faenza"
+provider = "repology"
+
+[source]
+package = "mate-icon-theme-faenza"

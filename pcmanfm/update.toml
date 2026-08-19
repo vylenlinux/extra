@@ -1,0 +1,5 @@
+name = "pcmanfm"
+provider = "repology"
+
+[source]
+package = "pcmanfm"

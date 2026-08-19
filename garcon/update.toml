@@ -1,0 +1,5 @@
+name = "garcon"
+provider = "repology"
+
+[source]
+package = "garcon"

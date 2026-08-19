@@ -1,0 +1,5 @@
+name = "kdecoration"
+provider = "repology"
+
+[source]
+package = "kdecoration"

@@ -1,0 +1,5 @@
+name = "kstatusnotifieritem"
+provider = "repology"
+
+[source]
+package = "kstatusnotifieritem"

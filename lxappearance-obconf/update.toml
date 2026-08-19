@@ -1,0 +1,5 @@
+name = "lxappearance-obconf"
+provider = "repology"
+
+[source]
+package = "lxappearance-obconf"

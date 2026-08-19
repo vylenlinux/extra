@@ -1,0 +1,5 @@
+name = "mate-screensaver"
+provider = "repology"
+
+[source]
+package = "mate-screensaver"

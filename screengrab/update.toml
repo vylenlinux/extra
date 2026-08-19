@@ -1,0 +1,5 @@
+name = "screengrab"
+provider = "repology"
+
+[source]
+package = "screengrab"

@@ -1,0 +1,5 @@
+name = "libxfce4ui"
+provider = "repology"
+
+[source]
+package = "libxfce4ui"

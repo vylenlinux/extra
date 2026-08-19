@@ -1,0 +1,5 @@
+name = "ktextwidgets"
+provider = "repology"
+
+[source]
+package = "ktextwidgets"

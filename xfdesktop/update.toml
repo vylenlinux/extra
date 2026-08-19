@@ -1,0 +1,5 @@
+name = "xfdesktop"
+provider = "repology"
+
+[source]
+package = "xfdesktop"

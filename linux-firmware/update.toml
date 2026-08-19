@@ -1,0 +1,5 @@
+name = "linux-firmware"
+provider = "repology"
+
+[source]
+package = "linux-firmware"

@@ -1,0 +1,5 @@
+name = "grantleetheme"
+provider = "repology"
+
+[source]
+package = "grantleetheme"

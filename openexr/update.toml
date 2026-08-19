@@ -1,0 +1,5 @@
+name = "openexr"
+provider = "repology"
+
+[source]
+package = "openexr"

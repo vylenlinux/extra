@@ -1,0 +1,5 @@
+name = "fontforge"
+provider = "repology"
+
+[source]
+package = "fontforge"

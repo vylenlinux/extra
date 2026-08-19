@@ -1,0 +1,5 @@
+name = "font-adobe-100dpi"
+provider = "repology"
+
+[source]
+package = "fonts:adobe-100dpi"

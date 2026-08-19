@@ -1,0 +1,5 @@
+name = "python3-distlib"
+provider = "repology"
+
+[source]
+package = "python:distlib"

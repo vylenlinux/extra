@@ -1,0 +1,5 @@
+name = "sgml-common"
+provider = "repology"
+
+[source]
+package = "sgml-common"

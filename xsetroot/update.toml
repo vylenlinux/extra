@@ -1,0 +1,5 @@
+name = "xsetroot"
+provider = "repology"
+
+[source]
+package = "xsetroot"

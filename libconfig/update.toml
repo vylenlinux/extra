@@ -1,0 +1,5 @@
+name = "libconfig"
+provider = "repology"
+
+[source]
+package = "libconfig-hyperrealm"

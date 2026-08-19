@@ -1,0 +1,5 @@
+name = "xfce4-power-manager"
+provider = "repology"
+
+[source]
+package = "xfce4-power-manager"

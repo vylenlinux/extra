@@ -1,0 +1,5 @@
+name = "qt6-multimedia"
+provider = "repology"
+
+[source]
+package = "qt6-multimedia"

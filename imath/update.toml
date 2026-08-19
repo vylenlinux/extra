@@ -1,0 +1,5 @@
+name = "imath"
+provider = "repology"
+
+[source]
+package = "imath"

@@ -1,0 +1,5 @@
+name = "qemu"
+provider = "repology"
+
+[source]
+package = "qemu"

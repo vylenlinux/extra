@@ -1,0 +1,5 @@
+name = "fontconfig"
+provider = "repology"
+
+[source]
+package = "fontconfig"

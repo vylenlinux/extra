@@ -1,0 +1,5 @@
+name = "kio-extras"
+provider = "repology"
+
+[source]
+package = "kio-extras"

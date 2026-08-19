@@ -1,0 +1,5 @@
+name = "elinks"
+provider = "repology"
+
+[source]
+package = "elinks"

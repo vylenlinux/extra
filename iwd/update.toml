@@ -1,0 +1,5 @@
+name = "iwd"
+provider = "repology"
+
+[source]
+package = "iwd"

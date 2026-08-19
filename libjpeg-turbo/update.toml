@@ -1,0 +1,5 @@
+name = "libjpeg-turbo"
+provider = "repology"
+
+[source]
+package = "libjpeg-turbo"

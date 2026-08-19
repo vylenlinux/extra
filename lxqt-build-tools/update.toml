@@ -1,0 +1,5 @@
+name = "lxqt-build-tools"
+provider = "repology"
+
+[source]
+package = "lxqt-build-tools"

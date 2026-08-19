@@ -1,0 +1,5 @@
+name = "luajit"
+provider = "repology"
+
+[source]
+package = "luajit"

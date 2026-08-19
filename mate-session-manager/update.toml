@@ -1,0 +1,5 @@
+name = "mate-session-manager"
+provider = "repology"
+
+[source]
+package = "mate-session-manager"

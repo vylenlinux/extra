@@ -1,0 +1,5 @@
+name = "harfbuzz"
+provider = "repology"
+
+[source]
+package = "harfbuzz"

@@ -1,0 +1,5 @@
+name = "gtk-doc"
+provider = "repology"
+
+[source]
+package = "gtk-doc"

@@ -1,0 +1,5 @@
+name = "xdg-desktop-portal-kde"
+provider = "repology"
+
+[source]
+package = "xdg-desktop-portal-kde"

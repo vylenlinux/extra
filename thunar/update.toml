@@ -1,0 +1,5 @@
+name = "thunar"
+provider = "repology"
+
+[source]
+package = "thunar"

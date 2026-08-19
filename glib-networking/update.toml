@@ -1,0 +1,5 @@
+name = "glib-networking"
+provider = "repology"
+
+[source]
+package = "glib-networking"

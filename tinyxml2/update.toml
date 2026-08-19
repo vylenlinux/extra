@@ -1,0 +1,5 @@
+name = "tinyxml2"
+provider = "repology"
+
+[source]
+package = "tinyxml"

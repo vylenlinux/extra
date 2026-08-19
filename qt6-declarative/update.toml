@@ -1,0 +1,5 @@
+name = "qt6-declarative"
+provider = "repology"
+
+[source]
+package = "qt6-declarative"

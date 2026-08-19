@@ -1,0 +1,5 @@
+name = "xxhash"
+provider = "repology"
+
+[source]
+package = "xxhash"

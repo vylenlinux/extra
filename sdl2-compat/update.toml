@@ -1,0 +1,5 @@
+name = "sdl2-compat"
+provider = "repology"
+
+[source]
+package = "sdl2-compat"

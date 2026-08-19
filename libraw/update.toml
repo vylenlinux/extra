@@ -1,0 +1,5 @@
+name = "libraw"
+provider = "repology"
+
+[source]
+package = "libraw"

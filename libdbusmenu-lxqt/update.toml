@@ -1,0 +1,5 @@
+name = "libdbusmenu-lxqt"
+provider = "repology"
+
+[source]
+package = "libdbusmenu-lxqt"

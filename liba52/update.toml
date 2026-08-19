@@ -1,0 +1,5 @@
+name = "liba52"
+provider = "repology"
+
+[source]
+package = "liba52"

@@ -1,0 +1,5 @@
+name = "keyutils"
+provider = "repology"
+
+[source]
+package = "keyutils"

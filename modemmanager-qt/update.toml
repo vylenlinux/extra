@@ -1,0 +1,5 @@
+name = "modemmanager-qt"
+provider = "repology"
+
+[source]
+package = "modemmanager-qt"

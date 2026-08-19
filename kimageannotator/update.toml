@@ -1,0 +1,5 @@
+name = "kimageannotator"
+provider = "repology"
+
+[source]
+package = "kimageannotator"

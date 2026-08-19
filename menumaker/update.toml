@@ -1,0 +1,5 @@
+name = "menumaker"
+provider = "repology"
+
+[source]
+package = "menumaker"

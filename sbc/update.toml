@@ -1,0 +1,5 @@
+name = "sbc"
+provider = "repology"
+
+[source]
+package = "sbc"

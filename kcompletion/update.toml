@@ -1,0 +1,5 @@
+name = "kcompletion"
+provider = "repology"
+
+[source]
+package = "kcompletion"

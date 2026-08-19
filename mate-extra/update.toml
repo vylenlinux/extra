@@ -1,0 +1,5 @@
+name = "mate-extra"
+provider = "repology"
+
+[source]
+package = "mate-extra"

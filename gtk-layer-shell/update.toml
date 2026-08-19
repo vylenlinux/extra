@@ -1,0 +1,5 @@
+name = "gtk-layer-shell"
+provider = "repology"
+
+[source]
+package = "gtk-layer-shell"

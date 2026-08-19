@@ -1,0 +1,5 @@
+name = "bspwm"
+provider = "repology"
+
+[source]
+package = "bspwm"

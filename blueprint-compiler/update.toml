@@ -1,0 +1,5 @@
+name = "blueprint-compiler"
+provider = "repology"
+
+[source]
+package = "blueprint-compiler"

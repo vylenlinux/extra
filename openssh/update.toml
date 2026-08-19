@@ -1,0 +1,5 @@
+name = "openssh"
+provider = "repology"
+
+[source]
+package = "openssh"

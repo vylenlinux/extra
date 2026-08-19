@@ -1,0 +1,5 @@
+name = "tdb"
+provider = "repology"
+
+[source]
+package = "tdb"

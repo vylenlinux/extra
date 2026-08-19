@@ -1,0 +1,5 @@
+name = "lmdb"
+provider = "repology"
+
+[source]
+package = "lmdb"

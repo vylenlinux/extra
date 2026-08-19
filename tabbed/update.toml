@@ -1,0 +1,5 @@
+name = "tabbed"
+provider = "repology"
+
+[source]
+package = "tabbed"

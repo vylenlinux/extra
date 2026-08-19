@@ -1,0 +1,5 @@
+name = "oxygen"
+provider = "repology"
+
+[source]
+package = "oxygen"

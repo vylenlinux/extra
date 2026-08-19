@@ -1,0 +1,5 @@
+name = "herbstluftwm"
+provider = "repology"
+
+[source]
+package = "herbstluftwm"

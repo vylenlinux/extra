@@ -1,0 +1,5 @@
+name = "libcue"
+provider = "repology"
+
+[source]
+package = "libcue"

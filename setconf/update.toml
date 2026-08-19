@@ -1,0 +1,5 @@
+name = "setconf"
+provider = "repology"
+
+[source]
+package = "setconf"

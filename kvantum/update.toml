@@ -1,0 +1,5 @@
+name = "kvantum"
+provider = "repology"
+
+[source]
+package = "kvantum"

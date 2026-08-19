@@ -1,0 +1,5 @@
+name = "mailcommon"
+provider = "repology"
+
+[source]
+package = "mailcommon"

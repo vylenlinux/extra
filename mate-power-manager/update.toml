@@ -1,0 +1,5 @@
+name = "mate-power-manager"
+provider = "repology"
+
+[source]
+package = "mate-power-manager"

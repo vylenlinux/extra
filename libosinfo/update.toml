@@ -1,0 +1,5 @@
+name = "libosinfo"
+provider = "repology"
+
+[source]
+package = "libosinfo"

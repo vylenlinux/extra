@@ -1,0 +1,5 @@
+name = "dwl"
+provider = "repology"
+
+[source]
+package = "dwl"

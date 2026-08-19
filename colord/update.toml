@@ -1,0 +1,5 @@
+name = "colord"
+provider = "repology"
+
+[source]
+package = "colord"

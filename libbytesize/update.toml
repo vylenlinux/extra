@@ -1,0 +1,5 @@
+name = "libbytesize"
+provider = "repology"
+
+[source]
+package = "libbytesize"

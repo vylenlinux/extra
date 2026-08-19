@@ -1,0 +1,5 @@
+name = "kmime"
+provider = "repology"
+
+[source]
+package = "kmime"

@@ -1,0 +1,5 @@
+name = "libwpe"
+provider = "repology"
+
+[source]
+package = "libwpe"

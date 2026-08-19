@@ -1,0 +1,5 @@
+name = "plasma-systemmonitor"
+provider = "repology"
+
+[source]
+package = "plasma-systemmonitor"

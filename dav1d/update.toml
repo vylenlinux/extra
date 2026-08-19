@@ -1,0 +1,5 @@
+name = "dav1d"
+provider = "repology"
+
+[source]
+package = "dav1d"

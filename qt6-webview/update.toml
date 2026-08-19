@@ -1,0 +1,5 @@
+name = "qt6-webview"
+provider = "repology"
+
+[source]
+package = "qt6-webview"

@@ -1,0 +1,5 @@
+name = "spirv-headers"
+provider = "repology"
+
+[source]
+package = "spirv-headers"

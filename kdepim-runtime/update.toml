@@ -1,0 +1,5 @@
+name = "kdepim-runtime"
+provider = "repology"
+
+[source]
+package = "kdepim-runtime"

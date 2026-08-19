@@ -1,0 +1,5 @@
+name = "grub"
+provider = "repology"
+
+[source]
+package = "grub"

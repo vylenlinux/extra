@@ -1,0 +1,5 @@
+name = "libbsd"
+provider = "repology"
+
+[source]
+package = "libbsd"

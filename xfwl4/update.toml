@@ -1,0 +1,5 @@
+name = "xfwl4"
+provider = "repology"
+
+[source]
+package = "xfwl4"

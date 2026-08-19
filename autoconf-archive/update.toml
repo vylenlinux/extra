@@ -1,0 +1,5 @@
+name = "autoconf-archive"
+provider = "repology"
+
+[source]
+package = "autoconf-archive"

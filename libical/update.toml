@@ -1,0 +1,5 @@
+name = "libical"
+provider = "repology"
+
+[source]
+package = "libical"

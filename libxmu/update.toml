@@ -1,0 +1,5 @@
+name = "libxmu"
+provider = "repology"
+
+[source]
+package = "libxmu"

@@ -1,0 +1,5 @@
+name = "xfce4-mpc-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-mpc-plugin"

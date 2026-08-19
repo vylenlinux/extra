@@ -1,0 +1,5 @@
+name = "double-conversion"
+provider = "repology"
+
+[source]
+package = "double-conversion"

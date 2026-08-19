@@ -1,0 +1,5 @@
+name = "kcalc"
+provider = "repology"
+
+[source]
+package = "kcalc"

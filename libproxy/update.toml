@@ -1,0 +1,5 @@
+name = "libproxy"
+provider = "repology"
+
+[source]
+package = "libproxy"

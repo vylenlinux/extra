@@ -1,0 +1,5 @@
+name = "libusb"
+provider = "repology"
+
+[source]
+package = "libusb"

@@ -1,0 +1,5 @@
+name = "poppler-data"
+provider = "repology"
+
+[source]
+package = "poppler-data"

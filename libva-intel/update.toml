@@ -1,0 +1,5 @@
+name = "libva-intel"
+provider = "repology"
+
+[source]
+package = "libva-intel-driver-irql"

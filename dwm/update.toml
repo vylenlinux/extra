@@ -1,0 +1,5 @@
+name = "dwm"
+provider = "repology"
+
+[source]
+package = "dwm"

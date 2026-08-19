@@ -1,0 +1,5 @@
+name = "kguiaddons"
+provider = "repology"
+
+[source]
+package = "kguiaddons"

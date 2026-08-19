@@ -1,0 +1,5 @@
+name = "zxing-cpp"
+provider = "repology"
+
+[source]
+package = "zxing-cpp"

@@ -1,0 +1,5 @@
+name = "xorgproto"
+provider = "repology"
+
+[source]
+package = "xorgproto"

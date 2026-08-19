@@ -1,0 +1,5 @@
+name = "iotop"
+provider = "repology"
+
+[source]
+package = "iotop-c"

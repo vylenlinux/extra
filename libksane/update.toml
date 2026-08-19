@@ -1,0 +1,5 @@
+name = "libksane"
+provider = "repology"
+
+[source]
+package = "libksane"

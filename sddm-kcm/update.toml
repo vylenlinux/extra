@@ -1,0 +1,5 @@
+name = "sddm-kcm"
+provider = "repology"
+
+[source]
+package = "sddm-kcm"

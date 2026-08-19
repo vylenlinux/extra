@@ -1,0 +1,5 @@
+name = "obmenu-generator"
+provider = "repology"
+
+[source]
+package = "obmenu-generator"

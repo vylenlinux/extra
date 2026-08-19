@@ -1,0 +1,5 @@
+name = "kscreen"
+provider = "repology"
+
+[source]
+package = "kscreen"

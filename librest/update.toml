@@ -1,0 +1,5 @@
+name = "librest"
+provider = "repology"
+
+[source]
+package = "rest"

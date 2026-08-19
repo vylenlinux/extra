@@ -1,0 +1,5 @@
+name = "analitza"
+provider = "repology"
+
+[source]
+package = "analitza"

@@ -1,0 +1,5 @@
+name = "vala"
+provider = "repology"
+
+[source]
+package = "vala"

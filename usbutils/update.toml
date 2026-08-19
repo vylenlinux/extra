@@ -1,0 +1,5 @@
+name = "usbutils"
+provider = "repology"
+
+[source]
+package = "usbutils"

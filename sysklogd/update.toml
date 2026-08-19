@@ -1,0 +1,5 @@
+name = "sysklogd"
+provider = "repology"
+
+[source]
+package = "sysklogd"

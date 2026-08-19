@@ -1,0 +1,5 @@
+name = "acpid"
+provider = "repology"
+
+[source]
+package = "acpid"

@@ -1,0 +1,5 @@
+name = "libvarlink"
+provider = "repology"
+
+[source]
+package = "libvarlink"

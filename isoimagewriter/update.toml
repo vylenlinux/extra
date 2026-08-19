@@ -1,0 +1,5 @@
+name = "isoimagewriter"
+provider = "repology"
+
+[source]
+package = "isoimagewriter"

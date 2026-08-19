@@ -1,0 +1,5 @@
+name = "mupdf"
+provider = "repology"
+
+[source]
+package = "mupdf"

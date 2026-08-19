@@ -1,0 +1,5 @@
+name = "libebur128"
+provider = "repology"
+
+[source]
+package = "libebur128"

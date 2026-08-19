@@ -1,0 +1,5 @@
+name = "xdg-desktop-portal-lxqt"
+provider = "repology"
+
+[source]
+package = "xdg-desktop-portal-lxqt"

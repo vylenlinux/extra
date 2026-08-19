@@ -1,0 +1,5 @@
+name = "aspell"
+provider = "repology"
+
+[source]
+package = "aspell"

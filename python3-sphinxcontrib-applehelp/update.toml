@@ -1,0 +1,5 @@
+name = "python3-sphinxcontrib-applehelp"
+provider = "repology"
+
+[source]
+package = "python:sphinxcontrib-applehelp"

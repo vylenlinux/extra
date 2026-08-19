@@ -1,0 +1,5 @@
+name = "glu"
+provider = "repology"
+
+[source]
+package = "glu"

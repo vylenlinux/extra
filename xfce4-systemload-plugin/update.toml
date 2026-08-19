@@ -1,0 +1,5 @@
+name = "xfce4-systemload-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-systemload-plugin"

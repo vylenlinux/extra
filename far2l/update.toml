@@ -1,0 +1,5 @@
+name = "far2l"
+provider = "repology"
+
+[source]
+package = "far2l"

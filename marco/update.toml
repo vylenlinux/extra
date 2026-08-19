@@ -1,0 +1,5 @@
+name = "marco"
+provider = "repology"
+
+[source]
+package = "marco"

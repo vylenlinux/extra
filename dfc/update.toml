@@ -1,0 +1,5 @@
+name = "dfc"
+provider = "repology"
+
+[source]
+package = "dfc"

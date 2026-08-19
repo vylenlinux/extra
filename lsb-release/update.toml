@@ -1,0 +1,5 @@
+name = "lsb-release"
+provider = "repology"
+
+[source]
+package = "lsb-release"

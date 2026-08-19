@@ -1,0 +1,5 @@
+name = "pluma"
+provider = "repology"
+
+[source]
+package = "pluma"

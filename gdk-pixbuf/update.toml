@@ -1,0 +1,5 @@
+name = "gdk-pixbuf"
+provider = "repology"
+
+[source]
+package = "gdk-pixbuf"

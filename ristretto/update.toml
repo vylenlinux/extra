@@ -1,0 +1,5 @@
+name = "ristretto"
+provider = "repology"
+
+[source]
+package = "ristretto"

@@ -1,0 +1,5 @@
+name = "discount"
+provider = "repology"
+
+[source]
+package = "discount"

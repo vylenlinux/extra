@@ -1,0 +1,5 @@
+name = "udevil"
+provider = "repology"
+
+[source]
+package = "udevil"

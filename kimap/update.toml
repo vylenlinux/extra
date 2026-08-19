@@ -1,0 +1,5 @@
+name = "kimap"
+provider = "repology"
+
+[source]
+package = "kimap"

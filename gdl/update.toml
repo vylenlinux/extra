@@ -1,0 +1,5 @@
+name = "gdl"
+provider = "repology"
+
+[source]
+package = "gdl-gnome-docking-library"

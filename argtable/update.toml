@@ -1,0 +1,5 @@
+name = "argtable"
+provider = "repology"
+
+[source]
+package = "argtable2"

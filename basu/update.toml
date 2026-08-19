@@ -1,0 +1,5 @@
+name = "basu"
+provider = "repology"
+
+[source]
+package = "basu"

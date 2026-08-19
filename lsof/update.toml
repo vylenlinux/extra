@@ -1,0 +1,5 @@
+name = "lsof"
+provider = "repology"
+
+[source]
+package = "lsof"

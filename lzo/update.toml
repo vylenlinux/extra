@@ -1,0 +1,5 @@
+name = "lzo"
+provider = "repology"
+
+[source]
+package = "lzo"

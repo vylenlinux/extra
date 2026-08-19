@@ -1,0 +1,5 @@
+name = "signon-plugin-oauth2"
+provider = "repology"
+
+[source]
+package = "signon-plugin-oauth2"

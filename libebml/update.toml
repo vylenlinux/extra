@@ -1,0 +1,5 @@
+name = "libebml"
+provider = "repology"
+
+[source]
+package = "libebml"

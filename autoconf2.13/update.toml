@@ -1,0 +1,5 @@
+name = "autoconf2.13"
+provider = "repology"
+
+[source]
+package = "autoconf2.13"

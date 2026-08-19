@@ -1,0 +1,5 @@
+name = "libusb-compat"
+provider = "repology"
+
+[source]
+package = "libusb-compat"

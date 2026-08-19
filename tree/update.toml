@@ -1,0 +1,5 @@
+name = "tree"
+provider = "repology"
+
+[source]
+package = "tree"

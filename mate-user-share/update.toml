@@ -1,0 +1,5 @@
+name = "mate-user-share"
+provider = "repology"
+
+[source]
+package = "mate-user-share"

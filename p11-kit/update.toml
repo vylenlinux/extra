@@ -1,0 +1,5 @@
+name = "p11-kit"
+provider = "repology"
+
+[source]
+package = "p11-kit"

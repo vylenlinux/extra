@@ -1,0 +1,5 @@
+name = "cairomm"
+provider = "repology"
+
+[source]
+package = "cairomm"

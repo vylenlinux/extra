@@ -1,0 +1,5 @@
+name = "stb"
+provider = "repology"
+
+[source]
+package = "stb"

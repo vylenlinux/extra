@@ -1,0 +1,5 @@
+name = "kparts"
+provider = "repology"
+
+[source]
+package = "kparts"

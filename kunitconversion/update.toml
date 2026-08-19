@@ -1,0 +1,5 @@
+name = "kunitconversion"
+provider = "repology"
+
+[source]
+package = "kunitconversion"

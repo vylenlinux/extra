@@ -1,0 +1,5 @@
+name = "libgd"
+provider = "repology"
+
+[source]
+package = "gd"

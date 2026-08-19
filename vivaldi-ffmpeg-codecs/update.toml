@@ -1,0 +1,5 @@
+name = "vivaldi-ffmpeg-codecs"
+provider = "repology"
+
+[source]
+package = "vivaldi-ffmpeg-codecs"

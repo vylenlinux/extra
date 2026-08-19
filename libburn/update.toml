@@ -1,0 +1,5 @@
+name = "libburn"
+provider = "repology"
+
+[source]
+package = "libburn"

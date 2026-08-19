@@ -1,0 +1,5 @@
+name = "tllist"
+provider = "repology"
+
+[source]
+package = "tllist"

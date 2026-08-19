@@ -1,0 +1,6 @@
+name = "libfm-extra"
+provider = "repology"
+
+[source]
+package = "libfm"
+dedup_key = "libfm"

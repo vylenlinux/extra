@@ -1,0 +1,5 @@
+name = "qt6-datavis3d"
+provider = "repology"
+
+[source]
+package = "qt6-datavis3d"

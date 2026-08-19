@@ -1,0 +1,5 @@
+name = "libxtst"
+provider = "repology"
+
+[source]
+package = "libxtst"

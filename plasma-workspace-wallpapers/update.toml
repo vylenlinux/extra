@@ -1,0 +1,5 @@
+name = "plasma-workspace-wallpapers"
+provider = "repology"
+
+[source]
+package = "plasma-workspace-wallpapers"

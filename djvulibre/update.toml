@@ -1,0 +1,5 @@
+name = "djvulibre"
+provider = "repology"
+
+[source]
+package = "djvulibre"

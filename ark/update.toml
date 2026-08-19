@@ -1,0 +1,5 @@
+name = "ark"
+provider = "repology"
+
+[source]
+package = "ark"

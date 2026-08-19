@@ -1,0 +1,5 @@
+name = "libxvmc"
+provider = "repology"
+
+[source]
+package = "libxvmc"

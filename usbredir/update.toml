@@ -1,0 +1,5 @@
+name = "usbredir"
+provider = "repology"
+
+[source]
+package = "usbredir"

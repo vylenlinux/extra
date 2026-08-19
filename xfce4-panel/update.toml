@@ -1,0 +1,5 @@
+name = "xfce4-panel"
+provider = "repology"
+
+[source]
+package = "xfce4-panel"

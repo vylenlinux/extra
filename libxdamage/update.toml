@@ -1,0 +1,5 @@
+name = "libxdamage"
+provider = "repology"
+
+[source]
+package = "libxdamage"

@@ -1,0 +1,5 @@
+name = "thunar-media-tags-plugin"
+provider = "repology"
+
+[source]
+package = "thunar-media-tags-plugin"

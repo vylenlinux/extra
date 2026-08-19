@@ -1,0 +1,6 @@
+name = "gvfs-smb"
+provider = "repology"
+
+[source]
+package = "gvfs"
+dedup_key = "gvfs"

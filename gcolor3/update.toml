@@ -1,0 +1,5 @@
+name = "gcolor3"
+provider = "repology"
+
+[source]
+package = "gcolor3"

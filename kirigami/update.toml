@@ -1,0 +1,5 @@
+name = "kirigami"
+provider = "repology"
+
+[source]
+package = "kirigami"

@@ -1,0 +1,5 @@
+name = "clinfo"
+provider = "repology"
+
+[source]
+package = "clinfo"

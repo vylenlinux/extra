@@ -1,0 +1,5 @@
+name = "mate-menus"
+provider = "repology"
+
+[source]
+package = "mate-menus"

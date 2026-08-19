@@ -1,0 +1,5 @@
+name = "xcb-util-image"
+provider = "repology"
+
+[source]
+package = "xcb-util-image"

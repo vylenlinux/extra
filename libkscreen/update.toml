@@ -1,0 +1,5 @@
+name = "libkscreen"
+provider = "repology"
+
+[source]
+package = "libkscreen"

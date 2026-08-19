@@ -1,0 +1,5 @@
+name = "libotr"
+provider = "repology"
+
+[source]
+package = "libotr"

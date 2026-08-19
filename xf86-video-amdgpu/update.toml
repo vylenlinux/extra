@@ -1,0 +1,5 @@
+name = "xf86-video-amdgpu"
+provider = "repology"
+
+[source]
+package = "xf86-video-amdgpu"

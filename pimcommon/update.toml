@@ -1,0 +1,5 @@
+name = "pimcommon"
+provider = "repology"
+
+[source]
+package = "pimcommon"

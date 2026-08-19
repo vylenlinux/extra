@@ -1,0 +1,5 @@
+name = "yasm"
+provider = "repology"
+
+[source]
+package = "yasm"

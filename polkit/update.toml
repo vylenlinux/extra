@@ -1,0 +1,5 @@
+name = "polkit"
+provider = "repology"
+
+[source]
+package = "polkit"

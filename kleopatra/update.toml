@@ -1,0 +1,5 @@
+name = "kleopatra"
+provider = "repology"
+
+[source]
+package = "kleopatra"

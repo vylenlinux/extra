@@ -1,0 +1,5 @@
+name = "sudo"
+provider = "repology"
+
+[source]
+package = "sudo"

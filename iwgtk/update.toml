@@ -1,0 +1,5 @@
+name = "iwgtk"
+provider = "repology"
+
+[source]
+package = "iwgtk"

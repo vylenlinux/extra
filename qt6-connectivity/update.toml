@@ -1,0 +1,5 @@
+name = "qt6-connectivity"
+provider = "repology"
+
+[source]
+package = "qt6-connectivity"

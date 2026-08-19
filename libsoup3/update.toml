@@ -1,0 +1,5 @@
+name = "libsoup3"
+provider = "repology"
+
+[source]
+package = "libsoup3"

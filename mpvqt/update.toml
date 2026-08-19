@@ -1,0 +1,5 @@
+name = "mpvqt"
+provider = "repology"
+
+[source]
+package = "mpvqt"

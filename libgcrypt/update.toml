@@ -1,0 +1,5 @@
+name = "libgcrypt"
+provider = "repology"
+
+[source]
+package = "libgcrypt"

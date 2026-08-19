@@ -1,0 +1,5 @@
+name = "kgamma"
+provider = "repology"
+
+[source]
+package = "kgamma"

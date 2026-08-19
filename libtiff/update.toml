@@ -1,0 +1,5 @@
+name = "libtiff"
+provider = "repology"
+
+[source]
+package = "tiff"

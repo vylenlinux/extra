@@ -1,0 +1,5 @@
+name = "python3-greenlet"
+provider = "repology"
+
+[source]
+package = "python:greenlet"

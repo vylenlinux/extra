@@ -1,0 +1,5 @@
+name = "xfce4-netload-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-netload-plugin"

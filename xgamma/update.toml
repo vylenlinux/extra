@@ -1,0 +1,5 @@
+name = "xgamma"
+provider = "repology"
+
+[source]
+package = "xgamma"

@@ -1,0 +1,5 @@
+name = "swig"
+provider = "repology"
+
+[source]
+package = "swig"

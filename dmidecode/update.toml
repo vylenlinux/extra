@@ -1,0 +1,5 @@
+name = "dmidecode"
+provider = "repology"
+
+[source]
+package = "dmidecode"

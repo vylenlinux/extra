@@ -1,0 +1,5 @@
+name = "breeze-gtk"
+provider = "repology"
+
+[source]
+package = "breeze-gtk"

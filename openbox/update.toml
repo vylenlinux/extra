@@ -1,0 +1,5 @@
+name = "openbox"
+provider = "repology"
+
+[source]
+package = "openbox"

@@ -1,0 +1,5 @@
+name = "spirv-llvm-translator"
+provider = "repology"
+
+[source]
+package = "spirv-llvm-translator"

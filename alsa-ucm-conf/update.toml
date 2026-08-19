@@ -1,0 +1,5 @@
+name = "alsa-ucm-conf"
+provider = "repology"
+
+[source]
+package = "alsa-ucm-conf"

@@ -1,0 +1,5 @@
+name = "network-manager-applet"
+provider = "repology"
+
+[source]
+package = "network-manager-applet"

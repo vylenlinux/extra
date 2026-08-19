@@ -1,0 +1,5 @@
+name = "libmypaint"
+provider = "repology"
+
+[source]
+package = "libmypaint"

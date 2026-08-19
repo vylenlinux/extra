@@ -1,0 +1,5 @@
+name = "xfce4-cpugraph-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-cpugraph-plugin"

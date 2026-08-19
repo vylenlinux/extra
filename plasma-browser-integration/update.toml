@@ -1,0 +1,5 @@
+name = "plasma-browser-integration"
+provider = "repology"
+
+[source]
+package = "plasma-browser-integration"

@@ -1,0 +1,5 @@
+name = "cppdap"
+provider = "repology"
+
+[source]
+package = "cppdap"

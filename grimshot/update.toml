@@ -1,0 +1,5 @@
+name = "grimshot"
+provider = "repology"
+
+[source]
+package = "grimshot"

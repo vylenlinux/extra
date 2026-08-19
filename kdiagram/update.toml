@@ -1,0 +1,5 @@
+name = "kdiagram"
+provider = "repology"
+
+[source]
+package = "kdiagram"

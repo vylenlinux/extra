@@ -1,0 +1,5 @@
+name = "kwallet"
+provider = "repology"
+
+[source]
+package = "kwallet"

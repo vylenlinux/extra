@@ -1,0 +1,5 @@
+name = "itstool"
+provider = "repology"
+
+[source]
+package = "itstool"

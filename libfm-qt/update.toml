@@ -1,0 +1,5 @@
+name = "libfm-qt"
+provider = "repology"
+
+[source]
+package = "libfm-qt"

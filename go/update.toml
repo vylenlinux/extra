@@ -1,0 +1,5 @@
+name = "go"
+provider = "repology"
+
+[source]
+package = "go"

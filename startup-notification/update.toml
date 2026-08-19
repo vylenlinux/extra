@@ -1,0 +1,5 @@
+name = "startup-notification"
+provider = "repology"
+
+[source]
+package = "startup-notification"

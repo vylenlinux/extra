@@ -1,0 +1,5 @@
+name = "libzip"
+provider = "repology"
+
+[source]
+package = "libzip"

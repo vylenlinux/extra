@@ -1,0 +1,5 @@
+name = "docbook-xsl"
+provider = "repology"
+
+[source]
+package = "docbook-xsl"

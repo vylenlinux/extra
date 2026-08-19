@@ -1,0 +1,5 @@
+name = "libmpcdec"
+provider = "repology"
+
+[source]
+package = "libmpcdec"

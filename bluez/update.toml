@@ -1,0 +1,5 @@
+name = "bluez"
+provider = "repology"
+
+[source]
+package = "bluez"

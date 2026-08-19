@@ -1,0 +1,5 @@
+name = "krunner"
+provider = "repology"
+
+[source]
+package = "krunner"

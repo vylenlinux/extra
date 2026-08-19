@@ -1,0 +1,5 @@
+name = "libdvdnav"
+provider = "repology"
+
+[source]
+package = "libdvdnav"

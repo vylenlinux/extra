@@ -1,0 +1,5 @@
+name = "python3-more-itertools"
+provider = "repology"
+
+[source]
+package = "python:more-itertools"

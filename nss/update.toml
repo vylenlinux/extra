@@ -1,0 +1,5 @@
+name = "nss"
+provider = "repology"
+
+[source]
+package = "nss"

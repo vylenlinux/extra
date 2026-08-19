@@ -1,0 +1,5 @@
+name = "util-macros"
+provider = "repology"
+
+[source]
+package = "util-macros"

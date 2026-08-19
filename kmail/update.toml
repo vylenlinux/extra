@@ -1,0 +1,5 @@
+name = "kmail"
+provider = "repology"
+
+[source]
+package = "kmail"

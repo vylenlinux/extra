@@ -1,0 +1,5 @@
+name = "engrampa"
+provider = "repology"
+
+[source]
+package = "engrampa"

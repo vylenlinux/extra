@@ -1,0 +1,5 @@
+name = "dialog"
+provider = "repology"
+
+[source]
+package = "dialog"

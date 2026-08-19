@@ -1,0 +1,5 @@
+name = "font-bh-ttf"
+provider = "repology"
+
+[source]
+package = "font-bh-ttf"

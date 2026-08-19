@@ -1,0 +1,5 @@
+name = "foot"
+provider = "repology"
+
+[source]
+package = "foot"

@@ -1,0 +1,5 @@
+name = "font-adobe-utopia-type1"
+provider = "repology"
+
+[source]
+package = "fonts:adobe-utopia-type1"

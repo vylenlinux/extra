@@ -1,0 +1,5 @@
+name = "lynxfetch"
+provider = "repology"
+
+[source]
+package = "lynxfetch"

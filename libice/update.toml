@@ -1,0 +1,5 @@
+name = "libice"
+provider = "repology"
+
+[source]
+package = "libice"

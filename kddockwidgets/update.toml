@@ -1,0 +1,5 @@
+name = "kddockwidgets"
+provider = "repology"
+
+[source]
+package = "kddockwidgets"

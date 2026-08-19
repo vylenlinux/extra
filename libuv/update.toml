@@ -1,0 +1,5 @@
+name = "libuv"
+provider = "repology"
+
+[source]
+package = "libuv"

@@ -1,0 +1,5 @@
+name = "font-jis-misc"
+provider = "repology"
+
+[source]
+package = "font-jis-misc"

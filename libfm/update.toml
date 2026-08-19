@@ -1,0 +1,5 @@
+name = "libfm"
+provider = "repology"
+
+[source]
+package = "libfm"

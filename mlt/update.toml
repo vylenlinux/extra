@@ -1,0 +1,5 @@
+name = "mlt"
+provider = "repology"
+
+[source]
+package = "mlt"

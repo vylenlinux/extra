@@ -1,0 +1,5 @@
+name = "gptfdisk"
+provider = "repology"
+
+[source]
+package = "gptfdisk"

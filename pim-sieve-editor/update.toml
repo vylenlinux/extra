@@ -1,0 +1,5 @@
+name = "pim-sieve-editor"
+provider = "repology"
+
+[source]
+package = "pim-sieve-editor"

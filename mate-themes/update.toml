@@ -1,0 +1,5 @@
+name = "mate-themes"
+provider = "repology"
+
+[source]
+package = "mate-themes"

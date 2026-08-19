@@ -1,0 +1,5 @@
+name = "sonnet"
+provider = "repology"
+
+[source]
+package = "sonnet"

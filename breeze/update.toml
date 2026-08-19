@@ -1,0 +1,5 @@
+name = "breeze"
+provider = "repology"
+
+[source]
+package = "breeze"

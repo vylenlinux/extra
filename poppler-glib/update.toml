@@ -1,0 +1,6 @@
+name = "poppler-glib"
+provider = "repology"
+
+[source]
+package = "poppler"
+dedup_key = "poppler"

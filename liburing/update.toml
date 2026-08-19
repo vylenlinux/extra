@@ -1,0 +1,5 @@
+name = "liburing"
+provider = "repology"
+
+[source]
+package = "liburing"

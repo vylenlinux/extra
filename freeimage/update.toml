@@ -1,0 +1,5 @@
+name = "freeimage"
+provider = "repology"
+
+[source]
+package = "freeimage"

@@ -1,0 +1,5 @@
+name = "python3-pathvalidate"
+provider = "repology"
+
+[source]
+package = "python:pathvalidate"

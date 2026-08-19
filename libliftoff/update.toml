@@ -1,0 +1,5 @@
+name = "libliftoff"
+provider = "repology"
+
+[source]
+package = "libliftoff"

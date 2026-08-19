@@ -1,0 +1,5 @@
+name = "cjson"
+provider = "repology"
+
+[source]
+package = "cjson"

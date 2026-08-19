@@ -1,0 +1,5 @@
+name = "plasma-desktop"
+provider = "repology"
+
+[source]
+package = "plasma-desktop"

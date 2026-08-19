@@ -1,0 +1,5 @@
+name = "attica"
+provider = "repology"
+
+[source]
+package = "attica"

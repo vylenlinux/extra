@@ -1,0 +1,5 @@
+name = "kpimtextedit"
+provider = "repology"
+
+[source]
+package = "kpimtextedit"

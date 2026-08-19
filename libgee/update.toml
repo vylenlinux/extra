@@ -1,0 +1,5 @@
+name = "libgee"
+provider = "repology"
+
+[source]
+package = "libgee"

@@ -1,0 +1,5 @@
+name = "mate-terminal"
+provider = "repology"
+
+[source]
+package = "mate-terminal"

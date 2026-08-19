@@ -1,0 +1,5 @@
+name = "xev"
+provider = "repology"
+
+[source]
+package = "xev"

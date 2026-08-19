@@ -1,0 +1,5 @@
+name = "expect"
+provider = "repology"
+
+[source]
+package = "expect"

@@ -1,0 +1,5 @@
+name = "mypaint-brushes"
+provider = "repology"
+
+[source]
+package = "mypaint-brushes"

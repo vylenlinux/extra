@@ -1,0 +1,5 @@
+name = "libmysofa"
+provider = "repology"
+
+[source]
+package = "libmysofa"

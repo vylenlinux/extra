@@ -1,0 +1,5 @@
+name = "mousepad"
+provider = "repology"
+
+[source]
+package = "mousepad"

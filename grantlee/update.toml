@@ -1,0 +1,5 @@
+name = "grantlee"
+provider = "repology"
+
+[source]
+package = "grantlee-qt6"

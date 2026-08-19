@@ -1,0 +1,5 @@
+name = "python3-ply"
+provider = "repology"
+
+[source]
+package = "python:ply"

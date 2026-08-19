@@ -1,0 +1,5 @@
+name = "xfce4-battery-plugin"
+provider = "repology"
+
+[source]
+package = "xfce4-battery-plugin"

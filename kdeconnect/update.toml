@@ -1,0 +1,5 @@
+name = "kdeconnect"
+provider = "repology"
+
+[source]
+package = "kdeconnect"

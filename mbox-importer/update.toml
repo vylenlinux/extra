@@ -1,0 +1,5 @@
+name = "mbox-importer"
+provider = "repology"
+
+[source]
+package = "mbox-importer"

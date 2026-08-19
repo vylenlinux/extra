@@ -1,0 +1,5 @@
+name = "libpcap"
+provider = "repology"
+
+[source]
+package = "libpcap"

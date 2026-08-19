@@ -1,0 +1,6 @@
+name = "grub-efi"
+provider = "repology"
+
+[source]
+package = "grub"
+dedup_key = "grub"

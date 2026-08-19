@@ -1,0 +1,5 @@
+name = "opencl-icd-loader"
+provider = "repology"
+
+[source]
+package = "opencl-icd-loader"

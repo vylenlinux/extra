@@ -1,0 +1,5 @@
+name = "pulseaudio-alsa"
+provider = "repology"
+
+[source]
+package = "pulseaudio-alsa"

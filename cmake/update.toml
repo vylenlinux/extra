@@ -1,0 +1,5 @@
+name = "cmake"
+provider = "repology"
+
+[source]
+package = "cmake"

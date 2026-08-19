@@ -1,0 +1,5 @@
+name = "mm-common"
+provider = "repology"
+
+[source]
+package = "mm-common"

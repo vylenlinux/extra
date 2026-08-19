@@ -1,0 +1,5 @@
+name = "guile"
+provider = "repology"
+
+[source]
+package = "guile"

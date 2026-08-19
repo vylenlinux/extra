@@ -1,0 +1,5 @@
+name = "asciidoc"
+provider = "repology"
+
+[source]
+package = "asciidoc"

@@ -1,0 +1,5 @@
+name = "mpc"
+provider = "repology"
+
+[source]
+package = "mpc"
