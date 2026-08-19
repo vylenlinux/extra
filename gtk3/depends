@@ -5,3 +5,4 @@ libxcursor
 libxcomposite
 librsvg
 wayland-protocols
+libxkbcommon
