@@ -2,4 +2,4 @@ name = "qt6-networkauth"
 provider = "repology"
 
 [source]
-package = "qt6-networkauth"
+package = "qt6networkauth"

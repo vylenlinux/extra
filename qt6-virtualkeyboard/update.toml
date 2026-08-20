@@ -2,4 +2,4 @@ name = "qt6-virtualkeyboard"
 provider = "repology"
 
 [source]
-package = "qt6-virtualkeyboard"
+package = "qt6virtualkeyboard"

@@ -2,4 +2,4 @@ name = "qt6-webengine"
 provider = "repology"
 
 [source]
-package = "qt6-webengine"
+package = "qt6webengine"

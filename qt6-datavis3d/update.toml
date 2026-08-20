@@ -2,4 +2,4 @@ name = "qt6-datavis3d"
 provider = "repology"
 
 [source]
-package = "qt6-datavis3d"
+package = "qt6datavis3d"

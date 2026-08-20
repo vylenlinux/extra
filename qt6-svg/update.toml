@@ -2,4 +2,4 @@ name = "qt6-svg"
 provider = "repology"
 
 [source]
-package = "qt6-svg"
+package = "qt6svg"

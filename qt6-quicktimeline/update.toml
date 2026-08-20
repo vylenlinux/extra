@@ -2,4 +2,4 @@ name = "qt6-quicktimeline"
 provider = "repology"
 
 [source]
-package = "qt6-quicktimeline"
+package = "qt6quicktimeline"

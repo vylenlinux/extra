@@ -2,4 +2,4 @@ name = "qt6-sensors"
 provider = "repology"
 
 [source]
-package = "qt6-sensors"
+package = "qt6sensors"

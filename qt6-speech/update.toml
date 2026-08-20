@@ -2,4 +2,4 @@ name = "qt6-speech"
 provider = "repology"
 
 [source]
-package = "qt6-speech"
+package = "qt6speech"

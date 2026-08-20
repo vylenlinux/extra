@@ -2,4 +2,4 @@ name = "qt6-positioning"
 provider = "repology"
 
 [source]
-package = "qt6-positioning"
+package = "qt6positioning"

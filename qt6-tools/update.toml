@@ -2,4 +2,4 @@ name = "qt6-tools"
 provider = "repology"
 
 [source]
-package = "qt6-tools"
+package = "qt6tools"

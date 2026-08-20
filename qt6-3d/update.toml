@@ -2,4 +2,4 @@ name = "qt6-3d"
 provider = "repology"
 
 [source]
-package = "qt6-3d"
+package = "qt63d"

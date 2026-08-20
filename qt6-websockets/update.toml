@@ -2,4 +2,4 @@ name = "qt6-websockets"
 provider = "repology"
 
 [source]
-package = "qt6-websockets"
+package = "qt6websockets"

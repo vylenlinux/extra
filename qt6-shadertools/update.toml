@@ -2,4 +2,4 @@ name = "qt6-shadertools"
 provider = "repology"
 
 [source]
-package = "qt6-shadertools"
+package = "qt6shadertools"

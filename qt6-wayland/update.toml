@@ -2,4 +2,4 @@ name = "qt6-wayland"
 provider = "repology"
 
 [source]
-package = "qt6-wayland"
+package = "qt6wayland"

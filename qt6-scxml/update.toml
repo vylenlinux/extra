@@ -2,4 +2,4 @@ name = "qt6-scxml"
 provider = "repology"
 
 [source]
-package = "qt6-scxml"
+package = "qt6scxml"

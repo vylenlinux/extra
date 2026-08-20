@@ -2,4 +2,4 @@ name = "qt6-imageformats"
 provider = "repology"
 
 [source]
-package = "qt6-imageformats"
+package = "qt6imageformats"

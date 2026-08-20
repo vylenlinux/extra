@@ -2,4 +2,4 @@ name = "qt6-charts"
 provider = "repology"
 
 [source]
-package = "qt6-charts"
+package = "qt6charts"

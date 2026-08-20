@@ -2,4 +2,4 @@ name = "qt6-lottie"
 provider = "repology"
 
 [source]
-package = "qt6-lottie"
+package = "qt6lottie"

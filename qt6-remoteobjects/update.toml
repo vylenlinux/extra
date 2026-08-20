@@ -2,4 +2,4 @@ name = "qt6-remoteobjects"
 provider = "repology"
 
 [source]
-package = "qt6-remoteobjects"
+package = "qt6remoteobjects"
