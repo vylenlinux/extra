@@ -1,5 +1,2 @@
 name = "lxqt"
-provider = "repology"
-
-[source]
-package = "lxqt"
+provider = "manual"
