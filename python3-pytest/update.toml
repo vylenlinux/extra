@@ -2,4 +2,4 @@ name = "python3-pytest"
 provider = "repology"
 
 [source]
-package = "python3-pytest"
+package = "python:pytest"
