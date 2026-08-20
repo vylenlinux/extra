@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team"
 homepage="https://ostreedev.github.io/ostree/"
 
 name=ostree
-version=2026.3
+version=2026.4
 release=1
 source="${name}-${version}.tar.xz::https://github.com/ostreedev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
 
