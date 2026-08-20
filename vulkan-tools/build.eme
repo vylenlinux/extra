@@ -6,12 +6,18 @@ homepage="https://www.khronos.org/vulkan"
 maintainer="Vylen Linux Team"
 
 name=vulkan-tools
-version=1.4.357.0
+version=1.4.360
 release=1
-source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/${name%-*}-sdk-${version}/Vulkan-Tools-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cmake -S "Vulkan-Tools-${name%-*}-sdk-${version}" -B build \
+    # shellcheck disable=SC2164
+    cd "Vulkan-Tools-${version}"
+
+    mkdir build
+    python3 scripts/update_deps.py --dir=build
+
+    cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS} -ffat-lto-objects" \
