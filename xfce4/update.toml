@@ -1,5 +1,2 @@
 name = "xfce4"
-provider = "repology"
-
-[source]
-package = "xfce4"
+provider = "manual"
