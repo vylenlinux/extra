@@ -1,22 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="cpptoml is a header-only library for parsing TOML"
 homepage="https://github.com/skystrife/cpptoml"
 maintainer="Vylen Linux Team"
 
 name=cpptoml
-version=0.1.1
+version=0.1.2
 release=1
-source="https://github.com/skystrife/cpptoml/archive/v$version/$name-$version.tar.gz
-	123.patch"
+source="${name}-${version}.tar.gz::https://github.com/chadaustin/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-	patch -Np1 -d $name-$version -i $SRC/123.patch
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -Wno-dev
 
-	cmake -S $name-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-Wno-dev
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
