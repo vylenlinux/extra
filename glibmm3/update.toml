@@ -2,4 +2,7 @@ name = "glibmm3"
 provider = "repology"
 
 [source]
-package = "glibmm3"
+package = "glibmm"
+
+[repology]
+version_prefix = "2.66."
