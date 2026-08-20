@@ -3,3 +3,7 @@ provider = "repology"
 
 [source]
 package = "gtksourceview"
+
+[repology]
+match_name = "gtksourceview4"
+version_prefix = "4."
