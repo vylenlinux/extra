@@ -3,7 +3,7 @@ homepage="https://invent.kde.org/graphics/libkdcraw"
 maintainer="Vylen Linux Team"
 
 name=libkdcraw
-version=26.04.3
+version=26.08.0
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 release=1
 

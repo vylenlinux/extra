@@ -6,7 +6,7 @@ homepage="https://kontact.kde.org/"
 maintainer="Vylen Linux Team"
 
 name=kimap
-version=26.04.3
+version=26.08.0
 release=1
 source="http://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 
