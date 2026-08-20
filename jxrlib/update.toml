@@ -1,5 +1,10 @@
 name = "jxrlib"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jxrlib-glencoe"
+owner = "mircomir"
+repo = "jxrlib"
+
+[github]
+use_releases = false
+use_tags = true
