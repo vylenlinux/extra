@@ -1,13 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The osinfo database"
 homepage="https://libosinfo.org/"
 maintainer="Vylen Linux Team"
 
 name=osinfo-db
-version=20251212
+version=20260812
 release=1
-source="https://releases.pagure.org/libosinfo/$name-$version.tar.xz"
-noextract="$name-$version.tar.xz"
+source="https://gitlab.com/libosinfo/${name}/-/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	osinfo-db-import --root $PKG --system $name-$version.tar.xz
+    # shellcheck disable=SC2164
+    cd "${name}-v${version}-ae7a0bfe36940a7dde23fcd95ce60c0608cb7e33"
+    sed -i "s/TODAY = .*/TODAY = ${version}/" Makefile
+
+    make
+    make install DESTDIR="${PKG}" OSINFO_DB_TARGET="--system"
 }
