@@ -2,4 +2,8 @@ name = "linux-lts-api-headers"
 provider = "repology"
 
 [source]
-package = "linux-lts-api-headers"
+package = "linux"
+dedup_key = "linux"
+
+[repology]
+match_name = "linux-lts"

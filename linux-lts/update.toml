@@ -2,4 +2,7 @@ name = "linux-lts"
 provider = "repology"
 
 [source]
-package = "linux-lts"
+package = "linux"
+
+[repology]
+match_name = "linux-lts"
