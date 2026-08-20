@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux-lts-api-headers
-version=6.18.44
+version=6.18.45
 release=1
 source="https://www.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz"
 
