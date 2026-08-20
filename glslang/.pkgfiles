@@ -1,4 +1,4 @@
-glslang-1.4.357.0-1
+glslang-16.5.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/glslang
@@ -36,15 +36,15 @@ drwxr-xr-x root/root    usr/lib/cmake/glslang/
 -rw-r--r-- root/root    usr/lib/libSPIRV.a
 lrwxrwxrwx root/root    usr/lib/libSPIRV.so -> libSPIRV.so.16
 lrwxrwxrwx root/root    usr/lib/libSPIRV.so.0 -> libSPIRV.so
-lrwxrwxrwx root/root    usr/lib/libSPIRV.so.16 -> libSPIRV.so.16.4.0
--rwxr-xr-x root/root    usr/lib/libSPIRV.so.16.4.0
+lrwxrwxrwx root/root    usr/lib/libSPIRV.so.16 -> libSPIRV.so.16.5.0
+-rwxr-xr-x root/root    usr/lib/libSPIRV.so.16.5.0
 -rw-r--r-- root/root    usr/lib/libglslang-default-resource-limits.a
 lrwxrwxrwx root/root    usr/lib/libglslang-default-resource-limits.so -> libglslang-default-resource-limits.so.16
 lrwxrwxrwx root/root    usr/lib/libglslang-default-resource-limits.so.0 -> libglslang-default-resource-limits.so
-lrwxrwxrwx root/root    usr/lib/libglslang-default-resource-limits.so.16 -> libglslang-default-resource-limits.so.16.4.0
--rwxr-xr-x root/root    usr/lib/libglslang-default-resource-limits.so.16.4.0
+lrwxrwxrwx root/root    usr/lib/libglslang-default-resource-limits.so.16 -> libglslang-default-resource-limits.so.16.5.0
+-rwxr-xr-x root/root    usr/lib/libglslang-default-resource-limits.so.16.5.0
 -rw-r--r-- root/root    usr/lib/libglslang.a
 lrwxrwxrwx root/root    usr/lib/libglslang.so -> libglslang.so.16
 lrwxrwxrwx root/root    usr/lib/libglslang.so.0 -> libglslang.so
-lrwxrwxrwx root/root    usr/lib/libglslang.so.16 -> libglslang.so.16.4.0
--rwxr-xr-x root/root    usr/lib/libglslang.so.16.4.0
+lrwxrwxrwx root/root    usr/lib/libglslang.so.16 -> libglslang.so.16.5.0
+-rwxr-xr-x root/root    usr/lib/libglslang.so.16.5.0

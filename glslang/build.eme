@@ -6,13 +6,13 @@ homepage="https://github.com/KhronosGroup/glslang"
 maintainer="Vylen Linux Team"
 
 name=glslang
-version=1.4.357.0
+version=16.5.0
 release=1
-source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/vulkan-sdk-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/${version}/${name}-sdk-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-vulkan-sdk-${version}"
+    cd "${name}-${version}"
 
     export CXXFLAGS="${CXXFLAGS} \
         -ffat-lto-objects"
