@@ -1,4 +1,4 @@
-spice-gtk-0.42-1
+spice-gtk-0.43-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/spicy
@@ -42,11 +42,11 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/SpiceClientGLib-2.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/SpiceClientGtk-3.0.typelib
 lrwxrwxrwx root/root    usr/lib/libspice-client-glib-2.0.so -> libspice-client-glib-2.0.so.8
-lrwxrwxrwx root/root    usr/lib/libspice-client-glib-2.0.so.8 -> libspice-client-glib-2.0.so.8.8.2
--rwxr-xr-x root/root    usr/lib/libspice-client-glib-2.0.so.8.8.2
+lrwxrwxrwx root/root    usr/lib/libspice-client-glib-2.0.so.8 -> libspice-client-glib-2.0.so.8.9.0
+-rwxr-xr-x root/root    usr/lib/libspice-client-glib-2.0.so.8.9.0
 lrwxrwxrwx root/root    usr/lib/libspice-client-gtk-3.0.so -> libspice-client-gtk-3.0.so.5
-lrwxrwxrwx root/root    usr/lib/libspice-client-gtk-3.0.so.5 -> libspice-client-gtk-3.0.so.5.1.1
--rwxr-xr-x root/root    usr/lib/libspice-client-gtk-3.0.so.5.1.1
+lrwxrwxrwx root/root    usr/lib/libspice-client-gtk-3.0.so.5 -> libspice-client-gtk-3.0.so.5.1.2
+-rwxr-xr-x root/root    usr/lib/libspice-client-gtk-3.0.so.5.1.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/spice-client-glib-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/spice-client-gtk-3.0.pc
@@ -56,6 +56,25 @@ drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/gir-1.0/
 -rw-r--r-- root/root    usr/share/gir-1.0/SpiceClientGLib-2.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/SpiceClientGtk-3.0.gir
+drwxr-xr-x root/root    usr/share/locale/
+drwxr-xr-x root/root    usr/share/locale/cs/
+drwxr-xr-x root/root    usr/share/locale/cs/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/spice-gtk.mo
+drwxr-xr-x root/root    usr/share/locale/de/
+drwxr-xr-x root/root    usr/share/locale/de/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/spice-gtk.mo
+drwxr-xr-x root/root    usr/share/locale/fr/
+drwxr-xr-x root/root    usr/share/locale/fr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/spice-gtk.mo
+drwxr-xr-x root/root    usr/share/locale/it/
+drwxr-xr-x root/root    usr/share/locale/it/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/spice-gtk.mo
+drwxr-xr-x root/root    usr/share/locale/ka/
+drwxr-xr-x root/root    usr/share/locale/ka/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/spice-gtk.mo
+drwxr-xr-x root/root    usr/share/locale/ru/
+drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/spice-gtk.mo
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/spice-client.1.gz

@@ -6,9 +6,9 @@ homepage="https://www.spice-space.org"
 maintainer="Vylen Linux Team"
 
 name=spice-gtk
-version=0.42
+version=0.43
 release=1
-source="https://www.spice-space.org/download/gtk/${name}-${version}.tar.xz"
+source="https://gitlab.freedesktop.org/-/project/64/uploads/88f5d31a961da9921add46ca3f0be904/${name}-${version}.tar.xz"
 
 build() {
     vylen-meson "${name}-${version}" build \
