@@ -1,14 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library which provides access to hardware accelerated video processing for video cards based on an Intel GPU"
 homepage="https://01.org/linuxmedia/vaapi"
 maintainer="Vylen Linux Team"
 
 name=libva-intel
-version=2.4.1
+version=2.4.5
 release=1
-source="https://github.com/intel/intel-vaapi-driver/archive/$version/$name-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/irql-notlessorequal/intel-vaapi-driver/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	vylen-meson intel-vaapi-driver-$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "intel-vaapi-driver-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
