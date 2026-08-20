@@ -1,5 +1,2 @@
 name = "mate"
-provider = "repology"
-
-[source]
-package = "mate"
+provider = "manual"
