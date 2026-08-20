@@ -2,4 +2,4 @@ name = "lsb-release"
 provider = "repology"
 
 [source]
-package = "lsb-release"
+package = "lsb-release-minimal"
