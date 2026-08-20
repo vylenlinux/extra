@@ -2,4 +2,7 @@ name = "libsigc++2"
 provider = "repology"
 
 [source]
-package = "libsigc++2"
+package = "libsigc++"
+
+[repology]
+match_name = "libsigc++2"
