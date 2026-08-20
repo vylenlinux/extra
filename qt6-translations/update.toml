@@ -2,4 +2,4 @@ name = "qt6-translations"
 provider = "repology"
 
 [source]
-package = "qt6-translations"
+package = "qt6translations"
