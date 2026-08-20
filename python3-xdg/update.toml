@@ -1,5 +1,0 @@
-name = "python3-xdg"
-provider = "repology"
-
-[source]
-package = "python:xdg"
