@@ -2,4 +2,8 @@ name = "gtk3"
 provider = "repology"
 
 [source]
-package = "gtk3"
+package = "gtk"
+
+[repology]
+match_name = "gtk3"
+version_prefix = "3."
