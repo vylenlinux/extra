@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=osinfo-db-tools
 version=1.12.0
 release=1
-source="https://releases.pagure.org/libosinfo/${name}-${version}.tar.xz"
+source="https://gitlab.com/libosinfo/${name}/-/releases/v${version}/downloads/${name}-${version}.tar.xz"
 
 build() {
     vylen-meson "${name}-${version}" build
