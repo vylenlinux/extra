@@ -1,0 +1,5 @@
+name = "a52dec"
+provider = "repology"
+
+[source]
+package = "a52dec"

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Free library for decoding ATSC A/52 (also known as AC-3) streams"
+homepage="https://git.adelielinux.org/community/a52dec/"
+maintainer="Vylen Linux Team"
+
+name=a52dec
+version=0.8.0
+release=1
+source="https://distfiles.adelielinux.org/source/${name}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    CFLAGS="-g -O2 -fPIC" ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man \
+        --enable-shared \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
+
+    mv liba52/a52_internal.h "${PKG}/usr/include/${name}"
+}
