@@ -2,4 +2,7 @@ name = "pangomm3"
 provider = "repology"
 
 [source]
-package = "pangomm3"
+package = "pangomm"
+
+[repology]
+match_name = "pangomm2.46"
