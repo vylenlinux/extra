@@ -1,5 +1,2 @@
 name = "xorg"
-provider = "repology"
-
-[source]
-package = "xorg"
+provider = "manual"
