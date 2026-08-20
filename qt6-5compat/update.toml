@@ -2,4 +2,4 @@ name = "qt6-5compat"
 provider = "repology"
 
 [source]
-package = "qt65compat"
+package = "qt6base"
