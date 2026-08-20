@@ -2,4 +2,4 @@ name = "discover"
 provider = "repology"
 
 [source]
-package = "discover"
+package = "plasma-discover"
