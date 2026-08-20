@@ -1,5 +1,6 @@
 name = "aml"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "aml"
+owner = "any1"
+repo = "aml"
