@@ -2,7 +2,7 @@ description="HTTP client/server library for GNOME"
 homepage="https://wiki.gnome.org/Projects/libsoup"
 maintainer="Vylen Linux Team"
 
-name=libsoup
+name=libsoup2
 version=2.74.3
 release=1
 source="https://gitlab.gnome.org/GNOME/libsoup/-/archive/$version/$name-$version.tar.gz"
