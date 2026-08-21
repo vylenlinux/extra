@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=tg_owt
 version=20260309
-release=2
+release=3
 
 commit=26068e29bfa8d74a9dc9c8f7f94172fafbc262b8
 _libyuv_commit=04821d1e7d60845525e8db55c7bcd41ef5be9406
@@ -29,8 +29,15 @@ build() {
     cd "${name}-${commit}"
     patch -Np1 -i "${SRC}/tg_owt-gcc16.patch"
 
+    # fix build with openssl4
+    sed -i \
+        -e 's/expire_time->type/ASN1_STRING_type(expire_time)/g' \
+        -e 's/expire_time->data/ASN1_STRING_get0_data(expire_time)/g' \
+        -e 's/expire_time->length/ASN1_STRING_length(expire_time)/g' \
+    src/rtc_base/openssl_certificate.cc
+
     for d in libyuv libyuv crc32c/src abseil-cpp libsrtp; do
-        mkdir -pv "${SRC}/src/third_party/${d}"
+        mkdir -p "${SRC}/src/third_party/${d}"
     done
 
     mv "${SRC}/crc32c-${_crc32c_commit}"/* src/third_party/crc32c/src
