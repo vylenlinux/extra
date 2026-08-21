@@ -7,14 +7,10 @@ maintainer="Vylen Linux Team"
 
 name=abseil-cpp
 version=20260817.0
-release=1
-
-source="https://github.com/abseil/${name}/archive/${version}/${name}-${version}.tar.gz
-    https://github.com/abseil/${name}/commit/d851fdd768b27c02b3fb786fd0987faddd279ece.patch"
+release=2
+source="https://github.com/abseil/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-    patch -d "${name}-${version}" -Np1 -i "${SRC}/d851fdd768b27c02b3fb786fd0987faddd279ece.patch"
-
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
