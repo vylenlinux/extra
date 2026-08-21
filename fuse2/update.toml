@@ -2,4 +2,7 @@ name = "fuse2"
 provider = "repology"
 
 [source]
-package = "fuse2"
+package = "libfuse"
+
+[repology]
+match_name = "fuse2"
