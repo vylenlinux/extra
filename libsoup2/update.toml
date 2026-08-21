@@ -3,3 +3,6 @@ provider = "repology"
 
 [source]
 package = "libsoup"
+
+[repology]
+version_prefix = "2."
