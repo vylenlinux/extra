@@ -1,6 +1,6 @@
 gobject-introspection
 gtk4
 json-glib
-libsoup3
+libsoup
 protobuf-c
 vala
