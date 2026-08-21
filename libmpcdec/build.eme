@@ -1,18 +1,46 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="MusePack decoding library"
 homepage="https://musepack.net/"
 maintainer="Vylen Linux Team"
 
 name=libmpcdec
-version=1.2.6
+version=r475
 release=1
-source="http://files.musepack.net/source/libmpcdec-$version.tar.bz2"
+
+source="${name}-${version}.tar.gz::http://files.musepack.net/source/musepack_src_${version}.tar.gz
+    musepack-r475-am-maintainer-mode.patch
+    musepack-r475-link-libm.patch
+    musepack-r475-link-order.patch
+    musepack-r475-missing_extern_kw.patch
+    musepack-r475-mpcchap.patch
+    musepack-r475-scf-index-pointer-type.patch
+    musepack-r475-visibility.patch
+    musepack_src_r475-libmpcdec-soname.patch"
 
 build() {
-	cd $name-$version
-	./configure \
-		--prefix=/usr \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
-}
+    # shellcheck disable=SC2164
+    cd "musepack_src_${version}"
+    autoreconf -fi
 
+    export CFLAGS="${CFLAGS} \
+        -Wno-incompatible-pointer-types"
+
+    patch -Np1 -i "${SRC}/musepack-r475-am-maintainer-mode.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-link-libm.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-link-order.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-missing_extern_kw.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-mpcchap.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-scf-index-pointer-type.patch"
+    patch -Np1 -i "${SRC}/musepack-r475-visibility.patch"
+    patch -Np1 -i "${SRC}/musepack_src_r475-libmpcdec-soname.patch"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --enable-mpcchap
+
+    make
+    make DESTDIR="${PKG}" install
+}

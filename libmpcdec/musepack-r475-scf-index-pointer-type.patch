@@ -1,0 +1,13 @@
+--- a/libmpcpsy/libmpcpsy.h	2026-03-01 01:11:26.160446043 +0100
++++ b/libmpcpsy/libmpcpsy.h	2026-03-01 01:11:26.164638697 +0100
+@@ -86,8 +86,8 @@
+ 	float KBD2; // = -1.
+ 
+ 	// FIXME : remove this :
+-	int * SCF_Index_L;
+-	int * SCF_Index_R;              // Scalefactor-index for Bitstream
++	int (*SCF_Index_L)[3];
++	int (*SCF_Index_R)[3];              // Scalefactor-index for Bitstream
+ 
+ } PsyModel;
+ 

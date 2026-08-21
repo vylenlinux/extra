@@ -1,16 +1,23 @@
-libmpcdec-1.2.6-1
+libmpcdec-r475-1
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/mpc2sv8
+-rwxr-xr-x root/root    usr/bin/mpcchap
+-rwxr-xr-x root/root    usr/bin/mpccut
+-rwxr-xr-x root/root    usr/bin/mpcdec
+-rwxr-xr-x root/root    usr/bin/mpcenc
+-rwxr-xr-x root/root    usr/bin/mpcgain
+-rwxr-xr-x root/root    usr/bin/wavcmp
 drwxr-xr-x root/root    usr/include/
-drwxr-xr-x root/root    usr/include/mpcdec/
--rw-r--r-- root/root    usr/include/mpcdec/config_types.h
--rw-r--r-- root/root    usr/include/mpcdec/decoder.h
--rw-r--r-- root/root    usr/include/mpcdec/huffman.h
--rw-r--r-- root/root    usr/include/mpcdec/math.h
--rw-r--r-- root/root    usr/include/mpcdec/mpcdec.h
--rw-r--r-- root/root    usr/include/mpcdec/reader.h
--rw-r--r-- root/root    usr/include/mpcdec/requant.h
--rw-r--r-- root/root    usr/include/mpcdec/streaminfo.h
+drwxr-xr-x root/root    usr/include/mpc/
+-rw-r--r-- root/root    usr/include/mpc/datatypes.h
+-rw-r--r-- root/root    usr/include/mpc/minimax.h
+-rw-r--r-- root/root    usr/include/mpc/mpc_types.h
+-rw-r--r-- root/root    usr/include/mpc/mpcdec.h
+-rw-r--r-- root/root    usr/include/mpc/mpcmath.h
+-rw-r--r-- root/root    usr/include/mpc/reader.h
+-rw-r--r-- root/root    usr/include/mpc/streaminfo.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libmpcdec.so -> libmpcdec.so.5.0.2
-lrwxrwxrwx root/root    usr/lib/libmpcdec.so.5 -> libmpcdec.so.5.0.2
--rwxr-xr-x root/root    usr/lib/libmpcdec.so.5.0.2
+lrwxrwxrwx root/root    usr/lib/libmpcdec.so -> libmpcdec.so.6.1.0
+lrwxrwxrwx root/root    usr/lib/libmpcdec.so.6 -> libmpcdec.so.6.1.0
+-rwxr-xr-x root/root    usr/lib/libmpcdec.so.6.1.0
