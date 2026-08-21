@@ -6,7 +6,7 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team"
 
 name=exo
-version=4.20.0
+version=4.21.0
 release=1
 source="http://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
 

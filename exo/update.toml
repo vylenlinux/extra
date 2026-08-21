@@ -2,4 +2,4 @@ name = "exo"
 provider = "repology"
 
 [source]
-package = "exo"
+package = "xfce-exo"
