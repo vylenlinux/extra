@@ -2,4 +2,7 @@ name = "atkmm3"
 provider = "repology"
 
 [source]
-package = "atkmm3"
+package = "atkmm"
+
+[repology]
+match_name = "atkmm-2.28"
