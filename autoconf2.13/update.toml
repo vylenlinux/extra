@@ -2,4 +2,7 @@ name = "autoconf2.13"
 provider = "repology"
 
 [source]
-package = "autoconf2.13"
+package = "autoconf"
+
+[repology]
+match_name = "autoconf-2.13"
