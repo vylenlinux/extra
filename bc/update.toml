@@ -1,5 +1,5 @@
 name = "bc"
-provider = "repology"
+provider = "archlinux"
 
 [source]
 package = "bc"
