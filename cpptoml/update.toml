@@ -1,5 +1,0 @@
-name = "cpptoml"
-provider = "repology"
-
-[source]
-package = "cpptoml"
