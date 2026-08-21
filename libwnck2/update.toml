@@ -2,4 +2,7 @@ name = "libwnck2"
 provider = "repology"
 
 [source]
-package = "libwnck2"
+package = "libwnck"
+
+[repology]
+version_prefix = "2."
