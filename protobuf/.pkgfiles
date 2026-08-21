@@ -1,14 +1,14 @@
-protobuf-35.1-1
+protobuf-36.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
-lrwxrwxrwx root/root    usr/bin/protoc -> protoc-35.1.0
--rwxr-xr-x root/root    usr/bin/protoc-35.1.0
-lrwxrwxrwx root/root    usr/bin/protoc-gen-upb -> protoc-gen-upb-35.1.0
--rwxr-xr-x root/root    usr/bin/protoc-gen-upb-35.1.0
-lrwxrwxrwx root/root    usr/bin/protoc-gen-upb_minitable -> protoc-gen-upb_minitable-35.1.0
--rwxr-xr-x root/root    usr/bin/protoc-gen-upb_minitable-35.1.0
-lrwxrwxrwx root/root    usr/bin/protoc-gen-upbdefs -> protoc-gen-upbdefs-35.1.0
--rwxr-xr-x root/root    usr/bin/protoc-gen-upbdefs-35.1.0
+lrwxrwxrwx root/root    usr/bin/protoc -> protoc-36.0.0
+-rwxr-xr-x root/root    usr/bin/protoc-36.0.0
+lrwxrwxrwx root/root    usr/bin/protoc-gen-upb -> protoc-gen-upb-36.0.0
+-rwxr-xr-x root/root    usr/bin/protoc-gen-upb-36.0.0
+lrwxrwxrwx root/root    usr/bin/protoc-gen-upb_minitable -> protoc-gen-upb_minitable-36.0.0
+-rwxr-xr-x root/root    usr/bin/protoc-gen-upb_minitable-36.0.0
+lrwxrwxrwx root/root    usr/bin/protoc-gen-upbdefs -> protoc-gen-upbdefs-36.0.0
+-rwxr-xr-x root/root    usr/bin/protoc-gen-upbdefs-36.0.0
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/google/
 drwxr-xr-x root/root    usr/include/google/protobuf/
@@ -24,6 +24,7 @@ drwxr-xr-x root/root    usr/include/google/protobuf/
 -rw-r--r-- root/root    usr/include/google/protobuf/arenastring.h
 -rw-r--r-- root/root    usr/include/google/protobuf/arenaz_sampler.h
 -rw-r--r-- root/root    usr/include/google/protobuf/c_sharp_features.proto
+-rw-r--r-- root/root    usr/include/google/protobuf/class_data.h
 drwxr-xr-x root/root    usr/include/google/protobuf/compiler/
 -rw-r--r-- root/root    usr/include/google/protobuf/compiler/code_generator.h
 -rw-r--r-- root/root    usr/include/google/protobuf/compiler/code_generator_lite.h
@@ -63,11 +64,15 @@ drwxr-xr-x root/root    usr/include/google/protobuf/compiler/php/
 -rw-r--r-- root/root    usr/include/google/protobuf/cpp_edition_defaults.h
 -rw-r--r-- root/root    usr/include/google/protobuf/cpp_features.pb.h
 -rw-r--r-- root/root    usr/include/google/protobuf/cpp_features.proto
+-rw-r--r-- root/root    usr/include/google/protobuf/cpp_file_options.pb.h
+-rw-r--r-- root/root    usr/include/google/protobuf/cpp_file_options.proto
+-rw-r--r-- root/root    usr/include/google/protobuf/cpp_options.proto
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor.pb.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor.proto
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor.upb.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor.upb_minitable.h
+-rw-r--r-- root/root    usr/include/google/protobuf/descriptor_builder.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor_database.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor_legacy.h
 -rw-r--r-- root/root    usr/include/google/protobuf/descriptor_lite.h
@@ -126,6 +131,11 @@ drwxr-xr-x root/root    usr/include/google/protobuf/json/internal/
 -rw-r--r-- root/root    usr/include/google/protobuf/json/internal/writer.h
 -rw-r--r-- root/root    usr/include/google/protobuf/json/internal/zero_copy_buffered_stream.h
 -rw-r--r-- root/root    usr/include/google/protobuf/json/json.h
+-rw-r--r-- root/root    usr/include/google/protobuf/json_enumvalue_options.pb.h
+-rw-r--r-- root/root    usr/include/google/protobuf/json_enumvalue_options.proto
+-rw-r--r-- root/root    usr/include/google/protobuf/json_enumvalue_options.upb.h
+-rw-r--r-- root/root    usr/include/google/protobuf/json_enumvalue_options.upb_minitable.h
+-rw-r--r-- root/root    usr/include/google/protobuf/json_options.proto
 -rw-r--r-- root/root    usr/include/google/protobuf/map.h
 -rw-r--r-- root/root    usr/include/google/protobuf/map_entry.h
 -rw-r--r-- root/root    usr/include/google/protobuf/map_field.h
@@ -133,9 +143,11 @@ drwxr-xr-x root/root    usr/include/google/protobuf/json/internal/
 -rw-r--r-- root/root    usr/include/google/protobuf/map_type_handler.h
 -rw-r--r-- root/root    usr/include/google/protobuf/message.h
 -rw-r--r-- root/root    usr/include/google/protobuf/message_lite.h
+-rw-r--r-- root/root    usr/include/google/protobuf/message_traits.h
 -rw-r--r-- root/root    usr/include/google/protobuf/metadata.h
 -rw-r--r-- root/root    usr/include/google/protobuf/metadata_lite.h
 -rw-r--r-- root/root    usr/include/google/protobuf/micro_string.h
+-rw-r--r-- root/root    usr/include/google/protobuf/naming_style.h
 -rw-r--r-- root/root    usr/include/google/protobuf/os_macros_restore.inc
 -rw-r--r-- root/root    usr/include/google/protobuf/os_macros_undef.inc
 -rw-r--r-- root/root    usr/include/google/protobuf/parse_context.h
@@ -168,6 +180,7 @@ drwxr-xr-x root/root    usr/include/google/protobuf/stubs/
 -rw-r--r-- root/root    usr/include/google/protobuf/stubs/platform_macros.h
 -rw-r--r-- root/root    usr/include/google/protobuf/stubs/port.h
 -rw-r--r-- root/root    usr/include/google/protobuf/stubs/status_macros.h
+-rw-r--r-- root/root    usr/include/google/protobuf/symbol.h
 -rw-r--r-- root/root    usr/include/google/protobuf/symbol_checker.h
 -rw-r--r-- root/root    usr/include/google/protobuf/text_format.h
 -rw-r--r-- root/root    usr/include/google/protobuf/thread_safe_arena.h
@@ -175,6 +188,7 @@ drwxr-xr-x root/root    usr/include/google/protobuf/stubs/
 -rw-r--r-- root/root    usr/include/google/protobuf/timestamp.proto
 -rw-r--r-- root/root    usr/include/google/protobuf/type.pb.h
 -rw-r--r-- root/root    usr/include/google/protobuf/type.proto
+-rw-r--r-- root/root    usr/include/google/protobuf/type_id.h
 -rw-r--r-- root/root    usr/include/google/protobuf/unknown_field_set.h
 drwxr-xr-x root/root    usr/include/google/protobuf/util/
 -rw-r--r-- root/root    usr/include/google/protobuf/util/delimited_message_util.h
@@ -214,7 +228,6 @@ drwxr-xr-x root/root    usr/include/upb/json/
 drwxr-xr-x root/root    usr/include/upb/lex/
 -rw-r--r-- root/root    usr/include/upb/lex/atoi.h
 -rw-r--r-- root/root    usr/include/upb/lex/round_trip.h
--rw-r--r-- root/root    usr/include/upb/lex/strtod.h
 -rw-r--r-- root/root    usr/include/upb/lex/unicode.h
 drwxr-xr-x root/root    usr/include/upb/mem/
 -rw-r--r-- root/root    usr/include/upb/mem/alloc.h
@@ -227,6 +240,7 @@ drwxr-xr-x root/root    usr/include/upb/message/
 -rw-r--r-- root/root    usr/include/upb/message/array.h
 -rw-r--r-- root/root    usr/include/upb/message/compare.h
 -rw-r--r-- root/root    usr/include/upb/message/compat.h
+-rw-r--r-- root/root    usr/include/upb/message/convert.h
 -rw-r--r-- root/root    usr/include/upb/message/copy.h
 drwxr-xr-x root/root    usr/include/upb/message/internal/
 -rw-r--r-- root/root    usr/include/upb/message/internal/accessors.h
@@ -243,6 +257,7 @@ drwxr-xr-x root/root    usr/include/upb/message/internal/
 -rw-r--r-- root/root    usr/include/upb/message/map_gencode_util.h
 -rw-r--r-- root/root    usr/include/upb/message/merge.h
 -rw-r--r-- root/root    usr/include/upb/message/message.h
+-rw-r--r-- root/root    usr/include/upb/message/unknown_fields.h
 -rw-r--r-- root/root    usr/include/upb/message/value.h
 drwxr-xr-x root/root    usr/include/upb/mini_descriptor/
 -rw-r--r-- root/root    usr/include/upb/mini_descriptor/build_enum.h
@@ -309,6 +324,7 @@ drwxr-xr-x root/root    usr/include/upb/reflection/internal/
 -rw-r--r-- root/root    usr/include/upb/reflection/internal/oneof_def.h
 -rw-r--r-- root/root    usr/include/upb/reflection/internal/service_def.h
 -rw-r--r-- root/root    usr/include/upb/reflection/internal/upb_edition_defaults.h
+-rw-r--r-- root/root    usr/include/upb/reflection/json_enumvalue_options_bootstrap.h
 -rw-r--r-- root/root    usr/include/upb/reflection/message.h
 -rw-r--r-- root/root    usr/include/upb/reflection/message.hpp
 -rw-r--r-- root/root    usr/include/upb/reflection/message_def.h
@@ -335,7 +351,10 @@ drwxr-xr-x root/root    usr/include/upb/wire/decode_fast/
 -rw-r--r-- root/root    usr/include/upb/wire/encode.h
 -rw-r--r-- root/root    usr/include/upb/wire/eps_copy_input_stream.h
 drwxr-xr-x root/root    usr/include/upb/wire/internal/
+-rw-r--r-- root/root    usr/include/upb/wire/internal/back_alloc.h
+-rw-r--r-- root/root    usr/include/upb/wire/internal/constants.h
 -rw-r--r-- root/root    usr/include/upb/wire/internal/decoder.h
+-rw-r--r-- root/root    usr/include/upb/wire/internal/encoder.h
 -rw-r--r-- root/root    usr/include/upb/wire/internal/eps_copy_input_stream.h
 -rw-r--r-- root/root    usr/include/upb/wire/internal/reader.h
 -rw-r--r-- root/root    usr/include/upb/wire/reader.h
@@ -357,17 +376,17 @@ drwxr-xr-x root/root    usr/lib/cmake/utf8_range/
 -rw-r--r-- root/root    usr/lib/cmake/utf8_range/utf8_range-config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/utf8_range/utf8_range-targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/utf8_range/utf8_range-targets.cmake
-lrwxrwxrwx root/root    usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.35.1.0
--rwxr-xr-x root/root    usr/lib/libprotobuf-lite.so.35.1.0
-lrwxrwxrwx root/root    usr/lib/libprotobuf.so -> libprotobuf.so.35.1.0
--rwxr-xr-x root/root    usr/lib/libprotobuf.so.35.1.0
-lrwxrwxrwx root/root    usr/lib/libprotoc.so -> libprotoc.so.35.1.0
--rwxr-xr-x root/root    usr/lib/libprotoc.so.35.1.0
+lrwxrwxrwx root/root    usr/lib/libprotobuf-lite.so -> libprotobuf-lite.so.36.0.0
+-rwxr-xr-x root/root    usr/lib/libprotobuf-lite.so.36.0.0
+lrwxrwxrwx root/root    usr/lib/libprotobuf.so -> libprotobuf.so.36.0.0
+-rwxr-xr-x root/root    usr/lib/libprotobuf.so.36.0.0
+lrwxrwxrwx root/root    usr/lib/libprotoc.so -> libprotoc.so.36.0.0
+-rwxr-xr-x root/root    usr/lib/libprotoc.so.36.0.0
 -rw-r--r-- root/root    usr/lib/libupb.a
-lrwxrwxrwx root/root    usr/lib/libutf8_range.so -> libutf8_range.so.35.1.0
--rwxr-xr-x root/root    usr/lib/libutf8_range.so.35.1.0
-lrwxrwxrwx root/root    usr/lib/libutf8_validity.so -> libutf8_validity.so.35.1.0
--rwxr-xr-x root/root    usr/lib/libutf8_validity.so.35.1.0
+lrwxrwxrwx root/root    usr/lib/libutf8_range.so -> libutf8_range.so.36.0.0
+-rwxr-xr-x root/root    usr/lib/libutf8_range.so.36.0.0
+lrwxrwxrwx root/root    usr/lib/libutf8_validity.so -> libutf8_validity.so.36.0.0
+-rwxr-xr-x root/root    usr/lib/libutf8_validity.so.36.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/protobuf-lite.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/protobuf.pc
