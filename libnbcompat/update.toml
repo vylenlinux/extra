@@ -1,5 +1,0 @@
-name = "libnbcompat"
-provider = "repology"
-
-[source]
-package = "libnbcompat"
