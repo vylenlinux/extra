@@ -2,4 +2,7 @@ name = "bindutils"
 provider = "repology"
 
 [source]
-package = "bindutils"
+package = "bind"
+
+[repology]
+match_name = "bind9"

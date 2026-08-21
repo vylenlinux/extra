@@ -1,17 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Bind tools"
 homepage="https://www.isc.org/bind/"
 maintainer="Vylen Linux Team"
 
 name=bindutils
-version=9.20.16
+version=9.20.27
 release=1
-source="https://ftp.isc.org/isc/bind9/$version/bind-$version.tar.xz
+
+source="${name}-${version}.tar.xz::https://ftp.isc.org/isc/bind9/${version}/bind-${version}.tar.xz
     utils.patch"
 
 build() {
-    cd bind-$version
-
-    patch -Np1 -i $SRC/utils.patch
+    # shellcheck disable=SC2164
+    cd "bind-${version}"
+    patch -Np1 -i "${SRC}/utils.patch"
+    cat bin/Makefile.in
 
     ./configure \
         --prefix=/usr \
@@ -19,7 +24,7 @@ build() {
         --includedir=/usr/include/bindutils \
         --disable-linux-caps \
         --disable-doh \
-	--with-openssl=yes \
+        --with-openssl=yes \
         --with-libxml2=no \
         --with-gssapi=no
 
@@ -28,13 +33,12 @@ build() {
     make -C bin/dig
     make -C bin/delv
     make -C doc
-    make DESTDIR=$PKG -C lib install
-    make DESTDIR=$PKG -C bin/dig install
-    make DESTDIR=$PKG -C bin/delv install
 
-    install -D -m 644 doc/man/delv.1 $PKG/usr/share/man/man1/delv.1
-    install -D -m 644 doc/man/dig.1 $PKG/usr/share/man/man1/dig.1
-    install -D -m 644 doc/man/host.1 $PKG/usr/share/man/man1/host.1
-    install -D -m 644 doc/man/nslookup.1 $PKG/usr/share/man/man1/nslookup.1
+    make DESTDIR="${PKG}" -C lib install
+    make DESTDIR="${PKG}" -C bin/dig install
+    make DESTDIR="${PKG}" -C bin/delv install
+
+    for f in delv dig host nslookup; do
+        install -Dm644 "doc/man/${f}.1" -t "${PKG}/usr/share/man/man1/"
+    done
 }
-
