@@ -3,7 +3,7 @@ docbook-xsl
 itstool
 libfyaml
 librsvg
-libsoup
+libsoup2
 libxmlb
 libxslt
 lmdb
