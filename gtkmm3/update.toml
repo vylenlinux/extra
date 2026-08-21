@@ -2,4 +2,7 @@ name = "gtkmm3"
 provider = "repology"
 
 [source]
-package = "gtkmm3"
+package = "gtkmm"
+
+[repology]
+version_prefix = "3."
