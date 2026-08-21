@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="HTTP client/server library for GNOME"
 homepage="https://wiki.gnome.org/Projects/libsoup"
 maintainer="Vylen Linux Team"
@@ -5,19 +8,18 @@ maintainer="Vylen Linux Team"
 name=libsoup2
 version=2.74.3
 release=1
-source="https://gitlab.gnome.org/GNOME/libsoup/-/archive/$version/$name-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/libsoup/-/archive/${version}/libsoup-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # Fix a build failure caused by libxml2-2.12.x:
+    sed -i '/tree/a #include <libxml/parser.h>' "libsoup-${version}/libsoup"/soup-xmlrpc*.c
 
-	# Fix a build failure caused by libxml2-2.12.x:
-	sed -i '/tree/a #include <libxml/parser.h>' libsoup/soup-xmlrpc*.c
+    vylen-meson "libsoup-${version}" build \
+        -Dgssapi=disabled \
+        -Dvapi=enabled \
+        -Dbrotli=disabled \
+        -Dsysprof=disabled
 
-	vylen-meson build \
-		-Dgssapi=disabled \
-		-Dvapi=enabled \
-		-Dbrotli=disabled \
-		-Dsysprof=disabled 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
