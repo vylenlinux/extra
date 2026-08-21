@@ -2,4 +2,7 @@ name = "cairomm3"
 provider = "repology"
 
 [source]
-package = "cairomm3"
+package = "cairomm"
+
+[repology]
+match_name = "cairomm-1.14"
