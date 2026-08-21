@@ -1,4 +1,4 @@
-name = "libsoup3"
+name = "libsoup"
 provider = "repology"
 
 [source]
