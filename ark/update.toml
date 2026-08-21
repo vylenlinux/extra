@@ -2,4 +2,4 @@ name = "ark"
 provider = "repology"
 
 [source]
-package = "ark"
+package = "ark-archiver"
