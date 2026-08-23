@@ -1,20 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Heavily optimized library for DEFLATE/zlib/gzip compression and decompression"
 homepage="https://github.com/ebiggers/libdeflate"
 maintainer="Vylen Linux Team"
 
 name=libdeflate
-version=1.25
+version=1.26
 release=1
-source="https://github.com/ebiggers/libdeflate/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/ebiggers/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  cmake -S $name-$version -B build -G Ninja \
-    -D CMAKE_INSTALL_PREFIX=/usr \
-    -D CMAKE_INSTALL_LIBDIR=lib \
-    -D CMAKE_BUILD_TYPE=Release \
-    -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-    -Wno-dev
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-dev
 
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
