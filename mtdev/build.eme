@@ -1,17 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A stand-alone library which transforms all variants of kernel MT events to the slotted type B protocol"
-homepage="https://bitmath.org/code/mtdev/"
+homepage="https://bitmath.se/org/code/mtdev/"
 maintainer="Vylen Linux Team"
 
 name=mtdev
 version=1.1.7
 release=1
-source="http://bitmath.org/code/$name/$name-$version.tar.bz2"
+source="http://bitmath.se/org/code/${name}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
