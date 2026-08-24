@@ -1,14 +1,22 @@
-description="Python bindings for the Linux input subsystem "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python bindings for the Linux input subsystem"
 homepage="https://github.com/gvalkov/python-evdev"
 maintainer="Vylen Linux Team"
 
 name=python3-evdev
-version=1.9.3
+version=2.0.0
 release=1
-source="$name-$version.zip::https://github.com/gvalkov/python-evdev/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.zip::https://github.com/gvalkov/python-evdev/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-  cd python-evdev-$version
-  python3 setup.py build
-  python3 setup.py install --root="$PKG" --optimize=1 --skip-build
+    # shellcheck disable=SC2164
+    cd "python-evdev-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 }
