@@ -6,10 +6,10 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team"
 
 name=telegram-desktop
-version=7.1.1
+version=7.1.2
 release=1
 
-tdlib_commit=022d60202e446ad1287b9fb68e687c8a0760788b
+tdlib_commit=d1085f9cebc5a62379991ae1652673954f229c1f
 
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
     https://github.com/tdlib/td/archive/${tdlib_commit}.tar.gz"
