@@ -6,8 +6,8 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team"
 
 name=firefox
-version=154.0
-release=2
+version=154.0.1
+release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
     ${name}.desktop
