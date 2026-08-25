@@ -2,4 +2,7 @@ name = "libpeas1"
 provider = "repology"
 
 [source]
-package = "libpeas1"
+package = "libpeas"
+
+[repology]
+match_name = "libpeas1"
