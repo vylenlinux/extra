@@ -1,15 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Enhancements to the Python build system"
 homepage="https://launchpad.net/python-distutils-extra"
 maintainer="Vylen Linux Team"
 
 name=python3-distutils-extra
-version=2.47
+version=3.4
 release=1
-source="$name-$version.tar.gz::https://salsa.debian.org/python-team/modules/python-distutils-extra/-/archive/$version/python-distutils-extra-$version.tar.bz2"
+source="${name}-${version}.tar.gz::https://salsa.debian.org/python-team/packages/python-distutils-extra/-/archive/debian/${version}/python-distutils-extra-debian-${version}.tar.gz"
 
 build() {
-	cd python-distutils-extra-$version
-	python3 setup.py build
-	python3 setup.py install --root=$PKG --skip-build
-}
+    # shellcheck disable=SC2164
+    cd "python-distutils-extra-debian-${version}"
+    python3 setup.py build
 
+    python3 setup.py install \
+        --root="${PKG}" \
+        --skip-build
+}
