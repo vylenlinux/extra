@@ -6,7 +6,7 @@ homepage="https://www.gnu.org/software/emacs/emacs.html"
 maintainer="Vylen Linux Team"
 
 name=emacs
-version=30.2
+version=31.1
 release=1
 source="ftp://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
