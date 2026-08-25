@@ -6,7 +6,7 @@ homepage="https://github.com/lu-zero/cargo-c/"
 maintainer="Vylen Linux Team"
 
 name=cargo-c
-version=0.10.24
+version=0.10.25
 release=1
 
 source="https://github.com/lu-zero/${name}/archive/v${version}/${name}-${version}.tar.gz
@@ -16,7 +16,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    cp "${SRC}/${name}-${version}.Cargo.lock" Cargo.lock
+    cp "${SRC}/${name}-${version}.Cargo.lock" -t .
     export RUSTUP_TOOLCHAIN='stable'
 
     cargo fetch \
