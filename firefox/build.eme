@@ -7,21 +7,24 @@ maintainer="Vylen Linux Team"
 
 name=firefox
 version=154.0
-release=1
+release=2
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
     ${name}.desktop
     config
     distribution.ini
-    vendor.js"
+    vendor.js
+    fix-target-detection.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    patch -Np1 -i "${SRC}/fix-target-detection.patch"
     sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
 
-    mkdir "${SRC}/rust"
-    export CARGO_HOME="${SRC}/rust"
+    mkdir -p "${SRC}/.cargo"
+    export CARGO_HOME="${SRC}/.cargo"
 
     install -Dm644 "${SRC}/config" .mozconfig
 
