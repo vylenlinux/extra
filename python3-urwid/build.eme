@@ -6,7 +6,7 @@ homepage="https://urwid.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-urwid
-version=4.0.11
+version=4.0.13
 release=1
 source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/u/urwid/urwid-${version}.tar.gz"
 
