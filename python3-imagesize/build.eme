@@ -1,17 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Getting image size from png/jpeg/jpeg2000/gif file."
 homepage="https://github.com/shibukawa/imagesize_py/"
 maintainer="Vylen Linux Team"
 
 name=python3-imagesize
-version=2.0.0
+version=2.0.1
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/i/imagesize/${name#*-}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/i/imagesize/${name#*-}-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
+    # shellcheck disable=SC2164
+    cd "${name#*-}-${version}"
 
-	/usr/bin/python3 setup.py build
-	/usr/bin/python3 setup.py install --prefix=/usr --root=$PKG --skip-build --optimize=1
+    python3 -m build \
+        --wheel \
+        --skip-dependency-check \
+        --no-isolation
 
-	chmod -R go-w,a+r,u+w $PKG
+    python3 -m installer --destdir="${PKG}" dist/*.whl
+    chmod -R go-w,a+r,u+w "${PKG}"
 }
