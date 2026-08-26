@@ -6,18 +6,19 @@ homepage="https://openmp.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=openmp
-version=22.1.8
+version=23.1.0
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
 build() {
-    CC=clang CXX=clang++ cmake -S "llvm-project-${version}.src/openmp" -B build -G Ninja \
+    CC=clang CXX=clang++ cmake -S "llvm-project-${version}.src/runtimes" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DLLVM_ENABLE_RUNTIMES=openmp \
         -DLIBOMP_INSTALL_ALIASES=OFF
 
     cmake --build build
