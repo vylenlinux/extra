@@ -7,23 +7,25 @@ maintainer="Vylen Linux Team"
 
 name=krb5
 version=1.22.2
-release=1
+release=2
 
-vrsn="$(printf "%s" "${version}" | awk -F. '{print $1"."$2}')"
+_version="$(printf "%s" "${version}" | awk -F. '{print $1"."$2}')"
 
-source="https://kerberos.org/dist/krb5/${vrsn}/${name}-${version}.tar.gz
-    mitkrb-1.22.2-upstream_fix-1.patch"
+source="https://kerberos.org/dist/${name}/$(printf "%s" "${version}" | awk -F. '{printf "%s.%s", $1, $2;}')/${name}-${version}.tar.gz
+    mitkrb-${version}-upstream_fix-1.patch
+    ${name}-${version}-openssl4.patch"
 
 build() {
-    patch -d "${name}-${version}" -Np1 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
-
     # shellcheck disable=SC2164
     cd "${name}-${version}/src"
+
+    patch -Np2 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
+    patch -Np2 -i "${SRC}/${name}-${version}-openssl4.patch"
 
     # increases the width of the virtual terminal used for some tests to
     # prevent some spurious text in the output which is taken as a failure
     sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test
-    # autoreconf -fvi
+    # autoreconf -fi
 
     ./configure \
         --prefix=/usr \
@@ -42,16 +44,18 @@ build() {
     make DESTDIR="${PKG}" install
 
     mkdir -p "${PKG}/lib"
-    mv -v "${PKG}/usr/lib"/libkrb5.so.3* "${PKG}/lib"
-    mv -v "${PKG}/usr/lib"/libk5crypto.so.3* "${PKG}/lib"
-    mv -v "${PKG}/usr/lib"/libkrb5support.so.0* "${PKG}/lib"
+    mv "${PKG}/usr/lib"/libkrb5.so.3* "${PKG}/lib"
+    mv "${PKG}/usr/lib"/libk5crypto.so.3* "${PKG}/lib"
+    mv "${PKG}/usr/lib"/libkrb5support.so.0* "${PKG}/lib"
 
-    ln -v -sf ../../lib/libkrb5.so.3.3 "${PKG}/usr/lib/libkrb5.so"
-    ln -v -sf ../../lib/libk5crypto.so.3.1 "${PKG}/usr/lib/libk5crypto.so"
-    ln -v -sf ../../lib/libkrb5support.so.0.1 "${PKG}/usr/lib/libkrb5support.so"
+    ln -sf ../../lib/libkrb5.so.3.3 "${PKG}/usr/lib/libkrb5.so"
+    ln -sf ../../lib/libk5crypto.so.3.1 "${PKG}/usr/lib/libk5crypto.so"
+    ln -sf ../../lib/libkrb5support.so.0.1 "${PKG}/usr/lib/libkrb5support.so"
 
     mkdir -p "${PKG}/bin"
-    mv -v "${PKG}/usr/bin/ksu" "${PKG}/bin"
+    mv "${PKG}/usr/bin/ksu" "${PKG}/bin"
 
-    rm -fr "${PKG}/usr/share/examples" "${PKG}/usr/share/man"/cat* "${PKG}/run"
+    rm -rf "${PKG}/usr/share/examples" \
+        "${PKG}/usr/share/man"/cat* \
+        "${PKG}/run"
 }
