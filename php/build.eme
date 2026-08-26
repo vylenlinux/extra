@@ -6,7 +6,7 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team"
 
 name=php
-version=8.5.9
+version=8.5.10
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
@@ -22,7 +22,8 @@ build() {
         --with-config-file-scan-dir=/etc/php/conf.d \
         --with-zlib \
         --with-external-pcre \
-        --disable-static --disable-debug"
+        --disable-static \
+        --disable-debug"
 
     PHP_SHARED="--enable-bcmath=shared \
         --enable-calendar=shared \
