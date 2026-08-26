@@ -5,4 +5,5 @@ ab3550030dc49a9c440e2b2b5449d7cc8f5abfe0c1c0328bc2dda93338f3a005  0004-compiler-
 f278184a8149a8a5071fa19424c6751a25745c3e01abb1ddc3aa97552abb8a92  0005-compiler-Use-ld.lld-by-default.patch
 90c3c90a4aea311b84185e59c418c0aa50d54b764b3ef80e77a049e28d87b060  0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
 09c2933f0e3a5a2bd7bb67f9f5222cb4a2bb9c6c17e180cb0fdbe2c7bfaae6c0  bootstrap.toml
+cc2c9014d3d768ad0bcfb23a55c7f731eb2fce2605597ee765688e85a7fd585a  rust-1.98.0-llvm-23-remove-amx-tf32.patch
 afe586e20b185de888b03e8448b10c4690dd580fb02602c660431f2e6833b2a1  rust-1.98.0.tar.xz
