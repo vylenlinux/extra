@@ -6,25 +6,33 @@ homepage="https://libclc.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=libclc
-version=22.1.8
+version=23.1.0
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
 build() {
-    # libclc is intended to be used with the Clang compiler's OpenCL frontend
-    # https://libclc.llvm.org/
+    # libclc is intended to be used with the Clang compiler's OpenCL frontend https://libclc.llvm.org/
     export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib
 
-    cmake -S "llvm-project-${version}.src/${name}" -B build -G Ninja \
-        -D CMAKE_INSTALL_PREFIX=/usr \
-        -D CMAKE_INSTALL_LIBDIR=lib \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -D CMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DLLVM_SPIRV=/usr/bin/llvm-spirv \
-        -DCMAKE_MODULE_PATH="${SRC}/cmake-${version}.src/Modules" \
-        -Wno-dev
+    multibuild_variants="spirv32-unknown-unknown \
+        spirv64-unknown-unknown \
+        spirv64-unknown-vulkan \
+        nvptx64-nvidia-cuda \
+        amdgcn-amd-amdhsa-llvm"
 
-    cmake --build build
-    DESTDIR="${PKG}" cmake --install build
+    for variant in ${multibuild_variants}; do
+        cmake -S "llvm-project-${version}.src/${name}" -B "build/${variant}" -G Ninja \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_INSTALL_LIBDIR=lib \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+            -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+            -DLLVM_SPIRV=/usr/bin/llvm-spirv \
+            -DCMAKE_MODULE_PATH="${SRC}/cmake-${version}.src/Modules" \
+            -DLLVM_DEFAULT_TARGET_TRIPLE="${variant}" \
+            -Wno-dev
+
+        cmake --build "build/${variant}"
+        DESTDIR="${PKG}" cmake --install "build/${variant}"
+    done
 }
