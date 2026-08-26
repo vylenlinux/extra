@@ -6,7 +6,7 @@ homepage="https://www.gnupg.org/"
 maintainer="Vylen Linux Team"
 
 name=libgcrypt
-version=1.12.2
+version=1.12.3
 release=1
 source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
