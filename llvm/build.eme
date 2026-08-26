@@ -6,7 +6,7 @@ homepage="https://llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=llvm
-version=22.1.8
+version=23.1.0
 release=1
 
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/${name}-project-${version}.src.tar.xz
@@ -55,7 +55,7 @@ build() {
         # Try few parallel jobs to avoid OOM
         if [ -z "${jobs}" ]; then
             # shellcheck disable=SC2003
-            jobs="$(expr "$(free -g | grep Mem: | awk '{print $2}')" / 2 + 1)"
+            jobs="$(expr "$(free -g | grep Mem: | awk '{print $2;}')" / 2 + 1)"
             continue
         elif [ "${jobs}" -gt 2 ]; then
             # shellcheck disable=SC2003
@@ -71,8 +71,6 @@ build() {
     DESTDIR="${PKG}" cmake --install build
 
     # multilib stub
-    mv "${PKG}/usr/include/llvm/Config/llvm-config.h" \
-        "${PKG}/usr/include/llvm/Config/llvm-config-64.h"
-
+    mv "${PKG}/usr/include/llvm/Config/llvm-config.h" "${PKG}/usr/include/llvm/Config/llvm-config-64.h"
     cp "${SRC}/llvm-config.h" "${PKG}/usr/include/llvm/Config/llvm-config.h"
 }
