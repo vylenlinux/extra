@@ -2,4 +2,7 @@ name = "wlroots-19"
 provider = "repology"
 
 [source]
-package = "wlroots-19"
+package = "wlroots"
+
+[repology]
+match_name = "wlroots0.19"
