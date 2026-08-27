@@ -30,7 +30,6 @@ build() {
             -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
             -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
             -DLLVM_SPIRV=/usr/bin/llvm-spirv \
-            -DCMAKE_MODULE_PATH="${SRC}/cmake-${version}.src/Modules" \
             -DLLVM_DEFAULT_TARGET_TRIPLE="${variant}" \
             -Wno-dev
 
