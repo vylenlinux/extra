@@ -1,4 +1,4 @@
-nodejs-26.7.0-1
+nodejs-26.8.1-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/node
@@ -5778,3 +5778,10 @@ drwxr-xr-x root/root    usr/lib/node_modules/npm/node_modules/yallist/dist/esm/
 -rw-r--r-- root/root    usr/lib/node_modules/npm/node_modules/yallist/package.json
 -rw-r--r-- root/root    usr/lib/node_modules/npm/package.json
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/doc/
+drwxr-xr-x root/root    usr/share/doc/node/
+-rw-r--r-- root/root    usr/share/doc/node/gdbinit
+-rw-r--r-- root/root    usr/share/doc/node/lldb_commands.py
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/node.1.gz
