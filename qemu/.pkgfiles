@@ -1,4 +1,4 @@
-qemu-11.1.0-1
+qemu-11.1.1-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/udev/
 drwxr-xr-x root/root    etc/udev/rules.d/
@@ -92,10 +92,8 @@ drwxr-xr-x root/root    usr/lib/qemu/qemu/
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/accel-qtest.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-alsa.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-dbus.so
--rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-jack.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-oss.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-pa.so
--rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-pipewire.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-sdl.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-spice.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/block-curl.so
