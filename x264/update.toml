@@ -1,5 +1,6 @@
 name = "x264"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "x264"
+[ftp]
+url = "http://download.videolan.org/pub/videolan/x264/snapshots/"
+filename = "x264-snapshot-{version}-stable.tar.bz2"
