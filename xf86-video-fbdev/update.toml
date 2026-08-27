@@ -1,5 +1,6 @@
 name = "xf86-video-fbdev"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xf86-video-fbdev"
+[ftp]
+url = "http://ftp.x.org/pub/individual/driver/"
+filename = "xf86-video-fbdev-{version}.tar.xz"

@@ -1,5 +1,6 @@
 name = "xf86-video-vmware"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xf86-video-vmware"
+[ftp]
+url = "http://ftp.x.org/pub/individual/driver/"
+filename = "xf86-video-vmware-{version}.tar.xz"
