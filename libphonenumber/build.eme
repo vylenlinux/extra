@@ -6,7 +6,7 @@ homepage="https://github.com/googlei18n/libphonenumber"
 maintainer="Vylen Linux Team"
 
 name=libphonenumber
-version=9.0.37
+version=9.0.38
 release=1
 
 source="https://github.com/google/${name}/archive/v${version}/${name}-${version}.tar.gz
