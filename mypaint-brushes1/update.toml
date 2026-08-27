@@ -2,4 +2,7 @@ name = "mypaint-brushes1"
 provider = "repology"
 
 [source]
-package = "mypaint-brushes+1"
+package = "mypaint-brushes"
+
+[repology]
+version_prefix = "1."
