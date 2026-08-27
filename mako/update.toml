@@ -2,4 +2,4 @@ name = "mako"
 provider = "repology"
 
 [source]
-package = "mako"
+package = "mako-notifier"
