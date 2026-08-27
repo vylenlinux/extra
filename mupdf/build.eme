@@ -15,8 +15,10 @@ build() {
     cd "${name}-${version}-source"
     export USE_SYSTEM_LIBS=yes
 
-    make install prefix="${PKG}/usr" \
+    make install \
+        prefix="${PKG}/usr" \
         mandir="${PKG}/usr/share/man" \
+        \
         XCFLAGS="-fpic -fcommon" \
         USE_SYSTEM_JBIG2DEC=no \
         USE_SYSTEM_OPENJPEG=no \
