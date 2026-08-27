@@ -2,4 +2,7 @@ name = "wget2"
 provider = "repology"
 
 [source]
-package = "wget2"
+package = "wget"
+
+[repology]
+match_name = "wget2"
