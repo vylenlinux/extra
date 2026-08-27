@@ -2,4 +2,4 @@ name = "qgpgme"
 provider = "repology"
 
 [source]
-package = "libqgpgme"
+package = "gpgmeqt"
