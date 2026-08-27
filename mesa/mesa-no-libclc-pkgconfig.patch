@@ -1,0 +1,27 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Vylen Linux Team
+Date: Thu, 27 Aug 2026 00:00:00 +0200
+Subject: [PATCH] clc: do not require libclc.pc
+
+libclc 23 and newer no longer install libclc.pc. Mesa only needs the
+libexecdir variable from that file in order to locate the libclc resource
+files, so represent the dependency directly with a Meson declared dependency.
+
+This keeps the existing dep_clc interface used by src/compiler/clc/meson.build
+without invoking pkg-config.
+
+---
+ meson.build | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/meson.build b/meson.build
+--- a/meson.build
++++ b/meson.build
+@@ -3,4 +3,6 @@
+ dep_clc = null_dep
+ if with_clc
+-  dep_clc = dependency('libclc')
++  dep_clc = declare_dependency(
++    variables : {'libexecdir': join_paths(get_option('prefix'), get_option('datadir'), 'clc')},
++  )
+ endif
