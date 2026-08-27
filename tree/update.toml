@@ -1,5 +1,9 @@
 name = "tree"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "tree"
+project = "OldManProgrammer/unix-tree"
+
+[gitlab]
+use_releases = false
+use_tags = true

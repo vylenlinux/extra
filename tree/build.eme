@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="display directory contents, including directories, files, links, in a terminal"
-homepage="http://mama.indstate.edu/users/ice/tree"
+homepage="https://gitlab.com/OldManProgrammer/unix-tree"
 maintainer="Vylen Linux Team"
 
 name=tree
