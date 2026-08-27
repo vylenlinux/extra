@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team"
 
 name=linux
-version=7.2
+version=7.2.1
 release=1
 
 source="https://cdn.kernel.org/pub/${name}/kernel/v${version%%.*}.x/${name%-*}-${version}.tar.xz
@@ -83,11 +83,11 @@ build() {
         [ "${i}" = "objtool" ] || rm -rf "tools/objtool/${i}"
     done
 
-    kernver="$(make -s kernelrelease)"
-    rm -f "${PKG}/lib/modules/${kernver}/build"
-    mv "${SRC}/${name}-${version}" "${PKG}/lib/modules/${kernver}/build"
-    ln -s build "${PKG}/lib/modules/${kernver}/source"
+    kernel_version="$(make -s kernelrelease)"
+    rm -f "${PKG}/lib/modules/${kernel_version}/build"
+    mv "${SRC}/${name}-${version}" "${PKG}/lib/modules/${kernel_version}/build"
+    ln -s build "${PKG}/lib/modules/${kernel_version}/source"
 
     # remove now broken symlinks
-    find -L "${PKG}/lib/modules/${kernver}/build" -type l -exec rm -f "{}" \;
+    find -L "${PKG}/lib/modules/${kernel_version}/build" -type l -exec rm -f "{}" \;
 }
