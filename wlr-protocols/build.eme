@@ -6,7 +6,7 @@ homepage="https://gitlab.freedesktop.org/wlroots/wlr-protocols"
 maintainer="Vylen Linux Team"
 
 name=wlr-protocols
-version=20240126
+version=20260309
 release=1
 
 commit=bf4fc79abc359eea5a0edec0ac6d4a2b2955f82a
