@@ -6,7 +6,7 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team"
 
 name=xfce4-dict
-version=0.8.9
+version=0.8.10
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.xfce.org/apps/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz"
 
