@@ -1,5 +1,6 @@
 name = "xf86-input-libinput"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xf86-input-libinput"
+[ftp]
+url = "https://www.x.org/pub/individual/driver/"
+filename = "xf86-input-libinput-{version}.tar.xz"

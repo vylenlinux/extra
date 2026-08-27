@@ -1,5 +1,6 @@
 name = "xf86-input-wacom"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xf86-input-wacom"
+owner = "linuxwacom"
+repo = "xf86-input-wacom"

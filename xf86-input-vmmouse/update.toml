@@ -1,5 +1,6 @@
 name = "xf86-input-vmmouse"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xf86-input-vmmouse"
+[ftp]
+url = "https://www.x.org/pub/individual/driver/"
+filename = "xf86-input-vmmouse-{version}.tar.xz"
