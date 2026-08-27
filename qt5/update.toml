@@ -1,5 +1,5 @@
 name = "qt5"
-provider = "repology"
+provider = "archlinux"
 
 [source]
-package = "qt5"
+package = "qt5-base"
