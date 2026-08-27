@@ -1,4 +1,4 @@
-mpd-0.24.14-1
+mpd-0.24.15-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/mpd
@@ -6,6 +6,12 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/mpd
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/doc/
+drwxr-xr-x root/root    usr/share/doc/mpd/
+-rw-r--r-- root/root    usr/share/doc/mpd/AUTHORS
+-rw-r--r-- root/root    usr/share/doc/mpd/COPYING
+-rw-r--r-- root/root    usr/share/doc/mpd/NEWS
+-rw-r--r-- root/root    usr/share/doc/mpd/README.md
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/
 drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/
