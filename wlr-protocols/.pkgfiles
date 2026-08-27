@@ -1,0 +1,17 @@
+wlr-protocols-20260309-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/pkgconfig/
+-rw-r--r-- root/root    usr/share/pkgconfig/wlr-protocols.pc
+drwxr-xr-x root/root    usr/share/wlr-protocols/
+drwxr-xr-x root/root    usr/share/wlr-protocols/unstable/
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-data-control-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-export-dmabuf-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-foreign-toplevel-management-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-gamma-control-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-input-inhibitor-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-layer-shell-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-output-management-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-output-power-management-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-screencopy-unstable-v1.xml
+-rw-r--r-- root/root    usr/share/wlr-protocols/unstable/wlr-virtual-pointer-unstable-v1.xml
