@@ -2,4 +2,4 @@ name = "solid"
 provider = "repology"
 
 [source]
-package = "solid"
+package = "kf6-solid"
