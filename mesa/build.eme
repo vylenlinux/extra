@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=mesa
 version=26.2.1
-release=2
+release=1
 
 ### BEGIN Rust crates
 rust_crates="paste 1.0.14
@@ -34,7 +34,6 @@ EOF
 ### END Rust crates
 
 source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz
-    ${name}-no-libclc-pkgconfig.patch
     ${rcrate}"
 
 build() {
@@ -56,8 +55,6 @@ build() {
         -Dgallium-va=$(emerald is-installed libva && printf 'enabled' || printf 'disabled')"
 
     cbuild_options
-
-    patch -d "${name}-${version}" -Np1 -i "${SRC}/${name}-no-libclc-pkgconfig.patch"
 
     # shellcheck disable=SC2086
     vylen-meson "${name}-${version}" build \
