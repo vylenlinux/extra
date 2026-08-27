@@ -1,5 +1,6 @@
 name = "ly"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "ly"
+owner = "fairyglade"
+repo = "ly"
