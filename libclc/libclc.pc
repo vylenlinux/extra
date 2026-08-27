@@ -1,0 +1,7 @@
+prefix=/usr
+libexecdir=${prefix}/share/clc
+
+Name: libclc
+Description: Library requirements of the OpenCL C programming language
+Version: 23.1.0
+Libs: -L${libexecdir}

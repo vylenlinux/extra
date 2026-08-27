@@ -7,8 +7,10 @@ maintainer="Vylen Linux Team"
 
 name=libclc
 version=23.1.0
-release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
+release=2
+
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+    ${name}.pc"
 
 build() {
     # libclc is intended to be used with the Clang compiler's OpenCL frontend https://libclc.llvm.org/
@@ -35,4 +37,6 @@ build() {
         cmake --build "build/${variant}"
         DESTDIR="${PKG}" cmake --install "build/${variant}"
     done
+
+    install -Dm644 "${name}.pc" -t "${PKG}/usr/share/pkgconfig/"
 }
