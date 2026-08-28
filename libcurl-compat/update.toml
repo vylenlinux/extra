@@ -1,6 +1,6 @@
 name = "libcurl-compat"
 provider = "repology"
+dedup_key = "curl"
 
 [source]
 package = "curl"
-dedup_key = "curl"
