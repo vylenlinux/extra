@@ -1,27 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Graphics library for fast file loading, saving, rendering and manipulation"
 homepage="https://sourceforge.net/projects/enlightenment/"
 maintainer="Vylen Linux Team"
 
 name=imlib2
-version=1.12.6
+version=1.12.7
 release=1
-source="https://sourceforge.net/projects/enlightenment/files/imlib2-src/$version/imlib2-$version.tar.xz
-	imlib2-config.in"
+source="https://sourceforge.net/projects/enlightenment/files/${name}-src/${version}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
 
-	# temporary workaround for giblib to build
-	# taken from 1.7.4
-	sed \
-		-e 's,@prefix@,/usr,g' \
-		-e 's,@exec_prefix@,/usr,g' \
-		-e 's,@VERSION@,$version,g' \
-		-e 's,@libdir@,/usr/lib,g' \
-		$SRC/imlib2-config.in > $PKG/usr/bin/imlib2-config
-	chmod +x $PKG/usr/bin/imlib2-config
+    make
+    make DESTDIR="${PKG}" install
 }
