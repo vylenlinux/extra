@@ -1,6 +1,6 @@
 name = "clang"
 provider = "repology"
+dedup_key = "llvm"
 
 [source]
 package = "llvm"
-dedup_key = "llvm"
