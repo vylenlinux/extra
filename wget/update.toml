@@ -1,5 +1,6 @@
 name = "wget"
-provider = "archlinux"
+provider = "ftp"
 
-[source]
-package = "wget"
+[ftp]
+url = "https://ftp.gnu.org/gnu/wget/"
+filename = "wget-{version}.tar.gz"
