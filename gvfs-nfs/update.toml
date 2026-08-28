@@ -1,6 +1,6 @@
 name = "gvfs-nfs"
 provider = "repology"
+dedup_key = "gvfs"
 
 [source]
 package = "gvfs"
-dedup_key = "gvfs"
