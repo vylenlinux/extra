@@ -1,9 +1,0 @@
-cmake
-wxgtk3
-xerces-c
-spdlog
-uchardet
-libnfs
-libssh2
-samba
-neon
