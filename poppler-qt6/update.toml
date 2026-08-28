@@ -1,6 +1,6 @@
 name = "poppler-qt6"
 provider = "repology"
+dedup_key = "poppler"
 
 [source]
 package = "poppler"
-dedup_key = "poppler"
