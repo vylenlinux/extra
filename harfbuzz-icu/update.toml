@@ -1,6 +1,6 @@
 name = "harfbuzz-icu"
 provider = "repology"
+dedup_key = "harfbuzz"
 
 [source]
 package = "harfbuzz"
-dedup_key = "harfbuzz"
