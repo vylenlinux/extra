@@ -1,6 +1,6 @@
 name = "gst-libav"
 provider = "repology"
+dedup_key = "gstreamer"
 
 [source]
 package = "gstreamer"
-dedup_key = "gstreamer"
