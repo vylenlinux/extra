@@ -1,5 +1,6 @@
 name = "bc"
-provider = "archlinux"
+provider = "ftp"
 
-[source]
-package = "bc"
+[ftp]
+url = "https://ftp.gnu.org/gnu/bc/"
+filename = "bc-{version}.tar.gz"
