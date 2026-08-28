@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Network Time Protocol reference implementation"
+homepage="https://www.ntp.org/"
+maintainer="Vylen Linux Team"
+
+name=ntp
+version=4.2.8p18
+release=3
+
+source="https://www.eecis.udel.edu/~${name}/${name}_spool/ntp4/${name}-${version%.*}/${name}-${version}.tar.gz
+    fix.build.patch
+    ntp-4.2.8p18-openssl_4-1.patch
+    ${name}.conf"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    # l_stdlib.h re-declares memchr, which conflicts with glibc's _Generic macro
+    sed -i '/extern void \*memchr/d' include/l_stdlib.h
+
+    export CFLAGS="${CFLAGS} \
+        -Wno-discarded-qualifiers \
+        -Wno-incompatible-pointer-types"
+
+    patch -Np1 -i "${SRC}/fix.build.patch"
+    patch -Np1 -i "${SRC}/ntp-4.2.8p18-openssl_4-1.patch"
+
+    autoreconf -fi
+
+    ./configure \
+        --prefix=/usr \
+        --bindir=/usr/sbin \
+        --sysconfdir=/etc \
+        --libexecdir="/usr/lib/${name}" \
+        --enable-linuxcaps \
+        --with-lineeditlibs=readline
+
+    make
+    make DESTDIR="${PKG}" install
+
+    install -Dm644 "${SRC}/${name}.conf" -t "${PKG}/etc/"
+    do_service ntp-client ntpd sntp
+}

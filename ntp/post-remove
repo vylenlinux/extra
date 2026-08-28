@@ -1,0 +1,4 @@
+#!/bin/sh
+
+getent passwd ntp >/dev/null && userdel ntp
+getent group ntp >/dev/null && groupdel ntp
