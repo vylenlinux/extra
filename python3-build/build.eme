@@ -6,7 +6,7 @@ homepage="https://github.com/pypa/build"
 maintainer="Vylen Linux Team"
 
 name=python3-build
-version=1.5.1
+version=1.6.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/pypa/build/archive/refs/tags/${version}/py3-build-${version}.tar.gz"
 
