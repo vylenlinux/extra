@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Documentation generator for GObject-based libraries"
+maintainer="Vylen Linux Team"
+homepage="https://gnome.pages.gitlab.gnome.org/gi-docgen/"
+
+name=gi-docgen
+version=2026.1
+release=1
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
