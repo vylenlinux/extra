@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="C library for reading virtual slide images"
+maintainer="Vylen Linux Team"
+homepage="https://openslide.org/"
+
+name=openslide
+version=4.0.1
+release=1
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build -Dtest=disabled
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

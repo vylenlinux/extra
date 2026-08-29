@@ -1,0 +1,24 @@
+openslide-4.0.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/openslide-quickhash1sum -> slidetool
+lrwxrwxrwx root/root    usr/bin/openslide-show-properties -> slidetool
+lrwxrwxrwx root/root    usr/bin/openslide-write-png -> slidetool
+-rwxr-xr-x root/root    usr/bin/slidetool
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/openslide/
+-rw-r--r-- root/root    usr/include/openslide/openslide-features.h
+-rw-r--r-- root/root    usr/include/openslide/openslide.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libopenslide.so -> libopenslide.so.1
+lrwxrwxrwx root/root    usr/lib/libopenslide.so.1 -> libopenslide.so.1.0.1
+-rwxr-xr-x root/root    usr/lib/libopenslide.so.1.0.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/openslide.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/openslide-quickhash1sum.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/openslide-show-properties.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/openslide-write-png.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/slidetool.1.gz

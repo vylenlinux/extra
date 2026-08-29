@@ -1,0 +1,6 @@
+name = "openslide"
+provider = "github"
+
+[source]
+owner = "openslide"
+repo = "openslide"
