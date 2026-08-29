@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A python wrapper for libmagic"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/ahupp/python-magic"
+
+name=python3-magic
+version=0.4.27
+release=1
+source="${name}-${version}.tar.gz::https://github.com/ahupp/python-magic/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "python-magic-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}

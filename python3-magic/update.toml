@@ -1,0 +1,10 @@
+name = "python3-magic"
+provider = "github"
+
+[source]
+owner = "ahupp"
+repo = "python-magic"
+
+[github]
+use_releases = false
+use_tags = true
