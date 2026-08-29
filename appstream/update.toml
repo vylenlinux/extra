@@ -1,5 +1,6 @@
 name = "appstream"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "appstream"
+[ftp]
+url = "https://www.freedesktop.org/software/appstream/releases"
+filename = "AppStream-{version}.tar.xz"
