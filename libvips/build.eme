@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A fast image processing library with low memory needs"
+maintainer="Vylen Linux Team"
+homepage="https://libvips.github.io/libvips/"
+
+name=libvips
+version=8.18.6
+release=1
+source="${name}-${version}.tar.xz::https://github.com/${name}/${name}/releases/download/v${version}/vips-${version}.tar.xz"
+
+build() {
+    vylen-meson "vips-${version}" build -Ddocs=true
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

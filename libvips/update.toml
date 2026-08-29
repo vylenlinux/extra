@@ -1,0 +1,6 @@
+name = "libvips"
+provider = "github"
+
+[source]
+owner = "libvips"
+repo = "libvips"
