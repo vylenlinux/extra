@@ -1,5 +1,5 @@
 name = "fvs"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:fvs"
+package = "fvs"
