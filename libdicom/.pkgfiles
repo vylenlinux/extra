@@ -1,0 +1,20 @@
+libdicom-1.3.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/dcm-dump
+-rwxr-xr-x root/root    usr/bin/dcm-getframe
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/dicom/
+-rw-r--r-- root/root    usr/include/dicom/dicom.h
+-rw-r--r-- root/root    usr/include/dicom/version.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libdicom.so -> libdicom.so.1
+lrwxrwxrwx root/root    usr/lib/libdicom.so.1 -> libdicom.so.1.3.0
+-rwxr-xr-x root/root    usr/lib/libdicom.so.1.3.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libdicom.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/dcm-dump.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/dcm-getframe.1.gz

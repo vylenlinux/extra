@@ -1,0 +1,6 @@
+name = "libdicom"
+provider = "github"
+
+[source]
+owner = "ImagingDataCommons"
+repo = "libdicom"
