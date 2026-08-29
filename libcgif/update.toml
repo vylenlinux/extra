@@ -1,0 +1,6 @@
+name = "libcgif"
+provider = "github"
+
+[source]
+owner = "dloebl"
+repo = "cgif"

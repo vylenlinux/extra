@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A fast and lightweight GIF encoding library"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/dloebl/cgif"
+
+name=libcgif
+version=0.5.3
+release=1
+source="${name}-${version}.tar.gz::https://github.com/dloebl/cgif/archive/v${version}.tar.gz"
+
+build() {
+    vylen-meson "cgif-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
