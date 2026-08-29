@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Library for high-quality conversion of RGBA images to 8-bit indexed-color (palette) images"
+maintainer="Vylen Linux Team"
+homepage="https://pngquant.org/lib/"
+
+name=libimagequant
+version=4.4.1
+release=1
+source="https://github.com/ImageOptim/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}/imagequant-sys"
+
+    export CARGO_PROFILE_RELEASE_LTO=true
+    export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+
+    cargo fetch --target host-tuple
+
+    cargo cbuild \
+        --prefix=/usr \
+        --release
+
+    cargo cinstall \
+        --destdir="${PKG}" \
+        --prefix=/usr \
+        --release
+}

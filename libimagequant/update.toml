@@ -1,0 +1,10 @@
+name = "libimagequant"
+provider = "github"
+
+[source]
+owner = "ImageOptim"
+repo = "libimagequant"
+
+[github]
+use_releases = false
+use_tags = true

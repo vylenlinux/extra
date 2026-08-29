@@ -1,0 +1,11 @@
+libimagequant-4.4.1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+-rw-rw-r-- root/root    usr/include/libimagequant.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libimagequant.a
+lrwxrwxrwx root/root    usr/lib/libimagequant.so -> libimagequant.so.0.4.1
+lrwxrwxrwx root/root    usr/lib/libimagequant.so.0.4 -> libimagequant.so.0.4.1
+-rwxr-xr-x root/root    usr/lib/libimagequant.so.0.4.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/imagequant.pc
