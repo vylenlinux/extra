@@ -1,0 +1,6 @@
+name = "python3-typogrify"
+provider = "github"
+
+[source]
+owner = "justinmayer"
+repo = "typogrify"
