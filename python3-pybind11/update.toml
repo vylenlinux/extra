@@ -1,5 +1,5 @@
 name = "python3-pybind11"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pybind11"
+package = "pybind11"

@@ -1,5 +1,5 @@
 name = "python3-xlib"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:xlib"
+package = "xlib"

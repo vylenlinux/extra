@@ -1,5 +1,5 @@
 name = "python3-distutils-extra"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python-distutils-extra"
+package = "distutils-extra-python"

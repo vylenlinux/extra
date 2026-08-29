@@ -1,5 +1,5 @@
 name = "python3-semantic-version"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:semantic-version"
+package = "semantic-version"

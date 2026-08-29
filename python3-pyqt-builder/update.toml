@@ -1,5 +1,5 @@
 name = "python3-pyqt-builder"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyqt-builder"
+package = "pyqt-builder"

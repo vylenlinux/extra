@@ -1,5 +1,5 @@
 name = "python3-packaging"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:packaging"
+package = "packaging"

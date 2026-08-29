@@ -1,5 +1,5 @@
 name = "python3-zstandard"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:zstandard"
+package = "zstandard"

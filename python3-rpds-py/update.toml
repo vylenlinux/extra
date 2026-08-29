@@ -1,5 +1,5 @@
 name = "python3-rpds-py"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:rpds-py"
+package = "rpds-py"

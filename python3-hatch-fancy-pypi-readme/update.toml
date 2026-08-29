@@ -1,5 +1,5 @@
 name = "python3-hatch-fancy-pypi-readme"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:hatch-fancy-pypi-readme"
+package = "hatch-fancy-pypi-readme"

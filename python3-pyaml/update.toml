@@ -1,5 +1,5 @@
 name = "python3-pyaml"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyaml"
+package = "pyaml"

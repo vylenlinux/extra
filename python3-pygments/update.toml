@@ -1,5 +1,5 @@
 name = "python3-pygments"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pygments"
+package = "pygments"

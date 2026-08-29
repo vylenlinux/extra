@@ -1,5 +1,5 @@
 name = "python3-geographiclib"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:geographiclib"
+package = "geographiclib"

@@ -1,5 +1,5 @@
 name = "python3-tappy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:tappy"
+package = "tappy"

@@ -1,5 +1,5 @@
 name = "python3-fastjsonschema"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:fastjsonschema"
+package = "fastjsonschema"

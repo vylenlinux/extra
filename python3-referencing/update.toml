@@ -1,5 +1,5 @@
 name = "python3-referencing"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:referencing"
+package = "referencing"

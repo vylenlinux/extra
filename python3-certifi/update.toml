@@ -1,5 +1,5 @@
 name = "python3-certifi"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:certifi"
+package = "certifi"

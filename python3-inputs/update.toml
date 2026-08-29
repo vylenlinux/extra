@@ -1,5 +1,5 @@
 name = "python3-inputs"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:inputs"
+package = "inputs"

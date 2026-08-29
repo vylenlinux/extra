@@ -1,5 +1,5 @@
 name = "python3-configobj"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:configobj"
+package = "configobj"

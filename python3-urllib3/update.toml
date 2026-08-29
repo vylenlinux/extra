@@ -1,5 +1,5 @@
 name = "python3-urllib3"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:urllib3"
+package = "urllib3"

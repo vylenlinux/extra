@@ -1,5 +1,5 @@
 name = "python3-docutils"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:docutils"
+package = "docutils"

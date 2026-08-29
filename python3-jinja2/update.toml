@@ -1,5 +1,5 @@
 name = "python3-jinja2"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:jinja2"
+package = "jinja2"

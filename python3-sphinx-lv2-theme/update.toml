@@ -1,5 +1,5 @@
 name = "python3-sphinx-lv2-theme"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sphinx-lv2-theme"
+package = "sphinx-lv2-theme"

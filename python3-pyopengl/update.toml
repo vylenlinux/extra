@@ -1,5 +1,5 @@
 name = "python3-pyopengl"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyopengl"
+package = "pyopengl"

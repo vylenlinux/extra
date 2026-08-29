@@ -1,5 +1,5 @@
 name = "python3-vcs-versioning"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:vcs-versioning"
+package = "vcs-versioning"

@@ -1,5 +1,5 @@
 name = "python3-scour"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:scour"
+package = "scour"

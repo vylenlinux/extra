@@ -1,5 +1,5 @@
 name = "python3-build"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:build"
+package = "build"

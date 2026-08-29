@@ -1,5 +1,5 @@
 name = "python3-pyqt6-webengine"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyqt6-webengine"
+package = "pyqt6-webengine"

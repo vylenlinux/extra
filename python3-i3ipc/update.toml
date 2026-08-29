@@ -1,5 +1,5 @@
 name = "python3-i3ipc"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:i3ipc"
+package = "i3ipc"

@@ -1,5 +1,5 @@
 name = "python3-orjson"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:orjson"
+package = "orjson"

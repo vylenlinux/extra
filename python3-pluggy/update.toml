@@ -1,5 +1,5 @@
 name = "python3-pluggy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pluggy"
+package = "pluggy"

@@ -1,5 +1,5 @@
 name = "python3-pillow"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pillow"
+package = "pillow"

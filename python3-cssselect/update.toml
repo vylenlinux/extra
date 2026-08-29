@@ -1,5 +1,5 @@
 name = "python3-cssselect"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:cssselect"
+package = "cssselect"

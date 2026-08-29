@@ -1,5 +1,5 @@
 name = "python3-sphinxcontrib-serializinghtml"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sphinxcontrib-serializinghtml"
+package = "sphinxcontrib-serializinghtml"

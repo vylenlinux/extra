@@ -1,5 +1,5 @@
 name = "python3-yaml"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyyaml"
+package = "pyyaml"

@@ -1,5 +1,5 @@
 name = "python3-jsonschema"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:jsonschema"
+package = "jsonschema"

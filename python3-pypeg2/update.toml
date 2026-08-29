@@ -1,5 +1,5 @@
 name = "python3-pypeg2"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pypeg2"
+package = "pypeg2"

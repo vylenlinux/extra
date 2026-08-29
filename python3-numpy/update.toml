@@ -1,5 +1,5 @@
 name = "python3-numpy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:numpy"
+package = "numpy"

@@ -1,5 +1,5 @@
 name = "python3-attrs"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:attrs"
+package = "attrs"

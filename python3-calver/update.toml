@@ -1,5 +1,5 @@
 name = "python3-calver"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:calver"
+package = "calver"

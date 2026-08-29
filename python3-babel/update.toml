@@ -1,5 +1,5 @@
 name = "python3-babel"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:babel"
+package = "babel"

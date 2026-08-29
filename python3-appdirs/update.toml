@@ -1,5 +1,5 @@
 name = "python3-appdirs"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:appdirs"
+package = "appdirs"

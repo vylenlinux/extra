@@ -1,5 +1,5 @@
 name = "python3-sphinxcontrib-jsmath"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sphinxcontrib-jsmath"
+package = "sphinxcontrib-jsmath"

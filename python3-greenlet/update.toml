@@ -1,5 +1,5 @@
 name = "python3-greenlet"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:greenlet"
+package = "greenlet"

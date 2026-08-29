@@ -1,5 +1,5 @@
 name = "python3-pyproject2setuppy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyproject2setuppy"
+package = "pyproject2setuppy"

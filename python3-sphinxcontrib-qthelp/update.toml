@@ -1,5 +1,5 @@
 name = "python3-sphinxcontrib-qthelp"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sphinxcontrib-qthelp"
+package = "sphinxcontrib-qthelp"

@@ -1,5 +1,5 @@
 name = "python3-websocket-client"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:websocket-client"
+package = "websocket-client"

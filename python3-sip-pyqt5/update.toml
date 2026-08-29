@@ -1,5 +1,5 @@
 name = "python3-sip-pyqt5"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyqt5-sip"
+package = "pyqt5-sip"

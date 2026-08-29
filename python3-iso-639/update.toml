@@ -1,5 +1,5 @@
 name = "python3-iso-639"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:iso-639"
+package = "iso-639"

@@ -1,5 +1,5 @@
 name = "python3-webencodings"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:webencodings"
+package = "webencodings"

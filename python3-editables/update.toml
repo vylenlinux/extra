@@ -1,5 +1,5 @@
 name = "python3-editables"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:editables"
+package = "editables"

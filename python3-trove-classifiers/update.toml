@@ -1,5 +1,5 @@
 name = "python3-trove-classifiers"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:trove-classifiers"
+package = "trove-classifiers"

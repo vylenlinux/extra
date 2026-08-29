@@ -1,5 +1,5 @@
 name = "python3-markupsafe"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:markupsafe"
+package = "markupsafe"

@@ -1,5 +1,5 @@
 name = "python3-markdown"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:markdown"
+package = "markdown"

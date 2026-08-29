@@ -1,5 +1,5 @@
 name = "python3-ply"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:ply"
+package = "ply"

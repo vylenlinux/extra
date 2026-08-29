@@ -1,5 +1,5 @@
 name = "python3-pysocks"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pysocks"
+package = "pysocks"

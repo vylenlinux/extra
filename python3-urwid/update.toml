@@ -1,5 +1,5 @@
 name = "python3-urwid"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:urwid"
+package = "urwid"

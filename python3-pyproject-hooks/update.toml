@@ -1,5 +1,5 @@
 name = "python3-pyproject-hooks"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pyproject-hooks"
+package = "pyproject-hooks"

@@ -1,5 +1,5 @@
 name = "python3-hatchling"
-provider = "repology"
+provider = "pypi"
 
 [source]
 package = "hatchling"

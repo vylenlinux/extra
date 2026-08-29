@@ -1,5 +1,5 @@
 name = "python3-geopy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:geopy"
+package = "geopy"

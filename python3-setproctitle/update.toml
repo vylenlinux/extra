@@ -1,5 +1,5 @@
 name = "python3-setproctitle"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:setproctitle"
+package = "setproctitle"

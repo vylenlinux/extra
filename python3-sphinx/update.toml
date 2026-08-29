@@ -1,5 +1,5 @@
 name = "python3-sphinx"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sphinx"
+package = "sphinx"

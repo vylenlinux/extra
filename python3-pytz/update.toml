@@ -1,5 +1,5 @@
 name = "python3-pytz"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pytz"
+package = "pytz"

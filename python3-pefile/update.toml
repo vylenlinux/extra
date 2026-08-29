@@ -1,5 +1,5 @@
 name = "python3-pefile"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:pefile"
+package = "pefile"

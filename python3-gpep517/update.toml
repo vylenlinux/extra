@@ -1,5 +1,5 @@
 name = "python3-gpep517"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:gpep517"
+package = "gpep517"

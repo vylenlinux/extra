@@ -1,5 +1,5 @@
 name = "python3-requests"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:requests"
+package = "requests"

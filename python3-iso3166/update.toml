@@ -1,5 +1,5 @@
 name = "python3-iso3166"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:iso3166"
+package = "iso3166"

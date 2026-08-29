@@ -1,5 +1,5 @@
 name = "python3-snowballstemmer"
-provider = "repology"
+provider = "pypi"
 
 [source]
 package = "snowballstemmer"

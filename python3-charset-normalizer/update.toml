@@ -1,5 +1,5 @@
 name = "python3-charset-normalizer"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:charset-normalizer"
+package = "charset-normalizer"

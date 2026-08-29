@@ -1,5 +1,5 @@
 name = "python3-roman-numerals"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:roman-numerals"
+package = "roman-numerals"

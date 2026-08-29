@@ -1,5 +1,5 @@
 name = "python3-setuptools-scm"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:setuptools-scm"
+package = "setuptools-scm"

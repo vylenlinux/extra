@@ -1,5 +1,5 @@
 name = "python3-sqlalchemy"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "python:sqlalchemy"
+package = "sqlalchemy"
