@@ -1,17 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="WebSocket client library for Python"
 homepage="https://github.com/websocket-client/websocket-client"
 maintainer="Vylen Linux Team"
 
 name=python3-websocket-client
-version=1.9.0
+version=1.9.1
 release=1
-source="$name-$version.tar.gz::https://pypi.io/packages/source/w/websocket-client/websocket_client-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.io/packages/source/w/websocket-client/websocket_client-${version}.tar.gz"
 
 build() {
-	cd websocket_client-$version
+    # shellcheck disable=SC2164
+    cd "websocket_client-${version}"
+    python3 setup.py build
 
-	sed -i "s/'backports.ssl_match_hostname'//" setup.py
-	
-	python3 setup.py build
-	python3 setup.py install --root=$PKG --optimize=1 --skip-build
+    python3 setup.py install \
+        --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 }
