@@ -1,5 +1,6 @@
 name = "luajit"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "luajit"
+owner = "openresty"
+repo = "luajit2"
