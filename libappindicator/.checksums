@@ -1,2 +1,2 @@
-ba2b3876420219794fe9b617003986eeb343b287ff9c102ba0b11afdc631ccda  libappindicator-12.10.0.tar.gz
-151bd97554ef34ed70c77ab63bed54392d8fb516057c21588403cff8ffd897db  no-python.patch
+25677164153e73a7529c6d8bfab47ff1c2aebf7dcab7eba40f7de7f70a5fd3d6  libappindicator-12.10.1+20.10.20200706.1.tar.gz
+25061de0bcf88fc7ed6dfa2071387ea325dae4d66c25bc83bdd232fde55a8a45  libappindicator-fix-unfallback.patch
