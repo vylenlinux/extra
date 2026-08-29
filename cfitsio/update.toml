@@ -1,0 +1,6 @@
+name = "cfitsio"
+provider = "github"
+
+[source]
+owner = "HEASARC"
+repo = "cfitsio"

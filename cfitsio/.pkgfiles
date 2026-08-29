@@ -1,0 +1,27 @@
+cfitsio-4.7.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cfitsio-imcopy
+-rwxr-xr-x root/root    usr/bin/cfitsio-smem
+-rwxr-xr-x root/root    usr/bin/cfitsio-speed
+-rwxr-xr-x root/root    usr/bin/fitscopy
+-rwxr-xr-x root/root    usr/bin/fitsverify
+-rwxr-xr-x root/root    usr/bin/fpack
+-rwxr-xr-x root/root    usr/bin/funpack
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/cfitsio_export.h
+-rw-r--r-- root/root    usr/include/fitsio.h
+-rw-r--r-- root/root    usr/include/fitsio2.h
+-rw-r--r-- root/root    usr/include/longnam.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/cfitsio/
+-rw-r--r-- root/root    usr/lib/cmake/cfitsio/cfitsioConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cfitsio/cfitsioConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cfitsio/cfitsioTargets-noconfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cfitsio/cfitsioTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libcfitsio.so -> libcfitsio.so.10
+lrwxrwxrwx root/root    usr/lib/libcfitsio.so.10 -> libcfitsio.so.4.7.0
+-rwxr-xr-x root/root    usr/lib/libcfitsio.so.4.7.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/cfitsio.pc

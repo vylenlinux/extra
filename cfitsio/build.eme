@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format"
+maintainer="Vylen Linux Team"
+homepage="https://heasarc.gsfc.nasa.gov/fitsio/"
+
+name=cfitsio
+version=4.7.0
+release=1
+source="https://github.com/heasarc/${name}/archive/refs/tags/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DUSE_PTHREADS=ON \
+        -DTESTS=OFF \
+        -DUTILS=ON
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    for _bin in imcopy smem speed; do
+        mv "${PKG}/usr/bin/${_bin}" "${PKG}/usr/bin/${name}-${_bin}"
+    done
+}
