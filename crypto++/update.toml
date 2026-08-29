@@ -1,5 +1,6 @@
 name = "crypto++"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "crypto++"
+owner = "weidai11"
+repo = "cryptopp"
