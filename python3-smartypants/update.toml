@@ -1,0 +1,6 @@
+name = "python3-smartypants"
+provider = "github"
+
+[source]
+owner = "justinmayer"
+repo = "smartypants.py"

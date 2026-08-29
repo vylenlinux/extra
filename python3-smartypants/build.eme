@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python with the SmartyPants"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/justinmayer/smartypants.py"
+
+name=python3-smartypants
+version=2.0.2
+release=1
+source="${name}-${version}.tar.gz::https://github.com/justinmayer/smartypants.py/archive/v${version}/python-smartypants-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "smartypants.py-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
