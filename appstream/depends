@@ -2,7 +2,7 @@ bash-completion
 docbook-xsl
 itstool
 libfyaml
-librsvg
+libvips
 libsoup2
 libxmlb
 libxslt

@@ -1,4 +1,4 @@
-appstream-1.1.6-1
+appstream-1.2.0-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/appstreamcli
@@ -45,7 +45,7 @@ drwxr-xr-x root/root    usr/include/appstream-compose/
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-globals.h
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-hint.h
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-icon-policy.h
--rw-r--r-- root/root    usr/include/appstream-compose/asc-image.h
+-rw-r--r-- root/root    usr/include/appstream-compose/asc-media.h
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-result.h
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-unit.h
 -rw-r--r-- root/root    usr/include/appstream-compose/asc-utils.h
@@ -93,6 +93,8 @@ drwxr-xr-x root/root    usr/include/appstream/
 -rw-r--r-- root/root    usr/include/appstream/as-video.h
 drwxr-xr-x root/root    usr/lib/
 -rwxr-xr-x root/root    usr/lib/appstreamcli-compose
+drwxr-xr-x root/root    usr/lib/ascompose/
+-rwxr-xr-x root/root    usr/lib/ascompose/asc-mediaworker
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/AppStreamQt/
 -rw-r--r-- root/root    usr/lib/cmake/AppStreamQt/AppStreamQtConfig.cmake
@@ -101,14 +103,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.1.6
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.1.6
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.0
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.0 -> libappstream-compose.so.1.1.6
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.1.6
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.0
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.0
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.1
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.0
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.0
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.1.6
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.1.6
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.0
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
