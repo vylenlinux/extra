@@ -1,7 +1,7 @@
 openldap-2.7.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/slapd
+-rw-r--r-- root/root    etc/conf.d/slapd.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/slapd
 drwxr-xr-x root/root    etc/openldap/
