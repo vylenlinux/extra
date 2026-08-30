@@ -1,7 +1,7 @@
 zram-init-13.3-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/zram-init
+-rw-r--r-- root/root    etc/conf.d/zram-init.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/zram-init
 drwxr-xr-x root/root    etc/modprobe.d/
