@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="Makes power profiles handling available over D-Bus"
+maintainer="Vylen Linux Team"
+homepage="https://gitlab.freedesktop.org/upower/power-profiles-daemon"
+
+name=power-profiles-daemon
+version=0.30
+release=1
+source="https://gitlab.freedesktop.org/upower/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Dsystemdsystemunitdir="" \
+        -Dgtk_doc=false \
+        -Dpylint=disabled \
+        -Dtests=false \
+        -Dbashcomp=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # fix tlp conflict
+    rm -rf "${PKG}/usr/share/dbus-1"
+}

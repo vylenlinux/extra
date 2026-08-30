@@ -1,0 +1,5 @@
+name = "power-profiles-daemon"
+provider = "repology"
+
+[source]
+package = "power-profiles-daemon"

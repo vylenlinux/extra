@@ -1,0 +1,10 @@
+power-profiles-daemon-0.30-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/powerprofilesctl
+drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/power-profiles-daemon
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/polkit-1/
+drwxr-xr-x root/root    usr/share/polkit-1/actions/
+-rw-r--r-- root/root    usr/share/polkit-1/actions/power-profiles-daemon.policy
