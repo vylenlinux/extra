@@ -1,5 +1,6 @@
 name = "openssh"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "openssh"
+[ftp]
+url = "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/"
+filename = "openssh-{version}.tar.gz"
