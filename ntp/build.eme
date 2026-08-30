@@ -8,6 +8,7 @@ maintainer="Vylen Linux Team"
 name=ntp
 version=4.2.8p18
 release=3
+backup="etc/${name}.conf"
 
 source="https://www.eecis.udel.edu/~${name}/${name}_spool/ntp4/${name}-${version%.*}/${name}-${version}.tar.gz
     fix.build.patch
