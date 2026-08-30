@@ -11,7 +11,7 @@ drwxr-xr-x root/root    etc/NetworkManager/dnsmasq-shared.d/
 drwxr-xr-x root/root    etc/NetworkManager/dnsmasq.d/
 drwxr-xr-x root/root    etc/NetworkManager/system-connections/
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/networkmanager
+-rw-r--r-- root/root    etc/conf.d/networkmanager.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/networkmanager
 drwxr-xr-x root/root    lib/
