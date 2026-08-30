@@ -8,7 +8,7 @@ drwxr-xr-x root/root    etc/bluetooth/
 -rw-r--r-- root/root    etc/bluetooth/rfcomm.conf
 -rw-r--r-- root/root    etc/bluetooth/uart.conf
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/bluetoothd
+-rw-r--r-- root/root    etc/conf.d/bluetoothd.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/bluetoothd
 drwxr-xr-x root/root    lib/
