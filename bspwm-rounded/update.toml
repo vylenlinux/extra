@@ -1,5 +1,10 @@
 name = "bspwm-rounded"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bspwm-rounded-corners"
+owner = "phuhl"
+repo = "bspwm-rounded"
+
+[github]
+use_releases = false
+use_tags = true
