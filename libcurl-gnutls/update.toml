@@ -1,6 +1,7 @@
 name = "libcurl-gnutls"
-provider = "repology"
+provider = "ftp"
 dedup_key = "curl"
 
-[source]
-package = "curl"
+[ftp]
+url = "https://curl.haxx.se/download/"
+filename = "curl-{version}.tar.xz"
