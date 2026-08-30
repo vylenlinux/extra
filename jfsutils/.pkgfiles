@@ -1,4 +1,3 @@
-jfsutils-1.1.15-1
 drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/fsck.jfs
 -rwxr-xr-x root/root    sbin/jfs_debugfs

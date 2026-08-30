@@ -1,4 +1,3 @@
-libtirpc-1.3.7-1
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/bindresvport.blacklist
 -rw-r--r-- root/root    etc/netconfig

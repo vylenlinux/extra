@@ -1,4 +1,3 @@
-iwd-3.12-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/iwd

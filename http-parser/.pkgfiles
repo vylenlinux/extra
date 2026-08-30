@@ -1,4 +1,3 @@
-http-parser-2.9.4-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/include/
 -rwxr-xr-x root/root    usr/include/http_parser.h

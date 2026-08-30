@@ -1,4 +1,3 @@
-cifs-utils-7.7-1
 drwxr-xr-x root/root    sbin/
 -rwsr-sr-x root/root    sbin/mount.cifs
 lrwxrwxrwx root/root    sbin/mount.smb3 -> mount.cifs

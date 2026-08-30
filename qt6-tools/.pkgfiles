@@ -1,4 +1,3 @@
-qt6-tools-6.11.2-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/assistant6 -> ../lib/qt6/bin/assistant

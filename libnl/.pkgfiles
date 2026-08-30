@@ -1,4 +1,3 @@
-libnl-3.12.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/libnl/
 -rw-r--r-- root/root    etc/libnl/classid

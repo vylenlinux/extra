@@ -1,4 +1,3 @@
-networkmanager-1.58.1-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/NetworkManager/
 -rw-r--r-- root/root    etc/NetworkManager/NetworkManager.conf.epkgnew

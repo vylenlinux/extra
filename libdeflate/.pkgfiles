@@ -1,4 +1,3 @@
-libdeflate-1.26-1
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 hrwxr-xr-x root/root    usr/bin/libdeflate-gunzip link to usr/bin/libdeflate-gzip
