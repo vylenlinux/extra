@@ -8,6 +8,7 @@ maintainer="Vylen Linux Team"
 name=smartmontools
 version=7.5
 release=1
+backup="etc/smartd.conf"
 source="https://sourceforge.net/projects/${name}/files/${name}/${version}/${name}-${version}.tar.gz"
 
 build() {
