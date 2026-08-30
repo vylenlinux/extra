@@ -1,9 +1,9 @@
 libvirt-12.6.0-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/libvirt-guests
--rw-r--r-- root/root    etc/conf.d/libvirtd
--rw-r--r-- root/root    etc/conf.d/virtproxyd
+-rw-r--r-- root/root    etc/conf.d/libvirt-guests.epkgnew
+-rw-r--r-- root/root    etc/conf.d/libvirtd.epkgnew
+-rw-r--r-- root/root    etc/conf.d/virtproxyd.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/libvirt-guests
 -rwxr-xr-x root/root    etc/init.d/libvirtd
