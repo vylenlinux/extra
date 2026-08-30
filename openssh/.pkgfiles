@@ -1,7 +1,7 @@
 openssh-10.5p1-1
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/conf.d/
--rw-r--r-- root/root    etc/conf.d/sshd
+-rw-r--r-- root/root    etc/conf.d/sshd.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/ssh-agent
 -rwxr-xr-x root/root    etc/init.d/sshd
