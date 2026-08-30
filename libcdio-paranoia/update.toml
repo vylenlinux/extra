@@ -1,5 +1,6 @@
 name = "libcdio-paranoia"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libcdio-paranoia"
+[ftp]
+url = "https://ftp.gnu.org/gnu/libcdio/"
+filename = "libcdio-paranoia-{version}.tar.bz2"
