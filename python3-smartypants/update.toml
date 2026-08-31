@@ -1,6 +1,5 @@
 name = "python3-smartypants"
-provider = "github"
+provider = "pypi"
 
 [source]
-owner = "justinmayer"
-repo = "smartypants.py"
+package = "smartypants"
