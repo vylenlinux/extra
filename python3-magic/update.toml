@@ -1,10 +1,5 @@
 name = "python3-magic"
-provider = "github"
+provider = "pypi"
 
 [source]
-owner = "ahupp"
-repo = "python-magic"
-
-[github]
-use_releases = false
-use_tags = true
+package = "python-magic"
