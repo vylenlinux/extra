@@ -1,2 +1,5 @@
 name = "pkgtui"
-provider = "manual"
+provider = "crates"
+
+[source]
+crate = "pkgtui"
