@@ -1,6 +1,5 @@
 name = "python3-typogrify"
-provider = "github"
+provider = "pypi"
 
 [source]
-owner = "justinmayer"
-repo = "typogrify"
+package = "typogrify"
