@@ -1,5 +1,5 @@
 name = "bat"
-provider = "repology"
+provider = "crates"
 
 [source]
-package = "bat-cat"
+crate = "bat"
