@@ -1,5 +1,10 @@
 name = "cppdap"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cppdap"
+owner = "google"
+repo = "cppdap"
+
+[github]
+use_releases = false
+use_tags = true
