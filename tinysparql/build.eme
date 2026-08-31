@@ -15,7 +15,7 @@ source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/arch
 
 build() {
     # shellcheck disable=SC2164
-    cd ${name}-${version}
+    cd "${name}-${version}"
 
     patch -Np1 -i "${SRC}/disable-cli-test.patch"
     patch -Np1 -i "${SRC}/gh-ci-timeout.patch"
