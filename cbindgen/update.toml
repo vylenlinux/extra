@@ -1,5 +1,5 @@
 name = "cbindgen"
-provider = "repology"
+provider = "crates"
 
 [source]
-package = "cbindgen"
+crate = "cbindgen"
