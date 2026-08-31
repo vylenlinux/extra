@@ -1,5 +1,6 @@
 name = "python3-atspi"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "pyatspi2"
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/pyatspi2"
