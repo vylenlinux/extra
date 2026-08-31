@@ -1,5 +1,5 @@
 name = "perl-xml-sax"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:xml-sax"
+package = "XML-SAX"

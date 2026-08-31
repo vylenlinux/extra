@@ -1,5 +1,5 @@
 name = "perl-xml-namespacesupport"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:xml-namespacesupport"
+package = "XML-NamespaceSupport"

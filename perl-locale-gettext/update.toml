@@ -1,5 +1,5 @@
 name = "perl-locale-gettext"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:locale-gettext"
+package = "Locale-gettext"

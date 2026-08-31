@@ -1,5 +1,5 @@
 name = "perl-xml-parser"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:xml-parser"
+package = "XML-Parser"

@@ -1,5 +1,5 @@
 name = "perl-json"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:json"
+package = "JSON"

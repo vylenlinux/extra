@@ -1,5 +1,5 @@
 name = "perl-class-inspector"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:class-inspector"
+package = "Class-Inspector"

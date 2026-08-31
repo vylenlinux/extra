@@ -1,5 +1,5 @@
 name = "perl-file-sharedir-install"
-provider = "repology"
+provider = "metacpan"
 
 [source]
-package = "perl:file-sharedir-install"
+package = "File-ShareDir-Install"
