@@ -1,5 +1,5 @@
 name = "lynxfetch"
-provider = "repology"
+provider = "crates"
 
 [source]
-package = "lynxfetch"
+crate = "lynxfetch"
