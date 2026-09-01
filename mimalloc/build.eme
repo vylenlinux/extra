@@ -6,7 +6,7 @@ homepage="https://github.com/microsoft/mimalloc"
 maintainer="Vylen Linux Team"
 
 name=mimalloc
-version=3.5.0
+version=3.5.1
 release=1
 source="https://github.com/microsoft/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
