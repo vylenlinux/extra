@@ -6,7 +6,7 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team"
 
 name=firefox
-version=154.0.1
+version=155.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
@@ -39,10 +39,10 @@ build() {
         printf 'ac_add_options --enable-default-toolkit=cairo-gtk3\n' >> .mozconfig
 
     # build configuration
-    #export CC=gcc CXX=g++ # build with GCC
+    export CC=gcc CXX=g++ # build with GCC
     export CFLAGS="${CFLAGS} -w"
     export CXXFLAGS="${CXXFLAGS} -w" # disable warnings
-    export RUSTFLAGS="-C opt-level=2 ${RUSTFLAGS}"
+    export RUSTFLAGS="${RUSTFLAGS} -C opt-level=2"
     export BUILD_OFFICIAL=1
     export MOZILLA_OFFICIAL=1
     export MOZ_APP_REMOTINGNAME=firefox
