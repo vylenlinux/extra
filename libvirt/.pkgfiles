@@ -133,17 +133,17 @@ drwxr-xr-x root/root    usr/lib/firewalld/zones/
 -rwxr-xr-x root/root    usr/lib/libnss_libvirt.so.2
 -rwxr-xr-x root/root    usr/lib/libnss_libvirt_guest.so.2
 lrwxrwxrwx root/root    usr/lib/libvirt-admin.so -> libvirt-admin.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-admin.so.0 -> libvirt-admin.so.0.12006.0
--rwxr-xr-x root/root    usr/lib/libvirt-admin.so.0.12006.0
+lrwxrwxrwx root/root    usr/lib/libvirt-admin.so.0 -> libvirt-admin.so.0.12007.0
+-rwxr-xr-x root/root    usr/lib/libvirt-admin.so.0.12007.0
 lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so -> libvirt-lxc.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so.0 -> libvirt-lxc.so.0.12006.0
--rwxr-xr-x root/root    usr/lib/libvirt-lxc.so.0.12006.0
+lrwxrwxrwx root/root    usr/lib/libvirt-lxc.so.0 -> libvirt-lxc.so.0.12007.0
+-rwxr-xr-x root/root    usr/lib/libvirt-lxc.so.0.12007.0
 lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so -> libvirt-qemu.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so.0 -> libvirt-qemu.so.0.12006.0
--rwxr-xr-x root/root    usr/lib/libvirt-qemu.so.0.12006.0
+lrwxrwxrwx root/root    usr/lib/libvirt-qemu.so.0 -> libvirt-qemu.so.0.12007.0
+-rwxr-xr-x root/root    usr/lib/libvirt-qemu.so.0.12007.0
 lrwxrwxrwx root/root    usr/lib/libvirt.so -> libvirt.so.0
-lrwxrwxrwx root/root    usr/lib/libvirt.so.0 -> libvirt.so.0.12006.0
--rwxr-xr-x root/root    usr/lib/libvirt.so.0.12006.0
+lrwxrwxrwx root/root    usr/lib/libvirt.so.0 -> libvirt.so.0.12007.0
+-rwxr-xr-x root/root    usr/lib/libvirt.so.0.12007.0
 drwxr-xr-x root/root    usr/lib/libvirt/
 drwxr-xr-x root/root    usr/lib/libvirt/connection-driver/
 -rwxr-xr-x root/root    usr/lib/libvirt/connection-driver/libvirt_driver_ch.so
@@ -633,6 +633,47 @@ drwxr-xr-x root/root    usr/share/locale/zh_Hant/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/zh_TW/
 drwxr-xr-x root/root    usr/share/locale/zh_TW/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/libvirt.mo
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/virsh.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-admin.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-host-validate.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-login-shell.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-pki-query-dn.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-pki-validate.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-qemu-qmp-proxy.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-qemu-run.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-qemu-sev-validate.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/virt-xml-validate.1.gz
+drwxr-xr-x root/root    usr/share/man/man7/
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-atset1.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-atset2.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-atset3.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-linux.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-osx.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-qnum.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-usb.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-win32.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeycode-xtkbd.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeyname-linux.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeyname-osx.7.gz
+-rw-r--r-- root/root    usr/share/man/man7/virkeyname-win32.7.gz
+drwxr-xr-x root/root    usr/share/man/man8/
+-rw-r--r-- root/root    usr/share/man/man8/libvirt-guests.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/libvirtd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virt-ssh-helper.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtinterfaced.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtlockd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtlogd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtlxcd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtnetworkd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtnodedevd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtnwfilterd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtproxyd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtqemud.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtsecretd.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtstoraged.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/virtvboxd.8.gz
 drwxr-xr-x root/root    usr/share/polkit-1/
 drwxr-xr-x root/root    usr/share/polkit-1/actions/
 -rw-r--r-- root/root    usr/share/polkit-1/actions/org.libvirt.api.policy
