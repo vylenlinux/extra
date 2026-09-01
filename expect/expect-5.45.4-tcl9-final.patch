@@ -1,3 +1,8 @@
+From: Vylen Linux Team
+Subject: [PATCH] expect: complete Tcl 9 compatibility fixes
+Created by: Vylen Linux Team
+Description: Complete Tcl 9.0.4 compatibility: declarations, varargs, allocator API, and channel ABI.
+
 --- expect5.45.4/exp_trap.c	2026-09-01 14:11:06.635776593 +0000
 +++ expect5.45.4/exp_trap.c	2026-09-01 14:13:32.331747728 +0000
 @@ -401,7 +401,7 @@

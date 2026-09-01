@@ -1,3 +1,8 @@
+From: Vylen Linux Team
+Subject: [PATCH] expect: add initial Tcl 9 compatibility
+Created by: Vylen Linux Team
+Description: Initial Tcl 9 compatibility for _ANSI_ARGS_ and channel ABI version.
+
 --- expect5.45.4/expect.h.tcl9-compat	2026-09-01 13:45:19.566375090 +0000
 +++ expect5.45.4/expect.h	2026-09-01 13:52:12.944090458 +0000
 @@ -13,6 +13,9 @@
