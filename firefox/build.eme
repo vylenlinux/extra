@@ -39,7 +39,7 @@ build() {
         printf 'ac_add_options --enable-default-toolkit=cairo-gtk3\n' >> .mozconfig
 
     # build configuration
-    export CC=gcc CXX=g++ # build with GCC
+    # export CC=gcc CXX=g++ # build with GCC
     export CFLAGS="${CFLAGS} -w"
     export CXXFLAGS="${CXXFLAGS} -w" # disable warnings
     export RUSTFLAGS="${RUSTFLAGS} -C opt-level=2"
@@ -53,7 +53,7 @@ build() {
     unset CARGO_PROFILE_RELEASE_LTO
 
     # python configuration
-    export SHELL='/bin/sh'
+    export SHELL=/bin/sh
     export PIP_NETWORK_INSTALL_RESTRICTED_VIRTUALENVS=mach
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
 
@@ -63,7 +63,7 @@ build() {
     unset MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE MOZBUILD_STATE_PATH
 
     # vendor
-    install -Dm644 /dev/stdin "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
+    install -Dm644 "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
 
     # distribution
     sed -i \
