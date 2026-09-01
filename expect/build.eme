@@ -88,5 +88,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    mv "${PKG}/usr/lib/tcl9.0/expect5.45.4/libexpect5.45.4.so" -t "${PKG}/usr/lib/"
+    mv "${PKG}/usr/lib/tcl9.0/${name}${version}/libexpect${version}.so" -t "${PKG}/usr/lib/"
 }
