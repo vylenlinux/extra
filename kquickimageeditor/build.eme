@@ -6,13 +6,11 @@ homepage="https://invent.kde.org/libraries/kquickimageeditor"
 maintainer="Vylen Linux Team"
 
 name=kquickimageeditor
-version=0.6.2.1
-release=2
+version=0.7.0
+release=1
 source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    sed -e 's|OpenCV 4.7|OpenCV 5|' -i "${name}-${version}/CMakeLists.txt"
-
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
