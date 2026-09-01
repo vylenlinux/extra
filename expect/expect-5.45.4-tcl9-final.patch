@@ -1,0 +1,706 @@
+--- expect5.45.4/exp_trap.c	2026-09-01 14:11:06.635776593 +0000
++++ expect5.45.4/exp_trap.c	2026-09-01 14:13:32.331747728 +0000
+@@ -401,7 +401,7 @@
+ 		}
+ 
+ 		expDiagLog("trap: setting up signal %d (\"%s\")\r\n",sig,s);
+-		if (traps[sig].action) ckfree(traps[sig].action);
++		if (traps[sig].action) Tcl_Free(traps[sig].action);
+ 		if (streq(action,"SIG_DFL")) {
+ 			/* should've been free'd by now if nec. */
+ 			traps[sig].action = 0;
+@@ -412,7 +412,7 @@
+ #endif /*REARM_SIG*/
+ 		} else {
+ 			len = 1 + strlen(action);
+-			traps[sig].action = ckalloc(len);
++			traps[sig].action = Tcl_Alloc(len);
+ 			memcpy(traps[sig].action,action,len);
+ 			traps[sig].interp = new_interp;
+ 			traps[sig].code = new_code;
+@@ -423,7 +423,7 @@
+ 	}
+ 	/* It is no longer necessary to free the split list since it */
+ 	/* is still owned by Tcl, yes? */
+-	/*	ckfree((char *)list); */
++	/*	Tcl_Free((char *)list); */
+ 	return(rc);
+  usage_error:
+ 	exp_error(interp,"usage: trap [command or SIG_DFL or SIG_IGN] {list of signals}");
+--- expect5.45.4/expect.c	2026-09-01 14:11:06.658855523 +0000
++++ expect5.45.4/expect.c	2026-09-01 14:13:32.327353667 +0000
+@@ -1,3 +1,7 @@
++#ifndef _ANSI_ARGS_
++# define _ANSI_ARGS_(args) args
++#endif
++
+ /* expect.c - expect commands
+ 
+ Written by: Don Libes, NIST, 2/6/90
+@@ -196,7 +200,7 @@
+     }
+     }
+ 
+-    ckfree((char *)ec);	/* NEW */
++    Tcl_Free((char *)ec);	/* NEW */
+ }
+ 
+ /* free up any argv structures in the ecases */
+@@ -213,7 +217,7 @@
+ 	for (i=0;i<eg->ecd.count;i++) {
+ 		free_ecase(interp,eg->ecd.cases[i],free_ilist);
+ 	}
+-	ckfree((char *)eg->ecd.cases);
++	Tcl_Free((char *)eg->ecd.cases);
+ 
+ 	eg->ecd.cases = 0;
+ 	eg->ecd.count = 0;
+@@ -225,7 +229,7 @@
+ /* the whole quagmire by calling it something else */
+ static char *exp_strdup(char *s)
+ {
+-	char *news = ckalloc(strlen(s) + 1);
++	char *news = Tcl_Alloc(strlen(s) + 1);
+ 	strcpy(news,s);
+ 	return(news);
+ }
+@@ -373,7 +377,7 @@
+ static struct ecase *
+ ecase_new(void)
+ {
+-	struct ecase *ec = (struct ecase *)ckalloc(sizeof(struct ecase));
++	struct ecase *ec = (struct ecase *)Tcl_Alloc(sizeof(struct ecase));
+ 
+ 	ecase_clear(ec);
+ 	return ec;
+@@ -425,7 +429,7 @@
+     /* cases.  This will often be too large (i.e., if there are flags) */
+     /* but won't affect anything. */
+ 
+-    eg->ecd.cases = (struct ecase **)ckalloc(sizeof(struct ecase *) * (1+(objc/2)));
++    eg->ecd.cases = (struct ecase **)Tcl_Alloc(sizeof(struct ecase *) * (1+(objc/2)));
+ 
+     eg->ecd.count = 0;
+ 
+@@ -1105,7 +1109,7 @@
+ 			}
+ 			ecmd->ecd.count--;
+ 			if (0 == ecmd->ecd.count) {
+-				ckfree((char *)ecmd->ecd.cases);
++				Tcl_Free((char *)ecmd->ecd.cases);
+ 				ecmd->ecd.cases = 0;
+ 			}
+ 		} else {
+@@ -1551,11 +1555,11 @@
+ 
+ 	if (ecmd->ecd.count) {
+ 	    /* append to end */
+-	    ecmd->ecd.cases = (struct ecase **)ckrealloc((char *)ecmd->ecd.cases, count * sizeof(struct ecase *));
++	    ecmd->ecd.cases = (struct ecase **)Tcl_Realloc((char *)ecmd->ecd.cases, count * sizeof(struct ecase *));
+ 	    start_index = ecmd->ecd.count;
+ 	} else {
+ 	    /* append to beginning */
+-	    ecmd->ecd.cases = (struct ecase **)ckalloc(eg.ecd.count * sizeof(struct ecase *));
++	    ecmd->ecd.cases = (struct ecase **)Tcl_Alloc(eg.ecd.count * sizeof(struct ecase *));
+ 	    start_index = 0;
+ 	}
+ 	memcpy(&ecmd->ecd.cases[start_index],eg.ecd.cases,
+@@ -1584,7 +1588,7 @@
+ 	}
+ 	free_ecases(interp,&eg,1);
+     } else {
+-	if (eg.ecd.cases) ckfree((char *)eg.ecd.cases);
++	if (eg.ecd.cases) Tcl_Free((char *)eg.ecd.cases);
+     }
+ 
+     if (ecmd->cmdtype == EXP_CMD_BG) {
+@@ -2642,7 +2646,7 @@
+     }
+ 
+     /* make into an array */
+-    esPtrs = (ExpState **)ckalloc(mcount * sizeof(ExpState *));
++    esPtrs = (ExpState **)Tcl_Alloc(mcount * sizeof(ExpState *));
+     for (slPtr=state_list,i=0;slPtr;slPtr=slPtr->next,i++) {
+ 	esPtrs[i] = slPtr->esPtr;
+     }
+@@ -2772,7 +2776,7 @@
+ 	state_list = 0;
+     }
+     if (esPtrs) {
+-	ckfree((char *)esPtrs);
++	Tcl_Free((char *)esPtrs);
+ 	esPtrs = 0;
+     }
+ 
+--- expect5.45.4/exp_chan.c	2026-09-01 14:11:06.663213911 +0000
++++ expect5.45.4/exp_chan.c	2026-09-01 14:13:32.326954570 +0000
+@@ -62,7 +62,7 @@
+ 
+ Tcl_ChannelType expChannelType = {
+     "exp",				/* Type name. */
+-    TCL_CHANNEL_VERSION_2,
++    TCL_CHANNEL_VERSION_5,
+     ExpCloseProc,			/* Close proc. */
+     ExpInputProc,			/* Input proc. */
+     ExpOutputProc,			/* Output proc. */
+@@ -584,7 +584,7 @@
+     esPtr->valid = FALSE;
+     
+     if (!esPtr->keepForever) {
+-	ckfree((char *)esPtr);
++	Tcl_Free((char *)esPtr);
+     }
+ }
+ 
+@@ -720,7 +720,7 @@
+ 
+     channelTypePtr = &expChannelType;
+ 
+-    esPtr = (ExpState *) ckalloc(sizeof(ExpState));
++    esPtr = (ExpState *) Tcl_Alloc(sizeof(ExpState));
+ 
+     esPtr->nextPtr = tsdPtr->firstExpPtr;
+     tsdPtr->firstExpPtr = esPtr;
+--- expect5.45.4/exp_main_sub.c	2026-09-01 14:11:06.643252331 +0000
++++ expect5.45.4/exp_main_sub.c	2026-09-01 14:13:32.332050195 +0000
+@@ -513,7 +513,7 @@
+      ClientData clientData;
+      Tcl_Interp *interp;
+ {
+-  ckfree (clientData);
++  Tcl_Free (clientData);
+ }
+ 
+ 
+@@ -566,15 +566,15 @@
+      * 	Save initial close and return for later use
+      */
+ 
+-    close_info = (Tcl_CmdInfo*) ckalloc (sizeof (Tcl_CmdInfo));
++    close_info = (Tcl_CmdInfo*) Tcl_Alloc (sizeof (Tcl_CmdInfo));
+     if (Tcl_GetCommandInfo(interp, "close", close_info) == 0) {
+-        ckfree ((char*) close_info);
++        Tcl_Free ((char*) close_info);
+         return TCL_ERROR;
+     }
+-    return_info = (Tcl_CmdInfo*) ckalloc (sizeof (Tcl_CmdInfo));
++    return_info = (Tcl_CmdInfo*) Tcl_Alloc (sizeof (Tcl_CmdInfo));
+     if (Tcl_GetCommandInfo(interp, "return", return_info) == 0){
+-        ckfree ((char*) close_info);
+-        ckfree ((char*) return_info);
++        Tcl_Free ((char*) close_info);
++        Tcl_Free ((char*) return_info);
+ 	return TCL_ERROR;
+     }
+     Tcl_SetAssocData (interp, EXP_CMDINFO_CLOSE,  DeleteCmdInfo, (ClientData) close_info);
+--- expect5.45.4/Dbg.c	2026-09-01 14:11:06.637347094 +0000
++++ expect5.45.4/Dbg.c	2026-09-01 14:13:32.334270089 +0000
+@@ -1,3 +1,7 @@
++#ifndef _ANSI_ARGS_
++# define _ANSI_ARGS_(args) args
++#endif
++
+ /* Dbg.c - Tcl Debugger - See cmdHelp() for commands
+ 
+ Written by: Don Libes, NIST, 3/23/93
+@@ -107,7 +111,7 @@
+ static struct breakpoint *
+ breakpoint_new()
+ {
+-	struct breakpoint *b = (struct breakpoint *)ckalloc(sizeof(struct breakpoint));
++	struct breakpoint *b = (struct breakpoint *)Tcl_Alloc(sizeof(struct breakpoint));
+ 	if (break_base) break_base->previous = b;
+ 	b->next = break_base;
+ 	b->previous = 0;
+@@ -318,8 +322,8 @@
+     /* worst case is every character takes 4 to printify */
+     need = strlen(s)*6;
+     if (need > destlen) {
+-	if (dest && (dest != buf_basic)) ckfree(dest);
+-	dest = (char *)ckalloc(need+1);
++	if (dest && (dest != buf_basic)) Tcl_Free(dest);
++	dest = (char *)Tcl_Alloc(need+1);
+ 	destlen = need;
+     }
+ 
+@@ -368,8 +372,8 @@
+ 	int arg_index;
+ 
+ 	if (buf_width > buf_width_max) {
+-		if (buf && (buf != buf_basic)) ckfree(buf);
+-		buf = (char *)ckalloc(buf_width + 1);
++		if (buf && (buf != buf_basic)) Tcl_Free(buf);
++		buf = (char *)Tcl_Alloc(buf_width + 1);
+ 		buf_width_max = buf_width;
+ 	}
+ 
+@@ -444,7 +448,7 @@
+     char **argv;
+     int argc;
+     Tcl_Size len;
+-    argv = (char **)ckalloc(objc+1 * sizeof(char *));
++    argv = (char **)Tcl_Alloc(objc+1 * sizeof(char *));
+     for (argc=0 ; argc<objc ; argc++) {
+ 	argv[argc] = Tcl_GetStringFromObj(objv[argc],&len);
+     }
+@@ -812,7 +816,7 @@
+ 		b->next->previous = b->previous;
+ 	}
+ 
+-	ckfree((char *)b);
++	Tcl_Free((char *)b);
+ }
+ 
+ static void
+@@ -1143,8 +1147,8 @@
+ 		static char *buf = buf_basic;
+ 
+ 		if (buf_width+PAD > buf_width_max) {
+-			if (buf && (buf != buf_basic)) ckfree(buf);
+-			buf = (char *)ckalloc(buf_width+PAD+1);
++			if (buf && (buf != buf_basic)) Tcl_Free(buf);
++			buf = (char *)Tcl_Alloc(buf_width+PAD+1);
+ 			buf_width_max = buf_width+PAD;
+ 		}
+ 
+@@ -1219,7 +1223,7 @@
+ 		main_argv = argv;
+ 		alloc = 0;
+ 	} else {
+-		main_argv = alloc = (char **)ckalloc((argc+1)*sizeof(char *));
++		main_argv = alloc = (char **)Tcl_Alloc((argc+1)*sizeof(char *));
+ 		while (argc-- >= 0) {
+ 			*main_argv++ = *argv++;
+ 		}
+--- expect5.45.4/exp_glob.c	2026-09-01 14:11:06.624260509 +0000
++++ expect5.45.4/exp_glob.c	2026-09-01 14:13:32.337021200 +0000
+@@ -1,3 +1,7 @@
++#ifndef _ANSI_ARGS_
++# define _ANSI_ARGS_(args) args
++#endif
++
+ /* exp_glob.c - expect functions for doing glob
+ 
+ Based on Tcl's glob functions but modified to support anchors and to
+--- expect5.45.4/exp_tty.c	2026-09-01 14:11:06.625861010 +0000
++++ expect5.45.4/exp_tty.c	2026-09-01 14:13:32.326201151 +0000
+@@ -294,8 +294,8 @@
+ 	/* worst case is every character takes 2 to represent */
+ 	need = 1 + 2*(len?*len:strlen(s));
+ 	if (need > destlen) {
+-		if (dest) ckfree(dest);
+-		dest = ckalloc(need);
++		if (dest) Tcl_Free(dest);
++		dest = Tcl_Alloc(need);
+ 		destlen = need;
+ 	}
+ 
+--- expect5.45.4/exp_clib.c	2026-09-01 14:11:06.661073473 +0000
++++ expect5.45.4/exp_clib.c	2026-09-01 14:13:32.337579491 +0000
+@@ -156,7 +156,7 @@
+  * regular-expression syntax might require a total rethink.
+  *
+  * *** NOTE: this code has been altered slightly for use in Tcl: ***
+- * *** 1. Use ckalloc and ckfree instead of  malloc and free.	 ***
++ * *** 1. Use Tcl_Alloc and Tcl_Free instead of  malloc and free.	 ***
+  * *** 2. Add extra argument to regexp to specify the real	 ***
+  * ***    start of the string separately from the start of the	 ***
+  * ***    current search. This is needed to search for multiple	 ***
+@@ -398,7 +398,7 @@
+ 		FAIL("regexp too big");
+ 
+ 	/* Allocate space. */
+-	r = (regexp *)ckalloc(sizeof(regexp) + rcstate->regsize);
++	r = (regexp *)Tcl_Alloc(sizeof(regexp) + rcstate->regsize);
+ 	if (r == NULL)
+ 		FAIL("out of space");
+ 
+@@ -408,7 +408,7 @@
+ 	rcstate->regcode = r->program;
+ 	regc(MAGIC, rcstate);
+ 	if (reg(0, &flags, rcstate) == NULL) {
+-	  ckfree ((char*) r);
++	  Tcl_Free ((char*) r);
+ 	  return(NULL);
+ 	}
+ 
+@@ -3421,8 +3421,8 @@
+ 	/* worst case is every character takes 4 to printify */
+ 	need = strlen(s)*4 + 1;
+ 	if (need > destlen) {
+-		if (dest) ckfree(dest);
+-		dest = ckalloc(need);
++		if (dest) Tcl_Free(dest);
++		dest = Tcl_Alloc(need);
+ 		destlen = need;
+ 	}
+ 
+--- expect5.45.4/exp_poll.c	2026-09-01 14:11:06.618663377 +0000
++++ expect5.45.4/exp_poll.c	2026-09-01 14:13:32.329067187 +0000
+@@ -241,7 +241,7 @@
+ 	}
+     }
+     if (filePtr == NULL) {
+-	filePtr = (FileHandler*) ckalloc(sizeof(FileHandler)); /* MLK */
++	filePtr = (FileHandler*) Tcl_Alloc(sizeof(FileHandler)); /* MLK */
+ 	filePtr->fd = fd;
+ 	filePtr->readyMask = 0;
+ 	filePtr->nextPtr = notifier.firstFileHandlerPtr;
+@@ -254,8 +254,8 @@
+ 
+     fdsInUse++;
+     if (fdsInUse > fdsMaxSpace) {
+-	if (fdArray != &initialFdArray) ckfree((char *)fdArray);
+-	fdArray = (struct pollfd *)ckalloc(fdsInUse*sizeof(struct pollfd));
++	if (fdArray != &initialFdArray) Tcl_Free((char *)fdArray);
++	fdArray = (struct pollfd *)Tcl_Alloc(fdsInUse*sizeof(struct pollfd));
+ 	fdsMaxSpace = fdsInUse;
+     }
+ 
+@@ -355,7 +355,7 @@
+ 
+     fdsInUse--;
+ 
+-    ckfree((char *) filePtr);
++    Tcl_Free((char *) filePtr);
+ }
+ 
+ /*
+@@ -513,7 +513,7 @@
+ 	 */
+ 
+ 	if (filePtr->readyMask == 0) {
+-	    fileEvPtr = (FileHandlerEvent *) ckalloc(
++	    fileEvPtr = (FileHandlerEvent *) Tcl_Alloc(
+ 		sizeof(FileHandlerEvent));
+ 	    fileEvPtr->header.proc = FileHandlerEventProc;
+ 	    fileEvPtr->fd = filePtr->fd;
+--- expect5.45.4/exp_log.c	2026-09-01 14:11:06.645953376 +0000
++++ expect5.45.4/exp_log.c	2026-09-01 14:13:32.333493715 +0000
+@@ -217,14 +217,14 @@
+ /* use this function for error conditions */
+ /*VARARGS*/
+ void
+-expErrorLog TCL_VARARGS_DEF(char *,arg1)
++expErrorLog (char *arg1, ...)
+ {
+     ThreadSpecificData *tsdPtr = TCL_TSD_INIT(&dataKey);
+ 
+     char *fmt;
+     va_list args;
+ 
+-    fmt = TCL_VARARGS_START(char *,arg1,args);
++    fmt = (va_start(args, arg1), arg1);
+     (void) vsnprintf(bigbuf,sizeof(bigbuf),fmt,args);
+ 
+     expDiagWriteChars(bigbuf,-1);
+@@ -302,14 +302,14 @@
+ 
+ /*VARARGS*/
+ void
+-expPrintf TCL_VARARGS_DEF(char *,arg1)
++expPrintf (char *arg1, ...)
+ {
+   char *fmt;
+   va_list args;
+   char bigbuf[2000];
+   int len, rc;
+ 
+-  fmt = TCL_VARARGS_START(char *,arg1,args);
++  fmt = (va_start(args, arg1), arg1);
+   len = vsnprintf(bigbuf,sizeof(bigbuf),arg1,args);
+  retry:
+   rc = write(2,bigbuf,len);
+@@ -646,8 +646,8 @@
+ 	/* worst case is every character takes 4 to printify */
+ 	need = strlen(s)*6 + 1;
+ 	if (need > destlen) {
+-		if (dest) ckfree(dest);
+-		dest = ckalloc(need);
++		if (dest) Tcl_Free(dest);
++		dest = Tcl_Alloc(need);
+ 		destlen = need;
+ 	}
+ 
+@@ -688,8 +688,8 @@
+   /* worst case is every character takes 6 to printify */
+   need = numchars*6 + 1;
+   if (need > destlen) {
+-    if (dest) ckfree(dest);
+-    dest = ckalloc(need);
++    if (dest) Tcl_Free(dest);
++    dest = Tcl_Alloc(need);
+     destlen = need;
+   }
+ 
+--- expect5.45.4/exp_inter.c	2026-09-01 14:11:06.634947053 +0000
++++ expect5.45.4/exp_inter.c	2026-09-01 14:13:32.336230992 +0000
+@@ -84,7 +84,7 @@
+ #define real_tty_output(x) ((x->fdout == 1) || (expDevttyIs(x)))
+ #define real_tty_input(x) (exp_stdin_is_tty && ((x->fdin==0) || (expDevttyIs(x))))
+ 
+-#define new(x)	(x *)ckalloc(sizeof(x))
++#define new(x)	(x *)Tcl_Alloc(sizeof(x))
+ 
+ struct action {
+ 	Tcl_Obj *statement;
+@@ -660,12 +660,12 @@
+ 	if (!do_indirect) return TCL_OK;
+ 
+ 	if (*esPtrToInput == 0) {
+-	    *esPtrToInput = (Tcl_HashTable *)ckalloc(sizeof(Tcl_HashTable));
+-	    *esPtrs = (ExpState **)ckalloc(count * sizeof(ExpState *));
++	    *esPtrToInput = (Tcl_HashTable *)Tcl_Alloc(sizeof(Tcl_HashTable));
++	    *esPtrs = (ExpState **)Tcl_Alloc(count * sizeof(ExpState *));
+ 	} else {
+ 	    /* if hash table already exists, delete it and start over */
+ 	    Tcl_DeleteHashTable(*esPtrToInput);
+-	    *esPtrs = (ExpState **)ckrealloc((char *)*esPtrs,count * sizeof(ExpState *));
++	    *esPtrs = (ExpState **)Tcl_Realloc((char *)*esPtrs,count * sizeof(ExpState *));
+ 	}
+ 	Tcl_InitHashTable(*esPtrToInput,TCL_ONE_WORD_KEYS);
+ 
+@@ -2142,7 +2142,7 @@
+     if (need_to_close_master && u->close_on_eof) exp_close(interp,u);
+ 
+     if (tty_changed) exp_tty_set(interp,&tty_old,was_raw,was_echo);
+-    if (esPtrs) ckfree((char *)esPtrs);
++    if (esPtrs) Tcl_Free((char *)esPtrs);
+     if (esPtrToInput) Tcl_DeleteHashTable(esPtrToInput);
+     free_input(interp,input_base);
+     free_action(action_base);
+@@ -2184,7 +2184,7 @@
+ 	if (km == 0) return;
+ 	free_keymap(km->next);
+ 
+-	ckfree((char *)km);
++	Tcl_Free((char *)km);
+ }
+ 
+ static void
+@@ -2194,7 +2194,7 @@
+ 
+ 	while (a) {
+ 		next = a->next;
+-		ckfree((char *)a);
++		Tcl_Free((char *)a);
+ 		a = next;
+ 	}
+ }
+@@ -2210,7 +2210,7 @@
+ 	exp_free_i(interp,i->i_list,inter_updateproc);
+ 	free_output(interp,i->output);
+ 	free_keymap(i->keymap);
+-	ckfree((char *)i);
++	Tcl_Free((char *)i);
+ }
+ 
+ static struct action *
+@@ -2234,7 +2234,7 @@
+ 	free_output(interp,o->next);
+ 	exp_free_i(interp,o->i_list,inter_updateproc);
+ 
+-	ckfree((char *)o);
++	Tcl_Free((char *)o);
+ }
+ 
+ 
+--- expect5.45.4/exp_command.h	2026-09-01 14:11:06.634204686 +0000
++++ expect5.45.4/exp_command.h	2026-09-01 14:13:32.336021258 +0000
+@@ -1,3 +1,7 @@
++#ifndef _ANSI_ARGS_
++# define _ANSI_ARGS_(args) args
++#endif
++
+ /* command.h - definitions for expect commands
+ 
+ Written by: Don Libes, NIST, 2/6/90
+--- expect5.45.4/exp_command.c	2026-09-01 14:11:06.647523378 +0000
++++ expect5.45.4/exp_command.c	2026-09-01 14:13:32.329395011 +0000
+@@ -362,7 +362,7 @@
+ 	    ExpOrigin*          orig   = (ExpOrigin*) Tcl_GetHashValue(entry);
+ 
+ 	    Tcl_DeleteHashEntry(entry);
+-	    ckfree ((char*)orig);
++	    Tcl_Free ((char*)orig);
+ 
+ 	    if (!esPtr->leaveopen) {
+ 		Tcl_VarEval(interp,"close ", cName, (char *)0);
+@@ -377,7 +377,7 @@
+ 	entry = Tcl_FindHashEntry(&slaveNames,esPtr->slave_name);
+ 	Tcl_DeleteHashEntry(entry);
+ 
+-	ckfree(esPtr->slave_name);
++	Tcl_Free(esPtr->slave_name);
+ 	esPtr->slave_name = 0;
+     }
+ #endif
+@@ -561,7 +561,7 @@
+     Tcl_HashEntry *entry;
+ 
+     /* save slave name */
+-    esPtr->slave_name = ckalloc(strlen(exp_pty_slave_name)+1);
++    esPtr->slave_name = Tcl_Alloc(strlen(exp_pty_slave_name)+1);
+     strcpy(esPtr->slave_name,exp_pty_slave_name);
+ 
+     entry = Tcl_CreateHashEntry(&slaveNames,exp_pty_slave_name,&newptr);
+@@ -949,7 +949,7 @@
+ 
+ 	    } else {
+ 	        int newptr;
+-		ExpOrigin* orig = (ExpOrigin*) ckalloc (sizeof (ExpOrigin));
++		ExpOrigin* orig = (ExpOrigin*) Tcl_Alloc (sizeof (ExpOrigin));
+ 
+ 		esPtr->chan_orig   = orig;
+ 		orig->channel_orig = channel;
+@@ -1329,9 +1329,9 @@
+ 
+     /* expDiagLog("child: now unsynchronized from parent\r\n"); */
+ 
+-    argv = (char**) ckalloc ((objc+1)*sizeof(char*));
++    argv = (char**) Tcl_Alloc ((objc+1)*sizeof(char*));
+     for (k=0, i=cmdIndex;i<objc;k++,i++) {
+-	argv[k] = ckalloc (1+strlen(Tcl_GetString (objv[i])));
++	argv[k] = Tcl_Alloc (1+strlen(Tcl_GetString (objv[i])));
+ 	strcpy (argv[k],Tcl_GetString (objv[i]));
+     }
+     argv[k] = NULL;
+@@ -1339,9 +1339,9 @@
+     execvp(command,argv);
+ 
+     for (k=0,i=cmdIndex;i<objc;k++,i++) {
+-	ckfree (argv[k]);
++	Tcl_Free (argv[k]);
+     }
+-    ckfree((char*)argv);
++    Tcl_Free((char*)argv);
+ 
+     /* Alas, by now we've closed fd's to stderr, logfile and diagfile.
+      * The only reasonable thing to do is to send back the error as part of
+@@ -1653,7 +1653,7 @@
+ 
+     if (!exp_i_pool) {
+ 	/* none avail, generate some new ones */
+-	exp_i_pool = i = (struct exp_i *)ckalloc(
++	exp_i_pool = i = (struct exp_i *)Tcl_Alloc(
+ 	    EXP_I_INIT_COUNT * sizeof(struct exp_i));
+ 	for (n=0;n<EXP_I_INIT_COUNT-1;n++,i++) {
+ 	    i->next = i+1;
+@@ -1681,7 +1681,7 @@
+ 
+     if (!exp_state_list_pool) {
+ 	/* none avail, generate some new ones */
+-	exp_state_list_pool = fd = (struct exp_state_list *)ckalloc(
++	exp_state_list_pool = fd = (struct exp_state_list *)Tcl_Alloc(
+ 	    EXP_FD_INIT_COUNT * sizeof(struct exp_state_list));
+ 	for (n=0;n<EXP_FD_INIT_COUNT-1;n++,fd++) {
+ 	    fd->next = fd+1;
+@@ -1754,10 +1754,10 @@
+     if (i->value
+ 	    && (((i->direct == EXP_DIRECT) && (i->duration == EXP_PERMANENT))
+ 		    || ((i->direct == EXP_INDIRECT) && (i->duration == EXP_TEMPORARY)))) {
+-	ckfree(i->value);
++	Tcl_Free(i->value);
+     } else if (i->duration == EXP_PERMANENT) {
+-	if (i->value) ckfree(i->value);
+-	if (i->variable) ckfree(i->variable);
++	if (i->value) Tcl_Free(i->value);
++	if (i->variable) Tcl_Free(i->variable);
+     }
+ 
+     i->next = exp_i_pool;
+@@ -1792,7 +1792,7 @@
+ 
+     i->duration = duration;
+     if (duration == EXP_PERMANENT) {
+-	*stringp = ckalloc(strlen(arg)+1);
++	*stringp = Tcl_Alloc(strlen(arg)+1);
+ 	strcpy(*stringp,arg);
+     } else {
+ 	*stringp = arg;
+@@ -1848,7 +1848,7 @@
+ 	if (!esPtr) goto error;
+ 	exp_i_add_state(i,esPtr);
+     }
+-    ckfree((char*)argv);
++    Tcl_Free((char*)argv);
+     return TCL_OK;
+     error:
+     expDiagLogU("exp_i_parse_states: ");
+@@ -1878,9 +1878,9 @@
+ 	    if (streq(p,i->value)) return TCL_OK;
+ 
+ 	    /* replace new value with old */
+-	    ckfree(i->value);
++	    Tcl_Free(i->value);
+ 	}
+-	i->value = ckalloc(strlen(p)+1);
++	i->value = Tcl_Alloc(strlen(p)+1);
+ 	strcpy(i->value,p);
+ 
+ 	exp_free_state(i->state_list);
+@@ -2492,9 +2492,9 @@
+ 		char* act = Tcl_GetStringFromObj (objv[0], &len);
+ 
+ 		if (exp_onexit_action)
+-		    ckfree(exp_onexit_action);
++		    Tcl_Free(exp_onexit_action);
+ 
+-		exp_onexit_action = ckalloc(len + 1);
++		exp_onexit_action = Tcl_Alloc(len + 1);
+ 		strcpy(exp_onexit_action,act);
+ 
+ 	    } else if (exp_onexit_action) {
+@@ -2838,7 +2838,7 @@
+ 
+     /* add new entry to the front of the list */
+     if (!f) {
+-	f = (struct forked_proc *)ckalloc(sizeof(struct forked_proc));
++	f = (struct forked_proc *)Tcl_Alloc(sizeof(struct forked_proc));
+ 	f->next = forked_proc_base;
+ 	forked_proc_base = f;
+     }
+@@ -3273,17 +3273,17 @@
+      * command name is at index.
+      */
+ 
+-    argv = (char**) ckalloc ((objc+1)*sizeof(char*));
++    argv = (char**) Tcl_Alloc ((objc+1)*sizeof(char*));
+ 
+     for (k=i+1,j=1;k<objc;k++,j++) {
+-	argv[j] = ckalloc (1+strlen(Tcl_GetString (objv[k])));
++	argv[j] = Tcl_Alloc (1+strlen(Tcl_GetString (objv[k])));
+ 	strcpy (argv[j],Tcl_GetString (objv[k]));
+     }
+     argv[j] = NULL;
+ 
+     /* command, handle '-' */
+     command = Tcl_GetString (objv[i]);
+-    argv[0] = ckalloc (2+strlen(command));
++    argv[0] = Tcl_Alloc (2+strlen(command));
+     if (dash_name) {
+ 	argv [0][0] = '-';
+ 	strcpy (argv[0]+1,command);
+@@ -3297,9 +3297,9 @@
+     (void) execvp(command,argv);
+ 
+     for (k=0;k<objc;k++) {
+-	ckfree (argv[k]);
++	Tcl_Free (argv[k]);
+     }
+-    ckfree ((char*)argv);
++    Tcl_Free ((char*)argv);
+ 
+     exp_error(interp,"execvp(%s): %s\r\n",
+ 	    Tcl_GetString(objv[0]),
+--- expect5.45.4/exp_regexp.c	2018-02-02 19:15:52.000000000 +0000
++++ expect5.45.4/exp_regexp.c	2026-09-01 14:13:32.335365082 +0000
+@@ -25,7 +25,7 @@
+  * regular-expression syntax might require a total rethink.
+  *
+  * *** NOTE: this code has been altered slightly for use in Tcl. ***
+- * *** The only change is to use ckalloc and ckfree instead of   ***
++ * *** The only change is to use Tcl_Alloc and Tcl_Free instead of   ***
+  * *** malloc and free.						 ***
+ 
+  * *** and again for Expect!!! - DEL

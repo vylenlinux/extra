@@ -1,33 +1,90 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="CLI automation framework for Tcl"
 homepage="https://core.tcl-lang.org/expect/index"
 maintainer="Vylen Linux Team"
 
 name=expect
 version=5.45.4
-release=1
-source="$name-$version.tar.gz::https://downloads.sourceforge.net/project/expect/Expect/$version/expect$version.tar.gz
-	expect-5.44.1.15-ldflags.patch
-	expect-5.45-headers.patch
-	expect-5.45.4-configure-in.patch
-	expect-5.45-format-security.patch
-	expect-5.45-warnings.patch
-	expect-5.45.4-examples.patch
-	expect-5.45-gfbsd.patch"
+release=2
+
+source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/project/${name}/Expect/${version}/${name}${version}.tar.gz
+    expect-5.32.2-random.patch
+    expect-5.43.0-log_file.patch
+    expect-5.43.0-pkgpath.patch
+    expect-5.45.4-covscan-fixes.patch
+    expect-5.45.4-tcl9-alloc.patch
+    expect-5.45.4-tcl9-ansi-args.patch
+    expect-5.45.4-tcl9-const.patch
+    expect-5.45.4-tcl9-eval-tokens.patch
+    expect-5.45.4-tcl9-mkpasswd.patch
+    expect-5.45.4-tcl9-panic.patch
+    expect-5.45.4-tcl9-size.patch
+    expect-5.45.4-tcl9-varargs.patch
+    expect-5.45.4-tclsh8.patch
+    expect-5.45.4-unification-of-usage-and-man-page.patch
+    expect-5.45-check-telnet.patch
+    expect-5.45-exp-log-buf-overflow.patch
+    expect-5.45-fd-leak.patch
+    expect-5.45-format-security.patch
+    expect-5.45-man-page.patch
+    expect-5.45-match-gt-numchars-segfault.patch
+    expect-5.45-mkpasswd-dash.patch
+    expect-5.45-mkpasswd-man.patch
+    expect-5.45-passmass-su-full-path.patch
+    expect-5.45-re-memleak.patch
+    expect-5.45-segfault-with-stubs.patch
+    expect-c99.patch
+    expect-configure-c99.patch
+    expect-5.45.4-tcl9-final.patch"
+
+prepare() {
+    # shellcheck disable=SC2164
+    cd "${name}${version}"
+
+    patch -Np1 -i "${SRC}/expect-5.32.2-random.patch"
+    patch -Np1 -i "${SRC}/expect-5.43.0-log_file.patch"
+    patch -Np1 -i "${SRC}/expect-5.43.0-pkgpath.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-covscan-fixes.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-alloc.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-ansi-args.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-const.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-eval-tokens.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-mkpasswd.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-panic.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-size.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-varargs.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tclsh8.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-unification-of-usage-and-man-page.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-check-telnet.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-exp-log-buf-overflow.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-fd-leak.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-format-security.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-man-page.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-match-gt-numchars-segfault.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-mkpasswd-dash.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-mkpasswd-man.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-passmass-su-full-path.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-re-memleak.patch"
+    patch -Np1 -i "${SRC}/expect-5.45-segfault-with-stubs.patch"
+    patch -Np1 -i "${SRC}/expect-c99.patch"
+    patch -Np1 -i "${SRC}/expect-configure-c99.patch"
+    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-final.patch"
+}
 
 build() {
-	cd $name$version
+    # shellcheck disable=SC2164
+    cd "${name}${version}"
+    export CFLAGS="${CFLAGS} -std=gnu89"
 
-	export CFLAGS="${CFLAGS} -std=gnu89"
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        --mandir=/usr/share/man \
+        --with-tcl=/usr/lib \
+        --with-tclinclude=/usr/include
 
-	for p in $SRC/*.patch; do
-		patch -Np1 -i $p
-	done
-
-	./configure --prefix=/usr \
-	           --enable-shared \
-	           --mandir=/usr/share/man \
-	           --with-tcl=/usr/lib \
-	           --with-tclinclude=/usr/include
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }

@@ -15,4 +15,3 @@ index 172c05e..c86dda4 100644
 +    if (exp_logfile) fprintf(exp_logfile,"%s", str);
    }
  }
- 
