@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=expect
 version=5.45.4
-release=2
+release=3
 
 source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/project/${name}/Expect/${version}/${name}${version}.tar.gz
     expect-5.32.2-random.patch
@@ -87,4 +87,6 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    mv "${PKG}/usr/lib/tcl9.0/expect5.45.4/libexpect5.45.4.so" -t "${PKG}/usr/lib/"
 }
