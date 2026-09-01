@@ -6,7 +6,7 @@ homepage="https://developers.google.com/protocol-buffers/"
 maintainer="Vylen Linux Team"
 
 name=protobuf
-version=36.0
+version=36.1
 release=1
 source="https://github.com/protocolbuffers/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
