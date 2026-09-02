@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=rust
 version=1.98.0
-release=2
+release=3
 
 source="${name}-${version}.tar.xz::https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
     bootstrap.toml
@@ -17,7 +17,8 @@ source="${name}-${version}.tar.xz::https://static.rust-lang.org/dist/rustc-${ver
     0004-compiler-Change-LLVM-targets.patch
     0005-compiler-Use-ld.lld-by-default.patch
     0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
-    ${name}-${version}-llvm-23-remove-amx-tf32.patch"
+    ${name}-${version}-llvm-23-remove-amx-tf32.patch
+    ${name}-${version}-llvm-23-AssignGUIDPass.patch"
 
 build() {
     # shellcheck disable=SC2164
@@ -45,6 +46,9 @@ build() {
 
     # Disable the removed AMX-TF32 target feature for LLVM 23
     patch -Np1 -i "${SRC}/${name}-${version}-llvm-23-remove-amx-tf32.patch"
+
+    # Run AssignGUIDPass in some places for LLVM 23
+    patch -Np1 -i "${SRC}/${name}-${version}-llvm-23-AssignGUIDPass.patch"
 
     install -Dm644 "${SRC}/bootstrap.toml" -t .
 
