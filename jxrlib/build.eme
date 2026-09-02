@@ -9,7 +9,7 @@ name=jxrlib
 version=1.4.3_RC1
 release=1
 
-_version="$(printf '%s' "$version" | tr '_' '-')"
+_version="$(printf '%s' "${version}" | tr '_' '-')"
 
 source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${_version}.tar.gz
     CMakeLists.txt"
