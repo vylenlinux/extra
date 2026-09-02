@@ -3,7 +3,7 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/cgif.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libcgif.so -> libcgif.so.0
-lrwxrwxrwx root/root    usr/lib/libcgif.so.0 -> libcgif.so.0.5.3
--rwxr-xr-x root/root    usr/lib/libcgif.so.0.5.3
+lrwxrwxrwx root/root    usr/lib/libcgif.so.0 -> libcgif.so.0.5.4
+-rwxr-xr-x root/root    usr/lib/libcgif.so.0.5.4
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/cgif.pc
