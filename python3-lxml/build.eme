@@ -6,13 +6,15 @@ homepage="https://lxml.de/"
 maintainer="Vylen Linux Team"
 
 name=python3-lxml
-version=6.1.2
+version=6.1.3_1
 release=1
-source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/l/lxml/lxml-${version}.tar.gz"
+
+_version="$(printf "%s" "${version}" | sed 's/_/-/')"
+source="${name}-${version}.tar.gz::https://github.com/lxml/lxml/archive/refs/tags/lxml-${_version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "lxml-${version}"
+    cd "lxml-lxml-${_version}"
     export CFLAGS="${CFLAGS} -flto=auto"
 
     gpep517 build-wheel \

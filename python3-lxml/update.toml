@@ -1,5 +1,10 @@
 name = "python3-lxml"
-provider = "pypi"
+provider = "github"
 
 [source]
-package = "lxml"
+owner = "lxml"
+repo = "lxml"
+
+[github]
+use_releases = false
+use_tags = true
