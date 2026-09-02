@@ -6,13 +6,15 @@ homepage="https://codeberg.org/dnkl/foot"
 maintainer="Vylen Linux Team"
 
 name=foot
-version=1.27.0
+version=1.28.0
 release=1
 source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
 
 build() {
     # doing the lto dance
-    export CFLAGS='-O3 -Wno-missing-profile -Wno-error'
+    export CFLAGS='-O3 \
+        -Wno-missing-profile \
+        -Wno-error'
 
     vylen-meson "${name}" build \
         -Dgrapheme-clustering=enabled \
@@ -21,7 +23,7 @@ build() {
     find . -name "*.gcda" -delete
     meson compile -C build
 
-    meson configure -D b_pgo=use build
+    meson configure -Db_pgo=use build
     meson compile -C build
 
     DESTDIR="${PKG}" meson install --no-rebuild -C build
