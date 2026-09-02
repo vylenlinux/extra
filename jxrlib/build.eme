@@ -6,10 +6,12 @@ homepage="https://github.com/mircomir/jxrlib"
 maintainer="Vylen Linux Team"
 
 name=jxrlib
-version=1.4.2
+version=1.4.3_RC1
 release=1
 
-source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz
+_version="$(printf '%s' "$version" | tr '_' '-')"
+
+source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${_version}.tar.gz
     CMakeLists.txt"
 
 build() {
@@ -17,9 +19,9 @@ build() {
         -Wno-implicit-function-declaration \
         -Wno-incompatible-pointer-types"
 
-    mv "${SRC}/CMakeLists.txt" -t "${name}-${version}/"
+    mv "${SRC}/CMakeLists.txt" -t "${name}-${_version}/"
 
-    cmake -S "${name}-${version}" -B build \
+    cmake -S "${name}-${_version}" -B build \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
