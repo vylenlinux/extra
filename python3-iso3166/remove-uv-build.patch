@@ -1,0 +1,37 @@
+From 8eb4bc92f2b3623697cfad464493837ed238e3ee Mon Sep 17 00:00:00 2001
+From: Vylen Linux Team
+Date: Thu, 3 Sep 2026 12:40:42 +0000
+Subject: [PATCH] Replace uv_build with setuptools
+
+diff --git a/pyproject.toml b/pyproject.toml
+index ca2e1af..3b97292 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -45,18 +45,17 @@ test-env = [
+ ]
+
+ [build-system]
+-requires = ["uv_build>=0.12.5,<0.13.0"]
+-build-backend = "uv_build"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
+
+ [tool.uv]
+ exclude-newer = "5 days"
+
+-[tool.uv.build-backend]
+-source-exclude = ['*\~']
+-source-include = [
+-    "CHANGES",
+-    "tests/**",
+-]
++[tool.setuptools.packages.find]
++where = ["src"]
++
++[tool.setuptools.package-data]
++iso3166 = ["py.typed"]
+
+ [tool.uv.dependency-groups.dev]
+ requires-python = ">=3.12"
+--
+2.43.0

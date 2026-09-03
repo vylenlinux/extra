@@ -1,16 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Self-contained ISO 3166-1 country definitions"
 homepage="https://github.com/deactivated/python-iso3166"
 maintainer="Vylen Linux Team"
 
 name=python3-iso3166
-_name=${name#*-}
-_n=${_name%${_name#?}}
-version=2.1.1
+version=3.0.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz"
+
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/i/iso3166/iso3166-${version}.tar.gz
+    remove-uv-build.patch"
 
 build() {
-	cd ${name#*-}-$version
-	python3 setup.py build
-	python3 setup.py install --root=$PKG --optimize=1 --skip-build
+    # shellcheck disable=SC2164
+    cd "iso3166-${version}"
+    patch -Np1 -i "${SRC}/remove-uv-build.patch"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
