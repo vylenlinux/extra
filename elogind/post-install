@@ -1,7 +1,7 @@
 #!/bin/sh
 
 file=/etc/pam.d/system-session
-grep -q '^# Begin elogind addition$' "$file" && exit 0
+grep -q '^# Begin elogind addition$' "${file}" && exit 0
 
 cat >> "${file}" <<'EOF'
 # Begin elogind addition
