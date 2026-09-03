@@ -7,23 +7,22 @@ maintainer="Vylen Linux Team"
 
 name=ly
 version=1.4.1
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}"
 
-    sed -i 's|restart_cmd = /sbin/shutdown -r now|restart_cmd = reboot|' res/config.ini
     # shellcheck disable=SC2016
-    sed -i 's|shutdown_cmd = /sbin/shutdown $PLATFORM_SHUTDOWN_ARG now|shutdown_cmd = poweroff|' res/config.ini
-    sed -i 's|sleep_cmd = null|sleep_cmd = zzz|' res/config.ini
+    sed -i 's|shutdown_cmd = /sbin/shutdown $PLATFORM_SHUTDOWN_ARG now|shutdown_cmd = /sbin/shutdown -p now|' res/config.ini
 
     zig build \
         --search-prefix /usr \
+        --build-id=sha1 \
+        \
         -Ddest_directory="${PKG}" \
         -Dname="ly-dm" \
-        --build-id=sha1 \
         -Dtarget=native \
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe

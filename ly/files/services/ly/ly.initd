@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 
 # shellcheck disable=SC2034
-name="ly"
+name=ly
 description="TUI Display Manager"
 
 ## Supervisor daemon
@@ -9,25 +9,16 @@ supervisor=supervise-daemon
 respawn_period=60
 pidfile="/run/${RC_SVCNAME}.pid"
 
-## Check for getty or agetty
-if [ -x /sbin/getty ] || [ -x /bin/getty ]; then
-    # busybox
-    commandB="/sbin/getty"
-elif [ -x /sbin/agetty ] || [ -x /bin/agetty ]; then
-    # util-linux
-    commandUL="/sbin/agetty"
-fi
-
 ## The execution vars
-TTY="tty1"
+TTY=tty1
 TERM=linux
 BAUD=38400
-# If we don't have getty then we should have agetty
-command="${commandB:-"${commandUL}"}"
+command=/sbin/agetty
 command_args_foreground="-nl /usr/bin/ly-dm ${TTY} ${BAUD} ${TERM}"
 
 depend() {
+    # shellcheck disable=SC2035
     after *
     provide display-manager
-    want elogind
+    need elogind
 }
