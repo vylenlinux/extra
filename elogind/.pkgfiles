@@ -8,6 +8,9 @@ drwxr-xr-x root/root    etc/elogind/sleep.conf.d/
 -rw-r--r-- root/root    etc/elogind/sleep.conf.epkgnew
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/elogind
+drwxr-xr-x root/root    etc/runlevels/
+drwxr-xr-x root/root    etc/runlevels/boot/
+lrwxrwxrwx root/root    etc/runlevels/boot/elogind -> /etc/init.d/elogind
 drwxr-xr-x root/root    etc/ssh/
 drwxr-xr-x root/root    etc/ssh/sshd_config.d/
 lrwxrwxrwx root/root    etc/ssh/sshd_config.d/20-elogind-userdb.conf -> ../../../usr/lib/elogind/sshd_config.d/20-elogind-userdb.conf
