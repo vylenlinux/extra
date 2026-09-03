@@ -10,8 +10,7 @@ drwxr-xr-x root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/
 drwxr-xr-x root/root    opt/vivaldi/apparmor.d/
 -rw-r--r-- root/root    opt/vivaldi/apparmor.d/vivaldi-stable
 -rwxr-xr-x root/root    opt/vivaldi/chrome_crashpad_handler
--rwxr-xr-x root/root    opt/vivaldi/libEGL.so
--rwxr-xr-x root/root    opt/vivaldi/libGLESv2.so
+-rw-r--r-- root/root    opt/vivaldi/icudtl.dat
 -rw-r--r-- root/root    opt/vivaldi/libffmpeg.so
 -rwxr-xr-x root/root    opt/vivaldi/libqt5_shim.so
 -rwxr-xr-x root/root    opt/vivaldi/libqt6_shim.so
@@ -318,6 +317,8 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/bg/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/bg/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/bn/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/bn/messages.json
+drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/brh/
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/brh/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/bs/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/bs/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/ca/
@@ -334,12 +335,16 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/da/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/da/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/de/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/de/messages.json
+drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/de_AT/
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/de_AT/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/de_CH/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/de_CH/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/el/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/el/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/en/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/en/messages.json
+drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/en_AU/
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/en_AU/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/en_CA/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/en_CA/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/en_GB/
@@ -500,7 +505,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-9140aff10d44e918bc1826e14ddbb0e8.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-4e3a9d35ab00ec06b0a2a81b32957a8c.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
