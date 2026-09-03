@@ -1,0 +1,11 @@
+diff '--color=auto' -ruN a/data/org.freedesktop.ModemManager1.service.in b/data/org.freedesktop.ModemManager1.service.in
+--- a/data/org.freedesktop.ModemManager1.service.in	2025-07-28 22:15:43.000000000 +0200
++++ b/data/org.freedesktop.ModemManager1.service.in	2026-09-03 18:18:02.893000000 +0200
+@@ -6,6 +6,6 @@
+ 
+ [D-BUS Service]
+ Name=org.freedesktop.ModemManager1
+-Exec=@sbindir@/ModemManager
++Exec=@sbindir@/ModemManager --log-level=ERR
+ User=root
+ SystemdService=dbus-org.freedesktop.ModemManager1.service
