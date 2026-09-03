@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team"
 
 name=plasma-workspace
 version=6.7.4
-release=1
+release=2
 source="https://download.kde.org/stable/plasma/${version}/${name}-${version}.tar.xz"
 
 build() {
@@ -28,6 +28,4 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
-
-    sed -i -e 's,^Exec=\(/usr/lib/plasma-dbus.*\),Exec=/usr/bin/ck-launch-session \1,' "${PKG}/usr/share/wayland-sessions/plasma.desktop"
 }
