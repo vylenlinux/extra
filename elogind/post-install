@@ -1,6 +1,9 @@
 #!/bin/sh
 
-cat >> /etc/pam.d/system-session <<'EOF'
+file=/etc/pam.d/system-session
+grep -q '^# Begin elogind addition$' "$file" && exit 0
+
+cat >> "${file}" <<'EOF'
 # Begin elogind addition
 session   optional    pam_loginuid.so
 -session  optional    pam_elogind.so
