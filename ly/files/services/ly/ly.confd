@@ -1,0 +1,8 @@
+# TTY to run ly on
+#TTY=tty1
+
+# Terminal type
+#TERM=linux
+
+# Serial line speed
+#BAUD=38400
