@@ -1,5 +1,0 @@
-name = "consolekit2"
-provider = "repology"
-
-[source]
-package = "consolekit"
