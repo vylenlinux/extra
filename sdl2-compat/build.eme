@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team"
 homepage="https://www.libsdl.org"
 
 name=sdl2-compat
-version=2.32.70
+version=2.32.72
 release=1
 source="https://github.com/libsdl-org/${name}/releases/download/release-${version}/${name}-${version}.tar.gz"
 
