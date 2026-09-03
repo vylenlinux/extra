@@ -15,19 +15,6 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    cat > pam/lxdm <<"EOF"
-#%PAM-1.0
-auth       requisite      pam_nologin.so
-auth       required       pam_env.so
-auth       include        system-auth
--auth      optional       pam_gnome_keyring.so
-account    include        system-account
-password   include        system-password
-session    required       pam_limits.so
-session    include        system-session
--session   optional       pam_gnome_keyring.so auto_start
-EOF
-
     sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in
     sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession
 
@@ -37,7 +24,7 @@ EOF
         -e "/arg=/a arg=/usr/bin/X" \
         -i data/lxdm.conf.in
 
-    autoreconf -fiv
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
@@ -52,4 +39,5 @@ EOF
     make DESTDIR="${PKG}" install
 
     do_service "${name}"
+    do_pam "${name}"
 }

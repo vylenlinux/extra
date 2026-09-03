@@ -8,5 +8,5 @@ command=/usr/sbin/lxdm
 
 depend() {
     provide display-manager
-    need localmount
+    need elogind localmount
 }
