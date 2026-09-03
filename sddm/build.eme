@@ -10,7 +10,6 @@ version=0.21.0
 release=1
 
 source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz
-    0001-Delay-for-logind-and-fallback-to-seat0.patch
     0001-VirtualTerminal-Export-defaultVtPath.patch
     0002-Allow-non-root-greeters-and-sessions-to-start-on-ker.patch
     0003-Conditionalize-more-VT-related-calls.patch
@@ -42,7 +41,6 @@ build() {
     done
 
     sed -e '/UPOWER_SERVICE)/ s:^://:' -i src/daemon/PowerManager.cpp
-    sed -e '/\$@$/s/exec/& ck-launch-session/' -i data/scripts/Xsession
 
     cmake -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -51,7 +49,8 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DENABLE_JOURNALD=OFF \
         -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
-        -DNO_SYSTEMD=ON -DUSE_ELOGIND=OFF \
+        -DNO_SYSTEMD=ON \
+        -DUSE_ELOGIND=ON \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-dev
 

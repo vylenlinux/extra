@@ -1,4 +1,3 @@
-7592a56bb7411a2cb754d6bb8e36e6277ddd3687593743e073196fa41d3e1216  0001-Delay-for-logind-and-fallback-to-seat0.patch
 9b330886ad8211d870d7398f15cb3299d05706747d3dca3cf1fc327d6be13347  0001-VirtualTerminal-Export-defaultVtPath.patch
 5b4e1618df725ab82ce930c391ddd203946570ef995672af17bd3cd1bf3dd253  0002-Allow-non-root-greeters-and-sessions-to-start-on-ker.patch
 42324e2d6b08f84cb3161cbb2fa9487303570952697be50b2261f0b722d356e1  0003-Conditionalize-more-VT-related-calls.patch
