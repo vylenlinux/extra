@@ -6,7 +6,7 @@ homepage="http://www.swig.org/"
 maintainer="Vylen Linux Team"
 
 name=swig
-version=4.5.0
+version=4.5.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/v${version}.tar.gz"
 
