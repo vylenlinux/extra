@@ -6,7 +6,7 @@ homepage="https://www.khronos.org/vulkan/"
 maintainer="Vylen Linux Team"
 
 name=vulkan-icd-loader
-version=1.4.361
+version=1.4.362
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v${version}.tar.gz"
 
@@ -17,18 +17,18 @@ build() {
     mkdir build
     python3 scripts/update_deps.py --dir=build
 
-    cmake -S . -B build \
+    cmake -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DVULKAN_HEADERS_INSTALL_DIR=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_SYSCONFDIR=/etc \
         -DCMAKE_INSTALL_DATADIR=/share \
         -DCMAKE_SKIP_RPATH=True \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DVULKAN_HEADERS_INSTALL_DIR=/usr \
         -DBUILD_TESTS=Off \
         -DBUILD_WSI_XCB_SUPPORT=On \
         -DBUILD_WSI_XLIB_SUPPORT=On \
-        -DBUILD_WSI_WAYLAND_SUPPORT=On \
-        -DCMAKE_BUILD_TYPE=Release
+        -DBUILD_WSI_WAYLAND_SUPPORT=On
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
