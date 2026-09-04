@@ -1,5 +1,7 @@
 name = "cdrtools"
-provider = "repology"
+provider = "sourceforge"
 
-[source]
-package = "cdrtools"
+[sourceforge]
+project = "cdrtools"
+path = "alpha"
+filename = "cdrtools-{version}.tar.bz2"
