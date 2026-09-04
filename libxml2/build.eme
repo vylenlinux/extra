@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team"
 name=libxml2
 version=2.15.4
 release=1
-source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/archive/v${version}/${name}-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-v${version}" build \
