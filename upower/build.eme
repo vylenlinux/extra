@@ -11,8 +11,6 @@ release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
-    export XML_CATALOG_FILES=/etc/xml/catalog
-
     vylen-meson "${name}-v${version}" build \
         -Dgtk-doc=false \
         -Dsystemdsystemunitdir=no
