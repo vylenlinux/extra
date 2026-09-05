@@ -27,7 +27,7 @@ fi
 
 if [ "${initrd_enabled}" -eq 1 ] && [ "$(command -v mkinitramfs)" ]; then
     printf "mkinitramfs: generating initramfs for kernel %s...\n" "${kernver}"
-    mkinitramfs -q -k "${kernver}" -o /boot/initrd-linux.img
+    mkinitramfs -k "${kernver}" -o /boot/initrd-linux.img
 fi
 
 # load kernel modules
