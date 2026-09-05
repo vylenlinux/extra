@@ -1,5 +1,6 @@
 name = "fish"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fish"
+owner = "fish-shell"
+repo = "fish-shell"
