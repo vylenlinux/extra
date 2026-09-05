@@ -1,14 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Automatically generates Rust FFI bindings to C (and some C++) libraries"
 homepage="https://github.com/rust-lang/rust-bindgen"
 maintainer="Vylen Linux Team"
 
 name=rust-bindgen
-version=0.72.1
+version=0.73.1
 release=1
-source="$name-$version.tar.gz::https://github.com/rust-lang/rust-bindgen/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/rust-lang/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	cargo build --release
-	install -Dt $PKG/usr/bin target/release/bindgen
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    cargo build --release
+    install -Dm755 target/release/bindgen -t "${PKG}/usr/bin/"
 }
