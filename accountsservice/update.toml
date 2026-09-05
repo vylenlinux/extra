@@ -1,0 +1,6 @@
+name = "accountsservice"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.freedesktop.org"
+project = "accountsservice/accountsservice"

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="D-Bus interface for user account query and manipulation"
+maintainer="Vylen Linux Team"
+homepage="https://gitlab.freedesktop.org/accountsservice/accountsservice"
+
+name=accountsservice
+version=26.27.3
+release=1
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Dsystemdsystemunitdir=no \
+        -Delogind=true \
+        -Dadmin_group=wheel \
+        -Dtests=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
