@@ -1,0 +1,5 @@
+name = "taglib"
+provider = "repology"
+
+[source]
+package = "taglib"
