@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Portable org.freedesktop.timedate1 service for non-systemd Linux"
+maintainer="Vylen Linux Team"
+homepage="https://github.com/NeuroMarshal/timedated-shim"
+
+name=timedated-shim
+version=0.1.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/NeuroMarshal/${name}/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make build
+    make DESTDIR="${PKG}" install
+}
