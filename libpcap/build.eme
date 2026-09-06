@@ -1,20 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A system-independent interface for user-level packet capture"
 homepage="http://www.tcpdump.org/"
 maintainer="Vylen Linux Team"
 
 name=libpcap
-version=1.10.6
+version=1.10.7
 release=1
-source="http://www.tcpdump.org/release/$name-$version.tar.gz
-        libpcap-1.9.1-enable_bluetooth-1.patch"
+
+source="http://www.tcpdump.org/release/${name}-${version}.tar.gz
+    ${name}-1.9.1-enable_bluetooth-1.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/${name}-1.9.1-enable_bluetooth-1.patch"
 
-        patch -Np1 -i ../libpcap-1.9.1-enable_bluetooth-1.patch
+    ./configure --prefix=/usr
+    make
 
-	./configure --prefix=/usr
-	make
-	sed -i '/INSTALL_DATA.*libpcap.a\|RANLIB.*libpcap.a/ s/^/#/' Makefile
-	make DESTDIR=$PKG install install-shared
+    sed -i '/INSTALL_DATA.*libpcap.a\|RANLIB.*libpcap.a/ s/^/#/' Makefile
+    make DESTDIR="${PKG}" install install-shared
 }
