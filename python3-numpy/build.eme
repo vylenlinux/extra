@@ -6,14 +6,13 @@ homepage="https://numpy.org/"
 maintainer="Vylen Linux Team"
 
 name=python3-numpy
-version=2.5.2
+version=2.5.3
 release=1
 source="${name}-${version}.tar.gz::https://github.com/numpy/numpy/releases/download/v${version}/numpy-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "numpy-${version}"
-    sed -e "/meson-python/s/,<0.16.0//" -i pyproject.toml
 
     CFLAGS="${CFLAGS} -ffat-lto-objects"
     CXXFLAGS="${CXXFLAGS} -ffat-lto-objects"
