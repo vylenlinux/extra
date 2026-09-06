@@ -1,0 +1,5 @@
+name = "zramctl-rs"
+provider = "gitlab"
+
+[source]
+project = "celestifyx/zramctl-rs"
