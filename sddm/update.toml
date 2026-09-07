@@ -1,5 +1,0 @@
-name = "sddm"
-provider = "repology"
-
-[source]
-package = "sddm"
