@@ -1,4 +1,4 @@
-name = "fuse3"
+name = "fuse"
 provider = "repology"
 
 [source]

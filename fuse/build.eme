@@ -5,13 +5,13 @@ description="A simple interface for userspace programs to export a virtual files
 homepage="https://github.com/libfuse/libfuse"
 maintainer="Vylen Linux Team"
 
-name=fuse3
+name=fuse
 version=3.18.2
 release=3
-source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/fuse-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/${name}-${version}.tar.gz"
 
 build() {
-    vylen-meson "libfuse-fuse-${version}" build
+    vylen-meson "libfuse-${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
@@ -21,6 +21,6 @@ build() {
         "${PKG}/etc/init.d"
 
     # move to fuse-common
-    rm -f "${PKG}/etc/fuse.conf"
+    rm -f "${PKG}/etc/${name}.conf"
     do_service fuse
 }
