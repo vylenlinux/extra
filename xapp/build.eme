@@ -6,7 +6,7 @@ homepage="https://github.com/linuxmint/xapp"
 maintainer="Vylen Linux Team"
 
 name=xapp
-version=3.2.2
+version=3.2.3
 release=1
 source="https://github.com/linuxmint/${name}/archive/master.lmde5/${name}-${version}.tar.gz"
 
