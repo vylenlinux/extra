@@ -23,5 +23,5 @@ build() {
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
     install -Dm644 "${name}-${version}/${name}.conf" -t "${PKG}/etc/"
-    do_revdep
+    PERL_VERSION="$(emerald info perl --field=installed | cut -d. -f1-2)" do_revdep
 }
