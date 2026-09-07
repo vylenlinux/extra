@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A collection of freely re-usable Autoconf macros"
 homepage="https://www.gnu.org/software/autoconf-archive/"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,16 @@ maintainer="Vylen Linux Team"
 name=autoconf-archive
 version=2024.10.16
 release=1
-source="https://ftpmirror.gnu.org/$name/$name-$version.tar.xz
-	fix_AX_CXX_COMPILE_STDCXX.patch"
+
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
+    fix_AX_CXX_COMPILE_STDCXX.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/fix_AX_CXX_COMPILE_STDCXX.patch"
 
-	patch -Np1 -i $SRC/fix_AX_CXX_COMPILE_STDCXX.patch
-
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    ./configure --prefix=/usr
+    make
+    make DESTDIR="${PKG}" install
 }
