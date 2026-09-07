@@ -2,4 +2,4 @@ gpgme
 libsodium
 glib
 libsoup
-fuse3
+fuse
