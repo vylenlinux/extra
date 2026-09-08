@@ -1,3 +1,4 @@
+drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
 -rw-r--r-- root/root    etc/xdg/autostart/polkit-kde-authentication-agent-1.desktop
