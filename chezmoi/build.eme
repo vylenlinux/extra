@@ -14,11 +14,6 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    export CGO_LDFLAGS="${LDFLAGS}"
-    export CGO_CFLAGS="${CFLAGS}"
-    export CGO_CPPFLAGS="${CPPFLAGS}"
-    export CGO_CXXFLAGS="${CXXFLAGS}"
-
     # shellcheck disable=SC2086
     go build \
         -buildmode=pie \
