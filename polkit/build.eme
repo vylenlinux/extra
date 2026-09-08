@@ -13,7 +13,6 @@ source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive
     22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
 
 build() {
-    export XML_CATALOG_FILES=/etc/xml/catalog
     patch -Np1 -d "${name}-${version}" -i "${SRC}/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
 
     vylen-meson "${name}-${version}" build \

@@ -11,8 +11,6 @@ release=1
 source="${name}-${version}.tar.bz2::https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.bz2"
 
 build() {
-    export XML_CATALOG_FILES=/etc/xml/catalog
-
     vylen-meson "gtk-${version}" build \
         -Dbroadway-backend=true \
         -Dwayland-backend="$(emerald is-installed wayland-protocols && printf "true" || printf "false")" \

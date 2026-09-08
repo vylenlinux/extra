@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Generates status bar to use with i3bar, dzen2 or xmobar"
 homepage="https://i3wm.org/i3status/"
 maintainer="Vylen Linux Team"
@@ -5,14 +8,11 @@ maintainer="Vylen Linux Team"
 name=i3status
 version=2.15
 release=1
-backup="etc/i3status.conf"
-source="https://i3wm.org/i3status/$name-$version.tar.xz"
+backup="etc/${name}.conf"
+source="https://i3wm.org/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
-
-	export XML_CATALOG_FILES=/etc/xml/catalog
-	vylen-meson -Dmans=true build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build -Dmans=true
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

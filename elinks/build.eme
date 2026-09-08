@@ -11,8 +11,6 @@ release=1
 source="https://github.com/rkd77/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-    export XML_CATALOG_FILES=/etc/xml/catalog
-
     vylen-meson "${name}-${version}" build \
         -Dgettext=true \
         -Dhtml-highlight=true \

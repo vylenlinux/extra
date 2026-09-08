@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Front-end to an XSL toolchain"
 homepage="https://pagure.io/xmlto"
 maintainer="Vylen Linux Team"
@@ -5,17 +8,15 @@ maintainer="Vylen Linux Team"
 name=xmlto
 version=0.0.29
 release=1
-source="https://pagure.io/xmlto/archive/$version/xmlto-$version.tar.gz"
+source="https://pagure.io/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	export XML_CATALOG_FILES=/etc/xml/catalog
+    autoreconf -fi
+    LINKS=/usr/bin/links ./configure --prefix=/usr
 
-
-	autoreconf -fvi
-	LINKS="/usr/bin/links" ./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
-

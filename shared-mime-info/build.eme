@@ -11,8 +11,6 @@ release=1
 source="https://gitlab.freedesktop.org/xdg/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-    emerald is-installed xmlto && export XML_CATALOG_FILES=/etc/xml/catalog
-
     vylen-meson "${name}-${version}" build \
         -Dupdate-mimedb=false \
         -Dbuild-tests=false \
