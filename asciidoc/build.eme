@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Text document format for short documents, articles, books and UNIX man pages"
 homepage="https://asciidoc-py.github.io/"
 maintainer="Vylen Linux Team"
@@ -5,15 +8,17 @@ maintainer="Vylen Linux Team"
 name=asciidoc
 version=10.2.1
 release=1
-source="https://github.com/asciidoc/$name-py3/archive/$version/$name-py3-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}-py3/archive/${version}/${name}-py3-${version}.tar.gz"
 
 build() {
-	export XML_CATALOG_FILES=/etc/xml/catalog
+    # shellcheck disable=SC2164
+    cd "${name}-py-${version}"
+    autoconf
 
-	cd $name-py-$version
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc
 
-	autoconf
-	./configure --prefix=/usr --sysconfdir=/etc
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
