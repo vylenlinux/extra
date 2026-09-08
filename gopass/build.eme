@@ -11,11 +11,6 @@ release=1
 source="https://github.com/gopasspw/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-    export CGO_CPPFLAGS="${CPPFLAGS}"
-    export CGO_CFLAGS="${CFLAGS}"
-    export CGO_CXXFLAGS="${CXXFLAGS}"
-    export CGO_LDFLAGS="${LDFLAGS}"
-
     export GOFLAGS="${GOFLAGS} \
         -buildmode=pie \
         -trimpath \
