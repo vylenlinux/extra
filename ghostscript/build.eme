@@ -6,7 +6,7 @@ homepage="https://www.ghostscript.com/"
 maintainer="Vylen Linux Team"
 
 name=ghostscript
-version=10.07.1
+version=10.08.0
 release=1
 
 source="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$(printf "%s" "${version}" | sed 's/\.//g')/${name}-${version}.tar.xz
@@ -39,7 +39,7 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    cp -r "${SRC}/fonts" "${PKG}/usr/share/ghostscript/"
+    cp -r "${SRC}/fonts" -t "${PKG}/usr/share/ghostscript/"
 
     rm "${PKG}/usr/share/ghostscript/fonts"/[CRT]* \
         "${PKG}/usr/bin/ijs_client_example" \
