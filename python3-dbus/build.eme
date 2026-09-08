@@ -1,25 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Python3 bindings to the D-Bus"
 homepage="http://dbus.freedesktop.org/releases/dbus-python"
 maintainer="Vylen Linux Team"
 
 name=python3-dbus
 version=1.4.0
-release=1
-source="$name-$version.tar.gz::http://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.xz"
+release=2
+
+source="${name}-${version}.tar.gz::http://dbus.freedesktop.org/releases/dbus-python/dbus-python-${version}.tar.xz
+    fix-build-with-python3.15.patch"
 
 build() {
-	export PYTHON=/usr/bin/python3
+    patch -d "dbus-python-${version}" -Np1 -i "${SRC}/fix-build-with-python3.15.patch"
 
+    vylen-meson "dbus-python-${version}" build -Dtests=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	vylen-meson dbus-python-$version build \
-		-Dtests=false
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
-
-
-	/usr/bin/python3 $SRC/dbus-python-$version/tools/generate-pkginfo.py $version PKG-INFO
-	/usr/bin/python3 -m compileall -d /usr/lib $PKG/usr/lib
-	/usr/bin/python3 -O -m compileall -d /usr/lib $PKG/usr/lib
-
-
+    python3 "${SRC}/dbus-python-${version}/tools/generate-pkginfo.py" "${version}" PKG-INFO
+    python3 -m compileall -d /usr/lib "${PKG}/usr/lib"
+    python3 -O -m compileall -d /usr/lib "${PKG}/usr/lib"
 }
