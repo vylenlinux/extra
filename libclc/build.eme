@@ -6,15 +6,19 @@ homepage="https://libclc.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=libclc
-version=23.1.0
-release=2
+version=23.1.1
+release=1
 
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
     ${name}.pc"
 
 build() {
     # libclc is intended to be used with the Clang compiler's OpenCL frontend https://libclc.llvm.org/
-    export CC=clang CXX=clang++ AR=llvm-ar NM=llvm-nm RANLIB=llvm-ranlib
+    export CC=clang
+    export CXX=clang++
+    export AR=llvm-ar
+    export NM=llvm-nm
+    export RANLIB=llvm-ranlib
 
     multibuild_variants="spirv32-unknown-unknown \
         spirv64-unknown-unknown \

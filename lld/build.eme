@@ -6,7 +6,7 @@ homepage="https://lld.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=lld
-version=23.1.0
+version=23.1.1
 release=1
 
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
@@ -21,7 +21,7 @@ build() {
     CBUILD_LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
     CBUILD_LLVM_TARGETS="${CBUILD_LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
 
-    cbuild_options "llvm"
+    cbuild_options llvm
 
     cmake -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \

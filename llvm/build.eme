@@ -6,7 +6,7 @@ homepage="https://llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=llvm
-version=23.1.0
+version=23.1.1
 release=1
 
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/${name}-project-${version}.src.tar.xz
@@ -51,7 +51,7 @@ build() {
     jobs=
 
     while :; do
-        echo "Try ${jobs:-default} parallel jobs ..."
+        printf "Try %s parallel jobs ...\n" "${jobs:-default}"
         cmake --build build -j "${jobs}" && break
 
         # Try few parallel jobs to avoid OOM
@@ -74,5 +74,5 @@ build() {
 
     # multilib stub
     mv "${PKG}/usr/include/llvm/Config/llvm-config.h" "${PKG}/usr/include/llvm/Config/llvm-config-64.h"
-    cp "${SRC}/llvm-config.h" "${PKG}/usr/include/llvm/Config/llvm-config.h"
+    cp "${SRC}/llvm-config.h" -t "${PKG}/usr/include/llvm/Config/"
 }

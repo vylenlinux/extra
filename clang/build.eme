@@ -6,22 +6,22 @@ homepage="https://clang.llvm.org/"
 maintainer="Vylen Linux Team"
 
 name=clang
-version=23.1.0
+version=23.1.1
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
 build() {
-    mv "llvm-project-${version}.src/clang-tools-extra" "llvm-project-${version}.src/clang/tools/extra"
+    mv "llvm-project-${version}.src/${name}-tools-extra" "llvm-project-${version}.src/${name}/tools/extra"
 
     # CBUILD: enable o disable LLVM_TARGETS_TO_BUILD, source CBUILD_LLVM_TARGETS from "llvm.opt" file
     CBUILD_LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
     CBUILD_LLVM_TARGETS="${CBUILD_LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
 
-    cbuild_options "llvm"
+    cbuild_options llvm
 
-    cmake -S "llvm-project-${version}.src/clang" -B build -G Ninja \
+    cmake -S "llvm-project-${version}.src/${name}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/clang \
+        -DCMAKE_INSTALL_LIBEXECDIR="/usr/lib/${name}" \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
@@ -46,11 +46,11 @@ build() {
         # Try few parallel jobs to avoid OOM
         if [ -z "${jobs}" ]; then
             # shellcheck disable=SC2003
-            jobs=$(expr "$(free -g | grep Mem: | awk '{print $2}')" / 2 + 1)
+            jobs="$(expr "$(free -g | grep Mem: | awk '{print $2;}')" / 2 + 1)"
             continue
         elif [ "${jobs}" -gt 2 ]; then
             # shellcheck disable=SC2003
-            jobs=$(expr "${jobs}" - 2)
+            jobs="$(expr "${jobs}" - 2)"
             continue
         elif [ "${jobs}" = 1 ]; then
             exit 1
