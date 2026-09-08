@@ -15,7 +15,7 @@ source="${name}-${version}.tar.gz::http://dbus.freedesktop.org/releases/dbus-pyt
 build() {
     patch -d "dbus-python-${version}" -Np1 -i "${SRC}/fix-build-with-python3.15.patch"
 
-    vylen-meson "dbus-python-${version}" build -Dtests=false
+    vylen-meson "dbus-python-${version}" build -Dtests=disabled
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 

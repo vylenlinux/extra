@@ -1,2 +1,2 @@
-b3fe974466c68ae985b287211ef81d33c8dbdd508dc4d47d09acc3e16334a621  fix-build-with-python3.15.patch
+77df9194063599092d640c170b211dc49c471b47ef18483f68177ef36ac2ffc4  fix-build-with-python3.15.patch
 b3e4a094ff1fceb70725d78a875b36d71feb96c2df96ea980ffe9e3c26a59ce8  python3-dbus-1.4.0.tar.gz

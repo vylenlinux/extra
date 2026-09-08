@@ -57,3 +57,63 @@
 +    PyObject_GC_Del,        /*tp_free*/
      0,                      /*tp_is_gc*/
  };
+
+--- a/dbus_bindings/server.c
++++ b/dbus_bindings/server.c
+@@ -433,6 +433,26 @@
+     return self;
+ }
+
++/* Server owns Python objects that can participate in reference cycles.
++ * Managed weakrefs require the type to support the GC protocol on Python
++ * 3.15 and later.
++ */
++static int
++Server_tp_traverse(Server *self, visitproc visit, void *arg)
++{
++    Py_VISIT(self->conn_class);
++    Py_VISIT(self->mainloop);
++    return 0;
++}
++
++static int
++Server_tp_clear(Server *self)
++{
++    Py_CLEAR(self->conn_class);
++    Py_CLEAR(self->mainloop);
++    return 0;
++}
++
+ /* Destructor */
+ static void Server_tp_dealloc(Server *self)
+ {
+@@ -440,6 +460,7 @@
+     PyObject *et, *ev, *etb;
+
+     /* avoid clobbering any pending exception */
++    PyObject_GC_UnTrack((PyObject *)self);
+     PyErr_Fetch(&et, &ev, &etb);
+
+ #if !DBUSPY_PY_VERSION_AT_LEAST(3, 12, 0, 0)
+@@ -580,10 +601,10 @@
+ #if DBUSPY_PY_VERSION_AT_LEAST(3, 12, 0, 0)
+     Py_TPFLAGS_MANAGED_WEAKREF |
+ #endif
+-    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
++    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC,
+     Server_tp_doc,          /*tp_doc*/
+-    0,                      /*tp_traverse*/
+-    0,                      /*tp_clear*/
++    (traverseproc)Server_tp_traverse, /*tp_traverse*/
++    (inquiry)Server_tp_clear,         /*tp_clear*/
+     0,                      /*tp_richcompare*/
+ #if DBUSPY_PY_VERSION_AT_LEAST(3, 12, 0, 0)
+     0,                      /*tp_weaklistoffset*/
+@@ -603,7 +624,7 @@
+     0,                      /*tp_init*/
+     0,                      /*tp_alloc*/
+     Server_tp_new,          /*tp_new*/
+-    0,                      /*tp_free*/
++    PyObject_GC_Del,        /*tp_free*/
+     0,                      /*tp_is_gc*/
+ };
