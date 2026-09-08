@@ -51,8 +51,6 @@ build() {
     patch -Np1 -i "${SRC}/llvm-23-AssignGUIDPass.patch"
 
     install -Dm644 "${SRC}/bootstrap.toml" -t .
-
-    export CARGO_HOME="${PWD}/.cargo"
     export RUST_BACKTRACE=1
 
     [ -e /usr/include/libssh2.h ] && export LIBSSH2_SYS_USE_PKG_CONFIG=1
