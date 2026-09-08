@@ -19,13 +19,9 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/relea
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
     patch -Np1 -i "${SRC}/fix-target-detection.patch"
+
     sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
-
-    mkdir -p "${SRC}/.cargo"
-    export CARGO_HOME="${SRC}/.cargo"
-
     install -Dm644 "${SRC}/config" .mozconfig
 
     # audio
