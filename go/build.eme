@@ -15,7 +15,6 @@ source="${name}-${version}.tar.gz::https://golang.org/dl/${name}${version}.src.t
 NO_STRIP=yes
 
 build() {
-    export GOCACHE="${SRC}/${name}-build"
     export GOROOT_BOOTSTRAP="${name}-${version}"
     export GOROOT_FINAL="/usr/lib/${name}"
     export GOARCH=amd64
