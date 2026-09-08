@@ -13,13 +13,15 @@ source="${name}-${version}.tar.gz::http://dbus.freedesktop.org/releases/dbus-pyt
     fix-build-with-python3.15.patch"
 
 build() {
-    patch -d "dbus-python-${version}" -Np1 -i "${SRC}/fix-build-with-python3.15.patch"
+    # shellcheck disable=SC2164
+    cd "dbus-python-${version}"
+    patch -Np1 -i "${SRC}/fix-build-with-python3.15.patch"
 
-    vylen-meson "dbus-python-${version}" build -Dtests=disabled
+    vylen-meson build -Dtests=disabled
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    python3 "${SRC}/dbus-python-${version}/tools/generate-pkginfo.py" "${version}" PKG-INFO
+    python3 tools/generate-pkginfo.py "${version}" PKG-INFO
     python3 -m compileall -d /usr/lib "${PKG}/usr/lib"
     python3 -O -m compileall -d /usr/lib "${PKG}/usr/lib"
 }
