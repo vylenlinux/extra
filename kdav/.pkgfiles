@@ -15,6 +15,7 @@ drwxr-xr-x root/root    usr/include/KF6/KDAV/KDAV/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemDeleteJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemFetchJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemModifyJob
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemMoveJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemsFetchJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemsListJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavJobBase
@@ -39,6 +40,7 @@ drwxr-xr-x root/root    usr/include/KF6/KDAV/kdav/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemdeletejob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemfetchjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemmodifyjob.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemmovejob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemsfetchjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemslistjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davjobbase.h
@@ -60,8 +62,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6DAV/
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6DAV.so -> libKF6DAV.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.29.0
--rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.29.0
+lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.30.0
+-rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.30.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
