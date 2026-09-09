@@ -6,7 +6,7 @@ homepage="https://www.openldap.org/"
 maintainer="Vylen Linux Team"
 
 name=openldap
-version=2.7.0
+version=2.7.1
 release=1
 source="https://www.openldap.org/software/download/OpenLDAP/${name}-release/${name}-${version}.tgz"
 
