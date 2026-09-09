@@ -9,15 +9,11 @@ maintainer="Vylen Linux Team"
 name=bc
 version=1.08.2
 release=1
-
-source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz
-    configure.local"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    install -Dm644 "${SRC}/configure.local" -t .
     sed -i -e '/flex/s/as_fn_error/: ;; # &/' configure
 
     ./configure \
