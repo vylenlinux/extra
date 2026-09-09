@@ -6,14 +6,14 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team"
 
 name=mate-control-center
-version=1.28.1
+version=1.28.2
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mate-desktop/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    autoreconf -fvi
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
