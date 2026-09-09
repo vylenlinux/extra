@@ -6,7 +6,7 @@ homepage="https://gstreamer.freedesktop.org/projects/orc.html"
 maintainer="Vylen Linux Team"
 
 name=orc
-version=0.4.43
+version=0.4.44
 release=1
 source="http://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
