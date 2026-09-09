@@ -20,8 +20,6 @@ build() {
     mv "libglnx-${_glnx}" "${name}-${version}/subprojects/libglnx"
     mv "gvdb-${_gvdb}" "${name}-${version}/subprojects/gvdb"
 
-    export MESON_PACKAGE_CACHE_DIR="${SRC}"
-
     vylen-meson "${name}-${version}" build \
         --libexecdir="lib/${name}" \
         -Dtests=disabled \
