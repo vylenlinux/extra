@@ -37,9 +37,6 @@ source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz
     ${rcrate}"
 
 build() {
-    # Add subproject sources
-    export MESON_PACKAGE_CACHE_DIR="${SRC}"
-
     emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
     emerald is-installed wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
