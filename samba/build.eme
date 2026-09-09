@@ -6,7 +6,7 @@ homepage="https://www.samba.org"
 maintainer="Vylen Linux Team"
 
 name=samba
-version=4.24.6
+version=4.24.7
 release=1
 source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz"
 
@@ -35,8 +35,8 @@ build() {
 
     install -d "${PKG}/lib"
 
-    mv "${PKG}/usr/lib"/libnss_wins.so* "${PKG}/lib"
-    mv "${PKG}/usr/lib"/libnss_winbind.so* "${PKG}/lib"
+    mv "${PKG}/usr/lib"/libnss_wins.so* -t "${PKG}/lib/"
+    mv "${PKG}/usr/lib"/libnss_winbind.so* -t "${PKG}/lib/"
 
     ln -sf ../../lib/libnss_winbind.so.2 "${PKG}/usr/lib/libnss_winbind.so"
     ln -sf ../../lib/libnss_wins.so.2 "${PKG}/usr/lib/libnss_wins.so"
