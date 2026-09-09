@@ -15,10 +15,10 @@ source="http://mandoc.bsd.lv/snapshots/${name}-${version}.tar.gz
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    install -Dm644 "${SRC}/configure.local" -t .
     ./configure
 
     make
     make DESTDIR="${PKG}" install
-
-    #rm -rf "${PKG}/share/examples"
 }
