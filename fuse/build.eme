@@ -6,8 +6,8 @@ homepage="https://github.com/libfuse/libfuse"
 maintainer="Vylen Linux Team"
 
 name=fuse
-version=3.18.2
-release=3
+version=3.18.3
+release=1
 source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/${name}-${version}.tar.gz"
 
 build() {
@@ -22,5 +22,5 @@ build() {
 
     # move to fuse-common
     rm -f "${PKG}/etc/${name}.conf"
-    do_service fuse
+    do_service "${name}"
 }
