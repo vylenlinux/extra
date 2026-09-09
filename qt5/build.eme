@@ -31,12 +31,6 @@ build() {
     patch -d qtbase -p1 -i "${SRC}/qtbase-use-wayland-on-gnome.patch"
     patch -d qtbase -p1 -i "${SRC}/qtbase-5.15.19-openssl4.patch"
 
-    export PYTHON=/usr/bin/python3
-    mkdir "${SRC}/bin"
-
-    ln -s /usr/bin/python3 "${SRC}/bin/python"
-    export PATH="${SRC}/bin:${PATH}"
-
     export QTDIR="${PWD}"
     export LD_LIBRARY_PATH="${QTDIR}/qtbase/lib:${QTDIR}/qttools/lib:${LD_LIBRARY_PATH}"
     export QT_PLUGIN_PATH="${QTDIR}/qtbase/plugins"
