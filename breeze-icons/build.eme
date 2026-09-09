@@ -1,25 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Breeze icon theme"
 homepage="https://community.kde.org/Frameworks"
 maintainer="Vylen Linux Team"
 
 name=breeze-icons
-version=6.29.0
+version=6.30.0
 release=1
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
-    cmake -S $name-$version -B build -G Ninja \
-        -D CMAKE_INSTALL_PREFIX=/usr \
-        -D CMAKE_INSTALL_LIBDIR=lib \
-        -D CMAKE_BUILD_TYPE=Release \
-        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-	-D BINARY_ICONS_RESOURCE=ON \
-        -D BUILD_TESTING=OFF \
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBINARY_ICONS_RESOURCE=ON \
+        -DBUILD_TESTING=OFF \
         -Wno-dev
-    cmake --build build
-    DESTDIR=$PKG cmake --install build
 
-    find "${PKG}"/usr/share/icons/ -type d -empty -delete
-    find "${PKG}"/usr/share/icons/ -xtype l -delete
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    find "${PKG}/usr/share/icons/" -type d -empty -delete
+    find "${PKG}/usr/share/icons/" -xtype l -delete
 }

@@ -14,8 +14,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6BreezeIcons/
 -rw-r--r-- root/root    usr/lib/cmake/KF6BreezeIcons/KF6BreezeIconsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6BreezeIcons/KF6BreezeIconsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6BreezeIcons.so -> libKF6BreezeIcons.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6BreezeIcons.so.6 -> libKF6BreezeIcons.so.6.29.0
--rwxr-xr-x root/root    usr/lib/libKF6BreezeIcons.so.6.29.0
+lrwxrwxrwx root/root    usr/lib/libKF6BreezeIcons.so.6 -> libKF6BreezeIcons.so.6.30.0
+-rwxr-xr-x root/root    usr/lib/libKF6BreezeIcons.so.6.30.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/breeze-dark/
@@ -1561,6 +1561,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-jabber-symboli
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/16/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/16/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/16/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/16/im-msn-symbolic.svg -> im-msn.svg
@@ -5245,6 +5247,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-jabber-symboli
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/22/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/22/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/22/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/22/im-msn-symbolic.svg -> im-msn.svg
@@ -9141,6 +9145,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-jabber-symboli
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/24/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/24/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/actions/24/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/actions/24/im-msn-symbolic.svg -> im-msn.svg
@@ -13228,6 +13234,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/smartphone-symbol
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/22/smartphone.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/tablet-symbolic.svg -> tablet.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/22/tablet.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/tv-symbolic.svg -> video-television-symbolic.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/tv.svg -> video-television.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/uav-quadcopter-symbolic.svg -> uav-quadcopter.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/22/uav-quadcopter.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/22/uav-symbolic.svg -> uav-quadcopter.svg
@@ -13372,6 +13380,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/smartphone-symbol
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/24/smartphone.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/tablet-symbolic.svg -> tablet.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/24/tablet.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/tv-symbolic.svg -> video-television-symbolic.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/tv.svg -> video-television.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/uav-quadcopter-symbolic.svg -> uav-quadcopter.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/24/uav-quadcopter.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/24/uav-symbolic.svg -> uav-quadcopter.svg
@@ -13455,6 +13465,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/64/phone.svg -> smar
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/64/printer.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/64/scanner.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/64/smartphone.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/devices/64/tv.svg -> video-television.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/64/video-display.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/devices/64/video-television.svg
 drwxr-xr-x root/root    usr/share/icons/breeze-dark/emblems/
@@ -14126,6 +14137,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-readme.s
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-rust.svg -> text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/16/text-x-subviewer.svg -> application-x-srt.svg
@@ -14642,6 +14654,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-readme.s
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-rpm-spec.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-rust.svg -> text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/22/text-x-subviewer.svg -> application-x-srt.svg
@@ -15157,6 +15170,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-readme.s
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-rpm-spec.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-rust.svg -> text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/24/text-x-subviewer.svg -> application-x-srt.svg
@@ -15676,6 +15690,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-readme.s
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-rust.svg -> text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/32/text-x-subviewer.svg -> application-x-srt.svg
@@ -16193,6 +16208,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-scss.svg -> text-x-sass.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze-dark/mimetypes/64/text-x-subviewer.svg -> application-x-srt.svg
@@ -21530,6 +21546,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-jabber-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/16/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze/actions/16/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/16/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/16/im-msn-symbolic.svg -> im-msn.svg
@@ -25214,6 +25232,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-jabber-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/22/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze/actions/22/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/22/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/22/im-msn-symbolic.svg -> im-msn.svg
@@ -29110,6 +29130,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-jabber-symbolic.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-jabber.svg -> games-hint.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-kick-user-symbolic.svg -> im-kick-user.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/24/im-kick-user.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-mastodon-symbolic.svg -> im-mastodon.svg
+-rw-r--r-- root/root    usr/share/icons/breeze/actions/24/im-mastodon.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-matrix-symbolic.svg -> im-matrix.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/actions/24/im-matrix.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/actions/24/im-msn-symbolic.svg -> im-msn.svg
@@ -33198,6 +33220,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/smartphone-symbolic.sv
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/22/smartphone.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/tablet-symbolic.svg -> tablet.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/22/tablet.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/tv-symbolic.svg -> video-television-symbolic.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/tv.svg -> video-television.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/uav-quadcopter-symbolic.svg -> uav-quadcopter.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/22/uav-quadcopter.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/22/uav-symbolic.svg -> uav-quadcopter.svg
@@ -33342,6 +33366,8 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/smartphone-symbolic.sv
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/24/smartphone.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/tablet-symbolic.svg -> tablet.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/24/tablet.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/tv-symbolic.svg -> video-television-symbolic.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/tv.svg -> video-television.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/uav-quadcopter-symbolic.svg -> uav-quadcopter.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/24/uav-quadcopter.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/devices/24/uav-symbolic.svg -> uav-quadcopter.svg
@@ -33425,6 +33451,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/devices/64/phone.svg -> smartphon
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/64/printer.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/64/scanner.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/64/smartphone.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/devices/64/tv.svg -> video-television.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/64/video-display.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/devices/64/video-television.svg
 drwxr-xr-x root/root    usr/share/icons/breeze/emblems/
@@ -34096,6 +34123,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-readme.svg ->
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-rust.svg -> ./text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/16/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/16/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/16/text-x-subviewer.svg -> application-x-srt.svg
@@ -34612,6 +34640,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-readme.svg ->
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/22/text-x-rpm-spec.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-rust.svg -> ./text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/22/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/22/text-x-subviewer.svg -> application-x-srt.svg
@@ -35127,6 +35156,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-readme.svg ->
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/24/text-x-rpm-spec.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-rust.svg -> ./text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/24/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/24/text-x-subviewer.svg -> application-x-srt.svg
@@ -35646,6 +35676,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-readme.svg ->
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-rust.svg -> ./text-rust.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/32/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/32/text-x-script.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/32/text-x-subviewer.svg -> application-x-srt.svg
@@ -36163,6 +36194,7 @@ lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-rust.svg -> .
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/64/text-x-scala.svg
 -rw-r--r-- root/root    usr/share/icons/breeze/mimetypes/64/text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-scss.svg -> text-x-sass.svg
+lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-shellscript.svg -> text-x-script.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-sql.svg -> application-vnd.oasis.opendocument.database.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-ssa.svg -> application-x-srt.svg
 lrwxrwxrwx root/root    usr/share/icons/breeze/mimetypes/64/text-x-subviewer.svg -> application-x-srt.svg
