@@ -30,11 +30,11 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Purpose/
 drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/purposeprocess
 lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so -> libKF6Purpose.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so.6 -> libKF6Purpose.so.6.29.0
--rwxr-xr-x root/root    usr/lib/libKF6Purpose.so.6.29.0
+lrwxrwxrwx root/root    usr/lib/libKF6Purpose.so.6 -> libKF6Purpose.so.6.30.0
+-rwxr-xr-x root/root    usr/lib/libKF6Purpose.so.6.30.0
 lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so -> libKF6PurposeWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so.6 -> libKF6PurposeWidgets.so.6.29.0
--rwxr-xr-x root/root    usr/lib/libKF6PurposeWidgets.so.6.29.0
+lrwxrwxrwx root/root    usr/lib/libKF6PurposeWidgets.so.6 -> libKF6PurposeWidgets.so.6.30.0
+-rwxr-xr-x root/root    usr/lib/libKF6PurposeWidgets.so.6.30.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
@@ -49,7 +49,6 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/kdeconnectplugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/kdeconnectsmsplugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/nextcloudplugin.so
--rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/pastebinplugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/phabricatorplugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/reviewboardplugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/purpose/saveasplugin.so
@@ -89,11 +88,6 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/reviewboard/
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/purpose/reviewboard/librbpurposequickplugin.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/purpose/reviewboard/qmldir
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/accounts/
-drwxr-xr-x root/root    usr/share/accounts/services/
-drwxr-xr-x root/root    usr/share/accounts/services/kde/
--rw-r--r-- root/root    usr/share/accounts/services/kde/google-youtube.service
--rw-r--r-- root/root    usr/share/accounts/services/kde/nextcloud-upload.service
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/
 drwxr-xr-x root/root    usr/share/icons/hicolor/128x128/
@@ -126,7 +120,6 @@ drwxr-xr-x root/root    usr/share/locale/ar/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ar/LC_MESSAGES/purpose6_saveas.mo
@@ -142,7 +135,6 @@ drwxr-xr-x root/root    usr/share/locale/ast/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ast/LC_MESSAGES/purpose6_saveas.mo
@@ -158,7 +150,6 @@ drwxr-xr-x root/root    usr/share/locale/az/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/az/LC_MESSAGES/purpose6_saveas.mo
@@ -174,7 +165,6 @@ drwxr-xr-x root/root    usr/share/locale/bg/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/bg/LC_MESSAGES/purpose6_saveas.mo
@@ -190,7 +180,6 @@ drwxr-xr-x root/root    usr/share/locale/ca/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ca/LC_MESSAGES/purpose6_saveas.mo
@@ -206,7 +195,6 @@ drwxr-xr-x root/root    usr/share/locale/ca@valencia/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ca@valencia/LC_MESSAGES/purpose6_saveas.mo
@@ -222,7 +210,6 @@ drwxr-xr-x root/root    usr/share/locale/cs/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/cs/LC_MESSAGES/purpose6_saveas.mo
@@ -237,7 +224,6 @@ drwxr-xr-x root/root    usr/share/locale/da/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/da/LC_MESSAGES/purpose6_saveas.mo
@@ -253,7 +239,6 @@ drwxr-xr-x root/root    usr/share/locale/de/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/purpose6_saveas.mo
@@ -269,7 +254,6 @@ drwxr-xr-x root/root    usr/share/locale/el/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/purpose6_saveas.mo
@@ -285,7 +269,6 @@ drwxr-xr-x root/root    usr/share/locale/en_GB/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/purpose6_saveas.mo
@@ -301,7 +284,6 @@ drwxr-xr-x root/root    usr/share/locale/eo/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/eo/LC_MESSAGES/purpose6_saveas.mo
@@ -317,7 +299,6 @@ drwxr-xr-x root/root    usr/share/locale/es/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/es/LC_MESSAGES/purpose6_saveas.mo
@@ -332,7 +313,6 @@ drwxr-xr-x root/root    usr/share/locale/et/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/et/LC_MESSAGES/purpose6_saveas.mo
@@ -348,7 +328,6 @@ drwxr-xr-x root/root    usr/share/locale/eu/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/eu/LC_MESSAGES/purpose6_saveas.mo
@@ -364,7 +343,6 @@ drwxr-xr-x root/root    usr/share/locale/fi/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/purpose6_saveas.mo
@@ -380,7 +358,6 @@ drwxr-xr-x root/root    usr/share/locale/fr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/fr/LC_MESSAGES/purpose6_saveas.mo
@@ -396,7 +373,6 @@ drwxr-xr-x root/root    usr/share/locale/ga/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ga/LC_MESSAGES/purpose6_saveas.mo
@@ -412,7 +388,6 @@ drwxr-xr-x root/root    usr/share/locale/gl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/purpose6_saveas.mo
@@ -428,7 +403,6 @@ drwxr-xr-x root/root    usr/share/locale/he/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/purpose6_saveas.mo
@@ -444,7 +418,6 @@ drwxr-xr-x root/root    usr/share/locale/hi/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/purpose6_saveas.mo
@@ -460,7 +433,6 @@ drwxr-xr-x root/root    usr/share/locale/hu/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/hu/LC_MESSAGES/purpose6_saveas.mo
@@ -476,7 +448,6 @@ drwxr-xr-x root/root    usr/share/locale/ia/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ia/LC_MESSAGES/purpose6_saveas.mo
@@ -491,7 +462,6 @@ drwxr-xr-x root/root    usr/share/locale/id/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/id/LC_MESSAGES/purpose6_saveas.mo
@@ -507,7 +477,6 @@ drwxr-xr-x root/root    usr/share/locale/is/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/is/LC_MESSAGES/purpose6_saveas.mo
@@ -523,7 +492,6 @@ drwxr-xr-x root/root    usr/share/locale/it/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/it/LC_MESSAGES/purpose6_saveas.mo
@@ -539,7 +507,6 @@ drwxr-xr-x root/root    usr/share/locale/ja/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ja/LC_MESSAGES/purpose6_saveas.mo
@@ -555,7 +522,6 @@ drwxr-xr-x root/root    usr/share/locale/ka/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ka/LC_MESSAGES/purpose6_saveas.mo
@@ -571,7 +537,6 @@ drwxr-xr-x root/root    usr/share/locale/ko/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/purpose6_saveas.mo
@@ -587,7 +552,6 @@ drwxr-xr-x root/root    usr/share/locale/lt/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/lt/LC_MESSAGES/purpose6_saveas.mo
@@ -603,7 +567,6 @@ drwxr-xr-x root/root    usr/share/locale/lv/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/lv/LC_MESSAGES/purpose6_saveas.mo
@@ -618,7 +581,6 @@ drwxr-xr-x root/root    usr/share/locale/ml/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ml/LC_MESSAGES/purpose6_saveas.mo
@@ -637,7 +599,6 @@ drwxr-xr-x root/root    usr/share/locale/nl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/purpose6_saveas.mo
@@ -653,7 +614,6 @@ drwxr-xr-x root/root    usr/share/locale/nn/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/purpose6_saveas.mo
@@ -669,7 +629,6 @@ drwxr-xr-x root/root    usr/share/locale/pa/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/pa/LC_MESSAGES/purpose6_saveas.mo
@@ -685,7 +644,6 @@ drwxr-xr-x root/root    usr/share/locale/pl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/pl/LC_MESSAGES/purpose6_saveas.mo
@@ -701,7 +659,6 @@ drwxr-xr-x root/root    usr/share/locale/pt/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/pt/LC_MESSAGES/purpose6_saveas.mo
@@ -717,7 +674,6 @@ drwxr-xr-x root/root    usr/share/locale/pt_BR/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/pt_BR/LC_MESSAGES/purpose6_saveas.mo
@@ -733,7 +689,6 @@ drwxr-xr-x root/root    usr/share/locale/ro/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ro/LC_MESSAGES/purpose6_saveas.mo
@@ -749,7 +704,6 @@ drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/purpose6_saveas.mo
@@ -765,7 +719,6 @@ drwxr-xr-x root/root    usr/share/locale/sa/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/purpose6_saveas.mo
@@ -781,7 +734,6 @@ drwxr-xr-x root/root    usr/share/locale/sk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/purpose6_saveas.mo
@@ -797,7 +749,6 @@ drwxr-xr-x root/root    usr/share/locale/sl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/purpose6_saveas.mo
@@ -816,7 +767,6 @@ drwxr-xr-x root/root    usr/share/locale/sv/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/purpose6_saveas.mo
@@ -829,7 +779,6 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/purpose6_fileitemaction.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/purpose6_kdeconnectsms.mo
--rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/purpose6_saveas.mo
 drwxr-xr-x root/root    usr/share/locale/tg/
 drwxr-xr-x root/root    usr/share/locale/tg/LC_MESSAGES/
@@ -841,7 +790,6 @@ drwxr-xr-x root/root    usr/share/locale/tg/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/purpose6_saveas.mo
@@ -857,7 +805,6 @@ drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/purpose6_saveas.mo
@@ -873,7 +820,6 @@ drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/purpose6_saveas.mo
@@ -889,7 +835,6 @@ drwxr-xr-x root/root    usr/share/locale/uk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/purpose6_saveas.mo
@@ -905,7 +850,6 @@ drwxr-xr-x root/root    usr/share/locale/zh_CN/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/zh_CN/LC_MESSAGES/purpose6_saveas.mo
@@ -921,7 +865,6 @@ drwxr-xr-x root/root    usr/share/locale/zh_TW/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_kdeconnect.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_kdeconnectsms.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_nextcloud.mo
--rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_pastebin.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_phabricator.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_reviewboard.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/purpose6_saveas.mo
