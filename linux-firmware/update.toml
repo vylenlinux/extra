@@ -1,5 +1,5 @@
 name = "linux-firmware"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "linux-firmware"
+project = "kernel-firmware/linux-firmware"
