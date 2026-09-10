@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Offline NT Password Editor - reset passwords in a Windows NT SAM user database file"
 homepage="https://pogostick.net/~pnh/ntpasswd/"
 maintainer="Vylen Linux Team"
@@ -5,13 +8,15 @@ maintainer="Vylen Linux Team"
 name=chntpw
 version=140201
 release=1
-source="http://pogostick.net/~pnh/ntpasswd/$name-source-$version.zip"
+source="${name}-${version}.zip::https://pogostick.net/~pnh/ntpasswd/${name}-source-${version}.zip"
 
 build() {
-	cd $name-$version
-	sed -i 's/^CFLAGS= \(.*\) -m32 $/CFLAGS= \1/' Makefile
-	make
-	install -Dm0755 $name $PKG/usr/bin/$name
-	install -Dm0755 reged $PKG/usr/bin/reged
-	install -Dm0755 cpnt $PKG/usr/bin/cpnt
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    sed -i 's/^CFLAGS= \(.*\) -m32 $/CFLAGS= \1 -Wno-incompatible-pointer-types/' Makefile
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
+
+    make
+    install -Dm755 "${name}" reged cpnt -t "${PKG}/usr/bin/"
 }
