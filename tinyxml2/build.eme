@@ -1,6 +1,6 @@
 description="Simple XML parser made for easy integration "
 homepage="http://www.grinninglizard.com/tinyxml2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tinyxml2
 version=11.0.0

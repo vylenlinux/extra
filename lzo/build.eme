@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Data compression library"
 homepage="https://www.oberhumer.com/opensource/lzo"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lzo
 version=2.10

@@ -1,6 +1,6 @@
 description="Lightweight GTK+ clipboard manager (fork of Parcellite)"
 homepage="https://github.com/CristianHenzel/ClipIt/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=clipit
 version=1.4.5

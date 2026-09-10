@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A low-level cryptographic library"
 homepage="https://www.lysator.liu.se/~nisse/nettle"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nettle
 version=4.0

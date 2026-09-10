@@ -1,6 +1,6 @@
 description="A thin layer of graphic data types"
 homepage="https://ebassi.github.io/graphene/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=graphene
 version=1.10.8

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Common library for X-Apps project"
 homepage="https://github.com/linuxmint/xapp"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xapp
 version=3.2.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="a style for Qt Quick Controls 2 (QQC2) which uses QStyle"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qqc2-desktop-style
 version=6.30.0

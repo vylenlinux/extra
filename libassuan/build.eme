@@ -1,6 +1,6 @@
 description="Inter process communication library used by some of the other GnuPG related packages"
 homepage="https://www.gnupg.org/related_software/libassuan/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libassuan
 version=3.0.2

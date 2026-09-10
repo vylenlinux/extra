@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a way to load and enumerate PKCS #11 (a Cryptographic Token Interface Standard) modules"
 homepage="https://github.com/p11-glue/p11-kit"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=p11-kit
 version=0.26.5

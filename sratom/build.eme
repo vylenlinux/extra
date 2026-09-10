@@ -1,6 +1,6 @@
 description="An LV2 Atom RDF serialisation library"
 homepage="https://drobilla.net/software/sratom.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sratom
 version=0.6.22

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="X.Org X11 driver and SDK for Wacom and Wacom-like tablets"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xf86-input-wacom
 version=1.2.4

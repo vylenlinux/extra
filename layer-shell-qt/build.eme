@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt component to allow applications to make use of the Wayland wl-layer-shell protocol"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=layer-shell-qt
 version=6.7.5

@@ -1,6 +1,6 @@
 description="Brushes used by packages which use libmypaint"
 homepage="https://github.com/mypaint/mypaint-brushes"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mypaint-brushes
 version=2.0.2

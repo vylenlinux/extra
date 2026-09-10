@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ interface to GTK+ 3"
 homepage="http://www.gtkmm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtkmm3
 version=3.24.11

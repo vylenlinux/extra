@@ -1,6 +1,6 @@
 description="Common Access Card library thar provides emulation of smart cards to a virtual card reader running in a guest virtual machine."
 homepage="https://www.spice-space.org/page/Libcacard "
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcacard
 version=2.8.2

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="MusePack decoding library"
 homepage="https://musepack.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmpcdec
 version=r475

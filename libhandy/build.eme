@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Building blocks for modern adaptive GNOME apps"
 homepage="https://gitlab.gnome.org/GNOME/libhandy/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libhandy
 version=1.8.3

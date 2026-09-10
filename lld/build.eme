@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Linker from the LLVM project"
 homepage="https://lld.llvm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lld
 version=23.1.1

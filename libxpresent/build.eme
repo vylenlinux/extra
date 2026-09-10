@@ -1,6 +1,6 @@
 description="Xlib-based library for the X Present Extension"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxpresent"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 _name=libXpresent
 
 name=libxpresent

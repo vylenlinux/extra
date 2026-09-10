@@ -1,6 +1,6 @@
 description="Ncurses CD writer program which uses cdrecord and mkisofs"
 homepage="http://cdw.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cdw
 version=0.8.1

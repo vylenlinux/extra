@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A system load plugin for the Xfce4 panel"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-systemload-plugin
 version=1.4.0

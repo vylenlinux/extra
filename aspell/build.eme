@@ -1,6 +1,6 @@
 description="GNU aspell is a spell checker designed to replace ispell "
 homepage="http://aspell.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aspell
 version=0.60.8.2

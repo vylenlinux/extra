@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The fundamental package for scientific computing with Python"
 homepage="https://numpy.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-numpy
 version=2.5.3

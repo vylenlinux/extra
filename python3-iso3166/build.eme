@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Self-contained ISO 3166-1 country definitions"
 homepage="https://github.com/deactivated/python-iso3166"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-iso3166
 version=3.0.0

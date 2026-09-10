@@ -1,6 +1,6 @@
 description="QMI modem protocol helper library"
 homepage="https://www.freedesktop.org/wiki/Software/libqmi/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libqmi
 version=1.38.0

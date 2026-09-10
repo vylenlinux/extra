@@ -1,6 +1,6 @@
 description="Off-the-Record Messaging Library and Toolkit"
 homepage="https://otr.cypherpunks.ca/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libotr
 version=4.1.1

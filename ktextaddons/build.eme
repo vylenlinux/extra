@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Various text handling addons"
 homepage="https://invent.kde.org/libraries/ktextaddons"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ktextaddons
 version=2.1.2

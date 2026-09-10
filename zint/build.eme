@@ -1,6 +1,6 @@
 description="Barcode encoding library supporting over 50 symbologies"
 homepage="https://zint.org.uk/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zint
 version=2.16.0

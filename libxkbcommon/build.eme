@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="keymap compiler and support library"
 homepage="https://xkbcommon.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxkbcommon
 version=1.13.2

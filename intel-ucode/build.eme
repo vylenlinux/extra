@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="microcode update files for intel CPUs'"
 homepage="https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files "
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=intel-ucode
 version=20260812

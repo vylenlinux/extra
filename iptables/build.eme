@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The principal firewall tool for Linux (using nft interface)"
 homepage="https://www.netfilter.org/projects/iptables/index.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iptables
 version=1.8.13

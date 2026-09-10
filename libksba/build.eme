@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library used to make X.509 certificates as well as making the CMS (Cryptographic Message Syntax) easily accessible by other applications"
 homepage="https://www.gnupg.org/related_software/libksba/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libksba
 version=1.8.1

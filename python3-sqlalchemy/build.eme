@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python SQL toolkit and Object Relational Mapper"
 homepage="https://www.sqlalchemy.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sqlalchemy
 version=2.0.52

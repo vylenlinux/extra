@@ -1,6 +1,6 @@
 description="The pixel-manipulation library for X and cairo"
 homepage="https://cgit.freedesktop.org/pixman/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pixman
 version=0.46.4

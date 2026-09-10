@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Unicode validation and transcoding at billions of characters per second"
 homepage="https://simdutf.github.io/simdutf/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=simdutf
 version=9.1.1

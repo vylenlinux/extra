@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Compile and distribute Python extensions written in rust as easily as if they were written in C"
 homepage="https://github.com/PyO3/setuptools-rust"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-setuptools-rust
 version=1.13.0

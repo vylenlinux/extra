@@ -1,6 +1,6 @@
 description="The OpenGL Extension Wrangler Library"
 homepage="https://github.com/nigels-com/glew"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glew
 version=2.3.1

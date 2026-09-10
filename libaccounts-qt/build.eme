@@ -1,6 +1,6 @@
 description="Qt-based client library for the accounts database"
 homepage="https://gitlab.com/accounts-sso/libaccounts-qt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libaccounts-qt
 version=1.17

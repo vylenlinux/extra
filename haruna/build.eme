@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Video player built with Qt/QML on top of libmpv"
 homepage="https://apps.kde.org/haruna/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=haruna
 version=1.8.1

@@ -1,6 +1,6 @@
 description="portable and efficient API to determine the call-chain of a program"
 homepage="https://savannah.nongnu.org/projects/libunwind"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libunwind
 version=1.8.3

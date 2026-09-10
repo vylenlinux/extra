@@ -1,6 +1,6 @@
 description="An extremely fast and small background setter for X."
 homepage="http://github.com/Gottox/bgs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bgs
 version=0.8

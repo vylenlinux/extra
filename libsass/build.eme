@@ -1,6 +1,6 @@
 description="A C/C++ implementation of a Sass compiler"
 homepage="https://sass-lang.com/libsass/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsass
 version=3.6.6

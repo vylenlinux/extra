@@ -1,6 +1,6 @@
 description="X11 Font Services Library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfs
 version=1.0.10

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A fork of gnome-settings-daemon for MATE"
 homepage="https://mate-desktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-settings-daemon
 version=1.28.0

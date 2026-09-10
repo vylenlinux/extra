@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt wrapper for ModemManager DBus API"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=modemmanager-qt
 version=6.30.0

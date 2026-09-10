@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Enables the use of Qt6 APIs in Python applications"
 homepage="https://doc.qt.io/qtforpython-6/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pyside6
 version=6.11.2

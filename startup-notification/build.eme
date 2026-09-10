@@ -1,6 +1,6 @@
 description="Libary to monitor and display application startup"
 homepage="https://www.freedesktop.org/wiki/Software/startup-notification/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=startup-notification
 version=0.12

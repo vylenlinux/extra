@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="GNU GRand Unified Bootloader"
 homepage="https://www.gnu.org/software/grub/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grub
 version=2.14

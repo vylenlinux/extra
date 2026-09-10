@@ -1,6 +1,6 @@
 description="Utilities for exFAT file system"
 homepage="https://github.com/relan/exfat"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=exfat-utils
 version=1.4.0

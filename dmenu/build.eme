@@ -1,6 +1,6 @@
 description="A generic menu for X"
 homepage="https://tools.suckless.org/dmenu/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dmenu
 version=5.4

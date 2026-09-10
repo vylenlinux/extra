@@ -1,6 +1,6 @@
 description="A software for reading and writing Data Matrix 2D barcodes"
 homepage="https://github.com/dmtx/libdmtx"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdmtx
 version=0.7.8

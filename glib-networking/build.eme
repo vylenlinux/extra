@@ -1,6 +1,6 @@
 description="Network related gio modules for GLib"
 homepage="https://gitlab.gnome.org/GNOME/glib-networking"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glib-networking
 version=2.80.1

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The user-friendly command line shell"
 homepage="https://fishshell.com/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fish
 version=4.9.3

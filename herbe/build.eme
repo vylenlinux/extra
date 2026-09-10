@@ -1,6 +1,6 @@
 description="Daemon-less notifications without D-Bus. Minimal and lightweight."
 homepage="https://github.com/dudik/herbe"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=herbe
 version=1.0.0

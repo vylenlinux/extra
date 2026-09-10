@@ -1,6 +1,6 @@
 description="Base class SAX Drivers and Filters"
 homepage="https://search.cpan.org/dist/XML-SAX-Base"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-xml-sax-base
 version=1.09

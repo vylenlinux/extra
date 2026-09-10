@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Documentation tool for public library API"
 homepage="https://www.gtk.org/gtk-doc/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtk-doc
 version=1.36.1

@@ -1,6 +1,6 @@
 description="Implementations for atomic memory update operations on a number of architectures"
 homepage="https://github.com/ivmai/libatomic_ops"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libatomic_ops
 version=7.10.0

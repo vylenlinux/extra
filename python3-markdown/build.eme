@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python implementation of markdown"
 homepage="https://pypi.org/project/markdown"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-markdown
 version=3.10.3

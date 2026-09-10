@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Integration library and QML module for Accounts-SSO and SignOn-SSO"
 homepage="https://www.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kaccounts-integration
 version=26.08.1

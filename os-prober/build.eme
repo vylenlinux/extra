@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Utility to detect other OSes on a set of drives"
 homepage="https://joeyh.name/code/os-prober/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=os-prober
 version=1.85

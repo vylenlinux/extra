@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Fast, compact, key-value embedded data store"
 homepage="https://github.com/LMDB/lmdb"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lmdb
 version=1.0.2

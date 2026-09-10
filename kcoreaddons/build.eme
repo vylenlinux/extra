@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt addon library with a collection of non-GUI utilities"
 homepage="https://invent.kde.org/frameworks/kcoreaddons"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcoreaddons
 version=6.30.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Canonical source for classifiers on PyPI (pypi.org)"
 homepage="https://github.com/pypa/trove-classifiers"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-trove-classifiers
 version=2026.6.1.19

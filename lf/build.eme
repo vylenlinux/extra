@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Terminal file manager"
 homepage="https://github.com/gokcehan/lf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lf
 version=42

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Compiler for the GObject type system"
 homepage="https://wiki.gnome.org/Projects/Vala"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vala
 version=0.56.19

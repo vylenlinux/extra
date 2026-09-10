@@ -1,6 +1,6 @@
 description="Basic, good-looking task manager for WMs"
 homepage="https://gitlab.com/o9000/tint2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tint2
 version=17.1.3

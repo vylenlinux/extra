@@ -1,6 +1,6 @@
 description="xaw3d library for xpaint"
 homepage="https://sourceforge.net/projects/sf-xpaint"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxaw3dxft
 version=1.6.4

@@ -1,6 +1,6 @@
 description="Thin wrapper over POSIX syscalls"
 homepage="https://github.com/sionescu/libfixposix/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfixposix
 version=0.5.1

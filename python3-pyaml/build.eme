@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="PyYAML-based module to produce pretty and readable YAML-serialized data"
 homepage="https://github.com/mk-fg/pretty-yaml"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyaml
 version=26.7.0

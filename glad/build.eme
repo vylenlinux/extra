@@ -1,6 +1,6 @@
 description="Vulkan/GL/GLES/EGL/GLX/WGL Loader-Generator"
 homepage="https://glad.dav1d.de"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glad
 version=2.0.8

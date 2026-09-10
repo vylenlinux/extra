@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Objects and methods for reading and writing AppStream metadata"
 homepage="https://people.freedesktop.org/~hughsient/appstream-glib/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=appstream-glib
 version=0.8.4

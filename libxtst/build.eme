@@ -1,6 +1,6 @@
 description="X11 Testing -- Resource extension library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxtst"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxtst
 version=1.2.5

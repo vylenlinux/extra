@@ -1,6 +1,6 @@
 description="A Python HTML parser/tokenizer based on the WHATWG HTML5 spec."
 homepage="https://github.com/html5lib/html5lib-python"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-html5lib
 version=1.1

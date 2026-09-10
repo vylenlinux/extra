@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library that defines common error values for all GnuPG components"
 homepage="https://www.gnupg.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgpg-error
 version=1.61

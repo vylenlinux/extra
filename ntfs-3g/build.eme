@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="NTFS filesystem driver and utilities"
 homepage="https://www.tuxera.com/community/open-source-ntfs-3g/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ntfs-3g
 version=2026.7.7

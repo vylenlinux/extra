@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="JSON implementation in C"
 homepage="https://github.com/json-c/json-c/wiki"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=json-c
 version=0.19

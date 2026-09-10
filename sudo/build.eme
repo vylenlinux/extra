@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Give certain users the ability to run some commands as root"
 homepage="https://www.sudo.ws/sudo/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sudo
 version=1.9.17p2

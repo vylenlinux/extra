@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Wayland protocol extensions for wlroots and other compositors"
 homepage="https://gitlab.freedesktop.org/wlroots/wlr-protocols"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wlr-protocols
 version=20260309

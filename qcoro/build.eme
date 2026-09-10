@@ -1,6 +1,6 @@
 description="C++ Coroutines for Qt"
 homepage="https://github.com/danvratil/qcoro"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qcoro
 version=0.13.0

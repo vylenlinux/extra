@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Decoder for a lossy sound compression scheme specified in MPEG-2 Part 7 and MPEG-4 Part 3 standards"
 homepage="https://github.com/knik0/faad2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=faad2
 version=2.11.3

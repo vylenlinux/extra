@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="CIFS filesystem user-space tools"
 homepage="https://wiki.samba.org/index.php/LinuxCIFS_utils"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cifs-utils
 version=7.7

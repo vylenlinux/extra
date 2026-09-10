@@ -1,6 +1,6 @@
 description="Python ctypes wrapper around SDL2"
 homepage="https://github.com/py-sdl/py-sdl2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pysdl2
 version=0.9.17

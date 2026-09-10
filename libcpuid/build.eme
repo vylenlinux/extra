@@ -1,6 +1,6 @@
 description="C library for x86 CPU detection and feature extraction"
 homepage="https://github.com/anrieff/libcpuid"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcpuid
 version=0.8.1

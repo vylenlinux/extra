@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Web content engine for GTK"
 homepage="https://webkitgtk.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=webkitgtk
 version=2.52.6

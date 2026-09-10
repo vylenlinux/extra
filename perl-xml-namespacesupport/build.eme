@@ -1,6 +1,6 @@
 description="Generic namespace helpers (ported from SAX2)"
 homepage="https://search.cpan.org/dist/XML-NamespaceSupport"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-xml-namespacesupport
 version=1.12

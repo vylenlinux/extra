@@ -1,6 +1,6 @@
 description="General parsing module for Python"
 homepage="https://github.com/pyparsing/pyparsing/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyparsing
 version=3.3.2

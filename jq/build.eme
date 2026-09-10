@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Lightweight and flexible command-line JSON processor"
 homepage="https://jqlang.github.io/jq/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jq
 version=1.8.2

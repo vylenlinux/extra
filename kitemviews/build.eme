@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Set of item views extending the Qt model-view framework"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kitemviews
 version=6.30.0

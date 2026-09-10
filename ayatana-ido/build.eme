@@ -1,6 +1,6 @@
 description="Ayatana Indicator Display Objects"
 homepage="https://github.com/AyatanaIndicators/ayatana-ido"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ayatana-ido
 version=0.10.4

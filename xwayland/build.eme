@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Compact xserver to run under wayland for compatibility"
 homepage="https://www.x.org/wiki"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xwayland
 version=24.1.13

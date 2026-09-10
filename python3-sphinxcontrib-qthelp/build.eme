@@ -1,6 +1,6 @@
 description="sphinx extension which outputs QtHelp document"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-qthelp/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-qthelp
 version=2.0.0

@@ -1,6 +1,6 @@
 description="A fast menu generator for the Openbox Window Manager"
 homepage="https://github.com/trizen/obmenu-generator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=obmenu-generator
 version=0.93

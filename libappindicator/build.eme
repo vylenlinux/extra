@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library that allow applications to export menus"
 homepage="https://launchpad.net/libappindicator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libappindicator
 version=12.10.1+20.10.20200706.1

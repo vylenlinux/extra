@@ -1,6 +1,6 @@
 description="Desktop-independent theme switcher for GTK+"
 homepage="https://wiki.lxde.org/en/LXAppearance"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxappearance
 version=0.6.4

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Message Digest functions from BSD systems"
 homepage="https://www.hadrons.org/software/libmd"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmd
 version=1.2.0

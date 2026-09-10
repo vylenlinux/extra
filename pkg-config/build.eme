@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A tool for passing the include path and/or library paths to build tools during the configure and make file execution"
 homepage="https://pkg-config.freedesktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pkg-config
 version=0.29.2

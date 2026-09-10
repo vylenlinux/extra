@@ -1,6 +1,6 @@
 description="Parser for HTTP Request/Response written in C"
 homepage="https://github.com/nodejs/http-parser"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=http-parser
 version=2.9.4

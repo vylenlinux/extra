@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="FREE version of the SSL/TLS protocol forked from OpenSSL"
 homepage="https://www.libressl.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libressl
 version=4.3.2

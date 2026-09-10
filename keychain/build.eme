@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="utility to manage SSH and GPG keys in a convenient and secure manner"
 homepage="https://www.funtoo.org/Keychain"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=keychain
 version=3.0.4

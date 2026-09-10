@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="High quality, one-dimensional sample-rate conversion library"
 homepage="https://sourceforge.net/p/soxr/wiki/Home/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsoxr
 version=0.1.3

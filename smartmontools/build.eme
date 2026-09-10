@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives"
 homepage="http://smartmontools.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=smartmontools
 version=7.5

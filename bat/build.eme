@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A cat(1) clone with wings"
 homepage="https://github.com/sharkdp/bat"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bat
 version=0.26.1

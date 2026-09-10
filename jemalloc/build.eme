@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="General-purpose scalable concurrent malloc implementation"
 homepage="http://www.canonware.com/jemalloc/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jemalloc
 version=5.3.1

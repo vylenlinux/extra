@@ -1,6 +1,6 @@
 description="SPICE server "
 homepage="https://www.spice-space.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spice
 version=0.16.0

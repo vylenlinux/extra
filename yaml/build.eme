@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C library for parsing and emitting YAML"
 homepage="https://pyyaml.org/wiki/LibYAML"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=yaml
 version=0.2.5

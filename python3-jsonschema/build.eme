@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="An implementation of JSON Schema validation for Python"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/python-jsonschema/jsonschema"
 
 name=python3-jsonschema

@@ -1,6 +1,6 @@
 description="Mesa OpenGL Utility library"
 homepage="https://gitlab.freedesktop.org/mesa/glu"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glu
 version=9.0.3

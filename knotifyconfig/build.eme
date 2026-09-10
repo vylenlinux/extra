@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Configuration dialog for desktop notifications"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=knotifyconfig
 version=6.30.0

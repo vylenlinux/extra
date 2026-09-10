@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="a backend implementation for xdg-desktop-portal using Qt/KF5"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdg-desktop-portal-kde
 version=6.7.5

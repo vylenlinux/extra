@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C library supporting GObject introspection for manipulation of block devices"
 homepage="https://github.com/storaged-project/libblockdev/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libblockdev
 version=3.5.0

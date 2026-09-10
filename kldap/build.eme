@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="LDAP access API for KDE"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kldap
 version=26.08.1

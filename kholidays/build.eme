@@ -3,7 +3,7 @@
 
 description="Library to assist determining when holidays occur"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kholidays
 version=6.30.0

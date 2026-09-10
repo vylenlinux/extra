@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Daemon that runs specified programs at scheduled times and related tools"
 homepage="https://github.com/cronie-crond/cronie/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cronie
 version=1.7.2

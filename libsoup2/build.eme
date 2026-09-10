@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="HTTP client/server library for GNOME"
 homepage="https://wiki.gnome.org/Projects/libsoup"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsoup2
 version=2.74.3

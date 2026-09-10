@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="KDE PIM incidence editor"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=incidenceeditor
 version=26.08.1

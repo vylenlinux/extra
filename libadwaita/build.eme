@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Building blocks for modern GNOME applications"
 homepage="https://gitlab.gnome.org/GNOME/libadwaita"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libadwaita
 version=1.9.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A set of applications for productivity and creative usage"
 homepage="https://calligra.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=calligra
 version=26.08.1

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Grand central dispatch, from swift corelibs"
 homepage="https://github.com/apple/swift-corelibs-libdispatch"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdispatch
 version=6.3.3

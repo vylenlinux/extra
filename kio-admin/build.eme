@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Manage files as administrator using the admin:// KIO protocol"
 homepage="https://apps.kde.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kio-admin
 version=26.08.1

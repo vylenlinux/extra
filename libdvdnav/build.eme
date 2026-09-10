@@ -1,6 +1,6 @@
 description="Library that allows easy use of sophisticated DVD navigation features"
 homepage="https://www.videolan.org/developers/libdvdnav.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdvdnav
 version=7.0.0

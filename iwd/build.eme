@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Wireless daemon for Linux"
 homepage="https://iwd.wiki.kernel.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iwd
 version=3.12

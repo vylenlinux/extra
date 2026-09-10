@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Library for high-quality conversion of RGBA images to 8-bit indexed-color (palette) images"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://pngquant.org/lib/"
 
 name=libimagequant

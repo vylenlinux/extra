@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ library and a command line utility for managing image and video metadata"
 homepage="https://exiv2.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=exiv2
 version=0.28.9

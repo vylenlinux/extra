@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="X server resource database utility"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xrdb
 version=1.2.3

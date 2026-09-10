@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="MIT Kerberos V5 is a network authentication protocol"
 homepage="https://web.mit.edu/kerberos/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=krb5
 version=1.22.2

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Fast correct Python JSON library supporting dataclasses and datetimes"
 homepage="https://github.com/ijl/orjson"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-orjson
 version=3.12.0

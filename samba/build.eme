@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="File and print services to SMB/CIFS clients and Windows networking to Linux clients"
 homepage="https://www.samba.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=samba
 version=4.24.7

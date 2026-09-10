@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Firewalling, NAT, and packet mangling for linux"
 homepage="https://netfilter.org/projects/nftables/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nftables
 version=1.1.7

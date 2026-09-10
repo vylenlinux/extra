@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Official C++ interface for the ATK accessibility toolkit library"
 homepage="https://www.gtkmm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=atkmm
 version=2.36.4

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Seat management daemon and library "
 homepage="https://git.sr.ht/~kennylevinsen/seatd"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=seatd
 version=0.9.3

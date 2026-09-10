@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides an easy way to set up hot corners in the Xfce desktop environment"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-hotcorner-plugin
 version=0.0.4

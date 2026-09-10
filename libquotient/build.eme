@@ -1,6 +1,6 @@
 description="A Qt library to write cross-platform clients for Matrix"
 homepage="https://quotient-im.github.io/libQuotient/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libquotient
 version=0.9.6.1

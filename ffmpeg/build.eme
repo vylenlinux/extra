@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="FFmpeg is a solution to record, convert and stream audio and video"
 homepage="https://ffmpeg.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ffmpeg
 version=9.0.1

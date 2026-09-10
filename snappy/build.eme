@@ -1,6 +1,6 @@
 description="A fast compressor/decompressor library"
 homepage="https://google.github.io/snappy/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=snappy
 version=1.2.2

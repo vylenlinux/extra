@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A GTK+ backend for xdg-desktop-portal"
 homepage="https://github.com/flatpak/xdg-desktop-portal-gtk"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdg-desktop-portal-gtk
 version=1.15.3

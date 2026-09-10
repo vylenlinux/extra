@@ -1,6 +1,6 @@
 description="A collection of tools for internationalizing Python applications"
 homepage="http://babel.pocoo.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-babel
 version=2.18.0

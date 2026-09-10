@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Image viewer by KDE"
 homepage="https://invent.kde.org/graphics/gwenview"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gwenview
 version=26.08.1

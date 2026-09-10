@@ -1,6 +1,6 @@
 description="Compressor/archiver for creating and modifying zipfiles"
 homepage="http://www.info-zip.org/Zip.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=unzip
 version=6.0

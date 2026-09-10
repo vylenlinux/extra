@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C library for asynchronous DNS requests"
 homepage="https://c-ares.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=c-ares
 version=1.34.8

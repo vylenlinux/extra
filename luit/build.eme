@@ -1,6 +1,6 @@
 description="Filter that can be run between an arbitrary application and a UTF-8 terminal emulator"
 homepage="https://invisible-island.net/luit/luit.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=luit
 version=1.1.1

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Screen locker for Wayland"
 homepage="https://github.com/swaywm/swaylock"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swaylock
 version=1.8.6

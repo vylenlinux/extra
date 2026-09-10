@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="SPIR-V Headers"
 homepage="https://www.khronos.org/registry/spir-v"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spirv-headers
 version=1.4.357.0

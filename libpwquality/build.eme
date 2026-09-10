@@ -1,6 +1,6 @@
 description="Common functions for password quality checking and also scoring them based on their apparent randomness"
 homepage="https://github.com/libpwquality/libpwquality"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpwquality
 version=1.4.5

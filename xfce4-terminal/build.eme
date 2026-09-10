@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="GTK+3 terminal emulator for xfce desktop"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-terminal
 version=1.2.0

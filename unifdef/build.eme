@@ -1,6 +1,6 @@
 description="selectively processes conditional C preprocessor #if and #ifdef directives"
 homepage="https://dotat.at/prog/unifdef/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=unifdef
 version=2.12

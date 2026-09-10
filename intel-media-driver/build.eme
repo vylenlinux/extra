@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Intel Media Driver for VAAPI - Broadwell+ iGPUs"
 homepage="https://github.com/intel/media-driver/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=intel-media-driver
 version=26.3.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="X11 Input extension library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxi
 version=1.8.3

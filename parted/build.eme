@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A program for creating, destroying, resizing, checking and copying partitions"
 homepage="https://www.gnu.org/software/parted/parted.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=parted
 version=3.7

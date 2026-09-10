@@ -1,6 +1,6 @@
 description="Portable version of JOE’s Own Editor"
 homepage="https://www.mirbsd.org/jupp.htm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jupp
 version=3.1jupp41

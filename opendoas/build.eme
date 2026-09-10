@@ -1,6 +1,6 @@
 description="A portable fork of the OpenBSD 'doas' command"
 homepage="https://github.com/Duncaen/OpenDoas"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=opendoas
 version=6.8.2

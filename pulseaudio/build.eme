@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="iSound system for POSIX OSes"
 homepage="https://www.freedesktop.org/wiki/Software/PulseAudio/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pulseaudio
 version=17.0

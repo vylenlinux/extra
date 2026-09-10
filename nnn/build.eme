@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Free, fast, friendly file browser"
 homepage="https://github.com/jarun/nnn"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nnn
 version=5.3

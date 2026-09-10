@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A multi-platform library for OpenGL, OpenGL ES, Vulkan, window and input"
 homepage="https://github.com/glfw/glfw"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glfw
 version=3.5.1

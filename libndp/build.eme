@@ -1,6 +1,6 @@
 description="Wrapper for IPv6 Neighbor Discovery Protocol"
 homepage="http://libndp.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libndp
 version=1.9

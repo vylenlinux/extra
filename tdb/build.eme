@@ -1,6 +1,6 @@
 description="Trivial DataBase similar to gdbm"
 homepage="https://tdb.samba.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tdb
 version=1.4.15

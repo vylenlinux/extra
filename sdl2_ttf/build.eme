@@ -1,6 +1,6 @@
 description="Use TrueType fonts in your SDL 2.x applications"
 homepage="https://github.com/libsdl-org/SDL_ttf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sdl2_ttf
 version=2.24.0

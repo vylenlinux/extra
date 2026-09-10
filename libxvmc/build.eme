@@ -1,6 +1,6 @@
 description="X11 Video Motion Compensation extension library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxvmc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxvmc
 version=1.0.15

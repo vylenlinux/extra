@@ -1,6 +1,6 @@
 description="Tools and library to manipulate EFI variables"
 homepage="https://github.com/rhboot/efivar"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=efivar
 version=39

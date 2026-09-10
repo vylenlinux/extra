@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="fstrcmp - a library that is used to make fuzzy comparisons of strings and byte arrays"
 homepage="https://fstrcmp.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fstrcmp
 version=0.7.D001

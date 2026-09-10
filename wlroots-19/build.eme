@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Modular Wayland compositor library"
 homepage="https://gitlab.freedesktop.org/wlroots/wlroots"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wlroots-19
 version=0.19.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A fully functional X client library for Python programs"
 homepage="https://github.com/python-xlib/python-xlib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-xlib
 version=0.33

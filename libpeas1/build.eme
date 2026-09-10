@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="GObject based plugins engine"
 homepage="https://wiki.gnome.org/Projects/Libpeas"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpeas1
 version=1.38.1

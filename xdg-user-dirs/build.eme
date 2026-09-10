@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Manage user directories like ~/Desktop and ~/Music"
 homepage="https://www.freedesktop.org/wiki/Software/xdg-user-dirs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdg-user-dirs
 version=0.20

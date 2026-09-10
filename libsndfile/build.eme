@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library of C routines for reading and writing files containing sampled audio data"
 homepage="https://libsndfile.github.io/libsndfile/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsndfile
 version=1.2.2

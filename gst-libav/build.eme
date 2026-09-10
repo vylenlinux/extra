@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="GStreamer plugins for Libav (a fork of FFmpeg)"
 homepage="https://gstreamer.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gst-libav
 version=1.28.7

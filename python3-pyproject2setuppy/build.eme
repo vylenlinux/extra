@@ -1,6 +1,6 @@
 description="Cheap builder for pyproject-based build systems"
 homepage="https://github.com/mgorny/pyproject2setuppy"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyproject2setuppy
 version=22

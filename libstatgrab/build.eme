@@ -1,6 +1,6 @@
 description="A library that provides cross platform access to statistics about the system on which it's run"
 homepage="https://www.i-scream.org/libstatgrab"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libstatgrab
 version=0.92.1

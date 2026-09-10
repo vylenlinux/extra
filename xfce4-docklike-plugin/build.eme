@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A modern, docklike, minimalist taskbar for XFCE"
 homepage="https://docs.xfce.org/panel-plugins/xfce4-docklike-plugin/start"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-docklike-plugin
 version=0.5.1

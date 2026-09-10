@@ -1,6 +1,6 @@
 description="Unaccelerated VESA display driver"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xf86-video-vesa
 version=2.6.0

@@ -1,6 +1,6 @@
 description="suckless linux base utils"
 homepage="https://github.com/michaelforney/ubase"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ubase
 version=20200605

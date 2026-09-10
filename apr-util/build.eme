@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Predictable and consistent interface to underlying client library interfaces"
 homepage="https://apr.apache.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=apr-util
 version=1.6.5

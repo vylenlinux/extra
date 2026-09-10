@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Session/policy manager implementation for PipeWire"
 homepage="https://gitlab.freedesktop.org/pipewire/wireplumber"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wireplumber
 version=0.5.17

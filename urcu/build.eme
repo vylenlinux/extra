@@ -1,6 +1,6 @@
 description="LGPLv2.1 userspace RCU (read-copy-update) library"
 homepage="https://lttng.org/urcu"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=urcu
 version=0.15.6

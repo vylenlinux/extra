@@ -1,6 +1,6 @@
 description="Reusable library for GPU-accelerated video/image rendering primitives"
 homepage="https://github.com/haasn/libplacebo"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libplacebo
 version=7.360.1

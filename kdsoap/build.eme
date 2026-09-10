@@ -1,6 +1,6 @@
 description="Qt-based client-side and server-side SOAP component"
 homepage="https://github.com/KDAB/KDSoap"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kdsoap
 version=2.3.0

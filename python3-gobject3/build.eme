@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python3 bindings for PyGObject3"
 homepage="https://pygobject.gnome.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-gobject3
 version=3.58.0

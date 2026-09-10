@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An improved dynamic tiling window manager"
 homepage="https://i3wm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=i3
 version=4.25.1

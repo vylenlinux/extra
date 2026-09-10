@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A JavaScript display engine for mathematics that works in all browsers"
 homepage="https://www.mathjax.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mathjax
 version=4.1.3

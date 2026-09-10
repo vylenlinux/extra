@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Additional support for proprietary codecs for Vivaldi"
 homepage="https://chromium.googlesource.com/chromium/third_party/ffmpeg"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi-ffmpeg-codecs
 version=152.0.7977.80

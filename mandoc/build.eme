@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="mandoc - a document processor for mdoc and man"
 homepage="https://mdocml.bsd.lv/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mandoc
 version=1.14.6

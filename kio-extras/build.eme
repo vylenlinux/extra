@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Additional components to increase the functionality of KIO"
 homepage="https://apps.kde.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kio-extras
 version=26.08.1

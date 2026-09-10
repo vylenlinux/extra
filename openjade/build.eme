@@ -1,6 +1,6 @@
 description="Implementation of the DSSSL language"
 homepage="https://openjade.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openjade
 version=1.3.2

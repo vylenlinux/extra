@@ -1,6 +1,6 @@
 description="Library for calculating and applying network deltas"
 homepage="http://librsync.sourcefrog.net"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=librsync
 version=2.3.4

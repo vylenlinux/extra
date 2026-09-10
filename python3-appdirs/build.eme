@@ -1,6 +1,6 @@
 description="A small Python module for determining appropriate platform-specific dirs, e.g. a 'user data dir'"
 homepage="https://github.com/ActiveState/appdirs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-appdirs
 version=1.4.4

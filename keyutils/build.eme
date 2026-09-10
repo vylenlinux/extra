@@ -1,6 +1,6 @@
 description="Tools to control the Linux key management system"
 homepage="https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=keyutils
 version=1.6.3

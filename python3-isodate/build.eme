@@ -1,6 +1,6 @@
 description="An ISO 8601 date/time/duration parser and formatter"
 homepage="https://github.com/gweis/isodate/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-isodate
 version=0.7.2

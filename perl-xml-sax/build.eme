@@ -1,6 +1,6 @@
 description="Simple API for XML"
 homepage="https://search.cpan.org/dist/XML-SAX"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-xml-sax
 version=1.02

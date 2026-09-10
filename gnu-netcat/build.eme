@@ -1,6 +1,6 @@
 description="GNU rewrite of netcat, the network piping application"
 homepage="https://netcat.sourceforge.net/ "
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gnu-netcat
 version=0.7.1

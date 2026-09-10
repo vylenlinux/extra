@@ -1,6 +1,6 @@
 description="Qt based Color Picker with popup menu"
 homepage="https://github.com/ksnip/kColorPicker"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcolorpicker
 version=0.3.1

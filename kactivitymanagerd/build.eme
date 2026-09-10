@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="System service to manage user's activities, track the usage patterns etc"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kactivitymanagerd
 version=6.7.5

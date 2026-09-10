@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An audio processing library"
 homepage="https://www.surina.net/soundtouch/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=soundtouch
 version=2.4.1

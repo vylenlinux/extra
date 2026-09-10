@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="QML image editing components"
 homepage="https://invent.kde.org/libraries/kquickimageeditor"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kquickimageeditor
 version=0.7.0.1

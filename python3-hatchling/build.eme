@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Modern, extensible Python project management"
 homepage="https://github.com/pypa/hatch"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-hatchling
 version=1.32.0

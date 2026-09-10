@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Vulkan Utilities and Tools"
 homepage="https://www.khronos.org/vulkan"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-tools
 version=1.4.362

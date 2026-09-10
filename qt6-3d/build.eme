@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ and QML APIs for easy inclusion of 3D graphics"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-3d
 version=6.11.2

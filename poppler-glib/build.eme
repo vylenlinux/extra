@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="glib wrapper for poppler"
 homepage="https://poppler.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler-glib
 version=26.09.0

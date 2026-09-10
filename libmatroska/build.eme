@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An extensible open standard Audio/Video container format library."
 homepage="https://github.com/Matroska-Org/libmatroska"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmatroska
 version=1.7.2

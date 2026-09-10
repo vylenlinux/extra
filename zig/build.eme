@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A general-purpose programming language and toolchain for maintaining robust, optimal, and reusable software"
 homepage="https://ziglang.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zig
 version=0.16.0

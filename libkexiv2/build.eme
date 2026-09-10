@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Wrapper around Exiv2 library"
 homepage="https://www.kde.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libkexiv2
 version=26.08.1

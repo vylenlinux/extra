@@ -1,6 +1,6 @@
 description="Network utility to retrieve files from the Web"
 homepage="https://www.gnu.org/software/wget/wget.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wget
 version=1.25.0

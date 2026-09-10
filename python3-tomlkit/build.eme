@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Style-preserving TOML library for Python"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/sdispater/tomlkit"
 
 name=python3-tomlkit

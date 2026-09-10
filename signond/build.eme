@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="SignOn Daemon (Qt)"
 homepage="https://gitlab.com/accounts-sso/signond/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=signond
 version=8.61

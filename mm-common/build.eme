@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Common build files of the C++ bindings."
 homepage="https://gtkmm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mm-common
 version=1.0.8

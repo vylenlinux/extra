@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="PDF rendering library and command line tools used to manipulate PDF files"
 homepage="https://poppler.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler
 version=26.09.0

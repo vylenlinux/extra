@@ -1,6 +1,6 @@
 description="A noise suppression library based on a recurrent neural network"
 homepage="https://jmvalin.ca/demo/rnnoise"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rnnoise
 version=0.2

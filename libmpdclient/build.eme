@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Asynchronous API library for interfacing MPD in the C, C++ & Objective C languages"
 homepage="https://www.musicpd.org/libs/libmpdclient/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmpdclient
 version=2.27

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Ayatana Application Indicators Shared Library"
 homepage="https://github.com/AyatanaIndicators/libayatana-appindicator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libayatana-appindicator
 version=0.6.0

@@ -1,6 +1,6 @@
 description="Multi-platform sound framework for application developers"
 homepage="https://community.kde.org/Phonon"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=phonon
 version=4.12.0

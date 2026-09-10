@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="The blessed package to manage your versions by vcs metadata"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/pypa/setuptools-scm"
 
 name=python3-vcs-versioning

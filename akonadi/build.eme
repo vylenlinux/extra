@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An extensible cross-desktop storage service for PIM data and metadata"
 homepage="https://userbase.kde.org/Akonadi"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=akonadi
 version=26.08.1

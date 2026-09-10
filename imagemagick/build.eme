@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="ImageMagick is a collection of tools and libraries to read, write, and manipulate an image in various image formats"
 homepage="https://imagemagick.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=imagemagick
 version=7.1.2.31

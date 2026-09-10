@@ -1,6 +1,6 @@
 description="Provides functionality for small OpenGL programs"
 homepage="https://freeglut.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeglut
 version=3.8.0

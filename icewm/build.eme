@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Window manager with the goals of speed, simplicity, and not getting in the user's way"
 homepage="https://ice-wm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=icewm
 version=4.1.0

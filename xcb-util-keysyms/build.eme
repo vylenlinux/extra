@@ -1,6 +1,6 @@
 description="Utility libraries for XC Binding - Standard X key constants and conversion to/from keycodes"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xcb-util-keysyms
 version=0.4.1

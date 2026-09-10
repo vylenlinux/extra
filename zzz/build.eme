@@ -1,6 +1,6 @@
 description="A simple program to suspend or hibernate your computer"
 homepage="https://github.com/jirutka/zzz"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zzz
 version=0.2.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Add-ons for the Kirigami framework"
 homepage="https://api.kde.org/frameworks/kirigami-addons/html/index.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kirigami-addons
 version=1.13.1

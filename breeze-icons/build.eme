@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Breeze icon theme"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=breeze-icons
 version=6.30.0

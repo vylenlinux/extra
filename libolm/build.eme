@@ -1,6 +1,6 @@
 description="Implementation of the olm and megolm cryptographic ratchets"
 homepage="https://gitlab.matrix.org/matrix-org/olm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libolm
 version=3.2.16

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The base for Plasma Desktop, Mobile, and Bigscreen containing shared KCMs, applets and multiple libraries"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma-workspace
 version=6.7.5

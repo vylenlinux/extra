@@ -1,6 +1,6 @@
 description="Library used to enforce strong passwords by comparing user selected passwords to words in chosen word lists"
 homepage="https://github.com/cracklib/cracklib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cracklib
 version=2.10.3

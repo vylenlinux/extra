@@ -1,6 +1,6 @@
 description="X.org font alias files"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=font-alias
 version=1.0.6

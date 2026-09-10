@@ -1,6 +1,6 @@
 description="Ultralightweight JSON parser in ANSI C"
 homepage="https://github.com/DaveGamble/cJSON"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cjson
 version=1.7.19

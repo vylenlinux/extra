@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="exFAT filesystem userspace utilities for the Linux Kernel exfat driver"
 homepage="https://github.com/exfatprogs/exfatprogs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=exfatprogs
 version=1.4.3

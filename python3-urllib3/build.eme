@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="HTTP library with thread-safe connection pooling and file post support"
 homepage="https://github.com/urllib3/urllib3"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-urllib3
 version=2.7.0

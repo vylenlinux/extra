@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A dynamic window manager for X"
 homepage="https://dwm.suckless.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dwm
 version=6.8

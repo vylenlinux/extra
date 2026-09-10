@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Extensible I/O abstraction library for dealing with structured file formats"
 homepage="https://gitlab.gnome.org/GNOME/libgsf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgsf
 version=1.14.58

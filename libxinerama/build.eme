@@ -1,6 +1,6 @@
 description="X11 Xinerama extension library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxinerama
 version=1.1.6

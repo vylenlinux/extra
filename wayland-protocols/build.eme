@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Additional Wayland protocols that add functionality outside of protocols already in the Wayland core"
 homepage="https://wayland.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wayland-protocols
 version=1.49

@@ -1,6 +1,6 @@
 description="A simple, vim-like file manager"
 homepage="http://ranger.github.io"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ranger
 version=1.9.4

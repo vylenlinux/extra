@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Input device management and event handling library"
 homepage="https://gitlab.freedesktop.org/libinput/libinput"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libinput
 version=1.31.3

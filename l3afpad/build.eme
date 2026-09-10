@@ -1,6 +1,6 @@
 description="Simple plain text editor for GTK+ 3"
 homepage="https://github.com/stevenhoneyman/l3afpad"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=l3afpad
 version=0.8.18.1.11

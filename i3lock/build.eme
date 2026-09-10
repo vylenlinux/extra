@@ -1,6 +1,6 @@
 description="Improved screenlocker based upon XCB and PAM"
 homepage="https://i3wm.org/i3lock"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=i3lock
 version=2.16

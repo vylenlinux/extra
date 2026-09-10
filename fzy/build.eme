@@ -1,6 +1,6 @@
 description="A better fuzzy finder"
 homepage="https://github.com/jhawthorn/fzy"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fzy
 version=1.1

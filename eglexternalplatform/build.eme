@@ -1,6 +1,6 @@
 description="EGL External Platform interface"
 homepage="https://github.com/NVIDIA/eglexternalplatform"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=eglexternalplatform
 version=1.2.1

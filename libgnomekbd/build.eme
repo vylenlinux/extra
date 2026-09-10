@@ -1,6 +1,6 @@
 description="Keyboard management library"
 homepage="https://gitlab.gnome.org/GNOME/libgnomekbd"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgnomekbd
 version=3.28.1

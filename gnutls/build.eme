@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Libraries and userspace tools which provide a secure layer over a reliable transport layer"
 homepage="https://www.gnutls.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gnutls
 version=3.8.13

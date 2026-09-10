@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="NVIDIA Linux Display Driver (Latest Production Branch)"
 homepage="https://www.nvidia.com/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nvidia-open
 version=615.71.09

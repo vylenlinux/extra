@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Markup language and compiler for GTK 4 user interfaces"
 homepage="https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=blueprint-compiler
 version=0.22.2

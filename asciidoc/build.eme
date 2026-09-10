@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Text document format for short documents, articles, books and UNIX man pages"
 homepage="https://asciidoc-py.github.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=asciidoc
 version=10.2.1

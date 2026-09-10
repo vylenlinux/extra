@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library to retrieve information on the current status of computer hardware"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libksysguard
 version=6.7.5

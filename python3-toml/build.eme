@@ -1,6 +1,6 @@
 description="A Python library for parsing and creating TOML"
 homepage="https://github.com/uiri/toml"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-toml
 version=0.10.2

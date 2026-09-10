@@ -1,6 +1,6 @@
 description="Multi-platform support library with a focus on asynchronous I/O"
 homepage="https://github.com/libuv/libuv"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libuv
 version=1.52.1

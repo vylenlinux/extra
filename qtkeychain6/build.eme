@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="QtKeychain is a QT API to store passwords and other secret data securely"
 homepage="https://github.com/frankosterfeld/qtkeychain"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qtkeychain6
 version=0.17.0

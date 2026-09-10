@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The MATE text editor"
 homepage="https://mate-desktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pluma
 version=1.28.1

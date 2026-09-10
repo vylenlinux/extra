@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C-Extensions for Python3"
 homepage="https://cython.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cython3
 version=3.3.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Graph visualization software"
 homepage="https://www.graphviz.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=graphviz
 version=16.1.0

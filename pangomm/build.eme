@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ interface to pango"
 homepage="https://gitlab.gnome.org/GNOME/pangomm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pangomm
 version=2.56.2

@@ -1,6 +1,6 @@
 description="Perl bindings for POSIX i18n gettext functions"
 homepage="https://metacpan.org/release/Locale-gettext/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-locale-gettext
 version=1.07

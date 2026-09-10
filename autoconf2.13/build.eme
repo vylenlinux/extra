@@ -1,6 +1,6 @@
 description="An old version of Autoconf"
 homepage="https://www.gnu.org/software/autoconf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=autoconf2.13
 version=2.13

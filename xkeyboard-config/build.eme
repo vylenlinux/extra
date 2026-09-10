@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Keyboard configuration database for the X Window System"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xkeyboard-config
 version=2.48

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Expat-based XML parser module for perl"
 homepage="https://search.cpan.org/dist/XML-Parser/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-xml-parser
 version=2.59

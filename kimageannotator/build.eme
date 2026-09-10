@@ -1,6 +1,6 @@
 description="Tool for annotating images"
 homepage="https://github.com/ksnip/kImageAnnotator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kimageannotator
 version=0.7.2

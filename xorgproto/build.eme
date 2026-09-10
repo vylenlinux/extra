@@ -1,6 +1,6 @@
 description="Combined X.Org X11 Protocol headers"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xorgproto
 version=2025.1

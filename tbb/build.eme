@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="High level abstract threading library"
 homepage="https://www.threadingbuildingblocks.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tbb
 version=2023.1.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Yet Another JSON Library"
 homepage="https://dev.alpinelinux.org/archive/yajl"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=yajl
 version=2.1.0

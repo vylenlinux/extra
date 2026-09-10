@@ -1,6 +1,6 @@
 description="Font family based on the Bitstream Vera Fonts with a wider range of characters"
 homepage="https://dejavu-fonts.github.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ttf-dejavu
 version=2.37

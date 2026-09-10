@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Virtual keyboard framework"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-virtualkeyboard
 version=6.11.2

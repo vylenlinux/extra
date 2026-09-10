@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Widgets library for the Xfce desktop environment"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxfce4ui
 version=4.21.9

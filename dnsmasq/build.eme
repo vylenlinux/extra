@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Lightweight, easy to configure DNS forwarder and DHCP server"
 homepage="http://www.thekelleys.org.uk/dnsmasq/doc.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dnsmasq
 version=2.93

@@ -1,6 +1,6 @@
 description="User-space support for the hardware monitoring drivers in the Linux kernel"
 homepage="https://github.com/lm-sensors/lm-sensors"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lm_sensors
 _name=$(echo $name | sed 's/_/-/g')

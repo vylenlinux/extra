@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A battery monitor panel plugin for Xfce4"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-battery-plugin
 version=1.2.0

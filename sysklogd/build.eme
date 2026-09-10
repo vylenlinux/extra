@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Logging system messages, such as those given by the kernel"
 homepage="https://github.com/troglobit/sysklogd"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sysklogd
 version=2.7.2

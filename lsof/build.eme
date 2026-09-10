@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="LiSt Open Files"
 homepage="https://lsof.readthedocs.io/en/latest/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lsof
 version=4.99.7

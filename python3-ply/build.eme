@@ -1,6 +1,6 @@
 description="Python Lex & Yacc"
 homepage="https://pypi.org/project/ply/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-ply
 version=3.11

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An implementation of the IETF's draft ICE (for p2p UDP data streams)"
 homepage="https://nice.freedesktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libnice
 version=0.1.24

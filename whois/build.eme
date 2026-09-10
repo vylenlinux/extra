@@ -1,6 +1,6 @@
 description="Intelligent WHOIS client"
 homepage="https://github.com/rfc1036/whois"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=whois
 version=5.6.6

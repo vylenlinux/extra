@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="80x86 assembler designed for portability and modularity"
 homepage="https://www.nasm.us/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nasm
 version=3.02

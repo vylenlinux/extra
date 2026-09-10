@@ -1,6 +1,6 @@
 description="An internationalization tool used for extracting translatable strings from source files"
 homepage="https://launchpad.net/intltool"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=intltool
 version=0.51.0

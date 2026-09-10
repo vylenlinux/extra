@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="D-Bus proxy"
 homepage="https://github.com/flatpak/xdg-dbus-proxy"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdg-dbus-proxy
 version=0.1.8

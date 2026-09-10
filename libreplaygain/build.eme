@@ -1,6 +1,6 @@
 description="A library to adjust audio gain"
 homepage="https://www.musepack.net/index.php?pg=src"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libreplaygain
 version=475

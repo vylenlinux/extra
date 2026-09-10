@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The extensible, customizable, self-documenting real-time display editor"
 homepage="https://www.gnu.org/software/emacs/emacs.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=emacs
 version=31.1

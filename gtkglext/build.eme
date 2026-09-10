@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="OpenGL extension to GTK 2.0."
 homepage="https://projects.gnome.org/gtkglext/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtkglext
 version=1.2.0

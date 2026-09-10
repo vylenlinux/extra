@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="astyle A Free, Fast, and Small Automatic Formatter for C, C++, C++/CLI, Objective‑C, C#, and Java Source Code"
 homepage="https://sourceforge.net/projects/astyle/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=astyle
 version=3.6.18

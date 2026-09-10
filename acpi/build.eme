@@ -1,6 +1,6 @@
 description="Client for battery, power, and thermal readings"
 homepage="https://sourceforge.net/projects/acpiclient"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=acpi
 version=1.8

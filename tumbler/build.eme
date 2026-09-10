@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Thumbnail service implementing the thumbnail management D-Bus specification"
 homepage="https://docs.xfce.org/xfce/tumbler/start"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tumbler
 version=4.20.2

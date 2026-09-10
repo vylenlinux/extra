@@ -1,6 +1,6 @@
 description="X11 font encoding library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libfontenc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfontenc
 version=1.1.9

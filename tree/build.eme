@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="display directory contents, including directories, files, links, in a terminal"
 homepage="https://gitlab.com/OldManProgrammer/unix-tree"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tree
 version=2.3.2

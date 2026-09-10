@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A fast compiler cache"
 homepage="https://ccache.dev/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ccache
 version=4.14

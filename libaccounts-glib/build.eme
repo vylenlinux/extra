@@ -1,6 +1,6 @@
 description="GLib-based client library for the accounts database"
 homepage="http//gitlab.com/accounts-sso/libaccounts-glib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libaccounts-glib
 version=1.27

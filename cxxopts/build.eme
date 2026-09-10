@@ -1,6 +1,6 @@
 description="Lightweight C++ command line option parser"
 homepage="https://github.com/jarro2783/cxxopts"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cxxopts
 version=3.3.1

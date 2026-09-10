@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="User preference utility for X"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xset
 version=1.2.6

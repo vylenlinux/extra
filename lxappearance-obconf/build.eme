@@ -1,6 +1,6 @@
 description="Plugin for LXAppearance to configure OpenBox"
 homepage="https://lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxappearance-obconf
 version=0.2.4

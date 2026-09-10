@@ -1,6 +1,6 @@
 description="Modern text editor built on the KDE Frameworks and Qt"
 homepage="https://apps.kde.org/kate/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kate
 version=26.08.1

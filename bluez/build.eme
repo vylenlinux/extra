@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Bluetooth protocol stack for Linux"
 homepage="http://www.bluez.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bluez
 version=5.87

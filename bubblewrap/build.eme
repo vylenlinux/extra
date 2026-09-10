@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Unprivileged sandboxing tool"
 homepage="https://github.com/containers/bubblewrap"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bubblewrap
 version=0.12.0

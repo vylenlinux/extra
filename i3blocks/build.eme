@@ -1,6 +1,6 @@
 description="Define blocks for your i3bar status line"
 homepage="https://github.com/vivien/i3blocks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=i3blocks
 version=1.5

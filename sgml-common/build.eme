@@ -1,6 +1,6 @@
 description="Tools for maintaining centralized SGML catalogs"
 homepage="https://www.docbook.org/xml/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sgml-common
 version=0.6.3

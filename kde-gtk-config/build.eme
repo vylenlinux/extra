@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="This project aims to provide a smooth experience for the users of GNOME/GTK applications on Plasma Desktop"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kde-gtk-config
 version=6.7.5

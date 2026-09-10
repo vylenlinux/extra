@@ -1,6 +1,6 @@
 description="An intrinsic PEG Parser-Interpreter for Python"
 homepage="https://fdik.org/pyPEG/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pypeg2
 version=2.15.2

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a simple library for extracting the text and metadata from a number of different files"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kfilemetadata
 version=6.30.0

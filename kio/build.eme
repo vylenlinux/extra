@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Network transparent access to files and data"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kio
 version=6.30.0

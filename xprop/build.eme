@@ -1,6 +1,6 @@
 description="Property displayer for X"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xprop
 version=1.2.8

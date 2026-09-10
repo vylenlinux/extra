@@ -1,6 +1,6 @@
 description="Keyboard driven and lightweight Wayland notification daemon"
 homepage="https://codeberg.org/dnkl/fnott"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fnott
 version=1.8.0

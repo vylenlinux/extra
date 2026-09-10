@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Shell script analysis tool, without the 130MB haskell dependencies"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://www.shellcheck.net/"
 
 name=shellcheck

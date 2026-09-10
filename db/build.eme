@@ -1,6 +1,6 @@
 description="The Berkeley DB embedded database system"
 homepage="https://www.oracle.com/technology/software/products/berkeley-db/index.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=db
 version=6.2.32

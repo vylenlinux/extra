@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Lightweight Display Manager for the LXDE desktop"
 homepage="https://lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxdm
 version=0.5.3

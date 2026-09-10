@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Administration and debugging tools for the XFS file system"
 homepage="https://xfs.wiki.kernel.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfsprogs
 version=7.1.1

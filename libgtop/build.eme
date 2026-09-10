@@ -1,6 +1,6 @@
 description="A library that reads information about processes and the running system"
 homepage="https://gitlab.gnome.org/GNOME/libgtop"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgtop
 version=2.41.3

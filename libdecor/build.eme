@@ -1,6 +1,6 @@
 description="Client-side decorations library for Wayland clients"
 homepage="https://gitlab.gnome.org/jadahl/libdecor"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdecor
 version=0.2.5

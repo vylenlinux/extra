@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Framing layer of HTTP/3 is implemented as a reusable C library"
 homepage="https://github.com/ngtcp2/nghttp3"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libnghttp3
 version=1.18.0

@@ -1,6 +1,6 @@
 description="A drop-down terminal emulator based on KDE konsole technology"
 homepage="https://apps.kde.org/yakuake/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=yakuake
 version=26.08.1

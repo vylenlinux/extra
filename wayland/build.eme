@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A computer display server protocol"
 homepage="https://wayland.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wayland
 version=1.26.0

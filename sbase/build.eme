@@ -1,6 +1,6 @@
 description="Portable UNIX tools (suckless)"
 homepage="https://github.com/michaelforney/sbase"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sbase
 version=20230729

@@ -1,6 +1,6 @@
 description="LXQt openssh password prompt"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-openssh-askpass
 version=2.4.0

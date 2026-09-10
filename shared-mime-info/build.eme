@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Freedesktop.org Shared MIME Info"
 homepage="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=shared-mime-info
 version=2.5.1

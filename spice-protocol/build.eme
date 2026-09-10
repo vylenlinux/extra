@@ -1,6 +1,6 @@
 description="Headers for SPICE protocol"
 homepage="https://spice-space.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spice-protocol
 version=0.14.5

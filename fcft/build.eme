@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple library for font loading and glyph rasterization using FontConfig, FreeType and pixman."
 homepage="https://codeberg.org/dnkl/fcft"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fcft
 version=3.3.3

@@ -1,6 +1,6 @@
 description="XCB utility functions for the X resource manager"
 homepage="https://github.com/Airblader/xcb-util-xrm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xcb-util-xrm
 version=1.3

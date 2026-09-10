@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Crypto and TLS for Modern C++"
 homepage="https://botan.randombit.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=botan
 version=3.13.0

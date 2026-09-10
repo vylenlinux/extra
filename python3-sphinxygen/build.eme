@@ -1,6 +1,6 @@
 description="Python module/script that generates Sphinx markup to describe a C API, from an XML description extracted by Doxygen"
 homepage="https://gitlab.com/drobilla/sphinxygen"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxygen
 version=1.0.12

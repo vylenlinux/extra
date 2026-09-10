@@ -1,6 +1,6 @@
 description="KDE's Webbrowser and swiss-army-knife for any kind of file-management and file previewing"
 homepage="https://apps.kde.org/konqueror/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=konqueror
 version=26.08.1

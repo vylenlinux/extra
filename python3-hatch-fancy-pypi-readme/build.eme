@@ -1,6 +1,6 @@
 description="Fancy PyPI READMEs with Hatch"
 homepage="https://github.com/hynek/hatch-fancy-pypi-readme"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-hatch-fancy-pypi-readme
 version=25.1.0

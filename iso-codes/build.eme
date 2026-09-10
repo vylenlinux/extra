@@ -1,6 +1,6 @@
 description="List of country, language and currency names"
 homepage="https://salsa.debian.org/iso-codes-team/iso-codes"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iso-codes
 version=4.20.1

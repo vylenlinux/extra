@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Google's common library for parsing, formatting, and validating international phone numbers"
 homepage="https://github.com/googlei18n/libphonenumber"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libphonenumber
 version=9.0.39

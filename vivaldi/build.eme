@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Experience the web in a whole new way with Vivaldi."
 homepage="https://vivaldi.com/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi
 version=8.2.4133.47

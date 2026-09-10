@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Pico editor clone with enhancements"
 homepage="https://www.nano-editor.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nano
 version=9.2

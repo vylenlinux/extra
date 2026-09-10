@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="GObject-based wrapper around the Exiv2 library"
 homepage="https://gitlab.gnome.org/GNOME/gexiv2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gexiv2
 version=0.16.2

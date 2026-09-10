@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The configuration storage system for Xfce"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfconf
 version=4.21.2

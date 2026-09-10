@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Extra modules and scripts for CMake"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=extra-cmake-modules
 version=6.30.0

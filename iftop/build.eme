@@ -1,6 +1,6 @@
 description="Display bandwidth usage on an interface"
 homepage="http://www.ex-parrot.com/~pdw/iftop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iftop
 version=1.0pre4

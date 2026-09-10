@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Audio Effects for Pipewire applications"
 homepage="https://github.com/wwmm/easyeffects"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=easyeffects
 version=8.2.9

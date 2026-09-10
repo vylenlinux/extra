@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple, hackable dynamic tiling Wayland compositor (dwm for Wayland)"
 homepage="https://codeberg.org/dwl/dwl"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dwl
 version=0.8

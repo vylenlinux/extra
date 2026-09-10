@@ -1,6 +1,6 @@
 description="Open-source implementation of the JPEG-2000 standard, version 2.3.0"
 homepage="https://github.com/uclouvain/openjpeg"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openjpeg2
 version=2.5.4

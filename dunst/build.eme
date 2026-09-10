@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Customizable and lightweight notification-daemon"
 homepage="https://dunst-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dunst
 version=1.13.2

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library used to identify wacom tablets and their model-specific features"
 homepage="https://github.com/linuxwacom/libwacom/wiki"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libwacom
 version=2.20.0

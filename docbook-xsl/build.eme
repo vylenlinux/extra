@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="XML stylesheets for Docbook-xml transformations"
 homepage="https://docbook.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=docbook-xsl
 version=2020.06.03

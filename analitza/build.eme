@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A library to add mathematical features to your program"
 homepage="https://invent.kde.org/education/analitza"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=analitza
 version=26.08.1

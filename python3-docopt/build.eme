@@ -1,6 +1,6 @@
 description="Pythonic argument parser that will make you smile"
 homepage="https://pypi.org/project/docopt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-docopt
 version=0.6.2

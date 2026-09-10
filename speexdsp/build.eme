@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="DSP library derived from Speex"
 homepage="https://www.speex.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=speexdsp
 version=1.2.1

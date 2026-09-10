@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Linux-native io_uring I/O access library"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/axboe/liburing"
 
 name=liburing

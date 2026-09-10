@@ -1,6 +1,6 @@
 description="GNOME Docking Library"
 homepage="https://gitlab.gnome.org/GNOME/gdl"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gdl
 version=3.40.0

@@ -1,6 +1,6 @@
 description="An offspring of rxvt-unicode that handles pty/tty/utmp/wtmp/lastlog handling in mostly OS-independent ways"
 homepage="http://dist.schmorp.de/libptytty/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libptytty
 version=2.0

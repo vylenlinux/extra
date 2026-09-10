@@ -1,6 +1,6 @@
 description="Configuration database system used by many GNOME applications"
 homepage="https://ftp.gnome.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gconf
 version=3.2.6

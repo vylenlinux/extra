@@ -1,6 +1,6 @@
 description="common in-memory tensor structure"
 homepage="https://github.com/dmlc/dlpack"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dlpack
 version=1.3

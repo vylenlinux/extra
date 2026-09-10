@@ -1,6 +1,6 @@
 description="A lossless image format"
 homepage="https://tools.suckless.org/farbfeld/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=farbfeld
 version=4

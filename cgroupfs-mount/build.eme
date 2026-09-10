@@ -1,6 +1,6 @@
 description="Scripts to mount the cgroupfs hierarchy"
 homepage="https://github.com/tianon/cgroupfs-mount"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cgroupfs-mount
 version=1.4

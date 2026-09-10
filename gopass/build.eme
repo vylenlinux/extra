@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The slightly more awesome standard unix password manager for teams."
 homepage="https://github.com/gopasspw/gopass"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gopass
 version=1.17.2

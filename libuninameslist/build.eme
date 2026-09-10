@@ -1,6 +1,6 @@
 description="Large, sparse array mapping each unicode code point to the annotation data for it"
 homepage="https://github.com/fontforge/libuninameslist"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libuninameslist
 version=20260107

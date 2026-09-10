@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Getting image size from png/jpeg/jpeg2000/gif file."
 homepage="https://github.com/shibukawa/imagesize_py/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-imagesize
 version=2.0.1

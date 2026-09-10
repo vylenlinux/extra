@@ -1,6 +1,6 @@
 description="Free Pascal Qt6 binding library updated by lazarus IDE"
 homepage="https://gitlab.com/freepascal.org/lazarus"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6pas
 version=6.2.10

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Ocean Sound Theme for Plasma"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ocean-sound-theme
 version=6.7.5

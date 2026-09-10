@@ -1,6 +1,6 @@
 description="C++ interface around LibRaw library used to decode RAW picture files"
 homepage="https://invent.kde.org/graphics/libkdcraw"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libkdcraw
 version=26.08.1

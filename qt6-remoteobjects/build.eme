@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Inter-process communication (IPC) module developed for Qt"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-remoteobjects
 version=6.11.2

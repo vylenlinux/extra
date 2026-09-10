@@ -1,6 +1,6 @@
 description="Qt bindings for libpulse"
 homepage="https://kde.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pulseaudio-qt
 version=1.8.1

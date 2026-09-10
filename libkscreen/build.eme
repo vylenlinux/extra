@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The screen management library for KDE Plasma Workspaces"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libkscreen
 version=6.7.5

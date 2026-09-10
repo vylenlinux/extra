@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Job-based library to send email through an SMTP server"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kmbox
 version=26.08.1

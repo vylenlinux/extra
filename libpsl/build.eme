@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library for accessing and resolving information from the Public Suffix List"
 homepage="https://github.com/rockdaboot/libpsl"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpsl
 version=0.23.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple powerful testing with Python"
 homepage="https://pytest.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pytest
 version=9.1.1

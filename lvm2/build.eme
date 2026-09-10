@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Set of tools that manage logical partitions"
 homepage="https://sourceware.org/lvm2/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lvm2
 version=2.03.42

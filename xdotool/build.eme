@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Utility for performing actions on windows in X"
 homepage="https://github.com/jordansissel/xdotool"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdotool
 version=4.20260303.1

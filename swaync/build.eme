@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A simple GTK based notification daemon for SwayWM"
 homepage="https://github.com/ErikReider/SwayNotificationCenter"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swaync
 version=0.12.6

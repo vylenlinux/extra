@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="libclc is an implementation of the library requirements of the OpenCL C programming language"
 homepage="https://libclc.llvm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libclc
 version=23.1.1

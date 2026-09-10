@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Implements a typesafe callback system for standard C++"
 homepage="https://libsigcplusplus.github.io/libsigcplusplus/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsigc++2
 version=2.12.2

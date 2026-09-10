@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="OpenGL and OpenGL ES shader front end and validator"
 homepage="https://github.com/KhronosGroup/glslang"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glslang
 version=16.5.0

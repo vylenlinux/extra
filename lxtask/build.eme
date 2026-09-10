@@ -1,6 +1,6 @@
 description="Lightweight and desktop-independent task manager"
 homepage="https://lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxtask
 version=0.1.12

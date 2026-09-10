@@ -1,6 +1,6 @@
 description="Phonon VLC backend"
 homepage="https://community.kde.org/Phonon"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=phonon-qt6-vlc
 version=0.12.0

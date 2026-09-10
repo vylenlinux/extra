@@ -1,6 +1,6 @@
 description="Free software implementation of IDNA2008, Punycode and TR46"
 homepage="https://www.gnu.org/software/libidn/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libidn2
 version=2.3.8

@@ -1,6 +1,6 @@
 description="Linux OS platform information API "
 homepage="https://github.com/python-distro/distro"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-distro
 version=1.9.0

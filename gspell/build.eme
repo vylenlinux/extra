@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A flexible API to implement the spell checking in a GTK+ application"
 homepage="https://wiki.gnome.org/Projects/gspell"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gspell
 version=1.14.4

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Create mapping solutions using data available from popular location service providers"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-location
 version=6.11.2

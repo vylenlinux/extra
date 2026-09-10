@@ -1,6 +1,6 @@
 description="C library for parsing "INI-style" files "
 homepage="http://ndevilla.free.fr/iniparser/ "
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iniparser
 version=4.2.6

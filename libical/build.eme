@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Implementation of the iCalendar protocols and data formats"
 homepage="https://github.com/libical/libical"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libical
 version=4.0.5

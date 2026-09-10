@@ -1,6 +1,6 @@
 description="LXQt platform integration for Qt."
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-qtplugin
 version=2.4.0

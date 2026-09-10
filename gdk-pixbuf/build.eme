@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Toolkit for image loading and pixel buffer manipulation"
 homepage="https://wiki.gnome.org/Projects/GdkPixbuf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gdk-pixbuf
 version=2.44.8

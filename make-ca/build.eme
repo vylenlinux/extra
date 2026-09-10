@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Shell script that adapts a current version of certdata.txt, and prepares it for use as the system trust store"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/lfs-book/make-ca" 
 
 name=make-ca

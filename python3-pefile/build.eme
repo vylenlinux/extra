@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python PE parsing module"
 homepage="https://github.com/erocarrera/pefile"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pefile
 version=2024.8.26

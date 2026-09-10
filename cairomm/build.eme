@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a C++ interface to Cairo"
 homepage="https://www.cairographics.org/cairomm/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cairomm
 version=1.18.1

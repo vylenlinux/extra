@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Archive manipulator for MATE"
 homepage="https://mate-desktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=engrampa
 version=1.28.5

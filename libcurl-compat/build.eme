@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An URL retrieval library (without versioned symbols)"
 homepage="https://curl.se/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcurl-compat
 version=8.22.0

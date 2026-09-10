@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A GTK Theme Built to Match KDE's Breeze"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=breeze-gtk
 version=6.7.5

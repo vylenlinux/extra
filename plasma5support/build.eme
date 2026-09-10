@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Migration aids for KF5 -> KF6 migration"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma5support
 version=6.7.5

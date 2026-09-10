@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Low-footprint RDF triple store with SPARQL 1.1 interface"
 homepage="https://tinysparql.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tinysparql
 version=3.11.1

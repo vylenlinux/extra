@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="An implementation-agnostic implementation of JSON reference resolution"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://referencing.readthedocs.io"
 
 name=python3-referencing

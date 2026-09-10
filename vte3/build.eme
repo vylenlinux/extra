@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Termcap file implementation for terminal emulators"
 homepage="https://gitlab.gnome.org/GNOME/vte"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vte3
 version=0.84.1

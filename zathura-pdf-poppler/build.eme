@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="PDF plug-in for zathura"
 homepage="https://pwmt.org/projects/zathura-pdf-poppler"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zathura-pdf-poppler
 version=2026.07.18

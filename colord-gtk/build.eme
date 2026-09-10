@@ -1,6 +1,6 @@
 description="GTK support library for colord"
 homepage="https://www.freedesktop.org/software/colord/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=colord-gtk
 version=0.3.1

@@ -1,6 +1,6 @@
 description="Perl/CPAN Module Parse::Yapp : Generates OO LALR parser modules"
 homepage="https://search.cpan.org/dist/Parse-Yapp"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=perl-parse-yapp
 version=1.21

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Intel Graphics Memory Management Library"
 homepage="https://github.com/intel/gmmlib/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=intel-gmmlib
 version=22.10.1

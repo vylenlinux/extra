@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="KDE contact manager"
 homepage="https://apps.kde.org/kaddressbook/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kaddressbook
 version=26.08.1

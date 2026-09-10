@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A user-friendly and fully-featured IRC client"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://apps.kde.org/konversation/"
 
 name=konversation

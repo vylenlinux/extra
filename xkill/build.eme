@@ -1,6 +1,6 @@
 description="Kill a client by its X resource"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xkill
 version=1.0.7

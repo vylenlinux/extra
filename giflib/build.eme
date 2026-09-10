@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Libraries for reading and writing GIFs as well as programs for converting and working with GIF files"
 homepage="https://giflib.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=giflib
 version=6.1.3

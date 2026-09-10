@@ -1,6 +1,6 @@
 description="C/C++ Configuration File Library"
 homepage="https://github.com/hyperrealm/libconfig"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libconfig
 version=1.8.2

@@ -1,6 +1,6 @@
 description="Document Viewer"
 homepage="https://apps.kde.org/okular/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=okular
 version=26.08.1

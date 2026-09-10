@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Set of symbols and convenience functions for Ayatana indicators"
 homepage="https://launchpad.net/libindicator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libindicator
 version=12.10.1

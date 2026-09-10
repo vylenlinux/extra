@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An advanced and well-established feature-rich text mode web browser"
 homepage="https://github.com/rkd77/elinks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=elinks
 version=0.20.0

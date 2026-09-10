@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Dynamic Kernel Modules System"
 homepage="https://github.com/dkms-project/dkms"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dkms
 version=3.4.3

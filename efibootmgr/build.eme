@@ -1,6 +1,6 @@
 description="Manipulate efi boot managers"
 homepage="https://github.com/rhboot/efibootmgr"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=efibootmgr
 version=18

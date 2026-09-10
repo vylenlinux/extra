@@ -1,6 +1,6 @@
 description="Micro Terminal Multiplexer, a terminal multiplexer."
 homepage="https://github.com/deadpixi/mtm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mtm
 version=1.2.1

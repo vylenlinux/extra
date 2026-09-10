@@ -1,6 +1,6 @@
 description="A commandline option parser"
 homepage="https://github.com/rpm-software-management/popt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=popt
 version=1.19

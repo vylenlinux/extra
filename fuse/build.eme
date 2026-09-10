@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A simple interface for userspace programs to export a virtual filesystem to the Linux kernel"
 homepage="https://github.com/libfuse/libfuse"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fuse
 version=3.18.3

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="X.Org font utilities"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=font-util
 version=1.4.2

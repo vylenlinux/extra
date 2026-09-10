@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A Wayland native snapshot editing tool"
 homepage="https://github.com/jtheoof/swappy"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swappy
 version=1.8.0

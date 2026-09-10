@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Programmable completion for the bash shell"
 homepage="https://github.com/scop/bash-completion"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bash-completion
 version=2.18.0

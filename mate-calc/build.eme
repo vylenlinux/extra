@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Calculator for the MATE desktop environment"
 homepage="https://mate-desktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-calc
 version=1.28.0

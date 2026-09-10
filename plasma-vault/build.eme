@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Plasma applet and services for creating encrypted vaults"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma-vault
 version=6.7.5

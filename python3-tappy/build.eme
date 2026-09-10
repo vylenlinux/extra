@@ -1,6 +1,6 @@
 description="Test Anything Protocol (TAP) tools for Python"
 homepage="https://pypi.python.org/pypi/tap.py"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-tappy
 version=3.2.1

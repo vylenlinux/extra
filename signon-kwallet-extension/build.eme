@@ -1,6 +1,6 @@
 description="KWallet integration for signon framework"
 homepage="https://www.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=signon-kwallet-extension
 version=26.08.1

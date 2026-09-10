@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library for manipulating Unicode strings and C strings"
 homepage="https://www.gnu.org/software/libunistring/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libunistring
 version=1.4.2

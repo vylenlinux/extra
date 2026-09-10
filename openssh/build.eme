@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Free version of the SSH connectivity tools"
 homepage="https://www.openssh.com/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openssh
 version=10.5p1

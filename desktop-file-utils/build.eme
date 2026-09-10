@@ -1,6 +1,6 @@
 description="Command line utilities for working with Desktop entries"
 homepage="https://www.freedesktop.org/wiki/Software/desktop-file-utils"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=desktop-file-utils
 version=0.28

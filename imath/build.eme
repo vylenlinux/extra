@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ and python library of 2D and 3D vector, matrix, and math operations for computer graphics"
 homepage="https://github.com/AcademySoftwareFoundation/Imath"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=imath
 version=3.2.3

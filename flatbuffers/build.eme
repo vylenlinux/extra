@@ -1,6 +1,6 @@
 description="An efficient cross platform serialization library for C++, with support for Java, C# and Go"
 homepage="https://google.github.io/flatbuffers/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=flatbuffers
 version=25.12.19

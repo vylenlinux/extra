@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Userspace virtual filesystem designed to work with the I/O abstractions of GLib's GIO library"
 homepage="https://gitlab.gnome.org/GNOME/gvfs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gvfs-nfs
 version=1.60.2

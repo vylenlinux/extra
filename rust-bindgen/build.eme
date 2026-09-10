@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Automatically generates Rust FFI bindings to C (and some C++) libraries"
 homepage="https://github.com/rust-lang/rust-bindgen"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rust-bindgen
 version=0.73.2

@@ -1,6 +1,6 @@
 description="Audio CD reading utility which includes extra data verification features"
 homepage="https://www.gnu.org/software/libcdio/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcdio-paranoia
 version=10.2+2.0.2

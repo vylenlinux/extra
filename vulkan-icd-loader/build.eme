@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Vulkan Installable Client Driver (ICD) Loader"
 homepage="https://www.khronos.org/vulkan/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-icd-loader
 version=1.4.362

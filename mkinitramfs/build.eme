@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Modular initramfs image creation utility"
 homepage="https://gitlab.com/vylen/mkinitramfs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mkinitramfs
 version=20260515

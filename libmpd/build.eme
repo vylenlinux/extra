@@ -1,6 +1,6 @@
 description="Signal based wrapper around libmpdclient"
 homepage="https://gmpclient.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmpd
 version=11.8.17

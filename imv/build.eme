@@ -1,6 +1,6 @@
 description="X11/Wayland Image Viewer "
 homepage="https://sr.ht/~exec64/imv/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=imv
 version=5.0.1

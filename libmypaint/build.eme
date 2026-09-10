@@ -1,6 +1,6 @@
 description="Library for making brushstrokes which is used by MyPaint and other projects"
 homepage="http://mypaint.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmypaint
 version=1.6.1

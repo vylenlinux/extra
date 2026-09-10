@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library to import various well-known 3D model formats in an uniform manner"
 homepage="https://assimp.sourceforge.net/index.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=assimp
 version=6.0.5

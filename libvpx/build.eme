@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Implementations of the VP8 Codec, used in most current html5 video, and of the next-generation VP9 Codec"
 homepage="https://www.webmproject.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libvpx
 version=1.17.0

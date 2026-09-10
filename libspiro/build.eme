@@ -1,6 +1,6 @@
 description="Simplifies the drawing of beautiful curves"
 homepage="https://github.com/fontforge/libspiro"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libspiro
 version=20240903

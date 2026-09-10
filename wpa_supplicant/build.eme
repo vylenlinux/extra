@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A utility providing key negotiation for WPA wireless networks"
 homepage="https://w1.fi"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wpa_supplicant
 version=2.12

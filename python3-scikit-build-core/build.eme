@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Build backend for Python that uses CMake to build extension modules"
 homepage="https://github.com/scikit-build/scikit-build-core"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-scikit-build-core
 version=1.0.3

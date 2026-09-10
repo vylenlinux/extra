@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite"
 homepage="https://www.avahi.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=avahi
 version=0.9rc5

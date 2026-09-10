@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="PHP interpreter, extension modules and support stuff"
 homepage="https://www.php.net"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=php
 version=8.5.10

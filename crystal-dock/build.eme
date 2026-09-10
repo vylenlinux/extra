@@ -1,6 +1,6 @@
 description="A cool desktop panel for Linux desktop"
 homepage="https://github.com/dangvd/crystal-dock"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=crystal-dock
 version=2.16

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Fast and light imlib2-based image viewer"
 homepage="https://feh.finalrewind.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=feh
 version=3.13

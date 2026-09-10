@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Efficient binary serialization format"
 homepage="https://pypi.org/project/msgpack/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-msgpack
 version=1.2.2

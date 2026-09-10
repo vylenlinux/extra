@@ -1,6 +1,6 @@
 description="A library for querying the osinfo database"
 homepage="https://libosinfo.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libosinfo
 version=1.12.0

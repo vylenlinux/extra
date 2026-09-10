@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A dictionary plugin for the Xfce panel"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-dict
 version=0.8.10

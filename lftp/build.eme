@@ -1,6 +1,6 @@
 description="Sophisticated command line based FTP client"
 homepage="https://lftp.yar.ru/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lftp
 version=4.9.3

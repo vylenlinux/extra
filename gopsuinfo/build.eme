@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A gopsutil-based command to display customizable system info, intended for nwg-panel or Tint2"
 homepage="https://github.com/nwg-piotr/gopsuinfo"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gopsuinfo
 version=0.1.9

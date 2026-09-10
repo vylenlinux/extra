@@ -1,6 +1,6 @@
 description="High-quality MPEG audio decoder capable of 24-bit output"
 homepage="https://www.underbit.com/products/mad/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmad
 version=0.16.4

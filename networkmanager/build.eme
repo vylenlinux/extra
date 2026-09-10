@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Network connection manager and user applications"
 homepage="https://networkmanager.dev/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=networkmanager
 version=1.58.1

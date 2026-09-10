@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Integration of web browsers with the KDE Plasma desktop"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma-browser-integration
 version=6.7.5

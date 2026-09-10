@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Portable subtitle renderer for the ASS/SSA (Advanced Substation Alpha/Substation Alpha) subtitle format"
 homepage="https://github.com/libass/libass/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libass
 version=0.17.5

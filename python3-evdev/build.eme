@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python bindings for the Linux input subsystem"
 homepage="https://github.com/gvalkov/python-evdev"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-evdev
 version=2.0.0

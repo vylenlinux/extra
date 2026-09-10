@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Adds communication between KDE and your smartphone"
 homepage="https://kdeconnect.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kdeconnect
 version=26.08.1

@@ -1,6 +1,6 @@
 description="System activated daemon that maps devices to color profiles"
 homepage="https://www.freedesktop.org/software/colord"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=colord
 version=1.4.8

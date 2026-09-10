@@ -1,6 +1,6 @@
 description="Tools for accessing and converting various ebook file formats"
 homepage="http://ebook-tools.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ebook-tools
 version=0.2.2

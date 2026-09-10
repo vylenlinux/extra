@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt module and API for defining 3D content in Qt Quick"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-quick3d
 version=6.11.2

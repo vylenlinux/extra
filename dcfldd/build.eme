@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="DCFL (DoD Computer Forensics Lab) dd replacement with hashing"
 homepage="https://github.com/resurrecting-open-source-projects/dcfldd/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dcfldd
 version=1.9.3

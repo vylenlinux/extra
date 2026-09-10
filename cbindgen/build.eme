@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A tool for generating C bindings for Rust code"
 homepage="https://github.com/eqrion/cbindgen"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cbindgen
 version=0.29.4

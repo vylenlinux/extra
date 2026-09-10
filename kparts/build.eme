@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Plugin framework for user interface components"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kparts
 version=6.30.0

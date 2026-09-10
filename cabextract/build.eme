@@ -1,6 +1,6 @@
 description="A program to extract Microsoft cabinet (.CAB) files"
 homepage="https://cabextract.org.uk"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cabextract
 version=1.11

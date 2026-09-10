@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Wayland compositor for xfce4"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://gitlab.xfce.org/xfce/xfwl4"
 
 name=xfwl4

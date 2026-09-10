@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C++ Library for commandline flag processing"
 homepage="https://github.com/schuhschuh/gflags"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gflags
 version=2.3.1

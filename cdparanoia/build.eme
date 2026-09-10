@@ -1,6 +1,6 @@
 description="CD audio extraction tool"
 homepage="https://www.xiph.org/paranoia/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cdparanoia
 version=10.2

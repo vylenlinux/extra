@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="API and commands for processing SPIR-V modules"
 homepage="https://github.com/KhronosGroup/spirv-tools"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spirv-tools
 version=2026.3

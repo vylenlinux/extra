@@ -1,6 +1,6 @@
 description="suckless status monitor for window managers that use WM_NAME or stdin to fill the status bar"
 homepage="https://tools.suckless.org/slstatus/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=slstatus
 version=1.1

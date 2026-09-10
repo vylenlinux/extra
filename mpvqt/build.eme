@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A libmpv wrapper for QtQuick2 and QML"
 homepage="https://invent.kde.org/libraries/mpvqt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpvqt
 version=1.2.0

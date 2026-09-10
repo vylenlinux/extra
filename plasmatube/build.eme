@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Kirigami YouTube video player based on QtMultimedia and youtube-dl"
 homepage="https://apps.kde.org/plasmatube/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasmatube
 version=26.08.1

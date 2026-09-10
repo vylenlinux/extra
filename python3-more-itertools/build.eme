@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="More routines for operating on iterables, beyond itertools"
 homepage="https://github.com/more-itertools/more-itertools"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-more-itertools
 version=11.1.0

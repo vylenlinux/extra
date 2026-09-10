@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Chrpath modify the dynamic library load path (rpath and runpath) of compiled programs and libraries"
 homepage="https://codeberg.org/pere/chrpath"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=chrpath
 version=0.18

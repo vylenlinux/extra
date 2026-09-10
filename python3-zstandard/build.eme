@@ -1,6 +1,6 @@
 description="Python bindings to the Zstandard (zstd) compression library"
 homepage="https://github.com/indygreg/python-zstandard"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-zstandard
 version=0.25.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A library that allows developers to access PolicyKit API with a nice Qt-style API"
 homepage="https://www.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=polkit-qt-1
 version=0.201.1

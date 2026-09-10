@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Network Time Protocol reference implementation"
 homepage="https://www.ntp.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ntp
 version=4.2.8p18

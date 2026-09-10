@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a standard for creating app stores across distributions"
 homepage="https://www.freedesktop.org/wiki/Distributions/AppStream/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=appstream
 version=1.2.0

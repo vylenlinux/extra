@@ -1,6 +1,6 @@
 description="Create an X cursor file from PNG images"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xcursorgen
 version=1.0.9

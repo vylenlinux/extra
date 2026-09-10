@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Control center to configure your Plasma Desktop"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=systemsettings
 version=6.7.5

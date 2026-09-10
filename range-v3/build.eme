@@ -1,6 +1,6 @@
 description="Experimental range library for C++11/14/17"
 homepage="https://github.com/ericniebler/range-v3"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=range-v3
 version=0.12.0

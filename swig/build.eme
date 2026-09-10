@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Generate scripting interfaces to C/C++ code"
 homepage="http://www.swig.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swig
 version=4.5.1

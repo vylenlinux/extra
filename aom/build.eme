@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="AV1 Codec Library"
 homepage="https://aomedia.googlesource.com/aom"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aom
 version=3.15.0

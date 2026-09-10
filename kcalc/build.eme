@@ -1,6 +1,6 @@
 description="KDE scientific calculator"
 homepage="https://apps.kde.org/filelight/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcalc
 version=26.08.1

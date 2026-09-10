@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A simple X11 menu intended to be use with openbox and tint2"
 homepage="https://www.github.com/johanmalm/jgmenu"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jgmenu
 version=4.6.0

@@ -1,6 +1,6 @@
 description="Query configuration information of DRI drivers"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdriinfo
 version=1.0.8

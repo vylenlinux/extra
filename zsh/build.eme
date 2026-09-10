@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A very advanced and programmable command interpreter (shell) for UNIX"
 homepage="http://www.zsh.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zsh
 version=5.9.2

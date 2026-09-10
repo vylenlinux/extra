@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="File::ShareDir::Install - Install read-only data files from a distribution"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://search.cpan.org/dist/File-ShareDir-Install"
 
 name=perl-file-sharedir-install

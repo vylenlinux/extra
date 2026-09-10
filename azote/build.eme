@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Wallpaper & color manager for wlroots-based compositors and some X11 WMs"
 homepage="https://github.com/nwg-piotr/azote"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=azote
 version=1.16.0

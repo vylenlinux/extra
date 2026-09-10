@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Tool for simulating superuser privileges"
 homepage="https://wiki.debian.org/FakeRoot"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fakeroot
 version=2.1.4

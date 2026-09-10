@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A family of player software for a certain json-based file format for describing 2d vector graphics animations"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-lottie
 version=6.11.2

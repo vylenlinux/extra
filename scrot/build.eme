@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple command-line screenshot utility for X"
 homepage="https://github.com/resurrecting-open-source-projects/scrot"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=scrot
 version=2.0.0

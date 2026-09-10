@@ -1,6 +1,6 @@
 description="LXQt privilege program."
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-sudo
 version=2.4.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A C++ library to decode QRCode"
 homepage="https://github.com/nu-book/zxing-cpp"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zxing-cpp
 version=3.1.1

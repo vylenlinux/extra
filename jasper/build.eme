@@ -1,6 +1,6 @@
 description="Open-source initiative to provide a free software-based reference implementation of the JPEG-2000 codec"
 homepage="https://www.ece.uvic.ca/~frodo/jasper/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jasper
 version=4.2.9

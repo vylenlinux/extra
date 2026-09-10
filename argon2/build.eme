@@ -1,6 +1,6 @@
 description="A password-hashing function (reference C implementation)"
 homepage="https://github.com/P-H-C/phc-winner-argon2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=argon2
 version=20190702

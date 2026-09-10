@@ -1,6 +1,6 @@
 description="Collection of libraries providing APIs to netlink protocol based Linux kernel interfaces"
 homepage="https://github.com/thom311/libnl/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libnl
 version=3.12.0

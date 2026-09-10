@@ -1,6 +1,6 @@
 description="Free software libraries written using the Qt framework"
 homepage="https://github.com/steveire/grantlee"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grantlee
 version=5.3.1

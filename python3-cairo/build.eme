@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python3 bindings to Cairo"
 homepage="https://pycairo.readthedocs.io/en/latest/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-cairo
 version=1.29.1

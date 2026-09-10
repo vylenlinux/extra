@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Portable org.freedesktop.timedate1 service for non-systemd Linux"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/NeuroMarshal/timedated-shim"
 
 name=timedated-shim

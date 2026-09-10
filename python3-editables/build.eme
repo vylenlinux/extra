@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python library for creating editable wheels"
 homepage="https://github.com/pfmoore/editables"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-editables
 version=0.6

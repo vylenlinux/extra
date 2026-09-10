@@ -1,6 +1,6 @@
 description="Setuptools extension for CalVer package versions"
 homepage="https://github.com/di/calver"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-calver
 version=2025.10.20

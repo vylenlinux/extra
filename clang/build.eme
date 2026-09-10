@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Collection of modular and reusable compiler and toolchain technologies"
 homepage="https://clang.llvm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=clang
 version=23.1.1

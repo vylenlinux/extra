@@ -1,6 +1,6 @@
 description="A collection of user-contributed scripts for sway"
 homepage="https://github.com/OctopusET/sway-contrib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sway-contrib
 version=1.11

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Libraries and daemons to implement Contact Management in Akonadi"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=akonadi-contacts
 version=26.08.1

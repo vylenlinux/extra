@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Graphics library for fast file loading, saving, rendering and manipulation"
 homepage="https://sourceforge.net/projects/enlightenment/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=imlib2
 version=1.12.7

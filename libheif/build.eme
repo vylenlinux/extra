@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="libheif is an HEIF and AVIF file format decoder and encoder."
 homepage="https://github.com/strukturag/libheif/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libheif
 version=1.23.4

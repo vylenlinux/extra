@@ -1,6 +1,6 @@
 description="A file manager that emulates Norton Commander"
 homepage="https://midnight-commander.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mc
 version=4.8.33

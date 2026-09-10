@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python syntax highlighter"
 homepage="https://pygments.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pygments
 version=2.21.0

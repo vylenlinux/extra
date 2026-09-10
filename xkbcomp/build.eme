@@ -1,6 +1,6 @@
 description="X Keyboard description compiler"
 homepage="https://xorg.freedesktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xkbcomp
 version=1.5.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Heavily optimized library for DEFLATE/zlib/gzip compression and decompression"
 homepage="https://github.com/ebiggers/libdeflate"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdeflate
 version=1.26

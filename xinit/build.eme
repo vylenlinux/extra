@@ -1,6 +1,6 @@
 description="Script to start the xserver"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xinit
 version=1.4.4

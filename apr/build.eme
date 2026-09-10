@@ -1,6 +1,6 @@
 description="Supporting library for the Apache web server"
 homepage="https://apr.apache.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=apr
 version=1.7.6

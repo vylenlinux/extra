@@ -1,6 +1,6 @@
 description="Command line interface to the freedesktop.org trashcan."
 homepage="https://github.com/andreafrancia/trash-cli"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=trash-cli
 version=0.24.5.26

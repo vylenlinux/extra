@@ -1,6 +1,6 @@
 description="Another Main Loop"
 homepage="https://github.com/any1/aml"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aml
 version=1.0.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python 3.x SIP bindings for C and C++ libraries (PyQt5 version)"
 homepage="https://www.riverbankcomputing.com/software/sip/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sip-pyqt5
 version=12.19.0

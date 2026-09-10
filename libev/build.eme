@@ -1,6 +1,6 @@
 description="A full-featured and high-performance event loop"
 homepage="https://software.schmorp.de/pkg/libev.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libev
 version=4.33

@@ -1,6 +1,6 @@
 description="International Components for Unicode library"
 homepage="https://icu.unicode.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=icu
 version=78.3

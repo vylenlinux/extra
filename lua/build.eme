@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Light-weight programming language designed for extending applications"
 homepage="https://www.lua.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lua
 version=5.5.1

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Collection of GSettings schemas for settings shared by various components of a GNOME Desktop"
 homepage="https://www.gnome.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gsettings-desktop-schemas
 version=50.1

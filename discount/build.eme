@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C implementation of John Gruber's Markdown markup language"
 homepage="https://github.com/Orc/discount"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=discount
 version=3.0.2.0

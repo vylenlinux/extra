@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An arbitrary precision numeric processing language"
 homepage="https://www.gnu.org/software/bc/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 # shellcheck disable=SC2209
 name=bc

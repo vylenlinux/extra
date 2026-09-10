@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Multi-protocol, multi-mailbox mail watcher for the Xfce4 panel"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-mailwatch-plugin
 version=1.4.0

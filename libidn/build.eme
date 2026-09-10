@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Implementation of the Stringprep, Punycode and IDNA specifications"
 homepage="https://www.gnu.org/software/libidn/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libidn
 version=1.44

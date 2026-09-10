@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Poetry PEP 517 Build Backend & Core Utilities"
 homepage="https://github.com/python-poetry/poetry-core"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-poetry-core
 version=2.4.1

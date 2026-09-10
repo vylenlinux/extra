@@ -1,6 +1,6 @@
 description="X11 client-side library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxcb"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxcb
 version=1.17.0

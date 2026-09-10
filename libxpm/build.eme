@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="X11 pixmap library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxpm
 version=3.5.19

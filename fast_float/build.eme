@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Fast and exact implementation of the C++ from_chars functions for number types"
 homepage="https://github.com/fastfloat/fast_float"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fast_float
 version=8.2.10

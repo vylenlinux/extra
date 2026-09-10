@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Session manager for Xfce"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-session
 version=4.20.4

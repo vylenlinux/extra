@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="System's hardware information of your BIOS according to SMBIOS/DMI standard."
 homepage="https://www.nongnu.org/dmidecode/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dmidecode
 version=3.7

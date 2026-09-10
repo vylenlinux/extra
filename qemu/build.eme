@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Virtualization for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V)"
 homepage="https://www.qemu.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qemu
 version=11.1.1

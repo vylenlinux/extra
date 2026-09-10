@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library to assist in handling user identities"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kidentitymanagement
 version=26.08.1

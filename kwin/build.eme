@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Easy to use, but flexible, X Window Manager and Wayland Compositor"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwin
 version=6.7.5

@@ -1,6 +1,6 @@
 description="A program for identifying or deleting duplicate files residing within specified directories"
 homepage="https://github.com/adrianlopezroche/fdupes"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fdupes
 version=2.4.0

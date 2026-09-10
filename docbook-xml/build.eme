@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Document type definitions for verification of XML data files against the DocBook rule set"
 homepage="https://www.oasis-open.org/docbook/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=docbook-xml
 version=4.5

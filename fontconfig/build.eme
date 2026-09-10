@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A library and support programs used for configuring and customizing font access"
 homepage="https://www.freedesktop.org/wiki/Software/fontconfig/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fontconfig
 version=2.18.3

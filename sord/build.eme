@@ -1,6 +1,6 @@
 description="sord lihgtweight C library for sorting RDF statements in memory "
 homepage="https://github.com/drobilla/sord"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sord
 version=0.16.22

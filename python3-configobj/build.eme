@@ -1,6 +1,6 @@
 description="Python 3+ compatible port of the configobj library"
 homepage="https://github.com/DiffSK/configobj"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-configobj
 version=5.0.9

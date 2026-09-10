@@ -1,6 +1,6 @@
 description="A free, open source, and cross-platform media player"
 homepage="https://mpv.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpv
 version=0.41.0

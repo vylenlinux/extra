@@ -1,6 +1,6 @@
 description="A C library for scfg"
 homepage="https://git.sr.ht/~emersion/libscfg"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libscfg
 version=0.2.0

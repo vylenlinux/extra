@@ -1,6 +1,6 @@
 description="Integer to Roman numerals converter"
 homepage="https://pypi.org/project/roman-numerals"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-roman-numerals
 version=4.1.0

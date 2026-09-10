@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A set of free peer-reviewed portable C++ source libraries"
 homepage="https://www.boost.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=boost
 version=1.92.0

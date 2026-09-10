@@ -1,6 +1,6 @@
 description="Sanitize/validate strings in filenames/file-paths/etc"
 homepage="https://github.com/thombashi/pathvalidate"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pathvalidate
 version=3.3.1

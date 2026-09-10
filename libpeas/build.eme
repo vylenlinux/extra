@@ -1,6 +1,6 @@
 description="GObject based plugins engine"
 homepage="https://wiki.gnome.org/Projects/Libpeas"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpeas
 version=2.2.1

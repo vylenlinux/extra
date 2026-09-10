@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library which provides access to hardware accelerated video processing"
 homepage="https://01.org/linuxmedia/vaapi"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libva
 version=2.24.1

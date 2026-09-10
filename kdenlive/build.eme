@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A non-linear video editor for Linux using the MLT video framework"
 homepage="https://apps.kde.org/kdenlive/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kdenlive
 version=26.08.1

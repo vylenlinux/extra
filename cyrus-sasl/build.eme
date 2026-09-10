@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple Authentication and Security Layer"
 homepage="https://www.cyrusimap.org/sasl/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cyrus-sasl
 version=2.1.28

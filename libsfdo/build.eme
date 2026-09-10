@@ -1,6 +1,6 @@
 description="Collection of libraries which implement some of the freedesktop.org specifications"
 homepage="https://gitlab.freedesktop.org/vyivel/libsfdo"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsfdo
 version=0.1.4

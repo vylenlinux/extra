@@ -1,6 +1,6 @@
 description="Library providing a standalone version of the X server implementation of the VESA CVT standard timing modelines generator"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxcvt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxcvt
 version=0.1.3

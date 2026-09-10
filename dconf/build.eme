@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Configuration database system"
 homepage="https://wiki.gnome.org/Projects/dconf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dconf
 version=0.40.0

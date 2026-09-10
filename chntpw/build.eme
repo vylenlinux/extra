@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Offline NT Password Editor - reset passwords in a Windows NT SAM user database file"
 homepage="https://pogostick.net/~pnh/ntpasswd/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=chntpw
 version=140201

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A CLI tool to uncompress Apple's compressed DMG files to the HFS+ IMG format"
 homepage="http://vu1tur.eu.org/tools/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dmg2img
 version=1.6.7

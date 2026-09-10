@@ -1,6 +1,6 @@
 description="Library for the dynamic creation of images"
 homepage="https://github.com/libgd/libgd"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgd
 version=2.3.3

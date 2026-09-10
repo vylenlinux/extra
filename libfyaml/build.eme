@@ -1,6 +1,6 @@
 description="Fully feature complete YAML parser and emitter"
 homepage="https://pantoniou.github.io/libfyaml/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfyaml
 version=0.9.6

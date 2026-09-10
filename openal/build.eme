@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="OpenAL Soft is a software implementation of the OpenAL 3D audio API"
 homepage="https://github.com/kcat/openal-soft"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openal
 version=1.25.2

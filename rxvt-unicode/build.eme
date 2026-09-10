@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Unicode enabled rxvt-clone terminal emulator (urxvt)"
 homepage="http://software.schmorp.de/pkg/rxvt-unicode.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rxvt-unicode
 version=9.31

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="User level public file sharing via WebDAV for MATE"
 homepage="https://mate-desktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-user-share
 version=1.28.0

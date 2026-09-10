@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://heasarc.gsfc.nasa.gov/fitsio/"
 
 name=cfitsio

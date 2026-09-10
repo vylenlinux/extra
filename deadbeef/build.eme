@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A GTK+ audio player for GNU/Linux"
 homepage="https://deadbeef.sourceforge.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=deadbeef
 version=1.10.3

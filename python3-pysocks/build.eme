@@ -1,6 +1,6 @@
 description="SOCKS4, SOCKS5 or HTTP proxy (Anorov fork PySocks replaces socksipy)"
 homepage="https://github.com/Anorov/PySocks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pysocks
 version=1.7.1

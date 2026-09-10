@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt wrapper for NetworkManager DBus API"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=networkmanager-qt
 version=6.30.0

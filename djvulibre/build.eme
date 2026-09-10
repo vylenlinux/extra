@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Library for reading DjVu files"
 homepage="https://djvu.sourceforge.net"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=djvulibre
 version=3.5.30

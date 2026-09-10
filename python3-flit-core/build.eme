@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simplified packaging of Python modules"
 homepage="https://github.com/takluyver/flit"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-flit-core
 version=4.0.2

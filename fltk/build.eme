@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Graphical user interface toolkit for X"
 homepage="https://www.fltk.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fltk
 version=1.4.5

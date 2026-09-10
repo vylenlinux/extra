@@ -1,6 +1,6 @@
 description="Implementation of the XDG Sound Theme and Name Specifications, for generating event sounds on free desktops"
 homepage="https://0pointer.net/lennart/projects/libcanberra/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcanberra
 version=0.30

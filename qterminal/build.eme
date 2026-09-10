@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A lightweight Qt-based terminal emulator"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qterminal
 version=2.4.0

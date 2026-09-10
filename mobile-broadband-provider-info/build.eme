@@ -1,6 +1,6 @@
 description="APN configuration presets for mobile broadband connections"
 homepage="https://gitlab.gnome.org/GNOME/mobile-broadband-provider-info"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mobile-broadband-provider-info
 version=20251101

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A lightweight TUI (ncurses-like) display manager for Linux and BSD."
 homepage="https://codeberg.org/fairyglade/ly"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ly
 version=1.4.1

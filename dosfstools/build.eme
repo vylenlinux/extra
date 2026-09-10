@@ -1,6 +1,6 @@
 description="Various utilities for use with the FAT family of file systems"
 homepage="https://github.com/dosfstools/dosfstools"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dosfstools
 version=4.2

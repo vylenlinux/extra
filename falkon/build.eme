@@ -1,6 +1,6 @@
 description="Cross-platform QtWebEngine browser"
 homepage="https://www.falkon.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=falkon
 version=26.08.1

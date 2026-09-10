@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Enhanced seccomp library"
 homepage="https://github.com/seccomp/libseccomp"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libseccomp
 version=2.6.1

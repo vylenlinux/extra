@@ -1,6 +1,6 @@
 description="Utils & libs to convert from/to X-Face format."
 homepage="http://ftp.xemacs.org/pub/xemacs/aux/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=compface
 version=1.5.2

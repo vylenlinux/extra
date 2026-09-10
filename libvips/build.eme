@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A fast image processing library with low memory needs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://libvips.github.io/libvips/"
 
 name=libvips

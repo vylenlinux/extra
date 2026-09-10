@@ -1,6 +1,6 @@
 description="Library facilitates the common operations with sizes in bytes"
 homepage="https://github.com/rhinstaller/libbytesize"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libbytesize
 version=2.12

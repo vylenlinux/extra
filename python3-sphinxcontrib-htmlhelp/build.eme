@@ -1,6 +1,6 @@
 description="sphinx extension which renders HTML help files"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-htmlhelp/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-htmlhelp
 _name=sphinxcontrib_htmlhelp

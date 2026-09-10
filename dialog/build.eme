@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A tool to display dialog boxes from shell scripts"
 homepage="https://invisible-island.net/dialog/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dialog
 version=1.3_20260721

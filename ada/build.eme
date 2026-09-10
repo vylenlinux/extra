@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="WHATWG-compliant and fast URL parser written in modern C++"
 homepage="https://github.com/ada-url/ada"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ada
 version=4.0.0

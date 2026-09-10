@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Create documentation from DocBook"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kdoctools
 version=6.30.0

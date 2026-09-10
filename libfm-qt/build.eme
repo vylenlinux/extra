@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Core library of PCManFM-Qt (Qt binding for libfm)"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfm-qt
 version=2.4.0

@@ -1,6 +1,6 @@
 description="KDE PIM library providing Gravatar support"
 homepage="https://kontact.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgravatar
 version=26.08.1

@@ -1,6 +1,6 @@
 description="C++ library for the Debug Adapter Protocol"
 homepage="https://github.com/google/cppdap"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cppdap
 version=1.58.0

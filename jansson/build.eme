@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="C library for encoding, decoding and manipulating JSON data"
 homepage="https://www.digip.org/jansson/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jansson
 version=2.15.1

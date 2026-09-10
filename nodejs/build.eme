@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="JavaScript runtime built on Chrome's V8 JavaScript engine"
 homepage="https://nodejs.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nodejs
 version=26.8.2

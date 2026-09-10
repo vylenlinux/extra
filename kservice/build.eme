@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Allows to query information about installed applications and their associated file types"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kservice
 version=6.30.0

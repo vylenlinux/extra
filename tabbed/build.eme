@@ -1,6 +1,6 @@
 description="Simple generic tabbed fronted to xembed aware applications"
 homepage="https://tools.suckless.org/tabbed"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tabbed
 version=0.9

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Tools based on KDE Frameworks 5 to better interact with the system"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kde-cli-tools
 version=6.7.5

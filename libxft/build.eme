@@ -1,6 +1,6 @@
 description="FreeType-based font drawing library for X"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxft
 version=2.3.9

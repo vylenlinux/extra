@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A Python 3.x interface to libcurl"
 homepage="http://pycurl.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycurl
 version=7.47.0

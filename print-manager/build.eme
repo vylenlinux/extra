@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A small, relatively self-contained set of components integrated with Plasma System Settings for managing CUPS printer configurations"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=print-manager
 version=6.7.5

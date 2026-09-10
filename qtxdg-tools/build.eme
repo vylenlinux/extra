@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="libqtxdg user tools"
 homepage="https://github.com/lxqt/qtxdg-tools"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qtxdg-tools
 version=4.4.0

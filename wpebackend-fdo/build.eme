@@ -1,6 +1,6 @@
 description="freedesktop.org backend for WPE WebKit"
 homepage="https://wpewebkit.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wpebackend-fdo
 version=1.16.1

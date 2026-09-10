@@ -1,6 +1,6 @@
 description="Server access control program for X"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xhost
 version=1.0.10

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="ANSI color to HTML converter"
 homepage="https://github.com/theZiz/aha"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aha
 version=0.5.1

@@ -1,6 +1,6 @@
 description="sphinx extension which renders display math in HTML via JavaScript"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-jsmath/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-jsmath
 version=1.0.1

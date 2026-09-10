@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Icon theme for GTK+ 3 and GTK 4 applications."
 homepage="https://gitlab.gnome.org/GNOME/adwaita-icon-theme/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=adwaita-icon-theme
 version=50.0

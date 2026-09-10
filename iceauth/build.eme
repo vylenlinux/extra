@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="ICE authority file utility"
 homepage="https://gitlab.freedesktop.org/xorg/app/iceauth"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iceauth
 version=1.0.11

@@ -1,6 +1,6 @@
 description="Utility to create self-extracting packages"
 homepage="http://megastep.org/makeself"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=makeself
 version=2.7.1

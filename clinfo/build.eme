@@ -1,6 +1,6 @@
 description="Simple OpenCL application that enumerates all available platform and device properties"
 homepage="https://github.com/Oblomov/clinfo"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=clinfo
 version=3.0.25.02.14

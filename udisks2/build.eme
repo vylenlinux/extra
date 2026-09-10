@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Daemon, tools and libraries to access and manipulate disks and storage devices"
 homepage="https://www.freedesktop.org/wiki/Software/udisks/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=udisks2
 version=2.11.2

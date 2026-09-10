@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Firmware files for Linux"
 homepage="https://git.kernel.org/pub/scm/linux/kernel/git/firmware"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=linux-firmware
 version=20260910

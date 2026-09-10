@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Operating system and container binary deployment and upgrades"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://ostreedev.github.io/ostree/"
 
 name=ostree

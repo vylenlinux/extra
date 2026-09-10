@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The LXQt session"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-wayland-session
 version=0.4.1

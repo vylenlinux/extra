@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Curses-based user interface library"
 homepage="https://urwid.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-urwid
 version=4.1.2

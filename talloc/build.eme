@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Hierarchical pool based memory allocator with destructors"
 homepage="https://talloc.samba.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=talloc
 version=2.5.0

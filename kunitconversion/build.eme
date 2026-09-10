@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides functions to convert values in different physical units"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kunitconversion
 version=6.30.0

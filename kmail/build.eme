@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="KMail is a state-of-the-art email client"
 homepage="https://apps.kde.org/kmail2/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kmail
 version=26.08.1

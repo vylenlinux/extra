@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A collection of freely re-usable Autoconf macros"
 homepage="https://www.gnu.org/software/autoconf-archive/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=autoconf-archive
 version=2024.10.16

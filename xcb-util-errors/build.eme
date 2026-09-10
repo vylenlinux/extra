@@ -1,6 +1,6 @@
 description="XCB errors library "
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xcb-util-errors
 version=1.0.1

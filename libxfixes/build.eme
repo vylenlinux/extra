@@ -1,6 +1,6 @@
 description="X11 miscellaneous 'fixes' extension library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxfixes
 version=6.0.2

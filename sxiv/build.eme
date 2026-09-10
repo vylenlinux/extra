@@ -1,6 +1,6 @@
 description="Simple X Image Viewer"
 homepage="https://github.com/muennich/sxiv"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sxiv
 version=26

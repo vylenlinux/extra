@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Simple man page generator for POSIX systems written in C99"
 homepage="https://git.sr.ht/~sircmpwn/scdoc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=scdoc
 version=1.11.5

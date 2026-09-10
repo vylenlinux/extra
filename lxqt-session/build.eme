@@ -1,6 +1,6 @@
 description="The LXQt session"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-session
 version=2.4.0

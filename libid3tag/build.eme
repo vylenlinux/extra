@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="ID3 tag manipulation library"
 homepage="https://codeberg.org/tenacityteam/libid3tag"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libid3tag
 version=0.16.4

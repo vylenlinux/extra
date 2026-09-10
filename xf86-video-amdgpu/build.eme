@@ -1,6 +1,6 @@
 description="X.Org Video Driver for newer AMD Radeon video cards starting from Volcanic Islands"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xf86-video-amdgpu
 version=25.0.0

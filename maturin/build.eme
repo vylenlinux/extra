@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Build and publish crates with pyo3, rust-cpython and cffi bindings"
 homepage="https://github.com/PyO3/maturin"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=maturin
 version=1.15.0

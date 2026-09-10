@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Tools for management of the osinfo database"
 homepage="https://libosinfo.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=osinfo-db-tools
 version=1.12.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Set of tools for processing plaintext docs into formats such as HTML, XML, or LaTeX"
 homepage="https://docutils.sourceforge.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-docutils
 version=0.23

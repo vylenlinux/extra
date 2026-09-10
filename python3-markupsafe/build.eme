@@ -1,6 +1,6 @@
 description="Python module that implements a XML/HTML/XHTML Markup safe string"
 homepage="https://pypi.python.org/pypi/MarkupSafe"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-markupsafe
 version=3.0.3

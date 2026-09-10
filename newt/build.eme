@@ -1,6 +1,6 @@
 description="Not Erik's Windowing Toolkit - text mode windowing with slang"
 homepage="https://pagure.io/newt"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=newt
 version=0.52.25

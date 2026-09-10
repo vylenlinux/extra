@@ -1,6 +1,6 @@
 description="A simple program which provides a run program window"
 homepage="https://github.com/wdlkmpx/gmrun"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gmrun
 version=1.4w

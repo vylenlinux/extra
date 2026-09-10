@@ -1,6 +1,6 @@
 description="C library for processing UTF-8 encoded Unicode strings"
 homepage="https://github.com/JuliaStrings"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=utf8proc
 version=2.11.3

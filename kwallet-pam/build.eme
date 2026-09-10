@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="PAM Integration with KWallet - Unlock KWallet when you login"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwallet-pam
 version=6.7.5

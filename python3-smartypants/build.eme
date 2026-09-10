@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Python with the SmartyPants"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/justinmayer/smartypants.py"
 
 name=python3-smartypants

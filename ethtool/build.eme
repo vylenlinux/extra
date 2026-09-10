@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Utility for controlling network drivers and hardware"
 homepage="https://www.kernel.org/pub/software/network/ethtool/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ethtool
 version=7.1

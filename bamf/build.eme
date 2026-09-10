@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Application matching framework"
 homepage="https://launchpad.net/bamf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bamf
 version=0.5.6

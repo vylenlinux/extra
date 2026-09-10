@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="RSS/Atom parser library"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=syndication
 version=6.30.0

@@ -1,6 +1,6 @@
 description="OpenGL Mathematics"
 homepage="https://github.com/g-truc/glm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glm
 version=1.0.3

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A webcam recorder from KDE community"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://apps.kde.org/kamoso/"
 
 name=kamoso

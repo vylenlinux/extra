@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Utilities for synchronizing large file archives over a network"
 homepage="https://rsync.samba.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rsync
 version=3.5.0

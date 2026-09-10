@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An image scanning library"
 homepage="https://kdeconnect.kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libksane
 version=26.08.1

@@ -1,6 +1,6 @@
 description="Utility for easily changing settings in configuration files "
 homepage="https://setconf.roboticoverlords.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=setconf
 version=0.7.7

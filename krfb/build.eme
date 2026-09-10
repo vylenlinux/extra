@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Desktop Sharing"
 homepage="https://apps.kde.org/krfb/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=krfb
 version=26.08.1

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Cross-platform application framework that is widely used for developing application"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt5
 version=5.15.19

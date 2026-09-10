@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Administration and debugging tools for the jfs file system"
 homepage="https://jfs.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jfsutils
 version=1.1.15

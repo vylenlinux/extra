@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Access to the windowing system"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwindowsystem
 version=6.30.0

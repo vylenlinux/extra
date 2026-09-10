@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A collection of routines used to create PNG format graphics files"
 homepage="http://www.libpng.org/pub/png/libpng.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpng
 version=1.6.58

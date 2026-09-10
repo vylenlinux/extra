@@ -1,6 +1,6 @@
 description="DBus library in Python 3"
 homepage="https://github.com/rhinstaller/dasbus"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-dasbus
 version=1.7

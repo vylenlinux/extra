@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="OpenType text shaping engine (ICU integration)"
 homepage="https://harfbuzz.github.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=harfbuzz-icu
 version=14.4.0

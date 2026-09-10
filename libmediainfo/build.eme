@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Shared library for mediainfo"
 homepage="https://mediaarea.net"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmediainfo
 version=26.05

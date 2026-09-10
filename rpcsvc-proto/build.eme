@@ -1,6 +1,6 @@
 description="rpcsvc protocol definitions from glibc"
 homepage="https://github.com/thkukuk/rpcsvc-proto"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rpcsvc-proto
 version=1.4.4

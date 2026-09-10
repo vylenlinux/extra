@@ -1,6 +1,6 @@
 description="Provides useful functions commonly found on BSD systems like strlcpy()"
 homepage="https://libbsd.freedesktop.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libbsd
 version=0.12.2

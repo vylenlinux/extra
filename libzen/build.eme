@@ -1,6 +1,6 @@
 description="Shared library for libmediainfo and mediainfo"
 homepage="https://mediaarea.net"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libzen
 version=0.4.41

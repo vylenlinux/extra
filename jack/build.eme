@@ -1,6 +1,6 @@
 description="A low-latency audio server"
 homepage="https://github.com/jackaudio/jack2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jack
 version=1.9.22

@@ -1,6 +1,6 @@
 description="A helper for screenshots within sway"
 homepage="https://github.com/OctopusET/sway-contrib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grimshot
 version=1.11

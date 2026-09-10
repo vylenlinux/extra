@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Graceful handling of application crashes"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcrash
 version=6.30.0

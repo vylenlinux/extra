@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Read metadata from Python packages"
 homepage="https://pypi.org/project/importlib-metadata/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-importlib_metadata
 version=9.0.1

@@ -1,6 +1,6 @@
 description="PyQt-builder is the PEP 517 compliant build system for PyQt"
 homepage="https://pypi.org/project/PyQt-builder"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyqt-builder
 version=1.19.1

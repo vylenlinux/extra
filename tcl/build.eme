@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Powerful, easy-to-learn dynamic programming language"
 homepage="http://tcl.sourceforge.net/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tcl
 version=9.0.4

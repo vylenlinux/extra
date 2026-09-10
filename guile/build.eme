@@ -1,6 +1,6 @@
 description="GNU Project's extension language library"
 homepage="https://www.gnu.org/software/guile/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=guile
 version=3.0.11

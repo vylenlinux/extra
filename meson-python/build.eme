@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Meson PEP 517 Python build backend"
 homepage="https://github.com/mesonbuild/meson-python"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=meson-python
 version=0.21.0

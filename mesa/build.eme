@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Open-source OpenGL drivers"
 homepage="https://www.mesa3d.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mesa
 version=26.2.2

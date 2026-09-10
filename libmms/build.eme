@@ -1,6 +1,6 @@
 description="MMS stream protocol library "
 homepage="https://sourceforge.net/projects/libmms/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmms
 version=0.6.4

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Primitive command line interface to RandR extension"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xrandr
 version=1.5.4

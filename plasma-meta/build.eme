@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="KDE Plasma 6 meta port"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma-meta
 version=6.7.5

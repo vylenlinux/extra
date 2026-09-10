@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Ncurses hex editor that can show differences"
 homepage="https://www.dettus.net/dhex"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dhex
 version=0.69

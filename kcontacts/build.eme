@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Address book API for KDE"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcontacts
 version=6.30.0

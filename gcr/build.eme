@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Libraries used for displaying certificates and accessing key stores"
 homepage="https://gitlab.gnome.org/GNOME/gcr"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gcr
 version=4.4.0.1

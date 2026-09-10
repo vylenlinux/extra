@@ -1,6 +1,6 @@
 description="Pulseaudio command-line mixer like amixer"
 homepage="https://github.com/cdemoulins/pamixer"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pamixer
 version=1.6

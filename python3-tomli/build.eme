@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A lil' TOML parser"
 homepage="https://github.com/hukkin/tomli"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-tomli
 version=2.4.1

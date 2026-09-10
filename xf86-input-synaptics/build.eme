@@ -1,6 +1,6 @@
 description="Synaptics driver for notebook touchpads"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xf86-input-synaptics
 version=1.10.0

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Documentation generator for GObject-based libraries"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://gnome.pages.gitlab.gnome.org/gi-docgen/"
 
 name=gi-docgen

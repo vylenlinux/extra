@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python module that implements hyperfast and lightweight templating for the Python platform"
 homepage="https://github.com/sqlalchemy/mako"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-mako
 version=1.4.1

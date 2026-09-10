@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The file indexing and file search framework for KDE Plasma"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=baloo
 version=6.30.0

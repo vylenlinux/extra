@@ -1,6 +1,6 @@
 description="Wallet management tool"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwalletmanager
 version=26.08.1

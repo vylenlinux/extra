@@ -1,6 +1,6 @@
 description="Dynamic menu library and client program inspired by dmenu with support for wayland compositors"
 homepage="https://github.com/Cloudef/bemenu/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bemenu
 version=0.6.23

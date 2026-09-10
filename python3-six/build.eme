@@ -1,6 +1,6 @@
 description="Python3 compatibility library"
 homepage="https://pypi.python.org/pypi/six/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-six
 version=1.17.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Powerful yet simple to use screenshot software"
 homepage="https://github.com/flameshot-org/flameshot"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=flameshot
 version=14.0.0

@@ -1,6 +1,6 @@
 description="Freedesktop.org menu spec-compliant desktop menus for LXDE"
 homepage="https://lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxmenu-data
 version=0.1.7

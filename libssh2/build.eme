@@ -1,6 +1,6 @@
 description="Client-side C library implementing the SSH2 protocol"
 homepage="https://www.libssh2.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libssh2
 version=1.11.1

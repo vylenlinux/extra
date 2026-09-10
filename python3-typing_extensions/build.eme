@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Backported and Experimental Type Hints for Python 3.5+"
 homepage="https://github.com/python/typing/tree/master/typing_extensions"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-typing_extensions
 version=4.16.0

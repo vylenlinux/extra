@@ -1,6 +1,6 @@
 description="S-Lang is a powerful interpreted language"
 homepage="https://www.jedsoft.org/slang/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=slang
 version=2.3.3

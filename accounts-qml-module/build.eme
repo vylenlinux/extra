@@ -1,6 +1,6 @@
 description="Expose the Online Accounts API to QML applications"
 homepage="https://gitlab.com/accounts-sso/accounts-qml-module"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=accounts-qml-module
 version=0.7

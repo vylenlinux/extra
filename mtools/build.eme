@@ -1,6 +1,6 @@
 description="A collection of utilities to access MS-DOS disks"
 homepage="https://www.gnu.org/software/mtools/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mtools
 version=4.0.49

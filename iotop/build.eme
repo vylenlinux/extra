@@ -1,6 +1,6 @@
 description="Top like program to display I/O load."
 homepage="https://github.com/Tomas-M"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iotop
 version=1.31

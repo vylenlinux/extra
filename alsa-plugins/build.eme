@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Plugins for various audio libraries and sound servers"
 homepage="https://www.alsa-project.org/wiki/Main_Page"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=alsa-plugins
 version=1.2.12

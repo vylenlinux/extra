@@ -1,6 +1,6 @@
 description="A command-line tool for generating regular expressions from user-provided input strings "
 homepage="https://github.com/pemistahl/grex"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grex
 version=1.4.6

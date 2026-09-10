@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Python bindings for libvirt"
 homepage="https://libvirt.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libvirt-python
 version=12.7.0

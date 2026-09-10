@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Geocoding library for Python"
 homepage="https://github.com/geopy/geopy"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-geopy
 version=2.5.0

@@ -1,6 +1,6 @@
 description="Minimalist command line interface to MPD"
 homepage="https://www.musicpd.org/clients/mpc/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpc
 version=0.35

@@ -1,6 +1,6 @@
 description="Simple color chooser written in GTK"
 homepage="https://www.hjdskes.nl/projects/gcolor3/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gcolor3
 version=2.4.0

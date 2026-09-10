@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Qt implementation of the DBusMenu specification that exposes menus via DBus"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdbusmenu-lxqt
 version=0.4.0

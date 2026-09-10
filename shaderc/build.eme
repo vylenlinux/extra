@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A collection of tools, libraries and tests for shader compilation"
 homepage="https://github.com/google/shaderc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=shaderc
 version=2026.3

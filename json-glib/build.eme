@@ -1,6 +1,6 @@
 description="library providing serialization and deserialization support for the JavaScript Object Notation (JSON) format"
 homepage="https://gnome.pages.gitlab.gnome.org/json-glib/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=json-glib
 version=1.10.8

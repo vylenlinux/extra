@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The core of the X Window system"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xorg-server
 version=21.1.24

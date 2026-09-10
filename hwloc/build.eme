@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Portable Hardware Locality is a portable abstraction of hierarchical architectures"
 homepage="https://www.open-mpi.org/projects/hwloc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hwloc
 version=2.14.0

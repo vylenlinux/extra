@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Extension for the Thunar file manager for enables automatic management of removable drives and media"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=thunar-volman
 version=4.20.0

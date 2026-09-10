@@ -1,6 +1,6 @@
 description="Standalone CSS2 parsing and manipulation library"
 homepage="https://gitlab.gnome.org/GNOME/libcroco"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcroco
 version=0.6.13

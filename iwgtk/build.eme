@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Lightweight GTK frontend for iwd (WiFi)"
 homepage="https://github.com/J-Lentz/iwgtk"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iwgtk
 version=0.9

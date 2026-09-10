@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Interactive process viewer"
 homepage="https://htop.dev/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=htop
 version=3.5.3

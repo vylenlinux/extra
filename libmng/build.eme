@@ -1,5 +1,5 @@
 description="Read and write Multiple-image Network Graphics (MNG)"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmng
 version=2.0.3

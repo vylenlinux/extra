@@ -1,6 +1,6 @@
 description="Brotli compression library"
 homepage="https://github.com/google/brotli"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=brotli
 version=1.2.0

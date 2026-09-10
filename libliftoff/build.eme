@@ -1,6 +1,6 @@
 description="Lightweight KMS plane library"
 homepage="https://gitlab.freedesktop.org/emersion/libliftoff"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libliftoff
 version=0.5.0

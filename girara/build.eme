@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="UI library that focuses on simplicity and minimalism"
 homepage="https://pwmt.org/projects/girara"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=girara
 version=2026.07.18

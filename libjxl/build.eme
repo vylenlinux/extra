@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="JPEG XL image format reference implementation"
 homepage="https://github.com/libjxl/libjxl"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libjxl
 version=0.12.0

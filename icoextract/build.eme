@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Icon extractor for Windows PE files (.exe/.dll) with optional thumbnailer functionality"
 homepage="https://github.com/jlu5/icoextract"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=icoextract
 version=0.3.0

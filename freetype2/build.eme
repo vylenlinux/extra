@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Font rasterization library"
 homepage="https://downloads.sourceforge.net/freetype"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freetype2
 version=2.14.3

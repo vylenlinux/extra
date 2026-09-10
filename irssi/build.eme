@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Modular text mode IRC client with Perl scripting"
 homepage="https://irssi.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=irssi
 version=1.4.5

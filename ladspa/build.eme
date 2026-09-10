@@ -1,6 +1,6 @@
 description="Linux Audio Developer's Simple Plugin API"
 homepage="https://www.ladspa.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ladspa
 version=1.17

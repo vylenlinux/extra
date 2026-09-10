@@ -1,6 +1,6 @@
 description="Freedesktop.org Hicolor icon theme"
 homepage="https://www.freedesktop.org/wiki/Software/icon-theme/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hicolor-icon-theme
 version=0.18

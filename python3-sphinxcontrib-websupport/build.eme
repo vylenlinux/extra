@@ -1,6 +1,6 @@
 description="Python API to easily integrate Sphinx documentation into web applications."
 homepage="https://github.com/sphinx-doc/sphinxcontrib-websupport/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-websupport
 version=2.0.0

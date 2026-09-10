@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Installation and loading of additional content (ex: scripts, images...) as packages"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kpackage
 version=6.30.0

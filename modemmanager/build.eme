@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Mobile broadband modem management service"
 homepage="https://www.freedesktop.org/wiki/Software/ModemManager/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=modemmanager
 version=1.24.2

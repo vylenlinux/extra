@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="LXQt system administration tool."
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-admin
 version=2.4.0

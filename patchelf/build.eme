@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A small utility to modify the dynamic linker and RPATH of ELF executables."
 homepage="https://github.com/Nixos/patchelf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=patchelf
 version=0.19.1

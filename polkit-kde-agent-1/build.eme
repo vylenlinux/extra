@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Daemon providing a Polkit authentication UI for Plasma"
 homepage="https://invent.kde.org/plasma/polkit-kde-agent-1"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=polkit-kde-agent-1
 version=6.7.5

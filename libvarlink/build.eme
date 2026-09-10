@@ -1,6 +1,6 @@
 description="Varlink C library and command line tool"
 homepage="https://github.com/varlink/libvarlink"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libvarlink
 version=24.0.1

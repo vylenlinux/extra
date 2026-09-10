@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Helps you find and install applications, games, and tools"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=discover
 version=6.7.5

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Lightweight NTP client and server"
 homepage="https://chrony-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=chrony
 version=4.9

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="filters to make caring about typography on the web a bit easier"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/justinmayer/typogrify"
 
 name=python3-typogrify

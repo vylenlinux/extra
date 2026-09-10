@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Free library for decoding ATSC A/52 (also known as AC-3) streams"
 homepage="https://git.adelielinux.org/community/a52dec/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=a52dec
 version=0.8.0

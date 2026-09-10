@@ -1,6 +1,6 @@
 description="nl80211 based CLI configuration utility for wireless devices"
 homepage="https://wireless.wiki.kernel.org/en/users/documentation/iw"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iw
 version=6.17

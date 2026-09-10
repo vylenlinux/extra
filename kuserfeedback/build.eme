@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Framework for collecting feedback from application users via telemetry and targeted surveys"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kuserfeedback
 version=6.30.0

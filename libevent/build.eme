@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Asynchronous event notification software library"
 homepage="https://libevent.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libevent
 version=2.1.13

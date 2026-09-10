@@ -1,6 +1,6 @@
 description="Utility libraries for XC Binding"
 homepage="https://xcb.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xcb-util
 version=0.4.1

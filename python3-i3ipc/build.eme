@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An improved Python library to control i3wm"
 homepage="https://github.com/altdesktop/i3ipc-python"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-i3ipc
 version=2.2.1

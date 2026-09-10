@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Support library used in the Xfce desktop"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=exo
 version=4.21.0

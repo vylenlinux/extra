@@ -1,6 +1,6 @@
 description="USB traffic redirection protocol"
 homepage="https://www.spice-space.org/usbredir.html"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=usbredir
 version=0.15.0

@@ -1,6 +1,6 @@
 description="A lightweight compositor for X11"
 homepage="https://github.com/yshui/picom"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=picom
 version=13

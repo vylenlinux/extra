@@ -1,6 +1,6 @@
 description="Tools for archiving"
 homepage="https://www.gnu.org/software/cpio"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cpio
 version=2.15

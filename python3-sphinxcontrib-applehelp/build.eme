@@ -1,6 +1,6 @@
 description="sphinx extension which outputs Apple help books"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-applehelp/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-applehelp
 version=2.0.0

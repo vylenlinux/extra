@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Standalone web browser from mozilla.org"
 homepage="https://www.mozilla.org/firefox/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=firefox
 version=155.0.1

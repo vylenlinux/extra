@@ -1,6 +1,6 @@
 description="X11 Athena Widget library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxaw"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxaw
 version=1.0.16

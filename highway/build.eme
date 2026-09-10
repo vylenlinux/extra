@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Performance-portable, length-agnostic SIMD with runtime dispatch"
 homepage="https://github.com/google/highway"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=highway
 version=1.4.0

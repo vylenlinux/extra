@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Reading, creating, and manipulating file archives"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=karchive
 version=6.30.0

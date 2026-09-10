@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Open Source h264 codec implementation"
 homepage="https://www.openh264.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openh264
 version=2.6.0

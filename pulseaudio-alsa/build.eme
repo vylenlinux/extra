@@ -1,6 +1,6 @@
 description="ALSA Configuration for PulseAudio"
 homepage="https://www.alsa-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pulseaudio-alsa
 version=1

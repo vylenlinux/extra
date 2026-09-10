@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Remote filesystem in userspace using SSH"
 homepage="https://github.com/libfuse/sshfs"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sshfs-fuse
 version=3.7.6

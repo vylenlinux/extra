@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A python wrapper for libmagic"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/ahupp/python-magic"
 
 name=python3-magic

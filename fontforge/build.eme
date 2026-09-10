@@ -1,6 +1,6 @@
 description="Outline and bitmap font editor"
 homepage="https://fontforge.github.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fontforge
 version=20251009

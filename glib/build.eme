@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Low-level core library that forms the basis for projects such as GTK+ and GNOME"
 homepage="https://gitlab.gnome.org/GNOME/glib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glib
 version=2.90.0

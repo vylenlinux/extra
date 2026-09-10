@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Cross-platform audio output library and plugins."
 homepage="https://github.com/xiph/libao"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libao
 version=1.2.2

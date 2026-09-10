@@ -1,6 +1,6 @@
 description="Window Navigator Construction Kit"
 homepage="https://gitlab.gnome.org/GNOME/libwnck"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libwnck2
 version=2.31.0

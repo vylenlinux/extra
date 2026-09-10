@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A KDE-based library for accessing various Google services via their public API"
 homepage="https://kde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libkgapi
 version=26.08.1

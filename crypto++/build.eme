@@ -1,6 +1,6 @@
 description="A free C++ class library of cryptographic schemes "
 homepage="https://www.cryptopp.com/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=crypto++
 version=8.9.0

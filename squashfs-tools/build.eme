@@ -1,6 +1,6 @@
 description="Tools for squashfs, a highly compressed read-only filesystem for Linux"
 homepage="https://github.com/plougher/squashfs-tools"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=squashfs-tools
 version=4.7.5

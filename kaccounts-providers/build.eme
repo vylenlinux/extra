@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Online account providers for the KAccounts system"
 homepage="https://invent.kde.org/network/kaccounts-providers"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kaccounts-providers
 version=26.08.1

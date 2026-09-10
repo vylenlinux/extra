@@ -1,6 +1,6 @@
 description="Tiling window manager based on binary space partitioning"
 homepage="https://github.com/baskerville/bspwm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bspwm
 version=0.9.12

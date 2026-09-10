@@ -1,6 +1,6 @@
 description="A regular expressions library"
 homepage="https://github.com/kkos/oniguruma"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=oniguruma
 version=6.9.10

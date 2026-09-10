@@ -1,6 +1,6 @@
 description="A library implementing a simple but powerful template language for C++ "
 homepage="https://github.com/olafvdspek/ctemplate"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ctemplate
 version=2.4

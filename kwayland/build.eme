@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a Qt-style Client and Server library wrapper for the Wayland libraries"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwayland
 version=6.7.5

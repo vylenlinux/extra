@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="C library for reading virtual slide images"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://openslide.org/"
 
 name=openslide

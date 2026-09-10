@@ -1,6 +1,6 @@
 description="Automatic proxy configuration management library"
 homepage="https://libproxy.github.io/libproxy/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libproxy
 version=0.5.12

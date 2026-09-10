@@ -1,6 +1,6 @@
 description="Lightweight image viewer"
 homepage="https://www.lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gpicview
 version=0.3.1

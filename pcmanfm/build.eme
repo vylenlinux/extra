@@ -1,6 +1,6 @@
 description="Extremely fast and lightweight file manager"
 homepage="https://lxde.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pcmanfm
 version=1.4.0

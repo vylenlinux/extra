@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Abstraction for enumerating power devices, listening to device events and querying history and statistics"
 homepage="https://upower.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=upower
 version=1.91.4

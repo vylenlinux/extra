@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A simple & lightweight desktop-agnostic Qt file archiver"
 homepage="https://lxqt.github.io"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-archiver
 version=1.4.0

@@ -1,6 +1,6 @@
 description="Simple X server performance benchmarker"
 homepage="https://gitlab.freedesktop.org/xorg/test/x11perf"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=x11perf
 version=1.7.0

@@ -1,6 +1,6 @@
 description="OAuth 2 plugin for signon"
 homepage="https://gitlab.com/accounts-sso/signon-plugin-oauth2"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=signon-plugin-oauth2
 version=0.25

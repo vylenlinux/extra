@@ -1,6 +1,6 @@
 description="Qualcomm IPC Router protocol helper library"
 homepage="https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libqrtr-glib
 version=1.4.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A general purpose crypto library based on the code used in GnuPG"
 homepage="https://www.gnupg.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgcrypt
 version=1.12.3

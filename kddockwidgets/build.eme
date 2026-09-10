@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Dock Widgets Library by KDAB for Qt6"
 homepage="https://github.com/KDAB/KDDockWidgets/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kddockwidgets
 version=2.4.1

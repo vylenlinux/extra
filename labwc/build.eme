@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Wayland stacking compositor"
 homepage="https://github.com/labwc/labwc"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=labwc
 version=0.20.2

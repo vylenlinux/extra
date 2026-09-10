@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An open source multimedia framework"
 homepage="https://www.mltframework.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mlt
 version=7.40.0

@@ -1,6 +1,6 @@
 description="X.org 75dpi fonts"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=font-adobe-75dpi
 version=1.0.4

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Advanced spell checker"
 homepage="https://github.com/hunspell/hunspell"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hunspell
 version=1.7.3

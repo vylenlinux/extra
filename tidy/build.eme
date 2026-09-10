@@ -1,6 +1,6 @@
 description="A tool to tidy down your HTML code to a clean style "
 homepage="https://www.html-tidy.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tidy
 version=5.8.0

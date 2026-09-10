@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A dedicated search application built on top of baloo"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=milou
 version=6.7.5

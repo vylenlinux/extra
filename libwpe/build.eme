@@ -1,6 +1,6 @@
 description="General-purpose library for WPE WebKit"
 homepage="https://wpewebkit.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libwpe
 version=1.16.3

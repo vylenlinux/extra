@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Console based real time MPEG Audio Player for Layer 1, 2 and 3"
 homepage="https://mpg123.de/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpg123
 version=1.33.7

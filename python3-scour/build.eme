@@ -1,6 +1,6 @@
 description="SVG optimizer/cleaner that reduces their size by optimizing structure and removing unnecessary data"
 homepage="https://github.com/scour-project/scour"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-scour
 version=0.38.2

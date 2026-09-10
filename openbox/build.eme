@@ -1,6 +1,6 @@
 description="Highly configurable desktop window manager with extensive standards support"
 homepage="http://openbox.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openbox
 version=3.6.1

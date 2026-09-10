@@ -1,6 +1,6 @@
 description="X11 Video extension library"
 homepage="https://xorg.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxv
 version=1.0.13

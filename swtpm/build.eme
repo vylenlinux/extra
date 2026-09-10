@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Libtpms-based TPM emulator with socket, character device, and Linux CUSE interface"
 homepage="https://github.com/stefanberger/swtpm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swtpm
 version=0.10.2

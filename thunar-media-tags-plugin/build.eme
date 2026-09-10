@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="adds special features for media files to the Thunar File Manager"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=thunar-media-tags-plugin
 version=0.6.0

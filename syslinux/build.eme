@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Collection of boot loaders for the Linux operating system"
 homepage="https://www.syslinux.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=syslinux
 version=6.03

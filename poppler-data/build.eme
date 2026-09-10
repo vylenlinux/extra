@@ -1,6 +1,6 @@
 description="Encoding files for use with Poppler, to render CJK and Cyrillic properly"
 homepage="https://poppler.freedesktop.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler-data
 version=0.4.12

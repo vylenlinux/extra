@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A shell tool for executing jobs in parallel"
 homepage="https://www.gnu.org/software/parallel/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=parallel
 version=20260822

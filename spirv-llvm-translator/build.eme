@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A tool and a library for bi-directional translation between SPIR-V and LLVM IR"
 homepage="https://github.com/KhronosGroup/SPIRV-LLVM-Translator"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spirv-llvm-translator
 version=23.1.1

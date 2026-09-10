@@ -1,6 +1,6 @@
 description="Python implementation of the geodesic routines in GeographicLib"
 homepage="https://geographiclib.sourceforge.io/1.50/python/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-geographiclib
 nm=geographiclib

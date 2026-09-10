@@ -1,6 +1,6 @@
 description="A library that implements the EBU R 128 standard for loudness normalisation"
 homepage="https://github.com/jiixyj/libebur128"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libebur128
 version=1.2.6

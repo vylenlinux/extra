@@ -1,6 +1,6 @@
 description="Fast merging drop-in replacement for slocate"
 homepage="https://pagure.io/mlocate"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mlocate
 version=0.26

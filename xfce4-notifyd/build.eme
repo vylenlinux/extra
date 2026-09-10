@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Themable notification daemon with transparency effects"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-notifyd
 version=0.9.7

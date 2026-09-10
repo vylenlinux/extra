@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Plugins for additional image formats: TIFF, MNG, TGA, WBMP"
 homepage="https://www.qt.io/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-imageformats
 version=6.11.2

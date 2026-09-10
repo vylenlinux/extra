@@ -1,6 +1,6 @@
 description="A text-mode partitioning tool that works on GUID Partition Table (GPT) disks"
 homepage="https://www.rodsbooks.com/gdisk/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gptfdisk
 version=1.0.10

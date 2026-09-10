@@ -1,6 +1,6 @@
 description="Utility library for X keyboard"
 homepage="https://www.freedesktop.org/wiki/Software/LibXklavier/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxklavier
 version=5.4

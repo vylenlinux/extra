@@ -1,6 +1,6 @@
 description="Original cdrtools supporting CD, DVD and BluRay burning"
 homepage="https://sourceforge.net/projects/cdrtools/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cdrtools
 version=3.02a09

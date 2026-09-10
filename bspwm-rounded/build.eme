@@ -1,6 +1,6 @@
 description="Tiling window manager based on binary space partitioning with rounded corners support"
 homepage="https://github.com/phuhl/bspwm-rounded"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bspwm-rounded
 version=0.9.10

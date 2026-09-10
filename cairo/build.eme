@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="2D graphics library with support for multiple output devices"
 homepage="https://cairographics.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cairo
 version=1.18.4

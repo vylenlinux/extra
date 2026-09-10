@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="DVD/CD/music player for Xfce that uses GStreamer"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=parole
 version=4.20.0

@@ -1,6 +1,6 @@
 description="GObject bindings for libudev"
 homepage="https://wiki.gnome.org/Projects/libgudev"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgudev
 version=238

@@ -1,6 +1,6 @@
 description="X11 PCI access library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libpciaccess"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpciaccess
 version=0.19

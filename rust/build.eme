@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="The Rust programming language is designed to be a safe, concurrent, practical language"
 homepage="https://www.rust-lang.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rust
 version=1.98.1

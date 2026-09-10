@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A collection of USB tools to query connected USB devices"
 homepage="https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=usbutils
 version=019

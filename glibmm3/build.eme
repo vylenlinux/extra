@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Set of C++ bindings for GLib"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://www.gtkmm.org/"
 
 name=glibmm3

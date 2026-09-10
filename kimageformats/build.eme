@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Image format plugins for Qt"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kimageformats
 version=6.30.0

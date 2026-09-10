@@ -1,6 +1,6 @@
 description="Cryptographic library for Python"
 homepage="https://www.pycryptodome.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycryptodome
 _name=${name#*-}

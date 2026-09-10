@@ -1,6 +1,6 @@
 description="Component responsible for handling the user interactions which can happen during the login process of an online account"
 homepage="https://gitlab.com/accounts-sso/signon-ui"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=signon-ui
 version=0.17

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A DAV protocol implemention with KJobs"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kdav
 version=6.30.0

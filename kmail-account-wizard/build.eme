@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="KMail account wizard"
 homepage="https://apps.kde.org/kmail2/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kmail-account-wizard
 version=26.08.1

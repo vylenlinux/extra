@@ -1,6 +1,6 @@
 description="Bluetooth Subband Codec (SBC) library"
 homepage="https://git.kernel.org/pub/scm/bluetooth/sbc.git"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sbc
 version=2.2

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="frontend for libraries libburn and libisofs"
 homepage="https://dev.lovelyhq.com/libburnia"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libisoburn
 version=1.5.8.pl02

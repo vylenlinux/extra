@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="SSH library"
 homepage="https://libssh.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libssh
 version=0.12.2

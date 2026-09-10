@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Image viewer for Sway"
 homepage="https://github.com/artemsen/swayimg"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=swayimg
 version=5.6

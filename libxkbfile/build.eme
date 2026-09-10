@@ -1,6 +1,6 @@
 description="X11 keyboard file manipulation library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxkbfile"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxkbfile
 version=1.2.0

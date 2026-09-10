@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Hardware identification and configuration data"
 homepage="https://github.com/vcrhonek/hwdata"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hwdata
 version=0.411

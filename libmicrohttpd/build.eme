@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="A small C library that is supposed to make it easy to run an HTTP server as part of another application."
 homepage="https://www.gnu.org/software/libmicrohttpd/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmicrohttpd
 version=1.0.10

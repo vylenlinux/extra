@@ -1,6 +1,6 @@
 description="Extremely fast non-cryptographic hash algorithm"
 homepage="https://cyan4973.github.io/xxHash/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xxhash
 nm=xxHash

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Provides a Service Provider Interface for the Assistive Technologies available on the GNOME platform and a library against which applications can be linked"
 homepage="https://gitlab.gnome.org/GNOME/at-spi2-core"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=at-spi2-core
 version=2.60.6

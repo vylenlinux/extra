@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="An application for monitoring system resources"
 homepage="https://kde.org/plasma-desktop/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=plasma-systemmonitor
 version=6.7.5

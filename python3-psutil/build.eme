@@ -1,6 +1,6 @@
 description="A cross-platform process and system utilities module for Python3"
 homepage="https://github.com/giampaolo/psutil"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-psutil
 version=7.2.2

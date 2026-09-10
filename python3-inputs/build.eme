@@ -1,6 +1,6 @@
 description="Cross-platform Python support for keyboards, mice and gamepads"
 homepage="https://github.com/zeth/python-inputs#python-"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-inputs
 version=0.5

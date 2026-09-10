@@ -1,6 +1,6 @@
 description="An itsy bitsy floating window manager (220~ sloc!)"
 homepage="https://github.com/dylanaraps/sowm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sowm
 version=1.6

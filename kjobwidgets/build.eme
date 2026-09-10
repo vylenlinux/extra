@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Widgets for showing progress of asynchronous jobs"
 homepage="https://community.kde.org/Frameworks"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kjobwidgets
 version=6.30.0

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="Tool to find and launch installed applications by searching the .desktop files"
 homepage="https://xfce.org"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfce4-appfinder
 version=4.20.0

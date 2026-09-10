@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="LXQt notification daemon and library"
 homepage="https://lxqt-project.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-notificationd
 version=2.4.0

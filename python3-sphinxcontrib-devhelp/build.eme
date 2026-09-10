@@ -1,6 +1,6 @@
 description="sphinx extension which outputs Devhelp document"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-devhelp/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-devhelp
 version=2.0.0

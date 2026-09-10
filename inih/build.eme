@@ -1,6 +1,6 @@
 description="Simple .INI file parser library written in C"
 homepage="https://github.com/benhoyt/inih"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=inih
 version=62

@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="LLVM OpenMP Runtime Library"
 homepage="https://openmp.llvm.org/"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openmp
 version=23.1.1
