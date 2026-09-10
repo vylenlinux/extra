@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="MPEG1/MPEG2 decoder (includes libmpeg2)"
 homepage="https://libmpeg2.sourceforge.io/"
 maintainer="Vylen Linux Team"
@@ -5,16 +8,18 @@ maintainer="Vylen Linux Team"
 name=libmpeg2
 version=0.5.1
 release=1
-source="https://libmpeg2.sourceforge.io/files/$name-$version.tar.gz"
+source="https://download.videolan.org/contrib/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr \
-		--with-gnu-ld \
-		--enable-shared \
-		--disable-nls
+    ./configure \
+        --prefix=/usr \
+        --with-gnu-ld \
+        --enable-shared \
+        --disable-nls
 
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
