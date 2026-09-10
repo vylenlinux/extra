@@ -454,6 +454,7 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/dcn_3_5_dmcub.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/dcn_3_6_dmcub.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/dcn_4_0_1_dmcub.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/dcn_4_2_dmcub.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/dimgrey_cavefish_ce.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/dimgrey_cavefish_dmcub.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/dimgrey_cavefish_me.bin.xz
@@ -560,6 +561,20 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_5_3_mes_2.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_5_3_pfp.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_5_3_rlc.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_imu.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_me.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_mec.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_mes1.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_mes_2.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_pfp.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_0_rlc.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_imu.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_me.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_mec.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_mes1.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_mes_2.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_pfp.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/gc_11_7_1_rlc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_12_0_0_imu.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_12_0_0_me.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/gc_12_0_0_mec.bin.xz
@@ -839,6 +854,10 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/psp_14_0_4_toc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/psp_14_0_5_ta.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/psp_14_0_5_toc.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/psp_15_0_0_ta.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/psp_15_0_0_toc.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/psp_15_0_9_ta.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/psp_15_0_9_toc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/raven2_asd.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/raven2_ce.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/raven2_gpu_info.bin.xz
@@ -890,6 +909,7 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/sdma_6_1_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/sdma_6_1_2.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/sdma_6_1_3.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/sdma_6_1_4.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/sdma_7_0_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/sdma_7_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/si58_mc.bin.xz
@@ -977,6 +997,7 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/vcn_4_0_6_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vcn_5_0_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vcn_5_0_1.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/vcn_5_3_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vega10_acg_smc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vega10_asd.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vega10_ce.bin.xz
@@ -1042,6 +1063,7 @@ drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/verde_rlc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/verde_smc.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/verde_uvd.bin.xz
+-rw-r--r-- root/root    lib/firmware/amdgpu/vpe_2_0_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vpe_6_1_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vpe_6_1_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/amdgpu/vpe_6_1_3.bin.xz
@@ -2208,6 +2230,11 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863.wmfw.
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104319f4-spkid0-l0.bin.xz -> cs35l41-dsp1-spk-prot-10431584-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104319f4-spkid0-r0.bin.xz -> cs35l41-dsp1-spk-prot-10431584-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104319f4-spkid1-l0.bin.xz -> cs35l41-dsp1-spk-prot-10431584-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104319f4-spkid1-r0.bin.xz -> cs35l41-dsp1-spk-prot-10431584-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104319f4.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a63-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a63-spkid0-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-19_5dB.bincfg.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a63-spkid0-r0.bin.xz
@@ -2610,12 +2637,12 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08.wmfw.x
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d85-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d85-amp3.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d85-amp4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d85.wmfw.xz -> cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d85.wmfw.xz -> cs35l56/CS35L56_Rev3.11.18.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86-amp3.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86-amp4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86.wmfw.xz -> cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d86.wmfw.xz -> cs35l56/CS35L56_Rev3.11.18.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d8c-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d8c-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d8c.wmfw.xz -> cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
@@ -2652,6 +2679,11 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8e19.wmfw.x
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8e1a-amp1.bin.xz -> cs35l54-b0-dsp1-misc-103c8e15-amp1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8e1a-amp2.bin.xz -> cs35l54-b0-dsp1-misc-103c8e15-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8e1a.wmfw.xz -> cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c900c-amp1.bin.xz -> cs35l54-b0-dsp1-misc-103c8d01-amp1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c900c-amp2.bin.xz -> cs35l54-b0-dsp1-misc-103c8d01-amp2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c900c-amp3.bin.xz -> cs35l54-b0-dsp1-misc-103c8d01-amp3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c900c-amp4.bin.xz -> cs35l54-b0-dsp1-misc-103c8d01-amp4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c900c.wmfw.xz -> cs35l56/CS35L56_Rev3.11.18.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp3.bin.xz
@@ -2784,12 +2816,12 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280e87-spkid1
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c52-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c52-amp3.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c52-amp4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c52.wmfw.xz -> cs35l56/CS35L56_Rev3.11.16.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c52.wmfw.xz -> cs35l56/CS35L56_Rev3.11.18.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53-amp3.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53-amp4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53.wmfw.xz -> cs35l56/CS35L56_Rev3.11.16.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8c53.wmfw.xz -> cs35l56/CS35L56_Rev3.11.18.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8d90-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8d90-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-103c8d90.wmfw.xz -> cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
@@ -2874,6 +2906,9 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c63-spkid0
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c63-spkid1-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c63-spkid1-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c63-spkid1.wmfw.xz -> cs35l56/CS35L56_Rev3.11.16.wmfw.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c74-l2u0.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c74-l2u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431c74.wmfw.xz -> cs35l56/CS35L56_Rev3.13.4.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431df3-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431df3-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431df3-amp3.bin.xz
@@ -2985,9 +3020,12 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa391b.wmfw.x
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa391e-spkid0-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa391e-spkid0-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa391e-spkid0.wmfw.xz -> cs35l56/CS35L56_Rev3.11.21.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921-amp1.bin.xz -> cs35l56-b0-dsp1-misc-17aa3921-spkid1-amp1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921-amp2.bin.xz -> cs35l56-b0-dsp1-misc-17aa3921-spkid1-amp2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921-spkid1-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921-spkid1-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921-spkid1.wmfw.xz -> cs35l56/CS35L56_Rev3.11.21.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa3921.wmfw.xz -> cs35l56/CS35L56_Rev3.11.21.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa392c-spkid1-amp1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa392c-spkid1-amp2.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-17aa392c-spkid1.wmfw.xz -> cs35l56/CS35L56_Rev3.11.21.wmfw.xz
@@ -3040,6 +3078,15 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e53-spkid2
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e53-spkid3-ampl.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e53-spkid3-ampr.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e53-spkid3.wmfw.xz -> cs35l56/CS35L56_Rev4.5.9.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid1-ampl.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid1-ampl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid1-ampr.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid1-ampr.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid1.wmfw.xz -> cs35l56/CS35L56_Rev4.5.9.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid2-ampl.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid2-ampl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid2-ampr.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid2-ampr.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid2.wmfw.xz -> cs35l56/CS35L56_Rev4.5.9.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid3-ampl.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid3-ampl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid3-ampr.bin.xz -> cs35l56-b2-dsp1-misc-10280e53-spkid3-ampr.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b2-dsp1-misc-10280e54-spkid3.wmfw.xz -> cs35l56/CS35L56_Rev4.5.9.wmfw.xz
 drwxr-xr-x root/root    lib/firmware/cirrus/cs35l56/
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev3.11.11.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev3.11.11.wmfw.xz
@@ -3522,6 +3569,30 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280e85-spkid2
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280e85-spkid3-04-l3u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e23-spkid3-04-l1u1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280e85-spkid3-04-l3u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e23-spkid3-04-l1u3.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280e85-spkid3.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid0-02-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid0-01-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid0-02-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid0-01-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid0.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid1-02-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid1-01-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid1-02-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid1-01-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid1.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid2-02-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid2-01-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid2-02-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid2-01-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid2.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid3-02-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid3-01-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid3-02-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1c-spkid3-01-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efb-spkid3.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid0-05-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid0-06-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid0-05-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid0-06-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid0.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid1-05-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid1-06-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid1-05-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid1-06-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid1.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid2-05-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid2-06-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid2-05-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid2-06-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid2.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid3-05-l1u1.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid3-06-l3u1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid3-05-l1u3.bin.xz -> cs35l63-a1-dsp1-misc-10280e1e-spkid3-06-l3u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-10280efc-spkid3.wmfw.xz -> cs35l63/CS35L63_Rev2.5.7.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-17aa2352-l2u0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-17aa2352-l2u1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l63-a1-dsp1-misc-17aa2352.wmfw.xz -> cs35l63/CS35L63_Rev2.5.4.wmfw.xz
@@ -3840,6 +3911,8 @@ lrwxrwxrwx root/root    lib/firmware/intel/avs/hda-8086-generic-tplg.bin.xz -> h
 -rw-r--r-- root/root    lib/firmware/intel/avs/hda-808628xx-3ep-tplg.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/avs/hda-generic-1ep-tplg.bin.xz
 lrwxrwxrwx root/root    lib/firmware/intel/avs/hda-generic-tplg.bin.xz -> hda-generic-1ep-tplg.bin.xz
+drwxr-xr-x root/root    lib/firmware/intel/avs/lkf/
+-rw-r--r-- root/root    lib/firmware/intel/avs/lkf/dsp_basefw.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/avs/max98357a-tplg.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/avs/max98373-tplg.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/avs/max98927-tplg.bin.xz
@@ -3909,13 +3982,9 @@ lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-4150.sfi.xz -> ibt-0040-0041
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-01a1-iml.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-01a1-pci.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-01a1-pci.sfi.xz
--rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-01a1-usb.ddc.xz
--rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-01a1-usb.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-0291-iml.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-0291-pci.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-0291-pci.sfi.xz
--rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-0291-usb.ddc.xz
--rw-r--r-- root/root    lib/firmware/intel/ibt-00a0-0291-usb.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0180-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0180-0041.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0180-1050.ddc.xz
@@ -4129,6 +4198,7 @@ drwxr-xr-x root/root    lib/firmware/intel/iwlwifi/
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c102.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c103.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c106.ucode.xz
+-rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c107.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-fm-c0.pnvm.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-gf-a0-100.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-gf-a0-92.ucode.xz
@@ -4145,6 +4215,7 @@ drwxr-xr-x root/root    lib/firmware/intel/iwlwifi/
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c102.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c103.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c106.ucode.xz
+-rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c107.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-cc-a0-50.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-cc-a0-59.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-cc-a0-66.ucode.xz
@@ -4166,6 +4237,7 @@ drwxr-xr-x root/root    lib/firmware/intel/iwlwifi/
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c102.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c103.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c106.ucode.xz
+-rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c107.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-gl-c0-fm-c0.pnvm.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-ma-b0-gf-a0-83.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-ma-b0-gf-a0-86.ucode.xz
@@ -4182,12 +4254,14 @@ drwxr-xr-x root/root    lib/firmware/intel/iwlwifi/
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c102.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c103.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c106.ucode.xz
+-rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c107.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-gf-a0-100.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-101.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c101.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c102.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c103.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c106.ucode.xz
+-rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c107.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-so-a0-gf-a0-72.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-so-a0-gf-a0-73.ucode.xz
 -rw-r--r-- root/root    lib/firmware/intel/iwlwifi/iwlwifi-so-a0-gf-a0-74.ucode.xz
@@ -4379,6 +4453,7 @@ lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-c101.ucode.xz -> intel/
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-c102.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c102.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-c103.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c103.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-c106.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c106.ucode.xz
+lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-c107.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-fm-c0-c107.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-fm-c0.pnvm.xz -> intel/iwlwifi/iwlwifi-bz-b0-fm-c0.pnvm.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-gf-a0-100.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-gf-a0-100.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-gf-a0-92.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-gf-a0-92.ucode.xz
@@ -4395,6 +4470,7 @@ lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-hr-b0.pnvm.xz -> intel/iwlwif
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-wh-b0-c102.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c102.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-wh-b0-c103.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c103.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-wh-b0-c106.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c106.ucode.xz
+lrwxrwxrwx root/root    lib/firmware/iwlwifi-bz-b0-wh-b0-c107.ucode.xz -> intel/iwlwifi/iwlwifi-bz-b0-wh-b0-c107.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-cc-a0-50.ucode.xz -> intel/iwlwifi/iwlwifi-cc-a0-50.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-cc-a0-59.ucode.xz -> intel/iwlwifi/iwlwifi-cc-a0-59.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-cc-a0-66.ucode.xz -> intel/iwlwifi/iwlwifi-cc-a0-66.ucode.xz
@@ -4416,6 +4492,7 @@ lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0-c101.ucode.xz -> intel/
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0-c102.ucode.xz -> intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c102.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0-c103.ucode.xz -> intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c103.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0-c106.ucode.xz -> intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c106.ucode.xz
+lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0-c107.ucode.xz -> intel/iwlwifi/iwlwifi-gl-c0-fm-c0-c107.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-gl-c0-fm-c0.pnvm.xz -> intel/iwlwifi/iwlwifi-gl-c0-fm-c0.pnvm.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-ma-b0-gf-a0-83.ucode.xz -> intel/iwlwifi/iwlwifi-ma-b0-gf-a0-83.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-ma-b0-gf-a0-86.ucode.xz -> intel/iwlwifi/iwlwifi-ma-b0-gf-a0-86.ucode.xz
@@ -4432,12 +4509,14 @@ lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-fm-c0-c101.ucode.xz -> intel/
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-fm-c0-c102.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c102.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-fm-c0-c103.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c103.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-fm-c0-c106.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c106.ucode.xz
+lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-fm-c0-c107.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-fm-c0-c107.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-gf-a0-100.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-gf-a0-100.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-101.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-101.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-c101.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c101.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-c102.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c102.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-c103.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c103.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-c106.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c106.ucode.xz
+lrwxrwxrwx root/root    lib/firmware/iwlwifi-sc-a0-wh-b0-c107.ucode.xz -> intel/iwlwifi/iwlwifi-sc-a0-wh-b0-c107.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-so-a0-gf-a0-72.ucode.xz -> intel/iwlwifi/iwlwifi-so-a0-gf-a0-72.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-so-a0-gf-a0-73.ucode.xz -> intel/iwlwifi/iwlwifi-so-a0-gf-a0-73.ucode.xz
 lrwxrwxrwx root/root    lib/firmware/iwlwifi-so-a0-gf-a0-74.ucode.xz -> intel/iwlwifi/iwlwifi-so-a0-gf-a0-74.ucode.xz
@@ -5634,6 +5713,8 @@ drwxr-xr-x root/root    lib/firmware/qca/QCA6698/
 -rw-r--r-- root/root    lib/firmware/qca/hmtbtfw20.tlv.xz
 -rw-r--r-- root/root    lib/firmware/qca/hmtnv20.b10f.xz
 -rw-r--r-- root/root    lib/firmware/qca/hmtnv20.b112.xz
+-rw-r--r-- root/root    lib/firmware/qca/hmtnv20.b201.xz
+-rw-r--r-- root/root    lib/firmware/qca/hmtnv20.b202.xz
 -rw-r--r-- root/root    lib/firmware/qca/hmtnv20.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpbtfw21.tlv.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21.301.xz
@@ -5713,8 +5794,11 @@ lrwxrwxrwx root/root    lib/firmware/qca/hpnv21g.30c.xz -> hpnv21g.b111.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00190200_0110.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00190200_0111.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00190200_0112.bin.xz
+-rw-r--r-- root/root    lib/firmware/qca/ornbcscal10.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/ornbcscal11.bin.xz
+-rw-r--r-- root/root    lib/firmware/qca/ornbtfw10.tlv.xz
 -rw-r--r-- root/root    lib/firmware/qca/ornbtfw11.tlv.xz
+-rw-r--r-- root/root    lib/firmware/qca/ornnv10.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/ornnv11.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_00130300.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_00130302.bin.xz
@@ -5802,6 +5886,9 @@ drwxr-xr-x root/root    lib/firmware/qcom/apq8096/
 -rw-r--r-- root/root    lib/firmware/qcom/apq8096/modem.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/apq8096/modemr.jsn
 drwxr-xr-x root/root    lib/firmware/qcom/eliza/
+-rw-r--r-- root/root    lib/firmware/qcom/eliza/cdsp.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/eliza/cdsp_dtb.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/eliza/cdspr.jsn
 -rw-r--r-- root/root    lib/firmware/qcom/eliza/gen71700_zap.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/gen70500_gmu.bin.xz
 -rw-r--r-- root/root    lib/firmware/qcom/gen70500_sqe.fw.xz
@@ -5858,6 +5945,18 @@ drwxr-xr-x root/root    lib/firmware/qcom/kaanapali/
 -rw-r--r-- root/root    lib/firmware/qcom/kaanapali/soccpr.jsn
 -rw-r--r-- root/root    lib/firmware/qcom/leia_pfp_470.fw.xz
 -rw-r--r-- root/root    lib/firmware/qcom/leia_pm4_470.fw.xz
+drwxr-xr-x root/root    lib/firmware/qcom/nord/
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adsp.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adsp1.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adsp1_dtb.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adsp1r.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adsp_dtb.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adspr.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/nord/adspua.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/nord/cdsp.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/cdsp_dtb.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/nord/cdspr.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/nord/qupv3fw.elf.xz
 drwxr-xr-x root/root    lib/firmware/qcom/qcm2290/
 -rw-r--r-- root/root    lib/firmware/qcom/qcm2290/a702_zap.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/qcm2290/adsp.mbn.xz
@@ -5924,14 +6023,14 @@ lrwxrwxrwx root/root    lib/firmware/qcom/qcs6490/wpss.mbn.xz -> ../../ath11k/WC
 drwxr-xr-x root/root    lib/firmware/qcom/qcs8300/
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/MONACO-EVK-tplg.bin.xz
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/a623_zap.mbn.xz
--rw-r--r-- root/root    lib/firmware/qcom/qcs8300/adsp.mbn.xz
--rw-r--r-- root/root    lib/firmware/qcom/qcs8300/adspr.jsn
--rw-r--r-- root/root    lib/firmware/qcom/qcs8300/adspua.jsn
+lrwxrwxrwx root/root    lib/firmware/qcom/qcs8300/adsp.mbn.xz -> ../sa8775p/adsp.mbn.xz
+lrwxrwxrwx root/root    lib/firmware/qcom/qcs8300/adspr.jsn -> ../sa8775p/adspr.jsn
+lrwxrwxrwx root/root    lib/firmware/qcom/qcs8300/adspua.jsn -> ../sa8775p/adspua.jsn
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/arduino-monza-tplg.bin.xz
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/cdsp0.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/cdspr.jsn
--rw-r--r-- root/root    lib/firmware/qcom/qcs8300/gpdsp0.mbn.xz
--rw-r--r-- root/root    lib/firmware/qcom/qcs8300/gpdspr.jsn
+lrwxrwxrwx root/root    lib/firmware/qcom/qcs8300/gpdsp0.mbn.xz -> ../sa8775p/gpdsp0.mbn.xz
+lrwxrwxrwx root/root    lib/firmware/qcom/qcs8300/gpdspr.jsn.xz -> ../sa8775p/gpdsp0.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/qcs8300/qupv3fw.elf.xz
 drwxr-xr-x root/root    lib/firmware/qcom/qcs9100/
 lrwxrwxrwx root/root    lib/firmware/qcom/qcs9100/LEMANS-EVK-tplg.bin.xz -> ../sa8775p/LEMANS-EVK-tplg.bin.xz
@@ -5999,7 +6098,13 @@ drwxr-xr-x root/root    lib/firmware/qcom/sc8280xp/LENOVO/21BX/
 -rw-r--r-- root/root    lib/firmware/qcom/sc8280xp/LENOVO/21BX/qcslpi8280.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/sc8280xp/LENOVO/21BX/qcvss8280.mbn.xz
 lrwxrwxrwx root/root    lib/firmware/qcom/sc8280xp/SC8280XP-LENOVO-X13S-tplg.bin.xz -> LENOVO/21BX/audioreach-tplg.bin.xz
+drwxr-xr-x root/root    lib/firmware/qcom/sc8280xp/radxa/
+drwxr-xr-x root/root    lib/firmware/qcom/sc8280xp/radxa/dragon-q8b/
+-rw-r--r-- root/root    lib/firmware/qcom/sc8280xp/radxa/dragon-q8b/qcadsp8280.mbn.xz
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/
+drwxr-xr-x root/root    lib/firmware/qcom/sdm845/SHIFT/
+drwxr-xr-x root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/
+-rw-r--r-- root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/a630_zap.mbn.xz
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/Thundercomm/
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/Thundercomm/db845c/
 -rw-r--r-- root/root    lib/firmware/qcom/sdm845/Thundercomm/db845c/slpi.mbn.xz
@@ -6107,6 +6212,7 @@ lrwxrwxrwx root/root    lib/firmware/qcom/vpu/vpu30_p4.mbn.xz -> vpu30_p4_s7.mbn
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu30_p4_s6.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu30_p4_s6_16mb.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu30_p4_s7.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu33_p2_s7.mbn.xz
 lrwxrwxrwx root/root    lib/firmware/qcom/vpu/vpu33_p4.mbn.xz -> vpu33_p4_s7.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu33_p4_s7.mbn.xz
 lrwxrwxrwx root/root    lib/firmware/qcom/vpu/vpu35_p4.mbn.xz -> vpu35_p4_s7.mbn.xz
@@ -6693,235 +6799,281 @@ drwxr-xr-x root/root    lib/firmware/sb16/
 drwxr-xr-x root/root    lib/firmware/sdca/
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/cs42l45_v20260225.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/cs42l45_v20260615.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/db3/
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/db3/1.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/db3/2.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/db3/3.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/db3/4.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db3/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db3/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db3/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db3/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db3/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/db4/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/1.bin.xz -> ../db3/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/2.bin.xz -> ../db3/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/3.bin.xz -> ../db3/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/4.bin.xz -> ../db3/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/42450005.bin.xz -> ../db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db4/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/db9/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/1.bin.xz -> ../db3/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/2.bin.xz -> ../db3/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/3.bin.xz -> ../db3/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/4.bin.xz -> ../db3/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/42450005.bin.xz -> ../db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/db9/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/dba/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/1.bin.xz -> ../db3/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/2.bin.xz -> ../db3/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/3.bin.xz -> ../db3/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/4.bin.xz -> ../db3/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/42450005.bin.xz -> ../db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/dba/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e13/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/1.bin.xz -> ../db3/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/2.bin.xz -> ../db3/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/3.bin.xz -> ../db3/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/4.bin.xz -> ../db3/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/42450005.bin.xz -> ../db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e13/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e14/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/1.bin.xz -> ../db3/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/2.bin.xz -> ../db3/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/3.bin.xz -> ../db3/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/4.bin.xz -> ../db3/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/42450005.bin.xz -> ../db3/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e14/42450005.bin.xz -> ../cs42l45_v20260703.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1a/
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e1a/1.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e1a/2.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e1a/3.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e1a/4.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1a/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1a/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1a/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1a/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1a/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1b/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1b/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1c/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1c/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1d/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1d/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1e/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1e/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e1f/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e1f/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e20/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e20/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e21/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e21/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e22/
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e22/1.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e22/2.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e22/3.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e22/4.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/1028/e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e22/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e22/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e22/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e22/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e22/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e23/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e23/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e24/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e24/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e25/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e25/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e26/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e26/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e27/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e27/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e28/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e28/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e2b/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2b/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e2c/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e2c/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e38/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e38/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e3e/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3e/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e3f/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e3f/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e5f/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e5f/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e60/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e60/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e65/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e65/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e66/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/1.bin.xz -> ../e22/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/2.bin.xz -> ../e22/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/3.bin.xz -> ../e22/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/4.bin.xz -> ../e22/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/42450005.bin.xz -> ../e22/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e66/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e82/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e82/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e83/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e83/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e84/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e84/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/e85/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/1.bin.xz -> ../e1a/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/2.bin.xz -> ../e1a/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/3.bin.xz -> ../e1a/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/4.bin.xz -> ../e1a/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/42450005.bin.xz -> ../e1a/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/e85/42450005.bin.xz -> ../cs42l45_v20260225.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/efb/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efb/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efb/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efb/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efb/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efb/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/1028/efc/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efc/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efc/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efc/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efc/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/1028/efc/42450005.bin.xz -> ../cs42l45_v20260615.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/144d/
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/144d/c1dc/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1dc/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1dc/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1dc/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1dc/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1dc/42450005.bin.xz -> ../cs42l45_v20260820.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/144d/c1de/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1de/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1de/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1de/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1de/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c1de/42450005.bin.xz -> ../cs42l45_v20260820.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/144d/c910/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c910/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c910/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c910/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c910/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/c910/42450005.bin.xz -> ../cs42l45_v20260820.bin.xz
+drwxr-xr-x root/root    lib/firmware/sdca/1fa/144d/ca0a/
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/ca0a/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/ca0a/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/ca0a/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/ca0a/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/144d/ca0a/42450005.bin.xz -> ../cs42l45_v20260820.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/144d/cs42l45_v20260820.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/17aa/
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/17aa/2352/
--rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/2352/1.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/2352/2.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/2352/3.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/2352/4.bin.xz
--rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/2352/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2352/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2352/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2352/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2352/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2352/42450005.bin.xz -> ../cs42l45_v20260522.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/17aa/2353/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/1.bin.xz -> ../2352/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/2.bin.xz -> ../2352/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/3.bin.xz -> ../2352/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/4.bin.xz -> ../2352/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/42450005.bin.xz -> ../2352/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/2353/42450005.bin.xz -> ../cs42l45_v20260522.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/17aa/5158/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/1.bin.xz -> ../2352/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/2.bin.xz -> ../2352/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/3.bin.xz -> ../2352/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/4.bin.xz -> ../2352/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/42450005.bin.xz -> ../2352/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5158/42450005.bin.xz -> ../cs42l45_v20260522.bin.xz
 drwxr-xr-x root/root    lib/firmware/sdca/1fa/17aa/5159/
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/1.bin.xz -> ../2352/1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/2.bin.xz -> ../2352/2.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/3.bin.xz -> ../2352/3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/4.bin.xz -> ../2352/4.bin.xz
-lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/42450005.bin.xz -> ../2352/42450005.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/1.bin.xz -> ../../cs42l45_primer1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/2.bin.xz -> ../../cs42l45_primer2.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/3.bin.xz -> ../../cs42l45_primer3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/4.bin.xz -> ../../cs42l45_primer4.bin.xz
+lrwxrwxrwx root/root    lib/firmware/sdca/1fa/17aa/5159/42450005.bin.xz -> ../cs42l45_v20260522.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/17aa/cs42l45_v20260522.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/cs42l45_primer1.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/cs42l45_primer2.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/cs42l45_primer3.bin.xz
+-rw-r--r-- root/root    lib/firmware/sdca/1fa/cs42l45_primer4.bin.xz
 -rw-r--r-- root/root    lib/firmware/sdd_sagrad_1091_1098.bin.xz
 drwxr-xr-x root/root    lib/firmware/slicoss/
 -rw-r--r-- root/root    lib/firmware/slicoss/gbdownload.sys.xz
@@ -6941,6 +7093,7 @@ lrwxrwxrwx root/root    lib/firmware/tas2572-1-1amp-reg.bin.xz -> ti/audio/tas25
 lrwxrwxrwx root/root    lib/firmware/tas2572-2-1amp-reg.bin.xz -> ti/audio/tas257x/tas2572-2-1amp-reg.bin.xz
 lrwxrwxrwx root/root    lib/firmware/tas2572-3-1amp-reg.bin.xz -> ti/audio/tas257x/tas2572-3-1amp-reg.bin.xz
 lrwxrwxrwx root/root    lib/firmware/tas2572-3amp-reg.bin.xz -> ti/audio/tas257x/tas2572-3amp-reg.bin.xz
+lrwxrwxrwx root/root    lib/firmware/tas2573-2amp-reg.bin.xz -> ti/audio/tas257x/tas2573-2amp-reg.bin.xz
 lrwxrwxrwx root/root    lib/firmware/tas257x-1amp-reg.bin.xz -> ti/audio/tas257x/tas257x-1amp-reg.bin.xz
 -rw-r--r-- root/root    lib/firmware/tdmb_nova_12mhz.inp.xz
 drwxr-xr-x root/root    lib/firmware/tehuti/
@@ -6995,6 +7148,7 @@ drwxr-xr-x root/root    lib/firmware/ti/audio/tas257x/
 -rw-r--r-- root/root    lib/firmware/ti/audio/tas257x/tas2572-2-1amp-reg.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/audio/tas257x/tas2572-3-1amp-reg.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/audio/tas257x/tas2572-3amp-reg.bin.xz
+-rw-r--r-- root/root    lib/firmware/ti/audio/tas257x/tas2573-2amp-reg.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/audio/tas257x/tas257x-1amp-reg.bin.xz
 drwxr-xr-x root/root    lib/firmware/ti/audio/tas2781/
 -rw-r--r-- root/root    lib/firmware/ti/audio/tas2781/TAS2XXX0C94.bin.xz
