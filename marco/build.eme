@@ -6,7 +6,7 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team"
 
 name=marco
-version=1.29.0
+version=1.29.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mate-desktop/${name}/archive/refs/tags/v${version}.tar.gz"
 
