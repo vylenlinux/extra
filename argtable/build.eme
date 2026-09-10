@@ -1,18 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="argtable command line parser library"
 homepage="http://argtable.sourceforge.net"
 maintainer="Vylen Linux Team"
 
 name=argtable
 version=2.13
-_version=${version%.*}-${version##*.}
 release=1
-source="https://cytranet.dl.sourceforge.net/project/$name/$name/$name-$version/${name}${_version}.tar.gz"
+
+_version="${version%.*}-${version##*.}"
+
+source="${name}-${version}.tar.gz::https://sourceforge.net/projects/${name}/files/${name}/${name}-${version}/${name}${_version}.tar.gz
+    ${name}-${version}-add-missing-includes.patch"
 
 build() {
-    cd ${name}${_version}
+    # shellcheck disable=SC2164
+    cd "${name}${_version}"
+    patch -Np1 -i "${SRC}/${name}-${version}-add-missing-includes.patch"
 
-    autoreconf -vfi
+    autoreconf -fi
     ./configure --prefix=/usr
+
     make PREFIX=/usr
-    make PREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr DESTDIR="${PKG}" install
 }
