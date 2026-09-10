@@ -6,7 +6,7 @@ homepage="https://launchpad.net/python-distutils-extra"
 maintainer="Vylen Linux Team"
 
 name=python3-distutils-extra
-version=3.4
+version=3.5
 release=1
 source="${name}-${version}.tar.gz::https://salsa.debian.org/python-team/packages/python-distutils-extra/-/archive/debian/${version}/python-distutils-extra-debian-${version}.tar.gz"
 

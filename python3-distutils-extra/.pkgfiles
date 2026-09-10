@@ -24,9 +24,9 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/DistUtilsExtra/command/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/DistUtilsExtra/command/build_icons.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/DistUtilsExtra/command/clean_i18n.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/DistUtilsExtra/command/pylint.py
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/entry_points.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.4-py3.15.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/entry_points.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/python_distutils_extra-3.5-py3.15.egg-info/top_level.txt
