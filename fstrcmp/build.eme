@@ -2,13 +2,13 @@
 
 # shellcheck disable=SC2034
 description="fstrcmp - a library that is used to make fuzzy comparisons of strings and byte arrays"
-homepage="http://fstrcmp.sourceforge.net/"
+homepage="https://fstrcmp.sourceforge.net/"
 maintainer="Vylen Linux Team"
 
 name=fstrcmp
 version=0.7.D001
 release=1
-source="http://fstrcmp.sourceforge.net/${name}-${version}.tar.gz"
+source="https://fstrcmp.sourceforge.net/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

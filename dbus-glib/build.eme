@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="GLib interfaces to the D-Bus API"
 homepage="https://www.freedesktop.org/wiki/Software/dbus/"
 maintainer="Vylen Linux Team"
@@ -5,16 +8,18 @@ maintainer="Vylen Linux Team"
 name=dbus-glib
 version=0.114
 release=1
-source="http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz"
+source="https://dbus.freedesktop.org/releases/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-  	./configure --prefix=/usr \
-		    --libexecdir=/usr/lib/$name \
-	            --sysconfdir=/etc \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --libexecdir="/usr/lib/${name}" \
+        --sysconfdir=/etc \
+        --disable-static
 
+    make
+    make DESTDIR="${PKG}" install
 }

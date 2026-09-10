@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Program to write hybrid ISO files onto USB disks"
 homepage="https://apps.kde.org/kdenlive/"
 maintainer="Vylen Linux Team"
@@ -5,18 +8,18 @@ maintainer="Vylen Linux Team"
 name=isoimagewriter
 version=26.08.1
 release=1
-source="http://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-	       -DCMAKE_INSTALL_PREFIX=/usr \
-	       -DCMAKE_INSTALL_LIBDIR=lib \
-	       -DCMAKE_BUILD_TYPE=Release \
-	       -DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-	       -DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-	       -DBUILD_TESTING=OFF \
-	       -Wno-dev
-	 cmake --build build
-	 DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -Wno-dev
 
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }

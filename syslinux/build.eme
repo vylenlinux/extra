@@ -9,7 +9,7 @@ name=syslinux
 version=6.03
 release=2
 
-source="http://www.kernel.org/pub/linux/utils/boot/${name}/${name}-${version}.tar.xz
+source="https://www.kernel.org/pub/linux/utils/boot/${name}/${name}-${version}.tar.xz
     ${name}-sysmacros.patch
     isolinux.cfg"
 

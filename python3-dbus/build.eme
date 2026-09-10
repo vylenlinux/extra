@@ -9,7 +9,7 @@ name=python3-dbus
 version=1.4.0
 release=2
 
-source="${name}-${version}.tar.gz::http://dbus.freedesktop.org/releases/dbus-python/dbus-python-${version}.tar.xz
+source="${name}-${version}.tar.gz::https://dbus.freedesktop.org/releases/dbus-python/dbus-python-${version}.tar.xz
     fix-build-with-python3.15.patch"
 
 build() {

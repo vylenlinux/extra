@@ -2,14 +2,14 @@
 
 # shellcheck disable=SC2034
 description="A system-independent interface for user-level packet capture"
-homepage="http://www.tcpdump.org/"
+homepage="https://www.tcpdump.org/"
 maintainer="Vylen Linux Team"
 
 name=libpcap
 version=1.10.7
 release=1
 
-source="http://www.tcpdump.org/release/${name}-${version}.tar.gz
+source="https://www.tcpdump.org/release/${name}-${version}.tar.gz
     ${name}-1.9.1-enable_bluetooth-1.patch"
 
 build() {
