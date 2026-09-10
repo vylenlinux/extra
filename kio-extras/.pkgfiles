@@ -12,6 +12,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KioArchive6/
 -rw-r--r-- root/root    usr/lib/cmake/KioArchive6/KioArchiveTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KioArchive6/KioArchiveTargets.cmake
 drwxr-xr-x root/root    usr/lib/libexec/
+drwxr-xr-x root/root    usr/lib/libexec/kf6/
+-rwxr-xr-x root/root    usr/lib/libexec/kf6/smbnotifier
 -rwxr-xr-x root/root    usr/lib/libexec/wpad-detector-helper
 lrwxrwxrwx root/root    usr/lib/libkioarchive6.so.6 -> libkioarchive6.so.6.0.0
 -rwxr-xr-x root/root    usr/lib/libkioarchive6.so.6.0.0
@@ -21,6 +23,7 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/filenamesearchmodule.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/smbwatcher.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/wpad_detector.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kfileitemaction/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kfileitemaction/forgetfileitemaction.so
@@ -33,10 +36,14 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/info.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_filenamesearch.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/man.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/mtp.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/nfs.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/recentlyused.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/sftp.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/smb.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/thumbnail.so
+drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kiod/
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kiod/kmtpd.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/thumbcreator/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/thumbcreator/audiothumbnail.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/thumbcreator/comicbookthumbnail.so
@@ -67,11 +74,19 @@ drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/kcm_webshortcuts.desktop
 drwxr-xr-x root/root    usr/share/config.kcfg/
 -rw-r--r-- root/root    usr/share/config.kcfg/jpegcreatorsettings5.kcfg
+drwxr-xr-x root/root    usr/share/dbus-1/
+drwxr-xr-x root/root    usr/share/dbus-1/services/
+-rw-r--r-- root/root    usr/share/dbus-1/services/org.kde.kmtpd5.service
 drwxr-xr-x root/root    usr/share/kio_filenamesearch/
 -rwxr-xr-x root/root    usr/share/kio_filenamesearch/kio-filenamesearch-grep
 drwxr-xr-x root/root    usr/share/kio_info/
 -rwxr-xr-x root/root    usr/share/kio_info/kde-info2html
 -rw-r--r-- root/root    usr/share/kio_info/kde-info2html.conf
+drwxr-xr-x root/root    usr/share/konqueror/
+drwxr-xr-x root/root    usr/share/konqueror/dirtree/
+drwxr-xr-x root/root    usr/share/konqueror/dirtree/remote/
+-rw-r--r-- root/root    usr/share/konqueror/dirtree/remote/mtp-network.desktop
+-rw-r--r-- root/root    usr/share/konqueror/dirtree/remote/smb-network.desktop
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/af/
 drwxr-xr-x root/root    usr/share/locale/af/LC_MESSAGES/
@@ -1323,6 +1338,15 @@ drwxr-xr-x root/root    usr/share/locale/zh_TW/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/kio6_sftp.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/kio6_smb.mo
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/kio6_thumbnail.mo
+drwxr-xr-x root/root    usr/share/mime/
+drwxr-xr-x root/root    usr/share/mime/packages/
+-rw-r--r-- root/root    usr/share/mime/packages/org.kde.kio.smb.xml
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/kio-extras.categories
 -rw-r--r-- root/root    usr/share/qlogging-categories6/kio-extras.renamecategories
+drwxr-xr-x root/root    usr/share/remoteview/
+-rw-r--r-- root/root    usr/share/remoteview/mtp-network.desktop
+-rw-r--r-- root/root    usr/share/remoteview/smb-network.desktop
+drwxr-xr-x root/root    usr/share/solid/
+drwxr-xr-x root/root    usr/share/solid/actions/
+-rw-r--r-- root/root    usr/share/solid/actions/solid_mtp.desktop
