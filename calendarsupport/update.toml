@@ -1,5 +1,5 @@
 name = "calendarsupport"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "calendarsupport"
+[kde]
+product = "gear"

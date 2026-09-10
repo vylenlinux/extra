@@ -1,5 +1,5 @@
 name = "incidenceeditor"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "incidenceeditor"
+[kde]
+product = "gear"

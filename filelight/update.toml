@@ -1,5 +1,5 @@
 name = "filelight"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "filelight"
+[kde]
+product = "gear"

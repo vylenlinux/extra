@@ -1,5 +1,5 @@
 name = "okular"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "okular"
+[kde]
+product = "gear"

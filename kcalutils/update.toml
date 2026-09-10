@@ -1,5 +1,5 @@
 name = "kcalutils"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcalutils"
+[kde]
+product = "gear"

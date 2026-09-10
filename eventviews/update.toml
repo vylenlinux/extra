@@ -1,5 +1,5 @@
 name = "eventviews"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "eventviews"
+[kde]
+product = "gear"

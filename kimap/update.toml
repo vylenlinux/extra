@@ -1,5 +1,5 @@
 name = "kimap"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kimap"
+[kde]
+product = "gear"

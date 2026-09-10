@@ -1,5 +1,5 @@
 name = "kio-extras"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kio-extras"
+[kde]
+product = "gear"

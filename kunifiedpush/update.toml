@@ -1,5 +1,5 @@
 name = "kunifiedpush"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kunifiedpush"
+[kde]
+product = "gear"

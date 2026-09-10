@@ -1,5 +1,5 @@
 name = "partitionmanager"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "partitionmanager"
+[kde]
+product = "gear"

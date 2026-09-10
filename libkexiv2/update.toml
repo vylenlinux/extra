@@ -1,5 +1,5 @@
 name = "libkexiv2"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libkexiv2"
+[kde]
+product = "gear"

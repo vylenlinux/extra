@@ -1,5 +1,5 @@
 name = "dolphin-plugins"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "dolphin-plugins"
+[kde]
+product = "gear"

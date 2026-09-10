@@ -1,5 +1,5 @@
 name = "ark"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ark-archiver"
+[kde]
+product = "gear"

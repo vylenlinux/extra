@@ -1,5 +1,5 @@
 name = "kontactinterface"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kontactinterface"
+[kde]
+product = "gear"

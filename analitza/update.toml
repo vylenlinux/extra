@@ -1,5 +1,5 @@
 name = "analitza"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "analitza"
+[kde]
+product = "gear"

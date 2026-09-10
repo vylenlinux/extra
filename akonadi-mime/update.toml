@@ -1,5 +1,5 @@
 name = "akonadi-mime"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "akonadi-mime"
+[kde]
+product = "gear"

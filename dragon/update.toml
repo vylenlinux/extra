@@ -1,5 +1,5 @@
 name = "dragon"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "dragon-player"
+[kde]
+product = "gear"

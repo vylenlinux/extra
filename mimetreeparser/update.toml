@@ -1,5 +1,5 @@
 name = "mimetreeparser"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "mimetreeparser"
+[kde]
+product = "gear"

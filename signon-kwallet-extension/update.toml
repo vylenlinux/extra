@@ -1,5 +1,5 @@
 name = "signon-kwallet-extension"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "signon-kwallet-extension"
+[kde]
+product = "gear"

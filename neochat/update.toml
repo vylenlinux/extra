@@ -1,5 +1,5 @@
 name = "neochat"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "neochat"
+[kde]
+product = "gear"

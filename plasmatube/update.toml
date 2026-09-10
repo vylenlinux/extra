@@ -1,5 +1,5 @@
 name = "plasmatube"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasmatube"
+[kde]
+product = "gear"

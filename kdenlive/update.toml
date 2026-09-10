@@ -1,5 +1,5 @@
 name = "kdenlive"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdenlive"
+[kde]
+product = "gear"

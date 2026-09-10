@@ -1,5 +1,5 @@
 name = "mailcommon"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "mailcommon"
+[kde]
+product = "gear"

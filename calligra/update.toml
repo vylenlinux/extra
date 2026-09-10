@@ -1,5 +1,5 @@
 name = "calligra"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "calligra"
+[kde]
+product = "gear"

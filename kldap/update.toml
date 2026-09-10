@@ -1,5 +1,5 @@
 name = "kldap"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kldap"
+[kde]
+product = "gear"

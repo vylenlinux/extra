@@ -1,5 +1,5 @@
 name = "akonadi-import-wizard"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "akonadi-import-wizard"
+[kde]
+product = "gear"

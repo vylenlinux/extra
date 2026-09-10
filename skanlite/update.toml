@@ -1,5 +1,5 @@
 name = "skanlite"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "skanlite"
+[kde]
+product = "gear"

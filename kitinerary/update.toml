@@ -1,5 +1,5 @@
 name = "kitinerary"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kitinerary"
+[kde]
+product = "gear"

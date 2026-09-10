@@ -1,5 +1,5 @@
 name = "gwenview"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "gwenview"
+[kde]
+product = "gear"

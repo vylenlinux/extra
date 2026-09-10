@@ -1,5 +1,5 @@
 name = "ksanecore"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ksanecore"
+[kde]
+product = "gear"

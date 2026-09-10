@@ -1,5 +1,5 @@
 name = "konsole"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "konsole"
+[kde]
+product = "gear"

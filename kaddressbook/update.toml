@@ -1,5 +1,5 @@
 name = "kaddressbook"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kaddressbook"
+[kde]
+product = "gear"

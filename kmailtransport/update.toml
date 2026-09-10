@@ -1,5 +1,5 @@
 name = "kmailtransport"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kmailtransport"
+[kde]
+product = "gear"

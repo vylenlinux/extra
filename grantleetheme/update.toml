@@ -1,5 +1,5 @@
 name = "grantleetheme"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "grantleetheme"
+[kde]
+product = "gear"

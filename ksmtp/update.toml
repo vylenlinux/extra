@@ -1,5 +1,5 @@
 name = "ksmtp"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ksmtp"
+[kde]
+product = "gear"

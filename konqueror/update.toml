@@ -1,5 +1,5 @@
 name = "konqueror"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "konqueror"
+[kde]
+product = "gear"

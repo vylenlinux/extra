@@ -1,5 +1,5 @@
 name = "kdepim-runtime"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdepim-runtime"
+[kde]
+product = "gear"

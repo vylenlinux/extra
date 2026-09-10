@@ -1,5 +1,5 @@
 name = "mbox-importer"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "mbox-importer"
+[kde]
+product = "gear"

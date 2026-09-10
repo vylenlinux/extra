@@ -1,5 +1,5 @@
 name = "baloo-widgets"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "baloo-widgets"
+[kde]
+product = "gear"

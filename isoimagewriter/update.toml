@@ -1,5 +1,5 @@
 name = "isoimagewriter"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "isoimagewriter"
+[kde]
+product = "gear"

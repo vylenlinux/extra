@@ -1,5 +1,5 @@
 name = "kcalc"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcalc"
+[kde]
+product = "gear"

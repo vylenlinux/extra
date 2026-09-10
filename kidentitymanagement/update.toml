@@ -1,5 +1,5 @@
 name = "kidentitymanagement"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kidentitymanagement"
+[kde]
+product = "gear"

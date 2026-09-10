@@ -1,5 +1,5 @@
 name = "kpkpass"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kpkpass"
+[kde]
+product = "gear"

@@ -1,5 +1,5 @@
 name = "libkleo"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libkleo"
+[kde]
+product = "gear"

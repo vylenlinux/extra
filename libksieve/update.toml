@@ -1,5 +1,5 @@
 name = "libksieve"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libksieve"
+[kde]
+product = "gear"

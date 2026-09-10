@@ -1,5 +1,5 @@
 name = "konversation"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "konversation"
+[kde]
+product = "gear"

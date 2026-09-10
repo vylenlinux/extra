@@ -1,5 +1,5 @@
 name = "dolphin"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "dolphin-fm"
+[kde]
+product = "gear"

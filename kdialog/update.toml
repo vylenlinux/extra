@@ -1,5 +1,5 @@
 name = "kdialog"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdialog"
+[kde]
+product = "gear"

@@ -1,5 +1,5 @@
 name = "pim-data-exporter"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "pim-data-exporter"
+[kde]
+product = "gear"

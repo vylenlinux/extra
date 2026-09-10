@@ -1,5 +1,5 @@
 name = "messagelib"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "messagelib"
+[kde]
+product = "gear"

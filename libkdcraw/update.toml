@@ -1,5 +1,5 @@
 name = "libkdcraw"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libkdcraw"
+[kde]
+product = "gear"

@@ -1,5 +1,5 @@
 name = "mailimporter"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "mailimporter"
+[kde]
+product = "gear"

@@ -1,5 +1,5 @@
 name = "kmail-account-wizard"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kmail-account-wizard"
+[kde]
+product = "gear"

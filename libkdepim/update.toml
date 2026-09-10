@@ -1,5 +1,5 @@
 name = "libkdepim"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libkdepim"
+[kde]
+product = "gear"

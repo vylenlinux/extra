@@ -1,5 +1,5 @@
 name = "kpimtextedit"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kpimtextedit"
+[kde]
+product = "gear"

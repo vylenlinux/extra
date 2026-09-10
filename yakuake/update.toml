@@ -1,5 +1,5 @@
 name = "yakuake"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "yakuake"
+[kde]
+product = "gear"

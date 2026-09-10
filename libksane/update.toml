@@ -1,5 +1,5 @@
 name = "libksane"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libksane"
+[kde]
+product = "gear"

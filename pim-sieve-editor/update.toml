@@ -1,5 +1,5 @@
 name = "pim-sieve-editor"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "pim-sieve-editor"
+[kde]
+product = "gear"

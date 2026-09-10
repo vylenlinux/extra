@@ -1,5 +1,5 @@
 name = "pimcommon"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "pimcommon"
+[kde]
+product = "gear"
