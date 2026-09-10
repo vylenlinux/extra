@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Daemon-less notifications without D-Bus. Minimal and lightweight."
 homepage="https://github.com/dudik/herbe"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,22 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=herbe
 version=1.0.0
 release=1
-source="https://github.com/dudik/herbe/archive/$version/$name-$version.tar.gz"
-
-_portdir=$PWD
+source="https://github.com/dudik/herbe/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    export PREFIX=/usr
 
-	if [ -f $_portdir/config.h ]; then
-		cp $_portdir/config.h .
-	fi
-
-	for p in $_portdir/*.patch $_portdir/*.diff; do
-		[ -f $p ] || continue
-		patch -Np1 -i $p
-	done
-
-	make PREFIX=/usr
-        make PREFIX=/usr DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
