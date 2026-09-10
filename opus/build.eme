@@ -1,20 +1,23 @@
-description="Modern audio compression for the internet. "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Modern audio compression for the internet."
 homepage="https://opus-codec.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=opus
 version=1.6.1
 release=1
-source="https://downloads.xiph.org/releases/opus/opus-$version.tar.gz"
+source="https://downloads.xiph.org/releases/${name}/${name}-${version}.tar.gz"
 
 build() {
-	    vylen-meson $name-$version build \
-		-Dcustom-modes=true \
-		-Dtests=disabled \
-		-Ddocs=disabled 
+    vylen-meson "${name}-${version}" build \
+        -Dcustom-modes=true \
+        -Dtests=disabled \
+        -Ddocs=disabled
 
-	    meson compile -C build
-	    DESTDIR=$PKG meson install --no-rebuild -C build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-	    install -Dt $PKG/usr/share/aclocal -m644 $name-$version/opus.m4
+    install -Dm644 "${name}-${version}/opus.m4" -t "${PKG}/usr/share/aclocal/"
 }

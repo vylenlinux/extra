@@ -1,20 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="GNU rewrite of netcat, the network piping application"
-homepage="https://netcat.sourceforge.net/ "
+homepage="https://netcat.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gnu-netcat
 version=0.7.1
 release=1
-source="http://downloads.sourceforge.net/netcat/netcat-$version.tar.bz2"
+source="${name}-${version}.tar.bz2::https://downloads.sourceforge.net/netcat/netcat-${version}.tar.bz2"
 
 build() {
-	cd netcat-$version
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--infodir=/usr/share/info \
-		--disable-nls
-	make
-	make DESTDIR=$PKG install
+	# shellcheck disable=SC2164
+    cd "netcat-${version}"
 
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man \
+        --infodir=/usr/share/info \
+        --disable-nls
+
+    make
+    make DESTDIR="${PKG}" install
 }

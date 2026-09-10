@@ -1,4 +1,7 @@
-description="A library implementing a simple but powerful template language for C++ "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A library implementing a simple but powerful template language for C++"
 homepage="https://github.com/olafvdspek/ctemplate"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
@@ -8,11 +11,12 @@ release=1
 source="https://github.com/OlafvdSpek/${name}/archive/${name}-${version}.tar.gz"
 
 build() {
-	cd ${name}-${name}-${version}
+    # shellcheck disable=SC2164
+    cd "${name}-${name}-${version}"
 
-	NOCONFIGURE=1 ./autogen.sh
-	./configure \
-		--prefix=/usr
-	make
-	make DESTDIR="${PKG}" install
+    NOCONFIGURE=1 ./autogen.sh
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }

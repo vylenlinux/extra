@@ -1,16 +1,20 @@
-description="Simple XML parser made for easy integration "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Simple XML parser made for easy integration"
 homepage="http://www.grinninglizard.com/tinyxml2"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tinyxml2
 version=11.0.0
 release=1
-source="https://github.com/leethomason/$name/archive/$version/$name-$version.tar.gz"
+source="https://github.com/leethomason/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cmake -B build -S $name-$version -G Ninja \
-    		-DCMAKE_INSTALL_PREFIX=/usr \
-    		-Dtinyxml2_SHARED_LIBS=ON
-  	cmake --build build	
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -Dtinyxml2_SHARED_LIBS=ON
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }

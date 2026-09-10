@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Seat management daemon and library "
+description="Seat management daemon and library"
 homepage="https://git.sr.ht/~kennylevinsen/seatd"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 

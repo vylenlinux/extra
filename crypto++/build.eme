@@ -1,15 +1,22 @@
-description="A free C++ class library of cryptographic schemes "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A free C++ class library of cryptographic schemes"
 homepage="https://www.cryptopp.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=crypto++
 version=8.9.0
-_v=$(echo $version | sed 's/\./_/g')
 release=1
-source="$name-$version.tar.gz::https://github.com/weidai11/cryptopp/archive/CRYPTOPP_${_v}.tar.gz"
+
+_version="$(printf "%s" "${version}" | sed 's/\./_/g')"
+source="${name}-${version}.tar.gz::https://github.com/weidai11/cryptopp/archive/CRYPTOPP_${_version}.tar.gz"
         
 build() {
-	cd cryptopp-CRYPTOPP_${_v}
-	make PREFIX="/usr" all libcryptopp.pc
-	make DESTDIR=$PKG PREFIX="/usr" install
+    # shellcheck disable=SC2164
+    cd "cryptopp-CRYPTOPP_${_version}"
+    export PREFIX=/usr
+
+    make all libcryptopp.pc
+    make DESTDIR="${PKG}" install
 }

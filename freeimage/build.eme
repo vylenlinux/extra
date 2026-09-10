@@ -1,35 +1,42 @@
-description="Library project for developers who would like to support popular graphics image formats "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Library project for developers who would like to support popular graphics image formats"
 homepage="http://freeimage.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeimage
 version=3.18.0
-vrsn=$(printf "$version" | sed 's/\.//g')
 release=1
-source="https://downloads.sourceforge.net/project/freeimage/Source%20Distribution/${version}/FreeImage${vrsn}.zip
-	freeimage-unbundle.patch
-        freeimage-libraw-0.20.patch
-        freeimage-libraw-0.21.patch"
-_portdir=$PWD
+
+_version="$(printf "%s" "${version}" | sed 's/\.//g')"
+
+source="${name}-${version}.zip::https://downloads.sourceforge.net/project/${name}/Source%20Distribution/${version}/FreeImage${_version}.zip
+    ${name}-unbundle.patch
+    ${name}-libraw-0.20.patch
+    ${name}-libraw-0.21.patch"
 
 build() {
-	cd FreeImage
+    # shellcheck disable=SC2164
+    cd FreeImage
 
-	patch -Np1 -i $SRC/freeimage-unbundle.patch # Unbundle libraries (Fedora)
-	rm -r Source/Lib* Source/ZLib Source/OpenEXR
+    rm -r Source/Lib* \
+        Source/ZLib \
+        Source/OpenEXR
 
-	> Source/FreeImage/PluginG3.cpp
-	> Source/FreeImageToolkit/JPEGTransform.cpp
+    : > Source/FreeImage/PluginG3.cpp
+    : > Source/FreeImageToolkit/JPEGTransform.cpp
 
-	patch -Np1 -i $SRC/freeimage-libraw-0.20.patch # Fix build with libraw 0.20
-	patch -Np1 -i $SRC/freeimage-libraw-0.21.patch # Fix build with libraw 0.21
+    patch -Np1 -i "${SRC}/${name}-unbundle.patch"    # Unbundle libraries
+    patch -Np1 -i "${SRC}/${name}-libraw-0.20.patch" # Fix build with libraw 0.20
+    patch -Np1 -i "${SRC}/${name}-libraw-0.21.patch" # Fix build with libraw 0.21
 
-	sh gensrclist.sh
-	sh genfipsrclist.sh
-  	make -f Makefile.gnu
-  	make -f Makefile.fip
+    sh gensrclist.sh
+    sh genfipsrclist.sh
 
-	make -f Makefile.gnu DESTDIR=$PKG install
-	make -f Makefile.fip DESTDIR=$PKG install
+    make -f Makefile.gnu
+    make -f Makefile.fip
+
+    make -f Makefile.gnu DESTDIR="${PKG}" install
+    make -f Makefile.fip DESTDIR="${PKG}" install
 }
-

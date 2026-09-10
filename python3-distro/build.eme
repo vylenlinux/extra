@@ -1,18 +1,22 @@
-description="Linux OS platform information API "
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Linux OS platform information API"
 homepage="https://github.com/python-distro/distro"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-distro
 version=1.9.0
 release=1
-source="$name-$version.tar.gz::https://github.com/nir0s/distro/archive/v${version}/python-distro-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/nir0s/distro/archive/v${version}/python-distro-${version}.tar.gz"
 
 build() {
-	cd distro-$version
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
+    # shellcheck disable=SC2164
+    cd "distro-${version}"
 
-	python3 -m installer -d $PKG \
-		.dist/distro-*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }

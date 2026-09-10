@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # shellcheck disable=SC2034
-description="Tiling Wayland compositor and replacement for the i3 window manager "
+description="Tiling Wayland compositor and replacement for the i3 window manager"
 homepage="https://github.com/swaywm/sway"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
