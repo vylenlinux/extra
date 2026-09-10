@@ -1,5 +1,5 @@
 name = "kwin-x11"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kwin-x11"
+[kde]
+product = "plasma"

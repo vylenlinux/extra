@@ -1,5 +1,5 @@
 name = "plasma-workspace-wallpapers"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-workspace-wallpapers"
+[kde]
+product = "plasma"

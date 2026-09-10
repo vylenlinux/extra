@@ -1,5 +1,5 @@
 name = "libksysguard"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "libksysguard"
+[kde]
+product = "plasma"

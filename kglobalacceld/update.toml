@@ -1,5 +1,5 @@
 name = "kglobalacceld"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kglobalacceld"
+[kde]
+product = "plasma"

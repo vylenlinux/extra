@@ -1,2 +1,5 @@
 name = "plasma-meta"
-provider = "manual"
+provider = "kde"
+
+[kde]
+product = "plasma"

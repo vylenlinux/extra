@@ -1,5 +1,5 @@
 name = "plasma-firewall"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-firewall"
+[kde]
+product = "plasma"

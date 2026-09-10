@@ -1,5 +1,5 @@
 name = "kactivitymanagerd"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kactivitymanagerd"
+[kde]
+product = "plasma"

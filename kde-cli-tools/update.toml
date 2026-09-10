@@ -1,5 +1,5 @@
 name = "kde-cli-tools"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kde-cli-tools"
+[kde]
+product = "plasma"

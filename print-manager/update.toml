@@ -1,5 +1,5 @@
 name = "print-manager"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "print-manager"
+[kde]
+product = "plasma"

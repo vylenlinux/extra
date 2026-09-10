@@ -1,5 +1,5 @@
 name = "milou"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "milou"
+[kde]
+product = "plasma"

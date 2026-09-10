@@ -1,5 +1,5 @@
 name = "powerdevil"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "powerdevil"
+[kde]
+product = "plasma"

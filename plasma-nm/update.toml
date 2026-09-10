@@ -1,5 +1,5 @@
 name = "plasma-nm"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-nm"
+[kde]
+product = "plasma"

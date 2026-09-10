@@ -1,5 +1,5 @@
 name = "kmenuedit"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kmenuedit"
+[kde]
+product = "plasma"

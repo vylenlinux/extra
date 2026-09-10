@@ -1,5 +1,5 @@
 name = "kwallet-pam"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kwallet-pam"
+[kde]
+product = "plasma"

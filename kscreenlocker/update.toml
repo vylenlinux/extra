@@ -1,5 +1,5 @@
 name = "kscreenlocker"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kscreenlocker"
+[kde]
+product = "plasma"

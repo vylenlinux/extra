@@ -1,5 +1,5 @@
 name = "layer-shell-qt"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "layer-shell-qt"
+[kde]
+product = "plasma"

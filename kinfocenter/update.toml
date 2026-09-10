@@ -1,5 +1,5 @@
 name = "kinfocenter"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kinfocenter"
+[kde]
+product = "plasma"

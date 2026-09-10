@@ -1,5 +1,5 @@
 name = "systemsettings"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "systemsettings"
+[kde]
+product = "plasma"

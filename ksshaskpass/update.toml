@@ -1,5 +1,5 @@
 name = "ksshaskpass"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ksshaskpass"
+[kde]
+product = "plasma"

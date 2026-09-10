@@ -1,5 +1,5 @@
 name = "kgamma"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kgamma"
+[kde]
+product = "plasma"

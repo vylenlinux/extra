@@ -1,5 +1,5 @@
 name = "kde-gtk-config"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kde-gtk-config"
+[kde]
+product = "plasma"

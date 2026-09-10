@@ -1,5 +1,5 @@
 name = "xdg-desktop-portal-kde"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "xdg-desktop-portal-kde"
+[kde]
+product = "plasma"

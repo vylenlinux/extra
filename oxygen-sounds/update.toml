@@ -1,5 +1,5 @@
 name = "oxygen-sounds"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "oxygen-sounds"
+[kde]
+product = "plasma"

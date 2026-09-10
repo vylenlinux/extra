@@ -1,5 +1,5 @@
 name = "kpipewire"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kpipewire"
+[kde]
+product = "plasma"

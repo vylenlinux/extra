@@ -1,5 +1,5 @@
 name = "breeze"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "breeze"
+[kde]
+product = "plasma"

@@ -1,5 +1,5 @@
 name = "ksystemstats"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ksystemstats"
+[kde]
+product = "plasma"

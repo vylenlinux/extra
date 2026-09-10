@@ -1,5 +1,5 @@
 name = "plasma-activities-stats"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-activities-stats"
+[kde]
+product = "plasma"

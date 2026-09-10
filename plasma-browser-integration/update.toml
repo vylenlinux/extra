@@ -1,5 +1,5 @@
 name = "plasma-browser-integration"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-browser-integration"
+[kde]
+product = "plasma"

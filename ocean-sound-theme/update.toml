@@ -1,5 +1,5 @@
 name = "ocean-sound-theme"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ocean-sound-theme"
+[kde]
+product = "plasma"

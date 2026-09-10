@@ -1,5 +1,5 @@
 name = "kscreen"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kscreen"
+[kde]
+product = "plasma"
