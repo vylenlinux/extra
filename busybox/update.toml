@@ -1,5 +1,0 @@
-name = "busybox"
-provider = "repology"
-
-[source]
-package = "busybox"
