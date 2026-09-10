@@ -6,7 +6,7 @@ homepage="https://kde.org/plasma-desktop/"
 maintainer="Vylen Linux Team"
 
 name=plasma-wayland-protocols
-version=1.21.0
+version=1.22.0
 release=1
 source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
