@@ -1,5 +1,5 @@
 name = "bluez-qt"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "bluez-qt"
+[kde]
+product = "frameworks"

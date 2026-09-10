@@ -1,5 +1,5 @@
 name = "kcoreaddons"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcoreaddons"
+[kde]
+product = "frameworks"

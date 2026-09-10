@@ -1,5 +1,5 @@
 name = "karchive"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "karchive"
+[kde]
+product = "frameworks"

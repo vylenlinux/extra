@@ -1,5 +1,5 @@
 name = "frameworkintegration"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "frameworkintegration"
+[kde]
+product = "frameworks"

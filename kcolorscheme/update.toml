@@ -1,5 +1,5 @@
 name = "kcolorscheme"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcolorscheme"
+[kde]
+product = "frameworks"

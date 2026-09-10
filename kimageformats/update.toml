@@ -1,5 +1,5 @@
 name = "kimageformats"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kimageformats"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "kiconthemes"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kiconthemes"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "kuserfeedback"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kuserfeedback"
+[kde]
+product = "frameworks"

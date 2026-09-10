@@ -1,5 +1,5 @@
 name = "kio"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kio"
+[kde]
+product = "frameworks"

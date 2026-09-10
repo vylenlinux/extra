@@ -1,5 +1,5 @@
 name = "modemmanager-qt"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "modemmanager-qt"
+[kde]
+product = "frameworks"

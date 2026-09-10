@@ -1,5 +1,5 @@
 name = "qqc2-desktop-style"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "qqc2-desktop-style"
+[kde]
+product = "frameworks"

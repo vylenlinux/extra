@@ -1,5 +1,5 @@
 name = "breeze-icons"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "breeze-icons"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "kcmutils"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcmutils"
+[kde]
+product = "frameworks"

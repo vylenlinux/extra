@@ -1,5 +1,5 @@
 name = "kconfigwidgets"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kconfigwidgets"
+[kde]
+product = "frameworks"

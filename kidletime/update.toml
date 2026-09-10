@@ -1,5 +1,5 @@
 name = "kidletime"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kidletime"
+[kde]
+product = "frameworks"

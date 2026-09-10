@@ -23,3 +23,8 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 }
+
+
+for x in $packages
+    printf 'name = "%s"\nprovider = "kde"\n\n[kde]\nproduct = "plasma"\n' "$x" > $x/update.toml
+end

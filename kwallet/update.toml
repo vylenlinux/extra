@@ -1,5 +1,5 @@
 name = "kwallet"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kwallet"
+[kde]
+product = "frameworks"

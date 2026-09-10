@@ -1,5 +1,5 @@
 name = "kconfig"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kconfig"
+[kde]
+product = "frameworks"

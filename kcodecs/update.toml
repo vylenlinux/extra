@@ -1,5 +1,5 @@
 name = "kcodecs"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcodecs"
+[kde]
+product = "frameworks"

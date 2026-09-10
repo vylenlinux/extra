@@ -1,5 +1,5 @@
 name = "kglobalaccel"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kglobalaccel"
+[kde]
+product = "frameworks"

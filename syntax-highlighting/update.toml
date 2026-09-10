@@ -1,5 +1,5 @@
 name = "syntax-highlighting"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "syntax-highlighting"
+[kde]
+product = "frameworks"

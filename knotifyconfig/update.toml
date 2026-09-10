@@ -1,5 +1,5 @@
 name = "knotifyconfig"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "knotifyconfig"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "kstatusnotifieritem"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kstatusnotifieritem"
+[kde]
+product = "frameworks"

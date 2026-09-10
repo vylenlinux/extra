@@ -1,5 +1,5 @@
 name = "knotifications"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "knotifications"
+[kde]
+product = "frameworks"

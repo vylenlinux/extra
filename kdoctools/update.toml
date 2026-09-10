@@ -1,5 +1,5 @@
 name = "kdoctools"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdoctools"
+[kde]
+product = "frameworks"

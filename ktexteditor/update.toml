@@ -1,5 +1,5 @@
 name = "ktexteditor"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ktexteditor"
+[kde]
+product = "frameworks"

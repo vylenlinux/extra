@@ -1,5 +1,5 @@
 name = "threadweaver"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "threadweaver"
+[kde]
+product = "frameworks"

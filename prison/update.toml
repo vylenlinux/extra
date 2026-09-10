@@ -1,5 +1,5 @@
 name = "prison"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "prison"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "syndication"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "syndication"
+[kde]
+product = "frameworks"

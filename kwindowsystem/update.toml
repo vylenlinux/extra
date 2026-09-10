@@ -1,5 +1,5 @@
 name = "kwindowsystem"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kwindowsystem"
+[kde]
+product = "frameworks"

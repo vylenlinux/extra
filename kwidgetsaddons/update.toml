@@ -1,5 +1,5 @@
 name = "kwidgetsaddons"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kwidgetsaddons"
+[kde]
+product = "frameworks"

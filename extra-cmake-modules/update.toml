@@ -1,5 +1,5 @@
 name = "extra-cmake-modules"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "extra-cmake-modules"
+[kde]
+product = "frameworks"

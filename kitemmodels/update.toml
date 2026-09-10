@@ -1,5 +1,5 @@
 name = "kitemmodels"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kitemmodels"
+[kde]
+product = "frameworks"

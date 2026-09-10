@@ -1,5 +1,5 @@
 name = "kmime"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kmime"
+[kde]
+product = "frameworks"

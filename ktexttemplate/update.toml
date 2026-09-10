@@ -1,5 +1,5 @@
 name = "ktexttemplate"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ktexttemplate"
+[kde]
+product = "frameworks"

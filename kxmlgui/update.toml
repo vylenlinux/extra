@@ -1,5 +1,5 @@
 name = "kxmlgui"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kxmlgui"
+[kde]
+product = "frameworks"

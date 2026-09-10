@@ -1,5 +1,5 @@
 name = "kbookmarks"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kbookmarks"
+[kde]
+product = "frameworks"

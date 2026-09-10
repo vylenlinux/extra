@@ -1,5 +1,5 @@
 name = "kirigami"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kirigami"
+[kde]
+product = "frameworks"

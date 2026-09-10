@@ -1,5 +1,5 @@
 name = "kcalendarcore"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcalendarcore"
+[kde]
+product = "frameworks"

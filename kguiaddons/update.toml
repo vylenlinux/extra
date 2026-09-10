@@ -1,5 +1,5 @@
 name = "kguiaddons"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kguiaddons"
+[kde]
+product = "frameworks"

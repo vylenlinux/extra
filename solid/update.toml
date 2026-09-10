@@ -1,5 +1,5 @@
 name = "solid"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kf6-solid"
+[kde]
+product = "frameworks"

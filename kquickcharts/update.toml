@@ -1,5 +1,5 @@
 name = "kquickcharts"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kquickcharts"
+[kde]
+product = "frameworks"

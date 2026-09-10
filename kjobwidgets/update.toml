@@ -1,5 +1,5 @@
 name = "kjobwidgets"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kjobwidgets"
+[kde]
+product = "frameworks"

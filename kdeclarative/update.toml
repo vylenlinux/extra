@@ -1,5 +1,5 @@
 name = "kdeclarative"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdeclarative"
+[kde]
+product = "frameworks"

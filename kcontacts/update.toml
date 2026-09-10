@@ -1,5 +1,5 @@
 name = "kcontacts"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kcontacts"
+[kde]
+product = "frameworks"

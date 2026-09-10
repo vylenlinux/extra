@@ -1,5 +1,5 @@
 name = "kunitconversion"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kunitconversion"
+[kde]
+product = "frameworks"

@@ -1,5 +1,5 @@
 name = "ki18n"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ki18n"
+[kde]
+product = "frameworks"

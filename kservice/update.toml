@@ -1,5 +1,5 @@
 name = "kservice"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kservice"
+[kde]
+product = "frameworks"

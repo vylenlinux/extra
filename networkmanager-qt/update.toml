@@ -1,5 +1,5 @@
 name = "networkmanager-qt"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "networkmanager-qt"
+[kde]
+product = "frameworks"

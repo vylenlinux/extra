@@ -1,5 +1,5 @@
 name = "kdav"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdav"
+[kde]
+product = "frameworks"

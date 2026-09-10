@@ -1,5 +1,5 @@
 name = "kdnssd"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdnssd"
+[kde]
+product = "frameworks"

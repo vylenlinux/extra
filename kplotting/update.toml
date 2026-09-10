@@ -1,5 +1,5 @@
 name = "kplotting"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kplotting"
+[kde]
+product = "frameworks"

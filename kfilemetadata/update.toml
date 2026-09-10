@@ -1,5 +1,5 @@
 name = "kfilemetadata"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kfilemetadata"
+[kde]
+product = "frameworks"
