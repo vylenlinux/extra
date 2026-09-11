@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=urcu
 version=0.15.7
 release=1
-source="${name}-${version}.tar.bz2::https://lttng.org/files/urcu/userspace-rcu-${version}.tar.bz2"
+source="${name}-${version}.tar.bz2::https://lttng.org/files/${name}/userspace-rcu-${version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
