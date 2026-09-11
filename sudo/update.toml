@@ -1,6 +1,7 @@
 name = "sudo"
-provider = "ftp"
+provider = "repology"
 
-[ftp]
+[source]
+package = "sudo"
 url = "https://www.sudo.ws/dist/"
 filename = "sudo-{version}.tar.gz"
