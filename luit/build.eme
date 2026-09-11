@@ -1,23 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Filter that can be run between an arbitrary application and a UTF-8 terminal emulator"
 homepage="https://invisible-island.net/luit/luit.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=luit
-version=1.1.1
+version=20260907
 release=1
-source="http://ftp.x.org/pub/individual/app/luit-$version.tar.bz2"
+source="https://invisible-mirror.net/archives/${name}/${name}-${version}.tgz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -i -e "/D_XOPEN/s/5/6/" configure
+    ./configure \
+        --prefix=/usr \
+        --enable-fontenc
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 }
-
