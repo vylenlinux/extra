@@ -6,7 +6,7 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libshumate
-version=1.6.3
+version=1.7.0
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
