@@ -1,15 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="LGPLv2.1 userspace RCU (read-copy-update) library"
 homepage="https://lttng.org/urcu"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=urcu
-version=0.15.6
+version=0.15.7
 release=1
-source="https://lttng.org/files/urcu/userspace-rcu-$version.tar.bz2"
+source="${name}-${version}.tar.bz2::https://lttng.org/files/urcu/userspace-rcu-${version}.tar.bz2"
 
 build() {
-	cd userspace-rcu-$version
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "userspace-rcu-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
 }
