@@ -2,13 +2,13 @@
 
 # shellcheck disable=SC2034
 description="An extremely fast and small background setter for X."
-homepage="http://github.com/Gottox/bgs"
+homepage="https://github.com/Gottox/bgs"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bgs
 version=0.8
 release=1
-source="http://github.com/Gottox/${name}/archive/v${version}/${name}-${version}.tar.gz"
+source="https://github.com/Gottox/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

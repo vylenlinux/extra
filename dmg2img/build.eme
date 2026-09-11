@@ -2,21 +2,23 @@
 
 # shellcheck disable=SC2034
 description="A CLI tool to uncompress Apple's compressed DMG files to the HFS+ IMG format"
-homepage="http://vu1tur.eu.org/tools/"
+homepage="https://vu1tur.eu.org/tools/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dmg2img
 version=1.6.7
 release=1
 
-source="http://vu1tur.eu.org/tools/${name}-${version}.tar.gz
+source="https://vu1tur.eu.org/tools/${name}-${version}.tar.gz
     0001-openssl-1.1-compatibility.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    export PREFIX=/usr
     patch -Np1 --ignore-whitespace -i "${SRC}/0001-openssl-1.1-compatibility.patch"
 
-    make PREFIX=/usr
-    make PREFIX=/usr DESTDIR="${PKG}" install
+    make
+    make DESTDIR="${PKG}" install
 }

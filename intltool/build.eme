@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="An internationalization tool used for extracting translatable strings from source files"
 homepage="https://launchpad.net/intltool"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,14 +8,14 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=intltool
 version=0.51.0
 release=1
-source="http://launchpad.net/intltool/trunk/$version/+download/$name-$version.tar.gz"
+source="https://launchpad.net/${name}/trunk/${version}/+download/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 
-	sed -i 's:\\\${:\\\$\\{:' intltool-update.in
-
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    ./configure --prefix=/usr
+    make
+    make DESTDIR="${PKG}" install
 }
