@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Perl/CPAN Module Parse::Yapp : Generates OO LALR parser modules"
 homepage="https://search.cpan.org/dist/Parse-Yapp"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,11 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=perl-parse-yapp
 version=1.21
 release=1
-source="$name-$version.tar.gz::https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/W/WB/WBRASWELL/Parse-Yapp-${version}.tar.gz"
 
 build() {
-	cd Parse-Yapp-$version
-	PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "Parse-Yapp-${version}"
+    perl Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
 }

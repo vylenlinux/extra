@@ -13,7 +13,7 @@ source="${name}-${version}.tar.gz::http://cpan.metacpan.org/authors/id/T/TO/TODD
 build() {
     # shellcheck disable=SC2164
     cd "XML-Parser-${version}"
-    perl Makefile.PL INSTALLDIRS=vendor
+    perl Makefile.PL
 
     make
     make DESTDIR="${PKG}" install

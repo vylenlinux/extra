@@ -13,7 +13,7 @@ source="${name}-${version}.tar.gz::https://cpan.org/modules/by-module/File/File-
 build() {
     # shellcheck disable=SC2164
     cd "File-ShareDir-Install-${version}"
-    PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+    perl Makefile.PL
 
     make
     make DESTDIR="${PKG}" install

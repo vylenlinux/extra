@@ -13,14 +13,14 @@ source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/I/IS/ISH
 build() {
     # shellcheck disable=SC2164
     cd "JSON-${version}"
-    PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
+    perl Makefile.PL
 
     make
-    make install DESTDIR="${PKG}"
+    make DESTDIR="${PKG}" install
 
     # shellcheck disable=SC2038
-    find "${PKG}" -name .packlist -o \
-        -name perllocal.pod -o \
+    find "${PKG}" \
         -name README -o \
-        -name '*.bs' | xargs rm
+        -name '*.bs' \
+    | xargs rm
 }

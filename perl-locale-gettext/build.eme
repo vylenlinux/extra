@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Perl bindings for POSIX i18n gettext functions"
 homepage="https://metacpan.org/release/Locale-gettext/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,13 +8,16 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=perl-locale-gettext
 version=1.07
 release=1
-source="https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/Locale-gettext-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/Locale-gettext-${version}.tar.gz"
 
 build() {
-	cd Locale-gettext-$version
-	export CFLAGS=$(perl -MConfig -E 'say $Config{ccflags}')
-	PERL_MM_USE_DEFAULT=1 perl -I. Makefile.PL INSTALLDIRS=vendor
-	make
-	make DESTDIR=$PKG install
-	find $PKG \( -name perllocal.pod -o -name .packlist \) -delete
+    # shellcheck disable=SC2164
+    cd "Locale-gettext-${version}"
+
+    # shellcheck disable=SC2155
+    export CFLAGS="$(perl -MConfig -E 'say $Config{ccflags}')"
+    perl -I. Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
 }

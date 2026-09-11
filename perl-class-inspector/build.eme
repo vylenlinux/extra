@@ -13,7 +13,7 @@ source="${name}-${version}.tar.gz::https://search.cpan.org/CPAN/authors/id/P/PL/
 build() {
     # shellcheck disable=SC2164
     cd "Class-Inspector-${version}"
-    perl Makefile.PL INSTALLDIRS=vendor
+    perl Makefile.PL
 
     make
     make DESTDIR="${PKG}" install
