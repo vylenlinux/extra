@@ -505,7 +505,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-78a860cbeb18a5cfe24d9c09c19fecc3.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-9b558d3613687e2a14dcdfe24523482d.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
@@ -659,6 +659,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/aftonbladet.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/agoda_com.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/airbnb.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/ajio.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/aliexpress_com.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/allegro_pl.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/amazon_com.png
@@ -698,6 +699,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/expressen.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/facebook.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/finn_no.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/flipkart.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/fnac_com.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/forum.ge.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/furunavi.png
@@ -741,6 +743,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/lynkco-colab.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/lynkco.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/macys_com.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/makemytrip.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/malaysiakini_com.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/mbl_is.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/mediaexpert_pl.png
@@ -761,6 +764,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/npo.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/nrk.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/nvidia.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/nykaa.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/nzherald.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/onliner_by.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/favicons/orf.png
@@ -877,6 +881,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_accuweather.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_af_iol_co_za.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_airbnb.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_ajio.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_aliexpress.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_amazon.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_ar_ae_khaleej.png
@@ -1040,6 +1045,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_lamoda.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_lt_delfi.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_lu_lb.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_makemytrip.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_mg_lexpress.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_microsoft365.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_mk_sg_st.png
@@ -1063,6 +1069,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_no_cdon.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_nos.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_npo.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_nykaa.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_nz_stuff.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_outlook.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/sd_overstock.png
