@@ -7,3 +7,4 @@ package = "gtk"
 [repology]
 match_name = "gtk3"
 version_prefix = "3."
+ignore_versions = ["3.24.52-1"]
