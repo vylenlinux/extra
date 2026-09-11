@@ -1,24 +1,29 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The Berkeley DB embedded database system"
 homepage="https://www.oracle.com/technology/software/products/berkeley-db/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=db
-version=6.2.32
+version=18.1.40
 release=1
-source="http://download.oracle.com/berkeley-db/${name}-${version}.tar.gz"
+source="https://download.oracle.com/otn/berkeley-db/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	cd build_unix
-	export CFLAGS="$CFLAGS -Wno-incompatible-pointer-types"
-	../dist/configure \
-		--prefix=/usr \
-		--enable-compat185 \
-		--disable-static \
-		--enable-cxx \
-		--enable-dbm
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}/build_unix"
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
 
-	rm -r $PKG/usr/docs
+    ../dist/configure \
+        --prefix=/usr \
+        --enable-compat185 \
+        --disable-static \
+        --enable-cxx \
+        --enable-dbm
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm -rf "${PKG}/usr/docs"
 }
