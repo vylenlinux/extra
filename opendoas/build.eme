@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A portable fork of the OpenBSD 'doas' command"
 homepage="https://github.com/Duncaen/OpenDoas"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -6,18 +9,22 @@ name=opendoas
 version=6.8.2
 release=1
 backup="etc/doas.conf"
-source="https://github.com/Duncaen/OpenDoas/releases/download/v$version/opendoas-$version.tar.xz
-	better-wayland-support.patch"
+
+source="https://github.com/Duncaen/${name}/releases/download/v${version}/${name}-${version}.tar.xz
+    better-wayland-support.patch
+    doas.conf"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/better-wayland-support.patch"
 
-	patch -Np1 -i $SRC/better-wayland-support.patch
+    ./configure \
+        --prefix=/usr \
+        --with-timestamp
 
-	./configure --prefix=/usr --without-pam
-	make
-	make DESTDIR=$PKG install
+    make
+    make DESTDIR="${PKG}" install
 
-	mkdir -p $PKG/etc
-	echo "permit :wheel" > $PKG/etc/doas.conf
+    install -Dm644 "${SRC}/doas.conf" -t "${PKG}/etc/"
 }
