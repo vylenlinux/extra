@@ -6,7 +6,7 @@ homepage="https://github.com/google/shaderc"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=shaderc
-version=2026.3
+version=2026.4
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/v${version}/${name}-v${version}.tar.gz
