@@ -1,5 +1,6 @@
 name = "glibmm"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "glibmm"
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/glibmm"

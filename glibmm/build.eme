@@ -6,7 +6,7 @@ homepage="https://www.gtkmm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glibmm
-version=2.88.1
+version=2.89.1
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
