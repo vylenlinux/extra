@@ -9,12 +9,12 @@ name=dmg2img
 version=1.6.7
 release=1
 
-source="https://vu1tur.eu.org/tools/${name}-${version}.tar.gz
+source="${name}-${version}.tar.xz::https://archive.ubuntu.com/ubuntu/pool/universe/d/${name}/${name}_${version}+git20201227.a3e4134.orig.tar.xz
     0001-openssl-1.1-compatibility.patch"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}-${version}+git20201227.a3e4134"
 
     export PREFIX=/usr
     patch -Np1 --ignore-whitespace -i "${SRC}/0001-openssl-1.1-compatibility.patch"
