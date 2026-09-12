@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Not Erik's Windowing Toolkit - text mode windowing with slang"
 homepage="https://pagure.io/newt"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,20 +8,24 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=newt
 version=0.52.25
 release=1
-source="http://fedorahosted.org/releases/n/e/newt/$name-$version.tar.gz"
+source="https://releases.pagure.org/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -e 's/^LIBNEWT =/#&/' \
-	    -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
-	    -e 's/$(LIBNEWT)/$(LIBNEWTSONAME)/g' \
-	    -i Makefile.in
+    # shellcheck disable=SC2016
+    sed \
+        -e 's/^LIBNEWT =/#&/' \
+        -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
+        -e 's/$(LIBNEWT)/$(LIBNEWTSONAME)/g' \
+    -i Makefile.in
 
-	./configure --prefix=/usr \
-		    --with-gpm-support  \
-		    --without-tcl
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-gpm-support  \
+        --without-tcl
 
+    make
+    make DESTDIR="${PKG}" install
 }
