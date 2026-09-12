@@ -6,7 +6,7 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=thunar
-version=4.20.9
+version=4.20.10
 release=1
 source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
 
