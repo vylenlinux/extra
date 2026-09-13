@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/pypa/setuptools-scm"
 
 name=python3-vcs-versioning
-version=2.3.4
+version=2.4.0
 release=1
 source="${name}-${version}.tar.gz::https://pypi.org/packages/source/v/vcs_versioning/vcs_versioning-${version}.tar.gz"
 
