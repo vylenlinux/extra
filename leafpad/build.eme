@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A notepad clone for GTK+ 2.0"
 homepage="http://tarot.freeshell.org/leafpad/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,13 +8,16 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=leafpad
 version=0.8.19
 release=1
-source="http://savannah.nongnu.org/download/$name/$name-$version.tar.gz"
+source="https://ftp.cc.uoc.gr/mirrors/nongnu.org/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-		    --enable-chooser
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
+    ./configure \
+        --prefix=/usr \
+        --enable-chooser
+
+    make
+    make DESTDIR="${PKG}" install
 }
