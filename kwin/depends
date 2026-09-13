@@ -9,3 +9,4 @@ libdisplay-info
 pipewire
 xwayland
 knighttime
+vulkan-icd-loader
