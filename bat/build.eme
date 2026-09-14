@@ -13,11 +13,11 @@ source="https://github.com/sharkdp/${name}/archive/v${version}/${name}-${version
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-	cargo update
+    cargo update
 
-	cargo build \
-	    --release \
-	    --locked
+    cargo build \
+        --release \
+        --locked
 
-	install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
+    install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
 }
