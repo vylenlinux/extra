@@ -1,23 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C library for x86 CPU detection and feature extraction"
 homepage="https://github.com/anrieff/libcpuid"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcpuid
-version=0.8.1
+version=0.8.2
 release=1
-source="https://github.com/anrieff/libcpuid/releases/download/v$version/$name-$version.tar.gz"
+source="https://github.com/anrieff/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-         cmake -S $name-$version -B build -G Ninja \
-		-DCMAKE_INSTALL_PREFIX=/usr \
-		-DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DLIBCPUID_ENABLE_DOCS=OFF \
-		-DLIBCPUID_BUILD_DRIVERS=OFF \
-		-Wno-dev 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DLIBCPUID_ENABLE_DOCS=OFF \
+        -DLIBCPUID_BUILD_DRIVERS=OFF \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
