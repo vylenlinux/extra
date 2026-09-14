@@ -1,5 +1,6 @@
 name = "libadwaita"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libadwaita"
+instance = "https://gitlab.gnome.org/"
+project = "gnome/libadwaita"
