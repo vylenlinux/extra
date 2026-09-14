@@ -1,0 +1,6 @@
+name = "ministream"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.gnome.org/"
+project = "gnome/ministream"
