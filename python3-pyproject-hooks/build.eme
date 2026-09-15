@@ -1,21 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A low-level library for calling build-backends in pyproject.toml-based project"
 homepage="https://github.com/pypa/pyproject-hooks"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
-_name=pyproject_hooks
 
 name=python3-pyproject-hooks
-version=1.2.0
+version=1.3.0
 release=1
-source="https://files.pythonhosted.org/packages/source/p/$_name/$_name-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pyproject_hooks/pyproject_hooks-${version}.tar.gz"
 
 build() {
-  cd $_name-$version
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		.dist/pyproject_hooks*.whl
+    # shellcheck disable=SC2164
+    cd "pyproject_hooks-${version}"
 
-	rm -rf $PKG/usr/lib/python*/site-packages/tomli-$version.dist-info/INSTALLER
-	rm -rf $PKG/usr/lib/python*/site-packages/tomli-$version.dist-info/REQUESTED
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
