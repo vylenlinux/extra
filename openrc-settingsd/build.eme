@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="System settings D-Bus service for OpenRC"
+homepage="https://gitlab.postmarketos.org/postmarketOS/openrc-settingsd"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=openrc-settingsd
+version=1.5.0
+release=1
+source="${name}-${version}.tar.gz::https://gitlab.postmarketos.org/postmarketOS/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-v${version}" build -Denv-update=''
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
