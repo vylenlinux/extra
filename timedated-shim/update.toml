@@ -1,6 +1,0 @@
-name = "timedated-shim"
-provider = "github"
-
-[source]
-owner = "NeuroMarshal"
-repo = "timedated-shim"
