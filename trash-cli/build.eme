@@ -1,30 +1,36 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Command line interface to the freedesktop.org trashcan."
 homepage="https://github.com/andreafrancia/trash-cli"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=trash-cli
-version=0.24.5.26
+version=0.26.9.14
 release=1
-source="$name-$version.tar.gz::https://github.com/andreafrancia/trash-cli/archive/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/andreafrancia/${name}/archive/${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	find tests -type f -name "*.py" -exec \
-        sed -i 's/^import mock$/from unittest import mock/;s/from mock /from unittest.mock /;s/from mock.mock /from unittest.mock /' {} +
+    find tests -type f -name "*.py" -exec sed -i 's/^import mock$/from unittest import mock/;s/from mock /from unittest.mock /;s/from mock.mock /from unittest.mock /' {} +
+    python3 setup.py build
 
-	python3 setup.py build
-	    for cmd in trash-empty trash-list trash-restore trash-put trash; do
-		sed -i 's|python|python3|' $cmd
-		./$cmd --print-completion bash > ./$cmd-completion
-		./$cmd --print-completion zsh > ./_$cmd-completion
-	    done
+    for cmd in trash-empty trash-list trash-restore trash-put trash; do
+        sed -i 's|python|python3|' "${cmd}"
 
-	python3 setup.py install --root=$PKG --optimize=1 --skip-build
+        "./${cmd}" --print-completion bash > "./${cmd}-completion"
+        "./${cmd}" --print-completion zsh > "./_${cmd}-completion"
+    done
 
-	    for cmd in trash-empty trash-list trash-restore trash-put trash; do
-		install -vDm 644 ./$cmd-completion $PKG/usr/share/bash-completion/completions/$cmd
-		install -vDm 644 ./_$cmd-completion $PKG/usr/share/zsh/site-functions/_$cmd
-	    done
+    python3 setup.py install \
+        --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 
+    for cmd in trash-empty trash-list trash-restore trash-put trash; do
+        install -Dm644 "./${cmd}-completion" "${PKG}/usr/share/bash-completion/completions/${cmd}"
+        install -Dm644 "./_${cmd}-completion" "${PKG}/usr/share/zsh/site-functions/_${cmd}"
+    done
 }
