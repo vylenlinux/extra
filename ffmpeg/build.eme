@@ -27,7 +27,6 @@ build() {
     add_opt libva vaapi
     add_opt nvidia-open cuda
     add_opt nvidia-open cuvid
-    add_opt nv-codec-headers nvenc
     add_opt amf-headers amf
     add_opt svt-av1 libsvtav1
     add_opt vulkan-icd-loader vulkan
@@ -68,6 +67,7 @@ build() {
         --enable-libx265 \
         --enable-libaom \
         --enable-libdav1d \
+	--enable-nvenc \
         ${_opt}
 
     make
