@@ -60,6 +60,7 @@ drwxr-xr-x root/root    usr/lib/wireplumber-0.5/
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-default-nodes-api.so
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-file-monitor-api.so
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-log-settings.so
+-rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-logind.so
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-lua-scripting.so
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-mixer-api.so
 -rwxr-xr-x root/root    usr/lib/wireplumber-0.5/libwireplumber-module-modem-manager.so
