@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="FFmpeg nvidia headers"
+homepage="https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=nv-codec-headers
+version=13.1.15.0
+release=1
+source="https://github.com/FFmpeg/${name}/releases/download/n${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    make PREFIX=/usr DESTDIR="${PKG}" install
+}

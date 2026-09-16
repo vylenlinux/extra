@@ -1,0 +1,5 @@
+name = "nv-codec-headers"
+provider = "repology"
+
+[source]
+package = "nv-codec-headers"
