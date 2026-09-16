@@ -6,7 +6,7 @@ homepage="http://pycurl.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycurl
-version=7.47.0
+version=7.48.0
 release=1
 
 _version="$(printf '%s' "${version}" | tr '.' '_')"
@@ -16,8 +16,8 @@ build() {
     # shellcheck disable=SC2164
     cd "pycurl-REL_${_version}"
 
-    CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" python3 setup.py \
-        --with-openssl install \
+    python3 setup.py install \
+        --with-openssl \
         --root="${PKG}" \
         --skip-build
 }
