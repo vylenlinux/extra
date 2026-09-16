@@ -15,8 +15,6 @@ source="${name}-${version}.tar.xz::https://archive.ubuntu.com/ubuntu/pool/univer
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}+git20201227.a3e4134"
-
-    export PREFIX=/usr
     patch -Np1 --ignore-whitespace -i "${SRC}/0001-openssl-1.1-compatibility.patch"
 
     make
