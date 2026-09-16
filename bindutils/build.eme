@@ -16,7 +16,6 @@ build() {
     # shellcheck disable=SC2164
     cd "bind-${version}"
     patch -Np1 -i "${SRC}/utils.patch"
-    cat bin/Makefile.in
 
     ./configure \
         --prefix=/usr \
