@@ -19,7 +19,6 @@ build() {
         -Dgoa=false \
         -Dgoogle=false \
         -Dgphoto2=false \
-        -Dlogind=false \
         -Dmtp=true \
         -Dnfs=false \
         -Donedrive=false \
