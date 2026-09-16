@@ -6,7 +6,7 @@ homepage="https://mupdf.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mupdf
-version=1.28.3
+version=1.28.4
 release=1
 source="${name}-${version}.tar.gz::https://mupdf.com/downloads/archive/${name}-${version}-source.tar.gz"
 
