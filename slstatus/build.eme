@@ -13,8 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/drkhsh/${name}/archive/ref
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    export PREFIX=/usr
 
     make
-    make DESTDIR="${PKG}" install
+    make PREFIX=/usr DESTDIR="${PKG}" install
 }
