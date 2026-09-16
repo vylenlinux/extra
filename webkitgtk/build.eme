@@ -6,22 +6,23 @@ homepage="https://webkitgtk.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=webkitgtk
-version=2.52.6
+version=2.54.0
 release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
     # failed build with ccache, remove reom path
-    PATH="$(printf "%s\n" "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {
+    PATH="$(printf "%s" "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {
         next;
     } {
         print;
     }' | sed 's/:*$//')"
 
     # build with GCC
-    export CC=gcc CXX=g++
+    export CC=gcc
+    export CXX=g++
     export CFLAGS="-O2 -pipe -march=x86-64 -fno-lto"
-    export CXXFLAGS="-O2 -pipe -march=x86-64 -std=gnu++20 -fno-lto -Wno-error"
+    export CXXFLAGS="-O2 -pipe -march=x86-64 -fno-lto -Wno-error"
 
     # shellcheck disable=SC2164
     cd "${name}-${version}"
@@ -46,7 +47,6 @@ build() {
         -DUSE_GTK4=OFF \
         -DUSE_LIBBACKTRACE=OFF \
         -DUSE_LIBHYPHEN=OFF \
-        -DUSE_SOUP2=OFF \
         -DUSE_WOFF2=OFF \
         -DUSE_SYSTEM_SYSPROF_CAPTURE=NO \
         -Wno-dev
