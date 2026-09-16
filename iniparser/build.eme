@@ -6,7 +6,7 @@ homepage="http://ndevilla.free.fr/iniparser/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iniparser
-version=4.2.6
+version=4.3.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/ndevilla/${name}/archive/v${version}.tar.gz"
 
@@ -17,8 +17,6 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DOPTION=ON/OFF \
         -Wno-dev
 
     cmake --build build

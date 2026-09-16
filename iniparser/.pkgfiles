@@ -3,6 +3,7 @@ drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/iniparser/
 -rw-r--r-- root/root    usr/include/iniparser/dictionary.h
 -rw-r--r-- root/root    usr/include/iniparser/iniparser.h
+-rw-r--r-- root/root    usr/include/iniparser/version.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/iniparser/
@@ -14,7 +15,7 @@ drwxr-xr-x root/root    usr/lib/cmake/iniparser/
 -rw-r--r-- root/root    usr/lib/cmake/iniparser/iniparser-staticTargets.cmake
 -rw-r--r-- root/root    usr/lib/libiniparser.a
 lrwxrwxrwx root/root    usr/lib/libiniparser.so -> libiniparser.so.4
-lrwxrwxrwx root/root    usr/lib/libiniparser.so.4 -> libiniparser.so.4.2.6
--rwxr-xr-x root/root    usr/lib/libiniparser.so.4.2.6
+lrwxrwxrwx root/root    usr/lib/libiniparser.so.4 -> libiniparser.so.4.3.0
+-rwxr-xr-x root/root    usr/lib/libiniparser.so.4.3.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/iniparser.pc
