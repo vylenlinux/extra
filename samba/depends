@@ -8,4 +8,3 @@ tdb
 talloc
 dbus
 perl-json
-perl-parse-yapp
