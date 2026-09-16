@@ -12,9 +12,9 @@ source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/${name}/archive/${v
 
 build() {
     # doing the lto dance
-    export CFLAGS='-O3 \
+    export CFLAGS="-O3 \
         -Wno-missing-profile \
-        -Wno-error'
+        -Wno-error"
 
     vylen-meson "${name}" build \
         -Dgrapheme-clustering=enabled \
