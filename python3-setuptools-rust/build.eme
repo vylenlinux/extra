@@ -13,7 +13,6 @@ source="${name}-${version}.tar.gz::https://github.com/PyO3/setuptools-rust/archi
 build() {
     # shellcheck disable=SC2164
     cd "setuptools-rust-${version}"
-    export SETUPTOOLS_SCM_PRETEND_VERSION="${version}"
 
     gpep517 build-wheel \
         --wheel-dir .dist \
