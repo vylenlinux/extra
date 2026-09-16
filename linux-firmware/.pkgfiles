@@ -1241,6 +1241,10 @@ drwxr-xr-x root/root    lib/firmware/ath10k/WCN3990/hw1.0/qcm2290/
 drwxr-xr-x root/root    lib/firmware/ath10k/WCN3990/hw1.0/qrb4210/
 lrwxrwxrwx root/root    lib/firmware/ath10k/WCN3990/hw1.0/qrb4210/firmware-5.bin.xz -> ../qcm2290/firmware-5.bin.xz
 lrwxrwxrwx root/root    lib/firmware/ath10k/WCN3990/hw1.0/qrb4210/wlanmdsp.mbn.xz -> ../qcm2290/wlanmdsp.mbn.xz
+drwxr-xr-x root/root    lib/firmware/ath10k/WCN3990/hw1.0/shikra/
+-rw-r--r-- root/root    lib/firmware/ath10k/WCN3990/hw1.0/shikra/firmware-5.bin.xz
+-rw-r--r-- root/root    lib/firmware/ath10k/WCN3990/hw1.0/shikra/notice.txt_wlanmdsp.xz
+-rw-r--r-- root/root    lib/firmware/ath10k/WCN3990/hw1.0/shikra/wlanmdsp.mbn.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/WCN3990/hw1.0/wlanmdsp.mbn.xz
 drwxr-xr-x root/root    lib/firmware/ath11k/
 drwxr-xr-x root/root    lib/firmware/ath11k/IPQ5018/
@@ -1526,6 +1530,7 @@ lrwxrwxrwx root/root    lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-ult
 lrwxrwxrwx root/root    lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-zero.txt.xz -> brcmfmac43430-sdio.AP6212.txt.xz
 lrwxrwxrwx root/root    lib/firmware/brcm/brcmfmac43430-sdio.sinovoip,bpi-m3.txt.xz -> brcmfmac43430-sdio.AP6212.txt.xz
 lrwxrwxrwx root/root    lib/firmware/brcm/brcmfmac43430-sdio.starfive,visionfive-v1.txt.xz -> brcmfmac43430-sdio.AP6212.txt.xz
+lrwxrwxrwx root/root    lib/firmware/brcm/brcmfmac43430-sdio.ultrapower,taiqicat-a01.txt.xz -> brcmfmac43430-sdio.AP6212.txt.xz
 -rw-r--r-- root/root    lib/firmware/brcm/brcmfmac43430a0-sdio.ONDA-V80 PLUS.txt.xz
 -rw-r--r-- root/root    lib/firmware/brcm/brcmfmac43430a0-sdio.bin.xz
 -rw-r--r-- root/root    lib/firmware/brcm/brcmfmac43430a0-sdio.ilife-S806.txt.xz
@@ -3106,6 +3111,7 @@ drwxr-xr-x root/root    lib/firmware/cirrus/cs35l56/
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev4.5.3.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev4.5.9.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev4.7.0.wmfw.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev4.7.12.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev4.7.2.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-10280db3-spkid0-l2u2.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-10280db3-spkid0-l2u3.bin.xz
@@ -3197,6 +3203,11 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3821-spkid0
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3821-spkid1-ampl.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3821-spkid1-ampr.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3821-spkid1.wmfw.xz -> cs35l56/CS35L56_Rev4.5.3.wmfw.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3843-l1u0.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3843-l1u1.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3843-l1u2.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3843-l1u3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa3843.wmfw.xz -> cs35l56/CS35L56_Rev4.7.12.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa5158-spkid0-l2u0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa5158-spkid0-l2u4.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l57-b2-dsp1-misc-17aa5158-spkid0.wmfw.xz -> cs35l56/CS35L56_Rev4.7.2.wmfw.xz
@@ -5945,6 +5956,13 @@ drwxr-xr-x root/root    lib/firmware/qcom/kaanapali/
 -rw-r--r-- root/root    lib/firmware/qcom/kaanapali/soccpr.jsn
 -rw-r--r-- root/root    lib/firmware/qcom/leia_pfp_470.fw.xz
 -rw-r--r-- root/root    lib/firmware/qcom/leia_pm4_470.fw.xz
+drwxr-xr-x root/root    lib/firmware/qcom/maili/
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adsp.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adsp_dtb.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adspr.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adsps.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adspua.jsn
+-rw-r--r-- root/root    lib/firmware/qcom/maili/adspuo.jsn
 drwxr-xr-x root/root    lib/firmware/qcom/nord/
 -rw-r--r-- root/root    lib/firmware/qcom/nord/adsp.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/nord/adsp1.mbn.xz
@@ -6105,6 +6123,8 @@ drwxr-xr-x root/root    lib/firmware/qcom/sdm845/
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/SHIFT/
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/
 -rw-r--r-- root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/a630_zap.mbn.xz
+lrwxrwxrwx root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/mba.mbn.xz -> ../../mba.mbn.xz
+lrwxrwxrwx root/root    lib/firmware/qcom/sdm845/SHIFT/axolotl/wlanmdsp.mbn.xz -> ../../../../ath10k/WCN3990/hw1.0/wlanmdsp.mbn.xz
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/Thundercomm/
 drwxr-xr-x root/root    lib/firmware/qcom/sdm845/Thundercomm/db845c/
 -rw-r--r-- root/root    lib/firmware/qcom/sdm845/Thundercomm/db845c/slpi.mbn.xz
@@ -6206,6 +6226,7 @@ drwxr-xr-x root/root    lib/firmware/qcom/vpu/
 lrwxrwxrwx root/root    lib/firmware/qcom/vpu/vpu20_p1_gen2.mbn.xz -> vpu20_p1_gen2_s6.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu20_p1_gen2_s6.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu20_p4.mbn.xz
+-rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu20_p4_gen2_s6.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu20_p4_sm8450_s7.mbn.xz
 -rw-r--r-- root/root    lib/firmware/qcom/vpu/vpu30_p1_s7.mbn.xz
 lrwxrwxrwx root/root    lib/firmware/qcom/vpu/vpu30_p4.mbn.xz -> vpu30_p4_s7.mbn.xz
@@ -6702,6 +6723,7 @@ drwxr-xr-x root/root    lib/firmware/rtl_nic/
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8168h-1.fw.xz
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8168h-2.fw.xz
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8261c.bin.xz
+-rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8261d.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8402-1.fw.xz
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8411-1.fw.xz
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8411-2.fw.xz
