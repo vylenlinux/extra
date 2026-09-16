@@ -11,30 +11,13 @@ release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
-    # failed build with ccache, remove reom path
-    PATH="$(printf "%s" "${PATH}" | awk -v RS=: -v ORS=: '/ccache/ {
-        next;
-    } {
-        print;
-    }' | sed 's/:*$//')"
-
-    # build with GCC
-    export CC=gcc
-    export CXX=g++
-    export CFLAGS="-O2 -pipe -march=x86-64 -fno-lto"
-    export CXXFLAGS="-O2 -pipe -march=x86-64 -fno-lto -Wno-error"
-
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-
-    # fix build ICU 76
-    sed '/U_SHOW_CPLUSPLUS_API/a#define U_SHOW_CPLUSPLUS_HEADER_API 0' -i Source/WTF/wtf/Platform.h
-
-    cmake -B build -G Ninja \
+    cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_SKIP_INSTALL_RPATH=ON \
         -DPORT=GTK \
         -DENABLE_JIT=OFF \
