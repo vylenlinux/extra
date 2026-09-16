@@ -13,7 +13,6 @@ source="https://releases.pagure.org/${name}/${name}-${version}.tar.gz"
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    export LINKS=/usr/bin/links
 
     autoreconf -fi
     ./configure --prefix=/usr
