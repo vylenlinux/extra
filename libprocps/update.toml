@@ -1,8 +1,0 @@
-name = "libprocps"
-provider = "repology"
-
-[source]
-package = "procps"
-
-[repology]
-version_prefix = "3."
