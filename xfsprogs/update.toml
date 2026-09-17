@@ -1,5 +1,6 @@
 name = "xfsprogs"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xfsprogs"
+[ftp]
+url = "https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/"
+filename = "xfsprogs-{version}.tar.xz"
