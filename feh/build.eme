@@ -6,7 +6,7 @@ homepage="https://feh.finalrewind.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=feh
-version=3.13
+version=3.13.1
 release=1
 source="https://feh.finalrewind.org/${name}-${version}.tar.bz2"
 
