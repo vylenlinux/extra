@@ -6,9 +6,9 @@ homepage="https://gitlab.freedesktop.org/libinput/libinput"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libinput
-version=1.31.3
+version=1.32.0
 release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+source="https://gitlab.com/freedesktop-sdk/mirrors/freedesktop/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build \
