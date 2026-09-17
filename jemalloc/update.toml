@@ -1,5 +1,6 @@
 name = "jemalloc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jemalloc"
+owner = "jemalloc"
+repo = "jemalloc"

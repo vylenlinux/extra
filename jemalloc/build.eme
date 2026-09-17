@@ -6,13 +6,14 @@ homepage="http://www.canonware.com/jemalloc/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jemalloc
-version=5.3.1
-release=2
-source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.bz2"
+version=5.4.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    ./autogen.sh
 
     ./configure \
         --prefix=/usr \
