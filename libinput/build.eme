@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libinput
 version=1.32.0
 release=1
-source="https://gitlab.com/freedesktop-sdk/mirrors/freedesktop/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build \
