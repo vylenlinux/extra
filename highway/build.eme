@@ -7,16 +7,17 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=highway
 version=1.4.0
-release=1
+release=2
 source="https://github.com/google/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED_LIBS=ON \
         -DBUILD_TESTING=OFF \
-        -DHWY_SYSTEM_GTEST=ON \
-        -DHWY_ENABLE_EXAMPLES=OFF
+        -DHWY_ENABLE_EXAMPLES=OFF \
+        -Wno-dev
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
