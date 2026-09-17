@@ -6,7 +6,7 @@ homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pipewire
-version=1.6.8
+version=1.6.9
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz
@@ -14,9 +14,6 @@ source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/re
     ${name}.desktop"
 
 build() {
-    export CFLAGS="${CFLAGS} \
-        -Wno-error=discarded-qualifiers"
-
     vylen-meson "${name}-${version}" build \
         -Ddocs=disabled \
         -Dvulkan=disabled \
@@ -27,7 +24,7 @@ build() {
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
     # enable alsa by default
-    install -Dm644 /dev/null "${PKG}/usr/share/pipewire/media-session.d/with-alsa"
+    install -Dm644 /dev/null "${PKG}/usr/share/${name}/media-session.d/with-alsa"
     mkdir -p "${PKG}/etc/alsa/conf.d"
 
     ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf -t "${PKG}/etc/alsa/conf.d/"
