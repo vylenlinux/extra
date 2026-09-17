@@ -11,17 +11,17 @@ release=1
 source="${name}-${version}.tar.gz::https://github.com/pemistahl/${name}/archive/v${version}.tar.gz"
 
 build() {
-	# shellcheck disable=SC2164
-	cd "${name}-${version}"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	cargo fetch \
-	    --locked \
-	    --target x86_64-unknown-linux-gnu
+    cargo fetch \
+        --locked \
+        --target x86_64-unknown-linux-gnu
 
-	cargo build \
-	    --frozen \
-	    --release
+    cargo build \
+        --frozen \
+        --release
 
-	install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
-	install -Dm644 README.md -t "${PKG}/usr/share/${name}/"
+    install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 README.md -t "${PKG}/usr/share/${name}/"
 }
