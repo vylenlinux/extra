@@ -1,5 +1,6 @@
 name = "at-spi2-core"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "at-spi2-core"
+instance = "https://gitlab.gnome.org/"
+project = "gnome/at-spi2-core"
