@@ -67,7 +67,7 @@ build() {
         --enable-libx265 \
         --enable-libaom \
         --enable-libdav1d \
-	--enable-nvenc \
+        --enable-nvenc \
         ${_opt}
 
     make
