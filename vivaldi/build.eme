@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi
-version=8.2.4133.55
+version=8.2.4133.64
 release=1
 
 source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/vivaldi-stable-${version}-${release}.x86_64.rpm
@@ -18,13 +18,10 @@ build() {
     done
 
     patch -p1 -i "${SRC}/0001-add-support-for-user-flags.patch" "${PKG}/opt/${name}/${name}"
-
     chmod 4755 "${PKG}/opt/${name}/vivaldi-sandbox"
-    install -dm755 "${PKG}/usr/bin"
 
-    for bin in vivaldi-stable vivaldi; do
-        ln -s /opt/vivaldi/vivaldi "${PKG}/usr/bin/${bin}"
-    done
+    install -dm755 "${PKG}/usr/bin"
+    ln -s /opt/vivaldi/vivaldi "${PKG}/usr/bin/vivaldi"
 
     install -Dm644 "${PKG}/opt/${name}/resources/vivaldi/resources/welcomepage-vivaldi.svg" "${PKG}/usr/share/icons/hicolor/scalable/${name}.svg"
     install -Dm644 "${PKG}/opt/${name}/product_logo_256.png" "${PKG}/usr/share/icons/hicolor/256x256/apps/${name}.png"
