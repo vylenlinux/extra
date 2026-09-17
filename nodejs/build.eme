@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nodejs
-version=26.8.2
+version=26.9.0
 release=1
 
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz
