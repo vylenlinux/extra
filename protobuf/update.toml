@@ -1,5 +1,6 @@
 name = "protobuf"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "protobuf"
+owner = "protocolbuffers"
+repo = "protobuf"
