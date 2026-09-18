@@ -31,5 +31,5 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    sed "s/%(version)/${version}/g" "${SRC}/${name}.pc" | install -Dm644 /dev/stdin "${PKG}/usr/lib/pkgconfig/${name}.pc"
+    sed "s/%(version)/${version}/g" "${name}.pc" | install -Dm644 /dev/stdin "${PKG}/usr/lib/pkgconfig/${name}.pc"
 }
