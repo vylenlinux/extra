@@ -1,5 +1,6 @@
 name = "nvme-cli"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nvme-cli"
+owner = "linux-nvme"
+repo = "nvme-cli"
