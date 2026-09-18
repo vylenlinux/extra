@@ -6,15 +6,13 @@ homepage="https://www.khronos.org/vulkan/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-icd-loader
-version=1.4.362
+version=1.4.363
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "Vulkan-Loader-${version}"
-
-    mkdir build
     python3 scripts/update_deps.py --dir=build
 
     cmake -B build \
