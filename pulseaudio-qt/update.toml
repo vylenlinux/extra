@@ -1,5 +1,6 @@
 name = "pulseaudio-qt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "pulseaudio-qt"
+[ftp]
+url = "https://download.kde.org/stable/pulseaudio-qt/"
+filename = "pulseaudio-qt-{version}.tar.xz"
