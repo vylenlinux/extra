@@ -20,12 +20,11 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --localstatedir=/var \
         --libexecdir=/usr/lib \
         --enable-readline \
         --disable-libicu
 
     make
     make -j1 DIST_ROOT="${PKG}" install install-dev
-
-    rm -rf "${PKG}/usr/var"
 }
