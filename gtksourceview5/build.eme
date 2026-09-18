@@ -1,15 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A text widget adding syntax highlighting and more to GNOME"
 homepage="https://wiki.gnome.org/Projects/GtkSourceView"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtksourceview5
-version=5.20.0
+version=5.22.0
 release=1
-source="https://download.gnome.org/sources/gtksourceview/${version%.*}/gtksourceview-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://download.gnome.org/sources/gtksourceview/${version%.*}/gtksourceview-${version}.tar.xz"
 
 build() {
-	cd gtksourceview-$version
-	vylen-meson build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "gtksourceview-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
