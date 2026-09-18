@@ -6,7 +6,7 @@ homepage="https://github.com/kjd/idna"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-idna
-version=3.19
+version=3.20
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/i/idna/idna-${version}.tar.gz"
 
