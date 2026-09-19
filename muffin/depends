@@ -1,0 +1,14 @@
+cinnamon-desktop
+gobject-introspection
+libcanberra
+libinput
+libsm
+libxkbcommon
+startup-notification
+zenity
+graphene
+pipewire
+xwayland
+intltool
+wayland-protocols
+libwacom
