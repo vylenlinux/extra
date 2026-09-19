@@ -1,0 +1,6 @@
+name = "ibus"
+provider = "github"
+
+[source]
+owner = "ibus"
+repo = "ibus"
