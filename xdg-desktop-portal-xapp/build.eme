@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A backend implementation for xdg-desktop-portal using GTK and various pieces of Cinnamon/MATE/Xfce4 infrastructure"
+homepage="https://github.com/linuxmint/xdg-desktop-portal-xapp"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=xdg-desktop-portal-xapp
+version=1.0.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Db_lto=true \
+        -Dsystemduserunitdir=none
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
