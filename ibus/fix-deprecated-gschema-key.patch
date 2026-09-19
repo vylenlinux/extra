@@ -1,0 +1,54 @@
+diff '--color=auto' -ruN a/data/dconf/org.freedesktop.ibus.gschema.xml b/data/dconf/org.freedesktop.ibus.gschema.xml
+--- a/data/dconf/org.freedesktop.ibus.gschema.xml	2026-09-19 22:33:45.436000000 +0200
++++ b/data/dconf/org.freedesktop.ibus.gschema.xml	2026-09-19 22:34:03.076000000 +0200
+@@ -1,10 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <schemalist>
+-  <schema id="org.freedesktop.ibus" path="/desktop/ibus/">
++  <schema id="org.freedesktop.ibus">
+     <child name="general" schema="org.freedesktop.ibus.general"/>
+     <child name="panel" schema="org.freedesktop.ibus.panel"/>
+   </schema>
+-  <schema id="org.freedesktop.ibus.general" path="/desktop/ibus/general/">
++  <schema id="org.freedesktop.ibus.general">
+     <key name="preload-engines" type="as">
+       <default>[]</default>
+       <!-- Translators: Here “Preload” is a verb -->
+@@ -112,7 +112,7 @@
+     </key>
+     <child name="hotkey" schema="org.freedesktop.ibus.general.hotkey"/>
+   </schema>
+-  <schema id="org.freedesktop.ibus.general.hotkey" path="/desktop/ibus/general/hotkey/">
++  <schema id="org.freedesktop.ibus.general.hotkey">
+     <key name="trigger" type="as">
+       <default>[ 'Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R' ]</default>
+       <summary>Trigger shortcut keys</summary>
+@@ -154,7 +154,7 @@
+       <description>The shortcut keys for switching to the previous input method</description>
+     </key>
+   </schema>
+-  <schema id="org.freedesktop.ibus.panel" path="/desktop/ibus/panel/">
++  <schema id="org.freedesktop.ibus.panel">
+     <key name="show" type="i">
+       <default>0</default>
+       <summary>Auto hide</summary>
+@@ -237,14 +237,14 @@
+       <default>true</default>
+       <summary>Choose glyphs with input method's language on candidate window</summary>
+       <description>Some code points have different glyphs and Pango
+-                   determines the glyphs from the language attribute.
+-                   Pango chooses glyphs from the IBus engine's language
+-                   if the value is true and chooses them from the desktop
+-                   locale if the value is false.</description>
++        determines the glyphs from the language attribute.
++        Pango chooses glyphs from the IBus engine's language
++        if the value is true and chooses them from the desktop
++        locale if the value is false.</description>
+     </key>
+     <child name="emoji" schema="org.freedesktop.ibus.panel.emoji"/>
+   </schema>
+-  <schema id="org.freedesktop.ibus.panel.emoji" path="/desktop/ibus/panel/emoji/">
++  <schema id="org.freedesktop.ibus.panel.emoji">
+     <key name="unicode-hotkey" type="as">
+       <default>[ '&lt;Control&gt;&lt;Shift&gt;u' ]</default>
+       <summary>Unicode shortcut keys for gtk_accelerator_parse</summary>
