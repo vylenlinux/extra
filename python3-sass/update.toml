@@ -1,0 +1,5 @@
+name = "python3-sass"
+provider = "pypi"
+
+[source]
+package = "libsass"
