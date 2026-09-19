@@ -1,0 +1,10 @@
+name = "python3-pexpect"
+provider = "github"
+
+[source]
+owner = "pexpect"
+repo = "pexpect"
+
+[github]
+use_releases = false
+use_tags = true
