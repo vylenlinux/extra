@@ -1,0 +1,10 @@
+name = "timezonemap"
+provider = "github"
+
+[source]
+owner = "dashea"
+repo = "timezonemap"
+
+[github]
+use_releases = false
+use_tags = true
