@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Linux desktop which provides advanced innovative features and a traditional user experience"
+homepage="https://github.com/linuxmint/cinnamon"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cinnamon
+version=6.6.7
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz
+    99-cinnamon-defaults.gschema.override"
+
+build() {
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # remove broken symlink
+    rm -f "${PKG}/etc/xdg/menus/cinnamon-applications-merged"
+
+    mkdir -p "${PKG}/usr/share/glib-2.0/schemas"
+    install "${SRC}/99-cinnamon-defaults.gschema.override" -t "${PKG}/usr/share/glib-2.0/schemas/"
+}
