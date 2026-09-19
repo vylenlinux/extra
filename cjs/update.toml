@@ -1,0 +1,10 @@
+name = "cjs"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "cjs"
+
+[github]
+use_releases = false
+use_tags = true
