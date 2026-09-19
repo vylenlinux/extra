@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="File manager for the Cinnamon desktop environment"
+homepage="https://github.com/linuxmint/nemo"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=nemo
+version=6.6.4
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Dxmp=false \
+        -Dselinux=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

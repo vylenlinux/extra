@@ -1,0 +1,10 @@
+cinnamon-desktop
+dconf
+gvfs
+libexif
+libgsf
+libnotify
+libxml2
+xapp
+intltool
+gobject-introspection
