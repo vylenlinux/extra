@@ -1,0 +1,5 @@
+name = "python3-tinycss2"
+provider = "pypi"
+
+[source]
+package = "tinycss2"
