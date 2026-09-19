@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Linux mint themes"
+homepage="https://github.com/linuxmint/mint-themes"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=mint-themes
+version=2.3.9
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make
+    mv usr -t "${PKG}/"
+}
