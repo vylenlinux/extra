@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Make Python a better tool for controlling and automating other programs"
+homepage="https://pexpect.readthedocs.org/en/stable"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-pexpect
+version=4.9
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pexpect/pexpect/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "pexpect-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}"
+}
