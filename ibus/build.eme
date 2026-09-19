@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="https://github.com/ibus/ibus/wiki"
+homepage="Intelligent Input Bus"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ibus
+version=1.5.34
+release=1
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    export CFLAGS="${CFLAGS} -Wno-all"
+    autoreconf -fi
+
+    ./configure \
+        --prefix=/usr \
+        --libdir=/usr/lib \
+        --disable-gtk-doc \
+        --disable-memconf \
+        --disable-python2 \
+        --disable-gtk4 \
+        --disable-gtk2 \
+        --disable-emoji-dict \
+        --disable-unicode-dict \
+        --disable-systemd-services
+
+    rm -f tools/main.c
+
+    make
+    make DESTDIR="${PKG}" install
+}
