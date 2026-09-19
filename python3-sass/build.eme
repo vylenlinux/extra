@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python sass library"
+homepage="https://github.com/sass/libsass-python"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-sass
+version=0.23.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/sass/libsass-python/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "libsass-python-${version}"
+    export SYSTEM_SASS=1
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
