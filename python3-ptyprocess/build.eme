@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Run a subprocess in a pseudo terminal"
+homepage="https://github.com/pexpect/ptyprocess"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-ptyprocess
+version=0.7.0
+release=1
+source="${name}-${version}.tar.gz::https://pypi.io/packages/source/p/ptyprocess/ptyprocess-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "ptyprocess-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}"
+}
