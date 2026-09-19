@@ -1,0 +1,10 @@
+name = "mint-themes"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "mint-themes"
+
+[github]
+use_releases = false
+use_tags = true
