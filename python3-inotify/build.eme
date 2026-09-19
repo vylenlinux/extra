@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Linux filesystem events monitoring"
+homepage="https://pypi.org/project/pyinotify"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-inotify
+version=0.9.6
+release=1
+source="${name}-${version}.tar.gz::https://github.com/seb-m/pyinotify/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "pyinotify-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}"
+}
