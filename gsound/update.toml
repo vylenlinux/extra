@@ -1,0 +1,10 @@
+name = "gsound"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/gsound"
+
+[gitlab]
+use_releases = false
+use_tags = true
