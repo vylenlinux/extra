@@ -1,0 +1,10 @@
+name = "cinnamon-translations"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "cinnamon-translations"
+
+[github]
+use_releases = false
+use_tags = true

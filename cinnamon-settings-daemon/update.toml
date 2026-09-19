@@ -1,0 +1,10 @@
+name = "cinnamon-settings-daemon"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "cinnamon-settings-daemon"
+
+[github]
+use_releases = false
+use_tags = true

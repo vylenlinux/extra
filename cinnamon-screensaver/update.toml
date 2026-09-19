@@ -1,0 +1,10 @@
+name = "cinnamon-screensaver"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "cinnamon-screensaver"
+
+[github]
+use_releases = false
+use_tags = true

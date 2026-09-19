@@ -1,0 +1,10 @@
+name = "cinnamon-desktop"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "cinnamon-desktop"
+
+[github]
+use_releases = false
+use_tags = true
