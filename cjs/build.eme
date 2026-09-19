@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Javascript Bindings for Cinnamon"
+homepage="https://github.com/linuxmint/cjs"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cjs
+version=128.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build -Dinstalled_tests=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

@@ -1,0 +1,40 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/cjs -> cjs-console
+-rwxr-xr-x root/root    usr/bin/cjs-console
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/cjs-1.0/
+drwxr-xr-x root/root    usr/include/cjs-1.0/cjs/
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/context.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/coverage.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/error-types.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/gjs.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/macros.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/mem.h
+-rw-r--r-- root/root    usr/include/cjs-1.0/cjs/profiler.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cjs/
+drwxr-xr-x root/root    usr/lib/cjs/girepository-1.0/
+-rw-r--r-- root/root    usr/lib/cjs/girepository-1.0/CjsPrivate-1.0.typelib
+drwxr-xr-x root/root    usr/lib/installed-tests/
+drwxr-xr-x root/root    usr/lib/installed-tests/cjs/
+-rw-r--r-- root/root    usr/lib/installed-tests/cjs/GIMarshallingTests-1.0.typelib
+-rw-r--r-- root/root    usr/lib/installed-tests/cjs/Regress-1.0.typelib
+-rw-r--r-- root/root    usr/lib/installed-tests/cjs/RegressUnix-1.0.typelib
+-rw-r--r-- root/root    usr/lib/installed-tests/cjs/Utility-1.0.typelib
+-rw-r--r-- root/root    usr/lib/installed-tests/cjs/WarnLib-1.0.typelib
+-rwxr-xr-x root/root    usr/lib/installed-tests/cjs/libgimarshallingtests.so
+-rwxr-xr-x root/root    usr/lib/installed-tests/cjs/libregress.so
+-rwxr-xr-x root/root    usr/lib/installed-tests/cjs/libutility.so
+-rwxr-xr-x root/root    usr/lib/installed-tests/cjs/libwarnlib.so
+lrwxrwxrwx root/root    usr/lib/libcjs.so -> libcjs.so.0
+lrwxrwxrwx root/root    usr/lib/libcjs.so.0 -> libcjs.so.0.0.0
+-rwxr-xr-x root/root    usr/lib/libcjs.so.0.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/cjs-1.0.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/cjs-1.0/
+drwxr-xr-x root/root    usr/share/cjs-1.0/lsan/
+-rw-r--r-- root/root    usr/share/cjs-1.0/lsan/lsan.supp
+drwxr-xr-x root/root    usr/share/cjs-1.0/valgrind/
+-rw-r--r-- root/root    usr/share/cjs-1.0/valgrind/gjs.supp
