@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Translations for Cinnamon and Nemo"
+homepage="https://github.com/linuxmint/cinnamon-translations"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cinnamon-translations
+version=6.4.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make
+    mv usr -t "${PKG}/"
+}
