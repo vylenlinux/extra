@@ -1,5 +1,6 @@
 name = "xxhash"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xxhash"
+owner = "Cyan4973"
+repo = "xxhash"

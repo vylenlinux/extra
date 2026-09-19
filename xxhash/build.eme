@@ -1,15 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Extremely fast non-cryptographic hash algorithm"
 homepage="https://cyan4973.github.io/xxHash/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xxhash
-nm=xxHash
-version=0.8.3
+version=0.8.4
 release=1
-source="https://github.com/Cyan4973/${nm}/archive/v${version}/${name}-${version}.tar.gz"
+source="https://github.com/Cyan4973/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  cd $nm-$version
-  make PREFIX=/usr DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "xxHash-${version}"
+    make DESTDIR="${PKG}" PREFIX=/usr install
 }
-
