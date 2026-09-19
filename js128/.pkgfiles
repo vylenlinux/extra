@@ -1,5 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/js128
 -rwxr-xr-x root/root    usr/bin/js128-config
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/mozjs-128/
@@ -372,5 +373,6 @@ drwxr-xr-x root/root    usr/include/mozjs-128/mozilla/intl/
 -rw-r--r-- root/root    usr/include/mozjs-128/mozmemory_utils.h
 -rw-r--r-- root/root    usr/include/mozjs-128/mozmemory_wrap.h
 drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/libmozjs-128.so
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rwxr-xr-x root/root    usr/lib/pkgconfig/mozjs-128.pc
