@@ -1,0 +1,10 @@
+name = "muffin"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "muffin"
+
+[github]
+use_releases = false
+use_tags = true
