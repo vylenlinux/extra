@@ -1,0 +1,10 @@
+name = "nemo"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "nemo"
+
+[github]
+use_releases = false
+use_tags = true
