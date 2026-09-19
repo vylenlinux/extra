@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Low-level CSS parser for Python"
+homepage="https://pypi.python.org/pypi/tinycss2"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-tinycss2
+version=1.4.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/Kozea/tinycss2/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "tinycss2-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
