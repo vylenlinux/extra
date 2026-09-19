@@ -1,0 +1,10 @@
+name = "xdg-desktop-portal-xapp"
+provider = "github"
+
+[source]
+owner = "linuxmint"
+repo = "xdg-desktop-portal-xapp"
+
+[github]
+use_releases = false
+use_tags = true
