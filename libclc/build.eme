@@ -35,7 +35,7 @@ build() {
             -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
             -DLLVM_SPIRV=/usr/bin/llvm-spirv \
             -DLLVM_DEFAULT_TARGET_TRIPLE="${variant}" \
-            -Wno-dev
+            -Wno-author
 
         cmake --build "build/${variant}"
         DESTDIR="${PKG}" cmake --install "build/${variant}"

@@ -18,7 +18,7 @@ build() {
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DBUILD_TESTS=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

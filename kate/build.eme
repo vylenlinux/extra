@@ -14,7 +14,7 @@ build() {
 	        -D CMAKE_BUILD_TYPE=Release \
 	        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
         	-D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-	        -Wno-dev
+	        -Wno-author
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 

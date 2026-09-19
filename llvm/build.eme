@@ -46,7 +46,7 @@ build() {
         -DLLVM_INSTALL_UTILS=ON \
         -DLLVM_LINK_LLVM_DYLIB=ON \
         -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
-        -Wno-dev
+        -Wno-author
 
     jobs=
 

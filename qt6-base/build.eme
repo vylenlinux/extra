@@ -52,7 +52,7 @@ build() {
         -DQT_FEATURE_rpath=OFF \
         -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
         -DQT_AVOID_CMAKE_ARCHIVING_API=ON \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

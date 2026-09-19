@@ -29,7 +29,7 @@ build() {
         -DMOD_QT6=ON \
         -DMOD_QT=OFF \
         -DSWIG_PYTHON=ON \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

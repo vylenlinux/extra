@@ -21,7 +21,7 @@ build() {
         -DLIBICAL_JAVA_BINDINGS=OFF \
         -DLIBICAL_BUILD_DOCS=OFF \
         -DLIBICAL_GLIB_BUILD_DOCS=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

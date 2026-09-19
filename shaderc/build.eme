@@ -37,7 +37,7 @@ build() {
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DSHADERC_SKIP_TESTS=ON \
         -Dglslang_SOURCE_DIR:PATH=/usr/include/glslang \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

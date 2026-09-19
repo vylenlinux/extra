@@ -17,7 +17,7 @@ build() {
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DINSTALL_DRIVER_SYSCONF=OFF \
         -DMEDIA_BUILD_FATAL_WARNINGS=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

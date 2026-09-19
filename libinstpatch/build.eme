@@ -14,7 +14,7 @@ build() {
 		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-D LIB_INSTALL_DIR=/usr/lib \
-		-Wno-dev 
+		-Wno-author 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }

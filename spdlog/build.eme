@@ -22,7 +22,7 @@ build() {
         -DSPDLOG_FMT_EXTERNAL=ON \
         -DSPDLOG_BUILD_SHARED=ON \
         -DSPDLOG_BUILD_EXAMPLE=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

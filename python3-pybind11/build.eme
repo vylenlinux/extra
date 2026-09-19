@@ -31,7 +31,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DUSE_PYTHON_INCLUDE_DIR=FALSE \
         -DPYBIND11_TEST=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
 

@@ -16,7 +16,7 @@ build() {
 		-DCMAKE_BUILD_TYPE=Release \
 		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 		-DENABLE_CJSON_UTILS=On \
-		-Wno-dev
+		-Wno-author
 	make -C build
 	make -C build DESTDIR=$PKG install
 }

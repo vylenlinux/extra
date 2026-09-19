@@ -17,7 +17,7 @@ build() {
 		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-DBUILD_STATIC_LIBS=OFF \
                 -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-		-Wno-dev 
+		-Wno-author 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }

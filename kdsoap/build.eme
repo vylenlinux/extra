@@ -15,7 +15,7 @@ build() {
         -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
         -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
         -D KDSoap_QT6=ON \
-        -Wno-dev
+        -Wno-author
     cmake --build build
     DESTDIR=$PKG cmake --install build
 

@@ -21,7 +21,7 @@ build() {
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DBUILD_TESTING=OFF \
         -DBUILD_SHARED_LIBS=ON \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

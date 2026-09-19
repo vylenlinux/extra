@@ -30,7 +30,7 @@ build() {
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DLLVM_LINK_LLVM_DYLIB=ON \
         -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

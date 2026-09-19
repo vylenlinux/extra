@@ -25,7 +25,7 @@ build() {
         -DLLVM_SPIRV_BUILD_EXTERNAL=YES \
         -DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv \
         -DFETCHCONTENT_FULLY_DISCONNECTED=ON \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

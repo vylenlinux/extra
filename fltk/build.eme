@@ -21,7 +21,7 @@ build() {
         -DFLTK_BUILD_SHARED_LIBS=ON \
         -DFLTK_BUILD_HTML_DOCS=OFF \
         -DFLTK_INSTALL_HTML_DOCS=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

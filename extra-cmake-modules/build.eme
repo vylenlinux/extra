@@ -19,7 +19,7 @@ build() {
         -DBUILD_QTHELP_DOCS=OFF \
         -DBUILD_MAN_DOCS=OFF \
         -DBUILD_TESTING=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

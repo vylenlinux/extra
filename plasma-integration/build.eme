@@ -19,7 +19,7 @@ build() {
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DBUILD_TESTING=OFF \
         -DBUILD_QT5=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

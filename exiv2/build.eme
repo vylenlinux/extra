@@ -28,7 +28,7 @@ build() {
         -DEXIV2_ENABLE_BMFF=ON \
         -DEXIV2_ENABLE_BROTLI=OFF \
         -DEXIV2_ENABLE_INIH=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

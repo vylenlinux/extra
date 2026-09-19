@@ -27,7 +27,7 @@ build() {
         -DENABLE_QT5=OFF \
         -DENABLE_QT6=ON \
         -DENABLE_BOOST=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

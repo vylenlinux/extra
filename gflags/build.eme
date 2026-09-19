@@ -20,7 +20,7 @@ build() {
         -DBUILD_STATIC_LIBS=ON \
         -DBUILD_TESTING=ON \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

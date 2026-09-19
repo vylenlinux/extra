@@ -19,7 +19,7 @@ build() {
 	        -D BUILD_SHARED_LIBS=ON \
         	-D BUILD_TESTS=OFF \
 	        -D BUILD_EXAMPLE=OFF \
-	        -Wno-dev
+	        -Wno-author
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }

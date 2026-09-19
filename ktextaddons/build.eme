@@ -20,7 +20,7 @@ build() {
         -DQT_MAJOR_VERSION=6 \
         -DBUILD_DESIGNERPLUGIN=ON \
         -DBUILD_TESTING=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

@@ -35,7 +35,7 @@ build() {
         -DLLVM_ENABLE_RTTI=ON \
         -DLLVM_INCLUDE_TESTS=OFF \
         -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
-        -Wno-dev
+        -Wno-author
 
     jobs=
 

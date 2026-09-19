@@ -24,7 +24,7 @@ build() {
         -DRELEASE_BUILD=ON \
         -DPRODUCTSET=DESKTOP \
         -DBUILD_TESTING=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

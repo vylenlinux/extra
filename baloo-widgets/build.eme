@@ -17,7 +17,7 @@ build() {
 	        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
 	        -D BUILD_WITH_QT6=ON \
 	        -D BUILD_TESTING=OFF \
-	        -Wno-dev
+	        -Wno-author
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 

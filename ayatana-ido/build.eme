@@ -17,7 +17,7 @@ build() {
 		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
 		-DBUILD_SHARED_LIBS=True \
 		-DENABLE_TESTS=OFF \
-		-Wno-dev 
+		-Wno-author 
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 }

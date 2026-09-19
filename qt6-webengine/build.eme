@@ -34,7 +34,7 @@ build() {
         -DQT_FEATURE_webengine_system_re2=OFF \
         -DINSTALL_GN=OFF \
         -DWARNINGS_ARE_ERRORS=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build -j "${CBUILD_JOBS}"
     DESTDIR="${PKG}" cmake --install build

@@ -21,7 +21,7 @@ build() {
 		-DJAS_ENABLE_AUTOMATIC_DEPENDENCIES=OFF \
 		-DCMAKE_SKIP_RPATH=ON \
 		-DJAS_ENABLE_SHARED=ON \
-		-Wno-dev
+		-Wno-author
 	cmake --build build
 	DESTDIR=$PKG cmake --install build
 

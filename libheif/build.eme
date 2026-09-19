@@ -22,7 +22,7 @@ build() {
         -DWITH_GDK_PIXBUF=OFF \
         -DWITH_EXAMPLE_HEIF_THUMB=OFF \
         -DWITH_X264=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

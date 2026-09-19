@@ -22,7 +22,7 @@ build() {
         -DSPIRV_SKIP_TESTS=ON \
         -DSPIRV-Headers_SOURCE_DIR=/usr \
         -DSPIRV_TOOLS_BUILD_STATIC=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

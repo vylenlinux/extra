@@ -34,7 +34,7 @@ build() {
         -DENABLE_LIBTIFF="$(emerald is-installed libtiff && printf "ON" || printf "OFF")" \
         -DENABLE_NSS3="$(emerald is-installed nss && printf "ON" || printf "OFF")" \
         -DENABLE_LIBOPENJPEG="$(emerald is-installed openjpeg2 && echo "openjpeg2" || echo "none")" \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

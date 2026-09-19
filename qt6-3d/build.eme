@@ -21,7 +21,7 @@ build() {
         -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
         -DINSTALL_PUBLICBINDIR=usr/bin \
         -DINPUT_qt3d_assimp=system \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

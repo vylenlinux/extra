@@ -22,7 +22,7 @@ build() {
         -DENABLE_SQLITE3=OFF \
         -DENABLE_RPM=OFF \
         -DENABLE_IMAGEMAGICK6=OFF \
-        -Wno-dev
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
