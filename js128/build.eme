@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Mozilla's JavaScript and WebAssembly Engine, written in C++ and Rust"
+homepage="https://spidermonkey.dev/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=js128
+version=128.14.0
+release=1
+
+source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
+    https://github.com/mozilla-firefox/firefox/commit/d497aa4f770c.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "firefox-${version}"
+    patch -Np1 -i "${SRC}/d497aa4f770c.patch"
+
+    mkdir obj
+    # shellcheck disable=SC2164
+    cd obj
+
+    ../js/src/configure \
+        --prefix=/usr \
+        --with-intl-api \
+        --with-system-zlib \
+        --with-system-icu \
+        --disable-jemalloc \
+        --disable-debug-symbols \
+        --enable-readline
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm "${PKG}/usr/lib/libjs_static.ajs"
+    sed -i '/@NSPR_CFLAGS@/d' "${PKG}/usr/bin/${name}-config"
+}
