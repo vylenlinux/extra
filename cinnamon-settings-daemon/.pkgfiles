@@ -1,0 +1,227 @@
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/xdg/
+drwxr-xr-x root/root    etc/xdg/autostart/
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-a11y-settings.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-automount.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-background.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-clipboard.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-color.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-housekeeping.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-keyboard.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-media-keys.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-power.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-print-notifications.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-screensaver-proxy.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-settings-remap.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-smartcard.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-wacom.desktop
+-rw-r--r-- root/root    etc/xdg/autostart/cinnamon-settings-daemon-xsettings.desktop
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/csd-a11y-settings -> ../lib/csd-a11y-settings
+lrwxrwxrwx root/root    usr/bin/csd-automount -> ../lib/csd-automount
+lrwxrwxrwx root/root    usr/bin/csd-background -> ../lib/csd-background
+lrwxrwxrwx root/root    usr/bin/csd-backlight-helper -> ../lib/csd-backlight-helper
+lrwxrwxrwx root/root    usr/bin/csd-clipboard -> ../lib/csd-clipboard
+lrwxrwxrwx root/root    usr/bin/csd-color -> ../lib/csd-color
+lrwxrwxrwx root/root    usr/bin/csd-datetime-mechanism -> ../lib/csd-datetime-mechanism
+lrwxrwxrwx root/root    usr/bin/csd-housekeeping -> ../lib/csd-housekeeping
+lrwxrwxrwx root/root    usr/bin/csd-input-helper -> ../lib/csd-input-helper
+lrwxrwxrwx root/root    usr/bin/csd-keyboard -> ../lib/csd-keyboard
+lrwxrwxrwx root/root    usr/bin/csd-media-keys -> ../lib/csd-media-keys
+lrwxrwxrwx root/root    usr/bin/csd-power -> ../lib/csd-power
+lrwxrwxrwx root/root    usr/bin/csd-print-notifications -> ../lib/csd-print-notifications
+lrwxrwxrwx root/root    usr/bin/csd-printer -> ../lib/csd-printer
+lrwxrwxrwx root/root    usr/bin/csd-screensaver-proxy -> ../lib/csd-screensaver-proxy
+lrwxrwxrwx root/root    usr/bin/csd-settings-remap -> ../lib/csd-settings-remap
+lrwxrwxrwx root/root    usr/bin/csd-smartcard -> ../lib/csd-smartcard
+lrwxrwxrwx root/root    usr/bin/csd-wacom -> ../lib/csd-wacom
+lrwxrwxrwx root/root    usr/bin/csd-xsettings -> ../lib/csd-xsettings
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cinnamon-settings-daemon-3.0/
+-rw-r--r-- root/root    usr/lib/cinnamon-settings-daemon-3.0/libcsd.a
+drwxr-xr-x root/root    usr/lib/cinnamon-settings-daemon/
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-a11y-settings -> ../csd-a11y-settings
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-automount -> ../csd-automount
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-background -> ../csd-background
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-backlight-helper -> ../csd-backlight-helper
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-clipboard -> ../csd-clipboard
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-color -> ../csd-color
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-datetime-mechanism -> ../csd-datetime-mechanism
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-housekeeping -> ../csd-housekeeping
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-input-helper -> ../csd-input-helper
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-keyboard -> ../csd-keyboard
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-media-keys -> ../csd-media-keys
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-power -> ../csd-power
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-print-notifications -> ../csd-print-notifications
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-printer -> ../csd-printer
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-screensaver-proxy -> ../csd-screensaver-proxy
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-settings-remap -> ../csd-settings-remap
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-smartcard -> ../csd-smartcard
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-wacom -> ../csd-wacom
+lrwxrwxrwx root/root    usr/lib/cinnamon-settings-daemon/csd-xsettings -> ../csd-xsettings
+-rwxr-xr-x root/root    usr/lib/csd-a11y-settings
+-rwxr-xr-x root/root    usr/lib/csd-automount
+-rwxr-xr-x root/root    usr/lib/csd-background
+-rwxr-xr-x root/root    usr/lib/csd-backlight-helper
+-rwxr-xr-x root/root    usr/lib/csd-clipboard
+-rwxr-xr-x root/root    usr/lib/csd-color
+-rwxr-xr-x root/root    usr/lib/csd-datetime-mechanism
+-rwxr-xr-x root/root    usr/lib/csd-housekeeping
+-rwxr-xr-x root/root    usr/lib/csd-input-helper
+-rwxr-xr-x root/root    usr/lib/csd-keyboard
+-rwxr-xr-x root/root    usr/lib/csd-media-keys
+-rwxr-xr-x root/root    usr/lib/csd-power
+-rwxr-xr-x root/root    usr/lib/csd-print-notifications
+-rwxr-xr-x root/root    usr/lib/csd-printer
+-rwxr-xr-x root/root    usr/lib/csd-screensaver-proxy
+-rwxr-xr-x root/root    usr/lib/csd-settings-remap
+-rwxr-xr-x root/root    usr/lib/csd-smartcard
+-rwxr-xr-x root/root    usr/lib/csd-wacom
+-rwxr-xr-x root/root    usr/lib/csd-wacom-led-helper
+-rwxr-xr-x root/root    usr/lib/csd-wacom-oled-helper
+-rwxr-xr-x root/root    usr/lib/csd-xsettings
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/csd-automount.desktop
+drwxr-xr-x root/root    usr/share/cinnamon-settings-daemon-3.0/
+-rw-r--r-- root/root    usr/share/cinnamon-settings-daemon-3.0/input-device-example.sh
+drwxr-xr-x root/root    usr/share/dbus-1/
+drwxr-xr-x root/root    usr/share/dbus-1/system-services/
+-rw-r--r-- root/root    usr/share/dbus-1/system-services/org.cinnamon.SettingsDaemon.DateTimeMechanism.service
+drwxr-xr-x root/root    usr/share/dbus-1/system.d/
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/org.cinnamon.SettingsDaemon.DateTimeMechanism.conf
+drwxr-xr-x root/root    usr/share/glib-2.0/
+drwxr-xr-x root/root    usr/share/glib-2.0/schemas/
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.enums.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.peripherals.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.peripherals.wacom.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.color.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.housekeeping.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.media-keys.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.power.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.xrandr.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.settings-daemon.plugins.xsettings.gschema.xml
+drwxr-xr-x root/root    usr/share/icons/
+drwxr-xr-x root/root    usr/share/icons/hicolor/
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-a11y-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-a11y-settings.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-automount.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-background.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-clipboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-cursor.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-datetime.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-housekeeping.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-media-keys.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-mouse.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-orientation.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-power.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-print-notifications.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-printer.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-screensaver-proxy.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-sound.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-wacom.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-xrandr.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/csd-xsettings.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/22x22/
+drwxr-xr-x root/root    usr/share/icons/hicolor/22x22/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-a11y-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-a11y-settings.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-automount.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-background.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-clipboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-cursor.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-datetime.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-housekeeping.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-media-keys.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-mouse.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-orientation.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-power.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-print-notifications.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-printer.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-screensaver-proxy.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-sound.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-wacom.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-xrandr.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/csd-xsettings.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/24x24/
+drwxr-xr-x root/root    usr/share/icons/hicolor/24x24/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-a11y-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-a11y-settings.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-automount.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-background.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-clipboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-cursor.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-datetime.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-housekeeping.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-media-keys.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-mouse.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-orientation.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-power.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-print-notifications.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-printer.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-screensaver-proxy.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-sound.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-wacom.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-xrandr.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/csd-xsettings.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-a11y-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-a11y-settings.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-automount.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-background.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-clipboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-cursor.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-datetime.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-housekeeping.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-keyboard.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-media-keys.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-mouse.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-orientation.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-power.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-print-notifications.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-printer.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-screensaver-proxy.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-sound.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-wacom.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-xrandr.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/csd-xsettings.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-a11y-keyboard.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-a11y-settings.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-automount.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-background.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-clipboard.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-color.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-cursor.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-datetime.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-housekeeping.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-keyboard.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-media-keys.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-mouse.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-orientation.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-power.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-print-notifications.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-printer.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-screensaver-proxy.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-sound.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-wacom.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-xrandr.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/csd-xsettings.svg
+drwxr-xr-x root/root    usr/share/polkit-1/
+drwxr-xr-x root/root    usr/share/polkit-1/actions/
+-rw-r--r-- root/root    usr/share/polkit-1/actions/org.cinnamon.settings-daemon.plugins.power.policy
+-rw-r--r-- root/root    usr/share/polkit-1/actions/org.cinnamon.settings-daemon.plugins.wacom.policy
+-rw-r--r-- root/root    usr/share/polkit-1/actions/org.cinnamon.settingsdaemon.datetimemechanism.policy
