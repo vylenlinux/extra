@@ -23,9 +23,9 @@ drwxr-xr-x root/root    usr/lib/cmake/libnfs/
 -rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config-version.cmake
 -rw-r--r-- root/root    usr/lib/cmake/libnfs/libnfs-config.cmake
-lrwxrwxrwx root/root    usr/lib/libnfs.so -> libnfs.so.17
-lrwxrwxrwx root/root    usr/lib/libnfs.so.17 -> libnfs.so.17.0.2
--rwxr-xr-x root/root    usr/lib/libnfs.so.17.0.2
+lrwxrwxrwx root/root    usr/lib/libnfs.so -> libnfs.so.18
+lrwxrwxrwx root/root    usr/lib/libnfs.so.18 -> libnfs.so.18.0.0
+-rwxr-xr-x root/root    usr/lib/libnfs.so.18.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libnfs.pc
 drwxr-xr-x root/root    usr/share/
