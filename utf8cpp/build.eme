@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="UTF-8 with C++ in a Portable Way"
+homepage="https://github.com/nemtrif/utfcpp"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=utf8cpp
+version=4.2.0
+release=1
+source="https://github.com/nemtrif/utfcpp/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "utfcpp-${version}" -B build \
+        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DUTF8_TESTS=OFF
+
+    make -C build
+    make -C build DESTDIR="${PKG}" install
+}
