@@ -1,9 +1,9 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/pulse/
 -rw-r--r-- root/root    etc/pulse/client.conf
--rw-r--r-- root/root    etc/pulse/daemon.conf
--rw-r--r-- root/root    etc/pulse/default.pa
--rw-r--r-- root/root    etc/pulse/system.pa
+-rw-r--r-- root/root    etc/pulse/daemon.conf.epkgnew
+-rw-r--r-- root/root    etc/pulse/default.pa.epkgnew
+-rw-r--r-- root/root    etc/pulse/system.pa.epkgnew
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/Xwayland-session.d/
 -rwxr-xr-x root/root    etc/xdg/Xwayland-session.d/00-pulseaudio-x11

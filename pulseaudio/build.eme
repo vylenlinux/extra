@@ -8,6 +8,11 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=pulseaudio
 version=17.0
 release=4
+
+backup="etc/pulse/daemon.conf
+    etc/pulse/default.pa
+    etc/pulse/system.pa"
+
 source="https://www.freedesktop.org/software/${name}/releases/${name}-${version}.tar.xz"
 
 build() {
