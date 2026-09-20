@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pulseaudio
 version=17.0
-release=3
+release=4
 source="https://www.freedesktop.org/software/${name}/releases/${name}-${version}.tar.xz"
 
 build() {
@@ -22,4 +22,14 @@ build() {
 
     # remove the D-Bus configuration file for the system wide daemon to avoid creating unnecessary system users and groups
     rm -f "${PKG}/etc/dbus-1/system.d/pulseaudio-system.conf"
+
+    # Superseded by socket activation
+    sed -e '/autospawn/iautospawn = no' -i "${PKG}/etc/pulse/client.conf"
+
+    # Disable cork-request module, can result in e.g. media players unpausing
+    # when there's a Skype call incoming
+    sed -e 's|/usr/bin/pactl load-module module-x11-cork-request|#&|' -i "${PKG}/usr/bin/start-pulseaudio-x11"
+
+    # Required by qpaeq
+    sed -e '/Load several protocols/aload-module module-dbus-protocol' -i "${PKG}/etc/pulse/default.pa"
 }
