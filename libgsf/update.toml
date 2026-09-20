@@ -1,5 +1,6 @@
 name = "libgsf"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libgsf"
+instance = "https://gitlab.gnome.org/"
+project = "gnome/libgsf"
