@@ -2,7 +2,9 @@ drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/pulse/
 -rw-r--r-- root/root    etc/pulse/client.conf
 -rw-r--r-- root/root    etc/pulse/daemon.conf.epkgnew
+drwxr-xr-x root/root    etc/pulse/default.pa.d/
 -rw-r--r-- root/root    etc/pulse/default.pa.epkgnew
+drwxr-xr-x root/root    etc/pulse/system.pa.d/
 -rw-r--r-- root/root    etc/pulse/system.pa.epkgnew
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/Xwayland-session.d/

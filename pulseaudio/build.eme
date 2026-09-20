@@ -37,4 +37,8 @@ build() {
 
     # Required by qpaeq
     sed -e '/Load several protocols/aload-module module-dbus-protocol' -i "${PKG}/etc/pulse/default.pa"
+
+    # Avoid warning about nonexistent dir
+    mkdir -p "${PKG}/etc/pulse/default.pa.d" \
+        "${PKG}/etc/pulse/system.pa.d"
 }
