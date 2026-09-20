@@ -1,14 +1,1 @@
-libsndfile
-alsa-lib
-dbus
-glib
-speexdsp
-libx11
-libxcb
-libice
-libsm
-libxtst
-vala
-perl-xml-parser
-tdb
-elogind
+libpulse
