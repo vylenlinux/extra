@@ -1,0 +1,77 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cinnamon-control-center
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/cinnamon-control-center-1/
+drwxr-xr-x root/root    usr/include/cinnamon-control-center-1/libcinnamon-control-center/
+-rw-r--r-- root/root    usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-editable-entry.h
+-rw-r--r-- root/root    usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-panel.h
+-rw-r--r-- root/root    usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-shell.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/
+drwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/
+-rwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/libcolor.so
+-rwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/libdisplay.so
+-rwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/libnetwork.so
+-rwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/libregion.so
+-rwxr-xr-x root/root    usr/lib/cinnamon-control-center-1/panels/libwacom-properties.so
+lrwxrwxrwx root/root    usr/lib/libcinnamon-control-center.so -> libcinnamon-control-center.so.1
+lrwxrwxrwx root/root    usr/lib/libcinnamon-control-center.so.1 -> libcinnamon-control-center.so.1.0.0
+-rwxr-xr-x root/root    usr/lib/libcinnamon-control-center.so.1.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libcinnamon-control-center.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/cinnamon-color-panel.desktop
+-rw-r--r-- root/root    usr/share/applications/cinnamon-display-panel.desktop
+-rw-r--r-- root/root    usr/share/applications/cinnamon-network-panel.desktop
+-rw-r--r-- root/root    usr/share/applications/cinnamon-wacom-panel.desktop
+drwxr-xr-x root/root    usr/share/cinnamon-control-center/
+drwxr-xr-x root/root    usr/share/cinnamon-control-center/panels/
+lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-color-panel.desktop -> ../../applications/cinnamon-color-panel.desktop
+lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-display-panel.desktop -> ../../applications/cinnamon-display-panel.desktop
+lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-network-panel.desktop -> ../../applications/cinnamon-network-panel.desktop
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/panels/cinnamon-region-panel.desktop
+lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-wacom-panel.desktop -> ../../applications/cinnamon-wacom-panel.desktop
+drwxr-xr-x root/root    usr/share/cinnamon-control-center/ui/
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/cinnamon-region-panel-layout-chooser.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/cinnamon-region-panel-options-dialog.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/cinnamon-region-panel.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/color.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/language-chooser.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/network.ui
+-rw-r--r-- root/root    usr/share/cinnamon-control-center/ui/shell.ui
+drwxr-xr-x root/root    usr/share/glib-2.0/
+drwxr-xr-x root/root    usr/share/glib-2.0/schemas/
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.cinnamon.control-center.display.gschema.xml
+drwxr-xr-x root/root    usr/share/icons/
+drwxr-xr-x root/root    usr/share/icons/hicolor/
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/cinnamon-preferences-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/16x16/apps/cinnamon-preferences-desktop-display.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/22x22/
+drwxr-xr-x root/root    usr/share/icons/hicolor/22x22/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/cinnamon-preferences-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/22x22/apps/cinnamon-preferences-desktop-display.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/24x24/
+drwxr-xr-x root/root    usr/share/icons/hicolor/24x24/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/cinnamon-preferences-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/24x24/apps/cinnamon-preferences-desktop-display.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/256x256/
+drwxr-xr-x root/root    usr/share/icons/hicolor/256x256/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/256x256/apps/cinnamon-preferences-color.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/cinnamon-preferences-color.png
+-rw-r--r-- root/root    usr/share/icons/hicolor/32x32/apps/cinnamon-preferences-desktop-display.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/48x48/apps/cinnamon-preferences-color.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/
+drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/64x64/apps/cinnamon-preferences-color.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/cinnamon-preferences-color.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/cinnamon-preferences-desktop-display.svg
