@@ -1,0 +1,6 @@
+name = "libpulse"
+provider = "repology"
+dedup_key = "pulseaudio"
+
+[source]
+package = "pulseaudio"
