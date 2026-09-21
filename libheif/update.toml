@@ -1,5 +1,6 @@
 name = "libheif"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libheif"
+owner = "strukturag"
+repo = "libheif"
