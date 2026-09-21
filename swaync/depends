@@ -1,7 +1,7 @@
 gtk4-layer-shell
 json-glib
 libhandy
-pulseaudio
+libpulse
 scdoc
 granite
 blueprint-compiler
