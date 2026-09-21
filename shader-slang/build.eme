@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Slang shading language compiler and runtime"
+homepage="https://shader-slang.org/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=shader-slang
+version=2026.18
+release=1
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "slang-${version}" -B build \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_INCLUDEDIR="include/${name}" \
+        -DCMAKE_CXX_FLAGS="-I/usr/include/glslang" \
+        \
+        -DSLANG_USE_SYSTEM_GLSLANG=yes \
+        -DSLANG_USE_SYSTEM_MINIZ=yes \
+        -DSLANG_USE_SYSTEM_SPIRV_HEADERS=yes \
+        -DSLANG_USE_SYSTEM_SPIRV_TOOLS=yes \
+        -DSLANG_USE_SYSTEM_VULKAN_HEADERS=yes \
+        \
+        -DSLANG_SLANG_LLVM_FLAVOR=DISABLE \
+        -DSLANG_ENABLE_AFTERMATH=no \
+        -DSLANG_ENABLE_SLANG_PROXY=no \
+        -DSLANG_ENABLE_DXIL=OFF \
+        -DSLANG_ENABLE_OPTIX=OFF \
+        -DSLANG_ENABLE_CUDA=OFF \
+        -DSLANG_ENABLE_SLANGD=OFF \
+        -DSLANG_ENABLE_EXAMPLES=OFF \
+        -DSLANG_ENABLE_GFX=OFF \
+        -DSLANG_ENABLE_TESTS=OFF \
+        -DSLANG_ENABLE_SLANGRT=OFF \
+        -DSLANG_EMBED_CORE_MODULE=TRUE \
+        -DSLANG_EMBED_CORE_MODULE_SOURCE=TRUE \
+        -DSLANG_VERSION_FULL="${version}" \
+        -DSLANG_VERSION_NUMERIC="${version}" \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
