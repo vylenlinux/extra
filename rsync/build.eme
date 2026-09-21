@@ -2,15 +2,15 @@
 
 # shellcheck disable=SC2034
 description="Utilities for synchronizing large file archives over a network"
-homepage="https://rsync.samba.org/"
+homepage="https://github.com/RsyncProject/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rsync
-version=3.5.0
+version=3.5.1
 release=1
 backup="etc/rsyncd.conf"
 
-source="https://download.samba.org/pub/${name}/${name}-${version}.tar.gz
+source="https://github.com/RsyncProject/${name}/releases/download/v${version}/${name}-${version}.tar.gz
     rsyncd.conf"
 
 build() {
