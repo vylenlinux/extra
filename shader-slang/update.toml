@@ -1,6 +1,0 @@
-name = "shader-slang"
-provider = "github"
-
-[source]
-owner = "shader-slang"
-repo = "slang"
