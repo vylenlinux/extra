@@ -1,0 +1,6 @@
+name = "miniz"
+provider = "github"
+
+[source]
+owner = "richgel999"
+repo = "miniz"
