@@ -1,17 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="General parsing module for Python"
 homepage="https://github.com/pyparsing/pyparsing/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyparsing
-version=3.3.2
+version=3.3.3
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/p/${name#*-}/${name#*-}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pyparsing/pyparsing-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		.dist/*.whl
+    # shellcheck disable=SC2164
+    cd "pyparsing-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
