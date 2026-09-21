@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Mozilla's JavaScript and WebAssembly Engine, written in C++ and Rust"
+homepage="https://spidermonkey.dev/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=js140
+version=140.16.0
+release=1
+
+source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
+    0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch
+    0002-Bug-1969769-Change-uses-of-ast.Str-with-ast.Constant.patch
+    0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch
+    0004-Bug-1983736-Patch-jsonschema-to-work-with-Python-3.1.patch
+    0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch
+    0006-Bug-2053518-Handle-the-oe-linux-rust-targets-added-i.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "firefox-${version}"
+
+    # https://discourse.gnome.org/t/gnome-49-to-depend-on-spidermonkey-140/30470
+    patch -Np1 -i "${SRC}/0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch"
+
+    # Fix build with Python 3.14+
+    patch -Np1 -i "${SRC}/0002-Bug-1969769-Change-uses-of-ast.Str-with-ast.Constant.patch"
+    patch -Np1 -i "${SRC}/0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch"
+    patch -Np1 -i "${SRC}/0004-Bug-1983736-Patch-jsonschema-to-work-with-Python-3.1.patch"
+    patch -Np1 -i "${SRC}/0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch"
+
+    # Fix build with Rust 1.98
+    patch -Np1 -i "${SRC}/0006-Bug-2053518-Handle-the-oe-linux-rust-targets-added-i.patch"
+
+    mkdir obj
+    # shellcheck disable=SC2164
+    cd obj
+
+    ../js/src/configure \
+        --prefix=/usr \
+        --with-intl-api \
+        --with-system-zlib \
+        --with-system-icu \
+        --disable-jemalloc \
+        --disable-debug-symbols \
+        --enable-readline
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm "${PKG}/usr/lib/libjs_static.ajs"
+    sed -i '/@NSPR_CFLAGS@/d' "${PKG}/usr/bin/${name}-config"
+}

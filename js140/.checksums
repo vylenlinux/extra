@@ -1,0 +1,7 @@
+46cdb8be1d8854cd33df790af5ed77ca38cfd35c4051ee85296ffe1ded18596f  0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch
+87282432365a1f99fa9e7ed72cff081bdaf6225c692848eb08b8ab2248b7129c  0002-Bug-1969769-Change-uses-of-ast.Str-with-ast.Constant.patch
+34661dff0d1dc6833f2b509f4800c3c7ae417319f50610f129085ed1b7f99c06  0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch
+eac3d966180bede930353ac94a35419f8636c163886189e6f86e23b49cda3cd9  0004-Bug-1983736-Patch-jsonschema-to-work-with-Python-3.1.patch
+3b3b72f505a1dac5639793289431fd7840a4679e790dcdb2a3640ffac318cd9c  0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch
+96cd72c6a9a2a73c862a48f5f92f522aba508be8301af2e3875e284cbc4639ed  0006-Bug-2053518-Handle-the-oe-linux-rust-targets-added-i.patch
+0810cf96f94d64fe986936049077607177ced269675b90449d1790f819d6b10f  js140-140.16.0.tar.xz
