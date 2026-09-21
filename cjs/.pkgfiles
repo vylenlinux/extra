@@ -15,7 +15,7 @@ drwxr-xr-x root/root    usr/include/cjs-1.0/cjs/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cjs/
 drwxr-xr-x root/root    usr/lib/cjs/girepository-1.0/
--rw-r--r-- root/root    usr/lib/cjs/girepository-1.0/CjsPrivate-1.0.typelib
+-rw-r--r-- root/root    usr/lib/cjs/girepository-1.0/GjsPrivate-1.0.typelib
 drwxr-xr-x root/root    usr/lib/installed-tests/
 drwxr-xr-x root/root    usr/lib/installed-tests/cjs/
 -rw-r--r-- root/root    usr/lib/installed-tests/cjs/GIMarshallingTests-1.0.typelib
