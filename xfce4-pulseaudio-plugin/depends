@@ -1,4 +1,10 @@
 xfce4-panel
 libnotify
 libcanberra
-pulseaudio
+libpulse
+
+for pkg in ...
+    git add $pkg
+    git commit -m "$pkg: fix typo"
+    git push
+end
