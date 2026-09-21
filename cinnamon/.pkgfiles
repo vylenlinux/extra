@@ -1,6 +1,7 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/menus/
+lrwxrwxrwx root/root    etc/xdg/menus/cinnamon-applications-merged -> applications-merged
 -rw-r--r-- root/root    etc/xdg/menus/cinnamon-applications.menu
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
