@@ -9,6 +9,7 @@ drwxr-xr-x root/root    usr/include/timezonemap/timezonemap/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/TimezoneMap-1.0.typelib
+-rw-r--r-- root/root    usr/lib/libtimezonemap.a
 lrwxrwxrwx root/root    usr/lib/libtimezonemap.so -> libtimezonemap.so.1.0.0
 lrwxrwxrwx root/root    usr/lib/libtimezonemap.so.1 -> libtimezonemap.so.1.0.0
 -rwxr-xr-x root/root    usr/lib/libtimezonemap.so.1.0.0
