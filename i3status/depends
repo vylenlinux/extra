@@ -2,6 +2,6 @@ confuse
 yajl
 libnl
 alsa-lib
-pulseaudio
+libpulse
 asciidoc
 xmlto
