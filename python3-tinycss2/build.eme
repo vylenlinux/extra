@@ -6,7 +6,7 @@ homepage="https://pypi.python.org/pypi/tinycss2"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-tinycss2
-version=1.4.0
+version=1.5.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/Kozea/tinycss2/archive/refs/tags/v${version}.tar.gz"
 
