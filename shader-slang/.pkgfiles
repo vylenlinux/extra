@@ -21,12 +21,6 @@ drwxr-xr-x root/root    usr/include/shader-slang/
 -rw-r--r-- root/root    usr/include/shader-slang/slang-tag-version.h
 -rw-r--r-- root/root    usr/include/shader-slang/slang-torch-prelude.h
 -rw-r--r-- root/root    usr/include/shader-slang/slang.h
--rw-r--r-- root/root    usr/include/slang-com-helper.h
--rw-r--r-- root/root    usr/include/slang-com-ptr.h
--rw-r--r-- root/root    usr/include/slang-deprecated.h
--rw-r--r-- root/root    usr/include/slang-gfx.h
--rw-r--r-- root/root    usr/include/slang-image-format-defs.h
--rw-r--r-- root/root    usr/include/slang.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/slang/
