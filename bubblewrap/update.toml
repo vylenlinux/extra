@@ -1,5 +1,6 @@
 name = "bubblewrap"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bubblewrap"
+owner = "containers"
+repo = "bubblewrap"

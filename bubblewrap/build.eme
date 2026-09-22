@@ -6,7 +6,7 @@ homepage="https://github.com/containers/bubblewrap"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bubblewrap
-version=0.12.0
+version=0.13.0
 release=1
 source="https://github.com/containers/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
