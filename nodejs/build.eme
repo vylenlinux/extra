@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nodejs
-version=26.9.0
+version=26.10.0
 release=1
 
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz
@@ -15,10 +15,7 @@ source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${v
 build() {
     # shellcheck disable=SC2164
     cd "node-v${version}"
-
     patch -Np1 -i "${SRC}/fix-build-with-python3.15.patch"
-    # fix build with ICU 76
-    sed '/pkgicu/s/icu-i18n/& icu-uc/' -i configure.py
 
     ./configure \
         --prefix=/usr \
