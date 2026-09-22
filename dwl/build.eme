@@ -6,7 +6,7 @@ homepage="https://codeberg.org/dwl/dwl"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dwl
-version=0.8
+version=0.9
 release=1
 source="${name}-${version}.tar.gz::https://codeberg.org/dwl/dwl/archive/v${version}.tar.gz"
 

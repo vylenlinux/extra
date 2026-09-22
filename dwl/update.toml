@@ -1,5 +1,6 @@
 name = "dwl"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "dwl"
+owner = "dwl"
+repo = "dwl"
