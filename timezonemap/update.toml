@@ -1,10 +1,5 @@
 name = "timezonemap"
-provider = "github"
+provider = "repology"
 
 [source]
-owner = "dashea"
-repo = "timezonemap"
-
-[github]
-use_releases = false
-use_tags = true
+package = "libtimezonemap"

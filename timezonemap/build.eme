@@ -2,22 +2,23 @@
 
 # shellcheck disable=SC2034
 description="Gtk3 timezone map widget, forked from gnome which forked from Ubiquity"
-homepage="https://github.com/dashea/timezonemap"
+homepage="https://launchpad.net/timezonemap/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=timezonemap
-version=0.4.5.3
+version=0.4.6
 release=1
-source="${name}-${version}.tar.gz::https://github.com/dashea/${name}/archive/refs/tags/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://deb.debian.org/debian/pool/main/libt/libtimezonemap/libtimezonemap_${version}.orig.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
-    autoreconf -fi
+    cd "libtimezonemap-${version}"
+    NOCONFIGURE=1 autoreconf -fi
 
     ./configure \
         --prefix=/usr \
-        --libdir=/usr/lib
+        --libdir=/usr/lib \
+        --enable-introspection
 
     sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 
