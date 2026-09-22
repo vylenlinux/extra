@@ -6,27 +6,25 @@ homepage="Intelligent Input Bus"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ibus
-version=1.5.34
-release=2
+version=1.5.35_rc1
+release=1
 
-source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz
+_version="$(printf '%s' "${version}" | tr '_' '-')"
+
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${_version}.tar.gz
     fix-deprecated-gschema-key.patch"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}-${_version}"
 
     patch -Np1 -i "${SRC}/fix-deprecated-gschema-key.patch"
-    export CFLAGS="${CFLAGS} -Wno-all"
-
     autoreconf -fi
 
     ./configure \
         --prefix=/usr \
         --libdir=/usr/lib \
-        --disable-gtk-doc \
         --disable-memconf \
-        --disable-python2 \
         --disable-gtk4 \
         --disable-gtk2 \
         --disable-emoji-dict \
