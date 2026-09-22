@@ -6,9 +6,9 @@ homepage="https://clang.llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=clang
-version=23.1.1
+version=23.1.2
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
+source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 
 build() {
     mv "llvm-project-${version}.src/${name}-tools-extra" "llvm-project-${version}.src/${name}/tools/extra"

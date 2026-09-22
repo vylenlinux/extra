@@ -1,5 +1,6 @@
 name = "llvm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "llvm"
+owner = "llvm"
+repo = "llvm-project"

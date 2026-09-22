@@ -6,10 +6,10 @@ homepage="https://lld.llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lld
-version=23.1.1
+version=23.1.2
 release=1
 
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
     lld-import-compact_unwind_encoding.h-from-libu.patch"
 
 build() {

@@ -6,10 +6,10 @@ homepage="https://libclc.llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libclc
-version=23.1.1
+version=23.1.2
 release=1
 
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
     ${name}.pc"
 
 build() {
@@ -20,10 +20,10 @@ build() {
     export NM=llvm-nm
     export RANLIB=llvm-ranlib
 
-    multibuild_variants="spirv32-unknown-unknown \
-        spirv64-unknown-unknown \
-        spirv64-unknown-vulkan \
-        nvptx64-nvidia-cuda \
+    multibuild_variants="spirv32-unknown-unknown
+        spirv64-unknown-unknown
+        spirv64-unknown-vulkan
+        nvptx64-nvidia-cuda
         amdgcn-amd-amdhsa-llvm"
 
     for variant in ${multibuild_variants}; do
