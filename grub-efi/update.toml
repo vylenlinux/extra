@@ -1,6 +1,7 @@
 name = "grub-efi"
-provider = "repology"
+provider = "ftp"
 dedup_key = "grub"
 
-[source]
-package = "grub"
+[ftp]
+url = "https://ftp.gnu.org/gnu/grub/"
+filename = "grub-{version}.tar.xz"

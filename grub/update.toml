@@ -1,5 +1,6 @@
 name = "grub"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "grub"
+[ftp]
+url = "https://ftp.gnu.org/gnu/grub/"
+filename = "grub-{version}.tar.xz"
