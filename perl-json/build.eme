@@ -19,8 +19,8 @@ build() {
     make DESTDIR="${PKG}" install
 
     # shellcheck disable=SC2038
-    find "${PKG}" \
+    find "${PKG}" \( \
         -name README -o \
         -name '*.bs' \
-    | xargs rm
+    \) -delete
 }
