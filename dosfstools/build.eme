@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Various utilities for use with the FAT family of file systems"
 homepage="https://github.com/dosfstools/dosfstools"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,16 +8,19 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=dosfstools
 version=4.2
 release=1
-source="https://github.com/dosfstools/dosfstools/releases/download/v$version/dosfstools-$version.tar.gz"
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/               \
-	            --enable-compat-symlinks \
-	            --mandir=/usr/share/man  \
-		    --docdir=/usr/share/doc/$name
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --enable-compat-symlinks \
+        --mandir=/usr/share/man \
+        --docdir="/usr/share/doc/${name}"
 
+    make
+    make DESTDIR="${PKG}" install
 }

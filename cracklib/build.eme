@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library used to enforce strong passwords by comparing user selected passwords to words in chosen word lists"
 homepage="https://github.com/cracklib/cracklib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,21 +8,20 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=cracklib
 version=2.10.3
 release=1
-source="https://github.com/cracklib/cracklib/releases/download/v$version/$name-$version.tar.bz2"
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i '/skipping/d' util/packer.c
 
-	sed -i '/skipping/d' util/packer.c
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --disable-static \
+        --disable-nls \
+        --with-default-dict=/lib/cracklib/pw_dict
 
-	./configure --prefix=/usr    \
-	            --disable-static \
-		    --disable-nls    \
-	            --with-default-dict=/lib/cracklib/pw_dict
-	make
-	make DESTDIR=$PKG install
-
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libcrack.so.* $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libcrack.so) $PKG/usr/lib/libcrack.so
+    make
+    make DESTDIR="${PKG}" install
 }

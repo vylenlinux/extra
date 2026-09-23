@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 extra_commands="checkconfig"
@@ -86,5 +86,5 @@ checkconfig() {
     done
 
     # now test the config fully
-    /usr/sbin/slaptest -u "$@" ${OPTS_CONF}
+    /usr/bin/slaptest -u "$@" ${OPTS_CONF}
 }

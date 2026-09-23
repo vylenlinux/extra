@@ -14,18 +14,22 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    make OPT="${CFLAGS} -fPIC -DPIC" \
+    make \
+        OPT="${CFLAGS} -fPIC -DPIC" \
         PREFIX=/usr \
         SHAREDIR=/usr/share/hwdata \
         MANDIR=/usr/share/man \
         SHARED=yes
+        SBINDIR=/usr/bin
 
-    make PREFIX=/usr \
+    make \
+        PREFIX=/usr \
         SHAREDIR=/usr/share/hwdata \
         MANDIR=/usr/share/man \
         SHARED=yes \
+        SBINDIR=/usr/bin \
         DESTDIR="${PKG}" \
         install install-lib
 
-    chmod -v 755 "${PKG}/usr/lib/libpci.so"
+    chmod 755 "${PKG}/usr/lib/libpci.so"
 }

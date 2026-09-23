@@ -13,7 +13,10 @@ source="https://chrony-project.org/releases/${name}-${version}.tar.gz"
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    ./configure --prefix=/usr
+
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
 
     make
     make DESTDIR="${PKG}" install

@@ -1,13 +1,13 @@
-drwxr-xr-x root/root    sbin/
--rwxr-xr-x root/root    sbin/fsck.jfs
--rwxr-xr-x root/root    sbin/jfs_debugfs
-hrwxr-xr-x root/root    sbin/jfs_fsck link to sbin/fsck.jfs
--rwxr-xr-x root/root    sbin/jfs_fscklog
--rwxr-xr-x root/root    sbin/jfs_logdump
-hrwxr-xr-x root/root    sbin/jfs_mkfs link to sbin/mkfs.jfs
--rwxr-xr-x root/root    sbin/jfs_tune
--rwxr-xr-x root/root    sbin/mkfs.jfs
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+hrwxr-xr-x root/root    usr/bin/fsck.jfs link to usr/bin/jfs_fsck
+-rwxr-xr-x root/root    usr/bin/jfs_debugfs
+-rwxr-xr-x root/root    usr/bin/jfs_fsck
+-rwxr-xr-x root/root    usr/bin/jfs_fscklog
+-rwxr-xr-x root/root    usr/bin/jfs_logdump
+-rwxr-xr-x root/root    usr/bin/jfs_mkfs
+-rwxr-xr-x root/root    usr/bin/jfs_tune
+hrwxr-xr-x root/root    usr/bin/mkfs.jfs link to usr/bin/jfs_mkfs
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man8/

@@ -32,9 +32,9 @@ build() {
 
     ./configure \
         --prefix=/usr \
-        --bindir=/usr/sbin \
+        --bindir=/usr/bin \
         --sysconfdir=/etc \
-        --libexecdir="/usr/lib/${name}" \
+        --libexecdir=/usr/lib \
         --enable-linuxcaps \
         --with-lineeditlibs=readline
 
@@ -43,4 +43,7 @@ build() {
 
     install -Dm644 "${SRC}/${name}.conf" -t "${PKG}/etc/"
     do_service ntp-client ntpd sntp
+
+    # remove unused (empty) dir
+    rmdir "${PKG}/usr/sbin"
 }

@@ -25,10 +25,10 @@ build() {
 
     # shellcheck disable=SC2164
     cd "${name}"
-    make BINDIR=/sbin LIBDIR=/lib
+    make BINDIR=/usr/bin LIBDIR=/usr/lib
 
     for xx in cli passphrase supplicant; do
-        install -Dm755 "wpa_${xx}" -t "${PKG}/sbin/"
+        install -Dm755 "wpa_${xx}" -t "${PKG}/usr/bin/"
         install -Dm644 "doc/docbook/wpa_${xx}.8" -t "${PKG}/usr/share/man/man8/"
     done
 

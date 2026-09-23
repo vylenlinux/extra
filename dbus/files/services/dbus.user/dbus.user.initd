@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 supervisor=supervise-daemon
@@ -6,13 +6,13 @@ dbus_socket="${XDG_RUNTIME_DIR}/bus"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=${dbus_socket}"
 
 description="An IPC message bus daemon"
-command="/usr/bin/dbus-daemon"
+command=/usr/bin/dbus-daemon
 command_args="--session --syslog --nofork --address ${DBUS_SESSION_BUS_ADDRESS}"
 
 extra_started_commands="reload"
 
 stop_post() {
-    [ ! -S "${dbus_socket}" ] || rm -f "${dbus_socket}"
+    [ -S "${dbus_socket}" ] && rm -f "${dbus_socket}"
 }
 
 reload() {
@@ -23,7 +23,8 @@ reload() {
         --system \
         --type=method_call \
         --dest=org.freedesktop.DBus \
-        / org.freedesktop.DBus.ReloadConfig > /dev/null
+        / org.freedesktop.DBus.ReloadConfig \
+    > /dev/null
 
     eend $?
 }

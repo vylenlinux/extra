@@ -11,7 +11,7 @@ release=1
 source="${name}-${version}.tar.xz::https://github.com/libfuse/sshfs/releases/download/sshfs-${version}/sshfs-${version}.tar.xz"
 
 build() {
-    vylen-meson "sshfs-${version}" build --buildtype=release
+    vylen-meson "sshfs-${version}" build
     meson compile -C build -j "${JOBS:-1}"
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

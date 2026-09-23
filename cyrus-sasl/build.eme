@@ -22,10 +22,11 @@ build() {
     patch -Np1 -i "${SRC}/79bce416883cab6dc45151575f2a66dc181c67e4.patch"
     patch -Np1 -i "${SRC}/c3ccead6ee3773f624708ca22be41292cd5ce557.patch"
 
-    autoreconf -fvi
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc/sasl \
         --with-plugindir=/usr/lib/sasl2 \
         --with-saslauthd=/var/sasl/saslauthd \

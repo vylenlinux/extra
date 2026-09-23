@@ -16,6 +16,7 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --with-crypto_backend=openssl \
         --disable-asciidoc \
         --disable-ssh-token

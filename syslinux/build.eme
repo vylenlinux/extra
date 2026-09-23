@@ -29,7 +29,7 @@ build() {
     done
 
     patch -p1 -i "${SRC}/${name}-sysmacros.patch"
-    make OPTFLAGS="${CFLAGS}" INSTALLROOT="${PKG}" MANDIR=/usr/share/man install
+    make OPTFLAGS="${CFLAGS}" INSTALLROOT="${PKG}" MANDIR=/usr/share/man SBINDIR=/usr/bin install
 
     cp build/* "${PKG}/usr/share/${name}/"
     install -Dm644 "${SRC}/isolinux.cfg" -t "${PKG}/usr/share/${name}/"

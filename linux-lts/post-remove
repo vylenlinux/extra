@@ -3,9 +3,9 @@
 initrd_file="/boot/initrd-linux-lts.img"
 
 # clean initrd
-[ -f "${initrd_file}" ] && {
+if [ -f "${initrd_file}" ]; then
     printf "'%s' found! Cleaning...\n" "${initrd_file}"
     rm -f "${initrd_file}"
 
     printf "==> '%s' removed!\n" "${initrd_file}"
-}
+fi

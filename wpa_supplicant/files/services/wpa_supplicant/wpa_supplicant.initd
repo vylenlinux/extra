@@ -1,8 +1,8 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 # shellcheck disable=SC2154
-command=/usr/sbin/wpa_supplicant
+command=/usr/bin/wpa_supplicant
 : "${wpa_supplicant_conf:=/etc/wpa_supplicant/wpa_supplicant.conf}"
 wpa_supplicant_if=${wpa_supplicant_if:+-i}$wpa_supplicant_if
 command_args="${wpa_supplicant_args} -B -c${wpa_supplicant_conf} ${wpa_supplicant_if}"

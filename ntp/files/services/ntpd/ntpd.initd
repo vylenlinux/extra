@@ -1,9 +1,9 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 description="ntpd - the network time protocol daemon"
 pidfile="/var/run/ntpd.pid"
-command="/usr/sbin/ntpd"
+command="/usr/bin/ntpd"
 command_args="${NTPD_OPTS}"
 command_args_background="-p ${pidfile}"
 command_args_foreground="-n"
@@ -14,10 +14,10 @@ depend() {
 }
 
 start_pre() {
-    if [ ! -f /etc/ntp.conf ]; then
+    [ -f /etc/ntp.conf ] || {
         eerror "Please create /etc/ntp.conf"
         return 1
-    fi
+    }
 
     return 0
 }

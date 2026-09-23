@@ -1,13 +1,10 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/fuse
-drwxr-xr-x root/root    lib/
-drwxr-xr-x root/root    lib/udev/
-drwxr-xr-x root/root    lib/udev/rules.d/
--rw-r--r-- root/root    lib/udev/rules.d/99-fuse3.rules
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwsr-xr-x root/root    usr/bin/fusermount3
+-rwxr-xr-x root/root    usr/bin/mount.fuse3
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/fuse3/
 -rw-r--r-- root/root    usr/include/fuse3/cuse_lowlevel.h
@@ -23,8 +20,9 @@ lrwxrwxrwx root/root    usr/lib/libfuse3.so -> libfuse3.so.4
 lrwxrwxrwx root/root    usr/lib/libfuse3.so.4 -> libfuse3.so.3.18.3
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/fuse3.pc
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/mount.fuse3
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/99-fuse3.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/

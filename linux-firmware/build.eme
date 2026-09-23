@@ -13,7 +13,7 @@ source="https://gitlab.com/kernel-firmware/${name}/-/archive/${version}/${name}-
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    make DESTDIR="${PKG}" install-xz
+    make DESTDIR="${PKG}" FIRMWAREDIR=/usr/lib/firmware install-xz
 
     find "${PKG}" \( \
         -name 'ChangeLog' -or \

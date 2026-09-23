@@ -13,7 +13,7 @@ dkms_remove() {
 
 dkms_install() {
     # shellcheck disable=SC2045
-    kernel_version="$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)"
+    kernel_version="$(find /usr/lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)"
 
     [ -n "${kernel_version}" ] || kernel_version="$(uname -r)"
     printf "dkms: building @NAME@ modules for kernel %s...\n" "${kernel_version}"

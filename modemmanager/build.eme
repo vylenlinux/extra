@@ -20,7 +20,8 @@ build() {
         -Dpolkit=permissive \
         -Dsystemdsystemunitdir=no \
         -Dsystemd_suspend_resume=false \
-        -Dsystemd_journal=false
+        -Dsystemd_journal=false \
+        -Dudevdir=/usr/lib/udev
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

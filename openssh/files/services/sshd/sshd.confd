@@ -16,7 +16,7 @@ SSHD_OPTS=""
 #SSHD_PIDFILE="${RC_PREFIX%/}/run/sshd.pid"
 
 # Path to the sshd binary (needs to be absolute path).
-#SSHD_BINARY="${RC_PREFIX%/}/usr/sbin/sshd"
+#SSHD_BINARY="${RC_PREFIX%/}/usr/bin/sshd"
 
 # Path to the ssh-keygen binary (needs to be absolute path).
 #SSHD_KEYGEN_BINARY="${RC_PREFIX%/}/usr/bin/ssh-keygen"

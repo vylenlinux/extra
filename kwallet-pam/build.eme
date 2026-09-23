@@ -22,7 +22,4 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
-
-    mkdir -p "${PKG}/lib"
-    mv "${PKG}/usr/lib/security" "${PKG}/lib/"
 }

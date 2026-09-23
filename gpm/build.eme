@@ -25,13 +25,14 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc
 
     make
     make DESTDIR="${PKG}" install
 
-    ln -sfv libgpm.so.2.1.0 "${PKG}/usr/lib/libgpm.so"
-    install -v -m644 conf/gpm-root.conf "${PKG}/etc"
+    ln -sf libgpm.so.2.1.0 "${PKG}/usr/lib/libgpm.so"
+    install -Dm644 conf/gpm-root.conf -t "${PKG}/etc/"
 
     install -Dm644 "${SRC}/gpm.sh" -t "${PKG}/etc/profile.d/"
     do_service "${name}"

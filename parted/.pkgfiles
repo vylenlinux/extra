@@ -1,4 +1,7 @@
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/parted
+-rwxr-xr-x root/root    usr/bin/partprobe
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/parted/
 -rw-r--r-- root/root    usr/include/parted/constraint.h
@@ -22,9 +25,6 @@ lrwxrwxrwx root/root    usr/lib/libparted.so.2 -> libparted.so.2.0.5
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libparted-fs-resize.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libparted.pc
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/parted
--rwxr-xr-x root/root    usr/sbin/partprobe
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/info/
 -rw-r--r-- root/root    usr/share/info/parted.info.gz

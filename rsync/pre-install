@@ -1,4 +1,4 @@
 #!/bin/sh
 
 getent group rsyncd >/dev/null || groupadd -g 48 rsyncd
-getent passwd rsyncd >/dev/null || useradd -r -M -g rsyncd -G rsyncd -c "rsyncd Daemon" -d /home/rsync -s /sbin/nologin -u 48 rsyncd
+getent passwd rsyncd >/dev/null || useradd -r -M -g rsyncd -G rsyncd -c "rsyncd Daemon" -d /home/rsync -s /usr/bin/nologin -u 48 rsyncd

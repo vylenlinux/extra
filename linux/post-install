@@ -1,9 +1,9 @@
 #!/bin/sh
 
-kernver=$(find /lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
+kernver=$(find /usr/lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
 
 # removing other vylen kernel
-for i in /lib/modules/*; do
+for i in /usr/lib/modules/*; do
     [ -d "${i}" ] || continue
 
     case "${i##*/}" in

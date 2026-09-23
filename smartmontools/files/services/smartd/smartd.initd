@@ -1,8 +1,8 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 pidfile="/run/smartd.pid"
-command="/usr/sbin/smartd"
+command="/usr/bin/smartd"
 command_args="-p ${pidfile} ${SMARTD_OPTS}"
 extra_started_commands="reload"
 
@@ -12,12 +12,12 @@ depend() {
 }
 
 start_pre() {
-    if [ ! -f "/etc/smartd.conf" ]; then
+    [ -f "/etc/smartd.conf" ] || {
         eerror "You should setup your /etc/smartd.conf file!"
         eerror "See the smartd.conf(5) manpage."
 
         return 1
-    fi
+    }
 
     return 0
 }

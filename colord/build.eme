@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="System activated daemon that maps devices to color profiles"
 homepage="https://www.freedesktop.org/software/colord"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,19 +8,26 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=colord
 version=1.4.8
 release=1
-source="https://www.freedesktop.org/software/colord/releases/$name-$version.tar.xz"
+source="https://www.freedesktop.org/software/${name}/releases/${name}-${version}.tar.xz"
 
 build() {
-	vylen-meson $name-$version build \
-		--libexecdir=/usr/lib/$name \
-		-D daemon_user=colord \
-		-D vapi=true \
-		-D systemd=false \
-		-D libcolordcompat=true \
-		-D argyllcms_sensor=false \
-		-D bash_completion=false \
-		-D docs=false \
-		-D man=false 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        --libexecdir="/usr/lib/${name}" \
+        -Ddaemon_user=colord \
+        -Dvapi=true \
+        -Dsystemd=false \
+        -Dlibcolordcompat=true \
+        -Dargyllcms_sensor=false \
+        -Dbash_completion=false \
+        -Ddocs=false \
+        -Dman=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # backport
+    if [ -d "${PKG}/lib" ]; then
+        mv "${PKG}/lib/udev" -t "${PKG}/usr/lib/"
+        rmdir "${PKG}/lib"
+    fi
 }

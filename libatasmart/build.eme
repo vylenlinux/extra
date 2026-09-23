@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Disk reporting library. It only supports a subset of the ATA S.M.A.R.T. functionality"
 homepage="https://0pointer.de/blog/projects/being-smart.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,13 +8,17 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libatasmart
 version=0.19
 release=1
-source="http://0pointer.de/public/$name-$version.tar.xz"
+source="https://0pointer.de/public/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --disable-static
 
+    make
+    make DESTDIR="${PKG}" install
 }

@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 extra_commands="checkconfig panic save"
@@ -163,10 +163,10 @@ checkkernel() {
 }
 
 forwarding() {
-    /usr/sbin/sysctl -qw net.ipv4.ip_forward=$1 || return 1
+    /usr/bin/sysctl -qw net.ipv4.ip_forward=$1 || return 1
 
-    if /usr/sbin/sysctl -eq net.ipv6.conf.all.forwarding >/dev/null; then
-        /usr/sbin/sysctl -qw \
+    if /usr/bin/sysctl -eq net.ipv6.conf.all.forwarding >/dev/null; then
+        /usr/bin/sysctl -qw \
             net.ipv6.conf.default.forwarding=$1 \
             net.ipv6.conf.all.forwarding=$1 || return 1
     fi

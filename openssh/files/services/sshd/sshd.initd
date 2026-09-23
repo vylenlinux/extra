@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 extra_commands="checkconfig"
@@ -7,7 +7,7 @@ extra_started_commands="reload"
 : "${SSHD_CONFDIR:="${RC_PREFIX%/}/etc/ssh"}"
 : "${SSHD_CONFIG:="${SSHD_CONFDIR}/sshd_config"}"
 : "${SSHD_PIDFILE:="${RC_PREFIX%/}/run/${SVCNAME}.pid"}"
-: "${SSHD_BINARY:="${RC_PREFIX%/}/usr/sbin/sshd"}"
+: "${SSHD_BINARY:="${RC_PREFIX%/}/usr/bin/sshd"}"
 : "${SSHD_KEYGEN_BINARY:="${RC_PREFIX%/}/usr/bin/ssh-keygen"}"
 
 command="${SSHD_BINARY}"
@@ -29,12 +29,12 @@ depend() {
 checkconfig() {
     checkpath --mode 0755 --directory "${RC_PREFIX%/}/var/empty"
 
-    if [ ! -e "${SSHD_CONFIG}" ]; then
+    [ -e "${SSHD_CONFIG}" ] || {
         eerror "You need an ${SSHD_CONFIG} file to run sshd"
         eerror "There is a sample file in /usr/share/doc/openssh"
 
         return 1
-    fi
+    }
 
     "${SSHD_KEYGEN_BINARY}" -A || return 2
     "${command}" -t "${command_args}" || return 3
@@ -54,7 +54,7 @@ start_pre() {
 stop_pre() {
     # If this is a restart, check to make sure the user's config
     # isn't busted before we stop the running daemon.
-    if [ "${RC_CMD}" = "restart" ] ; then
+    if [ "${RC_CMD}" = "restart" ]; then
         checkconfig || return $?
     fi
 }

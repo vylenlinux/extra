@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 depend() {
     before cron portmap
@@ -7,14 +7,14 @@ depend() {
 }
 
 checkconfig() {
-    if ! command -v "${NTPCLIENT_CMD}" >/dev/null 2>&1 ; then
+    command -v "${NTPCLIENT_CMD}" >/dev/null 2>&1 || {
         eerror "Please edit /etc/conf.d/ntp-client"
         eerror "Unable to locate the client command ${NTPCLIENT_CMD}!"
 
         return 1
-    fi
+    }
 
-    if [ -z "${NTPCLIENT_OPTS}" ] ; then
+    if [ -z "${NTPCLIENT_OPTS}" ]; then
         eerror "Please edit /etc/conf.d/ntp-client"
         eerror "I need to know what server/options to use!"
 

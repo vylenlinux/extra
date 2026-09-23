@@ -22,9 +22,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    install -d "${PKG}/lib"
-
-    mv "${PKG}/usr/lib"/libtirpc.so.* -t "${PKG}/lib/"
-    ln -sf ../../lib/libtirpc.so.3.0.0 "${PKG}/usr/lib/libtirpc.so"
 }

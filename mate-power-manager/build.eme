@@ -16,9 +16,10 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc \
         --libexecdir="/usr/lib/${name}"
 
     make
-    make DESTDIR=$PKG install
+    make DESTDIR="${PKG}" install
 }

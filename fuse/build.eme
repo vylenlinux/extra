@@ -11,7 +11,7 @@ release=1
 source="${name}-${version}.tar.gz::https://github.com/libfuse/libfuse/archive/refs/tags/${name}-${version}.tar.gz"
 
 build() {
-    vylen-meson "libfuse-${name}-${version}" build
+    vylen-meson "libfuse-${name}-${version}" build -Dudevrulesdir=/usr/lib/udev/rules.d
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 

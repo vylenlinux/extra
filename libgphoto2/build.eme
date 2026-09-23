@@ -13,14 +13,13 @@ source="http://downloads.sourceforge.net/project/gphoto/libgphoto/${version}/${n
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    export udevscriptdir=/usr/lib/udev
 
-    udevscriptdir=/lib/udev ./configure \
+    ./configure \
         --prefix=/usr \
-        --disable-nls  \
+        --disable-nls \
         --with-doc-dir=/usr/share/doc
 
     make
     make DESTDIR="${PKG}" install
-
-    rm "${PKG}/usr/lib"/libgphoto2*/*/*.la
 }

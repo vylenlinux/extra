@@ -17,6 +17,6 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    make DESTDIR="${PKG}" install
+    make DESTDIR="${PKG}" SBIN=/usr/bin install
     install -Dm644 "${SRC}/buildmodules-template.sh.in" -t "${PKG}/usr/lib/dkms/"
 }

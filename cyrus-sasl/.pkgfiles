@@ -4,6 +4,12 @@ drwxr-xr-x root/root    etc/conf.d/
 drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/saslauthd
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/pluginviewer
+-rwxr-xr-x root/root    usr/bin/saslauthd
+-rwxr-xr-x root/root    usr/bin/sasldblistusers2
+-rwxr-xr-x root/root    usr/bin/saslpasswd2
+-rwxr-xr-x root/root    usr/bin/testsaslauthd
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/sasl/
 -rw-r--r-- root/root    usr/include/sasl/hmac-md5.h
@@ -50,12 +56,6 @@ lrwxrwxrwx root/root    usr/lib/sasl2/libsasldb.so.3 -> libsasldb.so.3.0.0
 lrwxrwxrwx root/root    usr/lib/sasl2/libscram.so -> libscram.so.3.0.0
 lrwxrwxrwx root/root    usr/lib/sasl2/libscram.so.3 -> libscram.so.3.0.0
 -rwxr-xr-x root/root    usr/lib/sasl2/libscram.so.3.0.0
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/pluginviewer
--rwxr-xr-x root/root    usr/sbin/saslauthd
--rwxr-xr-x root/root    usr/sbin/sasldblistusers2
--rwxr-xr-x root/root    usr/sbin/saslpasswd2
--rwxr-xr-x root/root    usr/sbin/testsaslauthd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man3/

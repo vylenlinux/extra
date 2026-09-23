@@ -5,9 +5,8 @@ drwx------ root/root    etc/iwd/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/iwctl
+-rwxr-xr-x root/root    usr/bin/iwd
 -rwxr-xr-x root/root    usr/bin/iwmon
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/iwd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/system.d/

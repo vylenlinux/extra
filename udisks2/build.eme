@@ -16,9 +16,11 @@ build() {
 
     ./configure \
         --prefix=/usr \
-        --sysconfdir=/etc \
+        --sbindir=/usr/bin \
         --libexecdir=/usr/lib \
+        --sysconfdir=/etc \
         --localstatedir=/var \
+        --with-udevdir=/usr/lib/udev \
         --disable-static \
         --disable-man
 

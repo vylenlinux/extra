@@ -43,7 +43,8 @@ build() {
     make clean
     make prepare
 
-    rm -rf "${PKG}/lib/firmware"
+    # moved to linux-firmware
+    rm -rf "${PKG}/usr/lib/firmware"
 
     # shellcheck disable=SC2045
     for file in $(ls arch); do
@@ -84,10 +85,10 @@ build() {
     done
 
     kernel_version="$(make -s kernelrelease)"
-    rm -f "${PKG}/lib/modules/${kernel_version}/build"
-    mv "${SRC}/${name}-${version}" "${PKG}/lib/modules/${kernel_version}/build"
-    ln -s build "${PKG}/lib/modules/${kernel_version}/source"
+    rm -f "${PKG}/usr/lib/modules/${kernel_version}/build"
+    mv "${SRC}/${name}-${version}" "${PKG}/usr/lib/modules/${kernel_version}/build"
+    ln -s build "${PKG}/usr/lib/modules/${kernel_version}/source"
 
     # remove now broken symlinks
-    find -L "${PKG}/lib/modules/${kernel_version}/build" -type l -exec rm -f "{}" \;
+    find -L "${PKG}/usr/lib/modules/${kernel_version}/build" -type l -exec rm -f "{}" \;
 }

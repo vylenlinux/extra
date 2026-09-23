@@ -16,6 +16,7 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --disable-static \
         --disable-nls
 

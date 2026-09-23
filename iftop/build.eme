@@ -1,17 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Display bandwidth usage on an interface"
-homepage="http://www.ex-parrot.com/~pdw/iftop/"
+homepage="https://www.ex-parrot.com/~pdw/iftop/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iftop
 version=1.0pre4
 release=1
-source="http://www.ex-parrot.com/~pdw/$name/download/$name-$version.tar.gz"
+
+source="https://www.ex-parrot.com/~pdw/${name}/download/${name}-${version}.tar.gz
+    fix-read-config.patch"
 
 build() {
-	cd $name-$version
-	export CFLAGS="$CFLAGS -fcommon"
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
-}
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
+    patch -Np1 -i "${SRC}/fix-read-config.patch"
+    export CFLAGS="${CFLAGS} -fcommon"
+
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
+
+    make
+    make DESTDIR="${PKG}" install
+}

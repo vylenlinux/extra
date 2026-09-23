@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library implementation of the Media Transfer Protocol"
 homepage="http://libmtp.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,14 +8,16 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libmtp
 version=1.1.23
 release=1
-source="https://downloads.sourceforge.net/libmtp/libmtp-$version.tar.gz"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure \
-		--prefix=/usr \
-		--with-udev=/lib/udev
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --with-udev=/usr/lib/udev
+
+    make
+    make DESTDIR="${PKG}" install
 }

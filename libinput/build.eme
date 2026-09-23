@@ -12,7 +12,7 @@ source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${na
 
 build() {
     vylen-meson "${name}-${version}" build \
-        -Dudev-dir=/lib/udev \
+        -Dudev-dir=/usr/lib/udev \
         -Ddebug-gui=false \
         -Db_ndebug=false \
         -Dtests=false \

@@ -13,14 +13,15 @@ source="https://download.samba.org/pub/linux-cifs/${name}/${name}-${version}.tar
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    autoreconf -fvi
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --disable-systemd
 
     make
-    make DESTDIR="${PKG}" install
+    make DESTDIR="${PKG}" ROOTSBINDIR=/usr/bin install
 
-    chmod +s "${PKG}/sbin/mount.cifs"
+    chmod +s "${PKG}/usr/bin/mount.cifs"
 }

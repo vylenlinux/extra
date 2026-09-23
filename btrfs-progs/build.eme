@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=btrfs-progs
 version=7.1
 release=1
-source="https://www.kernel.org/pub/linux/kernel/people/kdave/${name}/${name}-v${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://www.kernel.org/pub/linux/kernel/people/kdave/${name}/${name}-v${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -16,13 +16,13 @@ build() {
 
     ./configure \
         --prefix=/usr \
-        --bindir=/sbin \
+        --bindir=/usr/bin \
         --disable-documentation \
         --disable-backtrace \
         --disable-python
 
     make
-    make DESTDIR="${PKG}" install
+    make DESTDIR="${PKG}" udevdir=/usr/lib/udev install
 
     # install bash completion (FS#44618)
     install -Dm644 btrfs-completion "${PKG}/usr/share/bash-completion/completions/btrfs"

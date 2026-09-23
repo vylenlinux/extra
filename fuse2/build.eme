@@ -16,23 +16,25 @@ build() {
     # shellcheck disable=SC2164
     cd "fuse-${version}"
 
+    export UDEV_RULES_PATH=/usr/lib/udev/rules.d
+    export MOUNT_FUSE_PATH=/usr/bin
+
     autoreconf -fi -I /usr/share/gettext/m4
     patch -Np1 -i "${SRC}/glibc-2.34-fix.patch"
 
     ./configure \
         --prefix=/usr \
+        --bindir=/usr/bin \
         --disable-static
 
     make
     make DESTDIR="${PKG}" install
 
-    install -d "${PKG}/lib"
-
-    mv "${PKG}/usr/lib"/libfuse.so.* "${PKG}/lib"
-    ln -sf ../../lib/libfuse.so.2.9.9 "${PKG}/usr/lib/libfuse.so"
-
     # static device nodes are handled by eudev
     # shellcheck disable=SC2115
-    rm -rf "${PKG}/dev" \
-        "${PKG}/etc/init.d"
+    rm -rf "${PKG}/dev"
+
+    # remove unused (empty) dir
+    # shellcheck disable=SC2115
+    rm -rf "${PKG}/etc"
 }

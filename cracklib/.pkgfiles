@@ -1,19 +1,28 @@
-drwxr-xr-x root/root    lib/
-lrwxrwxrwx root/root    lib/libcrack.so.2 -> libcrack.so.2.9.0
--rwxr-xr-x root/root    lib/libcrack.so.2.9.0
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cracklib-check
+-rwxr-xr-x root/root    usr/bin/cracklib-format
+-rwxr-xr-x root/root    usr/bin/cracklib-packer
+-rwxr-xr-x root/root    usr/bin/cracklib-unpacker
+-rwxr-xr-x root/root    usr/bin/cracklib-update
+-rwxr-xr-x root/root    usr/bin/create-cracklib-dict
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/crack.h
 -rw-r--r-- root/root    usr/include/packer.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libcrack.so -> ../../lib/libcrack.so.2.9.0
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/cracklib-check
--rwxr-xr-x root/root    usr/sbin/cracklib-format
--rwxr-xr-x root/root    usr/sbin/cracklib-packer
--rwxr-xr-x root/root    usr/sbin/cracklib-unpacker
--rwxr-xr-x root/root    usr/sbin/cracklib-update
--rwxr-xr-x root/root    usr/sbin/create-cracklib-dict
+lrwxrwxrwx root/root    usr/lib/libcrack.so -> libcrack.so.2.9.0
+lrwxrwxrwx root/root    usr/lib/libcrack.so.2 -> libcrack.so.2.9.0
+-rwxr-xr-x root/root    usr/lib/libcrack.so.2.9.0
+drwxr-xr-x root/root    usr/lib/python3.15/
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/__pycache__/cracklib.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/__pycache__/cracklib.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/__pycache__/test_cracklib.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/__pycache__/test_cracklib.cpython-315.pyc
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/_cracklib.so
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/cracklib.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/test_cracklib.py
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/cracklib/
 -rw-r--r-- root/root    usr/share/cracklib/cracklib-small

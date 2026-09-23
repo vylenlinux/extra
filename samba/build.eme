@@ -16,12 +16,14 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc \
-        --libexecdir=/usr/lib/samba \
+        --libdir=/usr/lib \
+        --libexecdir="/usr/lib/${name}" \
         --localstatedir=/var \
-        --with-piddir=/run/samba \
-        --with-sockets-dir=/run/samba \
-        --with-pammodulesdir=/lib/security \
+        --with-piddir="/run/${name}" \
+        --with-sockets-dir="/run/${name}" \
+        --with-pammodulesdir=/usr/lib/security \
         --bundled-libraries=!tdb,!talloc \
         --enable-fhs \
         --without-json \
@@ -33,13 +35,8 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    install -d "${PKG}/lib"
-
-    mv "${PKG}/usr/lib"/libnss_wins.so* -t "${PKG}/lib/"
-    mv "${PKG}/usr/lib"/libnss_winbind.so* -t "${PKG}/lib/"
-
-    ln -sf ../../lib/libnss_winbind.so.2 "${PKG}/usr/lib/libnss_winbind.so"
-    ln -sf ../../lib/libnss_wins.so.2 "${PKG}/usr/lib/libnss_wins.so"
+    ln -sf libnss_winbind.so.2 "${PKG}/usr/lib/libnss_winbind.so"
+    ln -sf libnss_wins.so.2 "${PKG}/usr/lib/libnss_wins.so"
 
     install -Dm644 examples/smb.conf.default -t "${PKG}/etc/${name}/"
 

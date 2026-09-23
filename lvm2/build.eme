@@ -19,11 +19,14 @@ build() {
 
     # fix the install_lvm2 make target
     sed '/SIMPLE_RECURSIVE_TARGETS/s/=/= install_lvm2/' -i libdm/make.tmpl.in
+    export CONFIG_SHELL=/bin/bash
 
-    CONFIG_SHELL=/bin/bash ./configure \
+    ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --libdir=/usr/lib \
         --with-libexecdir="/usr/lib/${name}" \
+        --with-udevdir=/usr/lib/udev \
         --exec-prefix= \
         --enable-cmdlib \
         --enable-pkgconfig \

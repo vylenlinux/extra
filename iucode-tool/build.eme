@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Tool to manipulate intel IA-32/X86-64 microcode bundles"
 homepage="https://gitlab.com/iucode-tool/iucode-tool/wikis/home"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,15 +8,16 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=iucode-tool
 version=2.3.1
 release=1
-source="https://gitlab.com/iucode-tool/releases/raw/master/${name}_${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://gitlab.com/${name}/releases/raw/master/${name}_${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-        ./configure \
-                --prefix=/usr   \
-                --sbindir=/usr/sbin
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
 
-        make
-        make DESTDIR=$PKG install 
+    make
+    make DESTDIR="${PKG}" install
 }

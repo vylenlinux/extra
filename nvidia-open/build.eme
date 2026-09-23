@@ -204,8 +204,8 @@ build() {
     symlink_lib /usr/lib/libnvidia-opticalflow.so
 
     # firmware
-    install_file firmware/gsp_ga10x.bin "lib/firmware/nvidia/${version}/"
-    install_file firmware/gsp_tu10x.bin "lib/firmware/nvidia/${version}/"
+    install_file firmware/gsp_ga10x.bin "usr/lib/firmware/nvidia/${version}/"
+    install_file firmware/gsp_tu10x.bin "usr/lib/firmware/nvidia/${version}/"
 
     # nvvm
     install_lib "libnvidia-nvvm.so.${version}"

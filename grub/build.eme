@@ -32,11 +32,11 @@ build() {
     install -Dm644 "${SRC}/extra_deps.lst" -t grub-core/
 
     # Fix os name
-    sed 's|GNU/Linux|Linux|' -i "util/grub.d/10_linux.in"
+    sed 's|GNU/Linux|Linux|' -i util/grub.d/10_linux.in
 
     ./configure \
         --prefix=/usr \
-        --sbindir=/sbin \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc \
         --disable-efiemu \
         --disable-werror \

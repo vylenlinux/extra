@@ -1,4 +1,4 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 depend() {
     need net
@@ -10,7 +10,7 @@ start() {
     start-stop-daemon \
         --start \
         --quiet \
-        --exec /usr/sbin/saslauthd \
+        --exec /usr/bin/saslauthd \
 		-- \
 		"${SASLAUTHD_OPTS}"
 

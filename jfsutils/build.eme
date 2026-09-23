@@ -21,7 +21,10 @@ build() {
     patch -Np1 -i "${SRC}/inttypes.patch"
     patch -Np1 -i "${SRC}/sysmacros.patch"
 
-    ./configure
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
+
     make
     make DESTDIR="${PKG}" install
 }

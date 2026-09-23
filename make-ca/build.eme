@@ -13,6 +13,5 @@ source="https://github.com/lfs-book/${name}/archive/v${version}/${name}-${versio
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    make DESTDIR="${PKG}" LIBEXECDIR=/usr/lib/make-ca install
+    make DESTDIR="${PKG}" SBINDIR=/usr/bin LIBEXECDIR=/usr/lib/make-ca install
 }

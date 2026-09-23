@@ -1,7 +1,7 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
-command=/usr/sbin/gpm
+command=/usr/bin/gpm
 command_args="-m ${MOUSEDEV} -t ${MOUSE} ${RESPONSIVENESS:+ -r ${RESPONSIVENESS}} ${REPEAT_TYPE:+ -R${REPEAT_TYPE}} ${APPEND}"
 pidfile=/var/run/gpm.pid
 

@@ -1,4 +1,8 @@
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cryptsetup
+-rwxr-xr-x root/root    usr/bin/integritysetup
+-rwxr-xr-x root/root    usr/bin/veritysetup
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/libcryptsetup.h
 drwxr-xr-x root/root    usr/lib/
@@ -8,10 +12,6 @@ lrwxrwxrwx root/root    usr/lib/libcryptsetup.so.12 -> libcryptsetup.so.12.11.0
 -rwxr-xr-x root/root    usr/lib/libcryptsetup.so.12.11.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcryptsetup.pc
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/cryptsetup
--rwxr-xr-x root/root    usr/sbin/integritysetup
--rwxr-xr-x root/root    usr/sbin/veritysetup
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/cs/

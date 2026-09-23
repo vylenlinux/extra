@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Tools to control the Linux key management system"
 homepage="https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,11 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=keyutils
 version=1.6.3
 release=1
-source="https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/$name-$version.tar.gz"
+source="https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/${name}.git/snapshot/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	sed -i "/^CFLAGS/s/-g/$CFLAGS/" Makefile
-	make
-	make install DESTDIR=$PKG USRLIBDIR=/usr/lib LIBDIR=/usr/lib
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    sed -i "/^CFLAGS/s/-g/${CFLAGS}/" Makefile
+
+    make
+    make DESTDIR="${PKG}" USRLIBDIR=/usr/lib LIBDIR=/usr/lib SBINDIR=/usr/bin BINDIR=/usr/bin install
 }

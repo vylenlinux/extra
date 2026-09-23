@@ -7,6 +7,7 @@ drwxr-xr-x root/root    etc/openldap/
 -rw-r--r-- root/root    etc/openldap/ldap.conf
 -rw-r--r-- root/root    etc/openldap/ldap.conf.default
 drwxr-xr-x root/root    etc/openldap/schema/
+-r--r--r-- root/root    etc/openldap/schema/README
 -r--r--r-- root/root    etc/openldap/schema/collective.ldif
 -r--r--r-- root/root    etc/openldap/schema/collective.schema
 -r--r--r-- root/root    etc/openldap/schema/corba.ldif
@@ -54,6 +55,17 @@ lrwxrwxrwx root/root    usr/bin/ldapadd -> ldapmodify
 -rwxr-xr-x root/root    usr/bin/ldapurl
 -rwxr-xr-x root/root    usr/bin/ldapvc
 -rwxr-xr-x root/root    usr/bin/ldapwhoami
+lrwxrwxrwx root/root    usr/bin/slapacl -> slapd
+lrwxrwxrwx root/root    usr/bin/slapadd -> slapd
+lrwxrwxrwx root/root    usr/bin/slapauth -> slapd
+lrwxrwxrwx root/root    usr/bin/slapcat -> slapd
+-rwxr-xr-x root/root    usr/bin/slapd
+lrwxrwxrwx root/root    usr/bin/slapdn -> slapd
+lrwxrwxrwx root/root    usr/bin/slapindex -> slapd
+lrwxrwxrwx root/root    usr/bin/slapmodify -> slapd
+lrwxrwxrwx root/root    usr/bin/slappasswd -> slapd
+lrwxrwxrwx root/root    usr/bin/slapschema -> slapd
+lrwxrwxrwx root/root    usr/bin/slaptest -> slapd
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/lber.h
 -rw-r--r-- root/root    usr/include/lber_types.h
@@ -76,18 +88,6 @@ lrwxrwxrwx root/root    usr/lib/libldap.so.2 -> libldap.so
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/lber.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/ldap.pc
-drwxr-xr-x root/root    usr/sbin/
-lrwxrwxrwx root/root    usr/sbin/slapacl -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapadd -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapauth -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapcat -> slapd
--rwxr-xr-x root/root    usr/sbin/slapd
-lrwxrwxrwx root/root    usr/sbin/slapdn -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapindex -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapmodify -> slapd
-lrwxrwxrwx root/root    usr/sbin/slappasswd -> slapd
-lrwxrwxrwx root/root    usr/sbin/slapschema -> slapd
-lrwxrwxrwx root/root    usr/sbin/slaptest -> slapd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/

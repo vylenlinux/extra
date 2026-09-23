@@ -13,7 +13,10 @@ source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${versio
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    ./configure --prefix=/usr
+
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
 
     make
     make DESTDIR="${PKG}" install

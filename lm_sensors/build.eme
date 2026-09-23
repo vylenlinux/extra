@@ -1,22 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="User-space support for the hardware monitoring drivers in the Linux kernel"
 homepage="https://github.com/lm-sensors/lm-sensors"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lm_sensors
-_name=$(echo $name | sed 's/_/-/g')
 version=3.6.2
-_version=$(printf '%s' "$version" | sed 's/\./-/g')
 release=1
-source="$name-$version.tar.gz::https://github.com/hramrach/lm-sensors/archive/refs/tags/V$_version.tar.gz"
+
+_version="$(printf '%s' "${version}" | sed 's/\./-/g')"
+source="${name}-${version}.tar.gz::https://github.com/hramrach/lm-sensors/archive/refs/tags/V${_version}.tar.gz"
 
 build() {
-	cd $_name-$_version
-	make PREFIX=/usr        \
-	     BUILD_STATIC_LIB=0 \
-	     MANDIR=/usr/share/man
+    # shellcheck disable=SC2164
+    cd "lm-sensors-${_version}"
+    make PREFIX=/usr
 
-	make PREFIX=/usr        \
-	     BUILD_STATIC_LIB=0 \
-	     MANDIR=/usr/share/man \
-	     DESTDIR=$PKG install
+    make \
+        PREFIX=/usr \
+        BUILD_STATIC_LIB=0 \
+        MANDIR=/usr/share/man \
+        SBINDIR=/usr/bin \
+        DESTDIR="${PKG}" \
+    install
 }

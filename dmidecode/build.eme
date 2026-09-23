@@ -13,6 +13,7 @@ source="https://download.savannah.gnu.org/releases/${name}/${name}-${version}.ta
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    sed -i "s:sbin:bin:g" Makefile
 
     make prefix=/usr CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
     make prefix=/usr DESTDIR="${PKG}" install

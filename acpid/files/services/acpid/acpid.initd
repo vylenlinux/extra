@@ -1,8 +1,8 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 extra_started_commands="reload"
-command="/usr/sbin/acpid"
+command="/usr/bin/acpid"
 command_args="${ACPID_ARGS}"
 description="Daemon for Advanced Configuration and Power Interface"
 

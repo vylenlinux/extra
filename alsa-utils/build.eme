@@ -16,11 +16,13 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --disable-alsaconf \
         --disable-bat \
         --disable-maintainer-mode \
         --disable-nls \
         --disable-xmlto \
+        --with-udev-rules-dir=/usr/lib/udev/rules.d \
         --with-systemdsystemunitdir=no
 
     make

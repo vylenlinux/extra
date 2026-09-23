@@ -12,8 +12,11 @@ drwxr-xr-x root/root    etc/init.d/
 -rwxr-xr-x root/root    etc/init.d/avahi-dnsconfd
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/avahi-autoipd
 -rwxr-xr-x root/root    usr/bin/avahi-browse
 lrwxrwxrwx root/root    usr/bin/avahi-browse-domains -> avahi-browse
+-rwxr-xr-x root/root    usr/bin/avahi-daemon
+-rwxr-xr-x root/root    usr/bin/avahi-dnsconfd
 -rwxr-xr-x root/root    usr/bin/avahi-publish
 lrwxrwxrwx root/root    usr/bin/avahi-publish-address -> avahi-publish
 lrwxrwxrwx root/root    usr/bin/avahi-publish-service -> avahi-publish
@@ -96,10 +99,6 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/avahi-glib.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/avahi-gobject.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/avahi-libevent.pc
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/avahi-autoipd
--rwxr-xr-x root/root    usr/sbin/avahi-daemon
--rwxr-xr-x root/root    usr/sbin/avahi-dnsconfd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/avahi/
 -rw-r--r-- root/root    usr/share/avahi/avahi-service.dtd
@@ -119,3 +118,5 @@ drwxr-xr-x root/root    usr/share/dbus-1/system.d/
 drwxr-xr-x root/root    usr/share/gir-1.0/
 -rw-r--r-- root/root    usr/share/gir-1.0/Avahi-0.6.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/AvahiCore-0.6.gir
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/

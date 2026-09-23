@@ -28,6 +28,7 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --with-pam \
         --disable-nls \
         --libexecdir="/usr/lib/${name}" \

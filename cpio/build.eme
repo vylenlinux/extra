@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Tools for archiving"
 homepage="https://www.gnu.org/software/cpio"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,22 +8,24 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=cpio
 version=2.15
 release=1
-source="https://ftp.gnu.org/gnu/cpio/$name-$version.tar.bz2
-	cpio-c23.patch"
+
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.bz2
+    cpio-c23.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	export CFLAGS="$CFLAGS -fcommon"
+    export CFLAGS="${CFLAGS} -fcommon"
+    patch -Np1 -i "${SRC}/cpio-c23.patch"
 
-	patch -Np1 -i $SRC/cpio-c23.patch
+    ./configure \
+        --prefix=/usr \
+        --bindir=/usr/bin \
+        --enable-mt \
+        --disable-nls \
+        --with-rmt=/usr/lib/tar/rmt
 
-	./configure --prefix=/usr \
-	            --bindir=/bin \
-	            --enable-mt   \
-		    --disable-nls \
-	            --with-rmt=/usr/lib/tar/rmt
-	make
-	make DESTDIR=$PKG install
-
+    make
+    make DESTDIR="${PKG}" install
 }

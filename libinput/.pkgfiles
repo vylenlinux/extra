@@ -1,13 +1,5 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/libinput/
-drwxr-xr-x root/root    lib/
-drwxr-xr-x root/root    lib/udev/
--rwxr-xr-x root/root    lib/udev/libinput-device-group
--rwxr-xr-x root/root    lib/udev/libinput-fuzz-extract
--rwxr-xr-x root/root    lib/udev/libinput-fuzz-to-zero
-drwxr-xr-x root/root    lib/udev/rules.d/
--rw-r--r-- root/root    lib/udev/rules.d/80-libinput-device-groups.rules
--rw-r--r-- root/root    lib/udev/rules.d/90-libinput-fuzz-override.rules
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/libinput
@@ -40,6 +32,13 @@ drwxr-xr-x root/root    usr/lib/libinput/
 -rwxr-xr-x root/root    usr/lib/libinput/libinput-test
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libinput.pc
+drwxr-xr-x root/root    usr/lib/udev/
+-rwxr-xr-x root/root    usr/lib/udev/libinput-device-group
+-rwxr-xr-x root/root    usr/lib/udev/libinput-fuzz-extract
+-rwxr-xr-x root/root    usr/lib/udev/libinput-fuzz-to-zero
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/80-libinput-device-groups.rules
+-rw-r--r-- root/root    usr/lib/udev/rules.d/90-libinput-fuzz-override.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/libinput/
 -rw-r--r-- root/root    usr/share/libinput/10-generic-keyboard.quirks

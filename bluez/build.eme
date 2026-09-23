@@ -19,9 +19,11 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sbindir=/usr/bin \
         --sysconfdir=/etc \
         --libexecdir=/usr/lib \
         --localstatedir=/var \
+        --with-udevdir=/usr/lib/udev \
         --enable-library \
         --enable-mesh \
         --enable-a2dp \
@@ -34,9 +36,8 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    install -d "${PKG}/usr/sbin"
-    ln -sf ../lib/bluetooth/bluetoothd "${PKG}/usr/sbin/bluetoothd"
-    ln -sf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/sbin/bluetooth-meshd"
+    ln -sf ../lib/bluetooth/bluetoothd "${PKG}/usr/bin/bluetoothd"
+    ln -sf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/bin/bluetooth-meshd"
 
     # main configuration
     install -Dm644 src/main.conf -t "${PKG}/etc/bluetooth/"

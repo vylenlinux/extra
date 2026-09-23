@@ -1,8 +1,8 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
 description="libvirt virtual machine logging manager"
-command="/usr/sbin/virtlogd"
+command="/usr/bin/virtlogd"
 start_stop_daemon_args="-b"
 pidfile="/run/virtlogd.pid"
 

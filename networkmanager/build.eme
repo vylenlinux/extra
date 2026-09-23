@@ -31,7 +31,7 @@ build() {
         -Dsystemdsystemgeneratordir=no \
         -Dsystemdsystemunitdir=no \
         -Dtests=no \
-        -Dudev_dir=/lib/udev \
+        -Dudev_dir=/usr/lib/udev \
         -Dvapi=false \
         -Dnbft="$(emerald is-installed libnvme && printf "true" || printf "false")"
 

@@ -16,12 +16,13 @@ build() {
 
     ./configure \
         --prefix=/usr \
-        --sbindir=/sbin \
+        --sysconfdir=/etc \
+        --sbindir=/usr/bin \
         --enable-libipq \
         --enable-nftables
 
     make
     make DESTDIR="${PKG}" install
 
-    ln -sf iptables-nft "${PKG}/sbin/iptables"
+    ln -sf iptables-nft "${PKG}/usr/bin/iptables"
 }

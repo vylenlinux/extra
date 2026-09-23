@@ -1,5 +1,6 @@
 PREFIX=/usr
 MANDIR="${PREFIX}/share/man"
+SBINDIR="${PREFIX}/bin"
 
 MANPATH_DEFAULT="${PREFIX}/share/man:${PREFIX}/manv"
 MANPATH_BASE="${PREFIX}/share/man:${PREFIX}/man"

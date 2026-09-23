@@ -1,7 +1,7 @@
-#!/sbin/openrc-run
+#!/usr/bin/openrc-run
 
 # shellcheck disable=SC2034
-command="/usr/bin/crond"
+command=/usr/bin/crond
 command_args="${CRONDARGS}"
 pidfile="/run/crond.pid"
 

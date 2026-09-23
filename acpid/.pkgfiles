@@ -10,9 +10,8 @@ drwxr-xr-x root/root    etc/init.d/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/acpi_listen
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/acpid
--rwxr-xr-x root/root    usr/sbin/kacpimon
+-rwxr-xr-x root/root    usr/bin/acpid
+-rwxr-xr-x root/root    usr/bin/kacpimon
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man8/

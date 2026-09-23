@@ -2,10 +2,6 @@ drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/security/
 drwxr-xr-x root/root    etc/security/limits.d/
 -rw-r--r-- root/root    etc/security/limits.d/99-audio.conf.epkgnew
-drwxr-xr-x root/root    lib/
-drwxr-xr-x root/root    lib/udev/
-drwxr-xr-x root/root    lib/udev/rules.d/
--rw-r--r-- root/root    lib/udev/rules.d/40-hpet-permissions.rules
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/jack_control
@@ -54,6 +50,9 @@ lrwxrwxrwx root/root    usr/lib/libjackserver.so.0 -> libjackserver.so.0.1.0
 -rwxr-xr-x root/root    usr/lib/libjackserver.so.0.1.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/jack.pc
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/40-hpet-permissions.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/services/
