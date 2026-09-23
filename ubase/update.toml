@@ -1,5 +1,0 @@
-name = "ubase"
-provider = "repology"
-
-[source]
-package = "ubase"
