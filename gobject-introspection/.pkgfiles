@@ -2,6 +2,7 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/g-ir-annotation-tool
 -rwxr-xr-x root/root    usr/bin/g-ir-compiler
+-rwxr-xr-x root/root    usr/bin/g-ir-doc-tool
 -rwxr-xr-x root/root    usr/bin/g-ir-generate
 -rwxr-xr-x root/root    usr/bin/g-ir-inspect
 -rwxr-xr-x root/root    usr/bin/g-ir-scanner
@@ -48,7 +49,7 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 drwxr-xr-x root/root    usr/lib/gobject-introspection/
 drwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/__init__.py
--rwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/_giscanner.cpython-314-x86_64-linux-gnu.so
+-rwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/_giscanner.cpython-315-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/_version.py
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/annotationmain.py
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/annotationparser.py
