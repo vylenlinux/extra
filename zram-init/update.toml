@@ -1,5 +1,0 @@
-name = "zram-init"
-provider = "repology"
-
-[source]
-package = "zram-init"
