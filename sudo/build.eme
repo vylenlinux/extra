@@ -34,7 +34,7 @@ build() {
     make DESTDIR="${PKG}" install
 
     ln -sf libsudo_util.so.0.0.0 "${PKG}/usr/lib/sudo/libsudo_util.so.0"
-    sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' "${PKG}/etc/sudoers"
+    sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' "${PKG}/etc/sudoers"
 
     rm -rf "${PKG}/var/run" \
         "${PKG}/run"
