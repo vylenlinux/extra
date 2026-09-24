@@ -6,7 +6,7 @@ homepage="https://github.com/sqlalchemy/mako"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-mako
-version=1.4.1
+version=1.4.3
 release=1
 source="${name}-${version}.tar.gz::https://pypi.org/packages/source/m/mako/mako-${version}.tar.gz"
 
