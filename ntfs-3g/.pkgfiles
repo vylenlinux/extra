@@ -4,7 +4,7 @@ drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/mkfs.ntfs -> /usr/bin/mkntfs
 -rwxr-xr-x root/root    usr/bin/mkntfs
 lrwxrwxrwx root/root    usr/bin/mount.lowntfs-3g -> /usr/bin/lowntfs-3g
-lrwxrwxrwx root/root    usr/bin/mount.ntfs -> /usr/bin/ntfs-3g
+lrwxrwxrwx root/root    usr/bin/mount.ntfs -> ntfs-3g
 lrwxrwxrwx root/root    usr/bin/mount.ntfs-3g -> /usr/bin/ntfs-3g
 -rwxr-xr-x root/root    usr/bin/ntfs-3g
 -rwxr-xr-x root/root    usr/bin/ntfs-3g.probe
@@ -61,9 +61,9 @@ drwxr-xr-x root/root    usr/include/ntfs-3g/
 -rw-r--r-- root/root    usr/include/ntfs-3g/volume.h
 -rw-r--r-- root/root    usr/include/ntfs-3g/xattrs.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libntfs-3g.so -> libntfs-3g.so.90.0.0
-lrwxrwxrwx root/root    usr/lib/libntfs-3g.so.90 -> libntfs-3g.so.90.0.0
--rwxr-xr-x root/root    usr/lib/libntfs-3g.so.90.0.0
+lrwxrwxrwx root/root    usr/lib/libntfs-3g.so -> libntfs-3g.so.91.0.0
+lrwxrwxrwx root/root    usr/lib/libntfs-3g.so.91 -> libntfs-3g.so.91.0.0
+-rwxr-xr-x root/root    usr/lib/libntfs-3g.so.91.0.0
 drwxr-xr-x root/root    usr/lib/ntfs-3g/
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libntfs-3g.pc
