@@ -6,7 +6,7 @@ homepage="https://github.com/gopasspw/gopass"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gopass
-version=1.17.2
+version=1.17.3
 release=1
 source="https://github.com/gopasspw/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
