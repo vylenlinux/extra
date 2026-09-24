@@ -6,7 +6,7 @@ homepage="https://www.open-mpi.org/projects/hwloc"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hwloc
-version=2.14.0
+version=2.15.0
 release=1
 source="https://www.open-mpi.org/software/${name}/v${version%.*}/downloads/${name}-${version}.tar.bz2"
 
