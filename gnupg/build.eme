@@ -6,7 +6,7 @@ homepage="https://gnupg.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gnupg
-version=2.5.22
+version=2.5.24
 release=1
 source="https://gnupg.org/ftp/gcrypt/${name}/${name}-${version}.tar.bz2"
 
