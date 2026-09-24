@@ -6,7 +6,7 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=php
-version=8.5.10
+version=8.5.11
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
@@ -79,7 +79,7 @@ build() {
     sed -i '/^extension_dir/s|=.*$|= "/usr/lib/php/extensions"|' php.ini-*
 
     install -d "${PKG}/etc/php/conf.d"
-    install -m644 php.ini-* "${PKG}/etc/php"
+    install -m644 php.ini-* -t "${PKG}/etc/php/"
 
     rm -rf "${PKG}/run" \
         "${PKG}/var/run"
