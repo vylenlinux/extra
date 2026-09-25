@@ -6,11 +6,11 @@ homepage="https://www.gnu.org/software/grub/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grub
-version=2.14
-release=2
+version=2.16
+release=1
 backup="etc/default/${name}"
 
-source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
+source="https://gitlab.freedesktop.org/api/v4/projects/26558/packages/generic/source-assets/${name}-${version}/${name}-${version}.tar.xz
     initrd.patch
     ${name}.default
     ${name}.cfg
