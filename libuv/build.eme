@@ -1,16 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Multi-platform support library with a focus on asynchronous I/O"
 homepage="https://github.com/libuv/libuv"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libuv
-version=1.52.1
+version=1.53.0
 release=1
-source="https://dist.libuv.org/dist/v$version/libuv-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://dist.libuv.org/dist/v${version}/${name}-v${version}.tar.gz"
 
 build() {
-	cd $name-v$version
-	sh autogen.sh
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-v${version}"
+    ./autogen.sh
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
