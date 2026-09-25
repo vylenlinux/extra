@@ -1,6 +1,7 @@
 drwxr-xr-x root/root    boot/
 -rw-r--r-- root/root    boot/config-linux-lts
 -rw-r--r-- root/root    boot/vmlinuz-linux-lts
+drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/modules/
 drwxr-xr-x root/root    usr/lib/modules/6.18.53-linux-lts/
