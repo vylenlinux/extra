@@ -1,5 +1,6 @@
 name = "gdb"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "gdb"
+[ftp]
+url = "https://ftp.gnu.org/gnu/gdb/"
+filename = "gdb-{version}.tar.xz"
