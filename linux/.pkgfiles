@@ -1,6 +1,7 @@
 drwxr-xr-x root/root    boot/
 -rw-r--r-- root/root    boot/config-linux
 -rw-r--r-- root/root    boot/vmlinuz-linux
+drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/modules/
 drwxr-xr-x root/root    usr/lib/modules/7.2.7-linux/
@@ -17785,6 +17786,7 @@ drwxrwxr-x root/root    usr/lib/modules/7.2.7-linux/build/include/linux/decompre
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/delay.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/delayacct.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/delayed_call.h
+-rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/designware_i2c.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/dev_printk.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/devcoredump.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/devfreq-event.h
@@ -18702,7 +18704,6 @@ drwxrwxr-x root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/da91
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/da9150/registers.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/davinci_voicecodec.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/db8500-prcmu.h
--rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/dbx500-prcmu.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/dln2.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/gsc.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/linux/mfd/hi6421-pmic.h
@@ -20520,6 +20521,7 @@ drwxrwxr-x root/root    usr/lib/modules/7.2.7-linux/build/include/media/tpg/
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-flash-led-class.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-fwnode.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-h264.h
+-rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-hevc.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-image-sizes.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-ioctl.h
 -rw-rw-r-- root/root    usr/lib/modules/7.2.7-linux/build/include/media/v4l2-isp.h
