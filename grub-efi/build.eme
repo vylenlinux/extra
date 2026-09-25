@@ -1,43 +1,59 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="The GRand Unified Bootloader (EFI)"
 homepage="https://www.gnu.org/software/grub/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grub-efi
-version=2.14
-unifont_version=16.0.01
+version=2.16
 release=1
-source="https://ftp.gnu.org/gnu/grub/grub-$version.tar.xz
-	https://ftp.gnu.org/gnu/unifont/unifont-$unifont_version/unifont-$unifont_version.bdf.gz"
+
+unifont_version=17.0.05
+
+source="https://gitlab.freedesktop.org/api/v4/projects/26558/packages/generic/source-assets/grub-${version}/grub-${version}.tar.xz
+    https://ftp.gnu.org/gnu/unifont/unifont-${unifont_version}/unifont-${unifont_version}.bdf.gz
+    extra_deps.lst"
 
 build() {
-	cd grub-$version
+    # shellcheck disable=SC2164
+    cd "grub-${version}"
 
-	# Install font data 
-	gunzip $SRC/unifont-$unifont_version.bdf.gz
-	cp $SRC/unifont-$unifont_version.bdf unifont.bdf
+    # Install font data
+    gunzip "${SRC}/unifont-${unifont_version}.bdf.gz"
+    cp "${SRC}/unifont-${unifont_version}.bdf" unifont.bdf
 
-	# Unset any environment variables which may affect the build
-	unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
+    # Unset any environment variables which may affect the build
+    unset CFLAGS \
+        CPPFLAGS \
+        CXXFLAGS \
+        LDFLAGS
 
-	# Add a file missing from the release tarball
-	echo depends bli part_gpt > grub-core/extra_deps.lst
+    # Add a file missing from the release tarball
+    install -Dm644 "${SRC}/extra_deps.lst" -t grub-core/
 
-	./configure --prefix=/usr \
-	            --sbindir=/sbin \
-	            --sysconfdir=/etc \
-	            --disable-efiemu \
-	            --enable-grub-mkfont \
-	            --with-platform=efi \
-	            --target=x86_64 \
-	            --program-prefix="" \
-		    --program-suffix="-efi" \
-	            --with-bootdir="/boot" \
-	            --disable-werror \
-		    --disable-nls
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --sysconfdir=/etc \
+        --disable-efiemu \
+        --enable-grub-mkfont \
+        --with-platform=efi \
+        --target=x86_64 \
+        --program-prefix="" \
+        --program-suffix="-efi" \
+        --with-bootdir=/boot \
+        --disable-werror \
+        --disable-nls
 
-	rm -r $PKG/etc/ $PKG/usr/bin $PKG/sbin
-	rm $PKG/usr/share/grub/grub-mkconfig_lib
-	rm -r $PKG/usr/share/info $PKG/usr/share/bash-completion
+    make
+    make DESTDIR="${PKG}" install
+
+    # shellcheck disable=SC2115
+    rm -r "${PKG}/etc" \
+        "${PKG}/usr/bin" \
+        "${PKG}/usr/share/info" \
+        "${PKG}/usr/share/bash-completion"
+
+    rm "${PKG}/usr/share/grub/grub-mkconfig_lib"
 }
