@@ -7,18 +7,20 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-base
 version=6.11.2
-release=1
+release=2
 
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/${version}/submodules/qtbase-everywhere-src-${version}.tar.xz
     qt6-base-cflags.patch
-    qt6-base-nostrip.patch"
+    qt6-base-nostrip.patch
+    11efdbb.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "qtbase-everywhere-src-${version}"
 
-    patch -p1 -i "${SRC}/qt6-base-cflags.patch"
-    patch -p1 -i "${SRC}/qt6-base-nostrip.patch"
+    patch -Np1 -i "${SRC}/qt6-base-cflags.patch"
+    patch -Np1 -i "${SRC}/qt6-base-nostrip.patch"
+    patch -Np1 -i "${SRC}/11efdbb.patch"
 
     cmake -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \

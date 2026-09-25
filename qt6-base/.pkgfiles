@@ -95,6 +95,7 @@ drwxr-xr-x root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qiodevice_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qiooperation_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qiooperation_p_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qioring_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qipaddress_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qislamiccivilcalendar_p.h
 -rw-r--r-- root/root    usr/include/qt6/QtCore/6.11.2/QtCore/private/qitemselectionmodel_p.h
@@ -3666,13 +3667,6 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6PrintSupportPrivate/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateVersionlessAliasTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6PrintSupportPrivate/Qt6PrintSupportPrivateVersionlessTargets.cmake
 drwxr-xr-x root/root    usr/lib/cmake/Qt6Sql/
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginAdditionalTargetInfo.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfig.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfigVersionImpl.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets-release.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargetsPrecheck.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfigVersion.cmake
@@ -3956,15 +3950,15 @@ drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/bin/
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qdbuscpp2xml
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qdbusxml2cpp
-hrwxr-xr-x root/root    usr/lib/qt6/bin/qmake link to usr/lib/qt6/bin/qmake6
--rwxr-xr-x root/root    usr/lib/qt6/bin/qmake6
+-rwxr-xr-x root/root    usr/lib/qt6/bin/qmake
+hrwxr-xr-x root/root    usr/lib/qt6/bin/qmake6 link to usr/lib/qt6/bin/qmake
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qt-cmake
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qt-cmake-create
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qt-configure-module
-hrwxr-xr-x root/root    usr/lib/qt6/bin/qtpaths link to usr/lib/qt6/bin/qtpaths6
--rwxr-xr-x root/root    usr/lib/qt6/bin/qtpaths6
-hrwxr-xr-x root/root    usr/lib/qt6/bin/wasmdeployqt link to usr/lib/qt6/bin/wasmdeployqt6
--rwxr-xr-x root/root    usr/lib/qt6/bin/wasmdeployqt6
+-rwxr-xr-x root/root    usr/lib/qt6/bin/qtpaths
+hrwxr-xr-x root/root    usr/lib/qt6/bin/qtpaths6 link to usr/lib/qt6/bin/qtpaths
+-rwxr-xr-x root/root    usr/lib/qt6/bin/wasmdeployqt
+hrwxr-xr-x root/root    usr/lib/qt6/bin/wasmdeployqt6 link to usr/lib/qt6/bin/wasmdeployqt
 -rwxr-xr-x root/root    usr/lib/qt6/cmake_automoc_parser
 drwxr-xr-x root/root    usr/lib/qt6/metatypes/
 -rw-r--r-- root/root    usr/lib/qt6/metatypes/qt6concurrent_metatypes.json
@@ -4673,7 +4667,6 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/printsupport/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/printsupport/libcupsprintersupport.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/sqldrivers/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/sqldrivers/libqsqlite.so
--rwxr-xr-x root/root    usr/lib/qt6/plugins/sqldrivers/libqsqlmysql.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/tls/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/tls/libqcertonlybackend.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/tls/libqopensslbackend.so
@@ -4852,7 +4845,3 @@ drwxrwxr-x root/root    usr/share/qt6/wayland/protocols/xdg-toplevel-icon/
 -rw-rw-r-- root/root    usr/share/qt6/wayland/protocols/xdg-toplevel-icon/REUSE.toml
 -rw-rw-r-- root/root    usr/share/qt6/wayland/protocols/xdg-toplevel-icon/qt_attribution.json
 -rw-rw-r-- root/root    usr/share/qt6/wayland/protocols/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml
-drwxr-xr-x root/root    usr/usr/
-drwxr-xr-x root/root    usr/usr/bin/
-lrwxrwxrwx root/root    usr/usr/bin/qmake6 -> ../../lib/qt6/bin/qmake
-lrwxrwxrwx root/root    usr/usr/bin/wasmdeployqt6 -> ../../lib/qt6/bin/wasmdeployqt
