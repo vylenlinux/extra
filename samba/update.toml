@@ -1,5 +1,6 @@
 name = "samba"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "samba"
+[ftp]
+url = "https://www.samba.org/ftp/samba/stable/"
+filename = "samba-{version}.tar.gz"
