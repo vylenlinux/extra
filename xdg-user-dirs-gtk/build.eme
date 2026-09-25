@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Creates user dirs and asks to relocalize them"
+homepage="https://gitlab.gnome.org/GNOME/xdg-user-dirs-gtk"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=xdg-user-dirs-gtk
+version=0.16
+release=1
+
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz
+    0001-desktop-Show-in-more-environments.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0001-desktop-Show-in-more-environments.patch"
+
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
