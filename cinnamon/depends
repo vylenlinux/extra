@@ -30,3 +30,4 @@ ibus
 gobject-introspection
 intltool
 libsass
+xdg-user-dirs-gtk
