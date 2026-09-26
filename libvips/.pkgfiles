@@ -64,11 +64,11 @@ drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Vips-8.0.typelib
 lrwxrwxrwx root/root    usr/lib/libvips-cpp.so -> libvips-cpp.so.42
-lrwxrwxrwx root/root    usr/lib/libvips-cpp.so.42 -> libvips-cpp.so.42.20.6
--rwxr-xr-x root/root    usr/lib/libvips-cpp.so.42.20.6
+lrwxrwxrwx root/root    usr/lib/libvips-cpp.so.42 -> libvips-cpp.so.42.20.7
+-rwxr-xr-x root/root    usr/lib/libvips-cpp.so.42.20.7
 lrwxrwxrwx root/root    usr/lib/libvips.so -> libvips.so.42
-lrwxrwxrwx root/root    usr/lib/libvips.so.42 -> libvips.so.42.20.6
--rwxr-xr-x root/root    usr/lib/libvips.so.42.20.6
+lrwxrwxrwx root/root    usr/lib/libvips.so.42 -> libvips.so.42.20.7
+-rwxr-xr-x root/root    usr/lib/libvips.so.42.20.7
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/vips-cpp.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/vips.pc
