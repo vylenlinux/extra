@@ -16,8 +16,8 @@ build() {
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS} -Wno-error" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -Wno-error" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/cmake/Qt6/qt.toolchain.cmake \
         -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
@@ -33,6 +33,7 @@ build() {
         -DQT_FEATURE_webengine_system_minizip=OFF \
         -DQT_FEATURE_webengine_system_re2=OFF \
         -DINSTALL_GN=OFF \
+        -DINSTALL_PUBLICBINDIR=bin \
         -DWARNINGS_ARE_ERRORS=OFF \
         -Wno-author
 
