@@ -17,13 +17,26 @@ drwxr-xr-x root/root    usr/include/hunspell/
 -rw-r--r-- root/root    usr/include/hunspell/atypes.hxx
 -rw-r--r-- root/root    usr/include/hunspell/hunspell.h
 -rw-r--r-- root/root    usr/include/hunspell/hunspell.hxx
+-rw-r--r-- root/root    usr/include/hunspell/hunversion.h
 -rw-r--r-- root/root    usr/include/hunspell/hunvisapi.h
 -rw-r--r-- root/root    usr/include/hunspell/w_char.hxx
 drwxr-xr-x root/root    usr/lib/
 -rw-r--r-- root/root    usr/lib/libhunspell-1.7.a
--rwxr-xr-x root/root    usr/lib/libhunspell-1.7.so.0.1.0
-lrwxrwxrwx root/root    usr/lib/libhunspell-1.7.so.0 -> libhunspell-1.7.so.0.1.0
-lrwxrwxrwx root/root    usr/lib/libhunspell-1.7.so -> libhunspell-1.7.so.0.1.0
+lrwxrwxrwx root/root    usr/lib/libhunspell-1.7.so -> libhunspell-1.7.so.0.2.0
+lrwxrwxrwx root/root    usr/lib/libhunspell-1.7.so.0 -> libhunspell-1.7.so.0.2.0
+-rwxr-xr-x root/root    usr/lib/libhunspell-1.7.so.0.2.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/hunspell.pc
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/hu/
+drwxr-xr-x root/root    usr/share/man/hu/man1/
+-rw-r--r-- root/root    usr/share/man/hu/man1/hunspell.1.gz
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/hunspell.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/hunzip.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/hzip.1.gz
+drwxr-xr-x root/root    usr/share/man/man3/
+-rw-r--r-- root/root    usr/share/man/man3/hunspell.3.gz
+drwxr-xr-x root/root    usr/share/man/man5/
+-rw-r--r-- root/root    usr/share/man/man5/hunspell.5.gz
