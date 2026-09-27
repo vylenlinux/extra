@@ -12,6 +12,6 @@ source="${name}-${version}.tar.xz::https://github.com/libfuse/sshfs/releases/dow
 
 build() {
     vylen-meson "sshfs-${version}" build
-    meson compile -C build -j "${JOBS:-1}"
+    meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
