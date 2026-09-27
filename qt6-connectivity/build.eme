@@ -23,4 +23,6 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
+
+    ln -sf /usr/lib/qt6/sdpscanner "${PKG}/usr/bin/sdpscanner6"
 }
