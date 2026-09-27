@@ -6,11 +6,11 @@ homepage="https://www.gtk.org/gtk-doc/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtk-doc
-version=1.36.1
+version=1.37.0
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
-KEEP_DOC="yes"
+KEEP_DOC=yes
 
 build() {
     vylen-meson "${name}-${version}" build \
