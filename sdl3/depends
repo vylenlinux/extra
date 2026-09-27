@@ -9,3 +9,4 @@ cmake
 libxkbcommon
 libxcursor
 libxscrnsaver
+libxtst
