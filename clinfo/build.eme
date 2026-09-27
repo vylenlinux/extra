@@ -1,14 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Simple OpenCL application that enumerates all available platform and device properties"
 homepage="https://github.com/Oblomov/clinfo"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=clinfo
-version=3.0.25.02.14
+version=3.1.26.09.26
 release=1
-source=" https://github.com/Oblomov/clinfo/archive/${version}/${name}-${version}.tar.gz"
+source="https://github.com/Oblomov/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-     cd ${name}-${version}
-     make
-     make BINDIR=$PKG/usr/bin MANDIR=$PKG/usr/share/man  install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make
+    make BINDIR="${PKG}/usr/bin" MANDIR="${PKG}/usr/share/man" install
 }
