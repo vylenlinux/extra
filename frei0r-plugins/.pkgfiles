@@ -11,6 +11,7 @@ drwxr-xr-x root/root    usr/include/frei0r/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/3dflippo.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/3dperspective.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/B.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/G.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/IIRblur.so
@@ -126,6 +127,7 @@ drwxr-xr-x root/root    usr/lib/frei0r-1/
 -rwxr-xr-x root/root    usr/lib/frei0r-1/scanline0r.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/screen.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/select0r.so
+-rwxr-xr-x root/root    usr/lib/frei0r-1/shadert0y.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/shake0scillate.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/sharpness.so
 -rwxr-xr-x root/root    usr/lib/frei0r-1/sigmoidaltransfer.so
