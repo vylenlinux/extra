@@ -11,11 +11,15 @@ release=1
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/${version}/submodules/qtquick3d-everywhere-src-${version}.tar.xz"
 
 build() {
-    cmake -S "qtquick3d-everywhere-src-${version}" -B build  -G Ninja \
-        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
+    cmake -S "qtquick3d-everywhere-src-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}"
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DQT_USE_CCACHE="$(emerald is-installed ccache && printf "ON" || printf "OFF")" \
+        -DINSTALL_PUBLICBINDIR=bin \
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

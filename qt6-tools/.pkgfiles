@@ -529,8 +529,8 @@ drwxr-xr-x root/root    usr/lib/qt6/bin/
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qdbus
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qdbusviewer
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qdistancefieldgenerator
-hrwxr-xr-x root/root    usr/lib/qt6/bin/qtdiag link to usr/lib/qt6/bin/qtdiag6
--rwxr-xr-x root/root    usr/lib/qt6/bin/qtdiag6
+-rwxr-xr-x root/root    usr/lib/qt6/bin/qtdiag
+hrwxr-xr-x root/root    usr/lib/qt6/bin/qtdiag6 link to usr/lib/qt6/bin/qtdiag
 -rwxr-xr-x root/root    usr/lib/qt6/bin/qtplugininfo
 drwxr-xr-x root/root    usr/lib/qt6/metatypes/
 -rw-r--r-- root/root    usr/lib/qt6/metatypes/qt6designer_metatypes.json
@@ -586,22 +586,3 @@ drwxr-xr-x root/root    usr/share/qt6/phrasebooks/
 -rw-r--r-- root/root    usr/share/qt6/phrasebooks/russian.qph
 -rw-r--r-- root/root    usr/share/qt6/phrasebooks/spanish.qph
 -rw-r--r-- root/root    usr/share/qt6/phrasebooks/swedish.qph
-drwxr-xr-x root/root    usr/usr/
-drwxr-xr-x root/root    usr/usr/bin/
-lrwxrwxrwx root/root    usr/usr/bin/assistant6 -> ../../lib/qt6/bin/assistant
-lrwxrwxrwx root/root    usr/usr/bin/designer6 -> ../../lib/qt6/bin/designer
-lrwxrwxrwx root/root    usr/usr/bin/kmap2qmap6 -> ../../lib/qt6/bin/kmap2qmap
-lrwxrwxrwx root/root    usr/usr/bin/lcheck6 -> ../../lib/qt6/bin/lcheck
-lrwxrwxrwx root/root    usr/usr/bin/lconvert6 -> ../../lib/qt6/bin/lconvert
-lrwxrwxrwx root/root    usr/usr/bin/linguist6 -> ../../lib/qt6/bin/linguist
-lrwxrwxrwx root/root    usr/usr/bin/lrelease-pro6 -> ../../lib/qt6/bin/lrelease-pro
-lrwxrwxrwx root/root    usr/usr/bin/lrelease6 -> ../../lib/qt6/bin/lrelease
-lrwxrwxrwx root/root    usr/usr/bin/ltext2id6 -> ../../lib/qt6/bin/ltext2id
-lrwxrwxrwx root/root    usr/usr/bin/lupdate-pro6 -> ../../lib/qt6/bin/lupdate-pro
-lrwxrwxrwx root/root    usr/usr/bin/lupdate6 -> ../../lib/qt6/bin/lupdate
-lrwxrwxrwx root/root    usr/usr/bin/pixeltool6 -> ../../lib/qt6/bin/pixeltool
-lrwxrwxrwx root/root    usr/usr/bin/qdbus6 -> ../../lib/qt6/bin/qdbus
-lrwxrwxrwx root/root    usr/usr/bin/qdbusviewer6 -> ../../lib/qt6/bin/qdbusviewer
-lrwxrwxrwx root/root    usr/usr/bin/qdistancefieldgenerator6 -> ../../lib/qt6/bin/qdistancefieldgenerator
-lrwxrwxrwx root/root    usr/usr/bin/qtdiag6 -> ../../lib/qt6/bin/qtdiag
-lrwxrwxrwx root/root    usr/usr/bin/qtplugininfo6 -> ../../lib/qt6/bin/qtplugininfo

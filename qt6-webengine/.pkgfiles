@@ -1,6 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
-lrwxrwxrwx root/root    usr/bin/QtWebEngineProcess6 -> ../lib/qt6/bin/QtWebEngineProcess
+lrwxrwxrwx root/root    usr/bin/QtWebEngineProcess6 -> /usr/lib/qt6/QtWebEngineProcess
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtPdf/

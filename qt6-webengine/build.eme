@@ -39,4 +39,6 @@ build() {
 
     cmake --build build -j "${CBUILD_JOBS}"
     DESTDIR="${PKG}" cmake --install build
+
+    ln -sf /usr/lib/qt6/QtWebEngineProcess "${PKG}/usr/bin/QtWebEngineProces"
 }

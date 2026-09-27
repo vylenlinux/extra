@@ -1,4 +1,5 @@
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/Qt6/
@@ -67,5 +68,3 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/imageformats/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/imageformats/libqwebp.so
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
 -rw-r--r-- root/root    usr/lib/qt6/sbom/qtimageformats-6.11.2.spdx
-drwxr-xr-x root/root    usr/usr/
-drwxr-xr-x root/root    usr/usr/bin/

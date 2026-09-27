@@ -1,4 +1,5 @@
 drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtTextToSpeech/
@@ -40,13 +41,6 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6Qml/QmlPlugins/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6Qml/QmlPlugins/Qt6TextToSpeechQmlTargetsPrecheck.cmake
 drwxr-xr-x root/root    usr/lib/cmake/Qt6TextToSpeech/
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginAdditionalTargetInfo.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfig.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersion.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginConfigVersionImpl.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets-release.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargets.cmake
--rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechFlitePluginTargetsPrecheck.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginAdditionalTargetInfo.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginConfig.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Qt6TextToSpeech/Qt6QTextToSpeechMockPluginConfigVersion.cmake
@@ -92,7 +86,6 @@ drwxr-xr-x root/root    usr/lib/qt6/modules/
 -rw-r--r-- root/root    usr/lib/qt6/modules/TextToSpeech.json
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/texttospeech/
--rwxr-xr-x root/root    usr/lib/qt6/plugins/texttospeech/libqtexttospeech_flite.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/texttospeech/libqtexttospeech_mock.so
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/QtTextToSpeech/
@@ -101,5 +94,3 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/QtTextToSpeech/
 -rw-r--r-- root/root    usr/lib/qt6/qml/QtTextToSpeech/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
 -rw-r--r-- root/root    usr/lib/qt6/sbom/qtspeech-6.11.2.spdx
-drwxr-xr-x root/root    usr/usr/
-drwxr-xr-x root/root    usr/usr/bin/
