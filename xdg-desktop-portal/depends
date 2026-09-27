@@ -2,3 +2,4 @@ fuse
 pipewire
 json-glib
 bubblewrap
+gdk-pixbuf
