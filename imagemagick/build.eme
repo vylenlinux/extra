@@ -6,13 +6,13 @@ homepage="https://imagemagick.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=imagemagick
-version=7.1.2.31
+version=7.1.2.32
 release=1
 
 _version="${version%.*}-${version##*.}"
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${_version}.tar.gz"
 
-KEEP_LIBTOOL="yes"
+KEEP_LIBTOOL=yes
 
 build() {
     # shellcheck disable=SC2164
