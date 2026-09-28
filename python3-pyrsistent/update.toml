@@ -1,0 +1,10 @@
+name = "python3-pyrsistent"
+provider = "github"
+
+[source]
+owner = "tobgu"
+repo = "pyrsistent"
+
+[github]
+use_releases = false
+use_tags = true
