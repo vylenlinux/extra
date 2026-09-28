@@ -6,10 +6,10 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=telegram-desktop
-version=7.2.9
+version=7.2.10
 release=1
 
-tdlib_commit=d1085f9cebc5a62379991ae1652673954f229c1f
+tdlib_commit=42e6a5259551178d1dab54a22ad96d14bd906e20
 
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
     https://github.com/tdlib/td/archive/${tdlib_commit}.tar.gz"

@@ -1,5 +1,10 @@
 name = "telegram-desktop"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "telegram-desktop"
+owner = "telegramdesktop"
+repo = "tdesktop"
+
+[github]
+use_releases = false
+use_tags = true
