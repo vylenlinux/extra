@@ -6,7 +6,7 @@ homepage="https://gitlab.com/vylen/mkinitramfs"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mkinitramfs
-version=20260515
+version=20260928
 release=1
 backup="etc/${name}.conf"
 source="https://gitlab.com/vylen/${name}/-/archive/${version}/${name}-${version}.tar.gz"
