@@ -8,7 +8,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=avahi
 version=0.9rc5
 release=1
-source="${name}-${version}.tar.gz::https://github.com/avahi/avahi/archive/refs/tags/v${version%rc*}-${version#"${version%rc*}"}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/avahi/avahi/archive/refs/tags/v${version%rc*}-${version#"${version%rc*}"}.tar.gz
+    sysusers.conf"
 
 build() {
     # shellcheck disable=SC2164
@@ -21,7 +23,7 @@ build() {
         --sysconfdir=/etc \
         --localstatedir=/var \
         --runstatedir=/run \
-        --with-distro=gentoo \
+        --with-distro=archlinux \
         --with-autoipd-user=avahi \
         --with-autoipd-group=avahi \
         --with-avahi-priv-access-group=wheel \
@@ -39,11 +41,12 @@ build() {
         --disable-mono \
         --disable-mono-doc \
         --disable-nls \
-        --disable-libsystemd \
-        --with-systemdsystemunitdir=no
+        --with-systemdsystemunitdir=/usr/lib/systemd/system
 
     make
     make DESTDIR="${PKG}" install
+
+    install -Dm644 "${SRC}/sysusers.conf" "${PKG}/usr/lib/sysusers.d/${name}.conf"
 
     ln -s avahi-compat-libdns_sd/dns_sd.h "${PKG}/usr/include/dns_sd.h"
     rm -rf "${PKG}/run"

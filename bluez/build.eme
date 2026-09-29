@@ -30,7 +30,6 @@ build() {
         --enable-experimental\
         --enable-hid2hci \
         --enable-tools \
-        --disable-systemd \
         ICAL_LIBS="$(pkgconf --libs libicalvcal)"
 
     make
@@ -43,6 +42,4 @@ build() {
     install -Dm644 src/main.conf -t "${PKG}/etc/bluetooth/"
     install -Dm644 "${SRC}/rfcomm.conf" -t "${PKG}/etc/bluetooth/"
     install -Dm644 "${SRC}/uart.conf" -t "${PKG}/etc/bluetooth/"
-
-    do_service bluetoothd
 }

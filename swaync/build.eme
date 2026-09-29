@@ -11,10 +11,7 @@ release=1
 source="${name}-${version}.tar.gz::https://github.com/ErikReider/SwayNotificationCenter/archive/v${version}.tar.gz"
 
 build() {
-    vylen-meson "SwayNotificationCenter-${version}" build \
-        -Dsystemd-service=false \
-        -Dscripting=true
-
+    vylen-meson "SwayNotificationCenter-${version}" build -Dscripting=true
     meson compile -C build
     DESTDIR="${PKG}" meson install -C build
 }

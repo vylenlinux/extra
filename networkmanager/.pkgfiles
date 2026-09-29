@@ -9,11 +9,9 @@ drwxr-xr-x root/root    etc/NetworkManager/dispatcher.d/pre-up.d/
 drwxr-xr-x root/root    etc/NetworkManager/dnsmasq-shared.d/
 drwxr-xr-x root/root    etc/NetworkManager/dnsmasq.d/
 drwxr-xr-x root/root    etc/NetworkManager/system-connections/
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/networkmanager
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
--rwxr-xr-x root/root    usr/bin/NetworkManagers
+-rwxr-xr-x root/root    usr/bin/NetworkManager
 -rwxr-xr-x root/root    usr/bin/nm-online
 -rwxr-xr-x root/root    usr/bin/nmcli
 -rwxr-xr-x root/root    usr/bin/nmtui
@@ -161,9 +159,12 @@ drwxr-xr-x root/root    usr/lib/NetworkManager/1.58.1/
 drwxr-xr-x root/root    usr/lib/NetworkManager/VPN/
 drwxr-xr-x root/root    usr/lib/NetworkManager/conf.d/
 drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/
+lrwxrwxrwx root/root    usr/lib/NetworkManager/dispatcher.d/90-nm-cloud-setup.sh -> no-wait.d/90-nm-cloud-setup.sh
 drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/no-wait.d/
+lrwxrwxrwx root/root    usr/lib/NetworkManager/dispatcher.d/no-wait.d/90-nm-cloud-setup.sh -> ../pre-up.d/90-nm-cloud-setup.sh
 drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/pre-down.d/
 drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/pre-up.d/
+-rwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/pre-up.d/90-nm-cloud-setup.sh
 drwxr-xr-x root/root    usr/lib/NetworkManager/system-connections/
 drwxr-xr-x root/root    usr/lib/firewalld/
 drwxr-xr-x root/root    usr/lib/firewalld/zones/
@@ -182,6 +183,19 @@ lrwxrwxrwx root/root    usr/lib/libnm.so.0 -> libnm.so.0.1.0
 -rwxr-xr-x root/root    usr/lib/nm-priv-helper
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libnm.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system-generators/
+-rwxr-xr-x root/root    usr/lib/systemd/system-generators/nm-initrd-generator.sh
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager-config-initrd.service
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager-dispatcher.service
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager-initrd.service
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager-wait-online-initrd.service
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager-wait-online.service
+-rw-r--r-- root/root    usr/lib/systemd/system/NetworkManager.service
+-rw-r--r-- root/root    usr/lib/systemd/system/nm-cloud-setup.service
+-rw-r--r-- root/root    usr/lib/systemd/system/nm-cloud-setup.timer
+-rw-r--r-- root/root    usr/lib/systemd/system/nm-priv-helper.service
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/84-nm-drivers.rules

@@ -18,14 +18,11 @@ build() {
         --prefix=/usr \
         --libexecdir=/usr/bin \
         --localstatedir=/var \
-        --sysconfdir=/etc \
-        --disable-systemd-service
+        --sysconfdir=/etc
 
     make
     make DESTDIR="${PKG}" install
 
     install -dm700 "${PKG}/var/lib/iwd" \
         "${PKG}/etc/iwd"
-
-    do_service "${name}"
 }

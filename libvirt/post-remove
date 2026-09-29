@@ -1,4 +1,0 @@
-#!/bin/sh
-
-getent passwd libvirt >/dev/null && userdel libvirt
-getent group libvirt >/dev/null && groupdel libvirt

@@ -8,11 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=seatd
 version=0.9.3
 release=2
-source="${name}-${version}.tar.gz::https://git.sr.ht/~kennylevinsen/${name}/archive/${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://git.sr.ht/~kennylevinsen/${name}/archive/${version}.tar.gz
+    sysuser.conf"
 
 build() {
     vylen-meson "${name}-${version}" build \
-        -Dlibseat-logind=elogind \
+        -Dlibseat-logind=systemd \
         -Dlibseat-seatd=enabled \
         -Dlibseat-builtin=enabled \
         -Dman-pages=enabled \
@@ -22,7 +24,9 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
+    install -Dm644 "${name}-${version}/contrib/systemd/seatd.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 sysuser.conf "${PKG}/usr/lib/sysusers.d/seatd.conf"
+
     # user can run seatd-launch
     chmod u+s "${PKG}/usr/bin/seatd-launch"
-    do_service "${name}"
 }

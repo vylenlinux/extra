@@ -77,6 +77,15 @@ lrwxrwxrwx root/root    usr/lib/libcolorhug.so.2 -> libcolorhug.so.2.0.5
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/colord.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/colorhug.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/colord.service
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/colord-session.service
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/colord-sysusers.conf
+drwxr-xr-x root/root    usr/lib/tmpfiles.d/
+-rw-r--r-- root/root    usr/lib/tmpfiles.d/colord.conf
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/69-cd-sensors.rules
@@ -369,5 +378,5 @@ drwxr-xr-x root/root    usr/share/vala/vapi/
 -rw-r--r-- root/root    usr/share/vala/vapi/colord.vapi
 drwxr-xr-x root/root    var/
 drwxr-xr-x root/root    var/lib/
-drwxr-xr-x colord/root    var/lib/colord/
+drwxr-xr-x root/root    var/lib/colord/
 drwxr-xr-x root/root    var/lib/colord/icc/

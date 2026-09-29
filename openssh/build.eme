@@ -9,7 +9,13 @@ name=openssh
 version=10.5p1
 release=1
 backup="etc/ssh/sshd_config"
-source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz"
+
+source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz
+    ssh-agent.service
+    ssh-agent.socket
+    sshd.service
+    sshd@.service
+    sshdgenkeys.service"
 
 build() {
     # shellcheck disable=SC2164
@@ -31,5 +37,10 @@ build() {
     install -Dm644 contrib/ssh-copy-id.1 -t "${PKG}/usr/share/man/man1/"
 
     sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' -i "${PKG}/etc/ssh/sshd_config"
-    do_service sshd ssh-agent
+
+    install -Dm644 "${SRC}/sshdgenkeys.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/sshd.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/sshd@.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/ssh-agent.service" -t "${PKG}/usr/lib/systemd/user/"
+    install -Dm644 "${SRC}/ssh-agent.socket" -t "${PKG}/usr/lib/systemd/user/"
 }

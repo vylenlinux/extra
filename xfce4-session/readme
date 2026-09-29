@@ -1,15 +1,10 @@
 Configuring Xfce4 Session:
 
-Xfce4 can use elogind for login session tracking, runtime directories, device
-access and power-management authorization when it is installed and enabled in
-OpenRC. The Xfce4 PAM service includes system-session, which is populated by
-the elogind package migration hook.
-
 When building an Xfce4 package, some configuration files are installed in
 /usr/share/applications, /usr/share/icons, and /usr/share/mime. In order to use
 those files in your Xfce4 session, update the relevant databases as root:
 
-    update-desktop-database &&
+    update-desktop-database
     update-mime-database /usr/share/mime
 
 Starting Xfce4:
@@ -18,8 +13,3 @@ You can start Xfce4 from a display manager such as SDDM or LXDM. For a manual
 xinit session, use dbus-run-session in ~/.xinitrc:
 
     dbus-run-session startxfce4
-
-Ensure elogind is started before the display manager when using OpenRC:
-
-    rc-update add elogind boot
-    rc-service elogind start

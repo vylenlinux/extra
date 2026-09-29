@@ -1,4 +1,0 @@
-#!/bin/sh
-
-getent passwd colord >/dev/null && userdel colord
-getent group colord >/dev/null && groupdel colord

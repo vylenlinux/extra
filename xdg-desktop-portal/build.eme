@@ -22,8 +22,7 @@ build() {
 
     vylen-meson "${name}-${version}" build \
         --libexecdir="lib/${name}" \
-        -Dtests=disabled \
-        -Dsystemd=disabled
+        -Dtests=disabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

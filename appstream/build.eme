@@ -21,9 +21,7 @@ build() {
         -Dvapi=false \
         -Dstemming=false \
         -Dapt-support=false \
-        -Dsystemd=false \
-        -Dblake3-support=false \
-        -Dman=false
+        -Dblake3-support=false
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

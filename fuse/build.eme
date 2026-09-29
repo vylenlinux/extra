@@ -22,5 +22,4 @@ build() {
 
     # move to fuse-common
     rm -f "${PKG}/etc/${name}.conf"
-    do_service "${name}"
 }

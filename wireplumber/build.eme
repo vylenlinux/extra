@@ -16,8 +16,7 @@ build() {
         -Dsystem-lua-version=auto \
         -Dintrospection=disabled \
         -Ddoc=disabled \
-        -Delogind=enabled \
-        -Dsystemd=disabled
+        -Dsystemd-system-service=true
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

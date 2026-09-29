@@ -32,13 +32,11 @@ build() {
         --with-pam \
         --disable-nls \
         --libexecdir="/usr/lib/${name}" \
-        --with-systemdsystemunitdir=no \
         --sysconfdir=/etc \
         --enable-gtk3
 
     make
     make DESTDIR="${PKG}" install
 
-    do_service "${name}"
     do_pam "${name}"
 }

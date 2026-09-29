@@ -13,7 +13,10 @@ backup="etc/${name}.conf"
 source="https://www.eecis.udel.edu/~${name}/${name}_spool/ntp4/${name}-${version%.*}/${name}-${version}.tar.gz
     fix.build.patch
     ntp-4.2.8p18-openssl_4-1.patch
-    ${name}.conf"
+    ${name}.conf
+    ntp.sysusers
+    ntpd.service
+    ntpdate.service"
 
 build() {
     # shellcheck disable=SC2164
@@ -42,7 +45,9 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/${name}.conf" -t "${PKG}/etc/"
-    do_service ntp-client ntpd sntp
+    install -Dm644 "${SRC}/ntpd.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/ntpdate.service" -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/ntp.sysusers" "${PKG}/usr/lib/sysusers.d/ntp.conf"
 
     # remove unused (empty) dir
     rmdir "${PKG}/usr/sbin"

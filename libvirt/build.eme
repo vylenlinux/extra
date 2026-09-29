@@ -48,6 +48,4 @@ build() {
 
     install -Dm644 "${SRC}/libvirtd.conf" "${SRC}/qemu.conf" -t "${PKG}/etc/libvirt/"
     rm -rf "${PKG}/run"
-
-    do_service libvirt-guests libvirtd virtlockd virtlogd
 }

@@ -1,2 +1,4 @@
 gtk3
 gtk-doc
+libdbusmenu
+libnotify

@@ -15,10 +15,7 @@ source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive
 build() {
     patch -Np1 -d "${name}-${version}" -i "${SRC}/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
 
-    vylen-meson "${name}-${version}" build \
-        -Dsession_tracking=elogind \
-        -Dos_type=suse
-
+    vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 

@@ -23,10 +23,8 @@ build() {
         --disable-nls \
         --disable-xmlto \
         --with-udev-rules-dir=/usr/lib/udev/rules.d \
-        --with-systemdsystemunitdir=no
+        --with-systemdsystemunitdir=/usr/lib/systemd/system
 
     make
     make DESTDIR="${PKG}" install
-
-    do_service alsa
 }

@@ -27,6 +27,5 @@ build() {
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe
 
-    do_service "${name}"
     do_pam "${name}"
 }

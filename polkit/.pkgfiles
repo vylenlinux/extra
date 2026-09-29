@@ -59,6 +59,15 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 drwxr-xr-x root/root    usr/lib/polkit-1/
 -rwsrwxr-x root/root    usr/lib/polkit-1/polkit-agent-helper-1
 -rwxr-xr-x root/root    usr/lib/polkit-1/polkitd
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/polkit-agent-helper.socket
+-rw-r--r-- root/root    usr/lib/systemd/system/polkit-agent-helper@.service
+-rw-r--r-- root/root    usr/lib/systemd/system/polkit.service
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/polkit.conf
+drwxr-xr-x root/root    usr/lib/tmpfiles.d/
+-rw-r--r-- root/root    usr/lib/tmpfiles.d/polkit-tmpfiles.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/system-services/

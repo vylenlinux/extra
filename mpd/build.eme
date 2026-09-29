@@ -8,11 +8,15 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=mpd
 version=0.24.15
 release=1
-source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/MPD/archive/v${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz
+    mpd.service.override
+    mpd.sysusers"
 
 build() {
     vylen-meson "MPD-${version}" build \
         --auto-features disabled \
+        -Dsystemd=enabled \
         -Dadplug=disabled \
         -Dcurl=enabled \
         -Dbzip2=enabled \
@@ -48,5 +52,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    do_service "${name}"
+    install -Dm644 "${name}.service.override" "${PKG}/usr/lib/systemd/system/mpd.service.d/00-vylen.conf"
+    install -Dm644 "${name}.sysusers" "${PKG}/usr/lib/sysusers.d/${name}.conf"
 }

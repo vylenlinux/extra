@@ -20,7 +20,6 @@ build() {
         -Dtests=false \
         -Ddoxygen="$(emerald is-installed doxygen && printf 'true' || printf 'false')" \
         -Dbluez5="$(emerald is-installed bluez && printf 'enabled' || printf 'disabled')" \
-        -Delogind=enabled \
         -Dudevrulesdir=/usr/lib/udev/rules.d
 
     meson compile -C build

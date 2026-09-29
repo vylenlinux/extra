@@ -26,5 +26,4 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 syslog.conf -t "${PKG}/etc/"
-    do_service "${name}"
 }

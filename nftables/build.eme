@@ -10,13 +10,14 @@ version=1.1.7
 release=1
 
 source="https://www.netfilter.org/pub/${name}/${name}-${version}.tar.xz
-    ${name}.nft"
+    ${name}.nft
+    nftables.service"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    CONFIG_SHELL=/bin/bash ./configure \
+    CONFIG_SHELL=/usr/bin/bash ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/usr/share \
@@ -35,7 +36,7 @@ build() {
         --output-fd 3 3>&1 >&2
 
     python3 -m installer -d "${PKG}" .dist/*.whl
-    install -Dm600 "${SRC}/${name}.nft" -t "${PKG}/etc/"
 
-    do_service "${name}"
+    install -Dm600 "${SRC}/${name}.nft" -t "${PKG}/etc/"
+    install -Dm644 "${SRC}/nftables.service" -t "${PKG}/usr/lib/systemd/system/"
 }
