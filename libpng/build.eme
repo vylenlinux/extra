@@ -6,18 +6,14 @@ homepage="http://www.libpng.org/pub/png/libpng.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpng
-version=1.6.58
+version=1.6.59
 release=1
-
-source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz
-    https://downloads.sourceforge.net/sourceforge/${name}-apng/${name}-${version}-apng.patch.gz"
+source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    gzip -cd "${SRC}/${name}-${version}-apng.patch.gz" | patch -p1
-    autoreconf -fiv
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
