@@ -1,7 +1,6 @@
 python3-alabaster
 python3-docutils
 python3-imagesize
-python3-jinja2
 python3-packaging
 python3-pygments
 python3-requests
@@ -14,5 +13,4 @@ python3-sphinxcontrib-qthelp
 python3-sphinxcontrib-serializinghtml
 python3-sphinxcontrib-websupport
 python3-gpep517
-python3-flit-core
 python3-roman-numerals
