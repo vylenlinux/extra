@@ -6,7 +6,7 @@ homepage="https://chromium.googlesource.com/chromium/third_party/ffmpeg"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi-ffmpeg-codecs
-version=152.0.7977.80
+version=152.0.7977.151
 release=1
 
 _vivaldi_major_version=8.2
