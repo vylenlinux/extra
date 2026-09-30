@@ -4,3 +4,7 @@ provider = "github"
 [source]
 owner = "openresty"
 repo = "luajit2"
+
+[github]
+use_releases = false
+use_tags = true
