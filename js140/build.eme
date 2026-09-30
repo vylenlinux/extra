@@ -6,7 +6,7 @@ homepage="https://spidermonkey.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=js140
-version=140.16.0esr
+version=140.17.0esr
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}/source/firefox-${version}.source.tar.xz
@@ -14,8 +14,7 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/relea
     0002-Bug-1969769-Change-uses-of-ast.Str-with-ast.Constant.patch
     0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch
     0004-Bug-1983736-Patch-jsonschema-to-work-with-Python-3.1.patch
-    0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch
-    0006-Bug-2053518-Handle-the-oe-linux-rust-targets-added-i.patch"
+    0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch"
 
 build() {
     # shellcheck disable=SC2164
@@ -29,9 +28,6 @@ build() {
     patch -Np1 -i "${SRC}/0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch"
     patch -Np1 -i "${SRC}/0004-Bug-1983736-Patch-jsonschema-to-work-with-Python-3.1.patch"
     patch -Np1 -i "${SRC}/0005-Bug-1993797-Fix-AST-parsing-in-DecoratorVisitor-for-.patch"
-
-    # Fix build with Rust 1.98
-    patch -Np1 -i "${SRC}/0006-Bug-2053518-Handle-the-oe-linux-rust-targets-added-i.patch"
 
     mkdir obj
     # shellcheck disable=SC2164
