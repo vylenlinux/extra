@@ -1,22 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Userland tools for the Flash-Friendly File System (F2FS)"
 homepage="https://f2fs.wiki.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=f2fs-tools
-version=1.16.0
+version=1.17.0
 release=1
-source="https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/$name-$version.tar.gz gcc15.patch"
+source="https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/${name}.git/snapshot/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fi
 
-    patch -Np1 -i $SRC/gcc15.patch
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin
 
-	autoreconf -fi
-	./configure --prefix=/usr \
-	--sbindir=/usr/bin
-
-	make
-	make DESTDIR=$PKG \
-	sbindir=/usr/bin install
+    make
+    make DESTDIR="${PKG}" install
 }
