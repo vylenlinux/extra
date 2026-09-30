@@ -26,5 +26,5 @@ build() {
     cd contrib/pngminus
 
     make PNGLIB_SHARED="-L${PKG}/usr/lib -lpng" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" png2pnm pnm2png
-    install -m0755 png2pnm pnm2png "${PKG}/usr/bin/"
+    install -Dm755 png2pnm pnm2png "${PKG}/usr/bin/"
 }
