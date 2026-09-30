@@ -6,11 +6,12 @@ homepage="https://www.qemu.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qemu
-version=11.1.1
+version=11.1.2
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/v${version}.tar.gz
-    60-kvm.rules"
+    60-kvm.rules
+    ${name}-sysusers.conf"
 
 build() {
     # shellcheck disable=SC2164
@@ -47,5 +48,7 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/60-kvm.rules" -t "${PKG}/etc/udev/rules.d/"
+    install -Dm644 "${SRC}/${name}-sysusers.conf" "${PKG}/usr/lib/sysusers.d/${name}.conf"
+
     rm -rf "${PKG}/var/run"
 }
