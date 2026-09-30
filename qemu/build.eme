@@ -50,5 +50,8 @@ build() {
     install -Dm644 "${SRC}/60-kvm.rules" -t "${PKG}/etc/udev/rules.d/"
     install -Dm644 "${SRC}/${name}-sysusers.conf" "${PKG}/usr/lib/sysusers.d/${name}.conf"
 
+    sed -e 's/multi-user.target/sockets.target/g' -i contrib/systemd/*.socket
+    install -Dm644 contrib/systemd/* -t "${PKG}/usr/lib/systemd/system/"
+
     rm -rf "${PKG}/var/run"
 }
