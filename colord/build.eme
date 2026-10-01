@@ -15,6 +15,7 @@ build() {
         --libexecdir="/usr/lib/${name}" \
         -Ddaemon_user=colord \
         -Dvapi=true \
+        -Dsystemd=false \
         -Dlibcolordcompat=true \
         -Dargyllcms_sensor=false \
         -Dbash_completion=false \

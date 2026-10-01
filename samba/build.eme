@@ -8,9 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=samba
 version=4.25.0
 release=1
-
-source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz
-    ${name}.tmpfiles"
+source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
@@ -29,11 +27,10 @@ build() {
         --bundled-libraries=!tdb,!talloc \
         --enable-fhs \
         --without-json \
+        --without-systemd \
         --without-ad-dc \
         --without-ads \
-        --without-ldap \
-        --with-systemd \
-        --systemd-install-services
+        --without-ldap
 
     make
     make DESTDIR="${PKG}" install
@@ -42,7 +39,7 @@ build() {
     ln -s libnss_wins.so.2 "${PKG}/usr/lib/libnss_wins.so"
 
     install -Dm644 examples/smb.conf.default -t "${PKG}/etc/${name}/"
-    install -D -m644 "${SRC}/${name}.tmpfiles" "${PKG}/usr/lib/tmpfiles.d/${name}.conf"
 
+    do_service "${name}"
     do_pam "${name}"
 }

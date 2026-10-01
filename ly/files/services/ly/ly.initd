@@ -1,0 +1,19 @@
+#!/usr/bin/openrc-run
+
+# shellcheck disable=SC2034
+name=ly
+description="TUI Display Manager"
+command=/usr/bin/agetty
+command_args_foreground="-nl /usr/bin/ly-dm ${TTY:-tty1} ${BAUD:-38400} ${TERM:-linux}"
+
+## Supervisor daemon
+supervisor=supervise-daemon
+respawn_period=60
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+    # shellcheck disable=SC2035
+    after *
+    provide display-manager
+    want elogind
+}

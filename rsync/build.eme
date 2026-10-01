@@ -27,7 +27,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/rsyncd.conf" -t "${PKG}/etc/"
-    install -Dm644 packaging/systemd/rsync.service "${PKG}/usr/lib/systemd/system/rsyncd.service"
-    install -Dm644 packaging/systemd/rsync.socket "${PKG}/usr/lib/systemd/system/rsyncd.socket"
-    install -Dm644 packaging/systemd/rsync@.service "${PKG}/usr/lib/systemd/system/rsyncd@.service"
+    do_service rsyncd
 }

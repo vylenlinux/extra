@@ -12,9 +12,7 @@ backup="etc/gpm-root.conf"
 
 source="https://www.nico.schottelius.org/software/${name}/archives/${name}-${version}.tar.bz2
     gpm-1.20.7-consolidated-1.patch
-    gpm.sh
-    gpm.path
-    gpm.service"
+    gpm.sh"
 
 build() {
     # shellcheck disable=SC2164
@@ -37,6 +35,5 @@ build() {
     install -Dm644 conf/gpm-root.conf -t "${PKG}/etc/"
 
     install -Dm644 "${SRC}/gpm.sh" -t "${PKG}/etc/profile.d/"
-    install -Dm644 "${SRC}/gpm.path" -t "${PKG}/usr/lib/systemd/system/"
-    install -Dm644 "${SRC}/gpm.service" -t "${PKG}/usr/lib/systemd/system/"
+    do_service "${name}"
 }

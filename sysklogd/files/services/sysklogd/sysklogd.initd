@@ -1,0 +1,23 @@
+#!/usr/bin/openrc-run
+
+# shellcheck disable=SC2034
+extra_started_commands="reload"
+pidfile="/run/${RC_SVCNAME}.pid"
+command="/usr/bin/syslogd"
+command_background="true"
+command_args="-F ${SYSLOGD}"
+
+depend() {
+    need clock hostname
+    provide logger
+}
+
+reload() {
+    ebegin "Reloading configuration"
+
+    start-stop-daemon \
+        --signal HUP \
+        --pidfile "${pidfile}"
+
+    eend $?
+}

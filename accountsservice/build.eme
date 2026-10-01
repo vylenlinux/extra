@@ -12,6 +12,8 @@ source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${na
 
 build() {
     vylen-meson "${name}-${version}" build \
+        -Dsystemdsystemunitdir=no \
+        -Delogind=true \
         -Dadmin_group=wheel \
         -Dtests=false
 

@@ -102,14 +102,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.1
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.1
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.0
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.0
 lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.1
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.1
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.1
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.0
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.0
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.1
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.1
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.0
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
@@ -283,10 +283,6 @@ drwxr-xr-x root/root    usr/share/locale/zh_CN/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/zh_TW/
 drwxr-xr-x root/root    usr/share/locale/zh_TW/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/zh_TW/LC_MESSAGES/appstream.mo
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man1/
--rw-r--r-- root/root    usr/share/man/man1/appstreamcli-compose.1.gz
--rw-r--r-- root/root    usr/share/man/man1/appstreamcli.1.gz
 drwxr-xr-x root/root    usr/share/metainfo/
 -rw-r--r-- root/root    usr/share/metainfo/org.freedesktop.appstream.cli.metainfo.xml
 -rw-r--r-- root/root    usr/share/metainfo/org.freedesktop.appstream.compose.metainfo.xml

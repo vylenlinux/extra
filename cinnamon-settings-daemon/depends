@@ -12,3 +12,4 @@ nss
 polkit
 upower
 xf86-input-wacom
+elogind

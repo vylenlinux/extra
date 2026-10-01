@@ -42,9 +42,9 @@ build() {
 
     install -Dm644 "${SRC}/${name}.deny" "${PKG}/etc/cron.deny"
     install -Dm644 contrib/anacrontab -t "${PKG}/etc/"
-    install -Dm644 contrib/0hourly -t "${PKG}/etc/cron.d/"
-    install -Dm755 contrib/0anacron t "${PKG}/etc/cron.hourly/"
-    install -Dm0644 contrib/cronie.systemd "${PKG}/usr/lib/systemd/system/cronie.service"
+    install -Dm644 contrib/0hourly    -t "${PKG}/etc/cron.d/"
+    install -Dm755 contrib/0anacron   -t "${PKG}/etc/cron.hourly/"
 
+    do_service "${name}"
     do_pam crond
 }

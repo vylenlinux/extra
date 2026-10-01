@@ -51,8 +51,8 @@ drwxr-xr-x root/root    usr/include/wireplumber-0.5/wp/
 -rw-r--r-- root/root    usr/include/wireplumber-0.5/wp/wpversion.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so -> libwireplumber-0.5.so.0
-lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.518.0
--rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.518.0
+lrwxrwxrwx root/root    usr/lib/libwireplumber-0.5.so.0 -> libwireplumber-0.5.so.0.517.0
+-rwxr-xr-x root/root    usr/lib/libwireplumber-0.5.so.0.517.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/wireplumber-0.5.pc
 drwxr-xr-x root/root    usr/lib/wireplumber-0.5/
@@ -177,9 +177,6 @@ drwxr-xr-x root/root    usr/share/locale/mr/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/my/
 drwxr-xr-x root/root    usr/share/locale/my/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/my/LC_MESSAGES/wireplumber.mo
-drwxr-xr-x root/root    usr/share/locale/nb/
-drwxr-xr-x root/root    usr/share/locale/nb/LC_MESSAGES/
--rw-r--r-- root/root    usr/share/locale/nb/LC_MESSAGES/wireplumber.mo
 drwxr-xr-x root/root    usr/share/locale/nl/
 drwxr-xr-x root/root    usr/share/locale/nl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/wireplumber.mo
@@ -284,7 +281,6 @@ drwxr-xr-x root/root    usr/share/wireplumber/scripts/lib/
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/lib/linking-utils.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/lib/monitor-utils.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/lib/node-utils.lua
--rw-r--r-- root/root    usr/share/wireplumber/scripts/lib/profile-utils.lua
 drwxr-xr-x root/root    usr/share/wireplumber/scripts/linking/
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/find-audio-group-target.lua
 -rw-r--r-- root/root    usr/share/wireplumber/scripts/linking/find-best-target.lua

@@ -1,4 +1,6 @@
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/lxdm
 drwxr-xr-x root/root    etc/lxdm/
 -rwxr-xr-x root/root    etc/lxdm/LoginReady
 -rwxr-xr-x root/root    etc/lxdm/PostLogin
@@ -21,9 +23,6 @@ drwxr-xr-x root/root    usr/lib/lxdm/
 -rwxr-xr-x root/root    usr/lib/lxdm/lxdm-greeter-gtk
 -rwxr-xr-x root/root    usr/lib/lxdm/lxdm-numlock
 -rwxr-xr-x root/root    usr/lib/lxdm/lxdm-session
-drwxr-xr-x root/root    usr/lib/systemd/
-drwxr-xr-x root/root    usr/lib/systemd/system/
--rw-r--r-- root/root    usr/lib/systemd/system/lxdm.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/lxdm/
 -rw-r--r-- root/root    usr/share/lxdm/config.ui

@@ -1,0 +1,13 @@
+#!/usr/bin/openrc-run
+
+# shellcheck disable=SC2034
+pidfile="/run/iwd.pid"
+command="/usr/bin/iwd"
+command_background="yes"
+
+depend() {
+    need dbus
+    after bootmisc modules
+    before dns dhcpcd net
+    keyword -shutdown
+}

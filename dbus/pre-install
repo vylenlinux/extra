@@ -1,0 +1,4 @@
+#!/bin/sh
+
+getent group messagebus >/dev/null || groupadd -g 18 messagebus
+getent passwd messagebus >/dev/null || useradd -r -M -g messagebus -G messagebus -c "D-Bus Daemon User" -d /dev/null -s /usr/bin/nologin messagebus

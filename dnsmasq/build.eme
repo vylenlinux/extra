@@ -8,11 +8,8 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=dnsmasq
 version=2.93
 release=1
+source="http://www.thekelleys.org.uk/${name}/${name}-${version}.tar.xz"
 backup="etc/${name}.conf"
-
-source="http://www.thekelleys.org.uk/${name}/${name}-${version}.tar.xz
-    dnsmasq.service
-    dnsmasq.sysusers"
 
 build() {
     # shellcheck disable=SC2164
@@ -24,6 +21,5 @@ build() {
     install -Dm644 dnsmasq.conf.example "${PKG}/etc/dnsmasq.conf"
     install -Dm644 trust-anchors.conf -t "${PKG}/usr/share/dnsmasq/"
 
-    install -Dm644 "${SRC}/dnsmasq.service" -t "${PKG}/usr/lib/systemd/system/"
-    install -Dm644 "${SRC}/dnsmasq.sysusers" "${PKG}/usr/lib/sysusers.d/dnsmasq.conf"
+    do_service "${name}"
 }

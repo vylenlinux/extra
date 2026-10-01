@@ -1,3 +1,4 @@
 #!/bin/sh
 
-sed -i "\|^/usr/bin/fish\$|d" /etc/shells
+shell=/usr/bin/fish
+sed -i "\|^$shell\$|d" /etc/shells

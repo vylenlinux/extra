@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="The systemd project's 'logind', extracted to a standalone package"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+homepage="https://github.com/elogind/elogind"
+
+name=elogind
+version=257.16
+release=2
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/v${version}.tar.gz"
+
+backup="etc/${name}/logind.conf
+    etc/${name}/logind.conf.d/10-elogind.conf
+    etc/${name}/sleep.conf
+    etc/${name}/sleep.conf.d/10-elogind.conf"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        --libexecdir=/usr/lib/elogind \
+        -Dcgroup-controller=openrc \
+        -Ddefault-kill-user-processes=false \
+        -Dacl=enabled \
+        -Daudit=disabled \
+        -Dpam=enabled \
+        -Dpolkit=enabled \
+        -Dselinux=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    do_service "${name}"
+
+    install -d "${PKG}/etc/runlevels/boot"
+    ln -sf "/etc/init.d/${name}" -t "${PKG}/etc/runlevels/boot/"
+}

@@ -16,7 +16,7 @@ build() {
         -Dfish-completions="$(emerald is-installed fish-completions && printf "true" || printf "false")" \
         -Dzsh-completions="$(emerald is-installed zsh-completions && printf "true" || printf "false")" \
         -Dlogind=enabled \
-        -Dlogind-provider=systemd \
+        -Dlogind-provider=elogind \
         -Dman-pages=enabled
 
     meson compile -C build

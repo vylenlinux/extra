@@ -1,0 +1,3 @@
+#!/bin/sh
+
+getent group mpd >/dev/null && groupdel mpd
