@@ -1,5 +1,6 @@
 name = "gtk4"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "gtk"
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/gtk"
