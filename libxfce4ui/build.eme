@@ -12,7 +12,7 @@ source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${versio
 
 build() {
     vylen-meson "${name}-${version}" build \
-        -Dgtk-doc=true \
+        -Dgtk-doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')" \
         -Dx11=enabled \
         -Dwayland=enabled
 
