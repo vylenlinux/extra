@@ -23,7 +23,8 @@ build() {
     vylen-meson build \
         -Dtests_tap_protocol=true \
         -Ddocs=false \
-        -Dman=true
+        -Dman=true \
+        -Dsystemd_user_services=false
 
     meson compile -C build
     meson install -C build --destdir "${PKG}"

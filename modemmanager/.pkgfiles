@@ -154,9 +154,6 @@ lrwxrwxrwx root/root    usr/lib/libmm-glib.so.0 -> libmm-glib.so.0.11.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/ModemManager.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/mm-glib.pc
-drwxr-xr-x root/root    usr/lib/systemd/
-drwxr-xr-x root/root    usr/lib/systemd/system/
--rw-r--r-- root/root    usr/lib/systemd/system/ModemManager.service
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/77-mm-broadmobi-port-types.rules

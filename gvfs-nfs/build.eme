@@ -23,7 +23,9 @@ build() {
         -Dnfs=true \
         -Donedrive=false \
         -Dsftp=false \
-        -Dsmb=false
+        -Dsmb=false \
+        -Dsystemduserunitdir=no \
+        -Dtmpfilesdir=no
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

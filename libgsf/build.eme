@@ -6,7 +6,7 @@ homepage="https://gitlab.gnome.org/GNOME/libgsf"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libgsf
-version=1.14.60
+version=1.14.59
 release=1
 
 _version="$(printf "%s" "${version}" | sed 's/\./_/g')"

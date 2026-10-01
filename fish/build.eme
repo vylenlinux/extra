@@ -25,4 +25,7 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
+
+    rm -f "${PKG}/usr/share/${name}/functions"/*systemd* \
+        "${PKG}/usr/share/${name}/completions"/systemd*
 }

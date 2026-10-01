@@ -1,5 +1,3 @@
-1024ae9d0fd47cc4595855f07847ce80443b88b522e81d64f7beea3d940c5722  0004-Tweak-D-Bus-systemd-service-activation-configuration.patch
-b0a973309c7c30f4bcb435beaa77f231ed9f9051bf733b6fa846daee357dddf4  0006-Add-reload-support-to-the-systemd-unit-files.patch
 086302d1bbd030e49c2157452b5e2e7daa9e59aa3f96ae7f145a8901d33967be  config
 75c6471e6c3fccc82edea884fe5371e51512b494c0cde4ebf9bd8c4db231436d  nl80211-add-extra-ies-only-if-allowed-by-driver.patch
 2dab0728aad262cac578be0676b3854dab8fc10d2526ffbc579f7abe13e3d189  wpa_supplicant-2.12.tar.gz

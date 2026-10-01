@@ -28,7 +28,8 @@ build() {
         --disable-gtk4 \
         --disable-gtk2 \
         --disable-emoji-dict \
-        --disable-unicode-dict
+        --disable-unicode-dict \
+        --disable-systemd-services
 
     rm -f tools/main.c
 

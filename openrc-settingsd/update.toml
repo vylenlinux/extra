@@ -1,0 +1,10 @@
+name = "openrc-settingsd"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.postmarketos.org/"
+project = "postmarketOS/openrc-settingsd"
+
+[gitlab]
+use_releases = false
+use_tags = true

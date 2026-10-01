@@ -19,9 +19,10 @@ build() {
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc \
-        --with-libsystemd=yes \
-        --with-systemdsystemunitdir=/usr/lib/systemd/system
+        --with-initscriptdir=no
 
     make
     make DESTDIR="${PKG}" install
+
+    do_service smartd
 }

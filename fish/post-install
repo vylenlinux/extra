@@ -1,4 +1,4 @@
 #!/bin/sh
 
 shell=/usr/bin/fish
-grep -Fxq "${shell}" /etc/shells || printf '%s\n' "${shell}" >> /etc/shells
+grep -Fxq "$shell" /etc/shells || printf '%s\n' "$shell" >> /etc/shells

@@ -11,7 +11,7 @@ release=1
 source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
-    vylen-meson "${name}-${version}" build -Dgtk-doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')"
+    vylen-meson "${name}-${version}" build -Dgtk-doc=true
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

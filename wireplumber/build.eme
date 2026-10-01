@@ -6,8 +6,8 @@ homepage="https://gitlab.freedesktop.org/pipewire/wireplumber"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wireplumber
-version=0.5.18
-release=1
+version=0.5.17
+release=2
 source="https://gitlab.freedesktop.org/pipewire/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
@@ -16,7 +16,8 @@ build() {
         -Dsystem-lua-version=auto \
         -Dintrospection=disabled \
         -Ddoc=disabled \
-        -Dsystemd-system-service=true
+        -Delogind=enabled \
+        -Dsystemd=disabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

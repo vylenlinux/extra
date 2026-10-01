@@ -1,0 +1,10 @@
+#!/usr/bin/openrc-run
+
+# shellcheck disable=SC2034
+command=/usr/bin/rsync
+command_args="--daemon ${RSYNC_OPTS}"
+pidfile="/var/run/${SVCNAME}.pid"
+
+depend() {
+    use net
+}

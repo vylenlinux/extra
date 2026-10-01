@@ -12,6 +12,7 @@ source="https://gitlab.freedesktop.org/upower/${name}/-/archive/${version}/${nam
 
 build() {
     vylen-meson "${name}-${version}" build \
+        -Dsystemdsystemunitdir="" \
         -Dgtk_doc=false \
         -Dpylint=disabled \
         -Dtests=false \

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+getent group qemu >/dev/null && groupdel qemu

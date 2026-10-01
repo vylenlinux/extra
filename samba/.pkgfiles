@@ -1,10 +1,12 @@
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/conf.d/
+-rw-r--r-- root/root    etc/conf.d/samba.epkgnew
+drwxr-xr-x root/root    etc/init.d/
+-rwxr-xr-x root/root    etc/init.d/samba
 drwxr-xr-x root/root    etc/pam.d/
 -rw-r--r-- root/root    etc/pam.d/samba
 drwxr-xr-x root/root    etc/samba/
 -rw-r--r-- root/root    etc/samba/smb.conf.default
-drwxr-xr-x root/root    etc/sysconfig/
--rw-r--r-- root/root    etc/sysconfig/samba
 drwxr-xr-x root/root    run/
 drwxr-xr-x root/root    run/samba/
 drwxr-xr-x root/root    usr/
@@ -939,6 +941,7 @@ drwxr-xr-x root/root    usr/lib/samba/ldb/
 -rwxr-xr-x root/root    usr/lib/samba/libngtcp2-private-samba.so
 -rwxr-xr-x root/root    usr/lib/samba/libnpa-tstream-private-samba.so
 -rwxr-xr-x root/root    usr/lib/samba/libnss-info-private-samba.so
+-rwxr-xr-x root/root    usr/lib/samba/libpopt-private-samba.so
 -rwxr-xr-x root/root    usr/lib/samba/libposix-eadb-private-samba.so
 -rwxr-xr-x root/root    usr/lib/samba/libprinter-driver-private-samba.so
 -rwxr-xr-x root/root    usr/lib/samba/libprinting-migrate-private-samba.so
@@ -998,7 +1001,6 @@ drwxr-xr-x root/root    usr/lib/samba/samba/
 -rwxr-xr-x root/root    usr/lib/samba/samba/rpcd_winreg
 -rwxr-xr-x root/root    usr/lib/samba/samba/samba-bgqd
 -rwxr-xr-x root/root    usr/lib/samba/samba/samba-dcerpcd
--rwxr-xr-x root/root    usr/lib/samba/samba/smbspool_krb5_wrapper
 drwxr-xr-x root/root    usr/lib/samba/vfs/
 -rwxr-xr-x root/root    usr/lib/samba/vfs/acl_tdb.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/acl_xattr.so
@@ -1021,7 +1023,6 @@ drwxr-xr-x root/root    usr/lib/samba/vfs/
 -rwxr-xr-x root/root    usr/lib/samba/vfs/full_audit.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/glusterfs_fuse.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/gpfs.so
--rwxr-xr-x root/root    usr/lib/samba/vfs/io_uring.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/linux_xfs_sgid.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/media_harmony.so
 -rwxr-xr-x root/root    usr/lib/samba/vfs/offline.so
@@ -1044,15 +1045,6 @@ drwxr-xr-x root/root    usr/lib/samba/vfs/
 -rwxr-xr-x root/root    usr/lib/samba/vfs/xattr_tdb.so
 drwxr-xr-x root/root    usr/lib/security/
 -rwxr-xr-x root/root    usr/lib/security/pam_winbind.so
-drwxr-xr-x root/root    usr/lib/systemd/
-drwxr-xr-x root/root    usr/lib/systemd/system/
--rw-r--r-- root/root    usr/lib/systemd/system/nmb.service
--rw-r--r-- root/root    usr/lib/systemd/system/samba-bgqd.service
--rw-r--r-- root/root    usr/lib/systemd/system/samba.service
--rw-r--r-- root/root    usr/lib/systemd/system/smb.service
--rw-r--r-- root/root    usr/lib/systemd/system/winbind.service
-drwxr-xr-x root/root    usr/lib/tmpfiles.d/
--rw-r--r-- root/root    usr/lib/tmpfiles.d/samba.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
@@ -1220,7 +1212,6 @@ drwxr-xr-x root/root    usr/share/man/man8/
 -rw-r--r-- root/root    usr/share/man/man8/vfs_full_audit.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/vfs_glusterfs_fuse.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/vfs_gpfs.8.gz
--rw-r--r-- root/root    usr/share/man/man8/vfs_io_uring.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/vfs_linux_xfs_sgid.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/vfs_media_harmony.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/vfs_offline.8.gz

@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://flatpak.org"
 
 name=flatpak
-version=1.18.4
+version=1.18.3
 release=1
 
 source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz
@@ -15,6 +15,7 @@ source="https://github.com/${name}/${name}/releases/download/${version}/${name}-
 
 build() {
     vylen-meson "${name}-${version}" build \
+        --auto-features=disabled \
         -Ddbus_config_dir=/usr/share/dbus-1/system.d \
         -Dsystem_bubblewrap=bwrap \
         -Dsystem_dbus_proxy=xdg-dbus-proxy \
@@ -22,6 +23,11 @@ build() {
         -Dselinux_module=disabled \
         -Dlibzstd=enabled \
         -Ddconf=enabled \
+        -Dsystemd=disabled \
+        -Dsystemdsystemunitdir='' \
+        -Dsystemduserenvgendir='' \
+        -Dsystemduserunitdir='' \
+        -Dsysusersdir='' \
         -Dgdm_env_file=true \
         -Dtests=false
 

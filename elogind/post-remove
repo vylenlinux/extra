@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sed -i '/^# Begin elogind addition$/,/^# End elogind addition$/d' /etc/pam.d/system-session

@@ -1,0 +1,12 @@
+#!/usr/bin/openrc-run
+
+# shellcheck disable=SC2034
+name=elogind
+description="Login and session manager"
+command=/usr/lib/elogind/elogind
+supervisor=supervise-daemon
+
+depend() {
+    need dbus cgroups
+    before display-manager
+}

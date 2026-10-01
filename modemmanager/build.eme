@@ -18,6 +18,9 @@ build() {
     vylen-meson "ModemManager-${version}" build \
         -Dat_command_via_dbus=true \
         -Dpolkit=permissive \
+        -Dsystemdsystemunitdir=no \
+        -Dsystemd_suspend_resume=false \
+        -Dsystemd_journal=false \
         -Dudevdir=/usr/lib/udev
 
     meson compile -C build

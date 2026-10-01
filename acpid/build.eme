@@ -11,8 +11,7 @@ release=1
 
 source="https://downloads.sourceforge.net/acpid2/${name}-${version}.tar.xz
     lid
-    lid.sh
-    acpid.service"
+    lid.sh"
 
 build() {
     # shellcheck disable=SC2164
@@ -28,5 +27,5 @@ build() {
     install -Dm644 "${SRC}/lid" -t "${PKG}/etc/acpi/events/"
     install -Dm755 "${SRC}/lid.sh" -t "${PKG}/etc/acpi/"
 
-    install -Dm644 "${SRC}/${name}.service" -t "${PKG}/usr/lib/systemd/system/"
+    do_service "${name}"
 }

@@ -27,7 +27,8 @@ build() {
     vylen-meson "pulseaudio-${version}" build \
         -Dtests=false \
         -Ddoxygen="$(emerald is-installed doxygen && printf 'true' || printf 'false')" \
-        -Dbluez5="$(emerald is-installed bluez && printf 'enabled' || printf 'disabled')"
+        -Dbluez5="$(emerald is-installed bluez && printf 'enabled' || printf 'disabled')" \
+        -Delogind=enabled
 
     meson compile -C build
     DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
