@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A control daemon, CLI tools, and a collection of crates for interacting with ASUS ROG laptops"
+homepage="https://asus-linux.org"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=asusctl
+version=6.5.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/OpenGamingCollective/${name}/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    cargo build \
+        --release \
+        --locked
+
+    for bin in "${name}" asusd asusd-user; do
+        install -Dm755 "target/release/${bin}" -t "${PKG}/usr/bin/"
+    done
+
+    install -Dm644 rog-aura/data/aura_support.ron -t "${PKG}/usr/share/asusd/"
+    install -Dm644 data/asusd.conf -t "${PKG}/usr/share/dbus-1/system.d/"
+
+    find rog-anime/data/anime -type f -exec install -Dm644 "{}" "${PKG}/usr/share/asusd/{}" \;
+    do_service asusd
+}
