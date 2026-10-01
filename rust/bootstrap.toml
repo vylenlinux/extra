@@ -1,5 +1,5 @@
 profile = "dist"
-change-id = 158169
+change-id = 160100
 
 [llvm]
 ninja = true
@@ -18,7 +18,7 @@ debuginfo-level-std = 2
 codegen-tests = false
 backtrace-on-ice = true
 lld = false
-use-lld = "external"
+bootstrap-override-lld = "external"
 jemalloc = true
 remap-debuginfo = false
 debug-assertions = false

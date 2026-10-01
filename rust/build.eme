@@ -6,7 +6,7 @@ homepage="https://www.rust-lang.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rust
-version=1.98.1
+version=1.99.0
 release=1
 
 source="${name}-${version}.tar.xz::https://static.rust-lang.org/dist/rustc-${version}-src.tar.xz
@@ -16,9 +16,7 @@ source="${name}-${version}.tar.xz::https://static.rust-lang.org/dist/rustc-${ver
     0003-bootstrap-Workaround-for-system-stage0.patch
     0004-compiler-Change-LLVM-targets.patch
     0005-compiler-Use-ld.lld-by-default.patch
-    0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
-    llvm-23-remove-amx-tf32.patch
-    llvm-23-AssignGUIDPass.patch"
+    0006-compiler-Swap-primary-and-secondary-lib-dirs.patch"
 
 build() {
     # shellcheck disable=SC2164
@@ -44,20 +42,14 @@ build() {
     # Prefer "lib" over "lib64"
     patch -Np1 -i "${SRC}/0006-compiler-Swap-primary-and-secondary-lib-dirs.patch"
 
-    # Disable the removed AMX-TF32 target feature for LLVM 23
-    patch -Np1 -i "${SRC}/llvm-23-remove-amx-tf32.patch"
-
-    # Run AssignGUIDPass in some places for LLVM 23
-    patch -Np1 -i "${SRC}/llvm-23-AssignGUIDPass.patch"
-
     install -Dm644 "${SRC}/bootstrap.toml" -t .
     export RUST_BACKTRACE=1
 
     [ -e /usr/include/libssh2.h ] && export LIBSSH2_SYS_USE_PKG_CONFIG=1
     [ -e /usr/include/sqlite3.h ] && export LIBSQLITE3_SYS_USE_PKG_CONFIG=1
 
-    python3 ./x.py build
-    DESTDIR="${PKG}" python3 ./x.py install
+    python3 x.py build
+    DESTDIR="${PKG}" python3 x.py install
 
     unset LIBSSH2_SYS_USE_PKG_CONFIG \
         LIBSQLITE3_SYS_USE_PKG_CONFIG
@@ -67,6 +59,4 @@ build() {
         "${PKG}/usr/lib/rustlib/manifest-rustc" \
         "${PKG}/usr/lib/rustlib/rust-installer-version" \
         "${PKG}/etc"
-
-    emerald is-installed zsh || rm -rf "${PKG}/usr/share/zsh"
 }
