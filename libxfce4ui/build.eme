@@ -6,16 +6,21 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxfce4ui
-version=4.21.9
+version=4.20.2
 release=1
-source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.xz"
+source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
 
 build() {
-    vylen-meson "${name}-${version}" build \
-        -Dgtk-doc=true \
-        -Dx11=enabled \
-        -Dwayland=enabled
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-    meson compile -C build
-    DESTDIR="${PKG}" meson install --no-rebuild -C build
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --enable-x11 \
+        --enable-wayland \
+        --disable-debug
+
+    make
+    make DESTDIR="${PKG}" install
 }
