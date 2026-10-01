@@ -6,8 +6,8 @@ homepage="http://tcl.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tcl
-version=9.0.4
-release=2
+version=9.1.0
+release=1
 source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/${name}/${name}${version}-src.tar.gz"
 
 build() {
