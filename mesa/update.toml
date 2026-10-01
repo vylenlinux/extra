@@ -1,5 +1,6 @@
 name = "mesa"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "mesa"
+[ftp]
+url = "https://mesa.freedesktop.org/archive/"
+filename = "mesa-{version}.tar.xz"

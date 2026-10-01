@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mesa
-version=26.2.3
+version=26.2.4
 release=1
 
 ### BEGIN Rust crates
@@ -17,7 +17,7 @@ rust_crates="paste 1.0.14
     syn 2.0.87
     unicode-ident 1.0.12"
 
-rcrate=""
+crates=""
 
 while IFS= read -r line; do
     # shellcheck disable=SC2086
@@ -26,7 +26,7 @@ while IFS= read -r line; do
     crate_name="${1}"
     crate_version="${2}"
 
-    rcrate="${rcrate}
+    crates="${crates}
         ${crate_name}-${crate_version}.tar.gz::https://static.crates.io/crates/${crate_name}/${crate_version}/download"
 done <<EOF
 ${rust_crates}
@@ -34,7 +34,7 @@ EOF
 ### END Rust crates
 
 source="https://mesa.freedesktop.org/archive/${name}-${version}.tar.xz
-    ${rcrate}"
+    ${crates}"
 
 build() {
     emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
