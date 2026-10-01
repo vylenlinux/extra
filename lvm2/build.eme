@@ -6,12 +6,13 @@ homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lvm2
-version=2.03.42
+version=2.03.43
 release=1
-source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
 
 backup="etc/lvm/lvm.conf
     etc/lvm/lvmlocal.conf"
+
+source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
 
 build() {
     # shellcheck disable=SC2164
