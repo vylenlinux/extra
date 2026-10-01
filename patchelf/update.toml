@@ -1,5 +1,6 @@
 name = "patchelf"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "patchelf"
+owner = "nixos"
+repo = "patchelf"
