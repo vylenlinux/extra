@@ -6,69 +6,71 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/asusctl
 -rwxr-xr-x root/root    usr/bin/asusd
 -rwxr-xr-x root/root    usr/bin/asusd-user
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/99-asusd.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/asusd/
+drwxr-xr-x root/root    usr/share/asusd/anime/
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/festive/
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Cupid.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Firework.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Halloween.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Happy Holiday.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Happy new year.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Lantern.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Love u mom.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Mother's day.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Valentine's Day.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/festive/Year of the Ox.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/gaming/
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/Bird.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/Controller.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/FPS.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/Fight.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/Keyboard.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/MOBA.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/gaming/UFO.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/music/
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/music/DJ.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/music/Diamond.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/music/Music-player.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/rog/
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/For-those-who-dare.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/For-those-who-dare_2.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Fragment.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Infinite-triangle.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Kaleidoscope1.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Kaleidoscope2.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Kaleidoscope2.png
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/ROG city.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/ROG glitch.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/rog/Sunset.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/asus/trend/
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/trend/Dog.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/trend/Hero.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/trend/Ski.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/trend/The scream.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/asus/trend/Wave.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/custom/
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/cross.png
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/diagonal-template.png
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/nyancat_zombie.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/rust.png
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/sonic-run.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/custom/sonic-wait.gif
+drwxr-xr-x root/root    usr/share/asusd/anime/gu604/
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/Fighting Games 2022_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/Halloween II_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/Infinite triangle_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/Lunar new year dragon dance_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/OMNI_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/PInball_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/ROG glitch_GU604.gif
+-rw-r--r-- root/root    usr/share/asusd/anime/gu604/Wizard_GU604.gif
 -rw-r--r-- root/root    usr/share/asusd/aura_support.ron
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Cupid.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Firework.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Halloween.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Happy Holiday.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Happy new year.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Lantern.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Love u mom.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Mother's day.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Valentine's Day.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/festive/Year of the Ox.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/Bird.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/Controller.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/FPS.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/Fight.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/Keyboard.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/MOBA.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/gaming/UFO.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/music/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/music/DJ.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/music/Diamond.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/music/Music-player.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/For-those-who-dare.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/For-those-who-dare_2.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Fragment.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Infinite-triangle.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Kaleidoscope1.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Kaleidoscope2.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Kaleidoscope2.png
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/ROG city.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/ROG glitch.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/rog/Sunset.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/Dog.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/Hero.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/Ski.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/The scream.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/asus/trend/Wave.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/custom/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/cross.png
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/diagonal-template.png
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/nyancat_zombie.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/rust.png
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/sonic-run.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/custom/sonic-wait.gif
-drwxr-xr-x root/root    usr/share/asusd/rog-anime/data/anime/gu604/
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/Fighting Games 2022_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/Halloween II_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/Infinite triangle_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/Lunar new year dragon dance_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/OMNI_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/PInball_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/ROG glitch_GU604.gif
--rw-r--r-- root/root    usr/share/asusd/rog-anime/data/anime/gu604/Wizard_GU604.gif
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/system.d/
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/asusd.conf

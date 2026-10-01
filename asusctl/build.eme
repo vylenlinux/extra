@@ -18,13 +18,12 @@ build() {
         --release \
         --locked
 
-    for bin in "${name}" asusd asusd-user; do
-        install -Dm755 "target/release/${bin}" -t "${PKG}/usr/bin/"
-    done
+    make DESTDIR="${PKG}" \
+        install-asusctl \
+        install-asusd \
+        install-asusd_user \
+        install-data-asusd \
+        install-data-asusd_user
 
-    install -Dm644 rog-aura/data/aura_support.ron -t "${PKG}/usr/share/asusd/"
-    install -Dm644 data/asusd.conf -t "${PKG}/usr/share/dbus-1/system.d/"
-
-    find rog-anime/data/anime -type f -exec install -Dm644 "{}" "${PKG}/usr/share/asusd/{}" \;
     do_service asusd
 }
