@@ -30,14 +30,14 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6KirigamiAddons/
 -rw-r--r-- root/root    usr/lib/cmake/KF6KirigamiAddons/KirigamiAddonsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6KirigamiAddons/KirigamiAddonsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsComponents.so -> libKirigamiAddonsComponents.so.6
--rwxr-xr-x root/root    usr/lib/libKirigamiAddonsComponents.so.1.14.2
-lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsComponents.so.6 -> libKirigamiAddonsComponents.so.1.14.2
+-rwxr-xr-x root/root    usr/lib/libKirigamiAddonsComponents.so.1.15.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsComponents.so.6 -> libKirigamiAddonsComponents.so.1.15.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsStatefulApp.so -> libKirigamiAddonsStatefulApp.so.6
--rwxr-xr-x root/root    usr/lib/libKirigamiAddonsStatefulApp.so.1.14.2
-lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsStatefulApp.so.6 -> libKirigamiAddonsStatefulApp.so.1.14.2
+-rwxr-xr-x root/root    usr/lib/libKirigamiAddonsStatefulApp.so.1.15.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiAddonsStatefulApp.so.6 -> libKirigamiAddonsStatefulApp.so.1.15.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiApp.so -> libKirigamiApp.so.6
--rwxr-xr-x root/root    usr/lib/libKirigamiApp.so.1.14.2
-lrwxrwxrwx root/root    usr/lib/libKirigamiApp.so.6 -> libKirigamiApp.so.1.14.2
+-rwxr-xr-x root/root    usr/lib/libKirigamiApp.so.1.15.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiApp.so.6 -> libKirigamiApp.so.1.15.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/
@@ -133,6 +133,7 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormRadioDelegate.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormRadioSelectorDelegate.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormSectionText.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormSliderDelegate.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormSpinBoxDelegate.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormSwitchDelegate.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/FormTextAreaDelegate.qml
@@ -148,6 +149,8 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/FormChoiceDelegateLayout.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/FormDelegateLayout.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/FormInfoGrid.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/FormInlineMessage.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/private/FormPathCompletion.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/formcard/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/labs/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigamiaddons/labs/components/
