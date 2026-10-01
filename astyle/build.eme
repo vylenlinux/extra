@@ -6,7 +6,7 @@ homepage="https://sourceforge.net/projects/astyle/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=astyle
-version=3.6.18
+version=3.6.19
 release=1
 
 source="https://gitlab.com/saalen/${name}/-/archive/${version}/${name}-${version}.tar.bz2
@@ -15,8 +15,11 @@ source="https://gitlab.com/saalen/${name}/-/archive/${version}/${name}-${version
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}/AStyle/build/gcc"
-    patch -Np1 -i "${SRC}/makefile-install.patch"
 
+    patch -Np1 -i "${SRC}/makefile-install.patch"
     make shared release
-    DESTDIR="${PKG}" make INSTALL=install install
+
+    make install \
+        DESTDIR="${PKG}" \
+        INSTALL=install
 }
