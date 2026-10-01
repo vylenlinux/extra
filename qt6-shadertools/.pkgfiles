@@ -3,16 +3,16 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/qt6/
 drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/
-drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.11.2/
-drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/
-drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/qshaderrewriter_p.h
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/qspirvcompiler_p.h
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/qspirvshader_p.h
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/qspirvshaderremap_p.h
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/private/qtshadertoolsglobal_p.h
-drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/rhi/
--rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.11.2/QtShaderTools/rhi/qshaderbaker.h
+drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.12.0/
+drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/
+drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/qshaderrewriter_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/qspirvcompiler_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/qspirvshader_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/qspirvshaderremap_p.h
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/private/qtshadertoolsglobal_p.h
+drwxr-xr-x root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/rhi/
+-rw-r--r-- root/root    usr/include/qt6/QtShaderTools/6.12.0/QtShaderTools/rhi/qshaderbaker.h
 -rw-r--r-- root/root    usr/include/qt6/QtShaderTools/QtShaderTools
 -rw-r--r-- root/root    usr/include/qt6/QtShaderTools/QtShaderToolsDepends
 -rw-r--r-- root/root    usr/include/qt6/QtShaderTools/QtShaderToolsVersion
@@ -58,8 +58,8 @@ drwxr-xr-x root/root    usr/lib/cmake/Qt6ShaderToolsTools/
 -rw-r--r-- root/root    usr/lib/cmake/Qt6ShaderToolsTools/Qt6ShaderToolsToolsVersionlessTargets.cmake
 -rw-r--r-- root/root    usr/lib/libQt6ShaderTools.prl
 lrwxrwxrwx root/root    usr/lib/libQt6ShaderTools.so -> libQt6ShaderTools.so.6
-lrwxrwxrwx root/root    usr/lib/libQt6ShaderTools.so.6 -> libQt6ShaderTools.so.6.11.2
--rwxr-xr-x root/root    usr/lib/libQt6ShaderTools.so.6.11.2
+lrwxrwxrwx root/root    usr/lib/libQt6ShaderTools.so.6 -> libQt6ShaderTools.so.6.12.0
+-rwxr-xr-x root/root    usr/lib/libQt6ShaderTools.so.6.12.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/Qt6ShaderTools.pc
 drwxr-xr-x root/root    usr/lib/qt6/
@@ -74,4 +74,4 @@ drwxr-xr-x root/root    usr/lib/qt6/mkspecs/modules/
 drwxr-xr-x root/root    usr/lib/qt6/modules/
 -rw-r--r-- root/root    usr/lib/qt6/modules/ShaderTools.json
 drwxr-xr-x root/root    usr/lib/qt6/sbom/
--rw-r--r-- root/root    usr/lib/qt6/sbom/qtshadertools-6.11.2.spdx
+-rw-r--r-- root/root    usr/lib/qt6/sbom/qtshadertools-6.12.0.spdx
