@@ -1,3 +1,0 @@
-#!/bin/sh
-
-emerald is-installed pangomm-gtk4 && emerald remove -y pangomm-gtk4

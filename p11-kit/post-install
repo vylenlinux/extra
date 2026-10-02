@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# Rebuild system CA trust store
-update-ca-trust

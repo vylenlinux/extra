@@ -1,0 +1,9 @@
+#!/bin/sh
+
+pre_install() {
+    getent group seat >/dev/null || groupadd seat
+}
+
+post_remove() {
+    getent group seat >/dev/null && groupdel seat
+}

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+update_ca_trust() {
+    update-ca-trust
+}
+
+post_install() {
+    update_ca_trust
+}
+
+post_upgrade() {
+    update_ca_trust
+}

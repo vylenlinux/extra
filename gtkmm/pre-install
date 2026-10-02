@@ -1,3 +1,0 @@
-#!/bin/sh
-
-emerald is-installed gtkmm4 && emerald remove -y gtkmm4

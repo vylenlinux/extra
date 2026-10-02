@@ -1,4 +1,0 @@
-#!/bin/sh
-
-getent group polkitd >/dev/null || groupadd -r polkitd
-getent passwd polkitd >/dev/null || useradd -r -M -g polkitd -G polkitd -c "PolicyKit Daemon Owner" -d /etc/polkit-1 -s /usr/bin/nologin polkitd

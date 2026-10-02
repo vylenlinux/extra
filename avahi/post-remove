@@ -1,4 +1,0 @@
-#!/bin/sh
-
-getent passwd avahi >/dev/null && userdel avahi
-getent group avahi >/dev/null && groupdel avahi

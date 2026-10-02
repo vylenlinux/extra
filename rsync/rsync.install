@@ -1,0 +1,11 @@
+#!/bin/sh
+
+pre_install() {
+    getent group rsyncd >/dev/null || groupadd -g 48 rsyncd
+    getent passwd rsyncd >/dev/null || useradd -r -M -g rsyncd -G rsyncd -c "rsyncd Daemon" -d /home/rsync -s /usr/bin/nologin -u 48 rsyncd
+}
+
+post_remove() {
+    getent passwd rsyncd >/dev/null && userdel rsyncd
+    getent group rsyncd >/dev/null && groupdel rsyncd
+}

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+shell=/usr/bin/zsh
+
+post_install() {
+    grep -Fxq "$shell" /etc/shells || printf '%s\n' "$shell" >> /etc/shells
+}
+
+post_remove() {
+    sed -i "\|^$shell\$|d" /etc/shells
+}

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+file=/etc/pam.d/system-session
+
+add_elogind_pam() {
+    grep -q '^# Begin elogind addition$' "${file}" && exit 0
+
+    cat >> "${file}" <<'EOF'
+# Begin elogind addition
+session   optional    pam_loginuid.so
+-session  optional    pam_elogind.so
+# End elogind addition
+EOF
+}
+
+post_install() {
+    add_elogind_pam
+}
+
+post_upgrade() {
+    add_elogind_pam
+}
+
+post_remove() {
+    sed -i '/^# Begin elogind addition$/,/^# End elogind addition$/d' "${file}"
+}

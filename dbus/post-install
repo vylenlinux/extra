@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# Set the correct permissions
-chown -v root:messagebus /usr/lib/dbus-daemon-launch-helper
-chmod -v      4750       /usr/lib/dbus-daemon-launch-helper
-
-# Checking machine-id
-printf '%s\n' "checking /etc/machine-id..."
-dbus-uuidgen --ensure=/etc/machine-id

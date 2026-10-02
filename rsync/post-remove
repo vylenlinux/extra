@@ -1,4 +1,0 @@
-#!/bin/sh
-
-getent passwd rsyncd >/dev/null && userdel rsyncd
-getent group rsyncd >/dev/null && groupdel rsyncd

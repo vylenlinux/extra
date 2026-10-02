@@ -1,0 +1,8 @@
+#!/bin/sh
+
+pre_install() {
+    [ -f /usr/include/gtk-3.0/gdk/gdkwayland.h ] || {
+        printf "gtk3 is missing wayland libraries, rebuilding gtk3...\n"
+        emerald install -fr gtk3
+    }
+}

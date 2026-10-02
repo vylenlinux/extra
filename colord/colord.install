@@ -1,0 +1,11 @@
+#!/bin/sh
+
+pre_install() {
+    getent group colord 2>/dev/null || groupadd -g 71 colord
+    getent passwd colord 2>/dev/null || useradd -r -M -g colord -G colord -c "Color Daemon Owner" -d /var/lib/colord -s /usr/bin/nologin -u 71 colord
+}
+
+post_remove() {
+    getent passwd colord >/dev/null && userdel colord
+    getent group colord >/dev/null && groupdel colord
+}
