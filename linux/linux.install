@@ -3,41 +3,34 @@
 initrd_file=/boot/initrd-linux.img
 
 update_kernel() {
-    kernver=$(find /usr/lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)
+    kernel_version="${1}-linux"
 
     # removing other vylen kernel
     for i in /usr/lib/modules/*; do
         [ -d "${i}" ] || continue
 
         case "${i##*/}" in
-            "${kernver}") continue ;;
+            "${kernel_version}") continue ;;
 
             *-linux)
                 [ -d "${i}/build/include" ] && continue
 
-                printf "post-install: removing kernel %s\n" "${i##*/}"
+                printf ":: removing kernel %s\n" "${i##*/}"
                 rm -rf "${i}"
             ;;
         esac
     done
 
-    # check if kernel was build with initrd support
-    initrd_enabled=0
-
-    if grep -q "^CONFIG_BLK_DEV_INITRD=y" /boot/config-linux 2>/dev/null; then
-        initrd_enabled=1
-    fi
-
-    if [ "${initrd_enabled}" -eq 1 ] && [ "$(command -v mkinitramfs)" ]; then
-        printf "mkinitramfs: generating initramfs for kernel %s...\n" "${kernver}"
-        mkinitramfs -k "${kernver}" -o "${initrd_file}"
+    if command -v mkinitramfs >/dev/null 2>&1; then
+        printf "mkinitramfs: generating initramfs for kernel %s...\n" "${kernel_version}"
+        mkinitramfs -k "${kernel_version}" -o "${initrd_file}"
     fi
 
     # load kernel modules
-    depmod "${kernver}"
+    depmod "${kernel_version}"
 
     # run all dkms scripts
-    if [ "$(command -v dkms)" ]; then
+    if command -v dkms >/dev/null 2>&1; then
         for i in /var/lib/dkms/buildmodules-*.sh; do
             [ -f "${i}" ] && sh "${i}"
         done
@@ -45,17 +38,17 @@ update_kernel() {
 }
 
 post_install() {
-    update_kernel
+    update_kernel "${1}"
 }
 
 post_upgrade() {
-    update_kernel
+    update_kernel "${2}"
 }
 
 post_remove() {
     # clean initrd
     if [ -f "${initrd_file}" ]; then
-        printf "'%s' found! Cleaning...\n" "${initrd_file}"
+        printf ":: '%s' found! Cleaning...\n" "${initrd_file}"
         rm -f "${initrd_file}"
 
         printf "==> '%s' removed!\n" "${initrd_file}"
