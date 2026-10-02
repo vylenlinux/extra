@@ -1,5 +1,8 @@
-name = "qt5-base"
+name = "qt5"
 provider = "qt"
 
 [source]
-package = "%(name)"
+package = "qtbase"
+
+[qt]
+major = 5
