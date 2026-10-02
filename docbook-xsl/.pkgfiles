@@ -9,7 +9,7 @@ lrwxrwxrwx root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/VERSION
 drwxr-xr-x root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/
 -rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/addns.xsl
 -rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/af.xml
--rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/am.xmlё
+-rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/am.xml
 -rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/ar.xml
 -rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/as.xml
 -rw-r--r-- root/root    usr/share/xml/docbook/xsl-stylesheets-2020-06-03/common/ast.xml
