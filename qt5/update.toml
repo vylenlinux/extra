@@ -1,5 +1,5 @@
-name = "qt5"
-provider = "archlinux"
+name = "qt5-base"
+provider = "qt"
 
 [source]
-package = "qt5-base"
+package = "%(name)"
