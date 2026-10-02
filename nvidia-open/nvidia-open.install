@@ -4,6 +4,10 @@ post_install() {
     sh /var/lib/dkms/buildmodules-nvidia-open.sh
 }
 
+post_upgrade() {
+    sh /var/lib/dkms/buildmodules-nvidia-open.sh
+}
+
 pre_remove() {
     sh /var/lib/dkms/buildmodules-nvidia-open.sh remove
 }
