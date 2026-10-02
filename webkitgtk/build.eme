@@ -6,7 +6,7 @@ homepage="https://webkitgtk.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=webkitgtk
-version=2.54.0
+version=2.54.1
 release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
