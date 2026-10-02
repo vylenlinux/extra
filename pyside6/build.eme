@@ -10,12 +10,15 @@ version=6.11.2
 release=1
 
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/QtForPython/${name}/PySide6-${version}-src/pyside-setup-everywhere-src-${version}.tar.xz
-    fix-header-install-dir.patch"
+    fix-header-install-dir.patch
+    fix-qt612.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "pyside-setup-everywhere-src-${version}"
+
     patch -Np1 -i "${SRC}/fix-header-install-dir.patch"
+    patch -Np1 -i "${SRC}/fix-qt612.patch"
 
     cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=None \

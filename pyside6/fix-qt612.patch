@@ -1,0 +1,211 @@
+From 6e8b1ab342c4271fa57a9f438c60795946bea519 Mon Sep 17 00:00:00 2001
+From: Friedemann Kleint <Friedemann.Kleint@qt.io>
+Date: Mon, 20 Jul 2026 11:59:53 +0200
+Subject: [PATCH] shiboken6_generator: Remove usage of
+ QXmlStreamEntityResolver::resolveEntity()
+
+Remove the function from the Proxy resolver class, adapting to
+qtbase/5148436ea003ccc98abe8e0f5d7801dda97b3630.
+
+Task-number: PYSIDE-3276
+Change-Id: I9e917b15523dfb6fca038678cf7f2eb1cac90aea
+Reviewed-by: Cristian Maureira-Fredes <cristian.maureira-fredes@qt.io>
+---
+ .../ApiExtractor/conditionalstreamreader.cpp         | 12 ------------
+ 1 file changed, 12 deletions(-)
+
+diff --git a/sources/shiboken6_generator/ApiExtractor/conditionalstreamreader.cpp b/sources/shiboken6_generator/ApiExtractor/conditionalstreamreader.cpp
+index b9048d44b..290ecfae4 100644
+--- a/sources/shiboken6_generator/ApiExtractor/conditionalstreamreader.cpp
++++ b/sources/shiboken6_generator/ApiExtractor/conditionalstreamreader.cpp
+@@ -18,8 +18,6 @@ class ProxyEntityResolver : public QXmlStreamEntityResolver
+ public:
+     using XmlStreamEntityResolverPtr = ConditionalStreamReader::XmlStreamEntityResolverPtr;
+
+-    QString resolveEntity(const QString& publicId,
+-                          const QString& systemId) override;
+     QString resolveUndeclaredEntity(const QString &name) override;
+
+     XmlStreamEntityResolverPtr source() const { return m_source; }
+@@ -35,16 +33,6 @@ class ProxyEntityResolver : public QXmlStreamEntityResolver
+     XmlStreamEntityResolverPtr m_source;
+ };
+
+-QString ProxyEntityResolver::resolveEntity(const QString &publicId, const QString &systemId)
+-{
+-    QString result;
+-    if (m_source != nullptr)
+-        result = m_source->resolveEntity(publicId, systemId);
+-    if (result.isEmpty())
+-        result = QXmlStreamEntityResolver::resolveEntity(publicId, systemId);
+-    return result;
+-}
+-
+ QString ProxyEntityResolver::resolveUndeclaredEntity(const QString &name)
+ {
+     const auto it = m_undeclaredEntityCache.constFind(name);
+From b179d97dc3368b7ee6fd71602b6901da4ea3dd06 Mon Sep 17 00:00:00 2001
+From: Friedemann Kleint <Friedemann.Kleint@qt.io>
+Date: Tue, 18 Aug 2026 13:54:19 +0200
+Subject: [PATCH] Fix QCanvasRhiPaintDriver.grabCanvas()
+
+Add the QObject * context parameter, adapting to
+qtcanvaspainter/3a08c1ff44c99fa8169e4fc337b7c1b85b4e4aef.
+
+Task-number: PYSIDE-3276
+Change-Id: I5e2fac2ceb344e4148cb658acb293394570fe589
+Reviewed-by: Cristian Maureira-Fredes <cristian.maureira-fredes@qt.io>
+---
+ .../PySide6/QtCanvasPainter/typesystem_canvaspainter.xml      | 4 ++--
+ sources/pyside6/PySide6/glue/qtcanvaspainter.cpp              | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/sources/pyside6/PySide6/QtCanvasPainter/typesystem_canvaspainter.xml b/sources/pyside6/PySide6/QtCanvasPainter/typesystem_canvaspainter.xml
+index f99cad8f0..2d3b91edf 100644
+--- a/sources/pyside6/PySide6/QtCanvasPainter/typesystem_canvaspainter.xml
++++ b/sources/pyside6/PySide6/QtCanvasPainter/typesystem_canvaspainter.xml
+@@ -39,7 +39,7 @@
+     <object-type name="QCanvasPainterFactory"/>
+     <value-type name="QCanvasPath"/>
+     <object-type name="QCanvasPainterWidget">
+-        <add-function signature="grabCanvas(const QCanvasOffscreenCanvas &amp;@canvas@,PyCallable*@resultCallback@)">
++        <add-function signature="grabCanvas(const QCanvasOffscreenCanvas &amp;@canvas@,QObject*@context@,PyCallable*@resultCallback@)">
+             <inject-code class="target" position="beginning" file="../glue/qtcanvaspainter.cpp"
+                          snippet="qcpainterwidget-grabcanvas"/>
+             <inject-documentation format="target" mode="append" file="../doc/qtcanvaspainter.rst"
+@@ -50,7 +50,7 @@
+     <object-type name="QCanvasRhiPaintDriver">
+         <enum-type name="BeginPaintFlag" flags="BeginPaintFlags"/>
+         <enum-type name="EndPaintFlag" flags="EndPaintFlags"/>
+-        <add-function signature="grabCanvas(const QCanvasOffscreenCanvas &amp;@canvas@,PyCallable*@resultCallback@)">
++        <add-function signature="grabCanvas(const QCanvasOffscreenCanvas &amp;@canvas@,QObject*@context@,PyCallable*@resultCallback@)">
+             <inject-code class="target" position="beginning" file="../glue/qtcanvaspainter.cpp"
+                          snippet="qcpainterwidget-grabcanvas"/>
+             <inject-documentation format="target" mode="append" file="../doc/qtcanvaspainter.rst"
+diff --git a/sources/pyside6/PySide6/glue/qtcanvaspainter.cpp b/sources/pyside6/PySide6/glue/qtcanvaspainter.cpp
+index e09f84cea..a5e294bcc 100644
+--- a/sources/pyside6/PySide6/glue/qtcanvaspainter.cpp
++++ b/sources/pyside6/PySide6/glue/qtcanvaspainter.cpp
+@@ -3,7 +3,7 @@
+ // Qt-Security score:significant reason:default
+
+ // @snippet qcpainterwidget-grabcanvas
+-auto callable = %PYARG_2;
++auto callable = %PYARG_3;
+ auto callback = [callable](const QImage &result)
+ {
+     Shiboken::GilState state;
+@@ -14,5 +14,5 @@ auto callback = [callable](const QImage &result)
+
+ };
+ Py_INCREF(callable);
+-%CPPSELF.%FUNCTION_NAME(%1, callback);
++%CPPSELF.%FUNCTION_NAME(%1, %2, callback);
+ // @snippet qcpainterwidget-grabcanvas
+From b2de381df0029333c81eb12b5503fb5c864e101b Mon Sep 17 00:00:00 2001
+From: Friedemann Kleint <Friedemann.Kleint@qt.io>
+Date: Fri, 28 Aug 2026 16:05:43 +0200
+Subject: [PATCH] shiboken6_generator: Fix duplicate conversions generated for
+ rvalue overloaded operators
+
+qtcanvaspainter/ac40401d084c41583c6f8273c8a5a46da2c7bdd4 added a
+rvalue overloaded conversion operator to QCanvasGradient which appears
+as duplicate conversion.
+
+Reject rvalue overloads in the meta builder.
+
+[ChangeLog][shiboken6] Rvalue overloaded members and operators
+will now be rejected.
+
+Task-number: PYSIDE-3276
+Change-Id: Ic2c5cc1146218cfcda6df30f434ef7c03e5b790d
+Reviewed-by: Cristian Maureira-Fredes <cristian.maureira-fredes@qt.io>
+---
+ .../ApiExtractor/abstractmetabuilder.cpp               |  7 +++++++
+ .../ApiExtractor/clangparser/clangbuilder.cpp          | 10 ++++++++++
+ .../ApiExtractor/parser/codemodel.cpp                  | 10 ++++++++++
+ .../ApiExtractor/parser/codemodel.h                    |  4 ++++
+ 4 files changed, 31 insertions(+)
+
+diff --git a/sources/shiboken6_generator/ApiExtractor/abstractmetabuilder.cpp b/sources/shiboken6_generator/ApiExtractor/abstractmetabuilder.cpp
+index 3d3c5e539..d667c05a0 100644
+--- a/sources/shiboken6_generator/ApiExtractor/abstractmetabuilder.cpp
++++ b/sources/shiboken6_generator/ApiExtractor/abstractmetabuilder.cpp
+@@ -2216,6 +2216,13 @@ AbstractMetaFunctionPtr
+         }
+         return {};
+     }
++
++    if (functionItem->refQualified() == RValueReference) {
++        rejectFunction(functionItem, currentClass,
++                       AbstractMetaBuilder::GenerationDisabled, u"rvalue overload"_s);
++        return {};
++    }
++
+     const QString &functionName = functionItem->name();
+     const QString className = currentClass != nullptr ?
+         currentClass->typeEntry()->qualifiedCppName() : QString{};
+diff --git a/sources/shiboken6_generator/ApiExtractor/clangparser/clangbuilder.cpp b/sources/shiboken6_generator/ApiExtractor/clangparser/clangbuilder.cpp
+index 74221798e..da31b0871 100644
+--- a/sources/shiboken6_generator/ApiExtractor/clangparser/clangbuilder.cpp
++++ b/sources/shiboken6_generator/ApiExtractor/clangparser/clangbuilder.cpp
+@@ -404,6 +404,16 @@ FunctionModelItem BuilderPrivate::createMemberFunction(const CXCursor &cursor,
+     auto result = createFunction(cursor, functionType, isTemplateCode);
+     if (!result)
+         return result;
++    switch (clang_Type_getCXXRefQualifier(clang_getCursorType(cursor))) {
++    case CXRefQualifier_None:
++        break;
++    case CXRefQualifier_LValue:
++        result->setRefQualified(ReferenceType::LValueReference);
++        break;
++    case CXRefQualifier_RValue:
++        result->setRefQualified(ReferenceType::RValueReference);
++        break;
++    }
+     result->setAccessPolicy(accessPolicy(clang_getCXXAccessSpecifier(cursor)));
+     result->setConstant(clang_CXXMethod_isConst(cursor) != 0);
+     result->setAttribute(FunctionAttribute::Static, clang_CXXMethod_isStatic(cursor) != 0);
+diff --git a/sources/shiboken6_generator/ApiExtractor/parser/codemodel.cpp b/sources/shiboken6_generator/ApiExtractor/parser/codemodel.cpp
+index ee63c6670..d4f1d2f3d 100644
+--- a/sources/shiboken6_generator/ApiExtractor/parser/codemodel.cpp
++++ b/sources/shiboken6_generator/ApiExtractor/parser/codemodel.cpp
+@@ -1224,6 +1224,16 @@ void _FunctionModelItem::formatDebug(QDebug &d) const
+         d << " [invokable]";
+     if (m_scopeResolution)
+         d << " [scope resolution]";
++    switch (m_refQualified) {
++    case NoReference:
++        break;
++    case LValueReference:
++        d << " [lvalue overload]";
++        break;
++    case RValueReference:
++        d << " [rvalue overload]";
++        break;
++    }
+     formatModelItemList(d, ", arguments=", m_arguments);
+     if (m_isVariadics)
+         d << ",...";
+diff --git a/sources/shiboken6_generator/ApiExtractor/parser/codemodel.h b/sources/shiboken6_generator/ApiExtractor/parser/codemodel.h
+index df000eaa0..3a7d51f34 100644
+--- a/sources/shiboken6_generator/ApiExtractor/parser/codemodel.h
++++ b/sources/shiboken6_generator/ApiExtractor/parser/codemodel.h
+@@ -452,6 +452,9 @@ class _FunctionModelItem: public _MemberModelItem
+     void setAttributes(FunctionAttributes a) { m_attributes = a; }
+     void setAttribute(FunctionAttribute a, bool on = true) { m_attributes.setFlag(a, on); }
+
++    ReferenceType refQualified() const { return m_refQualified; }
++    void setRefQualified(ReferenceType rt) { m_refQualified = rt; };
++
+     bool isDeleted() const;
+     void setDeleted(bool d);
+
+@@ -502,6 +505,7 @@ class _FunctionModelItem: public _MemberModelItem
+     FunctionAttributes m_attributes;
+     CodeModel::FunctionType m_functionType = CodeModel::Normal;
+     ExceptionSpecification m_exceptionSpecification = ExceptionSpecification::Unknown;
++    ReferenceType m_refQualified = ReferenceType::NoReference;
+
+     uint m_isDeleted: 1;
+     uint m_isInline: 1;
