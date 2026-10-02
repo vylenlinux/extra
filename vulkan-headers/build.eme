@@ -6,15 +6,15 @@ homepage="https://github.com/KhronosGroup/vulkan-headers"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-headers
-version=1.4.364
+version=1.4.365
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     cmake -S "Vulkan-Headers-${version}" -B build -G Ninja \
-        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
