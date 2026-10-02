@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/crate-py/rpds"
 
 name=python3-rpds-py
-version=2026.6.3
+version=2026.9.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/crate-py/rpds/archive/refs/tags/v${version}.tar.gz"
 
