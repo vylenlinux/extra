@@ -1,5 +1,5 @@
 name = "qt6-serialport"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6serialport"
+package = "%(name)"

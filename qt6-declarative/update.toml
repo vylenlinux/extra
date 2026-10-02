@@ -1,5 +1,5 @@
 name = "qt6-declarative"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6declarative"
+package = "%(name)"

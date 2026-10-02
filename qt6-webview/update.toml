@@ -1,5 +1,5 @@
 name = "qt6-webview"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6webview"
+package = "%(name)"

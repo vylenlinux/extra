@@ -1,5 +1,5 @@
 name = "qt6-networkauth"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6networkauth"
+package = "%(name)"

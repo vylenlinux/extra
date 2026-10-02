@@ -1,5 +1,5 @@
 name = "qt6-svg"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6svg"
+package = "%(name)"

@@ -1,5 +1,5 @@
 name = "qt6-speech"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6speech"
+package = "%(name)"

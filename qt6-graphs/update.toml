@@ -1,5 +1,5 @@
 name = "qt6-graphs"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6graphs"
+package = "%(name)"

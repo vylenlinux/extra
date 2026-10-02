@@ -1,5 +1,5 @@
 name = "qt6-webengine"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6webengine"
+package = "%(name)"

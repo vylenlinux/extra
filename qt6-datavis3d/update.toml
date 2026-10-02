@@ -1,5 +1,5 @@
 name = "qt6-datavis3d"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6datavis3d"
+package = "%(name)"

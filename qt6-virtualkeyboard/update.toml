@@ -1,5 +1,5 @@
 name = "qt6-virtualkeyboard"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6virtualkeyboard"
+package = "%(name)"

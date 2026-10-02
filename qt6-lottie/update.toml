@@ -1,5 +1,5 @@
 name = "qt6-lottie"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6lottie"
+package = "%(name)"

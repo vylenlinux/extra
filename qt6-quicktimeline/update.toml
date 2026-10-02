@@ -1,5 +1,5 @@
 name = "qt6-quicktimeline"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6quicktimeline"
+package = "%(name)"

@@ -1,5 +1,5 @@
 name = "qt6-imageformats"
-provider = "repology"
+provider = "qt"
 
 [source]
-package = "qt6imageformats"
+package = "%(name)"
