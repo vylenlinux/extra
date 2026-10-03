@@ -14,11 +14,13 @@ _version="$(printf "%s" "${version}" | sed 's/\.//g')"
 source="${name}-${version}.zip::https://downloads.sourceforge.net/project/${name}/Source%20Distribution/${version}/FreeImage${_version}.zip
     ${name}-unbundle.patch
     ${name}-libraw-0.20.patch
-    ${name}-libraw-0.21.patch"
+    ${name}-libraw-0.21.patch
+    JXRVersion.h"
 
 build() {
     # shellcheck disable=SC2164
     cd FreeImage
+    install -Dm644 "${SRC}/JXRVersion.h" -t Source/
 
     rm -r Source/Lib* \
         Source/ZLib \
@@ -38,5 +40,5 @@ build() {
     make -f Makefile.fip
 
     make -f Makefile.gnu DESTDIR="${PKG}" install
-    make -f Makefile.fip DESTDIR="${PKG}" install
+    make -f Makefile.fip DESTDIR="${PKG}" install INCLUDE="-ISource -IWrapper/FreeImagePlus -IDist"
 }
