@@ -6,7 +6,7 @@ homepage="https://github.com/libical/libical"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libical
-version=4.0.5
+version=4.0.6
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
