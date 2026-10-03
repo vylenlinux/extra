@@ -1,5 +1,6 @@
 name = "fastfetch"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fastfetch"
+owner = "fastfetch-cli"
+repo = "fastfetch"
