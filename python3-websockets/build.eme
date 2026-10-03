@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/aaugustin/websockets"
 
 name=python3-websockets
-version=17.1
+version=17.2
 release=1
 source="https://github.com/aaugustin/websockets/archive/${version}/${name}-${version}.tar.gz"
 
@@ -14,10 +14,9 @@ build() {
     # shellcheck disable=SC2164
     cd "websockets-${version}"
 
-    python3 -m build \
-        --wheel \
-        --skip-dependency-check \
-        --no-isolation
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-    python3 -m installer --destdir="${PKG}" dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
