@@ -109,8 +109,8 @@ drwxr-xr-x root/root    usr/lib/cmake/SDL2/
 -rw-r--r-- root/root    usr/lib/cmake/SDL2/sdl2-config-version.cmake
 -rw-r--r-- root/root    usr/lib/cmake/SDL2/sdl2-config.cmake
 lrwxrwxrwx root/root    usr/lib/libSDL2-2.0.so -> libSDL2-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libSDL2-2.0.so.0 -> libSDL2-2.0.so.0.3200.72
--rwxr-xr-x root/root    usr/lib/libSDL2-2.0.so.0.3200.72
+lrwxrwxrwx root/root    usr/lib/libSDL2-2.0.so.0 -> libSDL2-2.0.so.0.3200.74
+-rwxr-xr-x root/root    usr/lib/libSDL2-2.0.so.0.3200.74
 lrwxrwxrwx root/root    usr/lib/libSDL2.so -> libSDL2-2.0.so
 -rw-r--r-- root/root    usr/lib/libSDL2_test.a
 -rw-r--r-- root/root    usr/lib/libSDL2main.a
