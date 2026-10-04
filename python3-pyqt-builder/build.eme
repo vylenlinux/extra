@@ -1,17 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="PyQt-builder is the PEP 517 compliant build system for PyQt"
 homepage="https://pypi.org/project/PyQt-builder"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyqt-builder
-version=1.19.1
+version=1.20.0
 release=1
-source="https://pypi.io/packages/source/p/pyqt_builder/pyqt_builder-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.io/packages/source/p/pyqt_builder/pyqt_builder-${version}.tar.gz"
 
 build() {
-	cd pyqt_builder-$version
+    # shellcheck disable=SC2164
+    cd "pyqt_builder-${version}"
 
-	SETUPTOOLS_SCM_PRETEND_VERSION=$version 	
-	python3 -m build --wheel --no-isolation
-	python3 -m installer --destdir=$PKG dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
