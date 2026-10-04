@@ -6,7 +6,7 @@ homepage="https://poppler.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler-qt6
-version=26.09.0
+version=26.10.0
 release=1
 source="https://poppler.freedesktop.org/poppler-${version}.tar.xz"
 
@@ -32,6 +32,6 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    rm "${PKG}/usr/lib/pkgconfig/poppler.pc" \
+    rm -f "${PKG}/usr/lib/pkgconfig/poppler.pc" \
         "${PKG}/usr/lib"/libpoppler.so*
 }

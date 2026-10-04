@@ -6,7 +6,7 @@ homepage="https://poppler.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler-glib
-version=26.09.0
+version=26.10.0
 release=1
 source="https://poppler.freedesktop.org/poppler-${version}.tar.xz"
 
@@ -33,8 +33,7 @@ build() {
     DESTDIR="${PKG}" cmake --install build
 
     # cleanup
-    rm "${PKG}/usr/lib/pkgconfig/poppler.pc"
-
-    rm -f "${PKG}/usr/bin/poppler-glib-demo" \
+    rm -f "${PKG}/usr/lib/pkgconfig/poppler.pc" \
+        "${PKG}/usr/bin/poppler-glib-demo" \
         "${PKG}/usr/lib"/libpoppler.*
 }

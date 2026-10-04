@@ -6,7 +6,7 @@ homepage="https://poppler.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler
-version=26.09.0
+version=26.10.0
 release=1
 source="https://poppler.freedesktop.org/${name}-${version}.tar.xz"
 
@@ -43,7 +43,6 @@ build() {
     rm -rf "${PKG}/usr/include/poppler/glib" \
         "${PKG}/usr/include/poppler/qt5" \
         "${PKG}/usr/include/poppler/qt6" \
-        "${PKG}/usr/share/gtk-doc" \
         "${PKG}/usr/lib"/gir* \
         "${PKG}/usr/share"/gir*
 
