@@ -6,16 +6,13 @@ homepage="https://codeberg.org/fairyglade/ly"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ly
-version=1.4.1
-release=3
+version=1.5.0
+release=1
 source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}"
-
-    # shellcheck disable=SC2016
-    sed -i 's|shutdown_cmd = /usr/bin/shutdown $PLATFORM_SHUTDOWN_ARG now|shutdown_cmd = /usr/bin/shutdown -p now|' res/config.ini
 
     zig build \
         --search-prefix /usr \
@@ -26,6 +23,9 @@ build() {
         -Dtarget=native \
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe
+
+    # remove unused dir (created for systemd unit service)
+    rm -rf "${PKG}/usr/lib"
 
     do_service "${name}"
     do_pam "${name}"
