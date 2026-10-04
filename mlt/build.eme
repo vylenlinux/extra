@@ -6,8 +6,8 @@ homepage="https://www.mltframework.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mlt
-version=7.40.0
-release=2
+version=7.42.0
+release=1
 
 source="https://github.com/mltframework/${name}/releases/download/v${version}/${name}-${version}.tar.gz
     ffmpeg-9.patch"
@@ -27,7 +27,6 @@ build() {
         -DMOD_RTAUDIO=OFF \
         -DMOD_RUBBERBAND=OFF \
         -DMOD_QT6=ON \
-        -DMOD_QT=OFF \
         -DSWIG_PYTHON=ON \
         -Wno-author
 
