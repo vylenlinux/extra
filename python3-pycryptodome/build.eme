@@ -1,16 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Cryptographic library for Python"
 homepage="https://www.pycryptodome.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycryptodome
-_name=${name#*-}
-_n=${_name%${_name#?}}
-version=3.23.0
+version=3.24.0
 release=1
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/source/$_n/${name#*-}/${name#*-}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pycryptodome/pycryptodome-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
-	python3 setup.py build
-	python3 setup.py install --root=$PKG --optimize=1 --skip-build
+    # shellcheck disable=SC2164
+    cd "pycryptodome-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --root="${PKG}" \
+        --optimize=1 \
+        --skip-build
 }
