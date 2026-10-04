@@ -505,7 +505,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-2beeb6fda445ef5ea6a13fdba3f918bf.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-c077d4f650323a17fe79abd8c2acd481.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
@@ -1410,7 +1410,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/user_files/
 -rw-r--r-- root/root    opt/vivaldi/vk_swiftshader_icd.json
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
-lrwxrwxrwx root/root    usr/bin/vivaldi -> /opt/vivaldi/vivaldi
+lrwxrwxrwx root/root    usr/bin/vivaldi -> vivaldi-stable
 lrwxrwxrwx root/root    usr/bin/vivaldi-stable -> /opt/vivaldi/vivaldi
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
