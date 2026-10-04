@@ -1,5 +1,6 @@
 name = "xorgproto"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xorgproto"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/proto/"
+filename = "xorgproto-{version}.tar.xz"
