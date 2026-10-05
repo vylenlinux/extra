@@ -6,7 +6,7 @@ homepage="https://openprinting.github.io/cups/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cups
-version=2.4.19
+version=2.4.20
 release=1
 source="${name}-${version}.tar.gz::https://github.com/OpenPrinting/${name}/archive/v${version}/${name}-${version}-source.tar.gz"
 
@@ -47,9 +47,6 @@ build() {
     make
     make BUILDROOT="${PKG}" install
 
-    # Linux PAM Configuration
-    do_pam "${name}"
-
     # cleanup
     rm -rf "${PKG}/tmp" \
         "${PKG}/run" \
@@ -63,5 +60,7 @@ build() {
         "${PKG}/var/spool"
 
     chmod -R +w "${PKG}"
+
+    do_pam "${name}"
     do_service cupsd
 }
