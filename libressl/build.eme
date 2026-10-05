@@ -6,7 +6,7 @@ homepage="https://www.libressl.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libressl
-version=4.3.2
+version=4.3.3
 release=1
 source="https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/${name}-${version}.tar.gz"
 
@@ -22,5 +22,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    rm "${PKG}/etc/ssl/cert.pem"
+    rm -f "${PKG}/etc/ssl/cert.pem"
 }
