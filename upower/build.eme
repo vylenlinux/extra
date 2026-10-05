@@ -12,7 +12,7 @@ source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name
 
 build() {
     vylen-meson "${name}-v${version}" build \
-        -Dgtk-doc=false \
+        -Dgtk-doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')" \
         -Dsystemdsystemunitdir=no \
         -Dudevrulesdir=/usr/lib/udev/rules.d \
         -Dudevhwdbdir=/usr/lib/udev/hwdb.d
