@@ -6,7 +6,7 @@ homepage="https://upower.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=upower
-version=1.91.4
+version=1.91.5
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
