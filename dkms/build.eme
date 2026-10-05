@@ -10,7 +10,7 @@ version=3.4.4
 release=1
 backup="etc/dkms/framework.conf"
 
-source="${name}-${version}.tar.gz::https://github.com/dell/${name}/archive/v${version}.tar.gz
+source="${name}-${version}.tar.gz::https://github.com/dkms-project/${name}/archive/v${version}.tar.gz
     buildmodules-template.sh.in"
 
 build() {

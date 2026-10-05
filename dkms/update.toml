@@ -2,5 +2,5 @@ name = "dkms"
 provider = "github"
 
 [source]
-owner = "dell"
+owner = "dkms-project"
 repo = "dkms"
