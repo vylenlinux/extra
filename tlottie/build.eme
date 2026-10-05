@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Rust library for drawing Lottie animations"
+homepage="https://github.com/dkaraush/tlottie"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=tlottie
+version=1.0.6
+release=1
+source="${name}-${version}.tar.gz::https://github.com/dkaraush/${name}/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    cargo fetch \
+        --locked \
+        --target host-tuple
+
+    cargo build \
+        --release \
+        --frozen \
+        --features c-api
+
+    install -Dm755 target/release/libtlottie.so -t "${PKG}/usr/lib/"
+    install -Dm644 include/tlottie.h -t "${PKG}/usr/include/"
+}
