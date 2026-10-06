@@ -8,11 +8,15 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libpng
 version=1.6.59
 release=1
-source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/pnggroup/${name}/archive/v${version}.tar.gz
+    https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-${version}-apng.patch.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    gzip -cd "${SRC}/${name}-${version}-apng.patch.gz" | patch -p1
     autoreconf -fi
 
     ./configure \
