@@ -6,7 +6,7 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=firefox
-version=157.0
+version=157.0.1
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
@@ -49,7 +49,7 @@ build() {
     unset CARGO_PROFILE_RELEASE_LTO
 
     # python configuration
-    export SHELL=/bin/sh
+    export SHELL=/usr/bin/sh
     export PIP_NETWORK_INSTALL_RESTRICTED_VIRTUALENVS=mach
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
 
