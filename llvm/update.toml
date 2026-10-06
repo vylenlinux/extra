@@ -1,5 +1,6 @@
 name = "llvm"
 provider = "github"
+dedup_key = "llvm"
 
 [source]
 owner = "llvm"

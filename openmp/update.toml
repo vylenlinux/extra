@@ -1,6 +1,7 @@
 name = "openmp"
-provider = "repology"
+provider = "github"
 dedup_key = "llvm"
 
 [source]
-package = "llvm"
+owner = "llvm"
+repo = "llvm-project"
