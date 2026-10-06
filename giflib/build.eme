@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Libraries for reading and writing GIFs as well as programs for converting and working with GIF files"

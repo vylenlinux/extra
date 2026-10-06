@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives"

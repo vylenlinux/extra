@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Provides a Service Provider Interface for the Assistive Technologies available on the GNOME platform and a library against which applications can be linked"

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Plugin that monitors customizable programs stdout for the Xfce4 panel"

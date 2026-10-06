@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Easy to use, but flexible, X Window Manager and Wayland Compositor"

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A library that allows developers to access PolicyKit API with a nice Qt-style API"

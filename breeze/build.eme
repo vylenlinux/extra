@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Color schemes, cursors, window decorations, application style, and wallpapers for the breeze visual style"

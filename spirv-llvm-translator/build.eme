@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A tool and a library for bi-directional translation between SPIR-V and LLVM IR"

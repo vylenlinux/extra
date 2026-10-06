@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="ALinux application sandboxing and distribution framework (formerly xdg-app)"

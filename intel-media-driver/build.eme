@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Intel Media Driver for VAAPI - Broadwell+ iGPUs"

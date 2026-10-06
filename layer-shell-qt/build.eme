@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Qt component to allow applications to make use of the Wayland wl-layer-shell protocol"

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A small, relatively self-contained set of components integrated with Plasma System Settings for managing CUPS printer configurations"

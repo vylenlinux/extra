@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Abstraction for enumerating power devices, listening to device events and querying history and statistics"

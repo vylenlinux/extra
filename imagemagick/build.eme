@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="ImageMagick is a collection of tools and libraries to read, write, and manipulate an image in various image formats"

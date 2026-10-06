@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="This project aims to provide a smooth experience for the users of GNOME/GTK applications on Plasma Desktop"

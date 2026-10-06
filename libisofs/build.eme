@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Library to create an ISO-9660 filesystem with extensions like RockRidge or Joliet"

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A Plasma System Settings module and a KDED module to handle authorization of Thunderbolt devices"

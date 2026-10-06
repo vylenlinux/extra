@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Qt implementation of the DBusMenu specification that exposes menus via DBus"

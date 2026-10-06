@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A simple interface for userspace programs to export a virtual filesystem to the Linux kernel"

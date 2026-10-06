@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Extension for the Thunar file manager for enables automatic management of removable drives and media"

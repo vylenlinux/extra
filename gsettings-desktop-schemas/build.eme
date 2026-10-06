@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Collection of GSettings schemas for settings shared by various components of a GNOME Desktop"

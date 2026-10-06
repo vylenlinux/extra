@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Multi-protocol, multi-mailbox mail watcher for the Xfce4 panel"

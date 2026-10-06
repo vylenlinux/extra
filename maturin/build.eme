@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Build and publish crates with pyo3, rust-cpython and cffi bindings"

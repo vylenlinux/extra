@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Well-groomed and well-maintained collection of GStreamer plug-ins and elements"

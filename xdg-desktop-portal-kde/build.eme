@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="a backend implementation for xdg-desktop-portal using Qt/KF5"

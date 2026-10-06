@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="File and print services to SMB/CIFS clients and Windows networking to Linux clients"

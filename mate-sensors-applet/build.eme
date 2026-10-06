@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings"
