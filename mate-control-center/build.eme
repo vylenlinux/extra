@@ -6,7 +6,7 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-control-center
-version=1.28.2
+version=1.29.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/mate-desktop/${name}/archive/refs/tags/v${version}.tar.gz"
 

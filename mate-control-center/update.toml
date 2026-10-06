@@ -1,5 +1,10 @@
 name = "mate-control-center"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mate-control-center"
+owner = "mate-desktop"
+repo = "mate-control-center"
+
+[github]
+use_releases = false
+use_tags = true
