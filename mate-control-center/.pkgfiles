@@ -10,6 +10,7 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/mate-control-center
 -rwxr-xr-x root/root    usr/bin/mate-default-applications-properties
 -rwxr-xr-x root/root    usr/bin/mate-display-properties
+-rwxr-xr-x root/root    usr/bin/mate-display-properties-install-systemwide
 -rwxr-xr-x root/root    usr/bin/mate-font-viewer
 -rwxr-xr-x root/root    usr/bin/mate-keybinding-properties
 -rwxr-xr-x root/root    usr/bin/mate-keyboard-properties
@@ -23,8 +24,6 @@ drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/mate-default-applications.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/mate-keybindings.pc
-drwxr-xr-x root/root    usr/sbin/
--rwxr-xr-x root/root    usr/sbin/mate-display-properties-install-systemwide
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/mate-about-me.desktop
