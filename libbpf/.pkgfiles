@@ -17,7 +17,7 @@ drwxr-xr-x root/root    usr/include/bpf/
 drwxr-xr-x root/root    usr/lib/
 -rw-r--r-- root/root    usr/lib/libbpf.a
 lrwxrwxrwx root/root    usr/lib/libbpf.so -> libbpf.so.1
-lrwxrwxrwx root/root    usr/lib/libbpf.so.1 -> libbpf.so.1.7.0
--rwxr-xr-x root/root    usr/lib/libbpf.so.1.7.0
+lrwxrwxrwx root/root    usr/lib/libbpf.so.1 -> libbpf.so.1.8.0
+-rwxr-xr-x root/root    usr/lib/libbpf.so.1.8.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libbpf.pc
