@@ -6,8 +6,8 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xorg-server
-version=21.1.24
-release=2
+version=21.1.25
+release=1
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz
     Xwrapper.config"
