@@ -6,7 +6,7 @@ homepage="https://github.com/nothings/stb"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=stb
-version=20260416
+version=20260802
 release=1
 
 commit=2c980bb59875b0d32144a71867fbdebb2f77cd20
