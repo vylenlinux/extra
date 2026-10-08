@@ -6,9 +6,9 @@ homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gst-plugins-base
-version=1.28.7
+version=1.29.2
 release=1
-source="http://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
+source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
 
 build() {
     vylen-meson "${name}-${version}" build \

@@ -1,6 +1,7 @@
 name = "gst-plugins-good"
-provider = "repology"
+provider = "ftp"
 dedup_key = "gstreamer"
 
-[source]
-package = "gstreamer"
+[ftp]
+url = "https://gstreamer.freedesktop.org/src/%(name)"
+filename = "%(name)-{version}.tar.xz"

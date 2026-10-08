@@ -6,11 +6,15 @@ homepage="https://gstreamer.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gst-libav
-version=1.28.7
+version=1.29.2
 release=1
-source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz"
+
+source="https://gstreamer.freedesktop.org/src/${name}/${name}-${version}.tar.xz
+    gst-libav-1.29.2-ffmpeg-9-codec-ids.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/gst-libav-1.29.2-ffmpeg-9-codec-ids.patch"
+
     vylen-meson "${name}-${version}" build \
         -Ddoc=disabled \
         -Dpackage-name="GStreamer FFmpeg Plugins ${version} (Vylen Linux)"

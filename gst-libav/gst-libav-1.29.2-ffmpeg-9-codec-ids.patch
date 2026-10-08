@@ -1,0 +1,23 @@
+From: Vylen Linux Team
+Date: 2026-10-08 22:53:24 +02:00
+Subject: [PATCH] gst-libav: fix build with FFmpeg 9 codec IDs
+
+FFmpeg 9 no longer exposes AV_CODEC_ID_V308, AV_CODEC_ID_V408 and
+AV_CODEC_ID_V410. gst-libav only uses these IDs to skip the corresponding
+raw-video codecs during registration, so remove those checks while keeping
+AV_CODEC_ID_R210.
+
+--- a/ext/libav/gstavvidenc.c
++++ b/ext/libav/gstavvidenc.c
+@@ -1036,3 +1036 @@
+-        in_plugin->id == AV_CODEC_ID_V308 ||
+-        in_plugin->id == AV_CODEC_ID_V408 ||
+-        in_plugin->id == AV_CODEC_ID_V410 || in_plugin->id == AV_CODEC_ID_R210
++        in_plugin->id == AV_CODEC_ID_R210
+--- a/ext/libav/gstavviddec.c
++++ b/ext/libav/gstavviddec.c
+@@ -3003,3 +3003 @@
+-        in_plugin->id == AV_CODEC_ID_V308 ||
+-        in_plugin->id == AV_CODEC_ID_V408 ||
+-        in_plugin->id == AV_CODEC_ID_V410 || in_plugin->id == AV_CODEC_ID_R210
++        in_plugin->id == AV_CODEC_ID_R210
