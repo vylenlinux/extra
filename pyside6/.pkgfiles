@@ -46,6 +46,8 @@ drwxr-xr-x root/root    usr/include/PySide6/QtGui/
 -rw-r--r-- root/root    usr/include/PySide6/QtGui/qtguihelper.h
 drwxr-xr-x root/root    usr/include/PySide6/QtHelp/
 -rw-r--r-- root/root    usr/include/PySide6/QtHelp/pyside6_qthelp_python.h
+drwxr-xr-x root/root    usr/include/PySide6/QtLabsStyleKit/
+-rw-r--r-- root/root    usr/include/PySide6/QtLabsStyleKit/pyside6_qtlabsstylekit_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtLocation/
 -rw-r--r-- root/root    usr/include/PySide6/QtLocation/pyside6_qtlocation_python.h
 drwxr-xr-x root/root    usr/include/PySide6/QtMultimedia/
@@ -128,19 +130,24 @@ drwxr-xr-x root/root    usr/include/PySide6/QtXml/
 -rw-r--r-- root/root    usr/include/PySide6/dynamicqmetaobject.h
 -rw-r--r-- root/root    usr/include/PySide6/dynamicslot_p.h
 -rw-r--r-- root/root    usr/include/PySide6/feature_select.h
+-rw-r--r-- root/root    usr/include/PySide6/pyobjectwrapper.h
 -rw-r--r-- root/root    usr/include/PySide6/pyside.h
 -rw-r--r-- root/root    usr/include/PySide6/pyside6_global.h
 -rw-r--r-- root/root    usr/include/PySide6/pyside_numpy.h
 -rw-r--r-- root/root    usr/include/PySide6/pyside_p.h
+-rw-r--r-- root/root    usr/include/PySide6/pysideautoproperties.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidecapsulemethod_p.h
+-rw-r--r-- root/root    usr/include/PySide6/pysidechange.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideclassdecorator_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideclassinfo.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideclassinfo_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidecleanup.h
+-rw-r--r-- root/root    usr/include/PySide6/pysidecomputed_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidedynamicclass_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidedynamiccommon_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidedynamicenum_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidedynamicpod_p.h
+-rw-r--r-- root/root    usr/include/PySide6/pysideeffect_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideglobals_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideinit.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidelogging_p.h
@@ -157,6 +164,7 @@ drwxr-xr-x root/root    usr/include/PySide6/QtXml/
 -rw-r--r-- root/root    usr/include/PySide6/pysideqml.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideqmlattached.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideqmlattached_p.h
+-rw-r--r-- root/root    usr/include/PySide6/pysideqmlcomponent.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideqmlextended_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideqmlforeign_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideqmllistproperty_p.h
@@ -178,9 +186,11 @@ drwxr-xr-x root/root    usr/include/PySide6/QtXml/
 -rw-r--r-- root/root    usr/include/PySide6/pysidestaticstrings.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideutils.h
 -rw-r--r-- root/root    usr/include/PySide6/pysidevariantutils.h
+-rw-r--r-- root/root    usr/include/PySide6/pysidewatch_p.h
 -rw-r--r-- root/root    usr/include/PySide6/pysideweakref.h
 -rw-r--r-- root/root    usr/include/PySide6/qobjectconnect.h
 -rw-r--r-- root/root    usr/include/PySide6/signalmanager.h
+-rw-r--r-- root/root    usr/include/PySide6/signalmanager_p.h
 drwxr-xr-x root/root    usr/include/shiboken6/
 -rw-r--r-- root/root    usr/include/shiboken6/autodecref.h
 -rw-r--r-- root/root    usr/include/shiboken6/basewrapper.h
@@ -191,8 +201,10 @@ drwxr-xr-x root/root    usr/include/shiboken6/
 -rw-r--r-- root/root    usr/include/shiboken6/helper.h
 -rw-r--r-- root/root    usr/include/shiboken6/pep384ext.h
 -rw-r--r-- root/root    usr/include/shiboken6/pep384impl.h
+-rw-r--r-- root/root    usr/include/shiboken6/pep384impl_p.h
 -rw-r--r-- root/root    usr/include/shiboken6/pyobjectholder.h
 -rw-r--r-- root/root    usr/include/shiboken6/sbkarrayconverter.h
+-rw-r--r-- root/root    usr/include/shiboken6/sbkarrayspan_p.h
 -rw-r--r-- root/root    usr/include/shiboken6/sbkbindingutils.h
 -rw-r--r-- root/root    usr/include/shiboken6/sbkcontainer.h
 -rw-r--r-- root/root    usr/include/shiboken6/sbkconverter.h
@@ -218,6 +230,7 @@ drwxr-xr-x root/root    usr/include/shiboken6/
 -rw-r--r-- root/root    usr/include/shiboken6/sbkwindows.h
 -rw-r--r-- root/root    usr/include/shiboken6/shiboken.h
 -rw-r--r-- root/root    usr/include/shiboken6/shibokenbuffer.h
+-rw-r--r-- root/root    usr/include/shiboken6/shibokenclasshelpermacros.h
 -rw-r--r-- root/root    usr/include/shiboken6/shibokenmacros.h
 -rw-r--r-- root/root    usr/include/shiboken6/signature.h
 -rw-r--r-- root/root    usr/include/shiboken6/signature_p.h
@@ -244,15 +257,15 @@ drwxr-xr-x root/root    usr/lib/cmake/Shiboken6Tools/
 -rw-r--r-- root/root    usr/lib/cmake/Shiboken6Tools/Shiboken6ToolsMacros.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Shiboken6Tools/Shiboken6ToolsTargets-none.cmake
 -rw-r--r-- root/root    usr/lib/cmake/Shiboken6Tools/Shiboken6ToolsTargets.cmake
-lrwxrwxrwx root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so -> libpyside6.cpython-314-x86_64-linux-gnu.so.6.11
--rwxr-xr-x root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so.6.11
-lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11
-lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11 -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.2
--rwxr-xr-x root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.11.2
+lrwxrwxrwx root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so -> libpyside6.cpython-314-x86_64-linux-gnu.so.6.12
+-rwxr-xr-x root/root    usr/lib/libpyside6.cpython-314-x86_64-linux-gnu.so.6.12
+lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.12
+lrwxrwxrwx root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.12 -> libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.12.0
+-rwxr-xr-x root/root    usr/lib/libpyside6qml.cpython-314-x86_64-linux-gnu.so.6.12.0
 -rw-r--r-- root/root    usr/lib/libpyside6remoteobjects.a
-lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11
-lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11 -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.2
--rwxr-xr-x root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.11.2
+lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.12
+lrwxrwxrwx root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.12 -> libshiboken6.cpython-314-x86_64-linux-gnu.so.6.12.0
+-rwxr-xr-x root/root    usr/lib/libshiboken6.cpython-314-x86_64-linux-gnu.so.6.12.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/pyside6.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/shiboken6.pc
@@ -305,6 +318,8 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtGui.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtHelp.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtHelp.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtLabsStyleKit.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtLabsStyleKit.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtLocation.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtLocation.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtMultimedia.cpython-314-x86_64-linux-gnu.so
@@ -331,6 +346,8 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtPrintSupport.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtQml.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtQml.pyi
+-rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtQmlFeatures.cpython-314-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtQmlFeatures.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtQuick.cpython-314-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/QtQuick.pyi
 -rwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtQuick3D.cpython-314-x86_64-linux-gnu.so
@@ -388,8 +405,10 @@ drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/QtAsyncio/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/_git_pyside_version.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/PySide6/support/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/support/__init__.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/support/auto_property_helper.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/support/deprecated.py
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/support/generate_pyi.py
+-rw-r--r-- root/root    usr/lib/python3.14/site-packages/PySide6/support/qml_component_helper.py
 drwxr-xr-x root/root    usr/lib/python3.14/site-packages/shiboken6.egg-info/
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/shiboken6.egg-info/PKG-INFO
 -rw-r--r-- root/root    usr/lib/python3.14/site-packages/shiboken6.egg-info/SOURCES.txt
@@ -492,6 +511,7 @@ drwxr-xr-x root/root    usr/share/PySide6/typesystems/glue/
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_gui_win.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_gui_x11.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_help.xml
+-rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_labsstylekit.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_location.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_multimedia.xml
 -rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_multimediawidgets.xml

@@ -6,19 +6,13 @@ homepage="https://doc.qt.io/qtforpython-6/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pyside6
-version=6.11.2
+version=6.12.0
 release=1
-
-source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/QtForPython/${name}/PySide6-${version}-src/pyside-setup-everywhere-src-${version}.tar.xz
-    fix-header-install-dir.patch
-    fix-qt612.patch"
+source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/QtForPython/${name}/PySide6-${version}-src/pyside-setup-everywhere-src-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
     cd "pyside-setup-everywhere-src-${version}"
-
-    patch -Np1 -i "${SRC}/fix-header-install-dir.patch"
-    patch -Np1 -i "${SRC}/fix-qt612.patch"
 
     cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=None \
@@ -46,7 +40,4 @@ build() {
     python3 setup.py egg_info --build-type=shiboken6-generator
 
     cp -r shiboken6*.egg-info "${PKG}/${pythonpath}"
-
-    unset CLANG_INSTALL_DIR
-    unset LLVM_INSTALL_DIR
 }
