@@ -32,4 +32,5 @@ build() {
         "${PKG}/usr/lib/polkit-1/polkit-agent-helper-1"
 
     do_pam "${name}-1"
+    rm -rf "${PKG}/usr/lib/pam.d"
 }
