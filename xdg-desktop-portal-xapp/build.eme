@@ -14,4 +14,6 @@ build() {
     vylen-meson "${name}-${version}" build -Dsystemduserunitdir=none
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    rm -rf "${PKG}/usr/none"
 }
