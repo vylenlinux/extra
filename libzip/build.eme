@@ -6,7 +6,7 @@ homepage="https://libzip.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libzip
-version=1.11.4
+version=1.12
 release=1
 source="https://libzip.org/download/${name}-${version}.tar.xz"
 
@@ -17,7 +17,6 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -Wno-author
 
     cmake --build build
