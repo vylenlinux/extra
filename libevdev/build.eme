@@ -6,7 +6,7 @@ homepage="https://www.freedesktop.org/wiki/Software/libevdev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libevdev
-version=1.13.7
+version=1.14.0
 release=1
 source="https://www.freedesktop.org/software/${name}/${name}-${version}.tar.xz"
 
