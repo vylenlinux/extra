@@ -1,16 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="GLib-based client library for the accounts database"
-homepage="http//gitlab.com/accounts-sso/libaccounts-glib"
+homepage="https://gitlab.com/accounts-sso/libaccounts-glib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libaccounts-glib
 version=1.27
 release=1
-source="https://gitlab.com/accounts-sso/libaccounts-glib/-/archive/VERSION_$version/$name-VERSION_$version.tar.bz2"
+source="${name}-${version}.tar.bz2::https://gitlab.com/accounts-sso/${name}/-/archive/VERSION_${version}/${name}-VERSION_${version}.tar.bz2"
 
 build() {
-	sed -i -e '/docs/d' -e '/tests/d' $name-VERSION_$version/meson.build
+    sed \
+        -e '/docs/d' \
+        -e '/tests/d' \
+    -i "${name}-VERSION_${version}/meson.build"
 
-	vylen-meson  $name-VERSION_$version build
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+    vylen-meson "${name}-VERSION_${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 }
