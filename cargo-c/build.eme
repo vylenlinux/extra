@@ -16,7 +16,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    cp "${SRC}/${name}-${version}.Cargo.lock" -t Cargo.lock
+    cp "${SRC}/${name}-${version}.Cargo.lock" Cargo.lock
     export RUSTUP_TOOLCHAIN='stable'
 
     cargo fetch \
