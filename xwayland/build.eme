@@ -12,7 +12,6 @@ source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-
 
 build() {
     vylen-meson "xserver-${name}-${version}" build \
-        -Db_lto=true \
         -Dipv6=true \
         -Dxvfb=false \
         -Dxdmcp=false \
