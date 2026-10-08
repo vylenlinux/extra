@@ -6,7 +6,7 @@ homepage="https://github.com/ijl/orjson"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-orjson
-version=3.12.0
+version=3.13.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/ijl/orjson/archive/${version}/orjson-${version}.tar.gz"
 
