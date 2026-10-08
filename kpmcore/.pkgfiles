@@ -101,8 +101,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPMcore/
 -rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreTargets.cmake
 -rwxr-xr-x root/root    usr/lib/kpmcore_externalcommand
 lrwxrwxrwx root/root    usr/lib/libkpmcore.so -> libkpmcore.so.13
-lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.08.1
--rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.08.1
+lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.08.2
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kpmcore/
