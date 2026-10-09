@@ -23,7 +23,8 @@ build() {
         --with-udevdir=/usr/lib/udev \
         --enable-cmdlib \
         --enable-pkgconfig \
-        --enable-udev_sync
+        --enable-udev_sync \
+        --enable-write_install
 
     make
     make DESTDIR="${PKG}" install_device-mapper
