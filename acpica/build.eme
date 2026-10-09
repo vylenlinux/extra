@@ -2,17 +2,17 @@
 
 # shellcheck disable=SC2034
 description="Intel ACPI Source Language compiler"
-homepage="https://github.com/acpica"
+homepage="https://github.com/open-acpica/acpica"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=iasl
-version=20251212
+name=acpica
+version=20260930
 release=1
-source="${name}-${version}.tar.gz::https://github.com/acpica/acpica/releases/download/${version}/acpica-unix-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/open-${name}/${name}/releases/download/${version}/${name}-unix-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "acpica-unix-${version}"
+    cd "${name}-unix-${version}"
     export CFLAGS="${CFLAGS} -Wno-dangling-pointer"
 
     NOWERROR=TRUE make

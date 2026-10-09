@@ -1,0 +1,6 @@
+name = "acpica"
+provider = "github"
+
+[source]
+owner = "open-%(name)"
+repo = "%(name)"

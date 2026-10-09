@@ -1,5 +1,0 @@
-name = "iasl"
-provider = "repology"
-
-[source]
-package = "iasl"
