@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Library for building powerful interactive command lines in Python"
+homepage="https://github.com/prompt-toolkit/python-prompt-toolkit"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-prompt_toolkit
+version=3.0.53
+release=1
+source="${name}-${version}.tar.gz::https://github.com/prompt-toolkit/python-prompt-toolkit/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "python-prompt-toolkit-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}

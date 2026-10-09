@@ -1,0 +1,5 @@
+name = "python3-prompt_toolkit"
+provider = "pypi"
+
+[source]
+package = "prompt_toolkit"
