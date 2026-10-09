@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="https://github.com/ibus/ibus/wiki"
-homepage="Intelligent Input Bus"
+description="Intelligent Input Bus"
+homepage="https://github.com/ibus/ibus/wiki"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ibus
