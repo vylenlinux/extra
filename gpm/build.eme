@@ -20,7 +20,7 @@ build() {
     patch -Np1 -i "${SRC}/gpm-1.20.7-consolidated-1.patch"
 
     # fix build with gcc-15
-    export CFLAGS="${CLFAGS} -std=gnu17"
+    export CFLAGS="${CFLAGS} -std=gnu17"
     ./autogen.sh
 
     ./configure \
