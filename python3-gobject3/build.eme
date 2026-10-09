@@ -6,7 +6,7 @@ homepage="https://pygobject.gnome.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-gobject3
-version=3.58.0
+version=3.58.1
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/pygobject/-/archive/${version}/pygobject-${version}.tar.gz"
 
