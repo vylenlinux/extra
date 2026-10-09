@@ -1,0 +1,6 @@
+name = "lvm2"
+provider = "repology"
+dedup_key = "%(name)"
+
+[source]
+package = "%(name)"

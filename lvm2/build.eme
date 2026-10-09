@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lvm2
 version=2.03.43
-release=1
+release=2
 
 backup="etc/lvm/lvm.conf
     etc/lvm/lvmlocal.conf"
@@ -17,9 +17,6 @@ source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${versio
 build() {
     # shellcheck disable=SC2164
     cd "LVM2.${version}"
-
-    # fix the install_lvm2 make target
-    sed '/SIMPLE_RECURSIVE_TARGETS/s/=/= install_lvm2/' -i libdm/make.tmpl.in
     export CONFIG_SHELL=/bin/bash
 
     ./configure \
@@ -28,11 +25,10 @@ build() {
         --libdir=/usr/lib \
         --with-libexecdir="/usr/lib/${name}" \
         --with-udevdir=/usr/lib/udev \
-        --exec-prefix= \
         --enable-cmdlib \
         --enable-pkgconfig \
         --enable-udev_sync
 
     make
-    make DESTDIR="${PKG}" install_lvm2 install_device-mapper
+    make DESTDIR="${PKG}" install_lvm2
 }
