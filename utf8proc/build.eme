@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="C library for processing UTF-8 encoded Unicode strings"
-homepage="https://github.com/JuliaStrings"
+homepage="https://github.com/JuliaStrings/utf8proc"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=utf8proc
