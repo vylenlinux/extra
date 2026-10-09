@@ -1,0 +1,6 @@
+name = "ddrescue"
+provider = "ftp"
+
+[ftp]
+url = "https://ftp.gnu.org/gnu/%(name)"
+filename = "%(name)-{version}.tar.lz"

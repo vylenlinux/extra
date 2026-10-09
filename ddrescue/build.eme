@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="GNU data recovery tool"
+homepage="https://www.gnu.org/software/ddrescue/ddrescue.html"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ddrescue
+version=1.30
+release=1
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.lz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install install-man
+}
