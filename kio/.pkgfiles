@@ -206,6 +206,7 @@ drwxr-xr-x root/root    usr/include/KF6/KIOWidgets/KIO/
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/PasteJob
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/RenameDialog
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/RenameFileDialog
+-rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/RenameFileWarningDialog
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/SkipDialog
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/SslUi
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/KIO/WidgetsAskUserActionHandler
@@ -236,6 +237,7 @@ drwxr-xr-x root/root    usr/include/KF6/KIOWidgets/kio/
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/pastejob.h
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/renamedialog.h
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/renamefiledialog.h
+-rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/renamefilewarningdialog.h
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/skipdialog.h
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/sslui.h
 -rw-r--r-- root/root    usr/include/KF6/KIOWidgets/kio/widgetsaskuseractionhandler.h
@@ -262,17 +264,17 @@ drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/kioexec
 -rwxr-xr-x root/root    usr/lib/kf6/kioworker
 lrwxrwxrwx root/root    usr/lib/libKF6KIOCore.so -> libKF6KIOCore.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KIOCore.so.6 -> libKF6KIOCore.so.6.30.0
--rwxr-xr-x root/root    usr/lib/libKF6KIOCore.so.6.30.0
+lrwxrwxrwx root/root    usr/lib/libKF6KIOCore.so.6 -> libKF6KIOCore.so.6.31.0
+-rwxr-xr-x root/root    usr/lib/libKF6KIOCore.so.6.31.0
 lrwxrwxrwx root/root    usr/lib/libKF6KIOFileWidgets.so -> libKF6KIOFileWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KIOFileWidgets.so.6 -> libKF6KIOFileWidgets.so.6.30.0
--rwxr-xr-x root/root    usr/lib/libKF6KIOFileWidgets.so.6.30.0
+lrwxrwxrwx root/root    usr/lib/libKF6KIOFileWidgets.so.6 -> libKF6KIOFileWidgets.so.6.31.0
+-rwxr-xr-x root/root    usr/lib/libKF6KIOFileWidgets.so.6.31.0
 lrwxrwxrwx root/root    usr/lib/libKF6KIOGui.so -> libKF6KIOGui.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KIOGui.so.6 -> libKF6KIOGui.so.6.30.0
--rwxr-xr-x root/root    usr/lib/libKF6KIOGui.so.6.30.0
+lrwxrwxrwx root/root    usr/lib/libKF6KIOGui.so.6 -> libKF6KIOGui.so.6.31.0
+-rwxr-xr-x root/root    usr/lib/libKF6KIOGui.so.6.31.0
 lrwxrwxrwx root/root    usr/lib/libKF6KIOWidgets.so -> libKF6KIOWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KIOWidgets.so.6 -> libKF6KIOWidgets.so.6.30.0
--rwxr-xr-x root/root    usr/lib/libKF6KIOWidgets.so.6.30.0
+lrwxrwxrwx root/root    usr/lib/libKF6KIOWidgets.so.6 -> libKF6KIOWidgets.so.6.31.0
+-rwxr-xr-x root/root    usr/lib/libKF6KIOWidgets.so.6.31.0
 -rwxr-xr-x root/root    usr/lib/libkuriikwsfiltereng_private.so
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
@@ -281,9 +283,12 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/designer/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/remotenotifier.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kded/trashdirnotify.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_file.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_ftp.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_ghelp.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_help.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_http.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_remote.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/kio/kio_trash.so

@@ -18,10 +18,15 @@ drwxr-xr-x root/root    usr/include/KF6/KDAV/KDAV/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemMoveJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemsFetchJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemsListJob
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavItemsSyncJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavJobBase
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPrincipalHomesetsFetchJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPrincipalSearchJob
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPushDontNotify
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPushRegistration
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPushRegistrationJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPushSupport
+-rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavPushUnregistrationJob
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavSslUiProxy
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/DavUrl
 -rw-r--r-- root/root    usr/include/KF6/KDAV/KDAV/Enums
@@ -43,10 +48,15 @@ drwxr-xr-x root/root    usr/include/KF6/KDAV/kdav/
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemmovejob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemsfetchjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemslistjob.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davitemssyncjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davjobbase.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davprincipalhomesetsfetchjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davprincipalsearchjob.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davpushdontnotify.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davpushregistration.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davpushregistrationjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davpushsupport.h
+-rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davpushunregistrationjob.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davssluiproxy.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/davurl.h
 -rw-r--r-- root/root    usr/include/KF6/KDAV/kdav/enums.h
@@ -62,8 +72,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6DAV/
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6DAV/KF6DAVTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6DAV.so -> libKF6DAV.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.30.0
--rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.30.0
+lrwxrwxrwx root/root    usr/lib/libKF6DAV.so.6 -> libKF6DAV.so.6.31.0
+-rwxr-xr-x root/root    usr/lib/libKF6DAV.so.6.31.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
