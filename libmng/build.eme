@@ -1,16 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Read and write Multiple-image Network Graphics (MNG)"
+homepage="https://www.libmng.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmng
 version=2.0.3
 release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.xz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
-
