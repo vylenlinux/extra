@@ -1,0 +1,5 @@
+name = "python3-wcwidth"
+provider = "pypi"
+
+[source]
+package = "wcwidth"
