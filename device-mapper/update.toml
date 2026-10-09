@@ -1,6 +1,6 @@
-name = "lvm2"
+name = "device-mapper"
 provider = "repology"
-dedup_key = "%(name)"
+dedup_key = "lvm2"
 
 [source]
-package = "%(name)"
+package = "lvm2"
