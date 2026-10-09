@@ -3,4 +3,4 @@ nettle
 nss
 popt
 json-c
-lvm2
+device-mapper
