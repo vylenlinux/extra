@@ -1,21 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="KDE scientific calculator"
-homepage="https://apps.kde.org/filelight/"
+homepage="https://apps.kde.org/kcalc"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcalc
 version=26.08.2
 release=1
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 
 build() {
-	cmake -S $name-$version -B build \
-	        -D CMAKE_INSTALL_PREFIX=/usr \
-	        -D CMAKE_INSTALL_LIBDIR=lib \
-	        -D CMAKE_BUILD_TYPE=Release \
-	        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-	        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-	        -Wno-author
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-author
 
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
