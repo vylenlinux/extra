@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Program to write hybrid ISO files onto USB disks"
-homepage="https://apps.kde.org/kdenlive/"
+homepage="https://apps.kde.org/isoimagewriter/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=isoimagewriter
