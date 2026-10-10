@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="A netload plugin for the Xfce panel"
+description="Sensors plugin for the Xfce panel"
 homepage="https://xfce.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
