@@ -1,4 +1,4 @@
-#!/isr/bin/env sh
+#!/bin/sh
 
 # shellcheck disable=SC2034
 description="Firewalling, NAT, and packet mangling for linux"
