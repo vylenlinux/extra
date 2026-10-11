@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="List of country, language and currency names"
 homepage="https://salsa.debian.org/iso-codes-team/iso-codes"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,10 +8,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=iso-codes
 version=4.20.1
 release=1
-source="$name-$version.tar.gz::https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v$version/iso-codes-v$version.tar.gz"
+source="${name}-${version}.tar.xz::https://deb.debian.org/debian/pool/main/i/${name}/${name}_${version}.orig.tar.xz"
 
 build() {
-	vylen-meson $name-v$version build
-	meson compile -C build
-	DESTDIR="$PKG" meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
