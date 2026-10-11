@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=device-mapper
 version=2.03.43
 release=1
-source="lvm2-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${version}.tgz"
+source="lvm2-${version}.tgz::https://sourceware.org/pub/lvm2/LVM2.${version}.tgz"
 
 build() {
     # shellcheck disable=SC2164
@@ -19,7 +19,6 @@ build() {
         --prefix=/usr \
         --sbindir=/usr/bin \
         --libdir=/usr/lib \
-        --with-libexecdir="/usr/lib/${name}" \
         --with-udevdir=/usr/lib/udev \
         --enable-cmdlib \
         --enable-pkgconfig \
