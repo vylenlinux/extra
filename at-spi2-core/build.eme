@@ -6,7 +6,7 @@ homepage="https://gitlab.gnome.org/GNOME/at-spi2-core"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=at-spi2-core
-version=2.62.0.1
+version=2.62.1
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
