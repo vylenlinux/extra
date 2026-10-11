@@ -6,7 +6,7 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=telegram-desktop
-version=7.3.0
+version=7.3.1
 release=1
 
 tdlib_commit=c15d3f5a5de6e3ba5839822c451152e5e18bb700
