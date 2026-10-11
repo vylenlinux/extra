@@ -1,0 +1,24 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Sun, 11 Oct 2026 14:17:04 +0200
+Subject: [PATCH] Fix string ABI version comparison in sipbuild
+
+sipbuild may receive abi_version components as strings. Comparing the
+major component with integer 14 then raises TypeError and aborts the
+PyQt6 build. Convert the major component to int before the comparison.
+
+--- a/sipbuild/project.py
++++ b/sipbuild/project.py
+@@ -1007,3 +1007,11 @@
+-        # ABI v14 requires Python v3.15 as a minimum.
+-        if self.abi_version[0] >= 14 and version < (3, 15, 0):
++        # ABI v14 requires Python v3.15 as a minimum.  Some configurations
++        # leave the ABI version components as strings, so normalise the major
++        # version before comparing it with an integer.
++        abi_version = self.abi_version
++        if isinstance(abi_version, str):
++            abi_major = int(abi_version.split('.', 1)[0])
++        else:
++            abi_major = int(abi_version[0])
++
++        if abi_major >= 14 and version < (3, 15, 0):
+             version = (3, 15, 0)
