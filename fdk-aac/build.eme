@@ -1,16 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Fraunhofer FDK AAC library, which is purported to be a high quality Advanced Audio Coding implementation"
 homepage="https://sourceforge.net/projects/opencore-amr/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fdk-aac
-version=2.0.3
+version=3.0.0
 release=1
-source="https://downloads.sourceforge.net/opencore-amr/$name-$version.tar.gz"
+source="https://downloads.sourceforge.net/opencore-amr/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	autoreconf -fi
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fi
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }
