@@ -5,11 +5,11 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy-2.5.3.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.3.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.3.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.3.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.3.dist-info/entry_points.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy-2.5.4.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.4.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.4.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.4.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy-2.5.4.dist-info/entry_points.txt
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/__config__.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/__config__.pyi
@@ -138,6 +138,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/_core/include/num
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/npy_os.h
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/numpyconfig.h
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/random/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/random/LICENSE.txt
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/random/bitgen.h
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/random/distributions.h
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/include/numpy/random/libdivide.h
@@ -241,6 +242,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/astype_copy.pkl
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/generate_umath_validation_data.cpp
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/recarray_from_file.fits
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/umath-validation-set-README.txt
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/umath-validation-set-arccos.csv
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/umath-validation-set-arccosh.csv
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/_core/tests/data/umath-validation-set-arcsin.csv
@@ -966,6 +968,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/linalg/tests/__py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/ma/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/ma/API_CHANGES.txt
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/ma/LICENSE
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/ma/README.rst
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/ma/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/numpy/ma/__init__.pyi
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/numpy/ma/__pycache__/
