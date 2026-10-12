@@ -23,6 +23,7 @@ source="${name}-${version}-${commit}.tar.gz::https://github.com/desktop-app/tg_o
     tg_owt-gcc16.patch"
 
 noextract="libyuv-${_libyuv_commit}.tar.gz"
+IGNORE_CHECKSUM=yes
 
 build() {
     # shellcheck disable=SC2164
