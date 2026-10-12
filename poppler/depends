@@ -2,3 +2,4 @@ cmake
 freetype2
 poppler-data
 openjpeg2
+brotli
