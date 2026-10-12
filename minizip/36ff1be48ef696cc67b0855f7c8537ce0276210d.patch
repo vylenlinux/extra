@@ -1,13 +1,3 @@
-From 36ff1be48ef696cc67b0855f7c8537ce0276210d Mon Sep 17 00:00:00 2001
-From: Rui Chen <rui@chenrui.dev>
-Date: Tue, 17 Feb 2026 10:48:39 -0500
-Subject: [PATCH] contrib/minizip: install ints.h
-
-Signed-off-by: Rui Chen <rui@chenrui.dev>
----
- contrib/minizip/Makefile.am | 1 +
- 1 file changed, 1 insertion(+)
-
 diff --git a/contrib/minizip/Makefile.am b/contrib/minizip/Makefile.am
 index d343011ebc..b7dea4f7e7 100644
 --- a/contrib/minizip/Makefile.am
