@@ -6,7 +6,7 @@ homepage="https://github.com/AyatanaIndicators/libayatana-appindicator"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libayatana-appindicator
-version=0.6.0
+version=0.6.1
 release=1
 source="https://github.com/AyatanaIndicators/${name}/archive/${version}/${name}-${version}.tar.gz"
 
@@ -17,7 +17,6 @@ build() {
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DBUILD_SHARED_LIBS=True \
         -DENABLE_TESTS=OFF \
         -DENABLE_BINDINGS_MONO=OFF \
