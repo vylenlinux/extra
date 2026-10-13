@@ -6,7 +6,7 @@ homepage="https://github.com/pypa/installer"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-installer
-version=1.0.1
+version=1.1.0
 release=1
 
 source="${name}-${version}.whl::https://files.pythonhosted.org/packages/py3/i/installer/installer-${version}-py3-none-any.whl
@@ -15,11 +15,11 @@ source="${name}-${version}.whl::https://files.pythonhosted.org/packages/py3/i/in
 noextract="${name}-${version}.whl"
 
 build() {
-    pyver=$(python3 -c 'import site; print(site.getsitepackages()[0])')
-    mkdir -p "${PKG}/${pyver}"
+    python_site_packages=$(python3 -c 'import site; print(site.getsitepackages()[0]);')
+    mkdir -p "${PKG}/${python_site_packages}"
 
-    bsdtar -xf "${SRC}/${name}-${version}.whl"  -C "${PKG}/${pyver}"
-    patch -Np1 -d "${PKG}/${pyver}" -i "${SRC}/default-bytecode-level.patch"
+    bsdtar -xf "${SRC}/${name}-${version}.whl"  -C "${PKG}/${python_site_packages}"
+    patch -d "${PKG}/${python_site_packages}" -Np1 -i "${SRC}/default-bytecode-level.patch"
 
-    python3 -m compileall "${PKG}/${pyver}"
+    python3 -m compileall "${PKG}/${python_site_packages}"
 }
