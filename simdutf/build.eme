@@ -6,7 +6,7 @@ homepage="https://simdutf.github.io/simdutf/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=simdutf
-version=9.2.1
+version=9.3.0
 release=1
 source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -16,7 +16,8 @@ build() {
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_BUILD_TYPE=Release \
-        -DSIMDUTF_CXX_STANDARD=20
+        -DSIMDUTF_CXX_STANDARD=20 \
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

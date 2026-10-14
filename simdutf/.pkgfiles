@@ -56,6 +56,7 @@ drwxr-xr-x root/root    usr/include/simdutf/scalar/utf8_to_latin1/
 -rw-r--r-- root/root    usr/include/simdutf/scalar/utf8_to_latin1/valid_utf8_to_latin1.h
 drwxr-xr-x root/root    usr/include/simdutf/scalar/utf8_to_utf16/
 -rw-r--r-- root/root    usr/include/simdutf/scalar/utf8_to_utf16/utf8_to_utf16.h
+-rw-r--r-- root/root    usr/include/simdutf/scalar/utf8_to_utf16/utf8_to_utf16_with_replacement.h
 -rw-r--r-- root/root    usr/include/simdutf/scalar/utf8_to_utf16/valid_utf8_to_utf16.h
 drwxr-xr-x root/root    usr/include/simdutf/scalar/utf8_to_utf32/
 -rw-r--r-- root/root    usr/include/simdutf/scalar/utf8_to_utf32/utf8_to_utf32.h
@@ -69,9 +70,9 @@ drwxr-xr-x root/root    usr/lib/cmake/simdutf/
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutf-config.cmake
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutfTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/simdutf/simdutfTargets.cmake
-lrwxrwxrwx root/root    usr/lib/libsimdutf.so -> libsimdutf.so.36
-lrwxrwxrwx root/root    usr/lib/libsimdutf.so.36 -> libsimdutf.so.36.0.0
--rwxr-xr-x root/root    usr/lib/libsimdutf.so.36.0.0
+lrwxrwxrwx root/root    usr/lib/libsimdutf.so -> libsimdutf.so.37
+lrwxrwxrwx root/root    usr/lib/libsimdutf.so.37 -> libsimdutf.so.37.0.0
+-rwxr-xr-x root/root    usr/lib/libsimdutf.so.37.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/simdutf.pc
 drwxr-xr-x root/root    usr/share/
