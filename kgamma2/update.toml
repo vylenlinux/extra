@@ -1,0 +1,6 @@
+name = "kgamma2"
+provider = "gitlab" # temporary
+
+[source]
+instance = "https://invent.kde.org"
+project = "davidedmundson/%(name)"
