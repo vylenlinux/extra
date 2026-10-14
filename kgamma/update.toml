@@ -1,5 +1,0 @@
-name = "kgamma"
-provider = "kde"
-
-[kde]
-product = "plasma"
