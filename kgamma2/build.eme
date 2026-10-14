@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Adjust your monitor gamma settings in a Wayland session"
+homepage="https://invent.kde.org/davidedmundson/kgamma2"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=kgamma2
+version=20260807
+release=1
+
+commit=beaa5f2885a8ffde9546012b7be7cdb6a5dffa58
+source="https://invent.kde.org/davidedmundson/${name}/-/archive/${commit}/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${commit}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
