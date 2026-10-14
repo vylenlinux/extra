@@ -1,5 +1,6 @@
 name = "libzip"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libzip"
+[ftp]
+url = "https://libzip.org/download/"
+filename = "%(name)-{version}.tar.xz"

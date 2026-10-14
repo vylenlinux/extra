@@ -6,7 +6,7 @@ homepage="https://libzip.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libzip
-version=1.12
+version=1.12.1
 release=1
 source="https://libzip.org/download/${name}-${version}.tar.xz"
 
