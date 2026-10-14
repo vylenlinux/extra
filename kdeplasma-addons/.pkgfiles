@@ -30,11 +30,9 @@ drwxr-xr-x root/root    usr/lib/cmake/PlasmaWeather/
 -rw-r--r-- root/root    usr/lib/cmake/PlasmaWeather/PlasmaWeatherTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/PlasmaWeather/PlasmaWeatherTargets.cmake
 drwxr-xr-x root/root    usr/lib/kf6/
+-rwxr-xr-x root/root    usr/lib/kf6/kameleon-qmk-helper
 drwxr-xr-x root/root    usr/lib/kf6/kauth/
 -rwxr-xr-x root/root    usr/lib/kf6/kauth/kameleonhelper
-drwxr-xr-x root/root    usr/lib/libexec/
-drwxr-xr-x root/root    usr/lib/libexec/kf6/
--rwxr-xr-x root/root    usr/lib/libexec/kf6/kameleon-qmk-helper
 lrwxrwxrwx root/root    usr/lib/libplasmapotdprovidercore.so -> libplasmapotdprovidercore.so.2
 lrwxrwxrwx root/root    usr/lib/libplasmapotdprovidercore.so.2 -> libplasmapotdprovidercore.so.2.0.0
 -rwxr-xr-x root/root    usr/lib/libplasmapotdprovidercore.so.2.0.0
