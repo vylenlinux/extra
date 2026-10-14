@@ -1,0 +1,5 @@
+name = "union"
+provider = "kde"
+
+[kde]
+product = "plasma"
