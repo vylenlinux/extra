@@ -1,0 +1,20 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cxx-rust-cssparser-parse
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/cxx-rust-cssparser/
+-rw-r--r-- root/root    usr/include/cxx-rust-cssparser/Color.h
+-rw-r--r-- root/root    usr/include/cxx-rust-cssparser/CssParser.h
+-rw-r--r-- root/root    usr/include/cxx-rust-cssparser/Selector.h
+-rw-r--r-- root/root    usr/include/cxx-rust-cssparser/Value.h
+-rw-r--r-- root/root    usr/include/cxx-rust-cssparser/cssparser_export.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/cxx-rust-cssparser/
+-rw-r--r-- root/root    usr/lib/cmake/cxx-rust-cssparser/cxx-rust-cssparserConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cxx-rust-cssparser/cxx-rust-cssparserConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cxx-rust-cssparser/cxx-rust-cssparserTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/cxx-rust-cssparser/cxx-rust-cssparserTargets.cmake
+lrwxrwxrwx root/root    usr/lib/libcxx-rust-cssparser.so -> libcxx-rust-cssparser.so.1
+lrwxrwxrwx root/root    usr/lib/libcxx-rust-cssparser.so.1 -> libcxx-rust-cssparser.so.1.1.0
+-rwxr-xr-x root/root    usr/lib/libcxx-rust-cssparser.so.1.1.0
