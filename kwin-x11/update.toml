@@ -1,5 +1,0 @@
-name = "kwin-x11"
-provider = "kde"
-
-[kde]
-product = "plasma"
