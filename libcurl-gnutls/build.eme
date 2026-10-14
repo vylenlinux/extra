@@ -6,7 +6,7 @@ homepage="https://curl.se/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcurl-gnutls
-version=8.22.0
+version=8.23.0
 release=1
 source="https://curl.haxx.se/download/curl-${version}.tar.xz"
 
@@ -34,7 +34,9 @@ build() {
     make -C lib DESTDIR="${PKG}" install
 
     mv "${PKG}/usr/lib/libcurl.so.${lib_version}" "${PKG}/usr/lib/${name}.so.${lib_version}"
-    rm "${PKG}/usr/lib"/libcurl.a* "${PKG}/usr/lib"/libcurl.so*
+
+    rm "${PKG}/usr/lib"/libcurl.a* \
+        "${PKG}/usr/lib"/libcurl.so*
 
     for versions in 3 4 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
         ln -s "${name}.so.${lib_version}" "${PKG}/usr/lib/${name}.so.${versions}"
