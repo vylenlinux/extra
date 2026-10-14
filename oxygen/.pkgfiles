@@ -3,10 +3,10 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/oxygen-demo6
 -rwxr-xr-x root/root    usr/bin/oxygen-settings6
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/liboxygenstyle6.so.6 -> liboxygenstyle6.so.6.7.5
--rwxr-xr-x root/root    usr/lib/liboxygenstyle6.so.6.7.5
-lrwxrwxrwx root/root    usr/lib/liboxygenstyleconfig6.so.6 -> liboxygenstyleconfig6.so.6.7.5
--rwxr-xr-x root/root    usr/lib/liboxygenstyleconfig6.so.6.7.5
+lrwxrwxrwx root/root    usr/lib/liboxygenstyle6.so.6 -> liboxygenstyle6.so.6.8.0
+-rwxr-xr-x root/root    usr/lib/liboxygenstyle6.so.6.8.0
+lrwxrwxrwx root/root    usr/lib/liboxygenstyleconfig6.so.6 -> liboxygenstyleconfig6.so.6.8.0
+-rwxr-xr-x root/root    usr/lib/liboxygenstyleconfig6.so.6.8.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kstyle_config/
@@ -106,6 +106,7 @@ lrwxrwxrwx root/root    usr/share/icons/KDE_Classic/cursors/whats_this -> help
 -rw-r--r-- root/root    usr/share/icons/KDE_Classic/index.theme
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors/
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/.directory
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/00000000000000020006000e7e9ffc3f -> half-busy
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/00008160000006810000408080010102 -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
@@ -152,11 +153,7 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/left_ptr_watch -> h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/link
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/move -> closedhand
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/n-resize -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/ne-resize -> size_bdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/nesw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/not-allowed -> forbidden
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/nw-resize -> size_fdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/nwse-resize -> size_fdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/openhand
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/pencil
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/pirate
@@ -169,7 +166,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/row-resize -> split
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/s-resize -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/sb_h_double_arrow -> size_hor
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/sb_v_double_arrow -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/se-resize -> size_fdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/size_bdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/size_fdiag
@@ -177,7 +173,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/size_ver
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/split_h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/split_v
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/sw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/text -> xterm
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors/up_arrow
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Black/cursors/v_double_arrow -> size_ver
@@ -241,8 +236,6 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors_scalable/forbidden/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/forbidden/forbidden.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/forbidden/metadata.json
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/
--rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy1.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy10.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy11.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy12.svg
@@ -251,11 +244,55 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy17.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy19.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/half-busy/half-busy9.svg
@@ -334,11 +371,56 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy17.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy19.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/cursors_scalable/wait/busy9.svg
@@ -351,6 +433,7 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Black/cursors_scalable/xterm/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Black/index.theme
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors/
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/.directory
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/00000000000000020006000e7e9ffc3f -> half-busy
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/00008160000006810000408080010102 -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
@@ -397,11 +480,7 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/left_ptr_watch -> ha
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/link
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/move -> closedhand
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/n-resize -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/ne-resize -> size_bdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/nesw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/not-allowed -> forbidden
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/nw-resize -> size_fdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/nwse-resize -> size_fdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/openhand
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/pencil
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/pirate
@@ -414,7 +493,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/row-resize -> split_
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/s-resize -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/sb_h_double_arrow -> size_hor
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/sb_v_double_arrow -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/se-resize -> size_fdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/size_bdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/size_fdiag
@@ -422,7 +500,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/size_ver
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/split_h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/split_v
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/sw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/text -> xterm
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors/up_arrow
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Blue/cursors/v_double_arrow -> size_ver
@@ -486,8 +563,6 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/forbidden/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/forbidden/forbidden.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/forbidden/metadata.json
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/
--rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy1.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy10.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy11.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy12.svg
@@ -496,11 +571,55 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy17.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy19.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/half-busy/half-busy9.svg
@@ -579,11 +698,56 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy17.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy19.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/wait/busy9.svg
@@ -596,6 +760,7 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Blue/cursors_scalable/xterm/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Blue/index.theme
 drwxr-xr-x root/root    usr/share/icons/Oxygen_White/
 drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors/
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/.directory
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/00000000000000020006000e7e9ffc3f -> half-busy
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/00008160000006810000408080010102 -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
@@ -642,11 +807,7 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/left_ptr_watch -> h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/link
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/move -> closedhand
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/n-resize -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/ne-resize -> size_bdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/nesw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/not-allowed -> forbidden
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/nw-resize -> size_fdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/nwse-resize -> size_fdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/openhand
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/pencil
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/pirate
@@ -659,7 +820,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/row-resize -> split
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/s-resize -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/sb_h_double_arrow -> size_hor
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/sb_v_double_arrow -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/se-resize -> size_fdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/size_bdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/size_fdiag
@@ -667,7 +827,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/size_ver
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/split_h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/split_v
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/sw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/text -> xterm
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors/up_arrow
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_White/cursors/v_double_arrow -> size_ver
@@ -731,8 +890,6 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors_scalable/forbidden/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/forbidden/forbidden.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/forbidden/metadata.json
 drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/
--rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy1.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy10.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy11.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy12.svg
@@ -741,11 +898,55 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy17.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy19.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/half-busy/half-busy9.svg
@@ -824,11 +1025,56 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy17.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy19.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/cursors_scalable/wait/busy9.svg
@@ -841,6 +1087,7 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_White/cursors_scalable/xterm/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_White/index.theme
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors/
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/.directory
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/00000000000000020006000e7e9ffc3f -> half-busy
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/00008160000006810000408080010102 -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
@@ -887,11 +1134,7 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/left_ptr_watch -> 
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/link
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/move -> closedhand
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/n-resize -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/ne-resize -> size_bdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/nesw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/not-allowed -> forbidden
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/nw-resize -> size_fdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/nwse-resize -> size_fdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/openhand
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/pencil
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/pirate
@@ -904,7 +1147,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/row-resize -> spli
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/s-resize -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/sb_h_double_arrow -> size_hor
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/sb_v_double_arrow -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/se-resize -> size_fdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/size_bdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/size_fdiag
@@ -912,7 +1154,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/size_ver
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/split_h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/split_v
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/sw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/text -> xterm
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors/up_arrow
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Yellow/cursors/v_double_arrow -> size_ver
@@ -976,8 +1217,6 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/forbidden
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/forbidden/forbidden.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/forbidden/metadata.json
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/
--rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy1.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy10.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy11.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy12.svg
@@ -986,11 +1225,55 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy17.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy19.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/half-busy/half-busy9.svg
@@ -1069,11 +1352,56 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy17.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy19.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/wait/busy9.svg
@@ -1086,6 +1414,7 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Yellow/cursors_scalable/xterm/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Yellow/index.theme
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/cursors/
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/.directory
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/00000000000000020006000e7e9ffc3f -> half-busy
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/00008160000006810000408080010102 -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/03b6e0fcb3499374a867c041f52298f0 -> circle
@@ -1132,11 +1461,7 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/left_ptr_watch -> ha
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/link
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/move -> closedhand
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/n-resize -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/ne-resize -> size_bdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/nesw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/not-allowed -> forbidden
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/nw-resize -> size_fdiag
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/nwse-resize -> size_fdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/openhand
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/pencil
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/pirate
@@ -1149,7 +1474,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/row-resize -> split_
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/s-resize -> size_ver
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/sb_h_double_arrow -> size_hor
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/sb_v_double_arrow -> size_ver
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/se-resize -> size_fdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/size_bdiag
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/size_fdiag
@@ -1157,7 +1481,6 @@ lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/size_all -> fleur
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/size_ver
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/split_h
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/split_v
-lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/sw-resize -> size_bdiag
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/text -> xterm
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors/up_arrow
 lrwxrwxrwx root/root    usr/share/icons/Oxygen_Zion/cursors/v_double_arrow -> size_ver
@@ -1221,8 +1544,6 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/forbidden/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/forbidden/forbidden.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/forbidden/metadata.json
 drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/
--rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy1.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy10.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy11.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy12.svg
@@ -1231,11 +1552,55 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy17.svg
--rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy19.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/half-busy/half-busy9.svg
@@ -1314,11 +1679,56 @@ drwxr-xr-x root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy15.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy16.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy17.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy18.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy19.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy2.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy20.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy21.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy22.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy23.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy24.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy25.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy26.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy27.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy28.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy29.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy3.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy30.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy31.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy32.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy33.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy34.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy35.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy36.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy37.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy38.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy39.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy4.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy40.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy41.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy42.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy43.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy44.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy45.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy46.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy47.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy48.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy49.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy5.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy50.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy51.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy52.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy53.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy54.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy55.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy56.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy57.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy58.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy59.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy6.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy60.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy61.svg
+-rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy62.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy7.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy8.svg
 -rw-r--r-- root/root    usr/share/icons/Oxygen_Zion/cursors_scalable/wait/busy9.svg
@@ -1778,6 +2188,7 @@ drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/ug/
 drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/liboxygenstyleconfig.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/oxygen_kdecoration.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/oxygen_style_config.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/oxygen_style_demo.mo
 drwxr-xr-x root/root    usr/share/locale/uk/

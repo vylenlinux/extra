@@ -6,16 +6,11 @@ homepage="https://kde.org/plasma-desktop/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kwin
-version=6.7.5
+version=6.8.0
 release=1
 source="https://download.kde.org/stable/plasma/${version}/${name}-${version}.tar.xz"
 
 build() {
-    # Fix doc build with libxml2 2.15
-    # shellcheck disable=SC2038
-    # shellcheck disable=SC2185
-    find -name index.docbook | xargs sed -e 's|url=" http|url="http|g' -i
-
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \

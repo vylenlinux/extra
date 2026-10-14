@@ -15,8 +15,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KNightTime/
 -rw-r--r-- root/root    usr/lib/cmake/KNightTime/KNightTimeTargets.cmake
 -rwxr-xr-x root/root    usr/lib/knighttimed
 lrwxrwxrwx root/root    usr/lib/libKNightTime.so -> libKNightTime.so.0
-lrwxrwxrwx root/root    usr/lib/libKNightTime.so.0 -> libKNightTime.so.6.7.5
--rwxr-xr-x root/root    usr/lib/libKNightTime.so.6.7.5
+lrwxrwxrwx root/root    usr/lib/libKNightTime.so.0 -> libKNightTime.so.6.8.0
+-rwxr-xr-x root/root    usr/lib/libKNightTime.so.6.8.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/org.kde.knighttimed.desktop

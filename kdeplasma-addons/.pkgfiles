@@ -39,11 +39,11 @@ lrwxrwxrwx root/root    usr/lib/libplasmapotdprovidercore.so -> libplasmapotdpro
 lrwxrwxrwx root/root    usr/lib/libplasmapotdprovidercore.so.2 -> libplasmapotdprovidercore.so.2.0.0
 -rwxr-xr-x root/root    usr/lib/libplasmapotdprovidercore.so.2.0.0
 lrwxrwxrwx root/root    usr/lib/libplasmaweatherdata.so -> libplasmaweatherdata.so.6
-lrwxrwxrwx root/root    usr/lib/libplasmaweatherdata.so.6 -> libplasmaweatherdata.so.6.7.5
--rwxr-xr-x root/root    usr/lib/libplasmaweatherdata.so.6.7.5
+lrwxrwxrwx root/root    usr/lib/libplasmaweatherdata.so.6 -> libplasmaweatherdata.so.6.8.0
+-rwxr-xr-x root/root    usr/lib/libplasmaweatherdata.so.6.8.0
 lrwxrwxrwx root/root    usr/lib/libplasmaweatherion.so -> libplasmaweatherion.so.6
-lrwxrwxrwx root/root    usr/lib/libplasmaweatherion.so.6 -> libplasmaweatherion.so.6.7.5
--rwxr-xr-x root/root    usr/lib/libplasmaweatherion.so.6.7.5
+lrwxrwxrwx root/root    usr/lib/libplasmaweatherion.so.6 -> libplasmaweatherion.so.6.8.0
+-rwxr-xr-x root/root    usr/lib/libplasmaweatherion.so.6.8.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
@@ -94,7 +94,6 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/weather_ions/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/weather_ions/dwd.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/weather_ions/envcan.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/weather_ions/noaa.so
--rwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/weather_ions/wettercom.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/plasmacalendarplugins/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/plasmacalendarplugins/alternatecalendar.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/plasmacalendarplugins/alternatecalendar/
@@ -105,7 +104,6 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/plasmacalendarplugins/astronomicalev
 drwxr-xr-x root/root    usr/lib/qt6/plugins/potd/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_apodprovider.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_bingprovider.so
--rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_epodprovider.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_flickrprovider.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_simonstalenhagprovider.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/potd/plasma_potd_wcpotdprovider.so
@@ -1308,6 +1306,7 @@ drwxr-xr-x root/root    usr/share/locale/ko/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 -rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/ko/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/ku/
 drwxr-xr-x root/root    usr/share/locale/ku/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ku/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
@@ -1885,7 +1884,9 @@ drwxr-xr-x root/root    usr/share/locale/sq/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sq/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 drwxr-xr-x root/root    usr/share/locale/sr/
 drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kwin_effect_cube.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_addons_engine_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_addons_profiles_utility.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
@@ -1894,6 +1895,7 @@ drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
@@ -1902,16 +1904,25 @@ drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma.webbrowser.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_katesessions.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kwin_effect_cube.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_addons_engine_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_addons_profiles_utility.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
@@ -1920,6 +1931,7 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
@@ -1928,16 +1940,25 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma.webbrowser.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_katesessions.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kwin_effect_cube.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_addons_engine_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_addons_profiles_utility.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
@@ -1946,6 +1967,7 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
@@ -1954,16 +1976,25 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma.webbrowser.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_katesessions.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/sr@latin/
 drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kwin_effect_cube.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_addons_engine_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_addons_profiles_utility.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
@@ -1972,6 +2003,7 @@ drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
@@ -1980,13 +2012,20 @@ drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma.webbrowser.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_katesessions.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/sv/
 drwxr-xr-x root/root    usr/share/locale/sv/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/kwin_effect_cube.mo
@@ -2049,6 +2088,7 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_katesessions.mo
@@ -2056,6 +2096,7 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/tg/
 drwxr-xr-x root/root    usr/share/locale/tg/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tg/LC_MESSAGES/plasma_addons_engine_dict.mo
@@ -2127,22 +2168,40 @@ drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/ug/
 drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/kwin_effect_cube.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_addons_engine_dict.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_addons_profiles_utility.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.addons.katesessions.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.binaryclock.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.calculator.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.colorpicker.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.comic.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.diskquota.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.fifteenpuzzle.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.fuzzyclock.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.keyboardindicator.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.konsoleprofiles.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.mediaframe.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.notes.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.private.grouping.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.quicklaunch.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.timer.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.userswitcher.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.weather.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma.webbrowser.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_applet_org.kde.plasma_applet_dict.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_calendar_alternatecalendar.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_calendar_astronomicalevents.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_CharacterRunner.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_colors.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_converterrunner.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_datetime.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_katesessions.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_konsoleprofiles.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_krunner_dictionary.mo
 -rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_runner_spellcheckrunner.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_wallpaper_org.kde.potd.mo
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/plasma_wallpaper_org.kde.tiled.mo
 drwxr-xr-x root/root    usr/share/locale/uk/
 drwxr-xr-x root/root    usr/share/locale/uk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/kwin_effect_cube.mo

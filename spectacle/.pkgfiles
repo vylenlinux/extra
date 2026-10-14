@@ -11,6 +11,8 @@ drwxr-xr-x root/root    usr/lib/kconf_update_bin/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rwxr-xr-x root/root    usr/share/applications/org.kde.spectacle.desktop
+drwxr-xr-x root/root    usr/share/config.kcfg/
+-rw-r--r-- root/root    usr/share/config.kcfg/spectacle.kcfg
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.kde.Spectacle.xml
@@ -188,6 +190,9 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/tr/
 drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/spectacle.mo
+drwxr-xr-x root/root    usr/share/locale/ug/
+drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/spectacle.mo
 drwxr-xr-x root/root    usr/share/locale/uk/
 drwxr-xr-x root/root    usr/share/locale/uk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/spectacle.mo
@@ -218,6 +223,9 @@ drwxr-xr-x root/root    usr/share/man/nl/man1/
 drwxr-xr-x root/root    usr/share/man/pt_BR/
 drwxr-xr-x root/root    usr/share/man/pt_BR/man1/
 -rw-r--r-- root/root    usr/share/man/pt_BR/man1/spectacle.1.gz
+drwxr-xr-x root/root    usr/share/man/ru/
+drwxr-xr-x root/root    usr/share/man/ru/man1/
+-rw-r--r-- root/root    usr/share/man/ru/man1/spectacle.1.gz
 drwxr-xr-x root/root    usr/share/man/sl/
 drwxr-xr-x root/root    usr/share/man/sl/man1/
 -rw-r--r-- root/root    usr/share/man/sl/man1/spectacle.1.gz
