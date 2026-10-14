@@ -1,5 +1,6 @@
 name = "newt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "newt-tui"
+[ftp]
+url = "https://ftp.kaist.ac.kr/macports/distfiles/libnewt/"
+filename = "%(name)-{version}.tar.gz"
