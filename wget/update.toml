@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://ftp.gnu.org/gnu/wget/"
-filename = "wget-{version}.tar.gz"
+filename = "wget-%(version).tar.gz"
