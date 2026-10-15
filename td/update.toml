@@ -1,6 +1,5 @@
 name = "td"
-provider = "github" # temporary
+provider = "git"
 
 [source]
-owner = "tdlib"
-repo = "%(name)"
+url = "https://github.com/tdlib/%(name)"
