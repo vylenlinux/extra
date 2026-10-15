@@ -1,0 +1,6 @@
+name = "wallet-engine"
+provider = "github"
+
+[source]
+owner = "i582"
+repo = "%(name)"

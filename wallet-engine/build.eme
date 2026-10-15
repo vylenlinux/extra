@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Rust library for Telegram's wallet"
+homepage="https://github.com/i582/wallet-engine"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=wallet-engine
+version=0.0.7
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/i582/${name}/archive/refs/tags/v${version}.tar.gz
+    https://github.com/desktop-app/patches/raw/refs/heads/master/wallet-engine.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/wallet-engine.patch"
+
+    just build
+    just bindings-cpp
+
+    install -Dm755 target/release/libwallet_engine.so -t "${PKG}/usr/lib/"
+
+    for f in wallet_engine.hpp wallet_engine.cpp wallet_engine_scaffolding.hpp; do
+        install -Dm644 "bindings/cpp-experimental/${f}" -t "${PKG}/usr/include/wallet_engine/"
+    done
+}

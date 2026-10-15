@@ -1,0 +1,8 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/wallet_engine/
+-rw-r--r-- root/root    usr/include/wallet_engine/wallet_engine.cpp
+-rw-r--r-- root/root    usr/include/wallet_engine/wallet_engine.hpp
+-rw-r--r-- root/root    usr/include/wallet_engine/wallet_engine_scaffolding.hpp
+drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/libwallet_engine.so
