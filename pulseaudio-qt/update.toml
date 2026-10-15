@@ -1,6 +1,5 @@
 name = "pulseaudio-qt"
-provider = "ftp"
+provider = "kde"
 
-[ftp]
-url = "https://download.kde.org/stable/pulseaudio-qt/"
-filename = "pulseaudio-qt-{version}.tar.xz"
+[kde]
+package = "%(name)"
