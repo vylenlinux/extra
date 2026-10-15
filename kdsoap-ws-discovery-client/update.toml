@@ -1,5 +1,5 @@
 name = "kdsoap-ws-discovery-client"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdsoap-ws-discovery-client"
+[kde]
+package = "%(name)"
