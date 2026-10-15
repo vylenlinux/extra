@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi
-version=8.2.4133.84
+version=8.2.4133.87
 release=1
 
 source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/vivaldi-stable-${version}-${release}.x86_64.rpm
