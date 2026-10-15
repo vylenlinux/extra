@@ -1,5 +1,5 @@
 name = "kdiagram"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kdiagram"
+[kde]
+package = "%(name)"
