@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://xorg.freedesktop.org/archive/individual/proto/"
-filename = "xorgproto-{version}.tar.xz"
+filename = "xorgproto-%(version).tar.xz"
