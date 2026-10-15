@@ -1,6 +1,5 @@
 name = "kirigami-addons"
-provider = "ftp"
+provider = "kde"
 
-[ftp]
-url = "https://download.kde.org/stable/kirigami-addons/"
-filename = "kirigami-addons-{version}.tar.xz"
+[kde]
+package = "%(name)"
