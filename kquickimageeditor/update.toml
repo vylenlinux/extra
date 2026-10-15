@@ -1,5 +1,5 @@
 name = "kquickimageeditor"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "kquickimageeditor"
+[kde]
+package = "%(name)"
