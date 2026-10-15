@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://libzip.org/download/"
-filename = "%(name)-{version}.tar.xz"
+filename = "%(name)-%(version).tar.xz"
