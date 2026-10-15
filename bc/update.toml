@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://ftp.gnu.org/gnu/bc/"
-filename = "bc-{version}.tar.gz"
+filename = "bc-%(version).tar.gz"
