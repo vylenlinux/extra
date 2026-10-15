@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "http://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/"
-filename = "xf86-video-intel-{version}.tar.xz"
+filename = "xf86-video-intel-%(version).tar.xz"
