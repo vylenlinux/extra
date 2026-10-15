@@ -1,0 +1,6 @@
+name = "td"
+provider = "github" # temporary
+
+[source]
+owner = "tdlib"
+repo = "%(name)"
