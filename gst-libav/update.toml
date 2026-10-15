@@ -4,4 +4,4 @@ dedup_key = "gstreamer"
 
 [ftp]
 url = "https://gstreamer.freedesktop.org/src/%(name)"
-filename = "%(name)-{version}.tar.xz"
+filename = "%(name)-%(version).tar.xz"
