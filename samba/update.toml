@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://www.samba.org/ftp/samba/stable/"
-filename = "samba-{version}.tar.gz"
+filename = "samba-%(version).tar.gz"
