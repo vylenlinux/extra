@@ -1,5 +1,6 @@
 name = "sysklogd"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sysklogd"
+owner = "troglobit"
+repo = "%(name)"

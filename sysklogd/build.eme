@@ -6,7 +6,7 @@ homepage="https://github.com/troglobit/sysklogd"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sysklogd
-version=2.7.2
+version=2.8.0
 release=1
 backup="etc/syslog.conf"
 source="https://github.com/troglobit/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
