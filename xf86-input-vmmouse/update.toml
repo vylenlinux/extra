@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://www.x.org/pub/individual/driver/"
-filename = "xf86-input-vmmouse-{version}.tar.xz"
+filename = "xf86-input-vmmouse-%(version).tar.xz"
