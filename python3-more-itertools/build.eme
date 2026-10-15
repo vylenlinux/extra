@@ -6,16 +6,13 @@ homepage="https://github.com/more-itertools/more-itertools"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-more-itertools
-version=11.2.0
+version=11.2.1
 release=1
-
-source="${name}-${version}.tar.gz::https://github.com/more-itertools/more-itertools/archive/refs/tags/v${version}.tar.gz
-    remove-version-constraint.patch"
+source="${name}-${version}.tar.gz::https://github.com/more-itertools/more-itertools/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "more-itertools-${version}"
-    patch -Np1 -i "${SRC}/remove-version-constraint.patch"
 
     gpep517 build-wheel \
         --wheel-dir .dist \
