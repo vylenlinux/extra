@@ -4,4 +4,4 @@ dedup_key = "grub"
 
 [ftp]
 url = "https://ftp.gnu.org/gnu/grub/"
-filename = "grub-{version}.tar.xz"
+filename = "grub-%(version).tar.xz"
