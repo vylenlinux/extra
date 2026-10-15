@@ -1,5 +1,5 @@
 name = "plasma-wayland-protocols"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "plasma-wayland-protocols"
+[kde]
+package = "%(name)"
