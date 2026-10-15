@@ -8,16 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=polkit
 version=127
 release=4
-
-source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz
-    22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
+source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    patch -Np1 -d "${name}-${version}" -i "${SRC}/22193ca2cc0f4e023d331cc1391f55143ef9cade.patch"
-
     vylen-meson "${name}-${version}" build \
         -Dsession_tracking=elogind \
-        -Dos_type=suse
+        -Dpam_prefix=/etc/pam.d \
+        -Dos_type=lfs
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
@@ -30,7 +27,4 @@ build() {
 
     chmod 4775 "${PKG}/usr/bin/pkexec" \
         "${PKG}/usr/lib/polkit-1/polkit-agent-helper-1"
-
-    do_pam "${name}-1"
-    rm -rf "${PKG}/usr/lib/pam.d"
 }
