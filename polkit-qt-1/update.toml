@@ -1,5 +1,5 @@
 name = "polkit-qt-1"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "polkit-qt-1"
+[kde]
+package = "%(name)"
