@@ -4,4 +4,4 @@ dedup_key = "curl"
 
 [ftp]
 url = "https://curl.haxx.se/download/"
-filename = "curl-{version}.tar.xz"
+filename = "curl-%(version).tar.xz"
