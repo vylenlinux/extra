@@ -64,6 +64,13 @@ drwxr-xr-x root/root    usr/lib/gtk-3.0/
 drwxr-xr-x root/root    usr/lib/gtk-3.0/3.0.0/
 drwxr-xr-x root/root    usr/lib/gtk-3.0/3.0.0/immodules/
 -rwxr-xr-x root/root    usr/lib/gtk-3.0/3.0.0/immodules/im-ibus.so
+drwxr-xr-x root/root    usr/lib/ibus/
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-dconf
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-engine-simple
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-portal
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-ui-gtk3
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-wayland
+-rwxr-xr-x root/root    usr/lib/ibus/ibus-x11
 lrwxrwxrwx root/root    usr/lib/libibus-1.0.so -> libibus-1.0.so.5.0.535
 lrwxrwxrwx root/root    usr/lib/libibus-1.0.so.5 -> libibus-1.0.so.5.0.535
 -rwxr-xr-x root/root    usr/lib/libibus-1.0.so.5.0.535
@@ -78,13 +85,6 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache_
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/IBus.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/IBus.cpython-315.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/IBus.cpython-315.pyc
-drwxr-xr-x root/root    usr/libexec/
--rwxr-xr-x root/root    usr/libexec/ibus-dconf
--rwxr-xr-x root/root    usr/libexec/ibus-engine-simple
--rwxr-xr-x root/root    usr/libexec/ibus-portal
--rwxr-xr-x root/root    usr/libexec/ibus-ui-gtk3
--rwxr-xr-x root/root    usr/libexec/ibus-wayland
--rwxr-xr-x root/root    usr/libexec/ibus-x11
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/GConf/
 drwxr-xr-x root/root    usr/share/GConf/gsettings/
