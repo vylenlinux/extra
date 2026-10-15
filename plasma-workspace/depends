@@ -10,12 +10,13 @@ kunitconversion
 kuserfeedback
 kwallet
 kwin
+libksysguard
 libqalculate
 networkmanager-qt
 phonon
+plasma5support
 plasma-activities-stats
 plasma-integration
-plasma5support
 prison
 qcoro
 qt6-location
