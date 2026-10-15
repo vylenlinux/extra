@@ -1,5 +1,8 @@
 name = "tg_owt"
-provider = "repology"
+provider = "git" # temporary
 
 [source]
-package = "tg-owt"
+url = "https://github.com/desktop-app/%(name).git"
+
+[git]
+field = "version"
