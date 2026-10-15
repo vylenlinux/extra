@@ -1,5 +1,5 @@
 name = "qca"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "qca"
+[kde]
+package = "%(name)"
