@@ -1,5 +1,5 @@
 name = "tg_owt"
-provider = "git" # temporary
+provider = "git"
 
 [source]
 url = "https://github.com/desktop-app/%(name).git"
