@@ -8,27 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=telegram-desktop
 version=7.3.1
 release=1
-
-tdlib_commit=c15d3f5a5de6e3ba5839822c451152e5e18bb700
-
-source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz
-    https://github.com/tdlib/td/archive/${tdlib_commit}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz"
 
 build() {
-    cmake -S "td-${tdlib_commit}" -B "td-${tdlib_commit}/build" \
-        -DCMAKE_BUILD_TYPE=None \
-        -DCMAKE_INSTALL_PREFIX="${SRC}/td-${tdlib_commit}/install" \
-        -DTD_E2E_ONLY=ON \
-        -Wno-author
-
-    cmake --build "td-${tdlib_commit}/build"
-    cmake --install "td-${tdlib_commit}/build"
-
     cmake -S "tdesktop-${version}-full" -B build -G Ninja \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
-        -Dtde2e_DIR="${SRC}/td-${tdlib_commit}/install/lib/cmake/tde2e" \
         -DTDESKTOP_API_ID=611335 \
         -DTDESKTOP_API_HASH=d524b414d21f4d37f08684c1df41ac9c \
         -Wno-author
