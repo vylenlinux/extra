@@ -1,7 +1,7 @@
 alsa-lib
-sdl2-compat
 libslirp
 orc
+sdl2-compat
 spice
 usbredir
 virglrenderer

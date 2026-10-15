@@ -1,8 +1,8 @@
-elogind
 desktop-file-utils
+elogind
+iceauth
 libxfce4windowing
 polkit-gnome
 xfdesktop
-iceauth
 xinit
 xrdb

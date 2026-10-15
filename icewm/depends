@@ -1,9 +1,9 @@
-libxrandr
-libxft
-libxinerama
-mkfontscale
-libxcomposite
-libxdamage
-libxpm
 fribidi
 imlib2
+libxcomposite
+libxdamage
+libxft
+libxinerama
+libxpm
+libxrandr
+mkfontscale

@@ -1,7 +1,7 @@
 cmake
-libxinerama
 libx11
 libxext
-libxrandr
-libxft
 libxfixes
+libxft
+libxinerama
+libxrandr

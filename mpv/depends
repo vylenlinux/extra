@@ -1,7 +1,7 @@
 ffmpeg
-luajit
 libcdio-paranoia
+libplacebo
 libxpresent
 libxscrnsaver
-libplacebo
+luajit
 mesa

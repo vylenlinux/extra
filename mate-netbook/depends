@@ -1,7 +1,7 @@
-mate-panel
-libwnck3
-gtk3
 glib
+gtk3
+libfakekey
+libwnck3
 libx11
 libxtst
-libfakekey
+mate-panel

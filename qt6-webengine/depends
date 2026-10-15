@@ -1,7 +1,10 @@
+brotli
 ffmpeg
 libevent
 libva
 libwebp
+libxcomposite
+libxcursor
 minizip
 nodejs
 nss
@@ -10,7 +13,4 @@ python3-html5lib
 python3-six
 qt6-tools
 qt6-webchannel
-libxcomposite
-libxcursor
-brotli
 snappy

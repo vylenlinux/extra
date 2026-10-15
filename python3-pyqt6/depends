@@ -1,8 +1,12 @@
 python3-dbus
 python3-pip
+python3-ply
+python3-pyopengl
+python3-pyqt-builder
 python3-pyqt6-sip
-qt6-declarative
+python3-toml
 qt6-connectivity
+qt6-declarative
 qt6-multimedia
 qt6-positioning
 qt6-quick3d
@@ -14,7 +18,3 @@ qt6-svg
 qt6-tools
 qt6-webchannel
 qt6-websockets
-python3-pyopengl
-python3-toml
-python3-pyqt-builder
-python3-ply

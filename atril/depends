@@ -1,10 +1,10 @@
-gtk3
-libsecret
 caja
-poppler-glib
-libtiff
-libsm
-libice
-libx11
 gtk-doc
+gtk3
+libice
+libsecret
+libsm
+libtiff
+libx11
+poppler-glib
 yelp-tools

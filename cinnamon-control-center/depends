@@ -1,6 +1,6 @@
-cinnamon-settings-daemon
 cinnamon-menus
+cinnamon-settings-daemon
 colord
 libgnomekbd
-networkmanager
 libnma
+networkmanager

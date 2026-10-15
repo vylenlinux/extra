@@ -1,11 +1,11 @@
 dbus
 gdk-pixbuf
 gst-plugins-base
+harfbuzz
 libepoxy
 libmng
 libxkbcommon
-harfbuzz
-xcb-util-wm
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
+xcb-util-wm

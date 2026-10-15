@@ -1,10 +1,10 @@
 glib
+gnupg
+gobject-introspection
+gtk3
 libgcrypt
 libsecret
 libxslt
-p11-kit
-gtk3
-gobject-introspection
-vala
-gnupg
 openssh
+p11-kit
+vala

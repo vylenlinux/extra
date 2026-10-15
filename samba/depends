@@ -1,10 +1,10 @@
+dbus
+gnutls
 gpgme
 jansson
 libtirpc
-rpcsvc-proto
-perl-parse-yapp
-gnutls
-tdb
-talloc
-dbus
 perl-json
+perl-parse-yapp
+rpcsvc-proto
+talloc
+tdb

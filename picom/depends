@@ -1,9 +1,9 @@
-libconfig
 dbus
+libconfig
 libev
-libxdg-basedir
-uthash
-xcb-util-renderutil
-xcb-util-image
-pixman
 libglvnd
+libxdg-basedir
+pixman
+uthash
+xcb-util-image
+xcb-util-renderutil

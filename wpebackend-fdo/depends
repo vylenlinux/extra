@@ -1,4 +1,4 @@
-libwpe
 glib
 libepoxy
+libwpe
 wayland-protocols

@@ -1,7 +1,8 @@
+kwin
+labwc
 lxqt-about
 lxqt-admin
 lxqt-config
-labwc
 lxqt-notificationd
 lxqt-openssh-askpass
 lxqt-panel
@@ -9,10 +10,9 @@ lxqt-policykit
 lxqt-powermanagement
 lxqt-qtplugin
 lxqt-runner
+lxqt-session
 lxqt-sudo
-kwin
+lxqt-wayland-session
 pcmanfm-qt
 qterminal
-lxqt-session
-lxqt-wayland-session
 xdg-desktop-portal-lxqt

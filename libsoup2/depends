@@ -1,6 +1,6 @@
-libpsl
-libxml2
 glib-networking
 gobject-introspection
-vala
 krb5
+libpsl
+libxml2
+vala

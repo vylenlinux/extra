@@ -1,6 +1,6 @@
+device-mapper
+json-c
 libgcrypt
 nettle
 nss
 popt
-json-c
-device-mapper

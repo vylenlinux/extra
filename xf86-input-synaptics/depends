@@ -1,5 +1,5 @@
+libevdev
 libx11
 libxi
 libxtst
-libevdev
 xorg-server

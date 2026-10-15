@@ -1,5 +1,5 @@
-libxfce4ui
-xfconf
-libinput
-seatd
 libdisplay-info
+libinput
+libxfce4ui
+seatd
+xfconf

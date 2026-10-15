@@ -1,7 +1,7 @@
-iso-codes
-libsecret
-libnotify
-networkmanager
 gobject-introspection
-libnma
+iso-codes
 libappindicator
+libnma
+libnotify
+libsecret
+networkmanager

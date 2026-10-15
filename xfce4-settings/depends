@@ -1,8 +1,8 @@
 exo
 garcon
+gnome-icon-theme
 libcanberra
+libinput
 libnotify
 libxklavier
-gnome-icon-theme
-libinput
 wayland-protocols

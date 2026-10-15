@@ -1,5 +1,5 @@
 glib
 gnutls
-libidn
-krb5
 intltool
+krb5
+libidn

@@ -1,6 +1,6 @@
+fontconfig
+giflib
 imlib2
+libexif
 libx11
 libxft
-fontconfig
-libexif
-giflib

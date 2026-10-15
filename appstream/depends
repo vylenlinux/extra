@@ -1,8 +1,8 @@
 bash-completion
 itstool
 libfyaml
-libvips
 libsoup2
+libvips
 libxmlb
 lmdb
 stemmer

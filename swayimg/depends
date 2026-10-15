@@ -1,7 +1,7 @@
-wayland-protocols
-libxkbcommon
+hicolor-icon-theme
+json-c
 libjpeg-turbo
 libpng
-json-c
-hicolor-icon-theme
+libxkbcommon
 luajit
+wayland-protocols

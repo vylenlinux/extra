@@ -1,5 +1,7 @@
+accountsservice
 baloo
 kactivitymanagerd
+kde-cli-tools
 kholidays
 knotifyconfig
 kquickcharts
@@ -16,7 +18,5 @@ plasma-integration
 plasma5support
 prison
 qcoro
-kde-cli-tools
 qt6-location
-accountsservice
 union

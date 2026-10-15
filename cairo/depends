@@ -1,10 +1,10 @@
-pixman
 fontconfig
 freetype2
-libpng
-libxcb
-libxrender
-libx11
-libxext
-lzo
 glib
+libpng
+libx11
+libxcb
+libxext
+libxrender
+lzo
+pixman

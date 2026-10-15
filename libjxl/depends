@@ -1,9 +1,9 @@
-cmake
 asciidoc
 brotli
+cmake
 gdk-pixbuf
-giflib
 gflags
+giflib
 highway
 lcms2
 libjpeg-turbo

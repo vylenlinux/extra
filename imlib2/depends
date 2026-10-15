@@ -1,7 +1,7 @@
-libxext
-libx11
-libxcb
-libtiff
+freetype2
 libjpeg-turbo
 libpng
-freetype2
+libtiff
+libx11
+libxcb
+libxext

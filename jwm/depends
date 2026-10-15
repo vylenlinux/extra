@@ -1,9 +1,9 @@
-libxext
-libxmu
-libxinerama
-libxpm
+cairo
 libjpeg-turbo
 libpng
 librsvg
-cairo
+libxext
 libxft
+libxinerama
+libxmu
+libxpm

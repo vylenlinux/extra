@@ -1,7 +1,7 @@
 libnl
-rpcsvc-proto
+parted
 python3-docutils
 qemu
-parted
+rpcsvc-proto
 swtpm
 xf86-video-qxl

@@ -1,6 +1,6 @@
 cairo
-libxml2
-libsm
 libice
-libx11
 libpciaccess
+libsm
+libx11
+libxml2

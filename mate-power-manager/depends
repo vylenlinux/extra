@@ -1,11 +1,11 @@
 dbus-glib
-mate-panel
 gtk3
-libxrandr
-libx11
-libxext
-upower
-libgnome-keyring
 libcanberra
+libgnome-keyring
 libnotify
 libsecret
+libx11
+libxext
+libxrandr
+mate-panel
+upower

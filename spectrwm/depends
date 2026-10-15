@@ -1,10 +1,10 @@
+freetype2
 libx11
-xcb-util
-xcb-util-wm
-xcb-util-keysyms
 libxcb
 libxcursor
 libxft
 libxrandr
 libxt
-freetype2
+xcb-util
+xcb-util-keysyms
+xcb-util-wm

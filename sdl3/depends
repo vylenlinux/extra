@@ -1,12 +1,12 @@
+cmake
 libx11
+libxcursor
 libxext
-libxrandr
 libxfixes
 libxi
 libxinerama
-wayland-protocols
-cmake
 libxkbcommon
-libxcursor
+libxrandr
 libxscrnsaver
 libxtst
+wayland-protocols

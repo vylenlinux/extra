@@ -1,4 +1,4 @@
-grub
+dosfstools
 efibootmgr
 freetype2
-dosfstools
+grub

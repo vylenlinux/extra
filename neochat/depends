@@ -4,6 +4,7 @@ kitemmodels
 kquickcharts
 kquickimageeditor
 kstatusnotifieritem
+kunifiedpush
 libquotient
 prison
 purpose
@@ -12,4 +13,3 @@ qqc2-desktop-style
 qt6-location
 qt6-webview
 syntax-highlighting
-kunifiedpush

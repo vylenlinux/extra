@@ -1,6 +1,6 @@
-layer-shell-qt
-qtxdg-tools
 breeze-icons
+layer-shell-qt
 liblxqt
 lxqt-themes
+qtxdg-tools
 xdg-user-dirs

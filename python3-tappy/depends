@@ -1,5 +1,5 @@
-python3-hatchling
 python3-babel
-python3-pyaml
+python3-hatchling
 python3-more-itertools
+python3-pyaml
 python3-tomlkit

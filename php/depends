@@ -1,9 +1,9 @@
-tidy
-oniguruma
-krb5
-enchant
-libxml2
-db
-libpng
 argon2
+db
+enchant
+krb5
+libpng
+libxml2
 libzip
+oniguruma
+tidy

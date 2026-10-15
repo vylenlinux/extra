@@ -1,5 +1,5 @@
-libxslt
+cython3
 libxml2
+libxslt
 python3-gpep517
 python3-wheel
-cython3

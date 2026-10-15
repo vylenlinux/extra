@@ -1,5 +1,5 @@
-gst-plugins-good
-libxfce4ui
-libnotify
-taglib
 gst-libav
+gst-plugins-good
+libnotify
+libxfce4ui
+taglib

@@ -1,10 +1,10 @@
-gtk3
 glib
-mate-panel
-libxext
+gtk3
 libcanberra
-libx11
 libgtop
-libsm
 libice
+libsm
+libx11
+libxext
+mate-panel
 udisks2

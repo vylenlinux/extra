@@ -1,9 +1,9 @@
 cairo
-openjpeg2
+doxygen
+glib
 libdicom
 libjpeg-turbo
-libxml2
-glib
-libtiff
 libpng
-doxygen
+libtiff
+libxml2
+openjpeg2

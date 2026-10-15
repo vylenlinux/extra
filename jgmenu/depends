@@ -1,7 +1,7 @@
-libx11
-libxrandr
 cairo
-pango
-librsvg
-libxml2
 glib
+librsvg
+libx11
+libxml2
+libxrandr
+pango

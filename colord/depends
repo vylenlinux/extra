@@ -1,8 +1,8 @@
 dbus
 glib
+gobject-introspection
 lcms2
 libgudev
 libgusb
 polkit
-gobject-introspection
 vala

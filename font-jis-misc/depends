@@ -1,4 +1,4 @@
-util-macros
-mkfontscale
-font-util
 bdftopcf
+font-util
+mkfontscale
+util-macros

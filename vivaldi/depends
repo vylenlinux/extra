@@ -1,8 +1,8 @@
-gtk3
-font-bh-ttf
-cups
-nss
 alsa-utils
+cups
 desktop-file-utils
+font-bh-ttf
+gtk3
 hicolor-icon-theme
 imagemagick
+nss

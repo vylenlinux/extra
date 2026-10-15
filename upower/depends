@@ -1,6 +1,6 @@
 dbus-glib
+gobject-introspection
 libgudev
 libusb
-polkit
-gobject-introspection
 libxslt
+polkit

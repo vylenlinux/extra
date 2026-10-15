@@ -1,5 +1,5 @@
+gobject-introspection
+json-glib
 libusb
 usbutils
-gobject-introspection
 vala
-json-glib

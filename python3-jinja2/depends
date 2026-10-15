@@ -1,4 +1,4 @@
-python3-gpep517
-python3-wheel
 python3-flit-core
+python3-gpep517
 python3-markupsafe
+python3-wheel

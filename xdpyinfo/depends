@@ -1,9 +1,9 @@
-libxext
-libxtst
 libx11
 libxcb
-libxxf86vm
-libxi
-libxrender
 libxcomposite
+libxext
+libxi
 libxinerama
+libxrender
+libxtst
+libxxf86vm

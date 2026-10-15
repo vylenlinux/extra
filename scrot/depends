@@ -1,6 +1,6 @@
+autoconf-archive
 giblib
 imlib2
-autoconf-archive
-libxfixes
-libxcomposite
 libbsd
+libxcomposite
+libxfixes

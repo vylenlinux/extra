@@ -1,13 +1,15 @@
 bluedevil
 breeze-gtk
 discover
+dolphin
 kde-gtk-config
 kdeplasma-addons
 kgamma
 kinfocenter
+konsole
 ksshaskpass
-kwalletmanager
 kwallet-pam
+kwalletmanager
 kwrited
 ocean-sound-theme
 oxygen
@@ -26,5 +28,3 @@ plasma-workspace-wallpapers
 powerdevil
 print-manager
 xdg-desktop-portal-kde
-konsole
-dolphin

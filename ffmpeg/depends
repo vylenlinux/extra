@@ -9,9 +9,9 @@ libass
 libtheora
 libvorbis
 libvpx
+nv-codec-headers
 opus
 sdl2-compat
 x264
 x265
 yasm
-nv-codec-headers

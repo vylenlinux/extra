@@ -1,6 +1,6 @@
 fontconfig
 lcms2
-libxext
-libxt
-libxml2
 librsvg
+libxext
+libxml2
+libxt

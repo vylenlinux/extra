@@ -1,6 +1,6 @@
 cairo
 libjpeg-turbo
-wayland
 pango
 scdoc
+wayland
 wayland-protocols

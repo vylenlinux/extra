@@ -3,7 +3,7 @@ gdk-pixbuf
 gtk3
 iso-codes
 librsvg
-startup-notification
 libxkbcommon
+startup-notification
 wayland
 wayland-protocols

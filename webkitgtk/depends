@@ -3,6 +3,7 @@ cairo
 enchant
 flite
 gst-plugins-bad
+gtk3
 harfbuzz-icu
 libjxl
 libnotify
@@ -15,4 +16,3 @@ ruby
 unifdef
 wpebackend-fdo
 xdg-dbus-proxy
-gtk3

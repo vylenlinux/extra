@@ -1,13 +1,13 @@
-gtk3
-pango
-harfbuzz
 at-spi2-core
 cairo
-libnotify
 gdk-pixbuf
 glib
+gtk3
+harfbuzz
 libcanberra
+libnotify
 libwnck3
 libx11
 mate-desktop
 mate-panel
+pango

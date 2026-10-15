@@ -1,6 +1,6 @@
-gst-plugins-base
 cairo
 flac
 gdk-pixbuf
+gst-plugins-base
 libsoup2
 libvpx

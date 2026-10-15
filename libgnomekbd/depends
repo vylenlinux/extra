@@ -1,4 +1,4 @@
-libxklavier
-gtk3
 dconf
 gobject-introspection
+gtk3
+libxklavier

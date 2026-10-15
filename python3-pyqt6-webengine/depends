@@ -1,4 +1,4 @@
-qt6-webengine
+python3-pyqt-builder
 python3-pyqt6
 python3-sip
-python3-pyqt-builder
+qt6-webengine

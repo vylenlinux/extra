@@ -1,4 +1,4 @@
-libsoup2
-gtk3
-gtk-doc
 autoconf-archive
+gtk-doc
+gtk3
+libsoup2

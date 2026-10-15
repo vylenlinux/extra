@@ -1,4 +1,4 @@
 cairo
-wayland-protocols
 libxkbcommon
 scdoc
+wayland-protocols

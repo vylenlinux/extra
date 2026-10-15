@@ -1,7 +1,7 @@
+fontconfig
+giflib
 imlib2
+libexif
+libwebp
 libx11
 libxft
-fontconfig
-libexif
-giflib
-libwebp

@@ -1,5 +1,5 @@
 dbus
 glib
-libxtst
 gobject-introspection
 libxml2
+libxtst

@@ -1,4 +1,4 @@
-json-c
 glib
 gobject-introspection
 intltool
+json-c

@@ -1,5 +1,5 @@
 dbus-glib
-libxml2
-gtk3
-polkit
 gobject-introspection
+gtk3
+libxml2
+polkit

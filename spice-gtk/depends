@@ -4,9 +4,9 @@ gst-plugins-good
 gtk3
 json-glib
 libva
-polkit
 libxcomposite
 libxcursor
 libxinerama
+polkit
 spice
 usbutils

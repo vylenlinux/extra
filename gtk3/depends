@@ -1,8 +1,8 @@
 at-spi2-core
-libxinerama
 libepoxy
-libxcursor
-libxcomposite
 librsvg
-wayland-protocols
+libxcomposite
+libxcursor
+libxinerama
 libxkbcommon
+wayland-protocols

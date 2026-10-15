@@ -1,5 +1,5 @@
-xcb-util-image
-xcb-util-xrm
-libxkbcommon
 cairo
 libev
+libxkbcommon
+xcb-util-image
+xcb-util-xrm

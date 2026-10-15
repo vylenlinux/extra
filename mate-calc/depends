@@ -1,4 +1,4 @@
-gtk3
 glib
-libxml2
+gtk3
 itstool
+libxml2

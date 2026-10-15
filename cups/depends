@@ -1,4 +1,4 @@
-libusb
-dbus
-xdg-utils
 avahi
+dbus
+libusb
+xdg-utils

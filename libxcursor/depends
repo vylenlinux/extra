@@ -1,3 +1,3 @@
-libxrender
-libxfixes
 libx11
+libxfixes
+libxrender

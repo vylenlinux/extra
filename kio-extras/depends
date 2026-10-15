@@ -1,13 +1,13 @@
 kcmutils
 kdnssd
-ktextwidgets
 kdsoap-ws-discovery-client
+ktextwidgets
 libkexiv2
 libproxy
 libssh
 phonon
 plasma-activities-stats
 qcoro
+shared-mime-info
 syntax-highlighting
 taglib
-shared-mime-info

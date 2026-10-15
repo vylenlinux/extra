@@ -1,5 +1,5 @@
 gcab
-json-glib
-stemmer
-libsoup2
 gtk3
+json-glib
+libsoup2
+stemmer

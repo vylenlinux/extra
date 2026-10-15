@@ -1,5 +1,5 @@
 cairo
-libxkbcommon
-wayland-protocols
 gdk-pixbuf
+libxkbcommon
 scdoc
+wayland-protocols

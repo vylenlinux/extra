@@ -1,10 +1,10 @@
 caja
-gtk3
-glib
 dbus-glib
-libnotify
-libcanberra
-libsm
-libice
-libx11
+glib
+gtk3
 itstool
+libcanberra
+libice
+libnotify
+libsm
+libx11

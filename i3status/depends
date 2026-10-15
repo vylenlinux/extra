@@ -1,7 +1,7 @@
-confuse
-yajl
-libnl
 alsa-lib
-libpulse
 asciidoc
+confuse
+libnl
+libpulse
 xmlto
+yajl

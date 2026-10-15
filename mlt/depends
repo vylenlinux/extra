@@ -1,9 +1,9 @@
 cmake
-qt6-svg
-qt6-5compat
 frei0r-plugins
 ladspa
+lilv
+qt6-5compat
+qt6-svg
 rnnoise
 sox
 vid.stab
-lilv

@@ -1,6 +1,6 @@
 cairo
-harfbuzz
-fribidi
 fontconfig
+fribidi
 gobject-introspection
+harfbuzz
 libxft

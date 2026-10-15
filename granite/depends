@@ -1,8 +1,8 @@
 cairo
 gdk-pixbuf
 glib
+gobject-introspection
 gtk3
 libgee
 pango
-gobject-introspection
 vala

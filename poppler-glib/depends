@@ -1,4 +1,4 @@
-poppler
 glib
 gobject-introspection
 gtk3
+poppler

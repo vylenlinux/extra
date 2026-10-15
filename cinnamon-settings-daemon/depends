@@ -1,8 +1,9 @@
 cinnamon-desktop
 colord
-dbus-glib
-libcanberra
 cups
+dbus-glib
+elogind
+libcanberra
 libgnomekbd
 libgudev
 libnotify
@@ -12,4 +13,3 @@ nss
 polkit
 upower
 xf86-input-wacom
-elogind
