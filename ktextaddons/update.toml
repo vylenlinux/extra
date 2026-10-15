@@ -1,5 +1,5 @@
 name = "ktextaddons"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "ktextaddons"
+[kde]
+package = "%(name)"
