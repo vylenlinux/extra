@@ -1,5 +1,5 @@
 name = "mpvqt"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "mpvqt"
+[kde]
+package = "%(name)"
