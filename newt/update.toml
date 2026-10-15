@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://ftp.kaist.ac.kr/macports/distfiles/libnewt/"
-filename = "%(name)-{version}.tar.gz"
+filename = "%(name)-%(version).tar.gz"
