@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://www.freedesktop.org/software/appstream/releases/"
-filename = "AppStream-{version}.tar.xz"
+filename = "AppStream-%(version).tar.xz"
