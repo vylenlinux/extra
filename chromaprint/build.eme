@@ -6,7 +6,7 @@ homepage="https://acoustid.org/chromaprint"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=chromaprint
-version=1.6.1
+version=1.6.2
 release=1
 source="https://github.com/acoustid/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
@@ -16,7 +16,6 @@ build() {
         -DCMAKE_BUILD_TYPE=RELEASE \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DBUILD_TESTS=OFF \
         -Wno-author
 
