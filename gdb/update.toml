@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://ftp.gnu.org/gnu/gdb/"
-filename = "gdb-{version}.tar.xz"
+filename = "gdb-%(version).tar.xz"
