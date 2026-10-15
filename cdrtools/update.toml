@@ -4,4 +4,4 @@ provider = "sourceforge"
 [sourceforge]
 project = "cdrtools"
 path = "alpha"
-filename = "cdrtools-{version}.tar.bz2"
+filename = "cdrtools-%(version).tar.bz2"
