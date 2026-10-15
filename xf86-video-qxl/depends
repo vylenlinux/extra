@@ -1,5 +1,5 @@
 libxfont2
 spice
 spice-protocol
-xorg-server
 xorgproto
+xorg-server

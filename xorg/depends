@@ -20,6 +20,6 @@ xkeyboard-config
 xorg-applications
 xorg-fonts
 xorg-libraries
-xorg-server
 xorgproto
+xorg-server
 xterm

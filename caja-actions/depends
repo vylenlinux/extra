@@ -1,8 +1,8 @@
 caja
 gdk-pixbuf
 glib
-gtk-doc
 gtk3
+gtk-doc
 libgtop
 mate-common
 yelp-tools

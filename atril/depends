@@ -1,6 +1,6 @@
 caja
-gtk-doc
 gtk3
+gtk-doc
 libice
 libsecret
 libsm
