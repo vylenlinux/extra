@@ -4,4 +4,4 @@ provider = "repology"
 [source]
 package = "sudo"
 url = "https://www.sudo.ws/dist/"
-filename = "sudo-{version}.tar.gz"
+filename = "sudo-%(version).tar.gz"
