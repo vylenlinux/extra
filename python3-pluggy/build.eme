@@ -1,21 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Plugin and hook calling mechanisms for python"
 homepage="https://github.com/pytest-dev/pluggy"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pluggy
-version=1.6.0
+version=1.7.0
 release=1
-source="https://files.pythonhosted.org/packages/source/p/pluggy/pluggy-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pluggy/pluggy-${version}.tar.gz"
 
 build() {
-	cd pluggy-$version
+    # shellcheck disable=SC2164
+    cd "pluggy-${version}"
 
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-	SETUPTOOLS_SCM_PRETEND_VERSION="$version" \
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d "$PKG" \
-		.dist/*.whl
-
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
