@@ -1,6 +1,5 @@
 name = "cxx-rust-cssparser"
-provider = "ftp" # temporary
+provider = "kde"
 
-[ftp]
-url = "https://download.kde.org/stable/%(name)"
-filename = "%(name)-{version}.tar.xz"
+[kde]
+package = "%(name)"
