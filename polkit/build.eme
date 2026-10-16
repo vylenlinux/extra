@@ -6,8 +6,8 @@ homepage="https://freedesktop.org/software/polkit"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=polkit
-version=127
-release=4
+version=128
+release=1
 source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
