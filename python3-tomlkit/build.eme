@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/sdispater/tomlkit"
 
 name=python3-tomlkit
-version=0.15.1
+version=0.15.2
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/t/tomlkit/tomlkit-${version}.tar.gz"
 
