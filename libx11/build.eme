@@ -1,20 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="X11 client-side library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libx11"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libx11
-version=1.8.13
+version=1.8.14
 release=1
-source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libX11-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.x.org/pub/individual/lib/libX11-${version}.tar.xz"
 
 build() {
-	cd libX11-$version
-	./configure \
-		--prefix=/usr \
-                --sysconfdir=/etc \
-                --localstatedir=/var \
-                --disable-static \
-		--disable-specs
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "libX11-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static \
+        --disable-specs
+
+    make
+    make DESTDIR="${PKG}" install
 }

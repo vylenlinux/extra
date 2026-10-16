@@ -1,5 +1,6 @@
 name = "libx11"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libx11"
+[ftp]
+url = "https://ftp.x.org/pub/individual/lib/"
+filename = "libX11-%(version).tar.xz"
