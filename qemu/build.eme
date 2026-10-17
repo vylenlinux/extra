@@ -46,6 +46,9 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
+    # moved to qemu-guest-agent
+    rm -f "${PKG}/usr/bin/qemu-ga"
+
     install -Dm644 "${SRC}/60-kvm.rules" -t "${PKG}/etc/udev/rules.d/"
     rm -rf "${PKG}/var/run"
 }
