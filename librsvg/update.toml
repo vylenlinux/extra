@@ -1,5 +1,6 @@
 name = "librsvg"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "librsvg"
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/librsvg"
