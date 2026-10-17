@@ -635,6 +635,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_Padding.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_asn1.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_asn1.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_cpu_features.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_cpu_features.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_number.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_number.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/test_raw_api.cpython-315.opt-1.pyc
@@ -648,6 +650,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_Counter.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_Padding.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_asn1.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_cpu_features.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_number.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_raw_api.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/test_rfc1751.py
@@ -737,9 +740,9 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/__init__.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/__init__.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/py.typed
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/requires.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.0-py3.15.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.0.1-py3.15.egg-info/top_level.txt
