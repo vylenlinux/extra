@@ -6,9 +6,9 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxpm
-version=3.5.19
+version=3.5.20
 release=1
-source="${name}-${version}.tar.xz::http://ftp.x.org/pub/individual/lib/libXpm-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.x.org/pub/individual/lib/libXpm-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164

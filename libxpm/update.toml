@@ -1,5 +1,6 @@
 name = "libxpm"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxpm"
+[ftp]
+url = "https://ftp.x.org/pub/individual/lib/"
+filename = "libXpm-%(version).tar.xz"
