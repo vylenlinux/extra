@@ -1,5 +1,6 @@
 name = "libxrender"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxrender"
+[ftp]
+url = "https://ftp.x.org/pub/individual/lib/"
+filename = "libXrender-%(version).tar.xz"

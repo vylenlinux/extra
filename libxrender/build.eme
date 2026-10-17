@@ -1,22 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="X Rendering Extension client library"
 homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxrender
-version=0.9.12
+version=0.9.13
 release=1
-source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXrender-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.x.org/pub/individual/lib/libXrender-${version}.tar.xz"
 
 build() {
-	cd libXrender-$version
+    # shellcheck disable=SC2164
+    cd "libXrender-${version}"
 
-	./configure \
-		--prefix=/usr \
-                --sysconfdir=/etc \
-                --localstatedir=/var \
-                --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
 
-
+    make
+    make DESTDIR="${PKG}" install
 }
