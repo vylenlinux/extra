@@ -6,7 +6,7 @@ homepage="https://simdutf.github.io/simdutf/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=simdutf
-version=9.3.1
+version=9.3.2
 release=1
 source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -14,8 +14,8 @@ build() {
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
-        -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_SHARED_LIBS=ON \
         -DSIMDUTF_CXX_STANDARD=20 \
         -Wno-author
 
