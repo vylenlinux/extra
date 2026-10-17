@@ -6,7 +6,7 @@ homepage="https://python-pillow.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pillow
-version=12.3.0
+version=13.0.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/python-pillow/Pillow/archive/refs/tags/${version}.tar.gz"
 
@@ -20,8 +20,7 @@ build() {
         --output-fd 3 3>&1 >&2
 
     python3 -m installer -d "${PKG}" .dist/*.whl
-	pversion="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')"
+    _python_version="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')"
 
-	install -d "${PKG}/usr/include/${pversion}"
-	install -m644 src/libImaging/*.h -t "${PKG}/usr/include/${pversion}/"
+    install -Dm644 src/libImaging/*.h -t "${PKG}/usr/include/${_python_version}/"
 }
