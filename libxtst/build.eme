@@ -1,22 +1,25 @@
-description="X11 Testing -- Resource extension library"
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="X11 Testing - Resource extension library"
 homepage="https://gitlab.freedesktop.org/xorg/lib/libxtst"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxtst
-version=1.2.5
+version=1.2.6
 release=1
-source="$name-$version.tar.xz::http://ftp.x.org/pub/individual/lib/libXtst-$version.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.x.org/pub/individual/lib/libXtst-${version}.tar.xz"
 
 build() {
-	cd libXtst-$version
+    # shellcheck disable=SC2164
+    cd "libXtst-${version}"
 
-	./configure \
-		--prefix=/usr \
-                --sysconfdir=/etc \
-                --localstatedir=/var \
-                --disable-static
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-static
 
-
+    make
+    make DESTDIR="${PKG}" install
 }

@@ -1,5 +1,6 @@
 name = "libxtst"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxtst"
+[ftp]
+url = "https://ftp.x.org/pub/individual/lib/"
+filename = "libXtst-%(version).tar.xz"
