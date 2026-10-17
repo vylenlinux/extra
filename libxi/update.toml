@@ -1,5 +1,6 @@
 name = "libxi"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxi"
+[ftp]
+url = "https://ftp.x.org/pub/individual/lib/"
+filename = "libXi-%(version).tar.xz"

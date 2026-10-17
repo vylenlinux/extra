@@ -6,9 +6,9 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libxi
-version=1.8.3
+version=1.8.4
 release=1
-source="${name}-${version}.tar.xz::http://ftp.x.org/pub/individual/lib/libXi-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://ftp.x.org/pub/individual/lib/libXi-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
