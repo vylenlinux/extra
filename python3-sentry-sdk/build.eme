@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="The official Python SDK for Sentry.io"
+homepage="https://sentry.io/for/python"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-sentry-sdk
+version=2.72.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/getsentry/sentry-python/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "sentry-python-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}

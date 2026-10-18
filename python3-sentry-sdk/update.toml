@@ -1,0 +1,6 @@
+name = "python3-sentry-sdk"
+provider = "github"
+
+[source]
+owner = "getsentry"
+repo = "sentry-python"
