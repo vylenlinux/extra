@@ -1,5 +1,12 @@
 drwxr-xr-x root/root    etc/
+-rw-r--r-- root/root    etc/arptables.conf
+-rw-r--r-- root/root    etc/ebtables.conf
 -rw-r--r-- root/root    etc/ethertypes
+drwxr-xr-x root/root    etc/iptables/
+lrwxrwxrwx root/root    etc/iptables/empty.rules -> ../../usr/share/iptables/empty.rules
+-rw-r--r-- root/root    etc/iptables/ip6tables.rules
+-rw-r--r-- root/root    etc/iptables/iptables.rules
+lrwxrwxrwx root/root    etc/iptables/simple_firewall.rules -> ../../usr/share/iptables/simple_firewall.rules
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/arptables -> xtables-nft-multi
@@ -73,6 +80,14 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libipq.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libiptc.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/xtables.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/scripts/
+-rwxr-xr-x root/root    usr/lib/systemd/scripts/iptables-flush
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/arptables.service
+-rw-r--r-- root/root    usr/lib/systemd/system/ebtables.service
+-rw-r--r-- root/root    usr/lib/systemd/system/ip6tables.service
+-rw-r--r-- root/root    usr/lib/systemd/system/iptables.service
 drwxr-xr-x root/root    usr/lib/xtables/
 -rwxr-xr-x root/root    usr/lib/xtables/libarpt_mangle.so
 -rwxr-xr-x root/root    usr/lib/xtables/libebt_802_3.so
@@ -196,6 +211,14 @@ lrwxrwxrwx root/root    usr/lib/xtables/libxt_state.so -> libxt_conntrack.so
 -rwxr-xr-x root/root    usr/lib/xtables/libxt_u32.so
 -rwxr-xr-x root/root    usr/lib/xtables/libxt_udp.so
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/iptables/
+-rw-r--r-- root/root    usr/share/iptables/empty-filter.rules
+-rw-r--r-- root/root    usr/share/iptables/empty-mangle.rules
+-rw-r--r-- root/root    usr/share/iptables/empty-nat.rules
+-rw-r--r-- root/root    usr/share/iptables/empty-raw.rules
+-rw-r--r-- root/root    usr/share/iptables/empty-security.rules
+-rw-r--r-- root/root    usr/share/iptables/empty.rules
+-rw-r--r-- root/root    usr/share/iptables/simple_firewall.rules
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/iptables-xml.1.gz

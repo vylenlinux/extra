@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=expect
 version=5.45.4
-release=3
+release=1
 
 source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/project/${name}/Expect/${version}/${name}${version}.tar.gz
     expect-5.32.2-random.patch

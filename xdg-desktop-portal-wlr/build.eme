@@ -8,10 +8,15 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=xdg-desktop-portal-wlr
 version=0.8.4
 release=1
-source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz
+    wlr-portals.conf"
 
 build() {
-    vylen-meson "${name}-${version}" build -Dsd-bus-provider=basu
+    vylen-meson "${name}-${version}" build -Dsd-bus-provider=libsystemd
     meson compile -C build
     DESTDIR="${PKG}" meson install -C build
+
+    # fix detection with x-d-p 1.18
+    install -Dm644 wlr-portals.conf -t "${PKG}/usr/share/xdg-desktop-portal/"
 }

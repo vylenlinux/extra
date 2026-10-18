@@ -1,7 +1,6 @@
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/udev/
-drwxr-xr-x root/root    etc/udev/rules.d/
--rw-r--r-- root/root    etc/udev/rules.d/60-kvm.rules
+drwxr-xr-x root/root    etc/qemu/
+-rw-r--r-- root/root    etc/qemu/bridge.conf
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/elf2dmp
@@ -120,6 +119,8 @@ drwxr-xr-x root/root    usr/lib/qemu/qemu/
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/ui-spice-app.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/ui-spice-core.so
 -rwxr-xr-x root/root    usr/lib/qemu/vhost-user-gpu
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/qemu.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/qemu.desktop
@@ -275,4 +276,3 @@ drwxr-xr-x root/root    usr/share/qemu/vhost-user/
 -rw-r--r-- root/root    usr/share/qemu/vhost-user/50-qemu-gpu.json
 -rw-r--r-- root/root    usr/share/qemu/vof-nvram.bin
 -rw-r--r-- root/root    usr/share/qemu/vof.bin
-drwxr-xr-x root/root    var/

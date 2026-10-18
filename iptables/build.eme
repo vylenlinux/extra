@@ -7,12 +7,22 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iptables
 version=1.8.13
-release=3
-source="https://www.netfilter.org/projects/${name}/files/${name}-${version}.tar.xz"
+release=1
+
+source="https://www.netfilter.org/projects/${name}/files/${name}-${version}.tar.xz
+    empty.rules
+    empty-filter.rules
+    empty-mangle.rules
+    empty-nat.rules
+    empty-raw.rules
+    empty-security.rules
+    simple_firewall.rules
+    0001-fix-${name}-apply-FS-75401.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/0001-fix-${name}-apply-FS-75401.patch"
 
     ./configure \
         --prefix=/usr \
@@ -24,5 +34,20 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    ln -sf iptables-nft "${PKG}/usr/bin/iptables"
+    do_service arptables ebtables ip6tables "${name}"
+    do_systemd_scripts "${name}-flush"
+
+    touch "${PKG}/etc/arptables.conf" \
+        "${PKG}/etc/ebtables.conf"
+
+    install -Dm644 "${SRC}"/*.rules -t "${PKG}/usr/share/${name}/"
+
+    for x in "${name}" ip6tables; do
+        install -Dm644 "${SRC}/empty.rules" "${PKG}/etc/iptables/${x}.rules"
+    done
+
+    ln -sr "${PKG}/usr/share/iptables/empty.rules" -t "${PKG}/etc/iptables/"
+    ln -sr "${PKG}/usr/share/iptables/simple_firewall.rules" -t "${PKG}/etc/iptables/"
+
+    ln -sf "${name}-nft" "${PKG}/usr/bin/${name}"
 }

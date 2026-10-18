@@ -11,7 +11,7 @@ release=1
 
 source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-${version}.tar.gz
     ${name}-portals.conf
-    ${name}.desktop"
+    50-systemd-user.conf"
 
 build() {
     # CBUILD: enable or disable options, source CBUILD_SWAY_OPTS from "sway.opt" file
@@ -29,13 +29,13 @@ build() {
 
     # shellcheck disable=SC2086
     vylen-meson "${name}-${version}" build \
-        -Dsd-bus-provider=basu \
+        -Dsd-bus-provider=libsystemd \
         -Dwerror=false \
         ${CBUILD_SWAY_OPTS}
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/wayland-sessions/"
-    install -Dm644 "${SRC}/${name}-portals.conf" -t "${PKG}/usr/share/xdg-desktop-portal/portals/"
+    install -Dm644 50-systemd-user.conf -t "${PKG}/etc/sway/config.d/"
+    install -Dm644 "${name}-portals.conf" -t "${PKG}/usr/share/xdg-desktop-portal/portals/"
 }

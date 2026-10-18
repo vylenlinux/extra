@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lvm2
 version=2.03.43
-release=2
+release=1
 
 backup="etc/lvm/lvm.conf
     etc/lvm/lvmlocal.conf"
@@ -19,17 +19,31 @@ build() {
     cd "LVM2.${version}"
     export CONFIG_SHELL=/bin/bash
 
+    sed -i -e '/^\[Install\]$/,$d' \
+        scripts/lvm2_lvmpolld_systemd_red_hat.socket.in \
+        scripts/lvm2_monitoring_systemd_red_hat.service.in
+
     ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --libdir=/usr/lib \
         --with-libexecdir="/usr/lib/${name}" \
         --with-udevdir=/usr/lib/udev \
+        --with-systemdsystemunitdir=/usr/lib/systemd/system \
         --enable-cmdlib \
         --enable-pkgconfig \
         --enable-udev_sync \
+        --enable-dmeventd \
+        --enable-lvmpolld \
         --enable-write_install
 
     make
-    make DESTDIR="${PKG}" install_lvm2
+    make DESTDIR="${PKG}" install_lvm2 install_systemd_units install_systemd_generators
+
+    install -dm755 "${PKG}/usr/lib/systemd/system/sysinit.target.wants"
+    ln -sf ../lvm2-lvmpolld.socket -t "${PKG}/usr/lib/systemd/system/sysinit.target.wants/"
+    ln -sf ../lvm2-monitor.service -t "${PKG}/usr/lib/systemd/system/sysinit.target.wants/"
+
+    # moved to device-mapper
+    rm -f "${PKG}/usr/lib/systemd/system/"dm-*
 }

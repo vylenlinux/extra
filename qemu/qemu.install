@@ -1,9 +1,0 @@
-#!/bin/sh
-
-pre_install() {
-    getent group kvm >/dev/null || groupadd -g 61 kvm
-}
-
-post_remove() {
-    getent group qemu >/dev/null && groupdel qemu
-}

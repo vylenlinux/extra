@@ -11,11 +11,7 @@ release=1
 source="https://gitlab.freedesktop.org/libinput/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-    vylen-meson "${name}-${version}" build \
-        --prefix=/usr \
-        --libdir=lib \
-        -Dtests=disabled
-
+    vylen-meson "${name}-${version}" build -Dtests=disabled
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Alternative to locate, faster and compatible with mlocate's database."
+homepage="https://plocate.sesse.net"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=plocate
+version=1.1.25
+release=1
+backup="etc/updatedb.conf"
+
+source="https://plocate.sesse.net/download/${name}-${version}.tar.gz
+    plocate-fix-updatedb.timer.patch
+    updatedb.conf"
+
+build() {
+    patch -Np1 -i "${SRC}/plocate-fix-updatedb.timer.patch"
+
+    vylen-meson build \
+        -Dinstall_cron=false \
+        -Dinstall_systemd=true \
+        -Dlocategroup=locate
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    do_sysusers "${name}"
+    do_tmpfiles "${name}"
+
+    chgrp 21 "${PKG}/usr/bin/plocate"
+    chmod 2755 "${PKG}/usr/bin/plocate"
+
+    install -Dm644 "${SRC}/updatedb.conf" -t "${PKG}/etc/"
+
+    ln -s plocate "${PKG}/usr/bin/mlocate"
+    ln -s plocate "${PKG}/usr/bin/locate"
+    ln -s locate.1 "${PKG}/usr/share/man/man1/plocate.1"
+
+    install -d "${PKG}/usr/lib/systemd/system/timers.target.wants"
+    ln -s ../plocate-updatedb.timer -t "${PKG}/usr/lib/systemd/system/timers.target.wants/"
+}

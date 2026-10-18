@@ -3,6 +3,17 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/chronyc
 -rwxr-xr-x root/root    usr/bin/chronyd
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/ntp-units.d/
+-rw-r--r-- root/root    usr/lib/systemd/ntp-units.d/50-chrony.list
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/chrony-wait.service
+-rw-r--r-- root/root    usr/lib/systemd/system/chronyd.service
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/chrony.conf
+drwxr-xr-x root/root    usr/lib/tmpfiles.d/
+-rw-r--r-- root/root    usr/lib/tmpfiles.d/chrony.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/

@@ -19,6 +19,7 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --with-rrsync \
         --with-included-popt=no \
         --with-included-zlib=no \
         --disable-xxhash
@@ -27,5 +28,7 @@ build() {
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/rsyncd.conf" -t "${PKG}/etc/"
-    do_service rsyncd
+    install -Dm644 packaging/systemd/rsync.service "${PKG}/usr/lib/systemd/system/rsyncd.service"
+    install -Dm644 packaging/systemd/rsync.socket "${PKG}/usr/lib/systemd/system/rsyncd.socket"
+    install -Dm644 packaging/systemd/rsync@.service "${PKG}/usr/lib/systemd/system/rsyncd@.service"
 }

@@ -1,0 +1,6 @@
+name = "rrdtool"
+provider = "github"
+
+[source]
+owner = "oetiker"
+repo = "%(name)-1.x"

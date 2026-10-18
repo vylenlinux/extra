@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sudo
 version=1.9.17p2
-release=2
+release=1
 backup="etc/sudoers"
 
 source="https://www.sudo.ws/dist/${name}-${version}.tar.gz

@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=boost
 version=1.92.0
-release=2
+release=1
 _version="$(printf "%s" "${version}" | sed 's/\./_/g')"
 
 source="${name}-${version}.tar.bz2::https://archives.boost.io/release/${version}/source/${name}_${_version}.tar.bz2

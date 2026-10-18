@@ -1,6 +1,8 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/sway/
 -rw-r--r-- root/root    etc/sway/config
+drwxr-xr-x root/root    etc/sway/config.d/
+-rw-r--r-- root/root    etc/sway/config.d/50-systemd-user.conf
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/sway

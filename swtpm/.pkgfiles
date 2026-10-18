@@ -226,6 +226,10 @@ drwxr-xr-x root/root    usr/lib/swtpm/
 lrwxrwxrwx root/root    usr/lib/swtpm/libswtpm_libtpms.so -> libswtpm_libtpms.so.0.0.0
 lrwxrwxrwx root/root    usr/lib/swtpm/libswtpm_libtpms.so.0 -> libswtpm_libtpms.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/swtpm/libswtpm_libtpms.so.0.0.0
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/swtpm.conf
+drwxr-xr-x root/root    usr/lib/tmpfiles.d/
+-rw-r--r-- root/root    usr/lib/tmpfiles.d/swtpm.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man3/

@@ -1,0 +1,12 @@
+[Unit]
+Description=Cyrus SASL authentication daemon
+
+[Service]
+Type=forking
+Environment="SASLAUTHD_OPTS=-a pam"
+ExecStart=/usr/bin/saslauthd $SASLAUTHD_OPTS
+PIDFile=/run/saslauthd/saslauthd.pid
+RuntimeDirectory=saslauthd
+
+[Install]
+WantedBy=multi-user.target

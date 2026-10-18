@@ -15,12 +15,11 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    # static device nodes are handled by eudev
+    # static device nodes are handled by udev
     # shellcheck disable=SC2115
     rm -r "${PKG}/dev" \
         "${PKG}/etc/init.d"
 
     # move to fuse-common
     rm -f "${PKG}/etc/${name}.conf"
-    do_service "${name}"
 }

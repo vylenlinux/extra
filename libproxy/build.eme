@@ -9,7 +9,7 @@ source="https://github.com/libproxy/libproxy/archive/$version/$name-$version.tar
 
 build() {
 	vylen-meson $name-$version build \
-		-D release=true \
+		-D release=1true \
 	        -D docs=false
 	meson compile -C build
 	DESTDIR=$PKG meson install -C build

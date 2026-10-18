@@ -1,1 +1,3 @@
+bc0b3c8e988832af912117600993cdb802969b8e201a145497e249ed324370f8  0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch
+ce7a8b34d3db9d0affc42753158acb0b8120cfd860eeda43822f38b10b6c433b  0004-agent-helper-Send-standard-error-to-journal.patch
 9488877df456468427000a1f87b64c4229cfb297bc7e3bd8d9c20a6fdc7b23b7  polkit-128.tar.gz

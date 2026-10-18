@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=modemmanager
 version=1.24.2
-release=2
+release=1
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/${name}/-/archive/${version}/ModemManager-${version}.tar.gz
     ${name}-disable-info-logging.patch"
@@ -18,9 +18,6 @@ build() {
     vylen-meson "ModemManager-${version}" build \
         -Dat_command_via_dbus=true \
         -Dpolkit=permissive \
-        -Dsystemdsystemunitdir=no \
-        -Dsystemd_suspend_resume=false \
-        -Dsystemd_journal=false \
         -Dudevdir=/usr/lib/udev
 
     meson compile -C build

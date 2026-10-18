@@ -1,0 +1,6 @@
+name = "ell"
+provider = "ftp"
+
+[ftp]
+url = "https://mirrors.edge.kernel.org/pub/linux/libs/%(name)"
+filename = "%(name)-%(version).tar.xz"

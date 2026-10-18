@@ -10,18 +10,31 @@ version=3.6.2
 release=1
 
 _version="$(printf '%s' "${version}" | sed 's/\./-/g')"
-source="${name}-${version}.tar.gz::https://github.com/hramrach/lm-sensors/archive/refs/tags/V${_version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/hramrach/lm-sensors/archive/refs/tags/V${_version}.tar.gz
+    remove-sysconfig-dir.patch
+    healthd
+    healthd.conf"
 
 build() {
     # shellcheck disable=SC2164
     cd "lm-sensors-${_version}"
+
+    patch -Np1 -i "${SRC}/remove-sysconfig-dir.patch"
     make PREFIX=/usr
 
     make \
         PREFIX=/usr \
+        PROG_EXTRA=sensord \
         BUILD_STATIC_LIB=0 \
         MANDIR=/usr/share/man \
         SBINDIR=/usr/bin \
-        DESTDIR="${PKG}" \
-    install
+        DESTDIR="${PKG}" install
+
+    do_service healthd
+
+    install -Dm755 "${SRC}/healthd" -t "${PKG}/usr/bin/"
+    install -Dm644 "${SRC}/healthd.conf" -t "${PKG}/etc/"
+
+    install -Dm644 prog/init/*.service -t "${PKG}/usr/lib/systemd/system/"
 }

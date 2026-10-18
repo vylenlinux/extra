@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pulseaudio
 version=17.0
-release=5
+release=1
 
 backup="etc/pulse/daemon.conf
     etc/pulse/default.pa
@@ -20,7 +20,7 @@ build() {
         -Dtests=false \
         -Ddoxygen="$(emerald is-installed doxygen && printf 'true' || printf 'false')" \
         -Dbluez5="$(emerald is-installed bluez && printf 'enabled' || printf 'disabled')" \
-        -Delogind=enabled \
+        -Delogind=disabled \
         -Dudevrulesdir=/usr/lib/udev/rules.d
 
     meson compile -C build

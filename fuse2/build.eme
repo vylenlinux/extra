@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fuse2
 version=2.9.9
-release=2
+release=1
 
 source="https://github.com/libfuse/libfuse/releases/download/fuse-${version}/fuse-${version}.tar.gz
     glibc-2.34-fix.patch"
@@ -30,7 +30,7 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    # static device nodes are handled by eudev
+    # static device nodes are handled by udev
     # shellcheck disable=SC2115
     rm -rf "${PKG}/dev"
 

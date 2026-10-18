@@ -7,15 +7,11 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=muffin
 version=6.6.3
-release=2
-
-source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz
-    muffin.conf"
+release=1
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    install -Dm644 "${SRC}/muffin.conf" -t "${PKG}/etc/ld.so.conf.d/"
 }

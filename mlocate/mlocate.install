@@ -1,9 +1,0 @@
-#!/bin/sh
-
-pre_install() {
-    getent group locate >/dev/null || groupadd locate
-}
-
-post_remove() {
-    getent group locate >/dev/null && groupdel locate
-}

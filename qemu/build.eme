@@ -10,7 +10,7 @@ version=11.1.2
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/v${version}.tar.gz
-    60-kvm.rules"
+    bridge.conf"
 
 build() {
     # shellcheck disable=SC2164
@@ -46,9 +46,12 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
+    do_sysusers "${name}"
+    install -Dm644 "${SRC}/bridge.conf" -t "${PKG}/etc/${name}/"
+
     # moved to qemu-guest-agent
     rm -f "${PKG}/usr/bin/qemu-ga"
 
-    install -Dm644 "${SRC}/60-kvm.rules" -t "${PKG}/etc/udev/rules.d/"
-    rm -rf "${PKG}/var/run"
+    # shellcheck disable=SC2115
+    rm -rf "${PKG}/var"
 }

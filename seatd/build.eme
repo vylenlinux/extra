@@ -7,12 +7,12 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=seatd
 version=0.9.3
-release=2
+release=1
 source="${name}-${version}.tar.gz::https://git.sr.ht/~kennylevinsen/${name}/archive/${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build \
-        -Dlibseat-logind=elogind \
+        -Dlibseat-logind=systemd \
         -Dlibseat-seatd=enabled \
         -Dlibseat-builtin=enabled \
         -Dman-pages=enabled \
@@ -24,5 +24,7 @@ build() {
 
     # user can run seatd-launch
     chmod u+s "${PKG}/usr/bin/seatd-launch"
-    do_service "${name}"
+
+    install -Dm644 "${name}-${version}/contrib/systemd/${name}.service" -t "${PKG}/usr/lib/systemd/system/"
+    do_sysusers "${name}"
 }

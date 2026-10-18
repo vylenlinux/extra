@@ -1,0 +1,44 @@
+diff '--color=auto' -ruN --no-dereference a/res/pam.d/ly-linux b/res/pam.d/ly-linux
+--- a/res/pam.d/ly-linux	2026-10-04 09:14:50.000000000 +0200
++++ b/res/pam.d/ly-linux	2026-10-17 16:37:31.160000000 +0200
+@@ -1,16 +1,16 @@
+ #%PAM-1.0
+ 
+-auth       include      login
++auth       include      system-auth
+ -auth      optional     pam_gnome_keyring.so
+ -auth      optional     pam_kwallet5.so
+ 
+-account    include      login
++account    include      system-account
+ 
+-password   include      login
++password   include      system-password
+ -password  optional     pam_gnome_keyring.so use_authtok
+ 
+ -session   optional     pam_systemd.so       class=greeter
+ -session   optional     pam_elogind.so
+-session    include      login
++session    include      system-session
+ -session   optional     pam_gnome_keyring.so auto_start
+ -session   optional     pam_kwallet5.so      auto_start
+diff '--color=auto' -ruN --no-dereference a/res/pam.d/ly-linux-autologin b/res/pam.d/ly-linux-autologin
+--- a/res/pam.d/ly-linux-autologin	2026-10-04 09:14:50.000000000 +0200
++++ b/res/pam.d/ly-linux-autologin	2026-10-17 16:37:31.134000000 +0200
+@@ -4,13 +4,13 @@
+ -auth      optional     pam_gnome_keyring.so
+ -auth      optional     pam_kwallet5.so
+ 
+-account    include      login
++account    include      system-account
+ 
+-password   include      login
++password   include      system-password
+ -password  optional     pam_gnome_keyring.so use_authtok
+ 
+ -session   optional     pam_systemd.so       class=greeter
+ -session   optional     pam_elogind.so
+-session    include      login
++session    include      system-session
+ -session   optional     pam_gnome_keyring.so auto_start
+ -session   optional     pam_kwallet5.so      auto_start

@@ -43,6 +43,8 @@ build() {
     make CFLAGS="${CFLAGS} -fPIC -Wno-implicit-function-declaration"
     make DESTDIR="${PKG}" install
 
-    install -d "${PKG}/usr/lib/sasl2" "${PKG}/var/sasl/saslauthd"
+    install -d "${PKG}/usr/lib/sasl2" \
+        "${PKG}/var/sasl/saslauthd"
+
     do_service saslauthd
 }

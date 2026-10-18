@@ -16,5 +16,5 @@ build() {
     cd "${name}-${version}"
 
     make
-    make DESTDIR="${PKG}" install install-openrc
+    make DESTDIR="${PKG}" install install-systemd
 }

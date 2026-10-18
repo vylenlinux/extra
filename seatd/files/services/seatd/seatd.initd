@@ -1,6 +1,0 @@
-#!/usr/bin/openrc-run
-
-# shellcheck disable=SC2034
-command=/usr/bin/seatd
-command_args="-g seat"
-supervisor=supervise-daemon

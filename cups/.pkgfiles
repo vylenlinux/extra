@@ -8,8 +8,6 @@ drwxr-xr-x root/lp    etc/cups/ppd/
 -rw-r----- root/lp    etc/cups/snmp.conf
 -rw-r----- root/lp    etc/cups/snmp.conf.default
 drwx------ root/lp    etc/cups/ssl/
-drwxr-xr-x root/root    etc/init.d/
--rwxr-xr-x root/root    etc/init.d/cupsd
 drwxr-xr-x root/root    etc/pam.d/
 -rw-r--r-- root/root    etc/pam.d/cups
 drwxr-xr-x root/root    usr/
@@ -107,6 +105,16 @@ lrwxrwxrwx root/root    usr/lib/libcupsimage.so -> libcupsimage.so.2
 -rwxr-xr-x root/root    usr/lib/libcupsimage.so.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/cups.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/cups-lpd.socket
+-rw-r--r-- root/root    usr/lib/systemd/system/cups-lpd@.service
+-rw-r--r-- root/root    usr/lib/systemd/system/cups.path
+-rw-r--r-- root/root    usr/lib/systemd/system/cups.service
+-rw-r--r-- root/root    usr/lib/systemd/system/cups.socket
+-rw-r--r-- root/root    usr/lib/systemd/system/system-cups.slice
+drwxr-xr-x root/root    usr/lib/sysusers.d/
+-rw-r--r-- root/root    usr/lib/sysusers.d/cups.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/cups.desktop

@@ -1,0 +1,23 @@
+diff '--color=auto' -ruN a/contrib/cronie.systemd b/contrib/cronie.systemd
+--- a/contrib/cronie.systemd	2023-10-19 17:56:21.000000000 +0200
++++ b/contrib/cronie.systemd	2026-10-13 23:45:11.370000000 +0200
+@@ -3,7 +3,7 @@
+ After=auditd.service nss-user-lookup.target systemd-user-sessions.service time-sync.target ypbind.service autofs.service
+ 
+ [Service]
+-EnvironmentFile=-/etc/sysconfig/crond
++Environment="CRONDARGS="
+ ExecStart=/usr/sbin/crond -n $CRONDARGS
+ ExecReload=/bin/kill -URG $MAINPID
+ KillMode=process
+diff '--color=auto' -ruN a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2021-03-17 16:53:07.000000000 +0100
++++ b/Makefile.am	2026-10-13 23:45:39.048000000 +0200
+@@ -16,7 +16,6 @@
+ 	COPYING.obstack \
+ 	obstack/obstack.h \
+ 	cronie.init \
+-	crond.sysconfig \
+ 	contrib/anacrontab \
+ 	contrib/0anacron \
+ 	contrib/0hourly \

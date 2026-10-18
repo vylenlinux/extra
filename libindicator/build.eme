@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libindicator
 version=12.10.1
-release=2
+release=1
 source="https://launchpad.net/libindicator/${version%.*}/${version}/+download/${name}-${version}.tar.gz"
 
 build() {

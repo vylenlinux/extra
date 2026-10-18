@@ -1,0 +1,9 @@
+extra-cmake-modules
+kcolorscheme
+kconfig
+kguiaddons
+kiconthemes
+kirigami
+qt6-base
+qt6-declarative
+kquickcharts

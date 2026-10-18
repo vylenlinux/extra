@@ -1,0 +1,10 @@
+#!/bin/sh
+
+post_install() {
+    # Enable socket by default
+    systemctl --global enable pulseaudio.socket
+}
+
+pre_remove() {
+    systemctl --global disable pulseaudio.socket
+}

@@ -22,11 +22,6 @@ build() {
         -Dselinux_module=disabled \
         -Dlibzstd=enabled \
         -Ddconf=enabled \
-        -Dsystemd=disabled \
-        -Dsystemdsystemunitdir='' \
-        -Dsystemduserenvgendir='' \
-        -Dsystemduserunitdir='' \
-        -Dsysusersdir='' \
         -Dgdm_env_file=true \
         -Dtests=false
 

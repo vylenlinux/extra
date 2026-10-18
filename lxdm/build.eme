@@ -8,12 +8,15 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=lxdm
 version=0.5.3
 release=1
-source="https://sourceforge.net/projects/lxde/files/${name}/${name}%20${version}/${name}-${version}.tar.xz"
 backup="etc/${name}/${name}.conf"
+
+source="https://sourceforge.net/projects/lxde/files/${name}/${name}%20${version}/${name}-${version}.tar.xz
+    ${name}-set-path.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/${name}-set-path.patch"
 
     sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in
     sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession
@@ -32,13 +35,13 @@ build() {
         --with-pam \
         --disable-nls \
         --libexecdir="/usr/lib/${name}" \
-        --with-systemdsystemunitdir=no \
         --sysconfdir=/etc \
         --enable-gtk3
 
     make
     make DESTDIR="${PKG}" install
 
-    do_service "${name}"
+    do_sysusers "${name}"
+    do_tmpfiles "${name}"
     do_pam "${name}"
 }

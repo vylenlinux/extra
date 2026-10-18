@@ -1,0 +1,5 @@
+name = "drkonqi"
+provider = "kde"
+
+[kde]
+product = "plasma"

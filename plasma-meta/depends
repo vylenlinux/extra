@@ -2,6 +2,7 @@ bluedevil
 breeze-gtk
 discover
 dolphin
+drkonqi
 kde-gtk-config
 kdeplasma-addons
 kgamma2
@@ -18,6 +19,7 @@ plasma-browser-integration
 plasma-desktop
 plasma-disks
 plasma-firewall
+plasma-login-manager
 plasma-nm
 plasma-pa
 plasma-systemmonitor

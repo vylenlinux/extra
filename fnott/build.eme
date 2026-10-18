@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Keyboard driven and lightweight Wayland notification daemon"
 homepage="https://codeberg.org/dnkl/fnott"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,10 +8,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=fnott
 version=1.8.0
 release=1
-source="$name-$version.tar.gz::https://codeberg.org/dnkl/fnott/archive/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
 
 build() {
-	vylen-meson $name build 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rxvt-unicode
 version=9.31
-release=2
+release=1
 
 source="http://dist.schmorp.de/${name}/Attic/${name}-${version}.tar.bz2
     perl-5.38.patch

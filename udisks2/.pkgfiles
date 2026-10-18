@@ -26,6 +26,11 @@ lrwxrwxrwx root/root    usr/lib/libudisks2.so.0 -> libudisks2.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libudisks2.so.0.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/udisks2.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/udisks2.service
+drwxr-xr-x root/root    usr/lib/tmpfiles.d/
+-rw-r--r-- root/root    usr/lib/tmpfiles.d/udisks2.conf
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/80-udisks2.rules

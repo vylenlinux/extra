@@ -8,14 +8,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=labwc
 version=0.20.2
 release=1
-
-source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${version}.tar.gz
-    ${name}.desktop"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${version}.tar.gz"
 
 build() {
     vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/wayland-sessions/"
 }

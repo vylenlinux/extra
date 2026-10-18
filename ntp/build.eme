@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ntp
 version=4.2.8p18
-release=3
+release=1
 backup="etc/${name}.conf"
 
 source="https://www.eecis.udel.edu/~${name}/${name}_spool/ntp4/${name}-${version%.*}/${name}-${version}.tar.gz
@@ -36,13 +36,16 @@ build() {
         --sysconfdir=/etc \
         --libexecdir=/usr/lib \
         --enable-linuxcaps \
+        --enable-ntp-signd \
         --with-lineeditlibs=readline
 
     make
     make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/${name}.conf" -t "${PKG}/etc/"
-    do_service ntp-client ntpd sntp
+
+    do_service ntpd ntpdate
+    do_sysusers "${name}"
 
     # remove unused (empty) dir
     rmdir "${PKG}/usr/sbin"

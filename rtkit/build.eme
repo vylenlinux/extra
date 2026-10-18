@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Realtime Policy and Watchdog Daemon"
+homepage="https://gitlab.freedesktop.org/pipewire/rtkit"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=rtkit
+version=0.14
+release=1
+source="https://gitlab.freedesktop.org/pipewire/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-v${version}" build -Dinstalled_tests=false
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

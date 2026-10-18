@@ -21,6 +21,7 @@ build() {
         --sysconfdir=/etc \
         --localstatedir=/var \
         --with-udevdir=/usr/lib/udev \
+        --with-systemdsystemunitdir=/usr/lib/systemd/system \
         --disable-static \
         --disable-man
 

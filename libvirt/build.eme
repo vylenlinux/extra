@@ -46,8 +46,18 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    install -Dm644 "${SRC}/libvirtd.conf" "${SRC}/qemu.conf" -t "${PKG}/etc/libvirt/"
-    rm -rf "${PKG}/run"
+    do_sysusers "${name}-qemu"
+    do_tmpfiles "${name}"
 
-    do_service libvirt-guests libvirtd virtlockd virtlogd
+    printf 'u! libvirt-qemu /var/lib/libvirt "Libvirt QEMU user"' >> "${PKG}/usr/lib/sysusers.d/libvirt.conf"
+    printf 'm libvirt-qemu kvm' >> "${PKG}/usr/lib/sysusers.d/libvirt.conf"
+
+    install -Dm644 "${SRC}/libvirtd.conf" "${SRC}/qemu.conf" -t "${PKG}/etc/${name}/"
+
+    rm -rf "${PKG}/run" \
+        "${PKG}/var/lib/${name}/qemu" \
+        "${PKG}/var/cache/${name}/qemu" \
+        "${PKG}/etc/logrotate.d/libvirtd.libxl"
+
+    rm -f "${PKG}/etc/${name}/qemu/networks/autostart/default.xml"
 }

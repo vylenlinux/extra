@@ -1,0 +1,15 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/dbus-broker
+-rwxr-xr-x root/root    usr/bin/dbus-broker-launch
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/catalog/
+-rw-r--r-- root/root    usr/lib/systemd/catalog/dbus-broker-launch.catalog
+-rw-r--r-- root/root    usr/lib/systemd/catalog/dbus-broker.catalog
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/dbus-broker.service
+lrwxrwxrwx root/root    usr/lib/systemd/system/dbus.service -> dbus-broker.service
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/dbus-broker.service
+lrwxrwxrwx root/root    usr/lib/systemd/user/dbus.service -> dbus-broker.service
