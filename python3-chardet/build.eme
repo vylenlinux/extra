@@ -6,17 +6,13 @@ homepage="https://github.com/chardet/chardet"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-chardet
-version=7.6.0
+version=7.7.0
 release=1
-
-_name="${name#*-}"
-_n="${_name%"${_name#?}"}"
-
-source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/${_n}/${name#*-}/${name#*-}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/c/chardet/chardet-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name#*-}-${version}"
+    cd "chardet-${version}"
 
     gpep517 build-wheel \
         --wheel-dir .dist \
