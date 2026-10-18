@@ -32,7 +32,7 @@ build() {
         -Dsystemdsystemunitdir=no \
         -Dtests=no \
         -Dudev_dir=/usr/lib/udev \
-        -Dvapi=false \
+        -Dvapi=true \
         -Dnbft="$(emerald is-installed libnvme && printf "true" || printf "false")"
 
     meson compile -C build
