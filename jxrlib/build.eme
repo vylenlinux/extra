@@ -8,11 +8,14 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=jxrlib
 version=1.4.4
 release=1
-source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz
+    wmspecstringce.h"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    install -Dm644 "${SRC}/wmspecstringce.h" -t common/include/
 
     sed \
         -e "s|^CC=cc|CC=cc ${CFLAGS} ${LDFLAGS}|" \

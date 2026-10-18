@@ -8,6 +8,7 @@ drwxr-xr-x root/root    usr/include/libjxr/common/
 -rw-r--r-- root/root    usr/include/libjxr/common/guiddef.h
 -rw-r--r-- root/root    usr/include/libjxr/common/wmsal.h
 -rw-r--r-- root/root    usr/include/libjxr/common/wmspecstring.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmspecstringce.h
 -rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_adt.h
 -rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_strict.h
 -rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_undef.h
