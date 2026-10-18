@@ -8,9 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=efibootmgr
 version=18
 release=1
-
-source="${name}-${version}.tar.gz::https://github.com/rhboot/${name}/archive/${version}.tar.gz
-    efivar.patch"
+source="${name}-${version}.tar.gz::https://github.com/rhboot/${name}/archive/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
