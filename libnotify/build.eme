@@ -13,9 +13,7 @@ source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${ve
 build() {
     vylen-meson "${name}-${version}" build \
         -Dtests=false \
-        -Dintrospection=auto \
-        -Dman=false \
-        -Dgtk_doc=false \
+        -Dgtk_doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')" \
         -Ddocbook_docs=disabled
 
     meson compile -C build
