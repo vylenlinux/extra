@@ -41,7 +41,7 @@ build() {
     export RUSTFLAGS="${RUSTFLAGS} -C opt-level=2"
     export BUILD_OFFICIAL=1
     export MOZILLA_OFFICIAL=1
-    export MOZ_APP_REMOTINGNAME=firefox
+    export MOZ_APP_REMOTINGNAME="${name}"
     export MOZ_NOSPAM=1
     export MOZBUILD_STATE_PATH="${SRC}/mozbuild"
 
@@ -49,14 +49,15 @@ build() {
     unset CARGO_PROFILE_RELEASE_LTO
 
     # python configuration
-    export SHELL=/usr/bin/sh
+    export SHELL=/bin/sh
     export PIP_NETWORK_INSTALL_RESTRICTED_VIRTUALENVS=mach
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
 
     ./mach build
     DESTDIR="${PKG}" ./mach install
 
-    unset MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE MOZBUILD_STATE_PATH
+    unset MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE \
+        MOZBUILD_STATE_PATH
 
     # vendor
     install -Dm644 "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
