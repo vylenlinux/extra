@@ -8,16 +8,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libnma
 version=1.10.6
 release=1
-source="https://github.com/GNOME/libnma/archive/${version}/${name}-${version}.tar.gz"
+source="https://github.com/GNOME/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-    emerald is-installed vala && _opt="-Dvapi=false"
-
-    vylen-meson "${name}-${version}" build \
-        -Dmobile_broadband_provider_info=false \
-        -Dgtk_doc=false \
-        "${_opt}"
-
+    vylen-meson "${name}-${version}" build -Dgtk_doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')"
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
