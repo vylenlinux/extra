@@ -1,5 +1,6 @@
 name = "libical"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libical"
+owner = "%(name)"
+repo = "%(name)"
