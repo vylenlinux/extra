@@ -1,5 +1,6 @@
 name = "freeimage"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "freeimage"
+owner = "danoli3"
+repo = "%(name)"

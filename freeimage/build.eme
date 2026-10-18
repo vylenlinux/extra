@@ -2,43 +2,29 @@
 
 # shellcheck disable=SC2034
 description="Library project for developers who would like to support popular graphics image formats"
-homepage="http://freeimage.sourceforge.net/"
+homepage="https://github.com/danoli3/FreeImage"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeimage
-version=3.18.0
+version=3.19.25
 release=1
-
-_version="$(printf "%s" "${version}" | sed 's/\.//g')"
-
-source="${name}-${version}.zip::https://downloads.sourceforge.net/project/${name}/Source%20Distribution/${version}/FreeImage${_version}.zip
-    ${name}-unbundle.patch
-    ${name}-libraw-0.20.patch
-    ${name}-libraw-0.21.patch
-    JXRVersion.h"
+source="${name}-${version}.tar.gz::https://github.com/danoli3/${name}/releases/download/${version}/FreeImage-${version}-linux-source.tar.gz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd FreeImage
-    install -Dm644 "${SRC}/JXRVersion.h" -t Source/
+    cmake -S "FreeImage-${version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_STANDARD=20 \
+        -DFREEIMAGE_STATIC=OFF \
+        -DFREEIMAGE_LINUX_PACKAGE_LAYOUT=ON \
+        -DFREEIMAGE_USE_SYSTEM_LIBS=ON \
+        -DBUILD_JXR=ON \
+        -DBUILD_TESTS=OFF \
+        -Wno-author
 
-    rm -r Source/Lib* \
-        Source/ZLib \
-        Source/OpenEXR
-
-    : > Source/FreeImage/PluginG3.cpp
-    : > Source/FreeImageToolkit/JPEGTransform.cpp
-
-    patch -Np1 -i "${SRC}/${name}-unbundle.patch"    # Unbundle libraries
-    patch -Np1 -i "${SRC}/${name}-libraw-0.20.patch" # Fix build with libraw 0.20
-    patch -Np1 -i "${SRC}/${name}-libraw-0.21.patch" # Fix build with libraw 0.21
-
-    sh gensrclist.sh
-    sh genfipsrclist.sh
-
-    make -f Makefile.gnu
-    make -f Makefile.fip
-
-    make -f Makefile.gnu DESTDIR="${PKG}" install
-    make -f Makefile.fip DESTDIR="${PKG}" install INCLUDE="-ISource -IWrapper/FreeImagePlus -IDist"
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }
