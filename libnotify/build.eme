@@ -1,19 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Used to send desktop notifications to a notification daemon"
 homepage="https://gitlab.gnome.org/GNOME/libnotify"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libnotify
-version=0.8.8
+version=0.8.9
 release=1
-source="https://gitlab.gnome.org/GNOME/libnotify/-/archive/$version/$name-$version.tar.gz"
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-		-Dtests=false \
-		-Dintrospection=auto \
-		-Dman=false \
-		-Dgtk_doc=false \
-		-Ddocbook_docs=disabled
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build \
+        -Dtests=false \
+        -Dintrospection=auto \
+        -Dman=false \
+        -Dgtk_doc=false \
+        -Ddocbook_docs=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
