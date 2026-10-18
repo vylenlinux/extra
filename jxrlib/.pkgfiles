@@ -3,21 +3,36 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/JxrDecApp
 -rwxr-xr-x root/root    usr/bin/JxrEncApp
 drwxr-xr-x root/root    usr/include/
-drwxr-xr-x root/root    usr/include/jxrlib/
--rw-r--r-- root/root    usr/include/jxrlib/JXRGlue.h
--rw-r--r-- root/root    usr/include/jxrlib/JXRMeta.h
--rw-r--r-- root/root    usr/include/jxrlib/JXRTest.h
--rw-r--r-- root/root    usr/include/jxrlib/guiddef.h
--rw-r--r-- root/root    usr/include/jxrlib/windowsmediaphoto.h
--rw-r--r-- root/root    usr/include/jxrlib/wmsal.h
--rw-r--r-- root/root    usr/include/jxrlib/wmspecstring.h
--rw-r--r-- root/root    usr/include/jxrlib/wmspecstrings_adt.h
--rw-r--r-- root/root    usr/include/jxrlib/wmspecstrings_strict.h
--rw-r--r-- root/root    usr/include/jxrlib/wmspecstrings_undef.h
+drwxr-xr-x root/root    usr/include/libjxr/
+drwxr-xr-x root/root    usr/include/libjxr/common/
+-rw-r--r-- root/root    usr/include/libjxr/common/guiddef.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmsal.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmspecstring.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_adt.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_strict.h
+-rw-r--r-- root/root    usr/include/libjxr/common/wmspecstrings_undef.h
+drwxr-xr-x root/root    usr/include/libjxr/glue/
+-rw-r--r-- root/root    usr/include/libjxr/glue/JXRGlue.h
+-rw-r--r-- root/root    usr/include/libjxr/glue/JXRMeta.h
+-rw-r--r-- root/root    usr/include/libjxr/glue/JXRVersion.h
+drwxr-xr-x root/root    usr/include/libjxr/image/
+-rw-r--r-- root/root    usr/include/libjxr/image/ansi.h
+-rw-r--r-- root/root    usr/include/libjxr/image/common.h
+-rw-r--r-- root/root    usr/include/libjxr/image/decode.h
+-rw-r--r-- root/root    usr/include/libjxr/image/encode.h
+-rw-r--r-- root/root    usr/include/libjxr/image/memory_lim.h
+-rw-r--r-- root/root    usr/include/libjxr/image/perfTimer.h
+-rw-r--r-- root/root    usr/include/libjxr/image/strTransform.h
+-rw-r--r-- root/root    usr/include/libjxr/image/strcodec.h
+-rw-r--r-- root/root    usr/include/libjxr/image/windowsmediaphoto.h
+drwxr-xr-x root/root    usr/include/libjxr/image/x86/
+-rw-r--r-- root/root    usr/include/libjxr/image/x86/x86.h
+-rw-r--r-- root/root    usr/include/libjxr/image/xplatform_image.h
+drwxr-xr-x root/root    usr/include/libjxr/test/
+-rw-r--r-- root/root    usr/include/libjxr/test/JXRTest.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libjpegxr.so -> libjpegxr.so.0
-lrwxrwxrwx root/root    usr/lib/libjpegxr.so.0 -> libjpegxr.so.0.0.0
--rwxr-xr-x root/root    usr/lib/libjpegxr.so.0.0.0
-lrwxrwxrwx root/root    usr/lib/libjxrglue.so -> libjxrglue.so.0
-lrwxrwxrwx root/root    usr/lib/libjxrglue.so.0 -> libjxrglue.so.0.0.0
--rwxr-xr-x root/root    usr/lib/libjxrglue.so.0.0.0
+-rwxr-xr-x root/root    usr/lib/libjpegxr.so
+-rwxr-xr-x root/root    usr/lib/libjxrglue.so
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libjxr.pc
+drwxr-xr-x root/root    usr/share/

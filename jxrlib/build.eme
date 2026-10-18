@@ -8,25 +8,19 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=jxrlib
 version=1.4.4
 release=1
-
-source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz
-    CMakeLists.txt"
+source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    export CFLAGS="${CFLAGS} \
-        -Wno-implicit-function-declaration \
-        -Wno-incompatible-pointer-types"
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-    mv "${SRC}/CMakeLists.txt" -t "${name}-${version}/"
+    sed \
+        -e "s|^CC=cc|CC=cc ${CFLAGS} ${LDFLAGS}|" \
+        -e "s|@python|@python3|" \
+    -i Makefile
 
-    cmake -S "${name}-${version}" -B build \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
-        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
-        -Wno-author
+    make SHARED=1 DIR_INSTALL=/usr
+    make SHARED=1 DIR_INSTALL="${PKG}/usr" install
 
-    cmake --build build
-    DESTDIR="${PKG}" cmake --install build
+    sed -i -e 's|/build/jxrlib/pkg/jxrlib||' "${PKG}/usr/lib/pkgconfig/libjxr.pc"
 }
