@@ -22,8 +22,10 @@ build() {
         --disable-python
 
     make
-    make DESTDIR="${PKG}" udevdir=/usr/lib/udev install
+    make DESTDIR="${PKG}" install
 
     # install bash completion (FS#44618)
     install -Dm644 btrfs-completion "${PKG}/usr/share/bash-completion/completions/btrfs"
+
+    do_service btrfs-scrub
 }

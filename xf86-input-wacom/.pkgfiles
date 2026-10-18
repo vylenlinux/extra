@@ -12,6 +12,9 @@ drwxr-xr-x root/root    usr/include/xorg/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/xorg-wacom.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/wacom-inputattach@.service
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/wacom.rules

@@ -1,6 +1,5 @@
 alsa-lib
 dbus
-elogind
 glib
 libice
 libsm
@@ -9,6 +8,7 @@ libx11
 libxcb
 libxtst
 perl-xml-parser
+rtkit
 speexdsp
 tdb
 vala

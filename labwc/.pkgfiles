@@ -3,6 +3,10 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/lab-sensible-terminal
 -rwxr-xr-x root/root    usr/bin/labnag
 -rwxr-xr-x root/root    usr/bin/labwc
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/labwc-session.target
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/

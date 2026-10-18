@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gpm
 version=1.20.7
-release=2
+release=1
 backup="etc/gpm-root.conf"
 
 source="https://www.nico.schottelius.org/software/${name}/archives/${name}-${version}.tar.bz2

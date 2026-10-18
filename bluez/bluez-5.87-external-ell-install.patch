@@ -1,0 +1,42 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Sat, 17 Oct 2026 18:26:38 +0200
+Subject: [PATCH] Do not regenerate internal ELL headers with external ELL
+
+The mesh crypto test lists ell/internal and ell/ell.h unconditionally.
+Those source dependencies make Automake regenerate the local ell/ell.h
+during `make install`. In external-ELL mode ell_headers is empty, so the
+resulting zero-byte file shadows the installed /usr/include/ell/ell.h and
+the install-triggered rebuild fails with undeclared ELL APIs.
+
+Use installed ELL headers for the mesh crypto test and generate the local
+umbrella header only when building BlueZ's in-tree ELL copy.
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -800,8 +800,12 @@
+ if MESH
+ unit_tests += unit/test-mesh-crypto
+ unit_test_mesh_crypto_CPPFLAGS = $(ell_cflags)
++if EXTERNAL_ELL
++unit_test_mesh_crypto_SOURCES = unit/test-mesh-crypto.c mesh/crypto.h
++else
+ unit_test_mesh_crypto_SOURCES = unit/test-mesh-crypto.c \
+ 				mesh/crypto.h ell/internal ell/ell.h
++endif
+ unit_test_mesh_crypto_LDADD = $(ell_ldadd)
+ endif
+
+@@ -896,11 +900,13 @@
+ 		fi \
+ 	done > $@
+
++if !EXTERNAL_ELL
+ ell/ell.h: Makefile
+ 	$(AM_V_at)echo -n > $@
+ 	$(AM_V_GEN)for f in $(ell_headers) ; do \
+ 		echo "#include <$$f>" >> $@ ; \
+ 	done
++endif
+
+ maintainer-clean-local:
+ 	-rm -rf ell

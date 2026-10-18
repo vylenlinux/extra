@@ -49,6 +49,9 @@ lrwxrwxrwx root/root    usr/lib/libKF6ScreenDpms.so -> libKF6ScreenDpms.so.8
 lrwxrwxrwx root/root    usr/lib/libKF6ScreenDpms.so.8 -> libKF6ScreenDpms.so.6.8.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/KF6Screen.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/plasma-kscreen.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/

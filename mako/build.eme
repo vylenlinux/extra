@@ -8,10 +8,18 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=mako
 version=1.11.0
 release=1
-source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz
+    systemd-dbus-activation.patch"
 
 build() {
-    vylen-meson "${name}-${version}" build
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/systemd-dbus-activation.patch"
+
+    vylen-meson build -Dsd-bus-provider=libsystemd
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    install -Dm644 contrib/systemd/mako.service -t "${PKG}/usr/lib/systemd/user/"
 }

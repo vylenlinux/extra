@@ -8,7 +8,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=chrony
 version=4.9
 release=1
-source="https://chrony-project.org/releases/${name}-${version}.tar.gz"
+
+source="https://chrony-project.org/releases/${name}-${version}.tar.gz
+    50-chrony.list"
 
 build() {
     # shellcheck disable=SC2164
@@ -20,4 +22,11 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    do_sysusers "${name}"
+    do_tmpfiles "${name}"
+
+    install -Dm644 examples/chronyd.service -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 examples/chrony-wait.service -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm644 "${SRC}/50-${name}.list" -t "${PKG}/usr/lib/systemd/ntp-units.d/"
 }

@@ -22,4 +22,5 @@ build() {
     install -Dm644 trust-anchors.conf -t "${PKG}/usr/share/dnsmasq/"
 
     do_service "${name}"
+    do_sysusers "${name}"
 }

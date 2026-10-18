@@ -28,7 +28,6 @@ build() {
         --with-cupsd-file-perm=0755 \
         --with-cups-user=lp \
         --with-cups-group=lp \
-        --with-system-groups=lpadmin \
         --with-domainsocket=/run/cups/cups.sock \
         --disable-launchd \
         --enable-acl \
@@ -41,8 +40,7 @@ build() {
         --enable-ssl=yes \
         --with-optim="${CFLAGS}" \
         --without-php \
-        --without-rcdir \
-        --without-systemd
+        --without-rcdir
 
     make
     make BUILDROOT="${PKG}" install
@@ -62,5 +60,5 @@ build() {
     chmod -R +w "${PKG}"
 
     do_pam "${name}"
-    do_service cupsd
+    do_sysusers "${name}"
 }

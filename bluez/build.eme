@@ -11,11 +11,15 @@ release=1
 
 source="https://www.kernel.org/pub/linux/bluetooth/${name}-${version}.tar.xz
     rfcomm.conf
-    uart.conf"
+    uart.conf
+    ${name}-${version}-external-ell-install.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
+    patch -Np1 -i "${SRC}/${name}-${version}-external-ell-install.patch"
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
@@ -27,22 +31,20 @@ build() {
         --enable-library \
         --enable-mesh \
         --enable-a2dp \
-        --enable-experimental\
+        --enable-experimental \
         --enable-hid2hci \
         --enable-tools \
-        --disable-systemd \
-        ICAL_LIBS="$(pkgconf --libs libicalvcal)"
+        --enable-systemd \
+        --enable-external-ell
 
     make
     make DESTDIR="${PKG}" install
 
-    ln -sf ../lib/bluetooth/bluetoothd "${PKG}/usr/bin/bluetoothd"
-    ln -sf ../lib/bluetooth/bluetooth-meshd "${PKG}/usr/bin/bluetooth-meshd"
+    ln -s /usr/lib/bluetooth/bluetoothd -t "${PKG}/usr/bin/"
+    ln -s /usr/lib/bluetooth/bluetooth-meshd -t "${PKG}/usr/bin/"
 
     # main configuration
     install -Dm644 src/main.conf -t "${PKG}/etc/bluetooth/"
     install -Dm644 "${SRC}/rfcomm.conf" -t "${PKG}/etc/bluetooth/"
     install -Dm644 "${SRC}/uart.conf" -t "${PKG}/etc/bluetooth/"
-
-    do_service bluetoothd
 }

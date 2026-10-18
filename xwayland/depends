@@ -1,6 +1,5 @@
 dbus
 egl-wayland
-elogind
 libepoxy
 libmd
 libtirpc

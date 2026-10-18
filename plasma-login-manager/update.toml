@@ -1,0 +1,5 @@
+name = "plasma-login-manager"
+provider = "kde"
+
+[kde]
+product = "plasma"

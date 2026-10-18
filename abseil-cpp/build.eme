@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=abseil-cpp
 version=20260817.0
-release=2
+release=1
 source="https://github.com/abseil/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {

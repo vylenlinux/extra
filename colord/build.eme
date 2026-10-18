@@ -15,19 +15,11 @@ build() {
         --libexecdir="/usr/lib/${name}" \
         -Ddaemon_user=colord \
         -Dvapi=true \
-        -Dsystemd=false \
         -Dlibcolordcompat=true \
         -Dargyllcms_sensor=false \
         -Dbash_completion=false \
-        -Ddocs=false \
-        -Dman=false
+        -Ddocs=false
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    # backport
-    if [ -d "${PKG}/lib" ]; then
-        mv "${PKG}/lib/udev" -t "${PKG}/usr/lib/"
-        rmdir "${PKG}/lib"
-    fi
 }

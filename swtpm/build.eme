@@ -27,4 +27,7 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    do_sysusers "${name}"
+    do_tmpfiles "${name}"
 }

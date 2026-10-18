@@ -1,5 +1,3 @@
 boost
 cmake
-python3-gpep517
 python3-scikit-build-core
-python3-wheel

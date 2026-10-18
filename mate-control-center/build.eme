@@ -19,7 +19,6 @@ build() {
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc \
-        --disable-systemd \
         --enable-static=no \
         --disable-update-mimedb
 

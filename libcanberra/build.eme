@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Implementation of the XDG Sound Theme and Name Specifications, for generating event sounds on free desktops"
 homepage="https://0pointer.net/lennart/projects/libcanberra/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,13 +8,32 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libcanberra
 version=0.30
 release=1
-source="http://0pointer.de/lennart/projects/$name/$name-$version.tar.xz"
+
+source="http://0pointer.de/lennart/projects/${name}/${name}-${version}.tar.xz
+    40-${name}-gtk-module.sh
+    https://www.linuxfromscratch.org/patches/blfs/svn/${name}-${version}-wayland-1.patch"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/${name}-${version}-wayland-1.patch"
 
-	./configure --prefix=/usr --disable-oss
-	make
-	make -j1 DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --disable-oss \
+        --with-builtin=dso \
+        --enable-null \
+        --enable-alsa \
+        --enable-pulse \
+        --with-systemdsystemunitdir=/usr/lib/systemd/system
 
+    make
+    make -j1 DESTDIR="${PKG}" install
+
+    # Remove login, logout and system-ready sounds.
+    # We have no sound themes that include these so do not play them.
+    rm -r "${PKG}/usr/share/gnome" \
+        "${PKG}/usr/share/gdm"
+
+    install -Dm755 "${SRC}/40-${name}-gtk-module.sh" -t "${PKG}/etc/X11/xinit/xinitrc.d/"
 }

@@ -13,18 +13,29 @@ source="lvm2-${version}.tgz::https://sourceware.org/pub/lvm2/LVM2.${version}.tgz
 build() {
     # shellcheck disable=SC2164
     cd "LVM2.${version}"
+
     export CONFIG_SHELL=/bin/bash
+    sed -i -e '/^\[Install\]$/,$d' scripts/dm_event_systemd_red_hat.socket.in
 
     ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --libdir=/usr/lib \
         --with-udevdir=/usr/lib/udev \
+        --with-systemdsystemunitdir=/usr/lib/systemd/system \
         --enable-cmdlib \
         --enable-pkgconfig \
         --enable-udev_sync \
+        --enable-dmeventd \
         --enable-write_install
 
     make
-    make DESTDIR="${PKG}" install_device-mapper
+    make DESTDIR="${PKG}" install_device-mapper install_systemd_units
+
+    install -dm755 "${PKG}/usr/lib/systemd/system/sockets.target.wants"
+    ln -sf ../dm-event.socket -t "${PKG}/usr/lib/systemd/system/sockets.target.wants/"
+
+    # moved to lvm2
+    rm -f "${PKG}/usr/lib/systemd/system/blk-availability.service" \
+        "${PKG}/usr/lib/systemd/system"/lvm*
 }

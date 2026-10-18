@@ -19,13 +19,12 @@ build() {
         --libexecdir=/usr/bin \
         --localstatedir=/var \
         --sysconfdir=/etc \
-        --disable-systemd-service
+        --enable-external-ell \
+        --enable-wired \
+        --enable-ofono \
+        --enable-hwsim \
+        --disable-tools
 
     make
     make DESTDIR="${PKG}" install
-
-    install -dm700 "${PKG}/var/lib/iwd" \
-        "${PKG}/etc/iwd"
-
-    do_service "${name}"
 }

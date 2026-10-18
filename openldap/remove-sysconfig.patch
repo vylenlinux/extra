@@ -1,0 +1,13 @@
+diff '--color=auto' -ruN a/servers/slapd/slapd.service b/servers/slapd/slapd.service
+--- a/servers/slapd/slapd.service	2026-09-08 20:00:58.000000000 +0200
++++ b/servers/slapd/slapd.service	2026-10-14 14:08:03.968000000 +0200
+@@ -8,8 +8,7 @@
+ [Service]
+ Type=notify
+ Environment="SLAPD_URLS=ldap:/// ldapi:///" "SLAPD_OPTIONS="
+-EnvironmentFile=/etc/sysconfig/slapd
+-ExecStart=%LIBEXECDIR%/slapd -d 0 -h ${SLAPD_URLS} $SLAPD_OPTIONS
++ExecStart=%LIBEXECDIR%/slapd -d 0 -u ldap -g ldap -h ${SLAPD_URLS} $SLAPD_OPTIONS
+ 
+ [Install]
+ WantedBy=multi-user.target

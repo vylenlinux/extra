@@ -9,20 +9,24 @@ name=smartmontools
 version=7.5
 release=1
 backup="etc/smartd.conf"
-source="https://sourceforge.net/projects/${name}/files/${name}/${version}/${name}-${version}.tar.gz"
+
+source="https://sourceforge.net/projects/${name}/files/${name}/${version}/${name}-${version}.tar.gz
+    remove-sysconfig.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/remove-sysconfig.patch"
 
     ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --sysconfdir=/etc \
-        --with-initscriptdir=no
+        --with-libsystemd=yes \
+        --with-systemdsystemunitdir=/usr/lib/systemd/system \
+        --with-smartdscriptdir=/usr/share/smartmontools \
+        --with-smartdplugindir=/usr/share/smartmontools/smartd_warning.d
 
     make
     make DESTDIR="${PKG}" install
-
-    do_service smartd
 }

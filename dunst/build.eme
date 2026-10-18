@@ -16,7 +16,5 @@ build() {
 
     # shellcheck disable=SC2015
     emerald is-installed wayland && make all || export WAYLAND=0 make
-
     make PREFIX=/usr SYSCONFDIR=/etc DESTDIR="${PKG}" install
-    install -Dm755 dunstify "${PKG}/usr/bin/dunstify"
 }

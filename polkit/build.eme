@@ -8,11 +8,16 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=polkit
 version=128
 release=1
-source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/polkit-org/${name}/archive/refs/tags/${version}.tar.gz
+    0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch
+    0004-agent-helper-Send-standard-error-to-journal.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch"
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0004-agent-helper-Send-standard-error-to-journal.patch"
+
     vylen-meson "${name}-${version}" build \
-        -Dsession_tracking=elogind \
         -Dpam_prefix=/etc/pam.d \
         -Dos_type=lfs
 

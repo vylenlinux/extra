@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt5
 version=5.15.19
-release=2
+release=1
 
 source="${name}-${version}.tar.xz::https://download.qt.io/archive/qt/5.15/${version}/single/qt-everywhere-opensource-src-${version}.tar.xz
     qt5-cflags.patch

@@ -1,6 +1,0 @@
-name = "elogind"
-provider = "github"
-
-[source]
-owner = "elogind"
-repo = "elogind"

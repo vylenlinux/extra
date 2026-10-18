@@ -14,16 +14,18 @@ _gvdb=c6f2359cc1d00f16e0a0e2527fa0bc1882b8b5ab
 
 source="https://github.com/flatpak/xdg-desktop-portal/archive/${version}/${name}-${version}.tar.gz
     https://gitlab.gnome.org/GNOME/libglnx/-/archive/${_glnx}/libglnx-${_glnx}.tar.bz2
-    https://gitlab.gnome.org/GNOME/gvdb/-/archive/${_gvdb}/gvdb-${_gvdb}.tar.bz2"
+    https://gitlab.gnome.org/GNOME/gvdb/-/archive/${_gvdb}/gvdb-${_gvdb}.tar.bz2
+    allow-no-graphical-session-target.patch"
 
 build() {
     mv "libglnx-${_glnx}" "${name}-${version}/subprojects/libglnx"
     mv "gvdb-${_gvdb}" "${name}-${version}/subprojects/gvdb"
 
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/allow-no-graphical-session-target.patch"
+
     vylen-meson "${name}-${version}" build \
         --libexecdir="lib/${name}" \
-        -Dtests=disabled \
-        -Dsystemd=disabled
+        -Dtests=disabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

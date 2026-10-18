@@ -1,0 +1,11 @@
+diff '--color=auto' -ruN a/smartd.service.in b/smartd.service.in
+--- a/smartd.service.in	2025-01-24 15:28:39.000000000 +0100
++++ b/smartd.service.in	2026-10-14 13:39:54.065000000 +0200
+@@ -9,7 +9,6 @@
+ [Service]
+ Type=notify
+ Environment=smartd_opts=''
+-EnvironmentFile=-/usr/local/etc/sysconfig/smartmontools
+ ExecStart=/usr/local/sbin/smartd -n $smartd_opts
+ ExecReload=/bin/kill -HUP $MAINPID
+ 

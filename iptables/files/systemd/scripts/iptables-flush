@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#
+# Usage: iptables-flush [6]
+#
+
+iptables="ip${1}tables"
+
+command -v "$iptables" >/dev/null 2>&1 || {
+    printf 'error: invalid argument\n' >&2
+    exit 1
+}
+
+nft list tables | sed -n "s/^table ip${1} //p" | while IFS= read -r table; do
+    cat "/usr/share/iptables/empty-$table.rules" || exit 1
+done | "${iptables}-restore"

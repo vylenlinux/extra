@@ -1,6 +1,4 @@
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/ld.so.conf.d/
--rw-r--r-- root/root    etc/ld.so.conf.d/discover.conf
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
 -rw-r--r-- root/root    etc/xdg/autostart/org.kde.discover.notifier.desktop

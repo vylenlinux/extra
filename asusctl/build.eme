@@ -22,8 +22,7 @@ build() {
         install-asusctl \
         install-asusd \
         install-asusd_user \
+        install-asus-shutdown \
         install-data-asusd \
         install-data-asusd_user
-
-    do_service asusd
 }

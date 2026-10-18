@@ -3,3 +3,4 @@ fuse
 gdk-pixbuf
 json-glib
 pipewire
+rtkit

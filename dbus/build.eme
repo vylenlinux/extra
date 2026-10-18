@@ -7,13 +7,15 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dbus
 version=1.16.2
-release=2
+release=1
 source="https://${name}.freedesktop.org/releases/${name}/${name}-${version}.tar.xz"
 
 build() {
-    vylen-meson "${name}-${version}" build -Dsystem_pid_file=/run/dbus/dbus.pid
+    vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    do_service "${name}" "${name}.user"
+    # moved to dbus-broker
+    rm -f "${PKG}/usr/lib/systemd/system/dbus.service" \
+        "${PKG}/usr/lib/systemd/user/dbus.service"
 }

@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=krb5
 version=1.22.2
-release=2
+release=1
 
 _version="$(printf "%s" "${version}" | awk -F. '{printf "%s.%s", $1, $2;}')"
 
@@ -22,10 +22,7 @@ build() {
     patch -Np2 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
     patch -Np2 -i "${SRC}/${name}-${version}-openssl4.patch"
 
-    # increases the width of the virtual terminal used for some tests to
-    # prevent some spurious text in the output which is taken as a failure
-    sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test
-    # autoreconf -fi
+    sed -i "/KRB5ROOT=/s/\/local//" util/ac_check_krb5.m4
 
     ./configure \
         --prefix=/usr \
@@ -44,9 +41,11 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    ln -sf libkrb5.so.3.3 "${PKG}/usr/lib/libkrb5.so"
-    ln -sf libk5crypto.so.3.1 "${PKG}/usr/lib/libk5crypto.so"
-    ln -sf libkrb5support.so.0.1 "${PKG}/usr/lib/libkrb5support.so"
+    do_service "${name}-kadmind" "${name}-kdc" "${name}-kpropd"
+
+    install -Dm644 "config-files/${name}.conf" -t "${PKG}/etc/"
+    install -Dm644 config-files/kdc.conf -t "${PKG}/var/lib/krb5kdc/"
+    install -Dm644 util/ac_check_krb5.m4 -t "${PKG}/usr/share/aclocal/"
 
     rm -rf "${PKG}/usr/share/examples" \
         "${PKG}/usr/share/man"/cat* \

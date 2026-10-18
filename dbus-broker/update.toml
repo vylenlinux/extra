@@ -1,0 +1,6 @@
+name = "dbus-broker"
+provider = "github"
+
+[source]
+owner = "bus1"
+repo = "%(name)"

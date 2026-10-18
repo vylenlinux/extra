@@ -1,12 +1,15 @@
 drwxr-xr-x root/root    etc/
+-rw-r--r-- root/root    etc/healthd.conf
 drwxr-xr-x root/root    etc/sensors.d/
 -rw-r--r-- root/root    etc/sensors3.conf
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/fancontrol
+-rwxr-xr-x root/root    usr/bin/healthd
 -rwxr-xr-x root/root    usr/bin/isadump
 -rwxr-xr-x root/root    usr/bin/isaset
 -rwxr-xr-x root/root    usr/bin/pwmconfig
+-rwxr-xr-x root/root    usr/bin/sensord
 -rwxr-xr-x root/root    usr/bin/sensors
 -rwxr-xr-x root/root    usr/bin/sensors-conf-convert
 -rwxr-xr-x root/root    usr/bin/sensors-detect
@@ -18,6 +21,12 @@ drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libsensors.so -> libsensors.so.5
 lrwxrwxrwx root/root    usr/lib/libsensors.so.5 -> libsensors.so.5.0.0
 -rwxr-xr-x root/root    usr/lib/libsensors.so.5.0.0
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/system/
+-rw-r--r-- root/root    usr/lib/systemd/system/fancontrol.service
+-rw-r--r-- root/root    usr/lib/systemd/system/healthd.service
+-rw-r--r-- root/root    usr/lib/systemd/system/lm_sensors.service
+-rw-r--r-- root/root    usr/lib/systemd/system/sensord.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
@@ -32,6 +41,7 @@ drwxr-xr-x root/root    usr/share/man/man8/
 -rw-r--r-- root/root    usr/share/man/man8/isadump.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/isaset.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/pwmconfig.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/sensord.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/sensors-conf-convert.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/sensors-detect.8.gz
 drwxr-xr-x root/root    usr/share/zsh/

@@ -1,0 +1,6 @@
+name = "plocate"
+provider = "ftp"
+
+[ftp]
+url = "https://plocate.sesse.net/download/"
+filename = "%(name)-%(version).tar.gz"

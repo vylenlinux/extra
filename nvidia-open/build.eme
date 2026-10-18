@@ -13,7 +13,9 @@ source="${name}-${version}.run::https://us.download.nvidia.com/XFree86/Linux-x86
     buildmodules-${name}.sh
     prime-run
     10-nvidia-drm-outputclass.conf
-    nvidia.conf"
+    nvidia.conf
+    systemd-homed-override.conf
+    systemd-suspend-override.conf"
 
 build() {
     install_lib() {
@@ -40,6 +42,7 @@ build() {
 
     # shellcheck disable=SC2164
     cd "NVIDIA-Linux-x86_64-${version}"
+    bsdtar -xf nvidia-persistenced-init.tar.bz2
 
     # X driver and GLX extension
     install_lib nvidia_drv.so xorg/modules/drivers/
@@ -213,4 +216,23 @@ build() {
     symlink_lib /usr/lib/libnvidia-nvvm.so
 
     VERSION="${version}" do_revdep
+    do_sysusers "${name}"
+
+    install -Dm755 nvidia-persistenced "${PKG}/usr/bin/nvidia-persistenced"
+    install -Dm644 nvidia-persistenced.1.gz "${PKG}/usr/share/man/man1/nvidia-persistenced.1.gz"
+    install -Dm644 nvidia-persistenced-init/systemd/nvidia-persistenced.service.template "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
+    sed -i 's/__USER__/nvidia-persistenced/' "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
+
+    install -Dm644 systemd/system/*.service -t "${PKG}/usr/lib/systemd/system/"
+    install -Dm755 systemd/system-sleep/nvidia -t "${PKG}/usr/lib/systemd/system-sleep/"
+    install -Dm755 systemd/nvidia-sleep.sh -t "${PKG}/usr/bin/"
+    install -Dm755 nvidia-powerd -t "${PKG}/usr/bin/"
+    install -Dm644 dlsnetparams.csv "${PKG}/usr/share/nvidia/nvidia-powerd/dlsnetparams.csv"
+    install -Dm644 nvidia-dbus.conf "${PKG}/usr/share/dbus-1/system.d/nvidia-dbus.conf"
+
+    install -Dm644 "${SRC}/systemd-homed-override.conf" "${PKG}/usr/lib/systemd/system/systemd-homed.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-suspend.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-suspend-then-hibernate.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-hibernate.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-hybrid-sleep.service.d/10-nvidia-no-freeze-session.conf"
 }

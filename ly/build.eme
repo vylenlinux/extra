@@ -8,25 +8,22 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=ly
 version=1.5.0
 release=1
-source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://codeberg.org/fairyglade/${name}/archive/v${version}.tar.gz
+    ${name}-fix-pam-files.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}"
+    patch -Np1 -i "${SRC}/${name}-fix-pam-files.patch"
 
     zig build \
         --search-prefix /usr \
         --build-id=sha1 \
         \
         -Ddest_directory="${PKG}" \
-        -Dname="ly-dm" \
+        -Dname="${name}-dm" \
         -Dtarget=native \
         -Dcpu=baseline \
         -Doptimize=ReleaseSafe installexe
-
-    # remove unused dir (created for systemd unit service)
-    rm -rf "${PKG}/usr/lib"
-
-    do_service "${name}"
-    do_pam "${name}"
 }

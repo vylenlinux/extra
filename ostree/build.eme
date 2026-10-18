@@ -19,8 +19,7 @@ build() {
         --with-builtin-grub2-mkconfig \
         --with-ed25519-libsodium \
         --with-openssl \
-        --with-curl \
-        --disable-man
+        --with-curl
 
     make
     make DESTDIR="${PKG}" install

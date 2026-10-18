@@ -47,6 +47,10 @@ lrwxrwxrwx root/root    usr/lib/libvte-2.91.so.0 -> libvte-2.91.so.0.8400.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/vte-2.91-gtk4.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/vte-2.91.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+drwxr-xr-x root/root    usr/lib/systemd/user/vte-spawn-.scope.d/
+-rw-r--r-- root/root    usr/lib/systemd/user/vte-spawn-.scope.d/defaults.conf
 -rwxr-xr-x root/root    usr/lib/vte-urlencode-cwd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/

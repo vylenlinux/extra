@@ -1,0 +1,5 @@
+name = "qqc2-breeze-style"
+provider = "kde"
+
+[kde]
+product = "plasma"

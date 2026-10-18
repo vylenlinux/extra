@@ -1,8 +1,6 @@
 graphviz
-python3-jinja2
 python3-magic
 python3-markdown
-python3-markupsafe
 python3-packaging
 python3-pygments
 python3-typogrify

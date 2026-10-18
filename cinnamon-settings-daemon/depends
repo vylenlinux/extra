@@ -2,7 +2,6 @@ cinnamon-desktop
 colord
 cups
 dbus-glib
-elogind
 libcanberra
 libgnomekbd
 libgudev

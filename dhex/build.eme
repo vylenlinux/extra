@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dhex
 version=0.69
-release=2
+release=1
 
 source="${name}-${version}.tar.gz::http://www.dettus.net/${name}/${name}_${version}.tar.gz
     gcc-15-fix.patch"

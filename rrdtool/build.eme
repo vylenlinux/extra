@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Data logging and graphing application"
+homepage="https://www.rrdtool.org"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=rrdtool
+version=1.11.0
+release=1
+source="https://github.com/oetiker/${name}-1.x/releases/download/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    # shellcheck disable=SC2016
+    sed \
+        -e 's|$(PYTHON) -m pip install --upgrade --no-index --no-deps|$(PYTHON) -m installer --destdir=$(DESTDIR)|' \
+        -e '/--no-cache-dir --disable-pip-version-check/d' \
+        -e '/--target=$(DESTDIR)$(libdir)\/python3\/site-packages/d' \
+    -i bindings/Makefile.am
+
+    autoreconf -i
+
+    ./configure \
+        --prefix=/usr \
+        --localstatedir=/var \
+        --disable-rpath \
+        --enable-perl \
+        --enable-perl-site-install \
+        --with-perl-options='INSTALLDIRS=vendor' \
+        --enable-python \
+        --disable-libwrap
+
+    make
+    make DESTDIR="${PKG}" install
+}

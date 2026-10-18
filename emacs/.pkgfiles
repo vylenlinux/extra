@@ -11,10 +11,13 @@ drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/emacs/
 drwxr-xr-x root/root    usr/lib/emacs/31.1/
 drwxr-xr-x root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/
--rw-r--r-- root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/emacs-251add89e7789a9c1291fe03f2a3c477879ab9cc120033bdf8985f75dfd833aa.pdmp
+-rw-r--r-- root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/emacs-4f9c76d16ab67b261230b95ee7a0523d5a67b4129152396c50cd1295d59f5759.pdmp
 -rwxr-xr-x root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/hexl
 -rwxr-xr-x root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/movemail
 -rwxr-xr-x root/root    usr/lib/emacs/31.1/x86_64-pc-linux-gnu/rcs2log
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/emacs.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/emacs-mail.desktop

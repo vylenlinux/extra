@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=links
 version=2.30
-release=2
+release=1
 
 source="http://links.twibright.com/download/${name}-${version}.tar.bz2
     0001-fix-build-with-recent-gcc.patch"

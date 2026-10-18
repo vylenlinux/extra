@@ -31,5 +31,9 @@ build() {
     install -Dm644 contrib/ssh-copy-id.1 -t "${PKG}/usr/share/man/man1/"
 
     sed '/^#ChallengeResponseAuthentication yes$/c ChallengeResponseAuthentication no' -i "${PKG}/etc/ssh/sshd_config"
-    do_service sshd ssh-agent
+
+    do_service user ssh-agent
+    do_service sshd sshdgenkeys
+    do_tmpfiles "${name}"
+    do_pam sshd
 }

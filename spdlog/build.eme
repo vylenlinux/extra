@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spdlog
 version=1.17.0
-release=2
+release=1
 source="https://github.com/gabime/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
@@ -28,5 +28,4 @@ build() {
     DESTDIR="${PKG}" cmake --install build
 
     sed -e 's|.*#define SPDLOG_FMT_EXTERNAL|#define SPDLOG_FMT_EXTERNAL|' -i "${PKG}/usr/include/spdlog/tweakme.h"
-    rm -f "${PKG}/usr/include/spdlog/sinks/systemd_sink.h"
 }

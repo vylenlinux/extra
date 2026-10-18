@@ -8,11 +8,14 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=samba
 version=4.25.0
 release=1
-source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz"
+
+source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz
+    remove-sysconfig.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/remove-sysconfig.patch"
 
     ./configure \
         --prefix=/usr \
@@ -27,7 +30,8 @@ build() {
         --bundled-libraries=!tdb,!talloc \
         --enable-fhs \
         --without-json \
-        --without-systemd \
+        --with-systemd \
+        --systemd-install-services \
         --without-ad-dc \
         --without-ads \
         --without-ldap
@@ -40,6 +44,6 @@ build() {
 
     install -Dm644 examples/smb.conf.default -t "${PKG}/etc/${name}/"
 
-    do_service "${name}"
+    do_tmpfiles "${name}"
     do_pam "${name}"
 }

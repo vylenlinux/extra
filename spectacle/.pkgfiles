@@ -8,6 +8,9 @@ drwxr-xr-x root/root    usr/lib/kconf_update_bin/
 -rwxr-xr-x root/root    usr/lib/kconf_update_bin/spectacle-24.02.0-keep_old_save_location
 -rwxr-xr-x root/root    usr/lib/kconf_update_bin/spectacle-24.02.0-rename_settings
 -rwxr-xr-x root/root    usr/lib/kconf_update_bin/spectacle-24.02.0-video_format
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/app-org.kde.spectacle.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rwxr-xr-x root/root    usr/share/applications/org.kde.spectacle.desktop
