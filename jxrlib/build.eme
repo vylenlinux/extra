@@ -22,5 +22,5 @@ build() {
     make SHARED=1 DIR_INSTALL=/usr
     make SHARED=1 DIR_INSTALL="${PKG}/usr" install
 
-    sed -i -e 's|/build/jxrlib/pkg/jxrlib||' "${PKG}/usr/lib/pkgconfig/libjxr.pc"
+    sed -i 's|^prefix=.*|prefix=/usr|' "${PKG}/usr/lib/pkgconfig/libjxr.pc"
 }
