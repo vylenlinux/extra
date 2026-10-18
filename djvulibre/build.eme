@@ -6,19 +6,18 @@ homepage="https://djvu.sourceforge.net"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=djvulibre
-version=3.5.30
+version=3.5.30.1
 release=1
-source="https://sourceforge.net/projects/djvu/files/DjVuLibre/${version}/${name}-${version}.tar.gz"
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
-        --libdir=/usr/lib \
-        --disable-static \
-        --disable-desktopfiles
+        --libdir=/usr/lib
 
     make
     make DESTDIR="${PKG}" install
