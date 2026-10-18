@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Parse gdb machine interface output with Python"
+homepage="https://github.com/cs01/pygdbmi"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-pygdbmi
+version=0.11.0.0
+release=1
+source="https://github.com/cs01/pygdbmi/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "pygdbmi-${version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
