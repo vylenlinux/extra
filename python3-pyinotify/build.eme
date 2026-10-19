@@ -5,7 +5,7 @@ description="Linux filesystem events monitoring"
 homepage="https://pypi.org/project/pyinotify"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=python3-inotify
+name=python3-pyinotify
 version=0.9.6
 release=1
 source="${name}-${version}.tar.gz::https://github.com/seb-m/pyinotify/archive/refs/tags/${version}.tar.gz"

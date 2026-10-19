@@ -1,4 +1,4 @@
-name = "python3-inotify"
+name = "python3-pyinotify"
 provider = "pypi"
 
 [source]
