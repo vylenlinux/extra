@@ -1,0 +1,5 @@
+name = "dbus-python"
+provider = "pypi"
+
+[source]
+package = "%(name)"

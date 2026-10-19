@@ -1,5 +1,0 @@
-name = "python3-dbus"
-provider = "pypi"
-
-[source]
-package = "dbus-python"

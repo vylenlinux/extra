@@ -5,17 +5,17 @@ description="Python3 bindings to the D-Bus"
 homepage="http://dbus.freedesktop.org/releases/dbus-python"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=python3-dbus
+name=dbus-python
 version=1.5.0
 release=1
-source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/dbus/dbus-python/-/archive/dbus-python-${version}/dbus-python-dbus-python-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/dbus/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.gz"
 
 build() {
-    vylen-meson "dbus-python-dbus-python-${version}" build -Dtests=disabled
+    vylen-meson "${name}-${name}-${version}" build -Dtests=disabled
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    python3 "dbus-python-dbus-python-${version}/tools/generate-pkginfo.py" "${version}" PKG-INFO
+    python3 "${name}-${name}-${version}/tools/generate-pkginfo.py" "${version}" PKG-INFO
     python3 -m compileall -d /usr/lib "${PKG}/usr/lib"
     python3 -O -m compileall -d /usr/lib "${PKG}/usr/lib"
 }
