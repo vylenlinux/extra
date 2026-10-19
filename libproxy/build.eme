@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Automatic proxy configuration management library"
 homepage="https://libproxy.github.io/libproxy/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,12 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libproxy
 version=0.5.12
 release=1
-source="https://github.com/libproxy/libproxy/archive/$version/$name-$version.tar.gz"
+source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	vylen-meson $name-$version build \
-		-D release=1true \
-	        -D docs=false
-	meson compile -C build
-	DESTDIR=$PKG meson install -C build
+    vylen-meson "${name}-${version}" build \
+        -Drelease=true \
+        -Ddocs=false
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install -C build
 }
