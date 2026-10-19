@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/pub/software/network/ethtool/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ethtool
-version=7.1
+version=7.2
 release=1
 source="https://git.kernel.org/pub/scm/network/${name}/${name}.git/snapshot/${name}-${version}.tar.gz"
 
