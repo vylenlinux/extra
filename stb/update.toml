@@ -1,5 +1,8 @@
 name = "stb"
-provider = "repology"
+provider = "git"
 
 [source]
-package = "stb"
+url = "https://github.com/nothings/%(name)"
+
+[git]
+field = "version"

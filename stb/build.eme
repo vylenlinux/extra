@@ -6,16 +6,15 @@ homepage="https://github.com/nothings/stb"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=stb
-version=20260802
+version=a7d4c21
 release=1
-
-commit=2c980bb59875b0d32144a71867fbdebb2f77cd20
-source="https://github.com/nothings/${name}/archive/${commit}/${name}-${version}.tar.gz"
+source="https://github.com/nothings/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${commit}"
+    cd "${name}-${version}"*
 
-    # shellcheck disable=SC2035
-    install -Dm644 *.c *.h deprecated/stb_image_resize.h -t "${PKG}/usr/include/${name}/"
+    for file in *.h *.c deprecated/stb_image_resize.h; do
+        install -Dm644 "${file}" -t "${PKG}/usr/include/${name}/"
+    done
 }
