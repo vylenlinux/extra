@@ -2,17 +2,17 @@
 
 # shellcheck disable=SC2034
 description="Front-end to an XSL toolchain"
-homepage="https://pagure.io/xmlto"
+homepage="https://codeberg.org/xmlto/xmlto"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xmlto
 version=0.0.29
 release=1
-source="https://releases.pagure.org/${name}/${name}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/${name}/${name}/archive/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}"
 
     autoreconf -fi
     ./configure --prefix=/usr
