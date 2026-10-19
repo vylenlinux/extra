@@ -2,5 +2,5 @@ name = "xfsprogs"
 provider = "ftp"
 
 [ftp]
-url = "https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/"
-filename = "xfsprogs-%(version).tar.xz"
+url = "https://www.kernel.org/pub/linux/utils/fs/xfs/%(name)/"
+filename = "%(name)-%(version).tar.xz"
