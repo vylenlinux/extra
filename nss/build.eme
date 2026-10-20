@@ -6,7 +6,7 @@ homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nss
-version=3.131
+version=3.131.1
 release=1
 
 source="https://ftp.mozilla.org/pub/security/${name}/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz
@@ -38,8 +38,8 @@ build() {
     done
 
     install -dm755 "${PKG}/usr/include/nss"
-    cp -RL public/nss/* "${PKG}/usr/include/nss"
-    cp -RL private/nss/* "${PKG}/usr/include/nss"
+    cp -RL public/nss/* -t "${PKG}/usr/include/nss/"
+    cp -RL private/nss/* -t "${PKG}/usr/include/nss/"
     chmod 644 "${PKG}/usr/include/nss"/*
 
     for xx in certutil nss-config pk12util; do
