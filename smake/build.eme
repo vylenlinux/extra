@@ -15,11 +15,9 @@ source="schilytools-${version}.tar.gz::https://codeberg.org/schilytools/schilyto
 build() {
     # shellcheck disable=SC2164
     cd schilytools
-
-    find . -type f -exec sed -i 's|share/lib/smake/|share/smake|g' {} +
     (cd psmake && sh ./MAKE-all)
 
-    install -Dm755 psmake/smake "${PKG}/usr/bin/smake"
-    install -Dm644 smake/defaults.smk "${PKG}/usr/share/smake/defaults.smk"
-    install -Dm644 smake/smake.1 "${PKG}/usr/share/man/man1/smake.1"
+    install -Dm755 "psmake/${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 "${name}/defaults.smk" -t "${PKG}/usr/share/lib/${name}/"
+    install -Dm644 "${name}/${name}.1" -t "${PKG}/usr/share/man/man1/"
 }
