@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Barcode encoding library supporting over 50 symbologies"
 homepage="https://zint.org.uk/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,22 +8,23 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=zint
 version=2.16.0
 release=1
-source="https://downloads.sourceforge.net/zint/zint-$version-src.tar.gz"
+source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/${name}/${name}-${version}-src.tar.gz"
 
 build() {
-	cmake -S $name-$version-src -B build zint \
-	        -D CMAKE_INSTALL_PREFIX=/usr \
-	        -D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-	        -D CMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-	        -D ZINT_QT6=ON \
-	        -Wno-author
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
-	rm "$PKG/usr/bin/zint-qt" \
-        "$PKG/usr/include/qzint.h" \
-        "$PKG/usr/lib/libQZint"*
-	DESTDIR="$PKG" cmake --install build/backend_qt
-    DESTDIR="$PKG" cmake --install build/frontend_qt
+    cmake -S "${name}-${version}-src" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DZINT_QT6=ON \
+        -Wno-author
 
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 
+    rm "${PKG}/usr/bin/zint-qt" \
+        "${PKG}/usr/include/qzint.h" \
+        "${PKG}/usr/lib/libQZint"*
+
+    DESTDIR="${PKG}" cmake --install build/backend_qt
+    DESTDIR="${PKG}" cmake --install build/frontend_qt
 }
