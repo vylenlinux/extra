@@ -1,5 +1,0 @@
-name = "python3-magic"
-provider = "pypi"
-
-[source]
-package = "python-magic"

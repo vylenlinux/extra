@@ -5,7 +5,7 @@ description="A python wrapper for libmagic"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/ahupp/python-magic"
 
-name=python3-magic
+name=python3-python-magic
 version=0.4.27
 release=1
 source="${name}-${version}.tar.gz::https://github.com/ahupp/python-magic/archive/refs/tags/${version}.tar.gz"
