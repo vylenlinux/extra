@@ -1,0 +1,7 @@
+name = "smake"
+provider = "codeberg"
+dedup = "schilytools"
+
+[source]
+owner = "schilytools"
+repo = "schilytools"
