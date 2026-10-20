@@ -6,18 +6,20 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=linux
-version=7.3
+version=7.3.0
 release=1
 
-source="https://cdn.kernel.org/pub/${name}/kernel/v${version%%.*}.x/${name%-*}-${version}.tar.xz
+_version="${version%.0}"
+
+source="https://cdn.kernel.org/pub/${name}/kernel/v${version%%.*}.x/${name%-*}-${_version}.tar.xz
     x86_64-dotconfig"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "${name}-${_version}"
     make mrproper
 
-    cbuild_restore "${SRC}/${name}-${version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
+    cbuild_restore "${SRC}/${name}-${_version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     # shellcheck disable=SC2153
@@ -34,7 +36,7 @@ build() {
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}/usr" modules_install
 
-    cbuild_save "${SRC}/${name}-${version}/.config"
+    cbuild_save "${SRC}/${name}-${_version}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
@@ -86,7 +88,7 @@ build() {
 
     kernel_version="$(make -s kernelrelease)"
     rm -f "${PKG}/usr/lib/modules/${kernel_version}/build"
-    mv "${SRC}/${name}-${version}" "${PKG}/usr/lib/modules/${kernel_version}/build"
+    mv "${SRC}/${name}-${_version}" "${PKG}/usr/lib/modules/${kernel_version}/build"
     ln -s build "${PKG}/usr/lib/modules/${kernel_version}/source"
 
     # remove now broken symlinks
