@@ -1,6 +1,6 @@
 #%PAM-1.0
-#
-# /etc/pam.d/kde - kde service module configuration
-#
 
-auth    include    system-auth
+auth      include  system-auth
+account   include  system-account
+password  include  system-password
+session   include  system-session

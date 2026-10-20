@@ -1,6 +1,8 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/pam.d/
 -rw-r--r-- root/root    etc/pam.d/kde
+-rw-r--r-- root/root    etc/pam.d/kde-fingerprint
+-rw-r--r-- root/root    etc/pam.d/kde-smartcard
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ck-unlock-session
@@ -22,8 +24,8 @@ drwxr-xr-x root/root    usr/lib/cmake/ScreenSaverDBusInterface/
 -rwxr-xr-x root/root    usr/lib/kscreenlocker_greet
 -rwxr-xr-x root/root    usr/lib/kscreenlocker_worker
 lrwxrwxrwx root/root    usr/lib/libKScreenLocker.so -> libKScreenLocker.so.6
-lrwxrwxrwx root/root    usr/lib/libKScreenLocker.so.6 -> libKScreenLocker.so.6.8.0
--rwxr-xr-x root/root    usr/lib/libKScreenLocker.so.6.8.0
+lrwxrwxrwx root/root    usr/lib/libKScreenLocker.so.6 -> libKScreenLocker.so.6.8.1
+-rwxr-xr-x root/root    usr/lib/libKScreenLocker.so.6.8.1
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/plasma/

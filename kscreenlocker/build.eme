@@ -6,7 +6,7 @@ homepage="https://kde.org/plasma-desktop/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kscreenlocker
-version=6.8.0
+version=6.8.1
 release=1
 source="https://download.kde.org/stable/plasma/${version}/${name}-${version}.tar.xz"
 
@@ -24,5 +24,5 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    do_pam kde
+    do_pam kde kde-fingerprint kde-smartcard
 }
