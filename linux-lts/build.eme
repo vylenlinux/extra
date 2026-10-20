@@ -9,15 +9,17 @@ name=linux-lts
 version=6.18.57
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${version}.tar.xz
+_version="${version%.0}"
+
+source="https://cdn.kernel.org/pub/linux/kernel/v${version%%.*}.x/linux-${_version}.tar.xz
     x86_64-dotconfig"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name%-*}-${version}"
+    cd "${name%-*}-${_version}"
     make mrproper
 
-    cbuild_restore "${SRC}/${name}-${version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
+    cbuild_restore "${SRC}/${name}-${_version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     # shellcheck disable=SC2153
@@ -34,7 +36,7 @@ build() {
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}/usr" modules_install
 
-    cbuild_save "${SRC}/${name%-*}-${version}/.config"
+    cbuild_save "${SRC}/${name%-*}-${_version}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"
@@ -86,7 +88,7 @@ build() {
 
     kernel_version="$(make -s kernelrelease)"
     rm "${PKG}/usr/lib/modules/${kernel_version}/build"
-    mv "${SRC}/linux-${version}" "${PKG}/usr/lib/modules/${kernel_version}/build"
+    mv "${SRC}/linux-${_version}" "${PKG}/usr/lib/modules/${kernel_version}/build"
     ln -s build "${PKG}/usr/lib/modules/${kernel_version}/source"
 
     # remove now broken symlinks
