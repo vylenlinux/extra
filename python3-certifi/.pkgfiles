@@ -2,11 +2,11 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/certifi-2026.10.18.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.18.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.18.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.18.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.18.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/certifi-2026.10.19.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.19.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.19.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.19.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi-2026.10.19.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/certifi/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi/__init__.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/certifi/__main__.py
