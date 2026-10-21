@@ -1,22 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="sphinx extension which renders display math in HTML via JavaScript"
 homepage="https://github.com/sphinx-doc/sphinxcontrib-jsmath/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sphinxcontrib-jsmath
-version=1.0.1
+version=2.0.0
 release=1
-source="$name-$version.tar.gz::https://github.com/sphinx-doc/${name#*-}/archive/$version/${name#*-}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/sphinx-doc/sphinxcontrib-jsmath/archive/${version}/sphinxcontrib-jsmath-${version}.tar.gz"
 
 build() {
-	cd ${name#*-}-$version
+    # shellcheck disable=SC2164
+    cd "sphinxcontrib-jsmath-${version}"
 
-	sed -i '/^tag_build =/s/= .*$/=/' setup.cfg
-	sed -i '/^tag_date =/s/true/false/' setup.cfg
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-	/usr/bin/python3 setup.py build
-	/usr/bin/python3 setup.py install \
-		--prefix=/usr \
-		--root=$PKG --skip-build
-
-	chmod -R go-w,a+r,u+w $PKG
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
