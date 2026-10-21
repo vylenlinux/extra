@@ -3,3 +3,6 @@ provider = "git"
 
 [source]
 url = "https://github.com/tdlib/%(name)"
+
+[git]
+field = "version"
