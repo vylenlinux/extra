@@ -6,13 +6,14 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=php
-version=8.5.11
+version=8.5.12
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    export EXTENSION_DIR=/usr/lib/php/extensions
 
     PHP_CONFIG="--prefix=/usr \
         --mandir=/usr/share/man \
@@ -65,12 +66,11 @@ build() {
         --with-zlib"
 
     # shellcheck disable=SC2086
-    EXTENSION_DIR=/usr/lib/php/extensions ./configure \
+    ./configure \
         ${PHP_CONFIG} \
         ${PHP_SHARED} \
         --enable-cli \
-        --disable-cgi \
-        --with-readline
+        --disable-cgi
 
     make
     make INSTALL_ROOT="${PKG}" install
@@ -80,7 +80,4 @@ build() {
 
     install -d "${PKG}/etc/php/conf.d"
     install -m644 php.ini-* -t "${PKG}/etc/php/"
-
-    rm -rf "${PKG}/run" \
-        "${PKG}/var/run"
 }
