@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lmdb
 version=1.0.2
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://git.openldap.org/openldap/openldap/-/archive/LMDB_${version}/openldap-LMDB_${version}.tar.gz"
 
 build() {
@@ -16,4 +16,6 @@ build() {
 
     make
     make prefix="${PKG}/usr" install
+
+    install -Dm644 "${name}.pc" -t "${PKG}/usr/lib/pkgconfig/"
 }
