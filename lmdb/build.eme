@@ -6,8 +6,8 @@ homepage="https://github.com/LMDB/lmdb"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lmdb
-version=1.0.2
-release=2
+version=1.0.3
+release=1
 source="${name}-${version}.tar.gz::https://git.openldap.org/openldap/openldap/-/archive/LMDB_${version}/openldap-LMDB_${version}.tar.gz"
 
 build() {
