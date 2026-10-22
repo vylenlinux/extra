@@ -13,6 +13,12 @@ source="${name}-${version}.tar.gz::https://github.com/${name}/${name}-py3/archiv
 build() {
     # shellcheck disable=SC2164
     cd "${name}-py-${version}"
+
+    sed \
+        -e '/^build: /a \\tpython3 -m build -wn' \
+        -e '/pip install/{s#pip install --root#installer -d#;s#\.$#dist/*.whl#}' \
+    -i Makefile.in
+
     autoconf
 
     ./configure \
@@ -21,4 +27,6 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    install -Dm644 doc/*.1 -t "${PKG}/usr/share/man/man1/"
 }
