@@ -1,24 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Brotli compression library"
 homepage="https://github.com/google/brotli"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=brotli
-version=1.2.0
+version=1.2.1
 release=1
-source="https://github.com/google/$name/archive/v$version/$name-v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
-	cmake -S $name-$version -B build -G Ninja \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D BUILD_SHARED_LIBS=True
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DBUILD_SHARED_LIBS=True \
+        -Wno-author
 
-	cd $name-$version
-	/usr/bin/python3 setup.py build
-	/usr/bin/python3 setup.py install \
-		--prefix=/usr --root=$PKG --optimize=1
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    python3 setup.py build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}" \
+        --optimize=1
 }
