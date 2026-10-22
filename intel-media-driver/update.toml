@@ -1,5 +1,11 @@
 name = "intel-media-driver"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "intel-media-driver"
+owner = "intel"
+repo = "media-driver"
+
+[github]
+use_releases = false
+use_tags = true
+tag_prefix = "intel-media-26."
