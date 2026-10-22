@@ -6,7 +6,7 @@ homepage="https://www.ruby-lang.org/en/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ruby
-version=4.0.7
+version=4.0.8
 release=1
 source="https://cache.ruby-lang.org/pub/${name}/${version%.*}/${name}-${version}.tar.xz"
 
@@ -26,7 +26,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    # https://bugs.ruby-lang.org/issues/20721 remove with 3.3.6
-    rm -f "${PKG}/usr/bin"/*.lock
 }
