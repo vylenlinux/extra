@@ -6,9 +6,9 @@ homepage="https://xorg.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xkeyboard-config
-version=2.48
+version=2.49
 release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.bz2"
+source="${name}-${version}.tar.bz2::https://gitlab.freedesktop.org/${name}/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.bz2"
 
 build() {
     vylen-meson "${name}-${name}-${version}" build \
