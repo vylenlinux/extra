@@ -6,7 +6,7 @@ homepage="https://github.com/Tomas-M/iotop"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=iotop
-version=1.32
+version=1.33
 release=1
 source="${name}-${version}.tar.gz::https://github.com/Tomas-M/${name}/archive/refs/tags/v${version}.tar.gz"
 
