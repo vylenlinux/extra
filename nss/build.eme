@@ -6,7 +6,7 @@ homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nss
-version=3.131.1
+version=3.132
 release=1
 
 source="https://ftp.mozilla.org/pub/security/${name}/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz
