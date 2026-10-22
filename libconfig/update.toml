@@ -1,5 +1,6 @@
 name = "libconfig"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libconfig-hyperrealm"
+owner = "hyperrealm"
+repo = "libconfig"
