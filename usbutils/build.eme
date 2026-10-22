@@ -6,11 +6,9 @@ homepage="https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usbutils.git/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=usbutils
-version=019
+version=020
 release=1
-
-source="https://www.kernel.org/pub/linux/utils/usb/${name}/${name}-${version}.tar.xz
-    http://www.linux-usb.org/usb.ids"
+source="https://www.kernel.org/pub/linux/utils/usb/${name}/${name}-${version}.tar.xz"
 
 build() {
     vylen-meson "${name}-${version}" build
