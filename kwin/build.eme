@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="Easy to use, but flexible, X Window Manager and Wayland Compositor"
+description="An easy to use, but flexible, Wayland compositor"
 homepage="https://kde.org/plasma-desktop/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
