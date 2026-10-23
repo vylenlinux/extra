@@ -1,6 +1,4 @@
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/pam.d/
--rw-r--r-- root/root    etc/pam.d/mate-screensaver
 drwxr-xr-x root/root    etc/xdg/
 drwxr-xr-x root/root    etc/xdg/autostart/
 -rw-r--r-- root/root    etc/xdg/autostart/mate-screensaver.desktop
@@ -20,6 +18,8 @@ drwxr-xr-x root/root    usr/lib/mate-screensaver/
 -rwxr-xr-x root/root    usr/lib/mate-screensaver/popsquares
 -rwxr-xr-x root/root    usr/lib/mate-screensaver/slideshow
 -rwxr-xr-x root/root    usr/lib/mate-screensaver/starfield
+drwxr-xr-x root/root    usr/lib/pam.d/
+-rw-r--r-- root/root    usr/lib/pam.d/mate-screensaver
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/mate-screensaver.pc
 drwxr-xr-x root/root    usr/share/

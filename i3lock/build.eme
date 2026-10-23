@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Improved screenlocker based upon XCB and PAM"
 homepage="https://i3wm.org/i3lock"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,16 +8,14 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=i3lock
 version=2.16
 release=1
-backup="etc/pam.d/i3lock"
-source="https://i3wm.org/i3lock/$name-$version.tar.xz"
+
+source="https://i3wm.org/${name}/${name}-${version}.tar.xz
+    pam-config.patch"
 
 build() {
-	cd $name-$version
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/pam-config.patch"
 
-	# Fix ticket FS#31544, sed line taken from gentoo
-	sed -i -e 's:login:system-auth:' pam/i3lock
-
-	vylen-meson build
-        meson compile -C build
-        DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

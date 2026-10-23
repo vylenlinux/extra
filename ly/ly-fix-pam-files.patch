@@ -42,3 +42,15 @@ diff '--color=auto' -ruN --no-dereference a/res/pam.d/ly-linux-autologin b/res/p
 +session    include      system-session
  -session   optional     pam_gnome_keyring.so auto_start
  -session   optional     pam_kwallet5.so      auto_start
+diff '--color=auto' -ruN --no-dereference a/install.zig b/install.zig
+--- a/install.zig	2026-10-04 09:14:50.000000000 +0200
++++ b/install.zig	2026-10-23 16:03:40.626000000 +0200
+@@ -198,7 +198,7 @@
+     }
+
+     {
+-        const pam_path = try std.Io.Dir.path.join(allocator, &[_][]const u8{ dest_directory, config_directory, "/pam.d" });
++        const pam_path = try std.Io.Dir.path.join(allocator, &[_][]const u8{ dest_directory, prefix_directory, "/lib/pam.d" });
+         defer allocator.free(pam_path);
+
+         std.Io.Dir.cwd().createDirPath(io, pam_path) catch {

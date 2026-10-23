@@ -17,10 +17,7 @@ build() {
     patch -d "${name}-${version}" -Np1 -i "${SRC}/0003-meson-Enable-socket-activated-agent-helper-by-defaul.patch"
     patch -d "${name}-${version}" -Np1 -i "${SRC}/0004-agent-helper-Send-standard-error-to-journal.patch"
 
-    vylen-meson "${name}-${version}" build \
-        -Dpam_prefix=/etc/pam.d \
-        -Dos_type=lfs
-
+    vylen-meson "${name}-${version}" build -Dos_type=lfs
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 

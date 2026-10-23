@@ -48,7 +48,8 @@ build() {
     # cleanup
     rm -rf "${PKG}/tmp" \
         "${PKG}/run" \
-        "${PKG}/var/run"
+        "${PKG}/var/run" \
+        "${PKG}/etc/pam.d"
 
     ## no longer works since CUPS >= 1.6 (http://www.cups.org/str.php?L4120)
     rm -rf "${PKG}/usr/share/cups/banners"/* \

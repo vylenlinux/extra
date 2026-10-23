@@ -21,11 +21,12 @@ build() {
     sed -i 's:sysconfig/i18n:profile.d/i18n.sh:g' data/lxdm.in
     sed -i 's:/etc/xprofile:/etc/profile:g' data/Xsession
 
-    sed -e 's/^bg/#&/' \
+    sed \
+        -e 's/^bg/#&/' \
         -e '/reset=1/ s/# //' \
         -e 's/logou$/logout/' \
         -e "/arg=/a arg=/usr/bin/X" \
-        -i data/lxdm.conf.in
+    -i data/lxdm.conf.in
 
     autoreconf -fi
 
@@ -40,6 +41,8 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    rm -rf "${PKG}/etc/pam.d"
 
     do_sysusers "${name}"
     do_tmpfiles "${name}"

@@ -48,5 +48,5 @@ build() {
     install -Dm644 contrib/0hourly -t "${PKG}/etc/cron.d/"
     install -Dm755 contrib/0anacron -t "${PKG}/etc/cron.hourly/"
     install -Dm644 contrib/cronie.systemd "${PKG}/usr/lib/systemd/system/${name}.service"
-    install -Dm644 pam/crond -t "${PKG}/etc/pam.d/"
+    install -Dm644 pam/crond -t "${PKG}/usr/lib/pam.d/"
 }

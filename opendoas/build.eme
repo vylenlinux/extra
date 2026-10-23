@@ -26,5 +26,8 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
+    rm -rf "${PKG}/etc/pam.d"
+
     install -Dm644 "${SRC}/doas.conf" -t "${PKG}/etc/"
+    do_pam doas
 }

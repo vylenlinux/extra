@@ -1,6 +1,4 @@
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/pam.d/
--rw-r--r-- root/root    etc/pam.d/sudo
 -rw-r--r-- root/root    etc/sudo.conf
 -rw-r--r-- root/root    etc/sudo_logsrvd.conf
 drwxr-x--- root/root    etc/sudoers.d/
@@ -18,6 +16,8 @@ lrwxrwxrwx root/root    usr/bin/sudoedit -> sudo
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/sudo_plugin.h
 drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/pam.d/
+-rw-r--r-- root/root    usr/lib/pam.d/sudo
 drwxr-xr-x root/root    usr/lib/sudo/
 -rw-r--r-- root/root    usr/lib/sudo/audit_json.so
 -rw-r--r-- root/root    usr/lib/sudo/group_file.so

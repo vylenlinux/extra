@@ -11,7 +11,7 @@ release=1
 source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    vylen-meson "${name}-${version}" build -Ddefault_library=both
+    vylen-meson "${name}-${version}" build -Dpam-prefix=/usr/lib/pam.d
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

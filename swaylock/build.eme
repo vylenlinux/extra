@@ -8,9 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=swaylock
 version=1.8.6
 release=1
-source="https://github.com/swaywm/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+source="https://github.com/swaywm/${name}/archive/v${version}/${name}-${version}.tar.gz
+    pam-config.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/pam-config.patch"
+
     vylen-meson "${name}-${version}" build \
         -Dpam=enabled \
         -Dbash-completions="$(emerald is-installed bash-completions && printf "true" || printf "false")" \
@@ -19,7 +23,4 @@ build() {
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    # Adapt pam file to vylen
-    sed -i 's|login|system-auth|' "${PKG}/etc/pam.d/swaylock"
 }

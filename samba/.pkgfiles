@@ -1,6 +1,4 @@
 drwxr-xr-x root/root    etc/
-drwxr-xr-x root/root    etc/pam.d/
--rw-r--r-- root/root    etc/pam.d/samba
 drwxr-xr-x root/root    etc/samba/
 -rw-r--r-- root/root    etc/samba/smb.conf.default
 drwxr-xr-x root/root    run/
@@ -180,6 +178,8 @@ lrwxrwxrwx root/root    usr/lib/libsmbconf.so.0 -> libsmbconf.so.0.0.1
 lrwxrwxrwx root/root    usr/lib/libwbclient.so -> libwbclient.so.0.16
 lrwxrwxrwx root/root    usr/lib/libwbclient.so.0 -> libwbclient.so.0.16
 -rwxr-xr-x root/root    usr/lib/libwbclient.so.0.16
+drwxr-xr-x root/root    usr/lib/pam.d/
+-rw-r--r-- root/root    usr/lib/pam.d/samba
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/ndr.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/ndr_krb5pac.pc

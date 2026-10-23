@@ -19,6 +19,7 @@ build() {
         --sysconfdir=/etc \
         --libexecdir=/usr/lib \
         --localstatedir=/var \
+        --with-pam-prefix=/usr/lib \
         --disable-nls
 
     make

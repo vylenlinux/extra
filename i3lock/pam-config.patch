@@ -1,0 +1,22 @@
+diff '--color=auto' -ruN --no-dereference a/meson.build b/meson.build
+--- a/meson.build	2025-10-31 09:26:11.000000000 +0100
++++ b/meson.build	2026-10-23 15:50:21.322000000 +0200
+@@ -134,5 +134,5 @@
+ install_subdir(
+   'pam',
+   strip_directory: true,
+-  install_dir: join_paths(get_option('sysconfdir'), 'pam.d'),
++  install_dir: join_paths(get_option('prefix'), 'lib/pam.d'),
+ )
+diff '--color=auto' -ruN --no-dereference a/pam/i3lock b/pam/i3lock
+--- a/pam/i3lock	2025-10-31 09:26:11.000000000 +0100
++++ b/pam/i3lock	2026-10-23 15:49:44.177000000 +0200
+@@ -1,6 +1,6 @@
+ #
+ # PAM configuration file for the i3lock screen locker. By default, it includes
+-# the 'login' configuration file (see /etc/pam.d/login)
++# the 'login' configuration file (see /usr/lib/pam.d/login)
+ #
+ 
+-auth include login
++auth include system-auth
