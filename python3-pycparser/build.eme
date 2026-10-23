@@ -6,7 +6,7 @@ homepage="https://pypi.org/project/pycparser/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycparser
-version=3.11
+version=3.12
 release=1
 source="${name}-${version}.tar.gz::https://github.com/eliben/pycparser/archive/release_v${version}.tar.gz"
 
