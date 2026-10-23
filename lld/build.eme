@@ -17,11 +17,8 @@ build() {
     cd "llvm-project-${version}.src/lld"
     patch -p2 -i "${SRC}/lld-import-compact_unwind_encoding.h-from-libu.patch"
 
-    # CBUILD: enable o disable LLVM_TARGETS_TO_BUILD, source CBUILD_LLVM_TARGETS from "llvm.opt" file
-    CBUILD_LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
-    CBUILD_LLVM_TARGETS="${CBUILD_LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
-
-    cbuild_options llvm
+    LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
+    LLVM_TARGETS="${LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"
 
     cmake -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -29,7 +26,7 @@ build() {
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DLLVM_LINK_LLVM_DYLIB=ON \
-        -DLLVM_TARGETS_TO_BUILD="${CBUILD_LLVM_TARGETS}" \
+        -DLLVM_TARGETS_TO_BUILD="${LLVM_TARGETS}" \
         -Wno-author
 
     cmake --build build

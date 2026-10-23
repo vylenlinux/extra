@@ -13,12 +13,6 @@ source="https://dl.suckless.org/${name}/${name}-${version}.tar.gz"
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    cbuild_restore "${SRC}/${name}-${version}/config.h" || cp config.def.h config.h
-
-    for p in "${SRC}"/*.patch "${SRC}"/*.diff; do
-        [ -f "${p}" ] || continue
-        patch -Np1 -i "${p}"
-    done
 
     make PREFIX=/usr
     make PREFIX=/usr DESTDIR="${PKG}" install

@@ -40,8 +40,7 @@ build() {
     emerald is-installed vulkan-icd-loader && OPT_MESA_GALLIUM='zink,'
     emerald is-installed wayland-protocols && OPT_MESA_PLATFORMS='wayland,x11' || OPT_MESA_PLATFORMS='x11'
 
-    # CBUILD: enable o disable CBUILD_MESA_OPTS, source CBUILD_MESA_OPTS from mesa.opt file
-    CBUILD_MESA_OPTS="-Dshared-llvm=enabled \
+    MESA_OPTS="-Dshared-llvm=enabled \
         -Dglx=dri \
         -Dgallium-drivers=${OPT_MESA_GALLIUM}crocus,iris,nouveau,r300,r600,radeonsi,svga,virgl,i915,tegra \
         -Dplatforms=${OPT_MESA_PLATFORMS} \
@@ -50,8 +49,6 @@ build() {
         -Dgallium-rusticl=true \
         -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau,swrast \
         -Dgallium-va=$(emerald is-installed libva && printf 'enabled' || printf 'disabled')"
-
-    cbuild_options
 
     # shellcheck disable=SC2086
     vylen-meson "${name}-${version}" build \
@@ -64,7 +61,7 @@ build() {
         -Dglvnd=enabled \
         -Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc \
         -Dvulkan-layers=device-select,overlay \
-        ${CBUILD_MESA_OPTS}
+        ${MESA_OPTS}
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

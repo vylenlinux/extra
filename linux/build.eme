@@ -19,24 +19,21 @@ build() {
     cd "${name}-${_version}"
     make mrproper
 
-    cbuild_restore "${SRC}/${name}-${_version}/.config" || cp "${SRC}/x86_64-dotconfig" .config
+    cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
     # shellcheck disable=SC2153
-    CBUILD_LINUX_KCFLAGS="${CFLAGS}"
-    CBUILD_LINUX_KCPPFLAGS="${CXXFLAGS}"
-
-    cbuild_options
+    LINUX_KCFLAGS="${CFLAGS}"
+    LINUX_KCPPFLAGS="${CXXFLAGS}"
 
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
-    export KCFLAGS="${CBUILD_LINUX_KCFLAGS}"
-    export KCPPFLAGS="${CBUILD_LINUX_KCPPFLAGS}"
+    export KCFLAGS="${LINUX_KCFLAGS}"
+    export KCPPFLAGS="${LINUX_KCPPFLAGS}"
 
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}/usr" modules_install
 
-    cbuild_save "${SRC}/${name}-${_version}/.config"
     mkdir -p "${PKG}/boot"
 
     cp arch/x86/boot/bzImage "${PKG}/boot/vmlinuz-${name}"

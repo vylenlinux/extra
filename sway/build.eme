@@ -14,8 +14,7 @@ source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-$
     50-systemd-user.conf"
 
 build() {
-    # CBUILD: enable or disable options, source CBUILD_SWAY_OPTS from "sway.opt" file
-    CBUILD_SWAY_OPTS="-Ddefault-wallpaper=true \
+    SWAY_OPTS="-Ddefault-wallpaper=true \
         -Dzsh-completions=true \
         -Dbash-completions=true \
         -Dfish-completions=true \
@@ -25,13 +24,11 @@ build() {
         -Dgdk-pixbuf=auto \
         -Dman-pages=auto"
 
-    cbuild_options "${name}"
-
     # shellcheck disable=SC2086
     vylen-meson "${name}-${version}" build \
         -Dsd-bus-provider=libsystemd \
         -Dwerror=false \
-        ${CBUILD_SWAY_OPTS}
+        ${SWAY_OPTS}
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build

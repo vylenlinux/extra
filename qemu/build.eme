@@ -16,11 +16,8 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    # CBUILD: enable o disable CBUILD_QEMU_OPTS, source CBUILD_QEMU_OPTS from "qemu.opt" file
-    CBUILD_QEMU_OPTS="--enable-spice \
+    QEMU_OPTS="--enable-spice \
         --enable-tpm"
-
-    cbuild_options
 
     # shellcheck disable=SC2086
     ./configure \
@@ -41,7 +38,7 @@ build() {
         --enable-virglrenderer \
         --smbd=/usr/bin/smbd \
         --with-coroutine=ucontext \
-        ${CBUILD_QEMU_OPTS}
+        ${QEMU_OPTS}
 
     make
     make DESTDIR="${PKG}" install
