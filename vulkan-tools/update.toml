@@ -1,5 +1,10 @@
 name = "vulkan-tools"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "vulkan-tools"
+owner = "KhronosGroup"
+repo = "%(name)"
+
+[github]
+use_releases = false
+use_tags = true
