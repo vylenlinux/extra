@@ -31,13 +31,11 @@ build() {
 
     # Install egg info
     export PATH="/usr/lib/qt6/bin:${PATH}"
-    pythonpath="$(python3 -c "from sysconfig import get_path; print(get_path('platlib'))")"
 
     python3 setup.py egg_info --build-type=pyside6
-    cp -r PySide6.egg-info "${PKG}/${pythonpath}"
-
     python3 setup.py egg_info --build-type=shiboken6
     python3 setup.py egg_info --build-type=shiboken6-generator
 
-    cp -r shiboken6*.egg-info "${PKG}/${pythonpath}"
+    cp -r PySide6.egg-info -t "${PKG}/${PYTHON_SITE_PACKAGES}/"
+    cp -r shiboken6*.egg-info -t "${PKG}/${PYTHON_SITE_PACKAGES}/"
 }
