@@ -14,12 +14,11 @@ build() {
     # shellcheck disable=SC2164
     cd "pretty-yaml-${version}"
 
-    python3 -m build \
-        --wheel \
-        --no-isolation
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-    python3 -m installer --destdir="${PKG}" dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 
-    python_version=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
-    rm -r "${PKG}/usr/lib/python${python_version}/site-packages/pyaml/tests"
+    rm -r "${PKG}/${PYTHON_SITE_PACKAGES}/pyaml/tests"
 }
