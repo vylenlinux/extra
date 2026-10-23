@@ -6,7 +6,7 @@ homepage="https://core.telegram.org/tdlib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=td
-version=9d92b49
+version=ea3f69c
 release=1
 source="${name}-${version}.tar.gz::https://github.com/tdlib/${name}/archive/${version}.tar.gz"
 
