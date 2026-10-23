@@ -1,5 +1,10 @@
 name = "vulkan-icd-loader"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "vulkan-loader"
+owner = "KhronosGroup"
+repo = "vulkan-loader"
+
+[github]
+use_releases = false
+use_tags = true
