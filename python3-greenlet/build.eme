@@ -20,6 +20,5 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    python_site_packages="$(python3 -c 'import site; print(site.getsitepackages()[0])')"
-    rm -r "${PKG}/${python_site_packages}/greenlet/tests/"
+    rm -r "${PKG}/${PYTHON_SITE_PACKAGES}/greenlet/tests/"
 }
