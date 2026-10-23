@@ -1,5 +1,10 @@
 name = "vulkan-headers"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "vulkan-headers"
+owner = "KhronosGroup"
+repo = "%(name)"
+
+[github]
+use_releases = false
+use_tags = true
