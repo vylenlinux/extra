@@ -20,7 +20,6 @@ build() {
         --output-fd 3 3>&1 >&2
 
     python3 -m installer -d "${PKG}" .dist/*.whl
-    _python_version="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')"
 
-    install -Dm644 src/libImaging/*.h -t "${PKG}/usr/include/${_python_version}/"
+    install -Dm644 src/libImaging/*.h -t "${PKG}/usr/include/${PYTHON_PVERSION}/"
 }
