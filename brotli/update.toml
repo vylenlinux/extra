@@ -1,5 +1,6 @@
 name = "brotli"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "brotli"
+owner = "google"
+repo = "%(name)"

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python bindings for brotli"
+homepage="https://github.com/google/brotli"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-python-brotli
+version=1.2.1
+release=1
+source="brotli-${version}.tar.gz::https://github.com/google/brotli/archive/v${version}/brotli-v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "brotli-${version}"
+    python3 setup.py build
+
+    python3 setup.py install \
+        --prefix=/usr \
+        --root="${PKG}" \
+        --optimize=1
+}

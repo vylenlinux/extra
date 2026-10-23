@@ -1,0 +1,7 @@
+name = "python3-python-brotli"
+provider = "github"
+dedup_key = "brotli"
+
+[source]
+owner = "google"
+repo = "brotli"

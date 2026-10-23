@@ -11,10 +11,7 @@ release=1
 source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-
-    cmake -B build -G Ninja \
+    cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
@@ -23,11 +20,4 @@ build() {
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
-
-    python3 setup.py build
-
-    python3 setup.py install \
-        --prefix=/usr \
-        --root="${PKG}" \
-        --optimize=1
 }
