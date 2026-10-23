@@ -2543,8 +2543,6 @@ drwxr-xr-x root/root    usr/include/tg_owt/system_wrappers/include/
 drwxr-xr-x root/root    usr/include/tg_owt/system_wrappers/source/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/
-drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/.github/
-drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/.github/ISSUE_TEMPLATE/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/CMake/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/CMake/Googletest/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/abseil-cpp/CMake/install_test_project/
@@ -3137,8 +3135,6 @@ drwxr-xr-x root/root    usr/include/tg_owt/third_party/crc32c/src/third_party/go
 -rw-r--r-- root/root    usr/include/tg_owt/third_party/crc32c/src/third_party/googletest/googletest/test/gtest-typed-test_test.h
 -rw-r--r-- root/root    usr/include/tg_owt/third_party/crc32c/src/third_party/googletest/googletest/test/production.h
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/libsrtp/
-drwxr-xr-x root/root    usr/include/tg_owt/third_party/libsrtp/.github/
-drwxr-xr-x root/root    usr/include/tg_owt/third_party/libsrtp/.github/workflows/
 drwxr-xr-x root/root    usr/include/tg_owt/third_party/libsrtp/cmake/
 -rw-r--r-- root/root    usr/include/tg_owt/third_party/libsrtp/config_in.h
 -rw-r--r-- root/root    usr/include/tg_owt/third_party/libsrtp/config_in_cmake.h
