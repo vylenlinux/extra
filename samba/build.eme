@@ -6,7 +6,7 @@ homepage="https://www.samba.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=samba
-version=4.25.0
+version=4.25.1
 release=1
 
 source="https://www.samba.org/ftp/${name}/stable/${name}-${version}.tar.gz
@@ -29,9 +29,9 @@ build() {
         --with-pammodulesdir=/usr/lib/security \
         --bundled-libraries=!tdb,!talloc \
         --enable-fhs \
-        --without-json \
         --with-systemd \
         --systemd-install-services \
+        --without-json \
         --without-ad-dc \
         --without-ads \
         --without-ldap
@@ -44,6 +44,6 @@ build() {
 
     install -Dm644 examples/smb.conf.default -t "${PKG}/etc/${name}/"
 
-    do_tmpfiles "${name}"
     do_pam "${name}"
+    do_tmpfiles "${name}"
 }
