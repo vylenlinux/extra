@@ -88,9 +88,9 @@ lrwxrwxrwx root/root    usr/lib/libssl.so -> libssl.so.60.0.2
 lrwxrwxrwx root/root    usr/lib/libssl.so.60 -> libssl.so.60.0.2
 -rwxr-xr-x root/root    usr/lib/libssl.so.60.0.2
 -rw-r--r-- root/root    usr/lib/libtls.a
-lrwxrwxrwx root/root    usr/lib/libtls.so -> libtls.so.33.0.2
-lrwxrwxrwx root/root    usr/lib/libtls.so.33 -> libtls.so.33.0.2
--rwxr-xr-x root/root    usr/lib/libtls.so.33.0.2
+lrwxrwxrwx root/root    usr/lib/libtls.so -> libtls.so.33.0.3
+lrwxrwxrwx root/root    usr/lib/libtls.so.33 -> libtls.so.33.0.3
+-rwxr-xr-x root/root    usr/lib/libtls.so.33.0.3
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcrypto.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libssl.pc
@@ -694,6 +694,7 @@ lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_EX_new.3.gz -> CRYPTO_set_ex_d
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_MEM_LEAK_CB.3.gz -> CRYPTO_set_mem_functions.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_add.3.gz -> CRYPTO_lock.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_chacha_20.3.gz -> ChaCha.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_cleanup_all_ex_data.3.gz -> CRYPTO_set_ex_data.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_free.3.gz -> OPENSSL_malloc.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_free_ex_data.3.gz -> CRYPTO_set_ex_data.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/CRYPTO_get_ex_data.3.gz -> CRYPTO_set_ex_data.3.gz
@@ -1515,7 +1516,6 @@ lrwxrwxrwx root/root    usr/share/man/man3/NOTICEREF_free.3.gz -> POLICYINFO_new
 lrwxrwxrwx root/root    usr/share/man/man3/NOTICEREF_new.3.gz -> POLICYINFO_new.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OBJ_NAME_do_all.3.gz -> EVP_CIPHER_do_all.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OBJ_NAME_do_all_sorted.3.gz -> EVP_CIPHER_do_all.3.gz
-lrwxrwxrwx root/root    usr/share/man/man3/OBJ_add_object.3.gz -> OBJ_create.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OBJ_cleanup.3.gz -> OBJ_create.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OBJ_cmp.3.gz -> OBJ_nid2obj.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/OBJ_create.3.gz
@@ -1604,6 +1604,7 @@ lrwxrwxrwx root/root    usr/share/man/man3/OCSP_url_svcloc_new.3.gz -> OCSP_SERV
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_VERSION_NUMBER.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OPENSSL_VERSION_TEXT.3.gz -> OPENSSL_VERSION_NUMBER.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_cleanse.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/OPENSSL_cleanup.3.gz -> OPENSSL_init_crypto.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_config.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OPENSSL_free.3.gz -> OPENSSL_malloc.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/OPENSSL_gmtime.3.gz -> ASN1_TIME_set.3.gz
@@ -3395,6 +3396,8 @@ lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_notafter.3.gz -> tls_co
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_notbefore.3.gz -> tls_conn_version.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_provided.3.gz -> tls_conn_version.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_subject.3.gz -> tls_conn_version.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_unverified_bundle_pem.3.gz -> tls_conn_version.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_cert_verified_chain_pem.3.gz -> tls_conn_version.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_ocsp_cert_status.3.gz -> tls_ocsp_process_response.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_ocsp_crl_reason.3.gz -> tls_ocsp_process_response.3.gz
 lrwxrwxrwx root/root    usr/share/man/man3/tls_peer_ocsp_next_update.3.gz -> tls_ocsp_process_response.3.gz
