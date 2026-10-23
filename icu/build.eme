@@ -6,7 +6,7 @@ homepage="https://icu.unicode.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=icu
-version=78.3
+version=79.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/unicode-org/${name}/archive/refs/tags/release-${version}.tar.gz"
 
