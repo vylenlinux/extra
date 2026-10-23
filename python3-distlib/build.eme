@@ -20,6 +20,5 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    python_version="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])));')"
-    rm "${PKG}/usr/lib/python${python_version}/site-packages/distlib"/*.exe
+    rm "${PKG}/${PYTHON_SITE_PACKAGES}/distlib"/*.exe
 }
