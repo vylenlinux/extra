@@ -1,5 +1,0 @@
-name = "crystal-dock"
-provider = "repology"
-
-[source]
-package = "crystal-dock"
