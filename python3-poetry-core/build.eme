@@ -21,6 +21,5 @@ build() {
     python3 -m installer -d "${PKG}" .dist/*.whl
 
     # remove vendored versions of installed modules
-    sitedir="$(python3 -c "import site; print(site.getsitepackages()[0])")"
-    rm -r "${PKG}/${sitedir}/poetry/core/_vendor"
+    rm -r "${PKG}/${PYTHON_SITE_PACKAGES}/poetry/core/_vendor"
 }
