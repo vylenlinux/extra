@@ -6,7 +6,7 @@ homepage="https://github.com/jlu5/icoextract"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=icoextract
-version=0.3.0
+version=0.3.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/jlu5/${name}/archive/refs/tags/${version}.tar.gz"
 
@@ -14,6 +14,9 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    python3 -m build --wheel --no-isolation
-    python3 -m installer --destdir="${PKG}" dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
