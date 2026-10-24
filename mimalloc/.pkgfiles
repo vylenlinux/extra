@@ -13,7 +13,7 @@ drwxr-xr-x root/root    usr/lib/cmake/mimalloc/
 -rw-r--r-- root/root    usr/lib/cmake/mimalloc/mimalloc.cmake
 -rw-r--r-- root/root    usr/lib/libmimalloc.a
 lrwxrwxrwx root/root    usr/lib/libmimalloc.so -> libmimalloc.so.3
-lrwxrwxrwx root/root    usr/lib/libmimalloc.so.3 -> libmimalloc.so.3.5
--rwxr-xr-x root/root    usr/lib/libmimalloc.so.3.5
+lrwxrwxrwx root/root    usr/lib/libmimalloc.so.3 -> libmimalloc.so.3.6
+-rwxr-xr-x root/root    usr/lib/libmimalloc.so.3.6
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/mimalloc.pc

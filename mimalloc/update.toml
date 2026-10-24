@@ -1,5 +1,6 @@
 name = "mimalloc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mimalloc"
+owner = "microsoft"
+repo = "%(name)"
