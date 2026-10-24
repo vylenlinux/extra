@@ -6,7 +6,7 @@ homepage="https://gitlab.gnome.org/GNOME/glib-networking"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=glib-networking
-version=2.90.0
+version=2.90.1
 release=1
 source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
 
