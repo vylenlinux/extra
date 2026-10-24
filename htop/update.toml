@@ -1,5 +1,6 @@
 name = "htop"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "htop"
+owner = "%(name)-dev"
+repo = "%(name)"

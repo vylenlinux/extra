@@ -17,8 +17,8 @@ build() {
 
     ./configure \
         --prefix=/usr \
-        --disable-nls \
-        --mandir=/usr/share/man
+        --mandir=/usr/share/man \
+        --enable-sensors
 
     make
     make DESTDIR="${PKG}" install
