@@ -1,7 +1,6 @@
 name = "xmltoman"
-provider = "sourceforge"
+provider = "github"
 
-[sourceforge]
-project = "%(name)"
-path = "%(name)"
-filename = "%(name)-%(version).tar.gz"
+[source]
+owner = "atsb"
+repo = "%(name)"

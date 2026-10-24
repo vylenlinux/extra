@@ -2,18 +2,18 @@
 
 # shellcheck disable=SC2034
 description="Convert xml to man pages in groff format or html"
-homepage="https://sourceforge.net/projects/xmltoman/"
+homepage="https://github.com/atsb/xmltoman/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xmltoman
-version=0.4
+version=0.6
 release=1
-source="https://downloads.sourceforge.net/project/${name}/${name}/${name}-${version}.tar.gz/${name}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/atsb/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    make PREFIX=/usr
-    make PREFIX=/usr DESTDIR="${PKG}" install
+    make prefix=/usr
+    make prefix=/usr DESTDIR="${PKG}" install
 }

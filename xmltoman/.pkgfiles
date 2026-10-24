@@ -3,6 +3,10 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/xmlmantohtml
 -rwxr-xr-x root/root    usr/bin/xmltoman
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/xmlmantohtml.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/xmltoman.1.gz
 drwxr-xr-x root/root    usr/share/xmltoman/
 -rw-r--r-- root/root    usr/share/xmltoman/xmltoman.css
 -rw-r--r-- root/root    usr/share/xmltoman/xmltoman.dtd
