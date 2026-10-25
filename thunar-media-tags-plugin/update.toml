@@ -1,5 +1,5 @@
 name = "thunar-media-tags-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "thunar-media-tags-plugin"
+package = "thunar-plugins/%(name)"

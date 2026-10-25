@@ -1,5 +1,5 @@
 name = "thunar-volman"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "thunar-volman"
+package = "%(name)"
