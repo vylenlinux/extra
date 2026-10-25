@@ -8,22 +8,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libxfce4windowing
 version=4.20.7
 release=1
-
-wlr_protocols_commit=bf4fc79abc359eea5a0edec0ac6d4a2b2955f82a
-xfce_wayland_protocols_commit=55dbf3e3d2a91b525c528c0dd4c1a7805a99364b
-
-source="${name}-${version}.tar.bz2::https://gitlab.xfce.org/xfce/${name}/-/archive/${name}-${version}/${name}-${name}-${version}.tar.bz2
-    https://gitlab.freedesktop.org/wlroots/wlr-protocols/-/archive/${wlr_protocols_commit}/wlr-protocols-${wlr_protocols_commit}.tar.gz
-    https://gitlab.xfce.org/xfce/xfce-wayland-protocols/-/archive/${xfce_wayland_protocols_commit}/xfce-wayland-protocols-${xfce_wayland_protocols_commit}.tar.gz"
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${name}-${version}"
-
-    mv "${SRC}/wlr-protocols-${wlr_protocols_commit}"/* -t protocols/wlr-protocols/
-    mv "${SRC}/xfce-wayland-protocols-${xfce_wayland_protocols_commit}"/* -t protocols/xfce-wayland-protocols/
-
-    vylen-meson . build
+    vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
