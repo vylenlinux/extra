@@ -1,5 +1,5 @@
 name = "libmateweather"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "libmateweather"
+package = "%(name)"

@@ -1,5 +1,5 @@
 name = "libmatekbd"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "libmatekbd"
+package = "%(name)"

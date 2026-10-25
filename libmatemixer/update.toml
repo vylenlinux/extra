@@ -1,5 +1,5 @@
 name = "libmatemixer"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "libmatemixer"
+package = "%(name)"
