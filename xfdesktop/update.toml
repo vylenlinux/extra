@@ -1,5 +1,5 @@
 name = "xfdesktop"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfdesktop"
+package = "%(name)"
