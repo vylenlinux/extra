@@ -1,5 +1,5 @@
 name = "mate-icon-theme"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-icon-theme"
+package = "%(name)"

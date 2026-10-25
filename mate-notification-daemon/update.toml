@@ -1,5 +1,5 @@
 name = "mate-notification-daemon"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-notification-daemon"
+package = "%(name)"

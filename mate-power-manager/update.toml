@@ -1,5 +1,5 @@
 name = "mate-power-manager"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-power-manager"
+package = "%(name)"

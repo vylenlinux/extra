@@ -1,5 +1,5 @@
 name = "mate-polkit"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-polkit"
+package = "%(name)"

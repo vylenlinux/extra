@@ -1,5 +1,8 @@
 name = "mate-icon-theme-faenza"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-icon-theme-faenza"
+package = "%(name)"
+
+[github]
+use_tags = true

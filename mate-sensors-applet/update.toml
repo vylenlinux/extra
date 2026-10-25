@@ -1,5 +1,5 @@
 name = "mate-sensors-applet"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-sensors-applet"
+package = "%(name)"

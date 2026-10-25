@@ -1,5 +1,5 @@
 name = "mate-backgrounds"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-backgrounds"
+package = "%(name)"

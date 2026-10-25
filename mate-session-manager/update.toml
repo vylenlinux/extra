@@ -1,5 +1,5 @@
 name = "mate-session-manager"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-session-manager"
+package = "%(name)"

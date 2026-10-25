@@ -1,10 +1,5 @@
 name = "mate-control-center"
-provider = "github"
+provider = "mate"
 
 [source]
-owner = "mate-desktop"
-repo = "mate-control-center"
-
-[github]
-use_releases = false
-use_tags = true
+package = "%(name)"

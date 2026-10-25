@@ -1,5 +1,5 @@
 name = "mate-calc"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "mate-calc"
+package = "%(name)"
