@@ -1,5 +1,5 @@
 name = "xfconf"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfconf"
+package = "%(name)"
