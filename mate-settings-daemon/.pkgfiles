@@ -102,6 +102,7 @@ drwxr-xr-x root/root    usr/share/glib-2.0/schemas/
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.smartcard.gschema.xml
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.sound.gschema.xml
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.typing-break.gschema.xml
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.wlrandr.gschema.xml
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.xrandr.gschema.xml
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.xrdb.gschema.xml
 -rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.SettingsDaemon.plugins.xsettings.gschema.xml
