@@ -1,5 +1,5 @@
 name = "mousepad"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "mousepad"
+package = "apps/%(name)"
