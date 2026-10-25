@@ -1,5 +1,6 @@
 name = "libsoup"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libsoup"
+instance = "https://gitlab.gnome.org/"
+project = "GNOME/libsoup"
