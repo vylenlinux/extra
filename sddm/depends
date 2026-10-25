@@ -1,4 +1,4 @@
 extra-cmake-modules
-qt6-tools
-qt6-declarative
 libxcb
+qt6-declarative
+qt6-tools
