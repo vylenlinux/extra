@@ -9,6 +9,9 @@ name=sddm
 version=0.21.0
 release=1
 
+backup="usr/share/${name}/scripts/Xsetup
+    usr/share/sddm/scripts/Xstop"
+
 source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz
     0001-VirtualTerminal-Export-defaultVtPath.patch
     0002-Allow-non-root-greeters-and-sessions-to-start-on-ker.patch
@@ -26,10 +29,8 @@ source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version
     sddm-0.12.0-mga-autofocus.patch
     sddm-0.18.0-environment_file.patch
     sddm-0.19.0-cmake-display-command.patch
-    sddm-0.21.0-qt6greeter.patch"
-
-backup="usr/share/${name}/scripts/Xsetup
-    etc/${name}.conf"
+    sddm-0.21.0-qt6greeter.patch
+    pam-config.patch"
 
 build() {
     # shellcheck disable=SC2164
@@ -43,26 +44,26 @@ build() {
     sed -e '/UPOWER_SERVICE)/ s:^://:' -i src/daemon/PowerManager.cpp
 
     cmake -B build -G Ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/sddm \
-        -DBUILD_WITH_QT6=ON \
         -DCMAKE_BUILD_TYPE=Release \
-        -DENABLE_JOURNALD=OFF \
+        -DDBUS_CONFIG_DIR=/usr/share/dbus-1/system.d \
         -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
-        -DNO_SYSTEMD=ON \
-        -DUSE_ELOGIND=ON \
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DBUILD_WITH_QT6=ON \
+        -DBUILD_MAN_PAGES=ON \
+        -DUID_MAX=60513 \
         -Wno-dev
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
     install -d "${PKG}/usr/lib/${name}/${name}.conf.d"
-    "${PKG}/usr/bin/sddm" --example-config > "${PKG}/etc/${name}.conf"
+    "${PKG}/usr/bin/sddm" --example-config > "${PKG}/usr/lib/${name}/${name}.conf.d/default.conf"
+
+    # Don't set PATH in sddm.conf
+    sed -r 's|DefaultPath=.*|DefaultPath=/usr/local/sbin:/usr/local/bin:/usr/bin|g' -i "${PKG}/usr/lib/sddm/sddm.conf.d/default.conf"
 
     # Unset InputMethod https://github.com/sddm/sddm/issues/952
-    sed -e "/^InputMethod/s/qtvirtualkeyboard//" -i "${PKG}/etc/${name}.conf"
-
-    do_service "${name}"
-    do_pam "${name}" "${name}-autologin" "${name}-greeter"
+    sed -e "/^InputMethod/s/qtvirtualkeyboard//" -i "${PKG}/usr/lib/${name}/${name}.conf.d/default.conf"
 }

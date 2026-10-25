@@ -1,5 +1,6 @@
 name = "sddm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sddm"
+owner = "%(name)"
+repo = "%(name)"

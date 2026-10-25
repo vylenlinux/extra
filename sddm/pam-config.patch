@@ -1,0 +1,58 @@
+diff '--color=auto' -ruN --no-dereference a/services/CMakeLists.txt b/services/CMakeLists.txt
+--- a/services/CMakeLists.txt	2024-02-26 11:23:03.000000000 +0100
++++ b/services/CMakeLists.txt	2026-10-25 19:19:18.065000000 +0100
+@@ -30,12 +30,12 @@
+         install(FILES freebsd.sddm.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm)
+     else()
+         if(HAVE_PAM_FAILLOCK)
+-           install(FILES sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
++           install(FILES sddm-autologin.pam DESTINATION ${CMAKE_INSTALL_LIBDIR}/pam.d RENAME sddm-autologin)
+         else()
+-           install(FILES sddm-autologin-tally2.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-autologin)
++           install(FILES sddm-autologin-tally2.pam DESTINATION ${CMAKE_INSTALL_LIBDIR}/pam.d RENAME sddm-autologin)
+         endif()
+ 
+-        install(FILES sddm.pam DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm)
+-        install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sddm-greeter.pam" DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/pam.d RENAME sddm-greeter)
++        install(FILES sddm.pam DESTINATION ${CMAKE_INSTALL_LIBDIR}/pam.d RENAME sddm)
++        install(FILES "${CMAKE_CURRENT_BINARY_DIR}/sddm-greeter.pam" DESTINATION ${CMAKE_INSTALL_LIBDIR}/pam.d RENAME sddm-greeter)
+     endif()
+ endif()
+diff '--color=auto' -ruN --no-dereference a/services/sddm-autologin.pam b/services/sddm-autologin.pam
+--- a/services/sddm-autologin.pam	2024-02-26 11:23:03.000000000 +0100
++++ b/services/sddm-autologin.pam	2026-10-25 19:09:45.567000000 +0100
+@@ -6,8 +6,8 @@
+ auth        required    pam_permit.so
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+-account     include     system-local-login
+-password    include     system-local-login
+-session     include     system-local-login
++account     include     system-account
++password    include     system-password
++session     include     system-session
+ -session    optional    pam_gnome_keyring.so auto_start
+ -session    optional    pam_kwallet5.so auto_start
+diff '--color=auto' -ruN --no-dereference a/services/sddm.pam b/services/sddm.pam
+--- a/services/sddm.pam	2024-02-26 11:23:03.000000000 +0100
++++ b/services/sddm.pam	2026-10-25 19:09:45.564000000 +0100
+@@ -1,15 +1,15 @@
+ #%PAM-1.0
+ 
+-auth        include     system-login
++auth        include     system-auth
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+ 
+-account     include     system-login
++account     include     system-account
+ 
+-password    include     system-login
++password    include     system-password
+ -password   optional    pam_gnome_keyring.so    use_authtok
+ 
+ session     optional    pam_keyinit.so          force revoke
+-session     include     system-login
++session     include     system-session
+ -session    optional    pam_gnome_keyring.so    auto_start
+ -session    optional    pam_kwallet5.so         auto_start
