@@ -8,11 +8,14 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=nodejs
 version=26.12.1
 release=1
-source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz"
+
+source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz
+    fix-build-with-icu-79.1.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "node-v${version}"
+    patch -Np1 -i "${SRC}/fix-build-with-icu-79.1.patch"
 
     ./configure \
         --prefix=/usr \
