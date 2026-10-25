@@ -1,5 +1,5 @@
 name = "orage"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "orage"
+package = "apps/%(name)"
