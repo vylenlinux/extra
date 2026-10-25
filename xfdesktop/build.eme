@@ -6,22 +6,12 @@ homepage="https://xfce.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfdesktop
-version=4.20.2
+version=4.21.1
 release=1
-source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-
-    ./configure \
-        --prefix=/usr \
-        --disable-nls \
-        --enable-thunarx \
-        --enable-x11 \
-        --enable-wayland \
-        --enable-notifications
-
-    make
-    make DESTDIR="${PKG}" install
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
