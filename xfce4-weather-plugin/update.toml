@@ -1,5 +1,8 @@
 name = "xfce4-weather-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-weather-plugin"
+package = "panel-plugins/%(name)"
+
+[version]
+exclude = ["4.2_master"]
