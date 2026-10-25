@@ -1,5 +1,5 @@
 name = "ristretto"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "ristretto"
+package = "apps/%(name)"
