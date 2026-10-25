@@ -1,5 +1,5 @@
 name = "pluma"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "pluma"
+package = "%(name)"
