@@ -3,3 +3,4 @@ gobject-introspection
 intltool
 libdaemon
 libevent
+xmltoman
