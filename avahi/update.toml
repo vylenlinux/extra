@@ -1,5 +1,10 @@
 name = "avahi"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "avahi"
+owner = "%(name)"
+repo = "%(name)"
+
+[github]
+use_releases = false
+use_tags = true
