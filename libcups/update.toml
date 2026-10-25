@@ -1,0 +1,7 @@
+name = "libcups"
+provider = "github"
+dedup_key = "cups"
+
+[source]
+owner = "OpenPrinting"
+repo = "cups"

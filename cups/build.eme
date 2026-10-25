@@ -43,7 +43,12 @@ build() {
         --without-rcdir
 
     make
-    make BUILDROOT="${PKG}" install
+    make BUILDROOT="${PKG}" install-data install-exec
+
+    # this one we ship in the libcups pkg
+    # remove client.conf man page
+    rm -f "${PKG}/usr/bin/cups-config" \
+        "${PKG}/usr/share/man/man5/client.conf.5"
 
     # cleanup
     rm -rf "${PKG}/tmp" \
@@ -54,9 +59,6 @@ build() {
     ## no longer works since CUPS >= 1.6 (http://www.cups.org/str.php?L4120)
     rm -rf "${PKG}/usr/share/cups/banners"/* \
         "${PKG}/usr/share/cups/data/testprint"
-
-    chmod 755 "${PKG}/var/cache" \
-        "${PKG}/var/spool"
 
     chmod -R +w "${PKG}"
 

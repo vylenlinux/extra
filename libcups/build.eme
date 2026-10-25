@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="OpenPrinting CUPS - client libraries and headers"
+homepage="https://openprinting.github.io/cups/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libcups
+version=2.4.20
+release=1
+source="cups-${version}.tar.gz::https://github.com/OpenPrinting/cups/archive/v${version}/cups-${version}-source.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "cups-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --sbindir=/usr/bin \
+        --libdir=/usr/lib \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --with-menudir=/usr/share/applications \
+        --with-icondir=/usr/share/icons \
+        --with-logdir=/var/log/cups \
+        --with-docdir=/usr/share/cups \
+        --with-rundir=/run/cups \
+        --with-cupsd-file-perm=0755 \
+        --with-cups-user=lp \
+        --with-cups-group=lp \
+        --with-domainsocket=/run/cups/cups.sock \
+        --disable-launchd \
+        --enable-acl \
+        --enable-dbus \
+        --with-dbusdir=/usr/share/dbus-1 \
+        --enable-gnutls \
+        --enable-libusb \
+        --enable-raw-printing \
+        --enable-relro \
+        --enable-ssl=yes \
+        --with-optim="${CFLAGS}" \
+        --without-php \
+        --without-rcdir
+
+    make
+    make DESTDIR="${PKG}" install-headers install-libs
+
+    # put this into the libs pkg to make other software find the libs(no pkg-config file included)
+    install -Dm755 cups-config -t "${PKG}/usr/bin/"
+}
