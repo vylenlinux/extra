@@ -1,5 +1,5 @@
 name = "libxfce4ui"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "libxfce4ui"
+package = "%(name)"
