@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A simple CD/DVD burning tool based on libburnia libraries"
+homepage="https://docs.xfce.org/apps/xfburn/start"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=xfburn
+version=0.8.0
+release=1
+source="https://archive.xfce.org/src/apps/${name}/${version%.*}/${name}-${version}.tar.bz2"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static \
+        --disable-nls \
+        --disable-debug \
+        --disable-gstreamer \
+        --disable-dependency-tracking
+
+    make
+    make DESTDIR="${PKG}" install
+}

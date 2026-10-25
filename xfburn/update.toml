@@ -1,0 +1,5 @@
+name = "xfburn"
+provider = "repology"
+
+[source]
+package = "xfburn"
