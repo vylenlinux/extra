@@ -1,5 +1,5 @@
 name = "garcon"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "garcon"
+package = "%(name)"
