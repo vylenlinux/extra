@@ -6,10 +6,12 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi
-version=8.2.4133.94
+version=8.2.4133.94+1
 release=1
 
-source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/${name}-stable-${version}-${release}.x86_64.rpm
+_version="$(printf '%s' "${version}" | tr '+' '-')"
+
+source="${name}-${version}.rpm::https://downloads.vivaldi.com/stable/${name}-stable-${_version}.x86_64.rpm
     0001-add-support-for-user-flags.patch"
 
 build() {
