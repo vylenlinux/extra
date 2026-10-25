@@ -1,5 +1,5 @@
 name = "exo"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce-exo"
+package = "%(name)"
