@@ -1,0 +1,7 @@
+#!/bin/sh
+
+getent group sddm >/dev/null || groupadd -g 64 sddm
+
+getent passwd sddm >/dev/null || \
+useradd -r -M -g sddm -G sddm -c "SDDM Daemon" -d /var/lib/sddm -s /sbin/nologin -u 64 sddm
+
