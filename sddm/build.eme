@@ -1,0 +1,68 @@
+#!/usr/bin/env sh
+
+# shellcheck disable=SC2034
+description="QML based X11 and Wayland display manager"
+homepage="https://github.com/sddm/sddm"
+maintainer="Vylen Linux Team"
+
+name=sddm
+version=0.21.0
+release=1
+
+source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz
+    0001-VirtualTerminal-Export-defaultVtPath.patch
+    0002-Allow-non-root-greeters-and-sessions-to-start-on-ker.patch
+    0003-Conditionalize-more-VT-related-calls.patch
+    0004-UserSession-Only-act-on-the-VT-when-XDG_VTNR-is-set.patch
+    0005-Mark-keyboard-backend-as-disabled-on-Wayland.patch
+    0006-Themes-hide-LayoutBox-when-keyboard-model-is-empty-o.patch
+    0007-Themes-explicitly-resolve-image-URLs.patch
+    0008-Components-use-Transitions-instead-of-Behaviors.patch
+    0009-Themes-fix-deprecated-signal-handler-declarations.patch
+    0010-Themes-set-QtVersion-QT_MAJOR_VERSION.patch
+    0011-Docs-add-QtVersion-information-to-THEMING.patch
+    111907ad7c604d264ec7bd078a7bcf1721d6eab8.patch
+    3024a1e0b7086089d3479588337cfa0440eddf95.patch
+    sddm-0.12.0-mga-autofocus.patch
+    sddm-0.18.0-environment_file.patch
+    sddm-0.19.0-cmake-display-command.patch
+    sddm-0.21.0-qt6greeter.patch"
+
+backup="usr/share/${name}/scripts/Xsetup
+    etc/${name}.conf"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    for p in "${SRC}"/*.patch; do
+        [ -f "${p}" ] || continue
+        patch -Np1 -i "${p}"
+    done
+
+    sed -e '/UPOWER_SERVICE)/ s:^://:' -i src/daemon/PowerManager.cpp
+
+    cmake -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/sddm \
+        -DBUILD_WITH_QT6=ON \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DENABLE_JOURNALD=OFF \
+        -DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
+        -DNO_SYSTEMD=ON \
+        -DUSE_ELOGIND=ON \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -Wno-dev
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    install -d "${PKG}/usr/lib/${name}/${name}.conf.d"
+    "${PKG}/usr/bin/sddm" --example-config > "${PKG}/etc/${name}.conf"
+
+    # Unset InputMethod https://github.com/sddm/sddm/issues/952
+    sed -e "/^InputMethod/s/qtvirtualkeyboard//" -i "${PKG}/etc/${name}.conf"
+
+    do_service "${name}"
+    do_pam "${name}" "${name}-autologin" "${name}-greeter"
+}

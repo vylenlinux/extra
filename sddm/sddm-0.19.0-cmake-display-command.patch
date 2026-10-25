@@ -1,0 +1,46 @@
+diff -up sddm-0.20.0/CMakeLists.txt.cmake sddm-0.20.0/CMakeLists.txt
+--- sddm-0.20.0/CMakeLists.txt.cmake	2023-06-08 18:46:14.000000000 +0200
++++ sddm-0.20.0/CMakeLists.txt	2023-06-20 10:58:12.631811827 +0200
+@@ -197,6 +197,7 @@ set(RUNTIME_DIR                 "${RUNTI
+ set(QML_INSTALL_DIR             "${QT_IMPORTS_DIR}"                                 CACHE PATH      "QML component installation directory")
+ 
+ set(SESSION_COMMAND             "${DATA_INSTALL_DIR}/scripts/Xsession"              CACHE PATH      "Script to execute when starting the X11 desktop session")
++set(DISPLAY_COMMAND             "${DATA_INSTALL_DIR}/scripts/Xsetup"                CACHE FILEPATH  "Script to execute when starting the display server")
+ set(WAYLAND_SESSION_COMMAND     "${DATA_INSTALL_DIR}/scripts/wayland-session"       CACHE PATH      "Script to execute when starting the Wayland desktop session")
+ 
+ set(CONFIG_FILE                 "${CMAKE_INSTALL_FULL_SYSCONFDIR}/sddm.conf"        CACHE PATH      "Path of the sddm config file")
+diff -up sddm-0.20.0/data/man/sddm.conf.rst.in.cmake sddm-0.20.0/data/man/sddm.conf.rst.in
+--- sddm-0.20.0/data/man/sddm.conf.rst.in.cmake	2023-06-20 10:58:12.631811827 +0200
++++ sddm-0.20.0/data/man/sddm.conf.rst.in	2023-06-20 11:01:00.110490075 +0200
+@@ -142,7 +142,7 @@ OPTIONS
+ 	Path of script to execute when starting the display server.
+ 	The script will be executed as root when General.DisplayServer
+ 	is "x11", otherwise as sddm user.
+-	Default value is "@DATA_INSTALL_DIR@/scripts/Xsetup".
++	Default value is "@DISPLAY_COMMAND@".
+ 
+ `DisplayStopCommand=`
+ 	Path of script to execute when stopping the display server.
+diff -up sddm-0.20.0/src/common/Configuration.h.cmake sddm-0.20.0/src/common/Configuration.h
+--- sddm-0.20.0/src/common/Configuration.h.cmake	2023-06-20 10:58:12.634126676 +0200
++++ sddm-0.20.0/src/common/Configuration.h	2023-06-20 11:02:32.000300373 +0200
+@@ -72,7 +72,7 @@ namespace SDDM {
+                                                      _S("/usr/share/xsessions")},               _S("Comma-separated list of directories containing available X sessions"));
+             Entry(SessionCommand,      QString,     _S(SESSION_COMMAND),                        _S("Path to a script to execute when starting the desktop session"));
+             Entry(SessionLogFile,      QString,     _S(".local/share/sddm/xorg-session.log"),   _S("Path to the user session log file"));
+-            Entry(DisplayCommand,      QString,     _S(DATA_INSTALL_DIR "/scripts/Xsetup"),     _S("Path to a script to execute when starting the display server"));
++            Entry(DisplayCommand,      QString,     _S(DISPLAY_COMMAND),                        _S("Path to a script to execute when starting the display server"));
+             Entry(DisplayStopCommand,  QString,     _S(DATA_INSTALL_DIR "/scripts/Xstop"),      _S("Path to a script to execute when stopping the display server"));
+             Entry(EnableHiDPI,         bool,        true,                                      _S("Enable Qt's automatic high-DPI scaling"));
+         );
+diff -up sddm-0.20.0/src/common/Constants.h.in.cmake sddm-0.20.0/src/common/Constants.h.in
+--- sddm-0.20.0/src/common/Constants.h.in.cmake	2023-06-08 18:46:14.000000000 +0200
++++ sddm-0.20.0/src/common/Constants.h.in	2023-06-20 10:58:12.634126676 +0200
+@@ -31,6 +31,7 @@
+ #define ACCOUNTSSERVICE_DATA_DIR    "@ACCOUNTSSERVICE_DATA_DIR@"
+ 
+ #define SESSION_COMMAND             "@SESSION_COMMAND@"
++#define DISPLAY_COMMAND             "@DISPLAY_COMMAND@"
+ #define WAYLAND_SESSION_COMMAND     "@WAYLAND_SESSION_COMMAND@"
+ 
+ #define CONFIG_FILE                 "@CONFIG_FILE@"
