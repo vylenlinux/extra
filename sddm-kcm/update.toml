@@ -1,5 +1,5 @@
 name = "sddm-kcm"
-provider = "repology"
+provider = "kde"
 
-[source]
-package = "sddm-kcm"
+[kde]
+product = "plasma"
