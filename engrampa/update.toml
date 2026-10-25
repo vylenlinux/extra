@@ -1,5 +1,5 @@
 name = "engrampa"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "engrampa"
+package = "%(name)"
