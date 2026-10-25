@@ -22,7 +22,7 @@ drwxr-xr-x root/root    usr/lib/firmware/nvidia/615.78.08/
 -rw-r--r-- root/root    usr/lib/firmware/nvidia/615.78.08/gsp_ga10x.bin
 -rw-r--r-- root/root    usr/lib/firmware/nvidia/615.78.08/gsp_tu10x.bin
 drwxr-xr-x root/root    usr/lib/gbm/
-lrwxrwxrwx root/root    usr/lib/gbm/nvidia-drm_gbm.so -> libnvidia-allocator.so.615.78.08
+lrwxrwxrwx root/root    usr/lib/gbm/nvidia-drm_gbm.so -> ../libnvidia-allocator.so.615.78.08
 lrwxrwxrwx root/root    usr/lib/libEGL_nvidia.so.0 -> /usr/lib/libEGL_nvidia.so.615.78.08
 -rwxr-xr-x root/root    usr/lib/libEGL_nvidia.so.615.78.08
 lrwxrwxrwx root/root    usr/lib/libGLESv1_CM_nvidia.so.1 -> /usr/lib/libGLESv1_CM_nvidia.so.615.78.08
@@ -42,9 +42,8 @@ lrwxrwxrwx root/root    usr/lib/libnvidia-allocator.so.1 -> /usr/lib/libnvidia-a
 -rwxr-xr-x root/root    usr/lib/libnvidia-allocator.so.615.78.08
 -rwxr-xr-x root/root    usr/lib/libnvidia-api.so.1
 -rwxr-xr-x root/root    usr/lib/libnvidia-cfg.so.615.78.08
-lrwxrwxrwx root/root    usr/lib/libnvidia-egl-gbm.so -> /usr/lib/libnvidia-egl-gbm.so.615.78.08
-lrwxrwxrwx root/root    usr/lib/libnvidia-egl-gbm.so.1 -> /usr/lib/libnvidia-egl-gbm.so.615.78.08
--rwxr-xr-x root/root    usr/lib/libnvidia-egl-gbm.so.1.1.3
+lrwxrwxrwx root/root    usr/lib/libnvidia-egl-gbm.so -> libnvidia-egl-gbm.so.1
+lrwxrwxrwx root/root    usr/lib/libnvidia-egl-gbm.so.1 -> libnvidia-egl-gbm.so.1.1.3
 -rwxr-xr-x root/root    usr/lib/libnvidia-eglcore.so.615.78.08
 -rwxr-xr-x root/root    usr/lib/libnvidia-encode.so.615.78.08
 -rwxr-xr-x root/root    usr/lib/libnvidia-fbc.so.615.78.08
