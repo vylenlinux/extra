@@ -6,18 +6,12 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-desktop
-version=1.28.2
+version=1.29.0
 release=1
-source="https://pub.mate-desktop.org/releases/${version%.*}/${name}-${version}.tar.xz"
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
 
 build() {
-    # shellcheck disable=SC2164
-    cd "${name}-${version}"
-
-    ./configure \
-        --prefix=/usr \
-        --disable-nls
-
-    make
-    make DESTDIR="${PKG}" install
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
