@@ -1,5 +1,5 @@
 name = "xfce4-mpc-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-mpc-plugin"
+package = "panel-plugins/%(name)"

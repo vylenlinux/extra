@@ -1,5 +1,5 @@
 name = "xfce4-notifyd"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-notifyd"
+package = "apps/%(name)"

@@ -1,5 +1,5 @@
 name = "xfce4-panel-profiles"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-panel-profiles"
+package = "apps/%(name)"

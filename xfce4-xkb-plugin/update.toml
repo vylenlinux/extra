@@ -1,5 +1,5 @@
 name = "xfce4-xkb-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-xkb-plugin"
+package = "panel-plugins/%(name)"

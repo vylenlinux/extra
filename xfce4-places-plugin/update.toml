@@ -1,5 +1,5 @@
 name = "xfce4-places-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-places-plugin"
+package = "panel-plugins/%(name)"

@@ -1,5 +1,5 @@
 name = "xfce4-terminal"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-terminal"
+package = "apps/%(name)"

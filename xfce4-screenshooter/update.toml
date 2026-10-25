@@ -1,5 +1,5 @@
 name = "xfce4-screenshooter"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-screenshooter"
+package = "apps/%(name)"

@@ -1,5 +1,5 @@
 name = "xfce4-genmon-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-genmon-plugin"
+package = "panel-plugins/%(name)"

@@ -1,5 +1,5 @@
 name = "xfce4-dev-tools"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-dev-tools"
+package = "%(name)"

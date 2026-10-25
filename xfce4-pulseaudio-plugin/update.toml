@@ -1,5 +1,5 @@
 name = "xfce4-pulseaudio-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-pulseaudio-plugin"
+package = "panel-plugins/%(name)"

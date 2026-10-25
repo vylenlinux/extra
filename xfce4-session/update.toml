@@ -1,5 +1,5 @@
 name = "xfce4-session"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-session"
+package = "%(name)"

@@ -1,5 +1,5 @@
 name = "xfce4-clipman-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-clipman-plugin"
+package = "panel-plugins/%(name)"

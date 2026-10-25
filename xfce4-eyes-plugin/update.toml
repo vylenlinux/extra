@@ -1,5 +1,5 @@
 name = "xfce4-eyes-plugin"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-eyes-plugin"
+package = "panel-plugins/%(name)"

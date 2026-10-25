@@ -1,5 +1,5 @@
 name = "xfce4-dict"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfce4-dict"
+package = "apps/%(name)"
