@@ -1,5 +1,5 @@
 name = "xfwl4"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "xfwl4"
+package = "%(name)"
