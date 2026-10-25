@@ -1,5 +1,6 @@
 name = "vivaldi"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "vivaldi"
+[ftp]
+url = "https://repo.vivaldi.com/archive/rpm/x86_64/"
+filename = "vivaldi-stable-%(version)-1.x86_64.rpm"
