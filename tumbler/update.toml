@@ -1,5 +1,5 @@
 name = "tumbler"
-provider = "repology"
+provider = "xfce"
 
 [source]
-package = "tumbler"
+package = "%(name)"
