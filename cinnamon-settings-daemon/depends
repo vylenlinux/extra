@@ -1,8 +1,8 @@
 cinnamon-desktop
 colord
-cups
 dbus-glib
 libcanberra
+libcups
 libgnomekbd
 libgudev
 libnotify

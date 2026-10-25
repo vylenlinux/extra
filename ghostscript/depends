@@ -1,4 +1,4 @@
-cups
 fontconfig
+libcups
 libxext
 libxt
