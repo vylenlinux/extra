@@ -3,3 +3,6 @@ provider = "mate"
 
 [source]
 package = "%(name)"
+
+[version]
+include = ["v*"]
