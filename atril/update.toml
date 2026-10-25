@@ -1,5 +1,5 @@
 name = "atril"
-provider = "repology"
+provider = "mate"
 
 [source]
-package = "atril"
+package = "%(name)"
