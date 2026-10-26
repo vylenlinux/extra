@@ -6,7 +6,7 @@ homepage="https://www.qt.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6-webengine
-version=6.11.2
+version=6.11.3
 release=1
 source="${name}-${version}.tar.xz::https://download.qt.io/official_releases/qt/${version%.*}/${version}/submodules/qtwebengine-everywhere-src-${version}.tar.xz"
 
@@ -40,5 +40,5 @@ build() {
     cmake --build build -j "${CBUILD_JOBS}"
     DESTDIR="${PKG}" cmake --install build
 
-    ln -sf /usr/lib/qt6/QtWebEngineProcess "${PKG}/usr/bin/QtWebEngineProces"
+    ln -sf /usr/lib/qt6/QtWebEngineProcess "${PKG}/usr/bin/QtWebEngineProcess6"
 }
