@@ -1,5 +1,0 @@
-name = "cdw"
-provider = "repology"
-
-[source]
-package = "cdw"
