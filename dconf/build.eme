@@ -8,15 +8,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=dconf
 version=51.0
 release=1
-
-gvdb_commit=c6f2359cc1d00f16e0a0e2527fa0bc1882b8b5ab
-
-source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.bz2
-    https://gitlab.gnome.org/GNOME/gvdb/-/archive/${gvdb_commit}/gvdb-${gvdb_commit}.tar.bz2"
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
 build() {
-    mv "gvdb-${gvdb_commit}"/* -t "${name}-${version}/subprojects/gvdb/"
-
     vylen-meson "${name}-${version}" build --libexecdir="/usr/lib/${name}"
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
