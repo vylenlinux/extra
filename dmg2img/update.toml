@@ -1,5 +1,0 @@
-name = "dmg2img"
-provider = "repology"
-
-[source]
-package = "dmg2img"
