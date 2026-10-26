@@ -1,7 +1,0 @@
-name = "cdrtools"
-provider = "sourceforge"
-
-[sourceforge]
-project = "cdrtools"
-path = "alpha"
-filename = "cdrtools-%(version).tar.bz2"
