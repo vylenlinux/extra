@@ -6,7 +6,7 @@ homepage="https://invent.kde.org/libraries/mpvqt"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpvqt
-version=1.2.0
+version=1.2.1
 release=1
 source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 

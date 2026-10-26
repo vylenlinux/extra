@@ -16,5 +16,5 @@ drwxr-xr-x root/root    usr/lib/cmake/MpvQt/
 -rw-r--r-- root/root    usr/lib/cmake/MpvQt/MpvQtTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/MpvQt/MpvQtTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libMpvQt.so -> libMpvQt.so.3
--rwxr-xr-x root/root    usr/lib/libMpvQt.so.1.2.0
-lrwxrwxrwx root/root    usr/lib/libMpvQt.so.3 -> libMpvQt.so.1.2.0
+-rwxr-xr-x root/root    usr/lib/libMpvQt.so.1.2.1
+lrwxrwxrwx root/root    usr/lib/libMpvQt.so.3 -> libMpvQt.so.1.2.1
