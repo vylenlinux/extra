@@ -55,4 +55,11 @@ build() {
 
     cp -dr --no-preserve=ownership "${SRC}/NVIDIA-kernel-module-source-${version}" "${PKG}/usr/src/nvidia-${version}"
     mv "${PKG}/usr/src/nvidia-${version}/kernel-open/dkms.conf" -t "${PKG}/usr/src/nvidia-${version}/"
+
+    # dkms build modules script
+    mkdir -p "${PKG}/var/lib/dkms"
+    sed -e "s/@name@/nvidia/g" -e "s/@version@/${version}/g" "${SRC}/buildmodules-${name}.sh" > "${PKG}/var/lib/dkms/buildmodules-${name}.sh"
+
+    # prime-run script
+    install -Dm755 "${SRC}/prime-run" -t "${PKG}/usr/bin/"
 }
