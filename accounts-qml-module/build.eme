@@ -15,7 +15,10 @@ source="https://gitlab.com/accounts-sso/${name}/-/archive/${commit}/${name}-${co
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${commit}"
-    qmake6 PREFIX=/usr LIBDIR=/usr/lib
+
+    qmake6 \
+        PREFIX=/usr \
+        LIBDIR=/usr/lib
 
     make
     make INSTALL_ROOT="${PKG}" install_subtargets
