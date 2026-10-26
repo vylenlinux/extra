@@ -23,5 +23,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    rm "${PKG}/usr/share/gnuplot/${version%.*}/js/README"
+    rm "${PKG}/usr/share/${name}/${version%.*}/js/README"
 }
