@@ -6,7 +6,7 @@ homepage="http://www.gnuplot.info/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gnuplot
-version=6.0.5
+version=6.0.6
 release=1
 source="https://downloads.sourceforge.net/project/${name}/${name}/${version}/${name}-${version}.tar.gz"
 
@@ -14,8 +14,8 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    export CFLAGS="${CFLAGS} \
-        -std=gnu17"
+    #export CFLAGS="${CFLAGS} \
+    #    -std=gnu17"
 
     ./configure \
         --prefix=/usr \
