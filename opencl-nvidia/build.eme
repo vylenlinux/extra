@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="OpenCL implemention for NVIDIA"
+homepage="https://www.nvidia.com/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=opencl-nvidia
+version=615.78.08
+release=1
+source="nvidia-open-${version}.run::https://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run"
+
+build() {
+    create_links() {
+        find "${PKG}" -type f -name '*.so*' ! -path '*xorg/*' | while IFS= read -r _lib; do
+            _soname="$(readelf -d "$_lib" | sed -n 's/.*SONAME.*: \[\([^]]*\)\].*/\1/p')" || continue
+            [ -n "$_soname" ] || continue
+
+            _dir="${_lib%/*}"
+            _soname="$_dir/$_soname"
+            _base="$(printf '%s\n' "$_soname" | sed 's/\.so.*/.so/')"
+
+            [ -e "$_soname" ] || ln -s "${_lib##*/}" "$_soname"
+            [ -e "$_base" ] || ln -s "${_soname##*/}" "$_base"
+        done
+    }
+
+    sh "nvidia-open-${version}.run" --extract-only
+
+    # shellcheck disable=SC2164
+    cd "NVIDIA-Linux-x86_64-${version}"
+
+    install -Dm644 nvidia.icd -t "${PKG}/etc/OpenCL/vendors/"
+    install -Dm755 "libnvidia-opencl.so.${version}" -t "${PKG}/usr/lib/"
+
+    create_links
+}

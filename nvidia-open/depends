@@ -1,3 +1,2 @@
 dkms
-egl-wayland
-gtk3
+nvidia-utils

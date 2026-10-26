@@ -1,0 +1,9 @@
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/OpenCL/
+drwxr-xr-x root/root    etc/OpenCL/vendors/
+-rw-r--r-- root/root    etc/OpenCL/vendors/nvidia.icd
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libnvidia-opencl.so -> libnvidia-opencl.so.1
+lrwxrwxrwx root/root    usr/lib/libnvidia-opencl.so.1 -> libnvidia-opencl.so.615.78.08
+-rwxr-xr-x root/root    usr/lib/libnvidia-opencl.so.615.78.08

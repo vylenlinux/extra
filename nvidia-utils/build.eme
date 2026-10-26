@@ -1,0 +1,214 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="NVIDIA drivers utilities"
+homepage="https://www.nvidia.com/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=nvidia-utils
+version=615.78.08
+release=1
+
+source="nvidia-open-${version}.run::https://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
+    10-nvidia-drm-outputclass.conf
+    ${name}.conf
+    systemd-homed-override.conf
+    systemd-suspend-override.conf"
+
+build() {
+    create_links() {
+        find "${PKG}" -type f -name '*.so*' ! -path '*xorg/*' | while IFS= read -r _lib; do
+            _soname="$(readelf -d "$_lib" | sed -n 's/.*SONAME.*: \[\([^]]*\)\].*/\1/p')" || continue
+            [ -n "$_soname" ] || continue
+
+            _dir="${_lib%/*}"
+            _soname="$_dir/$_soname"
+            _base="$(printf '%s\n' "$_soname" | sed 's/\.so.*/.so/')"
+
+            [ -e "$_soname" ] || ln -s "${_lib##*/}" "$_soname"
+            [ -e "$_base" ] || ln -s "${_soname##*/}" "$_base"
+        done
+    }
+
+    install_lib() {
+        install -Dm755 "${1}" "${PKG}/usr/lib/${2}/${1##*/}"
+    }
+
+    install_bin() {
+        install -Dm755 "${1}" "${PKG}/usr/bin/${2}/${1##*/}"
+    }
+
+    install_man1() {
+        install -Dm644 "${1}" "${PKG}/usr/share/man/man1/${1##*/}"
+    }
+
+    sh "nvidia-open-${version}.run" --extract-only
+
+    # shellcheck disable=SC2164
+    cd "NVIDIA-Linux-x86_64-${version}"
+    bsdtar -xf nvidia-persistenced-init.tar.bz2
+
+    # X driver
+    install_lib nvidia_drv.so xorg/modules/drivers
+
+    # Wayland/GBM
+    mkdir -p "${PKG}/usr/lib/gbm"
+    ln -sr "${PKG}/usr/lib/libnvidia-allocator.so.${version}" "${PKG}/usr/lib/gbm/nvidia-drm_gbm.so"
+
+    # firmware
+    install -Dm644 firmware/*.bin -t "${PKG}/usr/lib/firmware/nvidia/${version}/"
+
+    # GLX extension module for X
+    install_lib "libglxserver_nvidia.so.${version}" nvidia/xorg
+
+    # Ensure that X finds glx
+    ln -s "libglxserver_nvidia.so.${version}" "${PKG}/usr/lib/nvidia/xorg/libglxserver_nvidia.so.1"
+    ln -s "libglxserver_nvidia.so.${version}" "${PKG}/usr/lib/nvidia/xorg/libglxserver_nvidia.so"
+
+    install_lib "libGLX_nvidia.so.${version}"
+
+    # OpenGL libraries
+    install_lib "libEGL_nvidia.so.${version}"
+    install_lib "libGLESv1_CM_nvidia.so.${version}"
+    install_lib "libGLESv2_nvidia.so.${version}"
+    install -Dm644 10_nvidia.json -t "${PKG}/usr/share/glvnd/egl_vendor.d/"
+
+    # OpenGL core library
+    install_lib "libnvidia-glcore.so.${version}"
+    install_lib "libnvidia-eglcore.so.${version}"
+    install_lib "libnvidia-glsi.so.${version}"
+
+    # misc
+    install_lib libnvidia-api.so.1
+    install_lib "libnvidia-fbc.so.${version}"
+    install_lib "libnvidia-encode.so.${version}"
+    install_lib "libnvidia-cfg.so.${version}"
+    install_lib "libnvidia-ml.so.${version}"
+    install_lib "libnvidia-fmdrv.so.${version}"
+    install_lib "libnvidia-imex.so.${version}"
+    install_lib "libnvidia-glvkspirv.so.${version}"
+    install_lib "libnvidia-allocator.so.${version}"
+    install_lib "libnvidia-gpucomp.so.${version}"
+
+    # Vulkan ICD
+    install -Dm644 nvidia_icd.json -t "${PKG}/usr/share/vulkan/icd.d/"
+    install -Dm644 nvidia_layers.json -t "${PKG}/usr/share/vulkan/implicit_layer.d/"
+
+    # VulkanSC
+    install_bin nvidia-pcc
+    install_lib "libnvidia-vksc-core.so.${version}"
+    install -Dm644 nvidia_icd_vksc.json -t "${PKG}/usr/share/vulkansc/icd.d/"
+
+    # VDPAU
+    install_lib "libvdpau_nvidia.so.${version}" vdpau
+
+    # nvidia-tls library
+    install_lib "libnvidia-tls.so.${version}"
+
+    # CUDA
+    install_lib "libcuda.so.${version}"
+    install_lib "libnvcuvid.so.${version}"
+    install_lib "libcudadebugger.so.${version}"
+
+    # NVVM Compiler library loaded by the CUDA driver to do JIT link-time-optimization
+    install_lib "libnvidia-nvvm.so.${version}"
+    install_lib libnvidia-nvvm70.so.4
+
+    # PTX JIT Compiler (Parallel Thread Execution (PTX) is a pseudo-assembly language for CUDA)
+    install_lib "libnvidia-ptxjitcompiler.so.${version}"
+
+    # raytracing
+    install -Dm755 nvoptix.bin -t "${PKG}/usr/share/nvidia/"
+    install_lib "libnvoptix.so.${version}"
+    install_lib "libnvidia-rtcore.so.${version}"
+
+    # NGX
+    install_bin nvidia-ngx-updater
+    install_lib "libnvidia-ngx.so.${version}"
+    install_lib _nvngx.dll nvidia/wine
+    install_lib nvngx.dll nvidia/wine
+    install_lib nvngx_dlssg.dll nvidia/wine
+
+    # Optical flow
+    install_lib "libnvidia-opticalflow.so.${version}"
+
+    # Cryptography library wrapper
+    # install_lib "libnvidia-pkcs11.so.${version}"
+    # install_lib "libnvidia-pkcs11-openssl3.so.${version}"
+
+    # Sandboxhelper
+    install_lib "libnvidia-sandboxutils.so.${version}"
+
+    # Present Helper
+    install_lib "libnvidia-present.so.${version}"
+
+    # https://github.com/microsoft/TileIR
+    install_lib "libnvidia-tileiras.so.${version}"
+
+    # Debug
+    install_bin nvidia-debugdump
+
+    # nvidia-xconfig
+    install_bin nvidia-xconfig
+    install_man1 nvidia-xconfig.1.gz
+
+    # nvidia-bug-report
+    install_bin nvidia-bug-report.sh
+
+    # nvidia-smi
+    install_bin nvidia-smi
+    install_man1 nvidia-smi.1.gz
+
+    # nvidia-cuda-mps
+    install_bin nvidia-cuda-mps-server
+    install_bin nvidia-cuda-mps-control
+    install_man1 nvidia-cuda-mps-control.1.gz
+
+    # nvidia-modprobe
+    # This should be removed if nvidia fixed their uvm module!
+    install -Dm4755 nvidia-modprobe -t "${PKG}/usr/bin/"
+    install_man1 nvidia-modprobe.1.gz
+
+    # nvidia-persistenced
+    install_bin nvidia-persistenced
+    install_man1 nvidia-persistenced.1.gz
+    install -Dm644 nvidia-persistenced-init/systemd/nvidia-persistenced.service.template "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
+
+    sed -i 's/__USER__/nvidia-persistenced/' "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
+
+    # application profiles
+    install -Dm644 "nvidia-application-profiles-${version}-rc" -t "${PKG}/usr/share/nvidia/"
+    install -Dm644 "nvidia-application-profiles-${version}-key-documentation" -t "${PKG}/usr/share/nvidia/"
+
+    install -d "${PKG}/usr/share/doc/nvidia"
+    cp -r html -t "${PKG}/usr/share/doc/nvidia/"
+    ln -s nvidia "${PKG}/usr/share/doc/nvidia-utils"
+
+    # new power management support
+    install -Dm644 systemd/system/*.service -t "${PKG}/usr/lib/systemd/system/"
+    install_lib systemd/system-sleep/nvidia systemd/system-sleep
+    install_bin systemd/nvidia-sleep.sh
+    install_bin nvidia-powerd
+    install -Dm644 dlsnetparams.csv -t "${PKG}/usr/share/nvidia/nvidia-powerd/"
+    install -Dm644 nvidia-dbus.conf -t "${PKG}/usr/share/dbus-1/system.d/"
+
+    install -Dm644 "${SRC}/systemd-homed-override.conf" "${PKG}/usr/lib/systemd/system/systemd-homed.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-suspend.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-suspend-then-hibernate.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-hibernate.service.d/10-nvidia-no-freeze-session.conf"
+    install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-hybrid-sleep.service.d/10-nvidia-no-freeze-session.conf"
+
+    # distro specific files must be installed in /usr/share/X11/xorg.conf.d
+    install -Dm644 "${SRC}/10-nvidia-drm-outputclass.conf" -t "${PKG}/usr/share/X11/xorg.conf.d/"
+
+    # Enable kernel suspend notifiers for open modules and override TemporaryFilePath from default /tmp to /var/tmp
+    install -Dm644 "${SRC}/nvidia-utils.conf" -t "${PKG}/usr/lib/modprobe.d/"
+
+    # Lists NVIDIA driver files for container runtimes like nvidia-container-toolkit
+    install -Dm644 sandboxutils-filelist.json -t "${PKG}/usr/share/nvidia/files.d/"
+
+    do_sysusers "${name}"
+    do_udev_rules 60-nvidia
+
+    create_links
+}
