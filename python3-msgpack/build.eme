@@ -6,7 +6,7 @@ homepage="https://pypi.org/project/msgpack/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-msgpack
-version=1.2.3
+version=1.2.4
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/m/msgpack/msgpack-${version}.tar.gz"
 
