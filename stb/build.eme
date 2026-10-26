@@ -14,7 +14,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"*
 
-    for file in *.h *.c deprecated/stb_image_resize.h; do
+    for file in *.h *.c deprecated/stb_image_resize.h deprecated/stb_image_resize2.h; do
         install -Dm644 "${file}" -t "${PKG}/usr/include/${name}/"
     done
 }
