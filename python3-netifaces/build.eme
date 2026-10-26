@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Portable module to access network interface information in Python"
+homepage="https://alastairs-place.net/netifaces/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-netifaces
+version=0.11.0
+release=1
+
+_version="$(printf '%s' "${version}" | tr '.' '_')"
+source="${name}-${version}.tar.gz::https://github.com/al45tair/netifaces/archive/refs/tags/release_${_version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "netifaces-release_${_version}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}

@@ -1,0 +1,10 @@
+name = "python3-netifaces"
+provider = "github"
+
+[source]
+owner = "al45tair"
+repo = "netifaces"
+
+[github]
+use_releases = false
+use_tags = true
