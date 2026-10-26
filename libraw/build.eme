@@ -6,14 +6,14 @@ homepage="https://www.libraw.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libraw
-version=0.22.2
+version=0.22.3
 release=1
 source="${name}-${version}.tar.gz::https://www.libraw.org/data/LibRaw-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "LibRaw-${version}"
-    autoreconf -fiv
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
