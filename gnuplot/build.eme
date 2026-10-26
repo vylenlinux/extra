@@ -14,9 +14,6 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    #export CFLAGS="${CFLAGS} \
-    #    -std=gnu17"
-
     ./configure \
         --prefix=/usr \
         --libexecdir=/usr/lib \
