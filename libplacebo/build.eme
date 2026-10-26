@@ -1,22 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Reusable library for GPU-accelerated video/image rendering primitives"
 homepage="https://github.com/haasn/libplacebo"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libplacebo
-version=7.360.1
+version=7.387.0
 release=1
-source="$name-$version.tar.gz::https://github.com/haasn/libplacebo/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/haasn/${name}/archive/v${version}.tar.gz"
 
 build() {
-	CXXFLAGS="$CXXFLAGS -I/usr/include/glslang"
-	vylen-meson $name-$version build \
-		-Dvulkan=enabled \
-		-Dshaderc=enabled \
-		-Dlcms=enabled \
-		-Dd3d11=disabled \
-		-Ddemos=false \
-		-Dtests=false
-	meson compile -C build 
-	DESTDIR=$PKG meson install --no-rebuild -C build
-}
+    vylen-meson "${name}-${version}" build \
+        -Dvulkan=enabled \
+        -Dshaderc=enabled \
+        -Dlcms=enabled \
+        -Dd3d11=disabled \
+        -Ddemos=false \
+        -Dtests=false
 
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
