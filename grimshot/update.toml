@@ -1,5 +1,6 @@
 name = "grimshot"
 provider = "github"
+dedup_key = "sway-contrib"
 
 [source]
 owner = "OctopusET"

@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=grimshot
 version=1.12
 release=1
-source="${name}-${version}.tar.gz::https://github.com/OctopusET/sway-contrib/archive/${version}.tar.gz"
+source="sway-contrib-${version}.tar.gz::https://github.com/OctopusET/sway-contrib/archive/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
