@@ -6,9 +6,9 @@ homepage="https://github.com/danoli3/FreeImage"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeimage
-version=3.19.27
+version=3.19.28
 release=1
-source="${name}-${version}.tar.gz::https://github.com/danoli3/${name}/releases/download/${version}/FreeImage-${version}-linux-source.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/danoli3/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     cmake -S "FreeImage-${version}" -B build -G Ninja \
