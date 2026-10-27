@@ -32,9 +32,9 @@ build() {
     # Additional parameters for open kernel modules
     cat "${SRC}/dkms.conf.in" >> kernel-open/dkms.conf
 
-    install -dm755 "${PKG}/usr/src"
+    install -dm755 "${PKG}/usr/src/nvidia-${version}"
 
-    cp -dr --no-preserve=ownership . "${PKG}/usr/src/nvidia-${version}"
+    cp -dr --no-preserve=ownership . -t "${PKG}/usr/src/nvidia-${version}/"
     mv "${PKG}/usr/src/nvidia-${version}/kernel-open/dkms.conf" -t "${PKG}/usr/src/nvidia-${version}/"
 
     # dkms build modules script
