@@ -3,4 +3,5 @@ cinnamon-settings-daemon
 colord
 libgnomekbd
 libnma
+modemmanager
 networkmanager

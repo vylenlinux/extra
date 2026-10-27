@@ -22,13 +22,11 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/cinnamon-color-panel.desktop
--rw-r--r-- root/root    usr/share/applications/cinnamon-display-panel.desktop
 -rw-r--r-- root/root    usr/share/applications/cinnamon-network-panel.desktop
 -rw-r--r-- root/root    usr/share/applications/cinnamon-wacom-panel.desktop
 drwxr-xr-x root/root    usr/share/cinnamon-control-center/
 drwxr-xr-x root/root    usr/share/cinnamon-control-center/panels/
 lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-color-panel.desktop -> ../../applications/cinnamon-color-panel.desktop
-lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-display-panel.desktop -> ../../applications/cinnamon-display-panel.desktop
 lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-network-panel.desktop -> ../../applications/cinnamon-network-panel.desktop
 lrwxrwxrwx root/root    usr/share/cinnamon-control-center/panels/cinnamon-wacom-panel.desktop -> ../../applications/cinnamon-wacom-panel.desktop
 drwxr-xr-x root/root    usr/share/cinnamon-control-center/ui/
