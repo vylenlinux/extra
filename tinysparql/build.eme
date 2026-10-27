@@ -9,7 +9,7 @@ name=tinysparql
 version=3.12.0
 release=1
 
-source="${name}-${version}.tar.gz::https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz
+source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${version}.tar.gz
     disable-cli-test.patch
     gh-ci-timeout.patch"
 
