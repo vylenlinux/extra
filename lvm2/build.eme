@@ -6,7 +6,7 @@ homepage="https://sourceware.org/lvm2/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lvm2
-version=2.03.43
+version=2.03.44
 release=1
 
 backup="etc/lvm/lvm.conf

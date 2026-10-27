@@ -1,5 +1,6 @@
 name = "lvm2"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "lvm2"
+[ftp]
+url = "https://sourceware.org/pub/%(name)"
+filename = "LVM2.%(version).tgz"
