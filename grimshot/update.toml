@@ -1,5 +1,6 @@
 name = "grimshot"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "grimshot"
+owner = "OctopusET"
+repo = "sway-contrib"

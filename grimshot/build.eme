@@ -1,18 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A helper for screenshots within sway"
 homepage="https://github.com/OctopusET/sway-contrib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=grimshot
-version=1.11
+version=1.12
 release=1
-source="$name-$version.tar.gz::https://github.com/OctopusET/sway-contrib/archive/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/OctopusET/sway-contrib/archive/${version}.tar.gz"
 
 build() {
-	cd sway-contrib-$version/$name
-	
-	install -dm755 "$PKG/usr/bin"
-	install -Dm755 grimshot -t "$PKG/usr/bin"
+    # shellcheck disable=SC2164
+    cd "sway-contrib-${version}/${name}"
 
-	install -dm755 "$PKG/usr/share/man/man1"
-	install -Dm644 grimshot.1 -t "$PKG/usr/share/man/man1"
+    install -Dm755 "${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 "${name}.1" -t "${PKG}/usr/share/man/man1/"
 }
