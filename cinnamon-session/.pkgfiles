@@ -6,6 +6,13 @@ drwxr-xr-x root/root    usr/lib/
 -rwxr-xr-x root/root    usr/lib/cinnamon-session-binary
 -rwxr-xr-x root/root    usr/lib/cinnamon-session-check-accelerated
 -rwxr-xr-x root/root    usr/lib/cinnamon-session-check-accelerated-helper
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+drwxr-xr-x root/root    usr/lib/systemd/user/app-cinnamon-.scope.d/
+-rw-r--r-- root/root    usr/lib/systemd/user/app-cinnamon-.scope.d/app-override.scope.conf
+-rw-r--r-- root/root    usr/lib/systemd/user/cinnamon-session.target
+drwxr-xr-x root/root    usr/lib/systemd/user/dbus.service.d/
+-rw-r--r-- root/root    usr/lib/systemd/user/dbus.service.d/dbus-override.service.conf
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/cinnamon-session/
 -rw-r--r-- root/root    usr/share/cinnamon-session/cinnamon-session-quit.glade

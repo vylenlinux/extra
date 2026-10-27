@@ -6,7 +6,7 @@ homepage="https://github.com/linuxmint/cinnamon-session"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cinnamon-session
-version=6.6.4
+version=6.8.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
 
