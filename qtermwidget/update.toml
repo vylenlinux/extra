@@ -1,5 +1,5 @@
 name = "qtermwidget"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "qtermwidget"
+package = "%(name)"
