@@ -1,5 +1,10 @@
 name = "libjpeg-turbo"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libjpeg-turbo"
+owner = "%(name)"
+repo = "%(name)"
+
+[github]
+use_releases = false
+use_tags = true
