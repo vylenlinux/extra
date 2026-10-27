@@ -7,4 +7,7 @@ repo = "%(name)"
 
 [github]
 use_releases = false
-use_tags = false
+use_tags = true
+
+[version]
+exclude = ["v*-rc*"]
