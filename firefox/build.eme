@@ -6,7 +6,7 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=firefox
-version=158.0.1
+version=159.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
@@ -63,11 +63,10 @@ build() {
     install -Dm644 "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
 
     # distribution
-    sed -i \
+    sed \
          -e "s|@VERSION@|${version}|" \
          -e "s|@NAME@|${name}|" \
-         "${SRC}/distribution.ini" \
-    | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
+    -i "${SRC}/distribution.ini" | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
 
     # add icons
     for i in 16 22 24 32 48 64 128 256; do
