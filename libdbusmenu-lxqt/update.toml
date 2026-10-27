@@ -1,5 +1,5 @@
 name = "libdbusmenu-lxqt"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "libdbusmenu-lxqt"
+package = "%(name)"
