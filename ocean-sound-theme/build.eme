@@ -6,7 +6,7 @@ homepage="https://kde.org/plasma-desktop/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ocean-sound-theme
-version=6.8.1
+version=6.8.2
 release=1
 source="https://download.kde.org/stable/plasma/${version}/${name}-${version}.tar.xz"
 
