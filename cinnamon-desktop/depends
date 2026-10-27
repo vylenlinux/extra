@@ -1,4 +1,5 @@
 gdk-pixbuf
+gtk3
 libpulse
 libxinerama
 libxkbfile
