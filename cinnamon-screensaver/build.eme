@@ -6,12 +6,12 @@ homepage="https://github.com/linuxmint/cinnamon-screensaver"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cinnamon-screensaver
-version=6.6.1
+version=6.8.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    vylen-meson "${name}-${version}" build -Dpam-prefix=/usr/lib/pam.d
+    vylen-meson "${name}-${version}" build -Dpam-prefix=/usr/lib
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
