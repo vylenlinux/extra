@@ -1,5 +1,5 @@
 name = "pavucontrol-qt"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "pavucontrol-qt"
+package = "%(name)"
