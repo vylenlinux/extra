@@ -1,5 +1,5 @@
 name = "libfm-qt"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "libfm-qt"
+package = "%(name)"
