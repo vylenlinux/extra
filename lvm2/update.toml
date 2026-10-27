@@ -2,5 +2,5 @@ name = "lvm2"
 provider = "ftp"
 
 [ftp]
-url = "https://sourceware.org/pub/%(name)"
+url = "https://sourceware.org/pub/%(name)/"
 filename = "LVM2.%(version).tgz"

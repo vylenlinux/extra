@@ -17,7 +17,7 @@ source="${name}-${version}.tgz::https://sourceware.org/pub/${name}/LVM2.${versio
 build() {
     # shellcheck disable=SC2164
     cd "LVM2.${version}"
-    export CONFIG_SHELL=/bin/bash
+    export CONFIG_SHELL=/usr/bin/bash
 
     sed -i -e '/^\[Install\]$/,$d' \
         scripts/lvm2_lvmpolld_systemd_red_hat.socket.in \
