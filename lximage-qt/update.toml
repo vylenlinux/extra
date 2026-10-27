@@ -1,5 +1,5 @@
 name = "lximage-qt"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lximage-qt"
+package = "%(name)"
