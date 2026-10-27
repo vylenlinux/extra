@@ -1,5 +1,5 @@
 name = "screengrab"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "screengrab"
+package = "%(name)"
