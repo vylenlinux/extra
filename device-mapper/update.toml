@@ -1,6 +1,7 @@
 name = "device-mapper"
-provider = "repology"
+provider = "ftp"
 dedup_key = "lvm2"
 
-[source]
-package = "lvm2"
+[ftp]
+url = "https://sourceware.org/pub/lvm2/"
+filename = "LVM2.%(version).tgz"

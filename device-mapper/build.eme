@@ -6,7 +6,7 @@ homepage="https://sourceware.org/dm/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=device-mapper
-version=2.03.43
+version=2.03.44
 release=1
 source="lvm2-${version}.tgz::https://sourceware.org/pub/lvm2/LVM2.${version}.tgz"
 
@@ -14,7 +14,7 @@ build() {
     # shellcheck disable=SC2164
     cd "LVM2.${version}"
 
-    export CONFIG_SHELL=/bin/bash
+    export CONFIG_SHELL=/usr/bin/bash
     sed -i -e '/^\[Install\]$/,$d' scripts/dm_event_systemd_red_hat.socket.in
 
     ./configure \
