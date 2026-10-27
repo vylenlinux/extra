@@ -1,5 +1,5 @@
 name = "lxqt-archiver"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-archiver"
+package = "%(name)"

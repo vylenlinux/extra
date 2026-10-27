@@ -1,5 +1,5 @@
 name = "lxqt-policykit"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-policykit"
+package = "%(name)"

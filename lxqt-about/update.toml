@@ -1,5 +1,5 @@
 name = "lxqt-about"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-about"
+package = "%(name)"

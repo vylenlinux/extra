@@ -1,5 +1,5 @@
 name = "lxqt-menu-data"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-menu-data"
+package = "%(name)"

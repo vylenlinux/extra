@@ -1,5 +1,5 @@
 name = "lxqt-openssh-askpass"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-openssh-askpass"
+package = "%(name)"

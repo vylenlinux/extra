@@ -1,5 +1,5 @@
 name = "lxqt-sudo"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-sudo"
+package = "%(name)"

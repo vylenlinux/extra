@@ -1,5 +1,5 @@
 name = "lxqt-notificationd"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-notificationd"
+package = "%(name)"

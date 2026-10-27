@@ -1,5 +1,5 @@
 name = "lxqt-wayland-session"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-wayland-session"
+package = "%(name)"

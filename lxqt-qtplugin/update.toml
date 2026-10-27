@@ -1,5 +1,5 @@
 name = "lxqt-qtplugin"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-qtplugin"
+package = "%(name)"

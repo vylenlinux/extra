@@ -1,5 +1,5 @@
 name = "lxqt-runner"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "lxqt-runner"
+package = "%(name)"
