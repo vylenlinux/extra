@@ -6,14 +6,14 @@ homepage="https://github.com/linuxmint/xapp"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xapp
-version=3.2.3
+version=3.4.0
 release=1
-source="https://github.com/linuxmint/${name}/archive/master.lmde5/${name}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    vylen-meson xapp-master.lmde5 build
-    samu -C build
-    DESTDIR="${PKG}" samu -C build install
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 
     python3 -m compileall -o 0 -o 1 -o 2 --hardlink-dupes -s "${PKG}" "${PKG}/${PYTHON_SITE_PACKAGES}"
 }

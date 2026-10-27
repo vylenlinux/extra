@@ -1,5 +1,13 @@
 name = "xapp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xapp"
+owner = "linuxmint"
+repo = "%(name)"
+
+[github]
+use_releases = false
+use_tags = true
+
+[version]
+exclude = ["*-unstable"]
