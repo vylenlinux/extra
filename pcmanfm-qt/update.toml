@@ -1,5 +1,5 @@
 name = "pcmanfm-qt"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "pcmanfm-qt"
+package = "%(name)"
