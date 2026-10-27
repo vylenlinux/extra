@@ -1,0 +1,6 @@
+name = "opencl-nvidia"
+provider = "repology"
+dedup_key = "nvidia-open"
+
+[source]
+package = "nvidia"
