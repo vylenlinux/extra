@@ -1,5 +1,5 @@
 name = "qtxdg-tools"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "qtxdg-tools"
+package = "%(name)"
