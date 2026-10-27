@@ -1,5 +1,5 @@
 name = "libsysstat"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "libsysstat"
+package = "%(name)"
