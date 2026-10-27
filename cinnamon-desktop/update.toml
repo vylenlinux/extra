@@ -8,3 +8,6 @@ repo = "cinnamon-desktop"
 [github]
 use_releases = false
 use_tags = true
+
+[version]
+exclude = ["*-unstable"]
