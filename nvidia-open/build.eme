@@ -9,44 +9,38 @@ name=nvidia-open
 version=615.78.08
 release=1
 
-source="${name}-${version}.run::https://us.download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
-    ${name}-${version}.tar.xz::https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-${version}.tar.xz
+source="${name}-${version}.tar.xz::https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-${version}.tar.xz
     buildmodules-${name}.sh
     prime-run
     dkms.conf.in"
 
 build() {
-    sh "${name}-${version}.run" --extract-only
-
     # shellcheck disable=SC2164
-    cd "NVIDIA-Linux-x86_64-${version}"
+    cd "NVIDIA-kernel-module-source-${version}"
 
     # Attempt to make builds reproducible
-    sed -i "s/^  HOSTNAME.*/  HOSTNAME = echo vylen/" "${SRC}/NVIDIA-kernel-module-source-${version}/utils.mk"
-    sed -i "s/^WHOAMI.*/WHOAMI = echo emerald/" "${SRC}/NVIDIA-kernel-module-source-${version}/utils.mk"
-    sed -i "s/^DATE.*/DATE = date -r version.mk/" "${SRC}/NVIDIA-kernel-module-source-${version}/utils.mk"
+    sed -i "s/^  HOSTNAME.*/  HOSTNAME = echo vylen/" utils.mk
+    sed -i "s/^WHOAMI.*/WHOAMI = echo emerald/" utils.mk
+    sed -i "s/^DATE.*/DATE = date -r version.mk/" utils.mk
 
-    for conf in */dkms.conf; do
-        sed -i "s/__VERSION_STRING/${version}/" "${conf}"
-        # shellcheck disable=SC2016
-        sed -i 's/__JOBS/`nproc`/' "${conf}"
-        sed -i 's/__EXCLUDE_MODULES//' "${conf}"
-        sed -i 's/__DKMS_MODULES//' "${conf}"
-        sed -i 's/NV_EXCLUDE_BUILD_MODULES/IGNORE_PREEMPT_RT_PRESENCE=1 NV_EXCLUDE_BUILD_MODULES/' "${conf}"
+    sed -i "s/__VERSION_STRING/${version}/" kernel-open/dkms.conf
+    # shellcheck disable=SC2016
+    sed -i 's/__JOBS/`nproc`/' kernel-open/dkms.conf
+    sed -i 's/__EXCLUDE_MODULES//' kernel-open/dkms.conf
+    sed -i 's/__DKMS_MODULES//' kernel-open/dkms.conf
+    sed -i 's/NV_EXCLUDE_BUILD_MODULES/IGNORE_PREEMPT_RT_PRESENCE=1 NV_EXCLUDE_BUILD_MODULES/' kernel-open/dkms.conf
 
-        sed -i '$i \
-            BUILT_MODULE_NAME[0]="nvidia" \
-            DEST_MODULE_LOCATION[0]="/kernel/drivers/video" \
-            BUILT_MODULE_NAME[1]="nvidia-uvm" \
-            DEST_MODULE_LOCATION[1]="/kernel/drivers/video" \
-            BUILT_MODULE_NAME[2]="nvidia-modeset" \
-            DEST_MODULE_LOCATION[2]="/kernel/drivers/video" \
-            BUILT_MODULE_NAME[3]="nvidia-drm" \
-            DEST_MODULE_LOCATION[3]="/kernel/drivers/video" \
-            BUILT_MODULE_NAME[4]="nvidia-peermem" \
-            DEST_MODULE_LOCATION[4]="/kernel/drivers/video"' \
-        "${conf}"
-    done
+    sed -i '$i\
+        BUILT_MODULE_NAME[0]="nvidia"\
+        DEST_MODULE_LOCATION[0]="/kernel/drivers/video"\
+        BUILT_MODULE_NAME[1]="nvidia-uvm"\
+        DEST_MODULE_LOCATION[1]="/kernel/drivers/video"\
+        BUILT_MODULE_NAME[2]="nvidia-modeset"\
+        DEST_MODULE_LOCATION[2]="/kernel/drivers/video"\
+        BUILT_MODULE_NAME[3]="nvidia-drm"\
+        DEST_MODULE_LOCATION[3]="/kernel/drivers/video"\
+        BUILT_MODULE_NAME[4]="nvidia-peermem"\
+        DEST_MODULE_LOCATION[4]="/kernel/drivers/video"' kernel-open/dkms.conf
 
     # Additional parameters for open kernel modules
     cat "${SRC}/dkms.conf.in" >> kernel-open/dkms.conf
