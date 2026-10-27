@@ -1,5 +1,5 @@
 name = "qterminal"
-provider = "repology"
+provider = "lxqt"
 
 [source]
-package = "qterminal"
+package = "%(name)"
