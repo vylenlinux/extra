@@ -30,16 +30,20 @@ build() {
         done
     }
 
+    install_file() {
+        install -Dm"${3:-644}" "${1}" -t "${PKG}/${2}/"
+    }
+
     install_lib() {
-        install -Dm755 "${1}" "${PKG}/usr/lib/${2}/${1##*/}"
+        install_file "${1}" "usr/lib/${2}" 755
     }
 
     install_bin() {
-        install -Dm755 "${1}" "${PKG}/usr/bin/${2}/${1##*/}"
+        install_file "${1}" "usr/bin/${2}" 755
     }
 
-    install_man1() {
-        install -Dm644 "${1}" "${PKG}/usr/share/man/man1/${1##*/}"
+    install_man() {
+        install_file "${1}" "usr/share/man/man${2:-1}"
     }
 
     sh "nvidia-open-${version}.run" --extract-only
@@ -71,7 +75,7 @@ build() {
     install_lib "libEGL_nvidia.so.${version}"
     install_lib "libGLESv1_CM_nvidia.so.${version}"
     install_lib "libGLESv2_nvidia.so.${version}"
-    install -Dm644 10_nvidia.json -t "${PKG}/usr/share/glvnd/egl_vendor.d/"
+    install_file 10_nvidia.json usr/share/glvnd/egl_vendor.d
 
     # OpenGL core library
     install_lib "libnvidia-glcore.so.${version}"
@@ -91,13 +95,13 @@ build() {
     install_lib "libnvidia-gpucomp.so.${version}"
 
     # Vulkan ICD
-    install -Dm644 nvidia_icd.json -t "${PKG}/usr/share/vulkan/icd.d/"
-    install -Dm644 nvidia_layers.json -t "${PKG}/usr/share/vulkan/implicit_layer.d/"
+    install_file nvidia_icd.json usr/share/vulkan/icd.d
+    install_file nvidia_layers.json usr/share/vulkan/implicit_layer.d
 
     # VulkanSC
     install_bin nvidia-pcc
     install_lib "libnvidia-vksc-core.so.${version}"
-    install -Dm644 nvidia_icd_vksc.json -t "${PKG}/usr/share/vulkansc/icd.d/"
+    install_file nvidia_icd_vksc.json usr/share/vulkansc/icd.d
 
     # VDPAU
     install_lib "libvdpau_nvidia.so.${version}" vdpau
@@ -118,7 +122,7 @@ build() {
     install_lib "libnvidia-ptxjitcompiler.so.${version}"
 
     # raytracing
-    install -Dm755 nvoptix.bin -t "${PKG}/usr/share/nvidia/"
+    install_file nvoptix.bin usr/share/nvidia 755
     install_lib "libnvoptix.so.${version}"
     install_lib "libnvidia-rtcore.so.${version}"
 
@@ -150,35 +154,35 @@ build() {
 
     # nvidia-xconfig
     install_bin nvidia-xconfig
-    install_man1 nvidia-xconfig.1.gz
+    install_man nvidia-xconfig.1.gz
 
     # nvidia-bug-report
     install_bin nvidia-bug-report.sh
 
     # nvidia-smi
     install_bin nvidia-smi
-    install_man1 nvidia-smi.1.gz
+    install_man nvidia-smi.1.gz
 
     # nvidia-cuda-mps
     install_bin nvidia-cuda-mps-server
     install_bin nvidia-cuda-mps-control
-    install_man1 nvidia-cuda-mps-control.1.gz
+    install_man nvidia-cuda-mps-control.1.gz
 
     # nvidia-modprobe
     # This should be removed if nvidia fixed their uvm module!
-    install -Dm4755 nvidia-modprobe -t "${PKG}/usr/bin/"
-    install_man1 nvidia-modprobe.1.gz
+    install_file nvidia-modprobe usr/bin 4755
+    install_man nvidia-modprobe.1.gz
 
     # nvidia-persistenced
     install_bin nvidia-persistenced
-    install_man1 nvidia-persistenced.1.gz
+    install_man nvidia-persistenced.1.gz
     install -Dm644 nvidia-persistenced-init/systemd/nvidia-persistenced.service.template "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
 
     sed -i 's/__USER__/nvidia-persistenced/' "${PKG}/usr/lib/systemd/system/nvidia-persistenced.service"
 
     # application profiles
-    install -Dm644 "nvidia-application-profiles-${version}-rc" -t "${PKG}/usr/share/nvidia/"
-    install -Dm644 "nvidia-application-profiles-${version}-key-documentation" -t "${PKG}/usr/share/nvidia/"
+    install_file "nvidia-application-profiles-${version}-rc" usr/share/nvidia
+    install_file "nvidia-application-profiles-${version}-key-documentation" usr/share/nvidia
 
     install -d "${PKG}/usr/share/doc/nvidia"
     cp -r html -t "${PKG}/usr/share/doc/nvidia/"
@@ -189,8 +193,8 @@ build() {
     install_lib systemd/system-sleep/nvidia systemd/system-sleep
     install_bin systemd/nvidia-sleep.sh
     install_bin nvidia-powerd
-    install -Dm644 dlsnetparams.csv -t "${PKG}/usr/share/nvidia/nvidia-powerd/"
-    install -Dm644 nvidia-dbus.conf -t "${PKG}/usr/share/dbus-1/system.d/"
+    install_file dlsnetparams.csv usr/share/nvidia/nvidia-powerd
+    install_file nvidia-dbus.conf usr/share/dbus-1/system.d
 
     install -Dm644 "${SRC}/systemd-homed-override.conf" "${PKG}/usr/lib/systemd/system/systemd-homed.service.d/10-nvidia-no-freeze-session.conf"
     install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-suspend.service.d/10-nvidia-no-freeze-session.conf"
@@ -199,13 +203,13 @@ build() {
     install -Dm644 "${SRC}/systemd-suspend-override.conf" "${PKG}/usr/lib/systemd/system/systemd-hybrid-sleep.service.d/10-nvidia-no-freeze-session.conf"
 
     # distro specific files must be installed in /usr/share/X11/xorg.conf.d
-    install -Dm644 "${SRC}/10-nvidia-drm-outputclass.conf" -t "${PKG}/usr/share/X11/xorg.conf.d/"
+    install_file "${SRC}/10-nvidia-drm-outputclass.conf" usr/share/X11/xorg.conf.d
 
     # Enable kernel suspend notifiers for open modules and override TemporaryFilePath from default /tmp to /var/tmp
-    install -Dm644 "${SRC}/nvidia-utils.conf" -t "${PKG}/usr/lib/modprobe.d/"
+    install_file "${SRC}/nvidia-utils.conf" usr/lib/modprobe.d
 
     # Lists NVIDIA driver files for container runtimes like nvidia-container-toolkit
-    install -Dm644 sandboxutils-filelist.json -t "${PKG}/usr/share/nvidia/files.d/"
+    install_file sandboxutils-filelist.json usr/share/nvidia/files.d
 
     do_sysusers "${name}"
     do_udev_rules 60-nvidia
