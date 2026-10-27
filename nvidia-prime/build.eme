@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="NVIDIA Prime Render Offload configuration and utilities"
+homepage="https://vylen.gitlab.io/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=nvidia-prime
+version=20261027
+release=1
+source="prime-run"
+
+build() {
+    install -Dm755 prime-run -t "${PKG}/usr/bin/"
+}

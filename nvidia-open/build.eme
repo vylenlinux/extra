@@ -11,7 +11,6 @@ release=1
 
 source="${name}-${version}.tar.xz::https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-${version}.tar.xz
     buildmodules-${name}.sh
-    prime-run
     dkms.conf.in"
 
 build() {
@@ -41,7 +40,4 @@ build() {
     # dkms build modules script
     mkdir -p "${PKG}/var/lib/dkms"
     sed -e "s/@name@/nvidia/g" -e "s/@version@/${version}/g" "${SRC}/buildmodules-${name}.sh" > "${PKG}/var/lib/dkms/buildmodules-${name}.sh"
-
-    # prime-run script
-    install -Dm755 "${SRC}/prime-run" -t "${PKG}/usr/bin/"
 }
