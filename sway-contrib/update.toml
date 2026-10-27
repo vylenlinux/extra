@@ -1,5 +1,6 @@
 name = "sway-contrib"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sway-contrib"
+owner = "OctopusET"
+repo = "sway-contrib"
