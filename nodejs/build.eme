@@ -6,16 +6,16 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nodejs
-version=26.12.1
+version=26.13.0
 release=1
 
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz
-    fix-build-with-icu-79.1.patch"
+    fix-build-with-icu-79.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "node-v${version}"
-    patch -Np1 -i "${SRC}/fix-build-with-icu-79.1.patch"
+    patch -Np1 -i "${SRC}/fix-build-with-icu-79.patch"
 
     ./configure \
         --prefix=/usr \
