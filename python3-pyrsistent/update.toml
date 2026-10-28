@@ -6,5 +6,4 @@ owner = "tobgu"
 repo = "pyrsistent"
 
 [github]
-use_releases = false
 use_tags = true

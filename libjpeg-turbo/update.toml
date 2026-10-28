@@ -6,5 +6,4 @@ owner = "%(name)"
 repo = "%(name)"
 
 [github]
-use_releases = false
 use_tags = true

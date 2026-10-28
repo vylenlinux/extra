@@ -6,5 +6,4 @@ owner = "linuxmint"
 repo = "cinnamon-control-center"
 
 [github]
-use_releases = false
 use_tags = true

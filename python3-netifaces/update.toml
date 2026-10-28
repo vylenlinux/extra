@@ -6,5 +6,4 @@ owner = "al45tair"
 repo = "netifaces"
 
 [github]
-use_releases = false
 use_tags = true

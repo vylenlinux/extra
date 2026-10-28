@@ -6,5 +6,4 @@ owner = "linuxmint"
 repo = "xed"
 
 [github]
-use_releases = false
 use_tags = true

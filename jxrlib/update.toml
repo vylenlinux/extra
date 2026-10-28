@@ -6,5 +6,4 @@ owner = "mircomir"
 repo = "jxrlib"
 
 [github]
-use_releases = false
 use_tags = true

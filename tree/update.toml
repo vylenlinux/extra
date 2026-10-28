@@ -5,5 +5,4 @@ provider = "gitlab"
 project = "OldManProgrammer/unix-tree"
 
 [gitlab]
-use_releases = false
 use_tags = true

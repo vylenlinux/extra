@@ -6,7 +6,6 @@ owner = "linuxmint"
 repo = "muffin"
 
 [github]
-use_releases = false
 use_tags = true
 
 [version]

@@ -6,5 +6,4 @@ owner = "phuhl"
 repo = "bspwm-rounded"
 
 [github]
-use_releases = false
 use_tags = true

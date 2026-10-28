@@ -6,5 +6,4 @@ owner = "KhronosGroup"
 repo = "vulkan-loader"
 
 [github]
-use_releases = false
 use_tags = true

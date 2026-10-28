@@ -6,5 +6,4 @@ owner = "telegramdesktop"
 repo = "tdesktop"
 
 [github]
-use_releases = false
 use_tags = true

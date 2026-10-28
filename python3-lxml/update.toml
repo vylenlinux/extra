@@ -6,5 +6,4 @@ owner = "lxml"
 repo = "lxml"
 
 [github]
-use_releases = false
 use_tags = true

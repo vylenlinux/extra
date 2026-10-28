@@ -6,5 +6,4 @@ owner = "pipewire"
 repo = "pipewire"
 
 [github]
-use_releases = false
 use_tags = true

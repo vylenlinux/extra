@@ -6,5 +6,4 @@ owner = "linuxmint"
 repo = "xdg-desktop-portal-xapp"
 
 [github]
-use_releases = false
 use_tags = true
