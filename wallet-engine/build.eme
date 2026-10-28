@@ -10,12 +10,12 @@ version=0.0.7
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/i582/${name}/archive/refs/tags/v${version}.tar.gz
-    https://github.com/desktop-app/patches/raw/refs/heads/master/wallet-engine.patch"
+    https://github.com/desktop-app/patches/raw/refs/heads/master/${name}.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    patch -Np1 -i "${SRC}/wallet-engine.patch"
+    patch -Np1 -i "${SRC}/${name}.patch"
 
     just build
     just bindings-cpp
