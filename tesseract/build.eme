@@ -6,9 +6,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/tesseract-ocr/tesseract"
 
 name=tesseract
-version=5.5.3
+version=5.5.4
 release=1
-source="${name}-${version}.tar.gz::https://github.com/tesseract-ocr/${name}/archive/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/${name}-ocr/${name}/archive/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

@@ -1,5 +1,6 @@
 name = "tesseract"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "tesseract-ocr"
+owner = "%(name)-ocr"
+repo = "%(name)"
