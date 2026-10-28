@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Optical character recognition (OCR) engine"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+homepage="https://github.com/tesseract-ocr/tesseract"
+
+name=tesseract
+version=5.5.3
+release=1
+source="${name}-${version}.tar.gz::https://github.com/tesseract-ocr/${name}/archive/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    ./autogen.sh
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
+}

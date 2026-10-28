@@ -1,0 +1,5 @@
+name = "tesseract"
+provider = "repology"
+
+[source]
+package = "tesseract-ocr"
