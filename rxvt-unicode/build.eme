@@ -13,6 +13,7 @@ source="http://dist.schmorp.de/${name}/Attic/${name}-${version}.tar.bz2
     perl-5.38.patch
     urxvt-lerp.patch
     urxvt-osc.patch
+    24-bit-color.patch
     URxvt
     urxvt.desktop"
 
@@ -29,14 +30,16 @@ build() {
     # Fix OSC with 7-bit ST.
     patch -Np1 -i "${SRC}/urxvt-osc.patch"
 
+    # add suuport for 24-bit colour
+    patch -Np0 -i "${SRC}/24-bit-color.patch"
+
     ./configure \
         --prefix=/usr \
-        --enable-utmp \
-        --enable-wtmp \
         --enable-transparency \
         --enable-fading \
         --enable-mousewheel \
         --enable-256-color \
+        --enable-24-bit-color \
         --enable-xft \
         --enable-font-styles \
         --enable-unicode3
