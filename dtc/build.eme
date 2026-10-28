@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Device Tree Compiler"
+homepage="https://www.devicetree.org/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=dtc
+version=1.8.1
+release=1
+
+source="https://git.kernel.org/pub/scm/utils/${name}/${name}.git/snapshot/${name}-${version}.tar.gz
+    ${name}-swig-4.5.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/${name}-swig-4.5.patch"
+
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

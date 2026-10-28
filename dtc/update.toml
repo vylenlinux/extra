@@ -1,0 +1,5 @@
+name = "dtc"
+provider = "repology"
+
+[source]
+package = "%(name)"
