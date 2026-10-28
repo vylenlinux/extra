@@ -1,5 +1,6 @@
 name = "simdutf"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "simdutf"
+owner = "%(name)"
+repo = "%(name)"
