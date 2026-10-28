@@ -97,7 +97,6 @@ drwxr-xr-x root/root    usr/lib/qemu/qemu/
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/audio-spice.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/block-curl.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/block-dmg-bz2.so
--rwxr-xr-x root/root    usr/lib/qemu/qemu/block-ssh.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/chardev-spice.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/hw-display-qxl.so
 -rwxr-xr-x root/root    usr/lib/qemu/qemu/hw-display-virtio-gpu-gl.so
