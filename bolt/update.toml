@@ -1,0 +1,6 @@
+name = "bolt"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.freedesktop.org/"
+project = "%(name)/%(name)"
