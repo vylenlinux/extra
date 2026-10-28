@@ -53,6 +53,8 @@ drwxr-xr-x root/root    usr/include/oneapi/tbb/detail/
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_mutex_common.h
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_namespace_injection.h
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_node_handle.h
+-rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_parallel_partition.h
+-rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_parallel_phase.h
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_pipeline_filters.h
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_pipeline_filters_deduction.h
 -rw-r--r-- root/root    usr/include/oneapi/tbb/detail/_range_common.h
@@ -152,6 +154,16 @@ drwxr-xr-x root/root    usr/include/tbb/
 -rw-r--r-- root/root    usr/include/tbb/tbbmalloc_proxy.h
 -rw-r--r-- root/root    usr/include/tbb/tick_count.h
 -rw-r--r-- root/root    usr/include/tbb/version.h
+-rw-r--r-- root/root    usr/include/tcm.h
+drwxr-xr-x root/root    usr/include/tcm/
+drwxr-xr-x root/root    usr/include/tcm/detail/
+-rw-r--r-- root/root    usr/include/tcm/detail/_config.h
+-rw-r--r-- root/root    usr/include/tcm/detail/_environment.h
+-rw-r--r-- root/root    usr/include/tcm/detail/_export.h
+-rw-r--r-- root/root    usr/include/tcm/detail/_tcm_assert.h
+-rw-r--r-- root/root    usr/include/tcm/detail/hwloc_utils.h
+-rw-r--r-- root/root    usr/include/tcm/types.h
+-rw-r--r-- root/root    usr/include/tcm/version.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/TBB/
@@ -159,43 +171,51 @@ drwxr-xr-x root/root    usr/lib/cmake/TBB/
 -rw-r--r-- root/root    usr/lib/cmake/TBB/TBBConfigVersion.cmake
 -rw-r--r-- root/root    usr/lib/cmake/TBB/TBBTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/TBB/TBBTargets.cmake
+drwxr-xr-x root/root    usr/lib/cmake/TCM/
+-rw-r--r-- root/root    usr/lib/cmake/TCM/TCMConfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/TCM/TCMConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/TCM/TCMTargets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/TCM/TCMTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libirml.so -> libirml.so.1
 -rwxr-xr-x root/root    usr/lib/libirml.so.1
 lrwxrwxrwx root/root    usr/lib/libtbb.so -> libtbb.so.12
-lrwxrwxrwx root/root    usr/lib/libtbb.so.12 -> libtbb.so.12.19
--rwxr-xr-x root/root    usr/lib/libtbb.so.12.19
+lrwxrwxrwx root/root    usr/lib/libtbb.so.12 -> libtbb.so.12.20
+-rwxr-xr-x root/root    usr/lib/libtbb.so.12.20
+lrwxrwxrwx root/root    usr/lib/libtbbbind_2_5.so -> libtbbbind_2_5.so.3
+lrwxrwxrwx root/root    usr/lib/libtbbbind_2_5.so.3 -> libtbbbind_2_5.so.3.20
+-rwxr-xr-x root/root    usr/lib/libtbbbind_2_5.so.3.20
 lrwxrwxrwx root/root    usr/lib/libtbbmalloc.so -> libtbbmalloc.so.2
-lrwxrwxrwx root/root    usr/lib/libtbbmalloc.so.2 -> libtbbmalloc.so.2.19
--rwxr-xr-x root/root    usr/lib/libtbbmalloc.so.2.19
+lrwxrwxrwx root/root    usr/lib/libtbbmalloc.so.2 -> libtbbmalloc.so.2.20
+-rwxr-xr-x root/root    usr/lib/libtbbmalloc.so.2.20
 lrwxrwxrwx root/root    usr/lib/libtbbmalloc_proxy.so -> libtbbmalloc_proxy.so.2
-lrwxrwxrwx root/root    usr/lib/libtbbmalloc_proxy.so.2 -> libtbbmalloc_proxy.so.2.19
--rwxr-xr-x root/root    usr/lib/libtbbmalloc_proxy.so.2.19
+lrwxrwxrwx root/root    usr/lib/libtbbmalloc_proxy.so.2 -> libtbbmalloc_proxy.so.2.20
+-rwxr-xr-x root/root    usr/lib/libtbbmalloc_proxy.so.2.20
+lrwxrwxrwx root/root    usr/lib/libtcm.so -> libtcm.so.1
+lrwxrwxrwx root/root    usr/lib/libtcm.so.1 -> libtcm.so.1.6.0
+-rwxr-xr-x root/root    usr/lib/libtcm.so.1.6.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/tbb.pc
-drwxr-xr-x root/root    usr/lib/python3.14/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/TBB.py
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/__pycache__/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/__pycache__/TBB.cpython-314.pyc
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/INSTALLER
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/REQUESTED
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/direct_url.json
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb-2023.1.0.dist-info/top_level.txt
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/tbb/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__init__.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__main__.py
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/__init__.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/__main__.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/api.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/pool.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/__pycache__/test.cpython-314.pyc
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/_api.cpython-314-x86_64-linux-gnu.so
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/api.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/pool.py
--rw-r--r-- root/root    usr/lib/python3.14/site-packages/tbb/test.py
+drwxr-xr-x root/root    usr/lib/python3.15/
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/TBB-2023.2.0-py3.15.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/TBB-2023.2.0-py3.15.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/TBB-2023.2.0-py3.15.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/TBB-2023.2.0-py3.15.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/TBB-2023.2.0-py3.15.egg-info/top_level.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/TBB.py
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/__pycache__/TBB.cpython-315.pyc
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/tbb/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__init__.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__main__.py
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/__init__.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/__main__.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/api.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/pool.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/__pycache__/test.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/_api.cpython-315-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/api.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/pool.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/tbb/test.py
 drwxr-xr-x root/root    usr/share/

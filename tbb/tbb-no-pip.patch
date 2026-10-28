@@ -1,0 +1,30 @@
+diff --git a/python/CMakeLists.txt b/python/CMakeLists.txt
+index a80240c..e58e6ce 100644
+--- a/python/CMakeLists.txt
++++ b/python/CMakeLists.txt
+@@ -51,10 +51,13 @@ add_custom_target(
+     ${CMAKE_COMMAND} -E env
+         TBB_INCLUDEDIRS="${TBB4PY_INCLUDE_STRING}"
+         TBB_LIBDIRS=$<TARGET_FILE_DIR:TBB::tbb>
+-    ${PY_EXECUTABLE} -m pip install
+-        --no-build-isolation
+-        --prefix build
+-        ./${PYTHON_BUILD_WORK_DIR}
++    ${PY_EXECUTABLE} ./${PYTHON_BUILD_WORK_DIR}/setup.py build
++    COMMAND ${CMAKE_COMMAND} -E env
++        TBB_INCLUDEDIRS="${TBB4PY_INCLUDE_STRING}"
++        TBB_LIBDIRS=$<TARGET_FILE_DIR:TBB::tbb>
++    ${PY_EXECUTABLE} ./${PYTHON_BUILD_WORK_DIR}/setup.py install
++        --prefix=/usr
++        --root="${CMAKE_CURRENT_BINARY_DIR}/build"
+     COMMENT "Build and install to work directory the oneTBB Python module"
+ )
+
+@@ -64,7 +67,7 @@ add_test(NAME python_test
+                  -DPYTHON_MODULE_BUILD_PATH=${PYTHON_BUILD_WORK_DIR}/build
+                  -P ${PROJECT_SOURCE_DIR}/cmake/python/test_launcher.cmake)
+
+-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/build/
++install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/build/usr/
+         DESTINATION .
+         COMPONENT tbb4py)

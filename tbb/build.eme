@@ -6,11 +6,15 @@ homepage="https://www.threadingbuildingblocks.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tbb
-version=2023.1.0
+version=2023.2.0
 release=1
-source="https://github.com/oneapi-src/oneTBB/archive/v${version}/${name}-${version}.tar.gz"
+
+source="https://github.com/oneapi-src/oneTBB/archive/v${version}/${name}-${version}.tar.gz
+    tbb-no-pip.patch"
 
 build() {
+    patch -d "oneTBB-${version}" -Np1 -i "${SRC}/tbb-no-pip.patch"
+
     cmake -S "oneTBB-${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
