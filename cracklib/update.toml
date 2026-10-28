@@ -1,5 +1,6 @@
 name = "cracklib"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cracklib"
+owner = "%(name)"
+repo = "%(name)"

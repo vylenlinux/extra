@@ -6,21 +6,19 @@ homepage="https://github.com/cracklib/cracklib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cracklib
-version=2.10.3
+version=2.10.4
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    sed -i '/skipping/d' util/packer.c
 
     ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
         --disable-static \
-        --disable-nls \
-        --with-default-dict=/lib/cracklib/pw_dict
+        --disable-nls
 
     make
     make DESTDIR="${PKG}" install
