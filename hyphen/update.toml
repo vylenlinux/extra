@@ -1,5 +1,6 @@
 name = "hyphen"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "hyphen"
+owner = "hunspell"
+repo = "%(name)"

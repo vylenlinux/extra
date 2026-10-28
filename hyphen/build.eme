@@ -6,7 +6,7 @@ homepage="https://hunspell.sf.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=hyphen
-version=2.8.9
+version=2.8.10
 release=1
 source="https://github.com/hunspell/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
