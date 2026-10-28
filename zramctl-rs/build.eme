@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://gitlab.com/celestifyx/zramctl-rs"
 
 name=zramctl-rs
-version=1.0.2
+version=1.0.3
 release=1
 backup="etc/${name}.toml"
 source="https://gitlab.com/celestifyx/${name}/-/archive/${version}/${name}-${version}.tar.gz"
