@@ -1,5 +1,9 @@
 name = "ffmpegthumbnailer"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ffmpegthumbnailer"
+owner = "dirkvdb"
+repo = "%(name)"
+
+[github]
+use_tags = true
