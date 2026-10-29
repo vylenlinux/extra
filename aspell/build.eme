@@ -6,7 +6,7 @@ homepage="http://aspell.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aspell
-version=0.60.8.2
+version=0.60.8.3
 release=1
 source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
