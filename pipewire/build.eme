@@ -6,7 +6,7 @@ homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pipewire
-version=1.6.10
+version=1.6.11
 release=1
 backup="etc/security/limits.d/25-pw-rlimits.conf"
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz"
@@ -18,8 +18,7 @@ build() {
         -Dexamples=disabled \
         -Dsession-managers=[] \
         -Dsystemd-system-service=enabled \
-        -Dsystemd-user-service=enabled \
-        -Dudevrulesdir=/usr/lib/udev/rules.d
+        -Dsystemd-user-service=enabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
