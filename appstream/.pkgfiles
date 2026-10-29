@@ -102,14 +102,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.1
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.1
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.2
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.2
 lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.1
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.1
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.1
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.2
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.2
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.1
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.1
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.2
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
@@ -229,6 +229,9 @@ drwxr-xr-x root/root    usr/share/locale/nb/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/nl/
 drwxr-xr-x root/root    usr/share/locale/nl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/appstream.mo
+drwxr-xr-x root/root    usr/share/locale/nn/
+drwxr-xr-x root/root    usr/share/locale/nn/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/nn/LC_MESSAGES/appstream.mo
 drwxr-xr-x root/root    usr/share/locale/oc/
 drwxr-xr-x root/root    usr/share/locale/oc/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/oc/LC_MESSAGES/appstream.mo
@@ -290,3 +293,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 drwxr-xr-x root/root    usr/share/metainfo/
 -rw-r--r-- root/root    usr/share/metainfo/org.freedesktop.appstream.cli.metainfo.xml
 -rw-r--r-- root/root    usr/share/metainfo/org.freedesktop.appstream.compose.metainfo.xml
+drwxr-xr-x root/root    usr/share/vala/
+drwxr-xr-x root/root    usr/share/vala/vapi/
+-rw-r--r-- root/root    usr/share/vala/vapi/appstream.deps
+-rw-r--r-- root/root    usr/share/vala/vapi/appstream.vapi
