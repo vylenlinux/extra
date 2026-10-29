@@ -13,6 +13,7 @@ source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/p/pyq
 build() {
     # shellcheck disable=SC2164
     cd "pyqt6-${version}"
+    export CXXFLAGS="${CXXFLAGS} -std=c++17"
 
     sip-build \
         --confirm-license \
