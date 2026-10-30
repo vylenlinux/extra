@@ -6,11 +6,15 @@ homepage="https://github.com/linuxmint/nemo"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nemo
-version=6.6.4
+version=6.8.0
 release=1
-source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz"
+
+source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/refs/tags/${version}.tar.gz
+    https://github.com/linuxmint/${name}/commit/325e8df11e1f39683021c9052729ab9561619f90.patch"
 
 build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/325e8df11e1f39683021c9052729ab9561619f90.patch"
+
     vylen-meson "${name}-${version}" build \
         -Dxmp=false \
         -Dselinux=false

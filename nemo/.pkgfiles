@@ -99,6 +99,10 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/actions/
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-horizontal-layout-wide-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-location-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-location-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-preview-hide-symbolic-rtl.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-preview-hide-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-preview-show-symbolic-rtl.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-preview-show-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-recursive-search-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-recursive-search-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/actions/nemo-sidebar-hide-symbolic-rtl.svg
