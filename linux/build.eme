@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=linux
-version=7.3.0
+version=7.3.1
 release=1
 
 _version="${version%.0}"
@@ -22,14 +22,11 @@ build() {
     cp "${SRC}/x86_64-dotconfig" .config
     make olddefconfig
 
-    # shellcheck disable=SC2153
-    LINUX_KCFLAGS="${CFLAGS}"
-    LINUX_KCPPFLAGS="${CXXFLAGS}"
-
     # Defines build options exporting the value/values for the KCFLAGS and KCPPFLAGS before calling make.
     # More info: https://docs.kernel.org/kbuild/kbuild.html
-    export KCFLAGS="${LINUX_KCFLAGS}"
-    export KCPPFLAGS="${LINUX_KCPPFLAGS}"
+    # shellcheck disable=SC2153
+    export KCFLAGS="${CFLAGS}"
+    export KCPPFLAGS="${CXXFLAGS}"
 
     make bzImage modules
     make INSTALL_MOD_PATH="${PKG}/usr" modules_install
