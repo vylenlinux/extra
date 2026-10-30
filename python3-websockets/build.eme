@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/aaugustin/websockets"
 
 name=python3-websockets
-version=17.3
+version=17.4
 release=1
 source="https://github.com/aaugustin/websockets/archive/${version}/${name}-${version}.tar.gz"
 
