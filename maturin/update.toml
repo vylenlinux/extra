@@ -1,5 +1,6 @@
 name = "maturin"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "maturin"
+owner = "PyO3"
+repo = "%(name)"
