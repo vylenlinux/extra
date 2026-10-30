@@ -6,7 +6,7 @@ homepage="https://wayland.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wayland-protocols
-version=1.49
+version=1.50
 release=1
 source="https://gitlab.freedesktop.org/wayland/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
