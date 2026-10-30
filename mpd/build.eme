@@ -6,11 +6,11 @@ homepage="https://www.musicpd.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpd
-version=0.24.17
+version=0.24.18
 release=1
 
-source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/MPD/archive/v${version}.tar.gz
-    ${name}.service.override"
+source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz
+    00-vylen.conf"
 
 build() {
     vylen-meson "MPD-${version}" build \
@@ -54,5 +54,5 @@ build() {
     do_sysusers "${name}"
     do_tmpfiles "${name}"
 
-    install -Dm644 "${name}.service.override" "${PKG}/usr/lib/systemd/system/mpd.service.d/00-vylen.conf"
+    install -Dm644 00-vylen.conf -t "${PKG}/usr/lib/systemd/system/mpd.service.d/"
 }
