@@ -1,5 +1,6 @@
 name = "xdg-desktop-portal-wlr"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xdg-desktop-portal-wlr"
+owner = "emersion"
+repo = "%(name)"
