@@ -1,12 +1,15 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/nvme/
+-rw-r--r-- root/root    etc/nvme/nvme-discoverd.conf.sample
 -rw-r--r-- root/root    etc/nvme/nvme-fabrics.conf.sample
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/nvme
+-rwxr-xr-x root/root    usr/bin/nvme-discoverd
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/libnvme3/
 -rw-r--r-- root/root    usr/include/libnvme3/libnvme-mi.h
+-rw-r--r-- root/root    usr/include/libnvme3/libnvme-sed.h
 -rw-r--r-- root/root    usr/include/libnvme3/libnvme.h
 drwxr-xr-x root/root    usr/include/libnvme3/nvme/
 -rw-r--r-- root/root    usr/include/libnvme3/nvme/config.h
@@ -45,13 +48,10 @@ drwxr-xr-x root/root    usr/include/libnvme3/nvme/generated/
 -rw-r--r-- root/root    usr/include/libnvme3/nvme/tree.h
 -rw-r--r-- root/root    usr/include/libnvme3/nvme/types.h
 -rw-r--r-- root/root    usr/include/libnvme3/nvme/util.h
+drwxr-xr-x root/root    usr/include/libnvme3/sed/
+-rw-r--r-- root/root    usr/include/libnvme3/sed/sed.h
+-rw-r--r-- root/root    usr/include/libnvme3/sed/tcg-types.h
 drwxr-xr-x root/root    usr/lib/
-drwxr-xr-x root/root    usr/lib/NetworkManager/
-drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/
--rwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/80-nvmf-connect-nbft.sh
-drwxr-xr-x root/root    usr/lib/dracut/
-drwxr-xr-x root/root    usr/lib/dracut/dracut.conf.d/
--rw-r--r-- root/root    usr/lib/dracut/dracut.conf.d/70-nvmf-autoconnect.conf
 lrwxrwxrwx root/root    usr/lib/libnvme3.so -> libnvme3.so.1
 lrwxrwxrwx root/root    usr/lib/libnvme3.so.1 -> libnvme3.so.1.0.0
 -rwxr-xr-x root/root    usr/lib/libnvme3.so.1.0.0
@@ -70,15 +70,10 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/libnvme3/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/libnvme3/nvme.py
 drwxr-xr-x root/root    usr/lib/systemd/
 drwxr-xr-x root/root    usr/lib/systemd/system/
--rw-r--r-- root/root    usr/lib/systemd/system/nvmefc-boot-connections.service
--rw-r--r-- root/root    usr/lib/systemd/system/nvmf-autoconnect.service
--rw-r--r-- root/root    usr/lib/systemd/system/nvmf-connect-nbft.service
--rw-r--r-- root/root    usr/lib/systemd/system/nvmf-connect.target
--rw-r--r-- root/root    usr/lib/systemd/system/nvmf-connect@.service
+-rw-r--r-- root/root    usr/lib/systemd/system/nvme-discoverd.service
 drwxr-xr-x root/root    usr/lib/udev/
 drwxr-xr-x root/root    usr/lib/udev/rules.d/
 -rw-r--r-- root/root    usr/lib/udev/rules.d/65-persistent-net-nbft.rules
--rw-r--r-- root/root    usr/lib/udev/rules.d/70-nvmf-autoconnect.rules
 -rw-r--r-- root/root    usr/lib/udev/rules.d/70-nvmf-keys.rules
 -rw-r--r-- root/root    usr/lib/udev/rules.d/70-nvmf-registry.rules
 -rw-r--r-- root/root    usr/lib/udev/rules.d/71-nvmf-hpe.rules

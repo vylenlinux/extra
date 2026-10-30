@@ -6,7 +6,7 @@ homepage="https://github.com/linux-nvme/nvme-cli"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nvme-cli
-version=3.1
+version=3.2
 release=1
 source="https://github.com/linux-nvme/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
