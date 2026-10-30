@@ -6,7 +6,7 @@ homepage="https://github.com/desktop-app/tg_owt"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tg_owt
-version=ec71c06
+version=49ceed3
 release=1
 source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
