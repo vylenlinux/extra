@@ -1,5 +1,9 @@
 name = "libraw"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libraw"
+owner = "%(name)"
+repo = "%(name)"
+
+[github]
+use_tags = true
