@@ -1,5 +1,6 @@
 name = "fribidi"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fribidi"
+owner = "%(name)"
+repo = "%(name)"
