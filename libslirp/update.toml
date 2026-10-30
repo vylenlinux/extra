@@ -1,5 +1,6 @@
 name = "libslirp"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libslirp"
+instance = "https://gitlab.freedesktop.org/"
+project = "slirp/%(name)"

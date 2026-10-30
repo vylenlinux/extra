@@ -6,7 +6,7 @@ homepage="https://gitlab.freedesktop.org/slirp/libslirp"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libslirp
-version=4.9.6
+version=4.9.7
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/slirp/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
