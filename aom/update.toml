@@ -1,5 +1,6 @@
 name = "aom"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "aom"
+[ftp]
+url = "https://storage.googleapis.com/%(name)-releases/"
+filename = "libaom-%(version).tar.gz"

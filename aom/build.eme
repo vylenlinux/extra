@@ -6,7 +6,7 @@ homepage="https://aomedia.googlesource.com/aom"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=aom
-version=3.15.2
+version=3.15.3
 release=1
 source="${name}-${version}.tar.gz::https://storage.googleapis.com/aom-releases/libaom-${version}.tar.gz"
 
