@@ -6,7 +6,7 @@ homepage="https://api.kde.org/frameworks/kirigami-addons/html/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kirigami-addons
-version=1.15.0
+version=1.16.0
 release=1
 source="https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
