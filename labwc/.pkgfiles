@@ -57,6 +57,9 @@ drwxr-xr-x root/root    usr/share/locale/gl/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/he/
 drwxr-xr-x root/root    usr/share/locale/he/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/labwc.mo
+drwxr-xr-x root/root    usr/share/locale/hi/
+drwxr-xr-x root/root    usr/share/locale/hi/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/hi/LC_MESSAGES/labwc.mo
 drwxr-xr-x root/root    usr/share/locale/hr/
 drwxr-xr-x root/root    usr/share/locale/hr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/hr/LC_MESSAGES/labwc.mo
@@ -144,6 +147,8 @@ drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/labwc-config.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/labwc-menu.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/labwc-theme.5.gz
+drwxr-xr-x root/root    usr/share/man/man7/
+-rw-r--r-- root/root    usr/share/man/man7/labwc-philosophy.7.gz
 drwxr-xr-x root/root    usr/share/wayland-sessions/
 -rw-r--r-- root/root    usr/share/wayland-sessions/labwc.desktop
 drwxr-xr-x root/root    usr/share/xdg-desktop-portal/

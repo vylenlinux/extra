@@ -6,7 +6,7 @@ homepage="https://github.com/labwc/labwc"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=labwc
-version=0.20.2
+version=0.20.3
 release=1
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/${version}.tar.gz"
 
