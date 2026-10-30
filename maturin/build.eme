@@ -6,7 +6,7 @@ homepage="https://github.com/PyO3/maturin"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=maturin
-version=1.15.0
+version=1.16.0
 release=1
 source="https://github.com/PyO3/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
@@ -18,9 +18,9 @@ build() {
         --locked \
         --target "$(rustc --print host-tuple)"
 
-    python3 -m build \
-        --wheel \
-        --no-isolation
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-    python3 -m installer --destdir="${PKG}" dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
