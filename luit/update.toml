@@ -1,5 +1,6 @@
 name = "luit"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "luit"
+[ftp]
+url = "https://invisible-mirror.net/archives/%(name)/"
+filename = "%(name)-%(version).tgz"
