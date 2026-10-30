@@ -1,5 +1,5 @@
 description="Gives more easily access to internet services which says be 'RESTful'"
-homepage="http://www.gnome.org/"
+homepage="https://www.gnome.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=librest

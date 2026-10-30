@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Userland tools for the Flash-Friendly File System (F2FS)"
-homepage="https://f2fs.wiki.kernel.org/"
+homepage="https://archive.kernel.org/oldwiki/f2fs.wiki.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=f2fs-tools

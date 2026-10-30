@@ -1,5 +1,5 @@
 description="IMAP and MailDir mailbox synchronizer"
-homepage="http://isync.sourceforge.net/"
+homepage="https://isync.sourceforge.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=isync

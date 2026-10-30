@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Video stabilization library"
-homepage="http://public.hronopik.de/vid.stab"
+homepage="https://public.hronopik.de/vid.stab/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vid.stab

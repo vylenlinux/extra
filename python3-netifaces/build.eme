@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Portable module to access network interface information in Python"
-homepage="https://alastairs-place.net/netifaces/"
+homepage="https://alastairs-place.net/projects/netifaces/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-netifaces

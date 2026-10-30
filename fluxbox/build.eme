@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A lightweight window manager"
-homepage="http://www.fluxbox.org/"
+homepage="https://fluxbox.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fluxbox

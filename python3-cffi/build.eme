@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Foreign Function Interface for Python calling C code"
-homepage="http://cffi.readthedocs.org"
+homepage="https://cffi.readthedocs.io/en/stable/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-cffi

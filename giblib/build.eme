@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A library that feh uses as a wrapper to imlib2"
-homepage="http://freshmeat.net/projects/giblib/"
+homepage="https://sourceforge.net/directory/software-development/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=giblib

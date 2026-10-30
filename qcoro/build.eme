@@ -1,5 +1,5 @@
 description="C++ Coroutines for Qt"
-homepage="https://github.com/danvratil/qcoro"
+homepage="https://github.com/qcoro/qcoro"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qcoro

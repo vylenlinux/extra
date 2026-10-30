@@ -1,5 +1,5 @@
 description="A library and a set of tools for validating, parsing and manipulating SGML and XML documents"
-homepage="http://openjade.sourceforge.net/"
+homepage="https://openjade.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=opensp

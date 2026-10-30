@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Network Security Services"
-homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS"
+homepage="https://firefox-source-docs.mozilla.org/security/nss/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nss

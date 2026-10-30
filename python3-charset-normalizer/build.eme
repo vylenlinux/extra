@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Encoding and language detection alternative to chardet"
-homepage="https://github.com/Ousret/charset_normalizer"
+homepage="https://github.com/jawah/charset_normalizer"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-charset-normalizer

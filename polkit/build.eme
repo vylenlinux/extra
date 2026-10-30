@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Toolkit for defining and handling authorizations"
-homepage="https://freedesktop.org/software/polkit"
+homepage="https://freedesktop.org/software/polkit/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=polkit

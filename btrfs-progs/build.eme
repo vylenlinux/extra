@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Administration and debugging tools for the B-tree file system (btrfs)"
-homepage="https://btrfs.readthedocs.io/"
+homepage="https://btrfs.readthedocs.io/en/latest/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=btrfs-progs

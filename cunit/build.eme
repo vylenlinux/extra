@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A Unit Testing Framework for C"
-homepage="http://cunit.sourceforge.net"
+homepage="https://cunit.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cunit

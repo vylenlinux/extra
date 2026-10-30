@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Intel VA-API Media Applications and Scripts for libva"
-homepage="https://01.org/linuxmedia/vaapi"
+homepage="https://www.intel.com/content/www/us/en/developer/topic-technology/open/overview.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libva-utils

@@ -1,5 +1,5 @@
 description="A collection of tools for internationalizing Python applications"
-homepage="http://babel.pocoo.org/"
+homepage="https://babel.pocoo.org/en/latest/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-babel

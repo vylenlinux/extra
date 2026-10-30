@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Python3 bindings to the D-Bus"
-homepage="http://dbus.freedesktop.org/releases/dbus-python"
+homepage="https://dbus.freedesktop.org/releases/dbus-python/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dbus-python

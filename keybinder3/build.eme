@@ -1,5 +1,5 @@
 description="Utility library registering global X keyboard shortcuts"
-homepage="http://www.kbd-project.org/"
+homepage="http://kbd-project.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=keybinder3

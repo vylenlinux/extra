@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Extracts messages from XML files and outputs PO template files and vice versa"
-homepage="http://itstool.org/"
+homepage="https://itstool.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=itstool

@@ -1,5 +1,5 @@
 description="Utility to create self-extracting packages"
-homepage="http://megastep.org/makeself"
+homepage="https://makeself.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=makeself

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Libraries that support programs that use the Remote Procedure Call (RPC) API"
-homepage="http://git.linux-nfs.org/?p=steved/libtirpc.git;a=summary"
+homepage="https://git.linux-nfs.org/cgit/steved/libtirpc.git/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libtirpc

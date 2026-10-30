@@ -1,5 +1,5 @@
 description="Configuration database system used by many GNOME applications"
-homepage="https://ftp.gnome.org"
+homepage="https://download.gnome.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gconf

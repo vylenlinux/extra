@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Grand central dispatch, from swift corelibs"
-homepage="https://github.com/apple/swift-corelibs-libdispatch"
+homepage="https://github.com/swiftlang/swift-corelibs-libdispatch"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdispatch

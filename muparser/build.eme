@@ -1,5 +1,5 @@
 description="A fast math parser library"
-homepage="http://muparser.sourceforge.net/"
+homepage="https://sourceforge.net/projects/muparser/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=muparser

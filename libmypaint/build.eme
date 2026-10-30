@@ -1,5 +1,5 @@
 description="Library for making brushstrokes which is used by MyPaint and other projects"
-homepage="http://mypaint.org/"
+homepage="https://www.mypaint.app/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmypaint

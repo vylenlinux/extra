@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Extremely fast non-cryptographic hash algorithm"
-homepage="https://cyan4973.github.io/xxHash/"
+homepage="https://xxhash.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xxhash

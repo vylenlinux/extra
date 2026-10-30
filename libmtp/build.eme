@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Library implementation of the Media Transfer Protocol"
-homepage="http://libmtp.sourceforge.net/"
+homepage="https://libmtp.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmtp

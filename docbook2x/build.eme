@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A software package that converts DocBook documents into the traditional Unix man page format and the GNU Texinfo format"
-homepage="http://docbook2x.sourceforge.net/"
+homepage="https://docbook2x.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=docbook2x

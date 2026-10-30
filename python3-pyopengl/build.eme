@@ -1,5 +1,5 @@
 description="The cross platform Python binding to OpenGL and related APIs"
-homepage="http://pyopengl.sourceforge.net/"
+homepage="https://pyopengl.sourceforge.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyopengl

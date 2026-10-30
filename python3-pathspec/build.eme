@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Utility library for gitignore style pattern matching of file paths"
-homepage="https://github.com/cpburnz/python-path-specification"
+homepage="https://github.com/cpburnz/python-pathspec"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pathspec

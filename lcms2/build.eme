@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Small-footprint color management engine, with special focus on accuracy and performance"
-homepage="http://www.littlecms.com/"
+homepage="https://www.littlecms.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lcms2

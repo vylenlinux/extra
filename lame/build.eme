@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="An MP3 encoder and optionally, an MP3 frame analyzer"
-homepage="http://lame.sourceforge.net/"
+homepage="https://lame.sourceforge.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lame

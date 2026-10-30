@@ -1,5 +1,5 @@
 description="ALSA topology configuration files"
-homepage="https://alsa-project.org"
+homepage="https://www.alsa-project.org/wiki/Main_Page"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=alsa-topology-conf

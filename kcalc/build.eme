@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="KDE scientific calculator"
-homepage="https://apps.kde.org/kcalc"
+homepage="https://apps.kde.org/kcalc/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=kcalc

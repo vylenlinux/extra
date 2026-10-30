@@ -1,5 +1,5 @@
 description="Outline and bitmap font editor"
-homepage="https://fontforge.github.io/"
+homepage="https://fontforge.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fontforge

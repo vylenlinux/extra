@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="argtable command line parser library"
-homepage="http://argtable.sourceforge.net"
+homepage="https://argtable.sourceforge.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=argtable

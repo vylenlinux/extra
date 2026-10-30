@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Netscape Portable Runtime"
-homepage="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR"
+homepage="https://firefox-source-docs.mozilla.org/nspr/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nspr

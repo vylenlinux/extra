@@ -1,5 +1,5 @@
 description="A GTK2 based configuration tool for the Openbox windowmanager"
-homepage="http://www.openbox.org"
+homepage="http://openbox.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=obconf

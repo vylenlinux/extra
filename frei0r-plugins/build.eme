@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Minimalistic plugin API for video effects"
-homepage="https://frei0r.dyne.org/"
+homepage="https://dyne.org/frei0r/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=frei0r-plugins

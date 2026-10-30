@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A simple application for capturing desktop screenshots"
-homepage="https://apps.kde.org/spectacle"
+homepage="https://apps.kde.org/spectacle/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=spectacle

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Not Erik's Windowing Toolkit - text mode windowing with slang"
-homepage="https://ftp.kaist.ac.kr/macports/distfiles/libnewt"
+homepage="http://ftp.kaist.ac.kr/macports/distfiles/libnewt/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=newt

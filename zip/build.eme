@@ -1,5 +1,5 @@
 description="Compressor/archiver for creating and modifying zipfiles"
-homepage="http://www.info-zip.org/Zip.html"
+homepage="https://infozip.sourceforge.net/Zip.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zip

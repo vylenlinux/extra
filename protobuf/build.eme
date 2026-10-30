@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Protocol Buffers - Google's data interchange format"
-homepage="https://developers.google.com/protocol-buffers/"
+homepage="https://protobuf.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=protobuf

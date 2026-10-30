@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Signal Protocol C Library"
-homepage="https://github.com/WhisperSystems/libsignal-protocol-c"
+homepage="https://github.com/signalapp/libsignal-protocol-c"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libsignal-protocol-c

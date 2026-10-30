@@ -1,5 +1,5 @@
 description="The LXQt policykit authentication agent."
-homepage="http://lxqt.org/"
+homepage="https://lxqt-project.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-policykit

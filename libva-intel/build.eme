@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Library which provides access to hardware accelerated video processing for video cards based on an Intel GPU"
-homepage="https://01.org/linuxmedia/vaapi"
+homepage="https://www.intel.com/content/www/us/en/developer/topic-technology/open/overview.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libva-intel

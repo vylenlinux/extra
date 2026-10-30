@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Wayland clipboard utilities"
-homepage="https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.1.0.tar.gz"
+homepage="https://codeload.github.com/bugaevc/wl-clipboard/tar.gz/refs/tags/v2.1.0"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wl-clipboard
