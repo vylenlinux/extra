@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "protocolbuffers"
 repo = "protobuf"
+
+[version]
+exclude = ["v*-rc*"]
