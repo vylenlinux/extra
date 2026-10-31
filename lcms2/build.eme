@@ -6,7 +6,7 @@ homepage="https://www.littlecms.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lcms2
-version=2.19.1
+version=2.20
 release=1
 source="https://github.com/mm2/Little-CMS/releases/download/lcms${version}/${name}-${version}.tar.gz"
 

@@ -1,5 +1,9 @@
 name = "lcms2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "lcms"
+owner = "mm2"
+repo = "Little-CMS"
+
+[version]
+strip_prefix = "lcms"
