@@ -6,7 +6,7 @@ homepage="https://www.openexr.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openexr
-version=3.5.2
+version=3.5.3
 release=1
 source="https://github.com/AcademySoftwareFoundation/${name}/archive/v${version}/${name}-${version}.tar.gz"
 

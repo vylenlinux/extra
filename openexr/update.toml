@@ -1,5 +1,9 @@
 name = "openexr"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "openexr"
+owner = "AcademySoftwareFoundation"
+repo = "openexr"
+
+[github]
+use_tags = true
