@@ -6,13 +6,14 @@ homepage="https://mate-desktop.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mate-notification-daemon
-version=1.28.5
+version=1.29.0
 release=1
-source="https://github.com/mate-desktop/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
+source="${name}-${version}.tar.gz::https://github.com/mate-desktop/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
