@@ -1,5 +1,9 @@
 name = "easyeffects"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "easyeffects"
+owner = "wwmm"
+repo = "%(name)"
+
+[github]
+use_tags = true
