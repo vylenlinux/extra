@@ -151,6 +151,9 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/tr/
 drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/haruna.mo
+drwxr-xr-x root/root    usr/share/locale/ug/
+drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/haruna.mo
 drwxr-xr-x root/root    usr/share/locale/uk/
 drwxr-xr-x root/root    usr/share/locale/uk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/haruna.mo
