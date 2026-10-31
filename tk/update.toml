@@ -1,0 +1,5 @@
+name = "tk"
+provider = "repology"
+
+[source]
+package = "tk"

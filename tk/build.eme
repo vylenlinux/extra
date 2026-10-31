@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="GUI toolkit for the Tcl scripting language"
+homepage="https://tcl.sourceforge.net/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=tk
+version=9.1.0
+release=1
+source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/tcl/${name}${version}-src.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}${version}/unix"
+
+    ./configure \
+        --prefix=/usr \
+        --mandir=/usr/share/man
+
+    make
+    make INSTALL_ROOT="${PKG}" install install-private-headers
+
+    ln -s "wish${version%.*}" "${PKG}/usr/bin/wish"
+
+    # move demos to -doc directory
+    mkdir -p "${PKG}/usr/share/doc/${name}/examples/"
+
+    mv "${PKG}/usr/lib/${name}${version%.*}/demos/" \
+        "${PKG}/usr/share/doc/${name}/examples/"
+
+    # remove buildroot traces
+    sed \
+        -e "s#${SRC}/${name}${version}/unix#/usr/lib#" \
+        -e "s#${SRC}/${name}${version}#/usr/include#" \
+    -i "${PKG}/usr/lib/tkConfig.sh"
+
+    # remove unrequired execute permissions (FS#75042)
+    # chmod -x "${PKG}/usr/lib/libtkstub.a"
+}
