@@ -6,5 +6,4 @@ owner = "intel"
 repo = "media-driver"
 
 [github]
-use_tags = true
 tag_prefix = "intel-media-26."

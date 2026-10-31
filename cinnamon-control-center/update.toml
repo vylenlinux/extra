@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "linuxmint"
 repo = "cinnamon-control-center"
-
-[github]
-use_tags = true

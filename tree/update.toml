@@ -2,7 +2,4 @@ name = "tree"
 provider = "gitlab"
 
 [source]
-project = "OldManProgrammer/unix-tree"
-
-[gitlab]
-use_tags = true
+project = "OldManProgrammer/unix-%(name)"

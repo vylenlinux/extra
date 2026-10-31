@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "oneapi-src"
 repo = "onetbb"
-
-[github]
-use_tags = true

@@ -5,8 +5,5 @@ provider = "github"
 owner = "KhronosGroup"
 repo = "%(name)"
 
-[github]
-use_tags = true
-
 [version]
 include = ["v1.*"]

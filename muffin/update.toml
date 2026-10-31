@@ -5,8 +5,5 @@ provider = "github"
 owner = "linuxmint"
 repo = "muffin"
 
-[github]
-use_tags = true
-
 [version]
 exclude = ["*-unstable"]

@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "phuhl"
 repo = "bspwm-rounded"
-
-[github]
-use_tags = true

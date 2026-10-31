@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "nixos"
 repo = "patchelf"
-
-[github]
-use_tags = true

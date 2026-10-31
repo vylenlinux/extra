@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "linuxmint"
 repo = "cinnamon-screensaver"
-
-[github]
-use_tags = true

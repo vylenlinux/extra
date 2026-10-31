@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "telegramdesktop"
 repo = "tdesktop"
-
-[github]
-use_tags = true

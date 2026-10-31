@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "linuxmint"
 repo = "cjs"
-
-[github]
-use_tags = true

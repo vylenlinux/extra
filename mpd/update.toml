@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "MusicPlayerDaemon"
 repo = "%(name)"
-
-[github]
-use_tags = true

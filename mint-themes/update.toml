@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "linuxmint"
 repo = "mint-themes"
-
-[github]
-use_tags = true

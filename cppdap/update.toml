@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "google"
 repo = "cppdap"
-
-[github]
-use_tags = true

@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "wwmm"
 repo = "%(name)"
-
-[github]
-use_tags = true

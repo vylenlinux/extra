@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "al45tair"
 repo = "netifaces"
-
-[github]
-use_tags = true

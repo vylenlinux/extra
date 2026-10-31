@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "AcademySoftwareFoundation"
 repo = "openexr"
-
-[github]
-use_tags = true

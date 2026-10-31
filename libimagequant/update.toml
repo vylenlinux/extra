@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "ImageOptim"
 repo = "libimagequant"
-
-[github]
-use_tags = true

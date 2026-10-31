@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "tobgu"
 repo = "pyrsistent"
-
-[github]
-use_tags = true

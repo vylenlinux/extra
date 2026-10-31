@@ -4,6 +4,3 @@ provider = "gitlab"
 [source]
 instance = "https://gitlab.gnome.org/"
 project = "GNOME/gsound"
-
-[gitlab]
-use_tags = true

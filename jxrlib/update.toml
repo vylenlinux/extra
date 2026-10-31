@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "mircomir"
 repo = "jxrlib"
-
-[github]
-use_tags = true

@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "KhronosGroup"
 repo = "vulkan-loader"
-
-[github]
-use_tags = true

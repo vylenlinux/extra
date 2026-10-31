@@ -3,6 +3,3 @@ provider = "mate"
 
 [source]
 package = "%(name)"
-
-[github]
-use_tags = true

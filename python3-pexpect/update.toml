@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "pexpect"
 repo = "pexpect"
-
-[github]
-use_tags = true

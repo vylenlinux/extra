@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "lxml"
 repo = "lxml"
-
-[github]
-use_tags = true

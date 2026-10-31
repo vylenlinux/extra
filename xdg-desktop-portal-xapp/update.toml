@@ -4,6 +4,3 @@ provider = "github"
 [source]
 owner = "linuxmint"
 repo = "xdg-desktop-portal-xapp"
-
-[github]
-use_tags = true
