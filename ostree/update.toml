@@ -1,5 +1,9 @@
 name = "ostree"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ostree"
+owner = "ostreedev"
+repo = "%(name)"
+
+[github]
+use_tags = true
