@@ -34,6 +34,8 @@ lrwxrwxrwx root/root    usr/bin/mzip -> mtools
 -rwxr-xr-x root/root    usr/bin/tgz
 -rwxr-xr-x root/root    usr/bin/uz
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/info/
+-rw-r--r-- root/root    usr/share/info/mtools.info.gz
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/floppyd.1.gz
