@@ -6,7 +6,7 @@ homepage="https://github.com/fastfloat/fast_float"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fast_float
-version=8.3.2
+version=8.3.3
 release=1
 source="https://github.com/fastfloat/${name}/archive/v${version}/${name}-${version}.tar.gz"
 

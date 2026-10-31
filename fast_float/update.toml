@@ -1,5 +1,6 @@
 name = "fast_float"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fast-float"
+owner = "fastfloat"
+repo = "%(name)"
