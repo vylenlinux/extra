@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "ibus"
 repo = "ibus"
+
+[version]
+exclude = ["20080901"]
