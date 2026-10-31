@@ -4,3 +4,6 @@ provider = "gitlab"
 [source]
 instance = "https://gitlab.freedesktop.org/"
 project = "slirp/%(name)"
+
+[version]
+exclude = ["2020*"]
