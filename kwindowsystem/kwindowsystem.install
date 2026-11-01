@@ -2,7 +2,7 @@
 
 pre_install() {
     [ -f /usr/lib/cmake/Qt6WaylandClient/Qt6WaylandClientConfig.cmake ] || {
-        printf "Qt6WaylandClient is missing. Rebuilding qt6-base...\n"
+        printf "Qt6WaylandClientConfig is missing. Rebuilding qt6-base...\n"
         emerald install -fr qt6-base
     }
 }
