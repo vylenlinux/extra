@@ -5,14 +5,14 @@ description="Not Erik's Windowing Toolkit - text mode windowing with slang"
 homepage="http://ftp.kaist.ac.kr/macports/distfiles/libnewt/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=newt
+name=newt-tui
 version=0.52.25
 release=1
-source="https://ftp.kaist.ac.kr/macports/distfiles/libnewt/${name}-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://ftp.kaist.ac.kr/macports/distfiles/libnewt/newt-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "newt-${version}"
 
     # shellcheck disable=SC2016
     sed \
