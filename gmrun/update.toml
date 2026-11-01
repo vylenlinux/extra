@@ -1,5 +1,6 @@
 name = "gmrun"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gmrun"
+owner = "wdlkmpx"
+repo = "%(name)"
