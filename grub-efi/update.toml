@@ -1,7 +1,11 @@
 name = "grub-efi"
-provider = "ftp"
+provider = "gitlab"
 dedup_key = "grub"
 
-[ftp]
-url = "https://ftp.gnu.org/gnu/grub/"
-filename = "grub-%(version).tar.xz"
+[source]
+instance = "https://gitlab.freedesktop.org/"
+project = "gnu-%(name)/%(name)"
+
+[version]
+include = ["%(name)-*"]
+strip_prefix = "%(name)-"
