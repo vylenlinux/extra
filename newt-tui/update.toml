@@ -1,6 +1,6 @@
-name = "newt"
+name = "newt-tui"
 provider = "ftp"
 
 [ftp]
 url = "https://ftp.kaist.ac.kr/macports/distfiles/libnewt/"
-filename = "%(name)-%(version).tar.gz"
+filename = "newt-%(version).tar.gz"
