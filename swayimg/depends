@@ -3,5 +3,5 @@ json-c
 libjpeg-turbo
 libpng
 libxkbcommon
-luajit
+luajit-openresty
 wayland-protocols
