@@ -6,7 +6,7 @@ homepage="https://horejsek.github.io/python-fastjsonschema/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-fastjsonschema
-version=2.22.2
+version=2.22.3
 release=1
 source="${name}-${version}.tar.gz::https://github.com/horejsek/python-fastjsonschema/archive/refs/tags/v${version}.tar.gz"
 
