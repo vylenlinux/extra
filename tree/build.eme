@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="display directory contents, including directories, files, links, in a terminal"
+description="A directory listing program displaying a depth indented list of files"
 homepage="https://gitlab.com/OldManProgrammer/unix-tree"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tree
 version=2.3.2
 release=1
-source="https://gitlab.com/OldManProgrammer/unix-tree/-/archive/${version}/unix-tree-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://gitlab.com/OldManProgrammer/unix-${name}/-/archive/${version}/unix-${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
