@@ -1,5 +1,9 @@
 name = "docbook-xsl"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "docbook-xsl"
+owner = "docbook"
+repo = "xslt10-stylesheets"
+
+[version]
+strip_prefix = "snapshot/"
