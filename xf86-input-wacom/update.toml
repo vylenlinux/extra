@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "linuxwacom"
 repo = "xf86-input-wacom"
+
+[version]
+strip_prefix = "%(name)-"
