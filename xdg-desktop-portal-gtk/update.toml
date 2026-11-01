@@ -1,5 +1,6 @@
 name = "xdg-desktop-portal-gtk"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xdg-desktop-portal-gtk"
+owner = "flatpak"
+repo = "%(name)"
