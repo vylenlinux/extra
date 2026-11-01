@@ -4,8 +4,8 @@ dedup_key = "grub"
 
 [source]
 instance = "https://gitlab.freedesktop.org/"
-project = "gnu-%(name)/%(name)"
+project = "gnu-grub/grub"
 
 [version]
-include = ["%(name)-*"]
-strip_prefix = "%(name)-"
+include = ["grub-*"]
+strip_prefix = "grub-"
