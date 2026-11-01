@@ -1,5 +1,6 @@
 name = "libgtop"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libgtop"
+instance = "https://gitlab.gnome.org/"
+project = "gnome/%(name)"
