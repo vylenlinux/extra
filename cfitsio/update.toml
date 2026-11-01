@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "HEASARC"
 repo = "cfitsio"
+
+[version]
+strip_prefix = "%(name)-"
