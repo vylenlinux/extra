@@ -1,5 +1,6 @@
 name = "chezmoi"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "chezmoi"
+owner = "twpayne"
+repo = "%(name)"
