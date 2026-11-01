@@ -1,5 +1,6 @@
 name = "gc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gc-large-config"
+owner = "ivmai"
+repo = "bdwgc"
