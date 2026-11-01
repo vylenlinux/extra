@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "weidai11"
 repo = "cryptopp"
+
+[version]
+strip_prefix = "CRYPTOPP_"
