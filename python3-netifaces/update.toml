@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "al45tair"
 repo = "netifaces"
+
+[version]
+strip_prefix = "release_"
