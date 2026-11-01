@@ -1,5 +1,7 @@
 name = "iftop"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "iftop"
+[ftp]
+url = "https://pdw.ex-parrot.com/%(name)/download/"
+filename = "%(name)-%(version).tar.gz"
+include_prereleases = true
