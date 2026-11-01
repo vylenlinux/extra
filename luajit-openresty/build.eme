@@ -5,14 +5,14 @@ description="Just-in-time compiler and drop-in replacement for Lua 5.1."
 homepage="https://github.com/openresty/luajit2"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=luajit
+name=luajit-openresty
 version=2.1.20261023
 release=1
 source="${name}-${version}.tar.gz::https://github.com/openresty/luajit2/archive/v${version%.*}-${version##*.}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}2-${version%.*}-${version##*.}"
+    cd "luajit2-${version%.*}-${version##*.}"
 
     # flags recommended by OpenResty
     xcflags="-DLUAJIT_ENABLE_LUA52COMPAT \
