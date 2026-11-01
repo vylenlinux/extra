@@ -6,4 +6,7 @@ owner = "intel"
 repo = "media-driver"
 
 [github]
-tag_prefix = "intel-media-26."
+tag_prefix = "intel-media-2"
+
+[version]
+strip_prefix = "intel-media-"
