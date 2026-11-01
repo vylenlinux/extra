@@ -1,5 +1,6 @@
 name = "python3-xlib"
-provider = "pypi"
+provider = "github"
 
 [source]
-package = "xlib"
+owner = "python-xlib"
+repo = "python-xlib"
