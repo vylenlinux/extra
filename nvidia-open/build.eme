@@ -10,7 +10,6 @@ version=615.78.08
 release=1
 
 source="${name}-${version}.tar.xz::https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-${version}.tar.xz
-    buildmodules-${name}.sh
     dkms.conf.in"
 
 build() {
@@ -36,7 +35,5 @@ build() {
     cp -dr --no-preserve=ownership . -t "${PKG}/usr/src/nvidia-${version}/"
     mv "${PKG}/usr/src/nvidia-${version}/kernel-open/dkms.conf" -t "${PKG}/usr/src/nvidia-${version}/"
 
-    # dkms build modules script
-    mkdir -p "${PKG}/var/lib/dkms"
-    sed -e "s/@name@/nvidia/g" -e "s/@version@/${version}/g" "${SRC}/buildmodules-${name}.sh" > "${PKG}/var/lib/dkms/buildmodules-${name}.sh"
+    do_dkms
 }
