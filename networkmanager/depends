@@ -4,7 +4,7 @@ jansson
 libndp
 libpsl
 libxslt
-newt
+newt-tui
 nss
 polkit
 python3-gobject3
