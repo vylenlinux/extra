@@ -4,3 +4,7 @@ provider = "github"
 [source]
 owner = "lxml"
 repo = "lxml"
+
+[version]
+include = ["lxml-*"]
+exclude = ["lxml-7.*"]
