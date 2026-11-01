@@ -8,7 +8,6 @@ libxi
 libxkbcommon
 shared-mime-info
 vulkan-headers
-wayland
 xcb-util-cursor
 xcb-util-keysyms
 xcb-util-wm
