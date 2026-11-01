@@ -1,5 +1,6 @@
 name = "cython3"
-provider = "pypi"
+provider = "github"
 
 [source]
-package = "cython"
+owner = "cython"
+repo = "cython"
