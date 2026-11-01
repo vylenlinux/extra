@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "libvips"
 repo = "libvips"
+
+[version]
+exclude = ["*-rc*"]
