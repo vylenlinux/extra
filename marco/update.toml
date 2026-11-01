@@ -1,5 +1,5 @@
 name = "marco"
-provider = "repology"
+provider = "mate"
 
 [source]
 package = "marco"
