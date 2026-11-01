@@ -1,0 +1,6 @@
+name = "zram-generator"
+provider = "github"
+
+[source]
+owner = "systemd"
+repo = "%(name)"
