@@ -1,18 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Simple .INI file parser library written in C"
 homepage="https://github.com/benhoyt/inih"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=inih
-version=62
+version=63
 release=1
-source="https://github.com/benhoyt/inih/archive/r$version/$name-$version.tar.gz"
+source="https://github.com/benhoyt/${name}/archive/r${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-r$version
-	vylen-meson \
-	-Dwith_INIReader=true \
-	-Ddistro_install=true \
-	build
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    vylen-meson "${name}-r${version}" build \
+        -Dwith_INIReader=true \
+        -Ddistro_install=true
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }

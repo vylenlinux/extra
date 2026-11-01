@@ -1,5 +1,9 @@
 name = "inih"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "inih"
+owner = "benhoyt"
+repo = "%(name)"
+
+[version]
+strip_prefix = "r"
