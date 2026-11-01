@@ -5,3 +5,9 @@ dedup_key = "llvm"
 [source]
 owner = "llvm"
 repo = "llvm-project"
+
+[github]
+use_releases = true
+
+[version]
+strip_prefix = "llvmorg-"
