@@ -3,3 +3,6 @@ provider = "crates"
 
 [source]
 crate = "cargo-c"
+
+[version]
+strip_suffix = "+*"
