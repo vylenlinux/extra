@@ -3,5 +3,5 @@ libcdio-paranoia
 libplacebo
 libxpresent
 libxscrnsaver
-luajit
+luajit-openresty
 mesa
