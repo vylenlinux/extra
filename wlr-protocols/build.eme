@@ -6,14 +6,12 @@ homepage="https://gitlab.freedesktop.org/wlroots/wlr-protocols"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=wlr-protocols
-version=20260309
+version=1106a4a1
 release=1
-
-commit=bf4fc79abc359eea5a0edec0ac6d4a2b2955f82a
-source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/wlroots/${name}/-/archive/${commit}/${name}-${commit}.tar.gz"
+source="https://gitlab.freedesktop.org/wlroots/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${commit}"
+    cd "${name}-${version}"
     make DESTDIR="${PKG}" install
 }

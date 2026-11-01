@@ -1,5 +1,8 @@
 name = "wlr-protocols"
-provider = "repology"
+provider = "git"
 
 [source]
-package = "wlr-protocols"
+url = "https://gitlab.freedesktop.org/wlroots/%(name)"
+
+[git]
+field = "version"
