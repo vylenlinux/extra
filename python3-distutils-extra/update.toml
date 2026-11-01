@@ -1,5 +1,10 @@
 name = "python3-distutils-extra"
-provider = "pypi"
+provider = "gitlab"
 
 [source]
-package = "distutils-extra-python"
+instance = "https://salsa.debian.org/"
+project = "python-team/packages/python-distutils-extra"
+
+[version]
+include = ["debian/*"]
+strip_prefix = "debian/"
