@@ -4,3 +4,7 @@ provider = "github"
 [source]
 owner = "google"
 repo = "cppdap"
+
+[version]
+strip_prefix = "dap-"
+strip_suffix = "-a"
