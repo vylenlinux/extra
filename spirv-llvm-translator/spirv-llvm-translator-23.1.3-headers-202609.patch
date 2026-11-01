@@ -1,0 +1,90 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Sun, 1 Nov 2026 13:00:00 +0100
+Subject: [PATCH] spirv-llvm-translator: drop removed subgroup bitcast shuffle opcode
+
+diff --git a/lib/SPIRV/SPIRVReader.cpp b/lib/SPIRV/SPIRVReader.cpp
+--- a/lib/SPIRV/SPIRVReader.cpp
++++ b/lib/SPIRV/SPIRVReader.cpp
+@@ -4007,7 +4007,7 @@
+       Func->addFnAttr(Attribute::NoUnwind);
+     if (isGroupOpCode(OC) || isGroupNonUniformOpcode(OC) ||
+         isIntelSubgroupOpCode(OC) || isSplitBarrierINTELOpCode(OC) ||
+-        OC == OpSubgroupBitcastShuffleINTEL || OC == OpControlBarrier)
++        OC == OpControlBarrier)
+       Func->addFnAttr(Attribute::Convergent);
+   }
+   CallInst *Call;
+@@ -4189,7 +4189,6 @@
+   case internal::OpClampConvertFToSINTEL:
+   case internal::OpStochasticRoundFToFINTEL:
+   case internal::OpClampStochasticRoundFToSINTEL:
+-  case OpSubgroupBitcastShuffleINTEL:
+   // Old opcodes, for backward compatibility.
+   case internal::OpClampConvertFToFINTEL:
+   case internal::OpClampStochasticRoundFToFINTEL:
+@@ -4210,7 +4209,6 @@
+   case OpUDotKHR:
+   case OpUDotAccSatKHR:
+   case OpReadClockKHR:
+-  case OpSubgroupBitcastShuffleINTEL:
+     IsRetSigned = false;
+     break;
+   case OpImageRead:
+diff --git a/lib/SPIRV/libSPIRV/SPIRVEntry.h b/lib/SPIRV/libSPIRV/SPIRVEntry.h
+--- a/lib/SPIRV/libSPIRV/SPIRVEntry.h
++++ b/lib/SPIRV/libSPIRV/SPIRVEntry.h
+@@ -945,8 +945,6 @@
+     case CapabilityVectorComputeINTEL:
+     case CapabilityVectorAnyINTEL:
+       return ExtensionID::SPV_INTEL_vector_compute;
+-    case CapabilitySubgroupBitcastShuffleINTEL:
+-      return ExtensionID::SPV_INTEL_subgroup_bitcast_shuffle;
+     case internal::CapabilitySubgroupRequirementsINTEL:
+       return ExtensionID::SPV_INTEL_subgroup_requirements;
+     case CapabilityFPFastMathModeINTEL:
+diff --git a/lib/SPIRV/libSPIRV/SPIRVInstruction.h b/lib/SPIRV/libSPIRV/SPIRVInstruction.h
+--- a/lib/SPIRV/libSPIRV/SPIRVInstruction.h
++++ b/lib/SPIRV/libSPIRV/SPIRVInstruction.h
+@@ -4856,20 +4856,6 @@
+ _SPIRV_OP_FTOF(ClampStochasticRoundFToF, true, 5, true)
+ #undef _SPIRV_OP_FTOF
+
+-class SPIRVSubgroupBitcastShuffleINTELInst : public SPIRVInstTemplateBase {
+-public:
+-  std::optional<ExtensionID> getRequiredExtension() const override {
+-    return ExtensionID::SPV_INTEL_subgroup_bitcast_shuffle;
+-  }
+-  SPIRVCapVec getRequiredCapability() const override {
+-    return getVec(CapabilitySubgroupBitcastShuffleINTEL);
+-  }
+-};
+-
+-typedef SPIRVInstTemplate<SPIRVSubgroupBitcastShuffleINTELInst,
+-                          OpSubgroupBitcastShuffleINTEL, true, 4>
+-    SPIRVSubgroupBitcastShuffleINTEL;
+-
+ class SPIRVFPConversionFtoSINTELInstBase : public SPIRVInstTemplateBase {
+ public:
+   SPIRVCapVec getRequiredCapability() const override {
+diff --git a/lib/SPIRV/libSPIRV/SPIRVNameMapEnum.h b/lib/SPIRV/libSPIRV/SPIRVNameMapEnum.h
+--- a/lib/SPIRV/libSPIRV/SPIRVNameMapEnum.h
++++ b/lib/SPIRV/libSPIRV/SPIRVNameMapEnum.h
+@@ -565,7 +565,6 @@
+   add(CapabilityDemoteToHelperInvocation, "DemoteToHelperInvocation");
+   add(CapabilityDemoteToHelperInvocationEXT, "DemoteToHelperInvocationEXT");
+   add(CapabilityBindlessTextureNV, "BindlessTextureNV");
+-  add(CapabilitySubgroupBitcastShuffleINTEL, "SubgroupBitcastShuffleINTEL");
+   add(CapabilitySubgroupShuffleINTEL, "SubgroupShuffleINTEL");
+   add(CapabilitySubgroupBufferBlockIOINTEL, "SubgroupBufferBlockIOINTEL");
+   add(CapabilitySubgroupBufferPrefetchINTEL, "SubgroupBufferPrefetchINTEL");
+diff --git a/lib/SPIRV/libSPIRV/SPIRVOpCodeEnum.h b/lib/SPIRV/libSPIRV/SPIRVOpCodeEnum.h
+--- a/lib/SPIRV/libSPIRV/SPIRVOpCodeEnum.h
++++ b/lib/SPIRV/libSPIRV/SPIRVOpCodeEnum.h
+@@ -578,7 +578,6 @@
+ _SPIRV_OP(ControlBarrierArriveINTEL, 6142)
+ _SPIRV_OP(ControlBarrierWaitINTEL, 6143)
+ _SPIRV_OP(ArithmeticFenceEXT, 6145)
+-_SPIRV_OP(SubgroupBitcastShuffleINTEL, 6208)
+ _SPIRV_OP(SubgroupBlockPrefetchINTEL, 6221)
+ _SPIRV_OP(Subgroup2DBlockLoadINTEL, 6231)
+ _SPIRV_OP(Subgroup2DBlockLoadTransformINTEL, 6232)

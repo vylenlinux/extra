@@ -1,5 +1,6 @@
 name = "spirv-llvm-translator"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "spirv-llvm-translator"
+owner = "KhronosGroup"
+repo = "%(name)"
