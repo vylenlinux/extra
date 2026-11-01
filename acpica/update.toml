@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "open-%(name)"
 repo = "%(name)"
+
+[github]
+use_releases = true
