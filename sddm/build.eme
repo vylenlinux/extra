@@ -3,7 +3,7 @@
 # shellcheck disable=SC2034
 description="QML based X11 and Wayland display manager"
 homepage="https://github.com/sddm/sddm"
-maintainer="Vylen Linux Team"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sddm
 version=0.21.0
