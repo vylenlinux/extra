@@ -5,14 +5,14 @@ description="Support library used in the Xfce desktop"
 homepage="https://xfce.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=exo
+name=xfce-exo
 version=4.21.0
 release=1
-source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${version}.tar.bz2"
+source="${name}-${version}.tar.bz2::https://archive.xfce.org/src/xfce/exo/${version%.*}/exo-${version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}"
+    cd "exo-${version}"
 
     ./configure \
         --prefix=/usr \

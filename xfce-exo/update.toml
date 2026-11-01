@@ -1,0 +1,5 @@
+name = "xfce-exo"
+provider = "xfce"
+
+[source]
+package = "exo"
