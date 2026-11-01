@@ -4,3 +4,6 @@ provider = "gitlab"
 [source]
 instance = "https://gitlab.gnome.org/"
 project = "gnome/libgsf"
+
+[version]
+strip_prefix = "LIBGSF_"
