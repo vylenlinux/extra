@@ -2,4 +2,4 @@ name = "python3-tappy"
 provider = "pypi"
 
 [source]
-package = "tappy"
+package = "tap_py"
