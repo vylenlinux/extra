@@ -1,5 +1,9 @@
 name = "intel-ucode"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ucode"
+owner = "intel"
+repo = "Intel-Linux-Processor-Microcode-Data-Files"
+
+[version]
+strip_prefix = "microcode-"
