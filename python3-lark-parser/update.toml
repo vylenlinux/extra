@@ -1,5 +1,6 @@
 name = "python3-lark-parser"
-provider = "pypi"
+provider = "github"
 
 [source]
-package = "lark-parser"
+owner = "lark-parser"
+repo = "lark"
