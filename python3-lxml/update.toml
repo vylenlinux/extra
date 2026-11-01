@@ -8,3 +8,4 @@ repo = "lxml"
 [version]
 include = ["lxml-*"]
 exclude = ["lxml-7.*"]
+strip_prefix = "lxml-"
