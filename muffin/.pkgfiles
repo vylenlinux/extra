@@ -1,5 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cinnamon-list-windows
 -rwxr-xr-x root/root    usr/bin/muffin
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/muffin/
@@ -147,7 +148,6 @@ drwxr-xr-x root/root    usr/include/muffin/cogl/cogl/
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-framebuffer.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-glib-source.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-glx.h
--rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-gtype-private.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-index-buffer.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-indices.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-macros.h
@@ -168,6 +168,7 @@ drwxr-xr-x root/root    usr/include/muffin/cogl/cogl/
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-primitive-texture.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-primitive.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-renderer.h
+-rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-scanout.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-snippet.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-sub-texture.h
 -rw-r--r-- root/root    usr/include/muffin/cogl/cogl/cogl-swap-chain.h
@@ -206,16 +207,13 @@ drwxr-xr-x root/root    usr/include/muffin/meta/
 -rw-r--r-- root/root    usr/include/muffin/meta/keybindings.h
 -rw-r--r-- root/root    usr/include/muffin/meta/main.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-backend.h
--rw-r--r-- root/root    usr/include/muffin/meta/meta-background-actor.h
--rw-r--r-- root/root    usr/include/muffin/meta/meta-background-group.h
--rw-r--r-- root/root    usr/include/muffin/meta/meta-background-image.h
--rw-r--r-- root/root    usr/include/muffin/meta/meta-background.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-close-dialog.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-cursor-tracker.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-dnd.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-enum-types.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-idle-monitor.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-inhibit-shortcuts-dialog.h
+-rw-r--r-- root/root    usr/include/muffin/meta/meta-later.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-launch-context.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-monitor-manager.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-plugin.h
@@ -230,6 +228,7 @@ drwxr-xr-x root/root    usr/include/muffin/meta/
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-stage.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-startup-notification.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-version.h
+-rw-r--r-- root/root    usr/include/muffin/meta/meta-wayland-background-actor.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-window-actor.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-window-group.h
 -rw-r--r-- root/root    usr/include/muffin/meta/meta-window-shape.h
@@ -282,6 +281,9 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/muffin-cogl-0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/muffin-cogl-pango-0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/muffin-cogl-path-0.pc
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/61-muffin.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/muffin.desktop
