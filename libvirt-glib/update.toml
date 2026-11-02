@@ -1,5 +1,6 @@
 name = "libvirt-glib"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libvirt-glib"
+[ftp]
+url = "https://libvirt.org/sources/glib/"
+filename = "%(name)-%(version).tar.xz"
