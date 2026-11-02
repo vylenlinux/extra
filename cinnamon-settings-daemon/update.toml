@@ -1,9 +1,8 @@
 name = "cinnamon-settings-daemon"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "cinnamon-settings-daemon"
+package = "%(name)"
 
 [version]
 exclude = ["*-unstable"]

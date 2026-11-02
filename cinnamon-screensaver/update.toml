@@ -1,6 +1,5 @@
 name = "cinnamon-screensaver"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "cinnamon-screensaver"
+package = "%(name)"

@@ -1,6 +1,5 @@
 name = "cinnamon-session"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "cinnamon-session"
+package = "%(name)"

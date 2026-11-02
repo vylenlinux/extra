@@ -1,9 +1,8 @@
 name = "cinnamon-desktop"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "cinnamon-desktop"
+package = "%(name)"
 
 [version]
 exclude = ["*-unstable"]

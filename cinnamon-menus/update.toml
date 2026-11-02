@@ -1,6 +1,5 @@
 name = "cinnamon-menus"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "cinnamon-menus"
+package = "%(name)"
