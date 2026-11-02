@@ -1,5 +1,6 @@
 name = "apr-util"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "apr-util"
+[ftp]
+url = "https://archive.apache.org/dist/apr/"
+filename = "%(name)-%(version).tar.gz"
