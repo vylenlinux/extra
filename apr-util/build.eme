@@ -6,7 +6,7 @@ homepage="https://apr.apache.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=apr-util
-version=1.6.5
+version=1.6.6
 release=1
 source="https://archive.apache.org/dist/apr/${name}-${version}.tar.gz"
 
