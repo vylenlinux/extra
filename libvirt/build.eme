@@ -6,7 +6,7 @@ homepage="https://libvirt.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libvirt
-version=12.8.0
+version=12.9.0
 release=1
 
 backup="etc/libvirt/libvirtd.conf
