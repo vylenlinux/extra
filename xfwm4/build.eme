@@ -13,6 +13,7 @@ source="https://archive.xfce.org/src/xfce/${name}/${version%.*}/${name}-${versio
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    export LDFLAGS="${LDFLAGS} -lxfce4util"
 
     ./configure \
         --prefix=/usr \
@@ -22,5 +23,5 @@ build() {
         --disable-nls
 
     make
-    make DESTDIR="${PKG}" LIBS="-lxfce4util" install
+    make DESTDIR="${PKG}" install
 }
