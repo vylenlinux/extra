@@ -1,9 +1,8 @@
 name = "muffin"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "muffin"
+package = "%(name)"
 
 [version]
 exclude = ["*-unstable"]
