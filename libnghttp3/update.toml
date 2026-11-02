@@ -1,5 +1,6 @@
 name = "libnghttp3"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nghttp3"
+owner = "ngtcp2"
+repo = "nghttp3"

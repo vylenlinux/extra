@@ -6,7 +6,7 @@ homepage="https://github.com/ngtcp2/nghttp3"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libnghttp3
-version=1.18.0
+version=1.19.0
 release=1
 source="${name}-${version}.tar.xz::https://github.com/ngtcp2/nghttp3/releases/download/v${version}/nghttp3-${version}.tar.xz"
 
