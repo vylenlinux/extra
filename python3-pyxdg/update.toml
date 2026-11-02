@@ -1,0 +1,5 @@
+name = "python3-pyxdg"
+provider = "git"
+
+[source]
+url = "https://gitlab.freedesktop.org/xdg/pyxdg"

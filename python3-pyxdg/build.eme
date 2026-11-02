@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python library to access freedesktop.org standards"
+homepage="https://gitlab.freedesktop.org/xdg/pyxdg"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-pyxdg
+version=0.28
+release=1
+
+commit=63033ac306aa26d32e1439417e59ae8f8a4c9820
+source="https://gitlab.freedesktop.org/xdg/pyxdg/-/archive/${commit}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "pyxdg-${commit}"
+
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
+
+    python3 -m installer -d "${PKG}" .dist/*.whl
+}
