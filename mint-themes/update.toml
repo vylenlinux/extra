@@ -1,6 +1,5 @@
 name = "mint-themes"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "mint-themes"
+package = "%(name)"
