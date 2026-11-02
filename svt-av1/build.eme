@@ -6,13 +6,11 @@ homepage="https://gitlab.com/AOMediaCodec/SVT-AV1"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=svt-av1
-version=4.2.0
+version=4.3.0
 release=1
-source="https://gitlab.com/AOMediaCodec/SVT-AV1/-/archive/v${version}/SVT-AV1-v${version}.tar.bz2"
+source="${name}-${version}.tar.gz::https://gitlab.com/AOMediaCodec/${name}/-/archive/v${version}/SVT-AV1-v${version}.tar.gz"
 
 build() {
-    sed '/CMAKE_BUILD_TYPE Release/d' -i "SVT-AV1-v${version}/CMakeLists.txt"
-
     cmake -S "SVT-AV1-v${version}" -B build -G Ninja \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \

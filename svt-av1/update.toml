@@ -1,5 +1,5 @@
 name = "svt-av1"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "svt-av1"
+project = "AOMediaCodec/%(name)"
