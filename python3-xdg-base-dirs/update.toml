@@ -1,0 +1,6 @@
+name = "python3-xdg-base-dirs"
+provider = "github"
+
+[source]
+owner = "srstevenson"
+repo = "xdg-base-dirs"
