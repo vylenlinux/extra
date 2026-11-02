@@ -6,7 +6,7 @@ homepage="https://github.com/linuxmint/cinnamon-desktop"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cinnamon-desktop
-version=6.6.2
+version=6.8.0
 release=1
 source="https://github.com/linuxmint/${name}/archive/${version}/${name}-${version}.tar.gz"
 
