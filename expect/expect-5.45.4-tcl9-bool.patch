@@ -1,0 +1,104 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Subject: [PATCH] expect: include stdbool.h for Tcl 9.1
+Date: Mon, 02 Nov 2026 15:38:04 +0100
+
+--- a/expect.c
++++ b/expect.c
+@@ -25,6 +25,7 @@
+ # include <unistd.h>
+ #endif
+
++#include <stdbool.h>
+ #include "tclInt.h"
+
+ #include "string.h"
+--- a/exp_chan.c
++++ b/exp_chan.c
+@@ -25,6 +25,7 @@
+
+ #include <errno.h>
+
++#include <stdbool.h>
+ #include	"tclInt.h"	/* Internal definitions for Tcl. */
+
+ #include "tcl.h"
+--- a/exp_main_sub.c
++++ b/exp_main_sub.c
+@@ -17,6 +17,7 @@
+ #endif
+
+ #include "tcl.h"
++#include <stdbool.h>
+ #include "tclInt.h"
+ #include "exp_rename.h"
+ #include "exp_prog.h"
+--- a/Dbg.c
++++ b/Dbg.c
+@@ -25,6 +25,7 @@
+ #endif
+
+
++#include <stdbool.h>
+ #include "tclInt.h"
+ /*#include <varargs.h>		tclInt.h drags in varargs.h.  Since Pyramid */
+ /*				objects to including varargs.h twice, just */
+--- a/exp_clib.c
++++ b/exp_clib.c
+@@ -169,6 +169,7 @@
+  */
+
+ #if 0
++#include <stdbool.h>
+ #include "tclInt.h"
+ #include "tclPort.h"
+ #endif
+--- a/exp_poll.c
++++ b/exp_poll.c
+@@ -12,6 +12,7 @@
+  * Rewritten again by Don Libes, 8/97 for yet another Tcl notifier paradigm.
+  */
+
++#include <stdbool.h>
+ #include "tclInt.h"
+ #include "tclPort.h"
+ #include <signal.h>
+--- a/exp_simple.c
++++ b/exp_simple.c
+@@ -13,6 +13,7 @@
+
+ static char sccsid[] = "@(#) tclUnixNotify.c 1.27 96/01/19 10:30:23";
+
++#include <stdbool.h>
+ #include "tclInt.h"
+ #include "tclPort.h"
+ #include <signal.h>
+--- a/exp_log.c
++++ b/exp_log.c
+@@ -8,6 +8,7 @@
+ /*#include <varargs.h>		tclInt.h drags in varargs.h.  Since Pyramid */
+ /*				objects to including varargs.h twice, just */
+ /*				omit this one. */
++#include <stdbool.h>
+ #include "tclInt.h"
+ #ifdef NO_STDLIB_H
+ #include "../compat/stdlib.h"
+--- a/exp_inter.c
++++ b/exp_inter.c
+@@ -35,6 +35,7 @@
+
+ #include <ctype.h>
+
++#include <stdbool.h>
+ #include "tclInt.h"
+ #include "string.h"
+
+--- a/exp_command.c
++++ b/exp_command.c
+@@ -58,6 +58,7 @@
+ #include <math.h>		/* for log/pow computation in send -h */
+ #include <ctype.h>		/* all this for ispunct! */
+
++#include <stdbool.h>
+ #include "tclInt.h"		/* need OpenFile */
+ /*#include <varargs.h>		tclInt.h drags in varargs.h.  Since Pyramid */
+ /*				objects to including varargs.h twice, just */

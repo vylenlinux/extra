@@ -15,6 +15,7 @@ e677bcda567885ee5b69e02585974c40b62f33c39c5ee81fe2a6140ed324929e  expect-5.45-ma
 2eae3981cd8eb8dc4fcb457acd02c464f55bd6f0fc4ea0dfd7be7b3572259cdf  expect-5.45.4-covscan-fixes.patch
 f46cfe0b4d6b086264b8dceb460edd0996fc46ad9468bab3385c58f666856d1d  expect-5.45.4-tcl9-alloc.patch
 fa58fa77557ee8b4f66475924d1f0aba3c0477b7bbcb617ec41daebbac52794e  expect-5.45.4-tcl9-ansi-args.patch
+f8607b2676cbb7f61c6f84f50ad11ca2002859f6f83c63ab1203ff276a635e5a  expect-5.45.4-tcl9-bool.patch
 ff08002156f36ac5e30d373dbce0376e8a902a9256442a19b4ecc1844d53c371  expect-5.45.4-tcl9-const.patch
 ca238f17cab249a54f701438a58b6be61a04cd43f8cc23cae8596b95e83979c0  expect-5.45.4-tcl9-eval-tokens.patch
 d1754f7ee12a8ca8a6889bff28a72d9abe6375c54952eb74047a39490728121b  expect-5.45.4-tcl9-final.patch
