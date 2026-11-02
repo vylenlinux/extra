@@ -1,6 +1,6 @@
 name = "libvirt-python"
-provider = "repology"
-dedup_key = "libvirt"
+provider = "github"
 
 [source]
-package = "libvirt"
+owner = "libvirt"
+repo = "%(name)"
