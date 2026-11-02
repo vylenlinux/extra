@@ -1,0 +1,6 @@
+name = "composer"
+provider = "github"
+
+[source]
+owner = "%(name)"
+repo = "%(name)"

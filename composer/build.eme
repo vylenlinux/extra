@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Dependency Manager for PHP"
+homepage="https://getcomposer.org/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=composer
+version=2.11.1
+release=1
+source="${name}-${version}.phar::https://github.com/${name}/${name}/releases/download/${version}/${name}.phar"
+
+build() {
+    install -Dm755 "${name}-${version}.phar" "${PKG}/usr/bin/${name}"
+}
