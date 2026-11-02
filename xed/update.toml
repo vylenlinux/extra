@@ -1,6 +1,5 @@
 name = "xed"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "xed"
+package = "%(name)"
