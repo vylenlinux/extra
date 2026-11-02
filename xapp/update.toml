@@ -1,9 +1,8 @@
 name = "xapp"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "%(name)"
+package = "%(name)"
 
 [version]
 exclude = ["*-unstable"]
