@@ -6,7 +6,7 @@ homepage="https://github.com/danoli3/FreeImage"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeimage
-version=3.19.29
+version=3.19.30
 release=1
 source="${name}-${version}.tar.gz::https://github.com/danoli3/${name}/archive/refs/tags/${version}.tar.gz"
 
