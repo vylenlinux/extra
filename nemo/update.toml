@@ -1,9 +1,8 @@
 name = "nemo"
-provider = "github"
+provider = "linuxmint"
 
 [source]
-owner = "linuxmint"
-repo = "nemo"
+package = "%(name)"
 
 [version]
 exclude = ["*-unstable"]
