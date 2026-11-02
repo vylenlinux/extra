@@ -6,23 +6,27 @@ homepage="https://www.oasis-open.org/docbook/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=docbook-xml
-version=4.5
+version=5.1
 release=1
 
-source="https://www.oasis-open.org/docbook/xml/${version}/${name}-${version}.zip
-    https://www.oasis-open.org/docbook/xml/4.4/${name}-4.4.zip
-    https://www.oasis-open.org/docbook/xml/4.3/${name}-4.3.zip
-    https://www.oasis-open.org/docbook/xml/4.2/${name}-4.2.zip
-    ${name}-4.1.2.zip::https://www.oasis-open.org/docbook/xml/4.1.2/docbkx412.zip"
+source="${name}-${version}.zip::https://archive.docbook.org/xml/${version}/docbook-v${version}-os.zip
+    ${name}-5.0.zip::https://archive.docbook.org/xml/5.0/docbook-5.0.zip
+    https://archive.docbook.org/xml/4.5/${name}-4.5.zip
+    https://archive.docbook.org/xml/4.4/${name}-4.4.zip
+    https://archive.docbook.org/xml/4.3/${name}-4.3.zip
+    https://archive.docbook.org/xml/4.2/${name}-4.2.zip
+    ${name}-4.1.2.zip::https://archive.docbook.org/xml/4.1.2/docbkx412.zip"
 
 noextract="${name}-${version}.zip
+    ${name}-5.0.zip
+    ${name}-4.5.zip
     ${name}-4.4.zip
     ${name}-4.3.zip
     ${name}-4.2.zip
     ${name}-4.1.2.zip"
 
 build() {
-    for file in "${name}:${version}" "${name}:4.4" "${name}:4.3" "${name}:4.2" "${name}:4.1.2"; do
+    for file in "${name}:4.5" "${name}:4.4" "${name}:4.3" "${name}:4.2" "${name}:4.1.2"; do
         file_name="${file%%:*}"
         file_version="${file##*:}"
 
@@ -36,15 +40,43 @@ build() {
 
             chown -R root:root .
             # shellcheck disable=SC2035
-            cp -af docbook.cat *.dtd ent/ *.mod "${PKG}/usr/share/xml/docbook/xml-dtd-${file_version}"
+            cp -af docbook.cat *.dtd ent/ *.mod -t "${PKG}/usr/share/xml/docbook/xml-dtd-${file_version}/"
         # shellcheck disable=SC2103
         cd ..
     done
 
+    install -d "${name}-5.0" \
+        "${name}-${version}"
+
+    # shellcheck disable=SC2164
+    cd "${name}-5.0"
+        bsdtar -xf "${SRC}/${name}-5.0.zip"
+
+        for _type in dtd rng sch xsd; do
+            install -Dm644 "docbook-5.0/${_type}"/* -t "${PKG}/usr/share/xml/docbook/schema/5.0/${_type}/"
+        done
+
+        install -Dm644 docbook-5.0/docbook.nvdl -t "${PKG}/usr/share/xml/docbook/schema/5.0/"
+    # shellcheck disable=SC2103
+    cd ..
+
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+        bsdtar -xf "${SRC}/${name}-${version}.zip"
+
+        install -Dm644 schemas/rng/* -t "${PKG}/usr/share/xml/docbook/schema/${version}/rng/"
+        install -Dm644 schemas/sch/* -t "${PKG}/usr/share/xml/docbook/schema/${version}/sch/"
+        install -Dm644 schemas/docbook.nvdl -t "${PKG}/usr/share/xml/docbook/schema/${version}/"
+
+        install -Dm755 tools/db4-entities.pl -t "${PKG}/usr/bin/"
+        install -Dm644 tools/db4-upgrade.xsl -t "${PKG}/usr/share/xml/docbook/stylesheet/docbook5/"
+    # shellcheck disable=SC2103
+    cd ..
+
     install -dm755 "${PKG}/etc/xml"
     xmlcatalog --noout --create "${PKG}/etc/xml/docbook-xml"
 
-    for _version in 4.1.2 4.2 4.3 4.4 "${version}"; do
+    for _version in 4.1.2 4.2 4.3 4.4 4.5; do
         xmlcatalog --noout --add "public" \
             "-//OASIS//DTD DocBook XML V${_version}//EN" \
             "http://www.oasis-open.org/docbook/xml/${_version}/docbookx.dtd" "${PKG}/etc/xml/docbook-xml"
@@ -88,5 +120,29 @@ build() {
         xmlcatalog --noout --add "rewriteURI" \
             "http://www.oasis-open.org/docbook/xml/${_version}" \
             "file:///usr/share/xml/docbook/xml-dtd-${_version}" "${PKG}/etc/xml/docbook-xml"
+    done
+
+    xmlcatalog --noout --add "public" \
+        "-//OASIS//DTD DocBook XML 5.0//EN" \
+        "http://www.oasis-open.org/docbook/xml/5.0/dtd/docbook.dtd" "${PKG}/etc/xml/docbook-xml"
+
+    for _prefix in http://docbook.org/xml/5.0/ https://docbook.org/xml/5.0/ http://www.docbook.org/xml/5.0/ https://www.docbook.org/xml/5.0/ http://www.oasis-open.org/docbook/xml/5.0/ https://www.oasis-open.org/docbook/xml/5.0/; do
+        xmlcatalog --noout --add "rewriteSystem" "${_prefix}" \
+            "file:///usr/share/xml/docbook/schema/5.0/" \
+            "${PKG}/etc/xml/docbook-xml"
+
+        xmlcatalog --noout --add "rewriteURI" "${_prefix}" \
+            "file:///usr/share/xml/docbook/schema/5.0/" \
+            "${PKG}/etc/xml/docbook-xml"
+    done
+
+    for _prefix in http://docbook.org/xml/5.1/ https://docbook.org/xml/5.1/ http://www.docbook.org/xml/5.1/ https://www.docbook.org/xml/5.1/ http://www.oasis-open.org/docbook/xml/5.1/ https://www.oasis-open.org/docbook/xml/5.1/; do
+        xmlcatalog --noout --add "rewriteSystem" "${_prefix}" \
+            "file:///usr/share/xml/docbook/schema/${version}/" \
+            "${PKG}/etc/xml/docbook-xml"
+
+        xmlcatalog --noout --add "rewriteURI" "${_prefix}" \
+            "file:///usr/share/xml/docbook/schema/${version}/" \
+            "${PKG}/etc/xml/docbook-xml"
     done
 }

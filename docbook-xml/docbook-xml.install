@@ -19,6 +19,16 @@ update_xml_catalog() {
     xmlcatalog --noout --add "delegateURI" \
         "http://www.oasis-open.org/docbook/" \
         "file:///etc/xml/docbook-xml" /etc/xml/catalog
+
+    for _prefix in http://docbook.org/xml/ https://docbook.org/xml/ http://www.docbook.org/xml/ https://www.docbook.org/xml/ https://www.oasis-open.org/docbook/xml/; do
+        xmlcatalog --noout --add "delegateSystem" \
+            "${_prefix}" \
+            "file:///etc/xml/docbook-xml" /etc/xml/catalog
+
+        xmlcatalog --noout --add "delegateURI" \
+            "${_prefix}" \
+            "file:///etc/xml/docbook-xml" /etc/xml/catalog
+    done
 }
 
 post_install() {
