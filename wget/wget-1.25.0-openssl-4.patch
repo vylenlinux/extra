@@ -1,0 +1,12 @@
+diff '--color=auto' -Naur a/src/openssl.c b/src/openssl.c
+--- a/src/openssl.c	2024-03-12 01:59:02.000000000 +0300
++++ b/src/openssl.c	2026-04-21 22:10:05.540813896 +0300
+@@ -226,7 +226,7 @@
+       break;
+ 
+     case secure_protocol_sslv3:
+-#ifndef OPENSSL_NO_SSL3_METHOD
++#if !defined OPENSSL_NO_SSL3_METHOD && OPENSSL_VERSION_NUMBER < 0x40000000L
+       meth = SSLv3_client_method ();
+ #endif
+       break;
