@@ -18,4 +18,5 @@ libxml2
 libxrandr
 libxrender
 pango
+python3-pyxdg
 startup-notification
