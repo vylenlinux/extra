@@ -1,5 +1,6 @@
 name = "libvirt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libvirt"
+[ftp]
+url = "https://libvirt.org/sources/"
+filename = "%(name)-%(version).tar.xz"
