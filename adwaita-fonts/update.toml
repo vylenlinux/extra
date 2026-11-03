@@ -1,0 +1,6 @@
+name = "adwaita-fonts"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.gnome.org/"
+project = "gnome/%(name)"
