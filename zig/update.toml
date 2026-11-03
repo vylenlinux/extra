@@ -1,5 +1,6 @@
 name = "zig"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "zig"
+owner = "ziglang"
+repo = "%(name)"
