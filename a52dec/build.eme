@@ -14,7 +14,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    CFLAGS="-g -O2 -fPIC" ./configure \
+    ./configure \
         --prefix=/usr \
         --mandir=/usr/share/man \
         --enable-shared \
