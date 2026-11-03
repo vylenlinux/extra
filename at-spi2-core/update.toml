@@ -1,6 +1,5 @@
 name = "at-spi2-core"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "gnome/at-spi2-core"
+package = "%(name)"
