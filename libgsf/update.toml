@@ -1,9 +1,8 @@
 name = "libgsf"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "gnome/libgsf"
+package = "%(name)"
 
 [version]
 strip_prefix = "LIBGSF_"
