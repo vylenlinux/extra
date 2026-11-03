@@ -59,6 +59,7 @@ drwxr-xr-x root/root    usr/share/qterminal/translations/
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_sk_SK.qm
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_sv.qm
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_tr.qm
+-rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_ug.qm
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_uk.qm
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_vi.qm
 -rw-r--r-- root/root    usr/share/qterminal/translations/qterminal_zh_CN.qm
