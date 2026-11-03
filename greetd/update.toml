@@ -1,6 +1,0 @@
-name = "greetd"
-provider = "sourcehut"
-
-[source]
-owner = "~kennylevinsen"
-repo = "%(name)"
