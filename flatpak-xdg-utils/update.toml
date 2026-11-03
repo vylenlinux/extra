@@ -1,0 +1,6 @@
+name = "flatpak-xdg-utils"
+provider = "github"
+
+[source]
+owner = "flatpak"
+repo = "%(name)"

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Utilities for containerized apps to launch programs outside the container"
+homepage="https://github.com/flatpak/flatpak-xdg-utils"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=flatpak-xdg-utils
+version=1.0.6
+release=1
+source="https://github.com/flatpak/${name}/releases/download/${version}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build --bindir="/usr/lib/${name}"
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
