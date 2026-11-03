@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Graphical user interface for asusctl"
+homepage="https://asus-linux.org"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=rog-control-center
+version=6.5.0
+release=1
+source="asusctl-${version}.tar.gz::https://github.com/OpenGamingCollective/asusctl/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "asusctl-${version}"
+
+    cargo build \
+        --release \
+        --locked
+
+    make DESTDIR="${PKG}" \
+        install-rog_gui \
+        install-data-rog_gui
+}

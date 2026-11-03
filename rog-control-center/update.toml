@@ -1,0 +1,7 @@
+name = "rog-control-center"
+provider = "github"
+dedup_key = "asusctl"
+
+[source]
+owner = "OpenGamingCollective"
+repo = "asusctl"
