@@ -1,5 +1,6 @@
 name = "hwdata"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "hwdata"
+owner = "vcrhonek"
+repo = "%(name)"
