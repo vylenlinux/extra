@@ -1,6 +1,5 @@
 name = "wayland-protocols"
-provider = "gitlab"
+provider = "freedesktop"
 
 [source]
-instance = "https://gitlab.freedesktop.org/"
 project = "wayland/%(name)"
