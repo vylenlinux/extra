@@ -6,20 +6,37 @@ homepage="https://sourceforge.net/projects/astyle/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=astyle
-version=3.6.20
+version=3.6.21
 release=1
-
-source="https://gitlab.com/saalen/${name}/-/archive/${version}/${name}-${version}.tar.bz2
-    makefile-install.patch"
+source="https://downloads.sourceforge.net/project/${name}/${name}/${name}%203.6/${name}-${version}.tar.bz2"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}/AStyle/build/gcc"
+    cd "${name}-${version}"
 
-    patch -Np1 -i "${SRC}/makefile-install.patch"
-    make shared release
+    cmake -B build-cli \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DINSTALL_DOC=ON \
+        -Wno-author
 
-    make install \
-        DESTDIR="${PKG}" \
-        INSTALL=install
+    cmake -B build-shared \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DBUILD_SHARED_LIBS=ON \
+        -Wno-author
+
+    cmake --build build-cli
+    cmake --build build-shared
+
+    DESTDIR="${PKG}" cmake --install build-cli
+    DESTDIR="${PKG}" cmake --install build-shared
+
+    install -Dm644 "src/${name}.h" -t "${PKG}/usr/include/"
+
+    install -Dm644 "sh-completion/${name}.bash" "${PKG}/usr/share/bash-completion/completions/${name}"
+    install -Dm644 "sh-completion/${name}.fish" -t "${PKG}/usr/share/fish/vendor_completions.d/"
+    install -Dm644 "sh-completion/${name}.zsh" "${PKG}/usr/share/zsh/site-functions/_${name}"
 }

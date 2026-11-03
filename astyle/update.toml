@@ -1,5 +1,7 @@
 name = "astyle"
-provider = "repology"
+provider = "sourceforge"
 
-[source]
-package = "astyle"
+[sourceforge]
+project = "%(name)"
+path = "%(name)/%(name)%203.6/"
+filename = "%(name)-%(version).tar.bz2"
