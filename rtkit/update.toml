@@ -1,6 +1,5 @@
 name = "rtkit"
-provider = "gitlab"
+provider = "freedesktop"
 
 [source]
-instance = "https://gitlab.freedesktop.org/"
 project = "pipewire/%(name)"
