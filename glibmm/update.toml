@@ -1,6 +1,5 @@
 name = "glibmm"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "GNOME/glibmm"
+package = "%(name)"
