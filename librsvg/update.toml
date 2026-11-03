@@ -1,6 +1,5 @@
 name = "librsvg"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "GNOME/librsvg"
+package = "%(name)"
