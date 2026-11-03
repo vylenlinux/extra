@@ -6,7 +6,7 @@ homepage="https://lxqt.github.io"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-archiver
-version=1.4.0
+version=1.5.0
 release=1
 source="https://github.com/lxqt/${name}/archive/${version}/${name}-${version}.tar.gz"
 
