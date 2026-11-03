@@ -1,6 +1,5 @@
 name = "ministream"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "gnome/ministream"
+package = "%(name)"
