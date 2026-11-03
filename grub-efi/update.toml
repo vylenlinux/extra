@@ -1,9 +1,8 @@
 name = "grub-efi"
-provider = "gitlab"
+provider = "freedesktop"
 dedup_key = "grub"
 
 [source]
-instance = "https://gitlab.freedesktop.org/"
 project = "gnu-grub/grub"
 
 [version]
