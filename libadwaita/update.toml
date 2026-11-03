@@ -1,6 +1,5 @@
 name = "libadwaita"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "gnome/libadwaita"
+package = "%(name)"
