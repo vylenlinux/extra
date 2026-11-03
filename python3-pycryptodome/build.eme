@@ -6,7 +6,7 @@ homepage="https://www.pycryptodome.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pycryptodome
-version=4.2.0
+version=4.3.0
 release=1
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/pycryptodome/pycryptodome-${version}.tar.gz"
 
