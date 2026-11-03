@@ -1,6 +1,5 @@
 name = "libsoup"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "GNOME/libsoup"
+package = "%(name)"
