@@ -1,5 +1,10 @@
 name = "sdl3"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sdl3"
+owner = "libsdl-org"
+repo = "SDL"
+
+[version]
+include = ["release-*"]
+strip_prefix = "release-"
