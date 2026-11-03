@@ -30,6 +30,7 @@ drwxr-xr-x root/root    usr/share/pcmanfm-qt/translations/
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_cy.qm
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_da.qm
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_de.qm
+-rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_de_CH.qm
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_el.qm
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_en_GB.qm
 -rw-r--r-- root/root    usr/share/pcmanfm-qt/translations/pcmanfm-qt_eo.qm
