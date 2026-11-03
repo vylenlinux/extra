@@ -6,7 +6,7 @@ homepage="https://ziglang.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zig
-version=0.17.0
+version=0.17.1
 release=1
 source="${name}-${version}.tar.xz::https://ziglang.org/download/${version}/${name}-x86_64-linux-${version}.tar.xz"
 
