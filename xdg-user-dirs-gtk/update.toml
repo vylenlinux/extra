@@ -1,6 +1,5 @@
 name = "xdg-user-dirs-gtk"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org/"
-project = "GNOME/xdg-user-dirs-gtk"
+package = "%(name)"
