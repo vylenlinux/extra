@@ -57,6 +57,7 @@ drwxr-xr-x root/root    usr/share/lximage-qt/translations/
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_sl.qm
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_sv.qm
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_tr.qm
+-rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_ug.qm
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_uk.qm
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_vi.qm
 -rw-r--r-- root/root    usr/share/lximage-qt/translations/lximage-qt_zh_CN.qm
