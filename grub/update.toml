@@ -1,8 +1,7 @@
 name = "grub"
-provider = "gitlab"
+provider = "freedesktop"
 
 [source]
-instance = "https://gitlab.freedesktop.org/"
 project = "gnu-%(name)/%(name)"
 
 [version]
