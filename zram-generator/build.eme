@@ -16,4 +16,8 @@ build() {
 
     make CARGOFLAGS="--target-dir=target" NOMAN=true build
     make CARGOFLAGS="--target-dir=target" NOMAN=true DESTDIR="${PKG}" install
+
+    # zram-generator depends on ruby-ronn for generating man pages
+    do_man 8 "${name}"
+    do_man 5 "${name}.conf"
 }
