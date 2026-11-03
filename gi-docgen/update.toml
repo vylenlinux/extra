@@ -1,6 +1,5 @@
 name = "gi-docgen"
-provider = "gitlab"
+provider = "gnome"
 
 [source]
-instance = "https://gitlab.gnome.org"
-project = "GNOME/gi-docgen"
+package = "%(name)"
