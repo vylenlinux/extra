@@ -1,5 +1,6 @@
 name = "botan"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "botan"
+[ftp]
+url = "https://botan.randombit.net/releases/"
+filename = "Botan-%(version).tar.xz"

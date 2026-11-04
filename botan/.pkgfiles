@@ -22,6 +22,7 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/ber_dec.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/bigint.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/block_cipher.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/bls12_381.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/buf_comp.h
 -rw-r--r-- root/root    usr/include/botan-3/botan/build.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/bzip2.h
@@ -79,6 +80,7 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/hash.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/hex.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/hmac_drbg.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/hpke.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/hss_lms.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/ipv4_address.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/ipv6_address.h
@@ -89,6 +91,7 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/mem_ops.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/ml_dsa.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/ml_kem.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/module_lattice_keys.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/mutex.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/nist_keywrap.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/numthry.h
@@ -115,6 +118,8 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pk_keys.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pk_ops.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pk_ops_fwd.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/pk_options.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/pk_options_readers.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pkcs10.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pkcs11.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/pkcs12.h
@@ -146,9 +151,11 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/stateful_rng.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/stream_cipher.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/strong_type.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/strong_type_helpers.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/sym_algo.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/symkey.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/system_rng.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/telephone_number.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/tls.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/tls_alert.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/tls_algos.h
@@ -187,6 +194,7 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/uri.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/uuid.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/version.h
+-rw-rw-r-- root/root    usr/include/botan-3/botan/work_executor.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/x25519.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/x448.h
 -rw-rw-r-- root/root    usr/include/botan-3/botan/x509_ca.h
@@ -204,16 +212,19 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/zlib.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
-drwxr-xr-x root/root    usr/lib/cmake/Botan-3.13.0/
--rw-r--r-- root/root    usr/lib/cmake/Botan-3.13.0/botan-config-version.cmake
--rw-r--r-- root/root    usr/lib/cmake/Botan-3.13.0/botan-config.cmake
+drwxr-xr-x root/root    usr/lib/cmake/Botan-3.14.0/
+-rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.0/botan-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.0/botan-config.cmake
 -rw-r--r-- root/root    usr/lib/libbotan-3.a
-lrwxrwxrwx root/root    usr/lib/libbotan-3.so -> libbotan-3.so.13.13.0
-lrwxrwxrwx root/root    usr/lib/libbotan-3.so.13 -> libbotan-3.so.13.13.0
--rwxr-xr-x root/root    usr/lib/libbotan-3.so.13.13.0
+lrwxrwxrwx root/root    usr/lib/libbotan-3.so -> libbotan-3.so.14.14.0
+lrwxrwxrwx root/root    usr/lib/libbotan-3.so.14 -> libbotan-3.so.14.14.0
+-rwxr-xr-x root/root    usr/lib/libbotan-3.so.14.14.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/botan-3.pc
-drwxr-xr-x root/root    usr/lib/python3.14/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
--rwxrwxr-x root/root    usr/lib/python3.14/site-packages/botan3.py
+drwxr-xr-x root/root    usr/lib/python3.15/
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
+-rw-rw-r-- root/root    usr/lib/python3.15/site-packages/botan3.py
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/botan.1.gz
