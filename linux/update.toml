@@ -1,5 +1,6 @@
 name = "linux"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "linux"
+[ftp]
+url = "https://www.kernel.org/pub/linux/kernel/v7.x/"
+filename = "linux-%(version).tar.xz"
