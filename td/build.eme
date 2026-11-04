@@ -6,12 +6,14 @@ homepage="https://core.telegram.org/tdlib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=td
-version=4c6377a
+version=1.8.69
 release=1
-source="${name}-${version}.tar.gz::https://github.com/tdlib/${name}/archive/${version}.tar.gz"
+
+commit=4c6377aa7386c39217878a9a56d581922ad37ca4
+source="${name}-${commit}.tar.gz::https://github.com/tdlib/${name}/archive/${commit}.tar.gz"
 
 build() {
-    cmake -S "${name}-${version}"* -B build \
+    cmake -S "${name}-${commit}" -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \

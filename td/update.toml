@@ -5,4 +5,4 @@ provider = "git"
 url = "https://github.com/tdlib/%(name)"
 
 [git]
-field = "version"
+field = "commit"
