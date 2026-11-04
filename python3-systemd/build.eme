@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Python bindings for systemd"
+homepage="https://github.com/systemd/python-systemd"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=python3-systemd
+version=236
+release=1
+source="${name}-${version}.tar.gz::https://github.com/systemd/python-systemd/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    vylen-meson "python-systemd-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
