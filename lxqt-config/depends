@@ -3,3 +3,4 @@ libkscreen
 liblxqt
 libxcursor
 lxqt-menu-data
+xf86-input-libinput
