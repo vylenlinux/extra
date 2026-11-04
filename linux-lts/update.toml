@@ -1,8 +1,9 @@
 name = "linux-lts"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "linux"
+[ftp]
+url = "https://www.kernel.org/pub/linux/kernel/v6.x/"
+filename = "linux-%(version).tar.xz"
 
-[repology]
-match_name = "linux-lts"
+[version]
+exclude = ["6.19*"]
