@@ -1,23 +1,36 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="C++ library for the Debug Adapter Protocol"
 homepage="https://github.com/google/cppdap"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cppdap
-version=1.58.0
+version=1.58.0_a
 release=1
-source="$name-$version.tar.gz::https://github.com/google/cppdap/archive/dap-${version}-a.tar.gz
-        6a3cc9a8.patch"
+
+_version="$(printf '%s' "${version}" | tr '_' '-')"
+
+source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/dap-${_version}.tar.gz
+    https://github.com/google/${name}/commit/6a3cc9a8.patch
+    cppdap-network-cstdint.patch"
 
 build() {
-	patch -d cppdap-dap-${version}-a -p1 < 6a3cc9a8.patch # Build shared lib
+    # Build shared lib
+    patch -d "${name}-dap-${_version}" -Np1 -i "${SRC}/6a3cc9a8.patch"
 
-	cmake -B build -S cppdap-dap-${version}-a -G Ninja \
-		-D CMAKE_INSTALL_PREFIX=/usr \
-		-D CMAKE_INSTALL_LIBDIR=lib \
-		-D CMAKE_BUILD_TYPE=Release \
-		-D CMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-DCPPDAP_USE_EXTERNAL_NLOHMANN_JSON_PACKAGE=ON \
-		-DBUILD_SHARED_LIBS=ON
+    # Fix missing <cstdint> include required for uint32_t in network.h
+    patch -d "${name}-dap-${_version}" -Np1 -i "${SRC}/cppdap-network-cstdint.patch"
+
+    cmake -S "${name}-dap-${_version}" -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DCPPDAP_USE_EXTERNAL_NLOHMANN_JSON_PACKAGE=ON \
+        -DBUILD_SHARED_LIBS=ON \
+        -Wno-author
+
 	cmake --build build
-	DESTDIR=$PKG cmake --install build
+	DESTDIR="${PKG}" cmake --install build
 }

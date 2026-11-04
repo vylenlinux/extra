@@ -1,0 +1,11 @@
+diff --git a/include/dap/network.h b/include/dap/network.h
+--- a/include/dap/network.h
++++ b/include/dap/network.h
+@@ -16,6 +16,7 @@
+ #define dap_network_h
+
++#include <cstdint>
+ #include <functional>
+ #include <memory>
+
+ namespace dap {
