@@ -1,5 +1,6 @@
 name = "dlpack"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "dlpack"
+owner = "dmlc"
+repo = "%(name)"
