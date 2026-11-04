@@ -1,6 +1,10 @@
 name = "opencl-nvidia"
-provider = "repology"
+provider = "ftp"
 dedup_key = "nvidia-open"
 
-[source]
-package = "nvidia"
+# To obtain the .run file release,
+# the exact version must be specified in the URL;
+# therefore, we use the method from nvidia-open.
+[ftp]
+url = "https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/"
+filename = "NVIDIA-kernel-module-source-%(version).tar.xz"

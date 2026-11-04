@@ -5,5 +5,5 @@ drwxr-xr-x root/root    etc/OpenCL/vendors/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libnvidia-opencl.so -> libnvidia-opencl.so.1
-lrwxrwxrwx root/root    usr/lib/libnvidia-opencl.so.1 -> libnvidia-opencl.so.615.78.08
--rwxr-xr-x root/root    usr/lib/libnvidia-opencl.so.615.78.08
+lrwxrwxrwx root/root    usr/lib/libnvidia-opencl.so.1 -> libnvidia-opencl.so.620.70.06
+-rwxr-xr-x root/root    usr/lib/libnvidia-opencl.so.620.70.06
