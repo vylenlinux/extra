@@ -6,7 +6,7 @@ homepage="https://lld.llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lld
-version=23.1.4
+version=23.1.5
 release=1
 
 source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
@@ -15,7 +15,7 @@ source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/do
 build() {
     # shellcheck disable=SC2164
     cd "llvm-project-${version}.src/lld"
-    patch -p2 -i "${SRC}/lld-import-compact_unwind_encoding.h-from-libu.patch"
+    patch -Np2 -i "${SRC}/lld-import-compact_unwind_encoding.h-from-libu.patch"
 
     LLVM_TARGETS="AArch64;AMDGPU;ARM;AVR;BPF;Hexagon;Lanai;LoongArch;Mips;MSP430;NVPTX;PowerPC"
     LLVM_TARGETS="${LLVM_TARGETS};RISCV;Sparc;SPIRV;SystemZ;VE;WebAssembly;X86;XCore"

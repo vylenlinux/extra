@@ -6,7 +6,7 @@ homepage="https://openmp.llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openmp
-version=23.1.4
+version=23.1.5
 release=1
 source="llvm-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz"
 

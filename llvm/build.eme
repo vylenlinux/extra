@@ -6,11 +6,11 @@ homepage="https://llvm.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=llvm
-version=23.1.4
+version=23.1.5
 release=1
 
 source="${name}-${version}.tar.xz::https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/${name}-project-${version}.src.tar.xz
-    llvm-config.h"
+    ${name}-config.h"
 
 build() {
     # shellcheck disable=SC2164
@@ -45,31 +45,10 @@ build() {
         -DLLVM_TARGETS_TO_BUILD="${LLVM_TARGETS}" \
         -Wno-author
 
-    jobs=
-
-    while :; do
-        printf "Try %s parallel jobs ...\n" "${jobs:-default}"
-        cmake --build build -j "${jobs}" && break
-
-        # Try few parallel jobs to avoid OOM
-        if [ -z "${jobs}" ]; then
-            # shellcheck disable=SC2003
-            jobs="$(expr "$(free -g | grep Mem: | awk '{print $2;}')" / 2 + 1)"
-            continue
-        elif [ "${jobs}" -gt 2 ]; then
-            # shellcheck disable=SC2003
-            jobs="$(expr "${jobs}" - 2)"
-            continue
-        elif [ "${jobs}" -eq 1 ]; then
-            exit 1
-        else
-            jobs=1
-        fi
-    done
-
+    cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
     # multilib stub
-    mv "${PKG}/usr/include/llvm/Config/llvm-config.h" "${PKG}/usr/include/llvm/Config/llvm-config-64.h"
-    cp "${SRC}/llvm-config.h" -t "${PKG}/usr/include/llvm/Config/"
+    mv "${PKG}/usr/include/${name}/Config/${name}-config.h" "${PKG}/usr/include/${name}/Config/${name}-config-64.h"
+    cp "${SRC}/${name}-config.h" -t "${PKG}/usr/include/${name}/Config/"
 }

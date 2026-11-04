@@ -3,5 +3,5 @@ libexecdir=${prefix}/share/clc
 
 Name: libclc
 Description: Library requirements of the OpenCL C programming language
-Version: 23.1.0
+Version: 23.1.5
 Libs: -L${libexecdir}
