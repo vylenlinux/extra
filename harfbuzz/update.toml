@@ -1,5 +1,6 @@
 name = "harfbuzz"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "harfbuzz"
+owner = "%(name)"
+repo = "%(name)"

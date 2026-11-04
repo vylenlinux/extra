@@ -1,6 +1,7 @@
 name = "harfbuzz-icu"
-provider = "repology"
+provider = "github"
 dedup_key = "harfbuzz"
 
 [source]
-package = "harfbuzz"
+owner = "harfbuzz"
+repo = "harfbuzz"
