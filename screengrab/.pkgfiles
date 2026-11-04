@@ -55,6 +55,7 @@ drwxr-xr-x root/root    usr/share/screengrab/translations/
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_sl.qm
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_sv.qm
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_tr.qm
+-rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_ug.qm
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_uk.qm
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_vi.qm
 -rw-r--r-- root/root    usr/share/screengrab/translations/screengrab_zh_CN.qm
