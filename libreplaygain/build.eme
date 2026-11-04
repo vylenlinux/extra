@@ -1,28 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A library to adjust audio gain"
 homepage="https://www.musepack.net/index.php?pg=src"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libreplaygain
-version=475
+version=r475
 release=1
-source="http://files.musepack.net/source/${name}_r${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://files.musepack.net/source/${name}_${version}.tar.gz"
 
 build() {
-	cmake -S ${name}_r${version} -B build -G Ninja \
-		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	        -DCMAKE_INSTALL_PREFIX=/usr \
-	        -DCMAKE_INSTALL_LIBDIR=lib \
-		-DCMAKE_INSTALL_LIBEXECDIR=lib \
-		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_C_FLAGS_RELEASE="$CFLAGS" \
-		-DCMAKE_CXX_FLAGS_RELEASE="$CXXFLAGS" \
-		-Wno-author 
-	cmake --build build
-	DESTDIR=$PKG cmake --install build
+    cmake -S "${name}_${version}" -B build -G Ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-author
 
-	install -d $PKG/usr/include/replaygain/
-	install -Dm644 $SRC/${name}_r${version}/include/replaygain/* \
-	     $PKG/usr/include/replaygain/
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 
+    install -Dm644 "${name}_${version}/include/replaygain"/* -t "${PKG}/usr/include/replaygain/"
 }
-
