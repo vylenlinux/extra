@@ -6,7 +6,7 @@ homepage="https://github.com/RsyncProject/rsync"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rsync
-version=3.5.1
+version=3.5.2
 release=1
 backup="etc/rsyncd.conf"
 
