@@ -1,0 +1,43 @@
+--- a/python/mozbuild/mozbuild/frontend/emitter.py
++++ b/python/mozbuild/mozbuild/frontend/emitter.py
+@@ -1440,13 +1440,6 @@
+                         "(resolved to %s)" % (local_include, full_path),
+                         context,
+                     )
+-            if full_path in {context.config.topsrcdir, context.config.topobjdir}:
+-                raise SandboxValidationError(
+-                    "Path specified in LOCAL_INCLUDES "
+-                    "(%s) resolves to the topsrcdir or topobjdir (%s), which is "
+-                    "not allowed" % (local_include, full_path),
+-                    context,
+-                )
+             include_obj = LocalInclude(context, local_include)
+             local_includes.append(include_obj.path.full_path)
+             yield include_obj
+--- a/python/mozbuild/mozbuild/test/frontend/test_emitter.py
++++ b/python/mozbuild/mozbuild/test/frontend/test_emitter.py
+@@ -1115,24 +1115,6 @@
+ 
+         self.assertEqual(local_includes, expected)
+ 
+-    def test_local_includes_invalid(self):
+-        """Test that invalid LOCAL_INCLUDES are properly detected."""
+-        reader = self.reader("local_includes-invalid/srcdir")
+-
+-        with self.assertRaisesRegex(
+-            SandboxValidationError,
+-            "Path specified in LOCAL_INCLUDES.*resolves to the topsrcdir or topobjdir",
+-        ):
+-            self.read_topsrcdir(reader)
+-
+-        reader = self.reader("local_includes-invalid/objdir")
+-
+-        with self.assertRaisesRegex(
+-            SandboxValidationError,
+-            "Path specified in LOCAL_INCLUDES.*resolves to the topsrcdir or topobjdir",
+-        ):
+-            self.read_topsrcdir(reader)
+-
+     def test_local_includes_file(self):
+         """Test that a filename can't be used in LOCAL_INCLUDES."""
+         reader = self.reader("local_includes-filename")

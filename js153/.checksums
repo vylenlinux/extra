@@ -1,0 +1,9 @@
+def19b94ea7e81617d6784cd189c2c723613b1c5f2bc72804503a193604c2219  js153-153.6.0esr.tar.xz
+44272a2bd6fb4d458426808459d6c7d2ad4a34ae716aad2335dbbdc88f75bb2d  mozjs-91.8.0-fix-soname.patch
+512e346de3cae8c703c97011c42e18b95d5a23cf1ec21e6ea728760bfccaebcf  mozjs-91.8.0-init_patch.patch
+8d1d71517ea26887203b547009530c21a965b9ded23f0ab86ce58fe831794b2f  mozjs-91.8.0-spidermonkey_checks_disable.patch
+33fa6097fcebeb6e27ab6919ee468da9bd80f9ed64dec9b6962518ce70e0cf26  mozjs128-128.6.0-fix_error_on_delete_declared_private.patch
+78393d3d75353c862b54749965108f1d55f3faf58675f69f903ea03958e49046  mozjs140-140.3.1-icu_sources_data.py-Decouple-from-Mozilla-build-system.patch
+46cdb8be1d8854cd33df790af5ed77ca38cfd35c4051ee85296ffe1ded18596f  mozjs140-140.3.1-pc-does-not-contain-DXP_UNIX.patch
+9526d8a6accc31d97c2ca05dfc54b4bea26d74e857bd38d3bd55811a3cf140f9  mozjs153-153.0-emitter.patch
+6964a9a8146a4f9a8bc80861504658e0dda0dce7a8f3bbb806761fd618924ac4  mozjs153-153.0-icu_sources_data-Write-command-output-to-our-stderr.patch

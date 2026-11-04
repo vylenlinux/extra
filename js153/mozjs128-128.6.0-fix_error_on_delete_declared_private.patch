@@ -1,0 +1,17 @@
+--- firefox-128.6.0/js/src/gc/Cell.h.orig	2025-01-20 15:54:27.277347446 +0100
++++ firefox-128.6.0/js/src/gc/Cell.h	2025-01-20 15:54:51.480383325 +0100
+@@ -221,13 +221,13 @@
+   void dump(GenericPrinter& out) const;
+   void dump() const;
+ #endif
++  void operator delete(void*) = delete;
+ 
+  protected:
+   uintptr_t address() const;
+ 
+  private:
+   // Cells are destroyed by the GC. Do not delete them directly.
+-  void operator delete(void*) = delete;
+ } JS_HAZ_GC_THING;
+ 
+ // A GC TenuredCell gets behaviors that are valid for things in the Tenured

@@ -1,0 +1,26 @@
+--- a/intl/icu_sources_data.py
++++ b/intl/icu_sources_data.py
+@@ -205,19 +205,16 @@
+ 
+ def try_run(name, command, cwd=None, **kwargs):
+     try:
+-        with tempfile.NamedTemporaryFile(prefix=name, delete=False) as f:
+-            subprocess.check_call(
+-                command, cwd=cwd, stdout=f, stderr=subprocess.STDOUT, **kwargs
+-            )
++        subprocess.check_call(
++            command, cwd=cwd, stdout=sys.stderr, stderr=subprocess.STDOUT, **kwargs
++        )
+     except subprocess.CalledProcessError:
+         print(
+-            """Error running "{}" in directory {}
+-    See output in {}""".format(" ".join(command), cwd, f.name),
++            """Error running "{}" in directory {}""".format(" ".join(command), cwd),
+             file=sys.stderr,
+         )
+         return False
+     else:
+-        os.unlink(f.name)
+         return True
+ 
+ 
