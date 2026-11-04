@@ -79,5 +79,3 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0.dist-info/INSTALLER
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0.dist-info/METADATA
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0.dist-info/RECORD
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0.dist-info/licenses/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6_webengine-6.140.0.dist-info/licenses/LICENSE
