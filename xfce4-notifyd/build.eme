@@ -16,6 +16,7 @@ build() {
 
     ./configure \
         --prefix=/usr \
+        --sysconfdir=/etc \
         --disable-nls \
         --libexecdir="/usr/lib/${name}" \
         --disable-debug
