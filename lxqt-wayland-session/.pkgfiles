@@ -11,6 +11,10 @@ drwxr-xr-x root/root    usr/share/lxqt/wallpapers/
 drwxr-xr-x root/root    usr/share/lxqt/wayland/
 drwxr-xr-x root/root    usr/share/lxqt/wayland/firstrun/
 -rw-r--r-- root/root    usr/share/lxqt/wayland/firstrun/autostart
+-rw-r--r-- root/root    usr/share/lxqt/wayland/firstrun/hypr.lua
+-rw-r--r-- root/root    usr/share/lxqt/wayland/firstrun/niri.kdl
+-rw-r--r-- root/root    usr/share/lxqt/wayland/firstrun/sway.config
+-rw-r--r-- root/root    usr/share/lxqt/wayland/firstrun/wayfire.ini
 drwxr-xr-x root/root    usr/share/lxqt/wayland/labwc/
 -rw-r--r-- root/root    usr/share/lxqt/wayland/labwc/README
 -rw-r--r-- root/root    usr/share/lxqt/wayland/labwc/autostart
@@ -33,6 +37,7 @@ drwxr-xr-x root/root    usr/share/lxqt/wayland/niri/
 -rw-r--r-- root/root    usr/share/lxqt/wayland/niri/window-rules.kdl
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/lxqt-qdbus.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/lxqt-wayland-session.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/startlxqtwayland.1.gz
 drwxr-xr-x root/root    usr/share/themes/
