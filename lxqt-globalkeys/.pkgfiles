@@ -23,11 +23,11 @@ drwxr-xr-x root/root    usr/include/lxqt-globalkeys/LXQtGlobalKeys/
 -rw-r--r-- root/root    usr/include/lxqt-globalkeys/lxqtglobalkeys.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys-ui.so -> liblxqt-globalkeys-ui.so.2
-lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys-ui.so.2 -> liblxqt-globalkeys-ui.so.2.4.0
--rwxr-xr-x root/root    usr/lib/liblxqt-globalkeys-ui.so.2.4.0
+lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys-ui.so.2 -> liblxqt-globalkeys-ui.so.2.5.0
+-rwxr-xr-x root/root    usr/lib/liblxqt-globalkeys-ui.so.2.5.0
 lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys.so -> liblxqt-globalkeys.so.2
-lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys.so.2 -> liblxqt-globalkeys.so.2.4.0
--rwxr-xr-x root/root    usr/lib/liblxqt-globalkeys.so.2.4.0
+lrwxrwxrwx root/root    usr/lib/liblxqt-globalkeys.so.2 -> liblxqt-globalkeys.so.2.5.0
+-rwxr-xr-x root/root    usr/lib/liblxqt-globalkeys.so.2.5.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/lxqt-globalkeys-ui.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/lxqt-globalkeys.pc
@@ -96,5 +96,6 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcu
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_th_TH.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_tr.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_uk.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_vi.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_zh_CN.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-globalkeyshortcuts/lxqt-config-globalkeyshortcuts_zh_TW.qm
