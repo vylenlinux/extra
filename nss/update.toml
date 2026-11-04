@@ -6,4 +6,6 @@ owner = "mozilla"
 repo = "%(name)"
 
 [version]
-include = ["NSS_*"]
+include = ["NSS_*_RTM"]
+strip_prefix = "NSS_"
+strip_suffix = "_RTM"
