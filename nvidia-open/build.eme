@@ -6,7 +6,7 @@ homepage="https://www.nvidia.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nvidia-open
-version=615.78.08
+version=620.70.06
 release=1
 
 source="${name}-${version}.tar.xz::https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/NVIDIA-kernel-module-source-${version}.tar.xz

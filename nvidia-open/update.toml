@@ -1,5 +1,6 @@
 name = "nvidia-open"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "nvidia"
+[ftp]
+url = "https://download.nvidia.com/XFree86/NVIDIA-kernel-module-source/"
+filename = "NVIDIA-kernel-module-source-%(version).tar.xz"
