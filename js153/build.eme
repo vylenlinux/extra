@@ -6,10 +6,10 @@ homepage="https://spidermonkey.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=js153
-version=153.6.0esr
+version=153.6.0
 release=1
 
-source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}/source/firefox-${version}.source.tar.xz
+source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
     mozjs128-128.6.0-fix_error_on_delete_declared_private.patch
     mozjs140-140.3.1-pc-does-not-contain-DXP_UNIX.patch
     mozjs153-153.0-icu_sources_data-Write-command-output-to-our-stderr.patch
@@ -21,7 +21,7 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/relea
 
 build() {
     # shellcheck disable=SC2164
-    cd "firefox-${version%esr}"
+    cd "firefox-${version}"
 
     patch -Np1 -i "${SRC}/mozjs128-128.6.0-fix_error_on_delete_declared_private.patch"
     patch -Np1 -i "${SRC}/mozjs140-140.3.1-pc-does-not-contain-DXP_UNIX.patch"
