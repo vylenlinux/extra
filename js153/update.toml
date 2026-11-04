@@ -1,0 +1,8 @@
+name = "js140"
+provider = "repology"
+
+[source]
+package = "spidermonkey"
+
+[repology]
+version_prefix = "153."
