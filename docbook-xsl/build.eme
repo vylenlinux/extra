@@ -6,10 +6,10 @@ homepage="https://docbook.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=docbook-xsl
-version=2020.06.03
+version=1.79.2
 release=1
 
-_version="$(printf "%s" "${version}" | sed 's/\./-/g')"
+_version=2020-06-03
 source="${name}-${version}.zip::https://github.com/docbook/xslt10-stylesheets/releases/download/snapshot/${_version}/${name}-nons-snapshot.zip"
 
 build() {

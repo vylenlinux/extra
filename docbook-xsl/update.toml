@@ -7,3 +7,4 @@ repo = "xslt10-stylesheets"
 
 [version]
 strip_prefix = "snapshot/"
+field = "_version"
