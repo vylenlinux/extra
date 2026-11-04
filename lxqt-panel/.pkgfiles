@@ -118,6 +118,10 @@ drwxr-xr-x root/root    usr/share/lxqt/panel/qeyes-types/Tango/
 -rw-r--r-- root/root    usr/share/lxqt/panel/qeyes-types/Tango/tango-pupil.png
 drwxr-xr-x root/root    usr/share/lxqt/translations/
 drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/
+drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/backlight/
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/backlight/backlight_it.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/backlight/backlight_lg.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/backlight/backlight_nl.qm
 drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_ar.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_bg.qm
@@ -150,6 +154,7 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sr.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_sv.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_tr.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_uk.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_CN.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/colorpicker/colorpicker_zh_TW.qm
 drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/cpuload/
@@ -747,6 +752,7 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_sr.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_sv.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_tr.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_uk.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_zh_CN.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-panel/qeyes/qeyes_zh_TW.qm
 drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-panel/quicklaunch/
