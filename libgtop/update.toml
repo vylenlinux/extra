@@ -3,3 +3,6 @@ provider = "gnome"
 
 [source]
 package = "%(name)"
+
+[version]
+exclude = ["3.18.0"]
