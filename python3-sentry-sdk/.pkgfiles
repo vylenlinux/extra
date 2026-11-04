@@ -2,11 +2,11 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b2.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b2.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b2.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b2.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b2.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/
@@ -379,6 +379,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/__pycache__/rb.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/__pycache__/redis.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/__pycache__/redis_cluster.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/__pycache__/redis_py_cluster_legacy.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/__pycache__/utils.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/_async_common.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/_sync_common.py
@@ -394,6 +395,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/rb.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/redis.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/redis_cluster.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/redis_py_cluster_legacy.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/redis/utils.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/rq.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/integrations/rust_tracing.py

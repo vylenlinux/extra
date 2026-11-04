@@ -6,7 +6,7 @@ homepage="https://sentry.io/for/python"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sentry-sdk
-version=3.0.0b2
+version=3.0.0b3
 release=1
 source="${name}-${version}.tar.gz::https://github.com/getsentry/sentry-python/archive/refs/tags/${version}.tar.gz"
 
