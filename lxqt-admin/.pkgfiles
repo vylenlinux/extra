@@ -1,7 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/lxqt-admin-time
--rwxr-xr-x root/root    usr/bin/lxqt-admin-time-helper
 -rwxr-xr-x root/root    usr/bin/lxqt-admin-user
 -rwxr-xr-x root/root    usr/bin/lxqt-admin-user-helper
 drwxr-xr-x root/root    usr/share/
@@ -105,5 +104,4 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-admin-user/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-admin-user/lxqt-admin-user_zh_TW.qm
 drwxr-xr-x root/root    usr/share/polkit-1/
 drwxr-xr-x root/root    usr/share/polkit-1/actions/
--rw-r--r-- root/root    usr/share/polkit-1/actions/org.lxqt.lxqt-admin-time.policy
 -rw-r--r-- root/root    usr/share/polkit-1/actions/org.lxqt.lxqt-admin-user.policy
