@@ -6,23 +6,18 @@ homepage="https://github.com/ibus/ibus/wiki"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ibus
-version=1.5.35_rc1
+version=1.5.35
 release=1
-
-_version="$(printf '%s' "${version}" | tr '_' '-')"
-
-source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${_version}.tar.gz
-    fix-deprecated-gschema-key.patch"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${_version}"
-
-    patch -Np1 -i "${SRC}/fix-deprecated-gschema-key.patch"
+    cd "${name}-${version}"
     autoreconf -fi
 
     ./configure \
         --prefix=/usr \
+        --sysconfdir=/etc \
         --libdir=/usr/lib \
         --libexecdir="/usr/lib/${name}" \
         --disable-memconf \
@@ -30,8 +25,6 @@ build() {
         --disable-gtk2 \
         --disable-emoji-dict \
         --disable-unicode-dict
-
-    rm -f tools/main.c
 
     make
     make DESTDIR="${PKG}" install
