@@ -1,5 +1,6 @@
 name = "libphonenumber"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libphonenumber"
+owner = "google"
+repo = "%(name)"

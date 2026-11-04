@@ -1,4 +1,4 @@
 7cabc44093fcb8fc3ad7917f25fbed4165d2d7bf42990c489c099e317c9c3037  0001-Use-find_package-for-protobuf.patch
 649dd1c602cb901bbf8da4fd45dd4287eca4d49a0e7317ef2d5a911de0a7d45f  0002-Remove-Werror.patch
 c92ab11590aafef0525216a8d825829cb67abd90a1c886203f370150dfd35d69  0003-Fix-BUILD_STATIC_LIB-OFF.patch
-220dde332017a9b2750e2a40c2dd09d8140a08de995980c4bb7d24039e1eed3c  libphonenumber-9.0.42.tar.gz
+8ed5f529799fe4379089d79840dada34ff990f414b7328d53b645b6f996e75c3  libphonenumber-9.0.43.tar.gz
