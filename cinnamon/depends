@@ -5,9 +5,11 @@ cinnamon-session
 cinnamon-settings-daemon
 cjs
 dbus-python
+gcr3
 gobject-introspection
 gsound
 gstreamer
+gtk4-layer-shell
 ibus
 intltool
 keybinder3
