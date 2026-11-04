@@ -13,10 +13,9 @@ source="${name}-${version}.tar.gz::https://github.com/linuxmint/${name}/archive/
     99-cinnamon-defaults.gschema.override"
 
 build() {
-    vylen-meson "${name}-${version}" build
+    vylen-meson "${name}-${version}" build -Dpam_prefix=/usr/lib
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    mkdir -p "${PKG}/usr/share/glib-2.0/schemas"
-    install "${SRC}/99-cinnamon-defaults.gschema.override" -t "${PKG}/usr/share/glib-2.0/schemas/"
+    install -Dm755 "${SRC}/99-cinnamon-defaults.gschema.override" -t "${PKG}/usr/share/glib-2.0/schemas/"
 }
