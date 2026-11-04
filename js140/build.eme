@@ -6,10 +6,10 @@ homepage="https://spidermonkey.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=js140
-version=140.17.0esr
+version=140.17.0
 release=1
 
-source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}/source/firefox-${version}.source.tar.xz
+source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
     0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch
     0002-Bug-1969769-Change-uses-of-ast.Str-with-ast.Constant.patch
     0003-Bug-1983713-Use-non-deprecated-ast-value.-r-firefox-.patch
@@ -18,7 +18,7 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/relea
 
 build() {
     # shellcheck disable=SC2164
-    cd "firefox-${version%esr}"
+    cd "firefox-${version}"
 
     # https://discourse.gnome.org/t/gnome-49-to-depend-on-spidermonkey-140/30470
     patch -Np1 -i "${SRC}/0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch"
