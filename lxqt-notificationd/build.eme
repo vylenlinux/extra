@@ -6,7 +6,7 @@ homepage="https://lxqt-project.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lxqt-notificationd
-version=2.4.0
+version=2.5.0
 release=1
 source="https://github.com/lxqt/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
@@ -21,5 +21,5 @@ build() {
         -Wno-author
 
     cmake --build build
-    DESTDIR=$PKG cmake --install build
+    DESTDIR="${PKG}" cmake --install build
 }
