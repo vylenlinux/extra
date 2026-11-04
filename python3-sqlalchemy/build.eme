@@ -6,7 +6,7 @@ homepage="https://www.sqlalchemy.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sqlalchemy
-version=2.1.6
+version=2.1.8
 release=1
 source="${name}-${version}.tar.gz::https://pypi.org/packages/source/s/sqlalchemy/sqlalchemy-${version}.tar.gz"
 
