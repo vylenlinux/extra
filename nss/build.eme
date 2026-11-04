@@ -6,7 +6,7 @@ homepage="https://firefox-source-docs.mozilla.org/security/nss/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nss
-version=3.132
+version=3.133
 release=1
 
 source="https://ftp.mozilla.org/pub/security/${name}/releases/NSS_$(printf "%s" "${version}" | sed 's/\./_/g')_RTM/src/${name}-${version}.tar.gz

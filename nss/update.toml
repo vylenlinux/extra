@@ -1,5 +1,9 @@
 name = "nss"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nss"
+owner = "mozilla"
+repo = "%(name)"
+
+[version]
+include = ["NSS_*"]
