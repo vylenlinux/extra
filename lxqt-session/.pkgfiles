@@ -33,6 +33,7 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-config-session/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_da.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_de.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_el.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_en_GB.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_eo.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_es.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_es_UY.qm
@@ -72,6 +73,7 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-config-session/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_th_TH.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_tr.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_uk.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_vi.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_zh_CN.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-config-session/lxqt-config-session_zh_TW.qm
 drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-leave/
@@ -175,6 +177,7 @@ drwxr-xr-x root/root    usr/share/lxqt/translations/lxqt-session/
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_th_TH.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_tr.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_uk.qm
+-rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_vi.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_zh_CN.qm
 -rw-r--r-- root/root    usr/share/lxqt/translations/lxqt-session/lxqt-session_zh_TW.qm
 -rw-r--r-- root/root    usr/share/lxqt/waylandwindowmanagers.conf
