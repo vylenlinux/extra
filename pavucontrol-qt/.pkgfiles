@@ -21,6 +21,7 @@ drwxr-xr-x root/root    usr/share/pavucontrol-qt/translations/
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_en_GB.qm
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_es.qm
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_et.qm
+-rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_eu.qm
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_fi.qm
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_fr.qm
 -rw-r--r-- root/root    usr/share/pavucontrol-qt/translations/pavucontrol-qt_gl.qm
