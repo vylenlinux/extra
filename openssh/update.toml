@@ -3,4 +3,4 @@ provider = "ftp"
 
 [ftp]
 url = "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/"
-filename = "openssh-%(version).tar.gz"
+filename = "%(name)-%(version).tar.gz"
