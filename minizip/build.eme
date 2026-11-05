@@ -6,19 +6,13 @@ homepage="https://www.zlib.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=minizip
-version=1.3.2
+version=1.4
 release=1
-
-source="https://zlib.net/zlib-${version}.tar.gz
-    36ff1be48ef696cc67b0855f7c8537ce0276210d.patch
-    df84af25dc1942490e1d1c899a07619152a46148.patch"
+source="https://zlib.net/zlib-${version}.tar.gz"
 
 build() {
-    patch -d "zlib-${version}" -Np1 -i "${SRC}/36ff1be48ef696cc67b0855f7c8537ce0276210d.patch"
-    patch -d "zlib-${version}" -Np1 -i "${SRC}/df84af25dc1942490e1d1c899a07619152a46148.patch"
-
     # shellcheck disable=SC2164
-    cd "zlib-${version}/contrib/minizip"
+    cd "zlib-${version}/contrib/${name}"
     autoreconf -fi
 
     ./configure \
@@ -28,5 +22,5 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    rm "${PKG}/usr/include/minizip/crypt.h"
+    rm "${PKG}/usr/include/${name}/crypt.h"
 }

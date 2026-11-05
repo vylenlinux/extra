@@ -1,5 +1,6 @@
 name = "minizip"
 provider = "repology"
+dedup_key = "zlib"
 
 [source]
 package = "zlib"
