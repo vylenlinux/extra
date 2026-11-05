@@ -4,9 +4,6 @@ drwxr-xr-x root/root    opt/vivaldi/
 drwxr-xr-x root/root    opt/vivaldi/MEIPreload/
 -rw-r--r-- root/root    opt/vivaldi/MEIPreload/manifest.json
 -rw-r--r-- root/root    opt/vivaldi/MEIPreload/preloaded_data.pb
-drwxr-xr-x root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/
--rw-r--r-- root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/manifest.json
--rw-r--r-- root/root    opt/vivaldi/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat
 drwxr-xr-x root/root    opt/vivaldi/apparmor.d/
 -rw-r--r-- root/root    opt/vivaldi/apparmor.d/vivaldi-stable
 -rwxr-xr-x root/root    opt/vivaldi/chrome_crashpad_handler
@@ -489,6 +486,10 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/tr/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/tr/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/uk/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/uk/messages.json
+drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/ur/
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/ur/messages.json
+drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/uz/
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/uz/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/vi/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/_locales/vi/messages.json
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/_locales/zh_CN/
@@ -505,7 +506,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-5144fcc931fc0fa0c2ef9ebb02ce786b.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-bbc0df642c2d42f2f8c1a262a4b07aad.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
@@ -516,15 +517,11 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/notes/richtexte
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/notes/richtexteditor/md.css
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/notes/richtexteditor/md.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/picture-in-picture/
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/picture-in-picture/background.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/picture-in-picture/config.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/picture-in-picture/picture-in-picture.css
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/picture-in-picture/picture-in-picture.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/private-intro/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/private-intro/private-intro.html
-drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/reader/
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/reader/reader.css
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/reader/reader.html
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/theme-store/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/components/theme-store/theme-store.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/welcome/
@@ -587,9 +584,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/default-bookmarks/
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/menus/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/menus/contextmenu.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/menus/mainmenu.json
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/policy_prefs.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/prefs_definitions.json
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/reader-bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/ToolbarIconFallback.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/badge-advocate-12@2x.png
@@ -844,7 +839,6 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/favicons/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/icon_128.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/icon_16.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/icon_notifications.png
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/inverse-rounding-mask.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mail_notification_icon.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-add-outline.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/mask-add.svg
@@ -1172,8 +1166,6 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/sd_thumbnails/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/search_startpage.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/share-confetti.gif
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/share-friends.png
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/startup-static.svg
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/startup.svg
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/support-donate.webp
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/support_tony.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/symbol-reload.svg
@@ -1257,6 +1249,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/resources/theme/vivaldi/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/tip-img-sync.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/tip-img-workspaces-dark.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/tip-img-workspaces.png
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/tony_cry.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/tony_thanks.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/unknown_file.png
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/resources/unsynced_file.png
