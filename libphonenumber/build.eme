@@ -15,7 +15,7 @@ source="https://github.com/google/${name}/archive/v${version}/${name}-${version}
     0003-Fix-BUILD_STATIC_LIB-OFF.patch"
 
 build() {
-    export PATH="/usr/lib/jvm/java-27-openjdk/bin:/usr/bin"
+    #export PATH="/usr/lib/jvm/java-27-openjdk/bin:/usr/bin"
     export CXXFLAGS="${CXXFLAGS} -Wno-error=cpp"
 
     # shellcheck disable=SC2164
@@ -35,6 +35,7 @@ build() {
         -DCMAKE_CXX_STANDARD=17 \
         -DUSE_BOOST=OFF \
         -DUSE_STDMUTEX=ON \
+        -DREGENERATE_METADATA=OFF \
         -DBUILD_TESTING=OFF \
         -Wno-author
 
