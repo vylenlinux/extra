@@ -1,5 +1,6 @@
 name = "mpv"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mpv"
+owner = "%(name)-player"
+repo = "%(name)"

@@ -1,20 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A free, open source, and cross-platform media player"
 homepage="https://mpv.io/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpv
-version=0.41.0
+version=0.42.0
 release=1
-source="https://github.com/mpv-player/mpv/archive/v$version/$name-$version.tar.gz
-	0001-clipboard-wayland-prevent-reading-from-hung-up-fd.patch"
+
+source="https://github.com/${name}-player/${name}/archive/v${version}/${name}-${version}.tar.gz
+    0001-clipboard-wayland-prevent-reading-from-hung-up-fd.patch"
 
 build() {
-	patch -d $name-$version -Np1 -i $SRC/0001-clipboard-wayland-prevent-reading-from-hung-up-fd.patch
-	vylen-meson $name-$version build \
-		-D libmpv=true \
-		-D libarchive=enabled \
-		-D cdda=enabled \
-		-D lua=luajit 
-	meson compile -C build
-	DESTDIR=$PKG meson install --no-rebuild -C build
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0001-clipboard-wayland-prevent-reading-from-hung-up-fd.patch"
+
+    vylen-meson "${name}-${version}" build \
+        -Dlibmpv=true \
+        -Dlibarchive=enabled \
+        -Dcdda=enabled \
+        -Dlua=luajit
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
 }
