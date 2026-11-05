@@ -2,5 +2,5 @@ name = "openssh"
 provider = "ftp"
 
 [ftp]
-url = "https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/"
+url = "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/"
 filename = "openssh-%(version).tar.gz"
