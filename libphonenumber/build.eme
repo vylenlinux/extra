@@ -15,9 +15,6 @@ source="https://github.com/google/${name}/archive/v${version}/${name}-${version}
     0003-Fix-BUILD_STATIC_LIB-OFF.patch"
 
 build() {
-    #export PATH="/usr/lib/jvm/java-27-openjdk/bin:/usr/bin"
-    export CXXFLAGS="${CXXFLAGS} -Wno-error=cpp"
-
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
