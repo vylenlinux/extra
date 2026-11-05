@@ -101,8 +101,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPMcore/
 -rw-r--r-- root/root    usr/lib/cmake/KPMcore/KPMcoreTargets.cmake
 -rwxr-xr-x root/root    usr/lib/kpmcore_externalcommand
 lrwxrwxrwx root/root    usr/lib/libkpmcore.so -> libkpmcore.so.13
-lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.08.2
--rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.08.2
+lrwxrwxrwx root/root    usr/lib/libkpmcore.so.13 -> libkpmcore.so.26.08.3
+-rwxr-xr-x root/root    usr/lib/libkpmcore.so.26.08.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kpmcore/
@@ -293,15 +293,19 @@ drwxr-xr-x root/root    usr/share/locale/sl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/kpmcore.mo
 drwxr-xr-x root/root    usr/share/locale/sr/
 drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kpmcore._policy_.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kpmcore.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kpmcore._policy_.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kpmcore.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kpmcore._policy_.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kpmcore.mo
 drwxr-xr-x root/root    usr/share/locale/sr@latin/
 drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kpmcore._policy_.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kpmcore.mo
 drwxr-xr-x root/root    usr/share/locale/sv/
 drwxr-xr-x root/root    usr/share/locale/sv/LC_MESSAGES/

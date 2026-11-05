@@ -42,8 +42,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6EventViews/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6EventViews/KPim6EventViewsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6EventViews/KPim6EventViewsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6EventViews.so -> libKPim6EventViews.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6EventViews.so.6 -> libKPim6EventViews.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libKPim6EventViews.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libKPim6EventViews.so.6 -> libKPim6EventViews.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libKPim6EventViews.so.6.8.3
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/

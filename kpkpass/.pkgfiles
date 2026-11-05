@@ -26,8 +26,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6PkPass/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6PkPass/KPim6PkPassTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so -> libKPim6PkPass.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so.6 -> libKPim6PkPass.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libKPim6PkPass.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libKPim6PkPass.so.6 -> libKPim6PkPass.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libKPim6PkPass.so.6.8.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/metatypes/
 -rw-r--r-- root/root    usr/lib/qt6/metatypes/qt6kpim6pkpass_metatypes.json

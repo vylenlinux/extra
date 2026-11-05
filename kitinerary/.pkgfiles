@@ -161,8 +161,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6Itinerary/
 drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/kitinerary-extractor
 lrwxrwxrwx root/root    usr/lib/libKPim6Itinerary.so -> libKPim6Itinerary.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6Itinerary.so.6 -> libKPim6Itinerary.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libKPim6Itinerary.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libKPim6Itinerary.so.6 -> libKPim6Itinerary.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libKPim6Itinerary.so.6.8.3
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/

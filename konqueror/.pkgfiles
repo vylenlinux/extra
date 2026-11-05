@@ -44,10 +44,10 @@ lrwxrwxrwx root/root    usr/lib/libKF6KonqSettings.so -> libKF6KonqSettings.so.7
 -rwxr-xr-x root/root    usr/lib/libKF6KonqSettings.so.5.97.0
 lrwxrwxrwx root/root    usr/lib/libKF6KonqSettings.so.7 -> libKF6KonqSettings.so.5.97.0
 lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so -> libkonqsidebarplugin.so.6
--rwxr-xr-x root/root    usr/lib/libkonqsidebarplugin.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so.6 -> libkonqsidebarplugin.so.26.08.2
--rwxr-xr-x root/root    usr/lib/libkonquerorprivate.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkonquerorprivate.so.5 -> libkonquerorprivate.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkonqsidebarplugin.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkonqsidebarplugin.so.6 -> libkonqsidebarplugin.so.26.08.3
+-rwxr-xr-x root/root    usr/lib/libkonquerorprivate.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkonquerorprivate.so.5 -> libkonquerorprivate.so.26.08.3
 -rwxr-xr-x root/root    usr/lib/libkwebenginepart.so
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
@@ -1782,10 +1782,13 @@ drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/khtmlsettingsplugin.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/khtmltts.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/kio6_bookmarks.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/konqsidebar.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/konqueror.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/kshellcmdplugin.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libkonq.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/searchbarplugin.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/speeddial.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/temporarysavedir.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/uachangerplugin.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/webarchiver.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/webenginepart.mo

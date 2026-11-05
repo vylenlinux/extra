@@ -30,8 +30,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6ImportWizard/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6ImportWizard/KPim6ImportWizardTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6ImportWizard/KPim6ImportWizardTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6ImportWizard.so -> libKPim6ImportWizard.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6ImportWizard.so.6 -> libKPim6ImportWizard.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libKPim6ImportWizard.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libKPim6ImportWizard.so.6 -> libKPim6ImportWizard.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libKPim6ImportWizard.so.6.8.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/pim6/

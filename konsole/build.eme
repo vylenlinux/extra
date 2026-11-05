@@ -3,7 +3,7 @@ homepage="https://konsole.kde.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=konsole
-version=26.08.2
+version=26.08.3
 release=1
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 

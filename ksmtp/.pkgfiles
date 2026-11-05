@@ -24,8 +24,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KPim6SMTP/
 -rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KPim6SMTP/KPim6SMTPTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so -> libKPim6SMTP.so.6
-lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so.6 -> libKPim6SMTP.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libKPim6SMTP.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libKPim6SMTP.so.6 -> libKPim6SMTP.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libKPim6SMTP.so.6.8.3
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/

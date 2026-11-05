@@ -6,7 +6,7 @@ homepage="https://invent.kde.org/graphics/gwenview"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gwenview
-version=26.08.2
+version=26.08.3
 source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
 release=1
 

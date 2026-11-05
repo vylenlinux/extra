@@ -14,98 +14,98 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/karbon
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libRtfReader.so -> libRtfReader.so.41
--rwxr-xr-x root/root    usr/lib/libRtfReader.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libRtfReader.so.41 -> libRtfReader.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libRtfReader.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libRtfReader.so.41 -> libRtfReader.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libautocorrection.so -> libautocorrection.so.41
--rwxr-xr-x root/root    usr/lib/libautocorrection.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libautocorrection.so.41 -> libautocorrection.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libautocorrection.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libautocorrection.so.41 -> libautocorrection.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libbasicflakes.so -> libbasicflakes.so.41
--rwxr-xr-x root/root    usr/lib/libbasicflakes.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libbasicflakes.so.41 -> libbasicflakes.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libbasicflakes.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libbasicflakes.so.41 -> libbasicflakes.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libcalligrasheetscore.so -> libcalligrasheetscore.so.41
--rwxr-xr-x root/root    usr/lib/libcalligrasheetscore.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libcalligrasheetscore.so.41 -> libcalligrasheetscore.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libcalligrasheetscore.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libcalligrasheetscore.so.41 -> libcalligrasheetscore.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libcalligrasheetsengine.so -> libcalligrasheetsengine.so.41
--rwxr-xr-x root/root    usr/lib/libcalligrasheetsengine.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libcalligrasheetsengine.so.41 -> libcalligrasheetsengine.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libcalligrasheetsengine.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libcalligrasheetsengine.so.41 -> libcalligrasheetsengine.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libcalligrasheetspartlib.so -> libcalligrasheetspartlib.so.41
--rwxr-xr-x root/root    usr/lib/libcalligrasheetspartlib.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libcalligrasheetspartlib.so.41 -> libcalligrasheetspartlib.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libcalligrasheetspartlib.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libcalligrasheetspartlib.so.41 -> libcalligrasheetspartlib.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libcalligrasheetsui.so -> libcalligrasheetsui.so.41
--rwxr-xr-x root/root    usr/lib/libcalligrasheetsui.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libcalligrasheetsui.so.41 -> libcalligrasheetsui.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libcalligrasheetsui.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libcalligrasheetsui.so.41 -> libcalligrasheetsui.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libcalligrastageprivate.so -> libcalligrastageprivate.so.41
--rwxr-xr-x root/root    usr/lib/libcalligrastageprivate.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libcalligrastageprivate.so.41 -> libcalligrastageprivate.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libcalligrastageprivate.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libcalligrastageprivate.so.41 -> libcalligrastageprivate.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libflake.so -> libflake.so.41
--rwxr-xr-x root/root    usr/lib/libflake.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libflake.so.41 -> libflake.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libflake.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libflake.so.41 -> libflake.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkarboncommon.so -> libkarboncommon.so.41
--rwxr-xr-x root/root    usr/lib/libkarboncommon.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkarboncommon.so.41 -> libkarboncommon.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkarboncommon.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkarboncommon.so.41 -> libkarboncommon.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkarbonui.so -> libkarbonui.so.41
--rwxr-xr-x root/root    usr/lib/libkarbonui.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkarbonui.so.41 -> libkarbonui.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkarbonui.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkarbonui.so.41 -> libkarbonui.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkoformula.so -> libkoformula.so.41
--rwxr-xr-x root/root    usr/lib/libkoformula.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkoformula.so.41 -> libkoformula.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkoformula.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkoformula.so.41 -> libkoformula.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkomain.so -> libkomain.so.41
--rwxr-xr-x root/root    usr/lib/libkomain.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkomain.so.41 -> libkomain.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkomain.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkomain.so.41 -> libkomain.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkomsooxml.so -> libkomsooxml.so.41
--rwxr-xr-x root/root    usr/lib/libkomsooxml.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkomsooxml.so.41 -> libkomsooxml.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkomsooxml.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkomsooxml.so.41 -> libkomsooxml.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkoodf.so -> libkoodf.so.41
--rwxr-xr-x root/root    usr/lib/libkoodf.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkoodf.so.41 -> libkoodf.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkoodf.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkoodf.so.41 -> libkoodf.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkoodf2.so -> libkoodf2.so.41
--rwxr-xr-x root/root    usr/lib/libkoodf2.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkoodf2.so.41 -> libkoodf2.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkoodf2.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkoodf2.so.41 -> libkoodf2.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkoodfreader.so -> libkoodfreader.so.41
--rwxr-xr-x root/root    usr/lib/libkoodfreader.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkoodfreader.so.41 -> libkoodfreader.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkoodfreader.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkoodfreader.so.41 -> libkoodfreader.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odp.so -> libkookularGenerator_odp.so.41
--rwxr-xr-x root/root    usr/lib/libkookularGenerator_odp.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odp.so.41 -> libkookularGenerator_odp.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkookularGenerator_odp.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odp.so.41 -> libkookularGenerator_odp.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odt.so -> libkookularGenerator_odt.so.41
--rwxr-xr-x root/root    usr/lib/libkookularGenerator_odt.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odt.so.41 -> libkookularGenerator_odt.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkookularGenerator_odt.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkookularGenerator_odt.so.41 -> libkookularGenerator_odt.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkopageapp.so -> libkopageapp.so.41
--rwxr-xr-x root/root    usr/lib/libkopageapp.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkopageapp.so.41 -> libkopageapp.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkopageapp.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkopageapp.so.41 -> libkopageapp.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkoplugin.so -> libkoplugin.so.41
--rwxr-xr-x root/root    usr/lib/libkoplugin.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkoplugin.so.41 -> libkoplugin.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkoplugin.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkoplugin.so.41 -> libkoplugin.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkostore.so -> libkostore.so.41
--rwxr-xr-x root/root    usr/lib/libkostore.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkostore.so.41 -> libkostore.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkostore.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkostore.so.41 -> libkostore.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkotext.so -> libkotext.so.41
--rwxr-xr-x root/root    usr/lib/libkotext.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkotext.so.41 -> libkotext.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkotext.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkotext.so.41 -> libkotext.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkotextlayout.so -> libkotextlayout.so.41
--rwxr-xr-x root/root    usr/lib/libkotextlayout.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkotextlayout.so.41 -> libkotextlayout.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkotextlayout.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkotextlayout.so.41 -> libkotextlayout.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkovectorimage.so -> libkovectorimage.so.41
--rwxr-xr-x root/root    usr/lib/libkovectorimage.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkovectorimage.so.41 -> libkovectorimage.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkovectorimage.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkovectorimage.so.41 -> libkovectorimage.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkowidgets.so -> libkowidgets.so.41
--rwxr-xr-x root/root    usr/lib/libkowidgets.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkowidgets.so.41 -> libkowidgets.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkowidgets.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkowidgets.so.41 -> libkowidgets.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkowidgetutils.so -> libkowidgetutils.so.41
--rwxr-xr-x root/root    usr/lib/libkowidgetutils.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkowidgetutils.so.41 -> libkowidgetutils.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkowidgetutils.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkowidgetutils.so.41 -> libkowidgetutils.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libkowv2.so -> libkowv2.so.9
 lrwxrwxrwx root/root    usr/lib/libkowv2.so.9 -> libkowv2.so.9.0.0
 -rwxr-xr-x root/root    usr/lib/libkowv2.so.9.0.0
 lrwxrwxrwx root/root    usr/lib/libkundo2.so -> libkundo2.so.41
--rwxr-xr-x root/root    usr/lib/libkundo2.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libkundo2.so.41 -> libkundo2.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libkundo2.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libkundo2.so.41 -> libkundo2.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libpigmentcms.so -> libpigmentcms.so.41
--rwxr-xr-x root/root    usr/lib/libpigmentcms.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libpigmentcms.so.41 -> libpigmentcms.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libpigmentcms.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libpigmentcms.so.41 -> libpigmentcms.so.26.08.3
 lrwxrwxrwx root/root    usr/lib/libwordsprivate.so -> libwordsprivate.so.41
--rwxr-xr-x root/root    usr/lib/libwordsprivate.so.26.08.2
-lrwxrwxrwx root/root    usr/lib/libwordsprivate.so.41 -> libwordsprivate.so.26.08.2
+-rwxr-xr-x root/root    usr/lib/libwordsprivate.so.26.08.3
+lrwxrwxrwx root/root    usr/lib/libwordsprivate.so.41 -> libwordsprivate.so.26.08.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/calligra/
@@ -6786,12 +6786,14 @@ drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_shape_threed.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_shape_vector.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_shape_video.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_shape_webshape.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_textediting_autocorrect.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_textediting_changecase.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_textediting_spellcheck.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_textediting_thesaurus.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligra_textinlineobject_variables.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligrafilters.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligralauncher.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligrasheets.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligrasheets_calendar.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/calligrasheets_solver.mo

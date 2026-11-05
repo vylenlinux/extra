@@ -3,7 +3,7 @@ homepage="https://community.kde.org/Frameworks"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libkleo
-version=26.08.2
+version=26.08.3
 release=1
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 
