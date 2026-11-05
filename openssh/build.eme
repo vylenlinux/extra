@@ -6,7 +6,7 @@ homepage="https://www.openssh.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=openssh
-version=10.6p1
+version=10.6p2
 release=1
 backup="etc/ssh/sshd_config"
 source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/${name}-${version}.tar.gz"
