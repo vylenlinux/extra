@@ -1,5 +1,6 @@
 name = "bluez"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "bluez"
+[ftp]
+url = "https://www.kernel.org/pub/linux/bluetooth/"
+filename = "%(name)-%(version).tar.xz"

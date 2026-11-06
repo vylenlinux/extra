@@ -43,9 +43,9 @@ drwxr-xr-x root/root    usr/lib/bluetooth/
 drwxr-xr-x root/root    usr/lib/cups/
 drwxr-xr-x root/root    usr/lib/cups/backend/
 -rwxr-xr-x root/root    usr/lib/cups/backend/bluetooth
-lrwxrwxrwx root/root    usr/lib/libbluetooth.so -> libbluetooth.so.3.19.16
-lrwxrwxrwx root/root    usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.16
--rwxr-xr-x root/root    usr/lib/libbluetooth.so.3.19.16
+lrwxrwxrwx root/root    usr/lib/libbluetooth.so -> libbluetooth.so.3.19.17
+lrwxrwxrwx root/root    usr/lib/libbluetooth.so.3 -> libbluetooth.so.3.19.17
+-rwxr-xr-x root/root    usr/lib/libbluetooth.so.3.19.17
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/bluez.pc
 drwxr-xr-x root/root    usr/lib/systemd/
@@ -76,6 +76,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-admin.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-advertise.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-assistant.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-cs.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-endpoint.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-gatt.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/bluetoothctl-hci.1.gz
@@ -106,6 +107,7 @@ drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Bearer.BREDR.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Bearer.LE.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Call.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/org.bluez.ChannelSounding1.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Device.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.DeviceSet.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.GattCharacteristic.5.gz
@@ -128,6 +130,9 @@ drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.NetworkServer.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Profile.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.ProfileManager.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/org.bluez.Ranging1.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/org.bluez.RangingProvider1.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/org.bluez.RangingProviderManager1.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Telephony.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.Thermometer.5.gz
 -rw-r--r-- root/root    usr/share/man/man5/org.bluez.ThermometerManager.5.gz

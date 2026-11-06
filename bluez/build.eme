@@ -6,7 +6,7 @@ homepage="http://www.bluez.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=bluez
-version=5.87
+version=5.88
 release=1
 
 source="https://www.kernel.org/pub/linux/bluetooth/${name}-${version}.tar.xz
