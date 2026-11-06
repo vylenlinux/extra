@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="EDK2 UEFI Shell"
+homepage="https://github.com/tianocore/edk2"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=edk2-shell
+version=202608
+release=1
+source="https://downloads.sourceforge.net/project/vylen/sources/edk2/edk2-${version}.tar.xz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "edk2-${version}"
+    export GCC_BIN=""
+
+    sed 's/ -Werror//g' -i \
+        BaseTools/Conf/*.template \
+        BaseTools/Source/C/Makefiles/*.makefile
+
+    msg_info "Building base tools"
+    make -C BaseTools
+
+    # expose build tooling in PATH
+    . ./edksetup.sh
+
+    _common_args="-b RELEASE \
+        -n $(nproc) \
+        -t GCC"
+
+    msg_info "Building shell (X64)."
+
+    # shellcheck disable=SC2086
+    BaseTools/BinWrappers/PosixLike/build \
+        -p ShellPkg/ShellPkg.dsc \
+        -a X64 \
+        ${_common_args}
+
+    # minimal UEFI shell, as defined in ShellPkg/Application/Shell/ShellPkg.inf
+    _min='7C04A583-9E3E-4f1c-AD65-E05268D0B4D1'
+
+    # full UEFI shell, as defined in ShellPkg/ShellPkg.dsc
+    _full='EA4BB293-2D7F-4456-A681-1F22F42CD0BC'
+
+    install -Dm644 "Build/Shell/RELEASE_GCC/X64/Shell_${_min}.efi" "${PKG}/usr/share/edk2/x64/Shell.efi"
+    install -Dm644 "Build/Shell/RELEASE_GCC/X64/Shell_${_full}.efi" "${PKG}/usr/share/edk2/x64/Shell_Full.efi"
+}
