@@ -6,7 +6,7 @@ homepage="https://github.com/mircomir/jxrlib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=jxrlib
-version=1.4.4
+version=1.4.5
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/mircomir/${name}/archive/refs/tags/${version}.tar.gz
