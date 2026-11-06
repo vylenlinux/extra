@@ -6,4 +6,4 @@ url = "https://www.sudo.ws/dist/"
 filename = "%(name)-%(version).tar.gz"
 
 [version]
-scheme = "patch_suffix"
+scheme = "bsd_patchlevel"
