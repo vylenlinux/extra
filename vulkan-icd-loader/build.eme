@@ -6,7 +6,7 @@ homepage="https://www.khronos.org/vulkan/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-icd-loader
-version=1.4.367
+version=1.4.368
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v${version}.tar.gz"
 
