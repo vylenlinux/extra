@@ -1,7 +1,9 @@
 name = "sudo"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "sudo"
+[ftp]
 url = "https://www.sudo.ws/dist/"
-filename = "sudo-%(version).tar.gz"
+filename = "%(name)-%(version).tar.gz"
+
+[version]
+scheme = "patch_suffix"
