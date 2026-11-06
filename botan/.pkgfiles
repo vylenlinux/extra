@@ -212,13 +212,13 @@ drwxr-xr-x root/root    usr/include/botan-3/botan/
 -rw-rw-r-- root/root    usr/include/botan-3/botan/zlib.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
-drwxr-xr-x root/root    usr/lib/cmake/Botan-3.14.0/
--rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.0/botan-config-version.cmake
--rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.0/botan-config.cmake
+drwxr-xr-x root/root    usr/lib/cmake/Botan-3.14.1/
+-rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.1/botan-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/Botan-3.14.1/botan-config.cmake
 -rw-r--r-- root/root    usr/lib/libbotan-3.a
-lrwxrwxrwx root/root    usr/lib/libbotan-3.so -> libbotan-3.so.14.14.0
-lrwxrwxrwx root/root    usr/lib/libbotan-3.so.14 -> libbotan-3.so.14.14.0
--rwxr-xr-x root/root    usr/lib/libbotan-3.so.14.14.0
+lrwxrwxrwx root/root    usr/lib/libbotan-3.so -> libbotan-3.so.14.14.1
+lrwxrwxrwx root/root    usr/lib/libbotan-3.so.14 -> libbotan-3.so.14.14.1
+-rwxr-xr-x root/root    usr/lib/libbotan-3.so.14.14.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/botan-3.pc
 drwxr-xr-x root/root    usr/lib/python3.15/

@@ -6,7 +6,7 @@ homepage="https://botan.randombit.net/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=botan
-version=3.14.0
+version=3.14.1
 release=1
 source="${name}-${version}.tar.xz::https://botan.randombit.net/releases/Botan-${version}.tar.xz"
 
