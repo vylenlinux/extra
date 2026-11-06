@@ -1,5 +1,6 @@
 name = "frei0r-plugins"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "frei0r"
+owner = "dyne"
+repo = "frei0r"
