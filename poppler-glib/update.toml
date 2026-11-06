@@ -1,6 +1,9 @@
 name = "poppler-glib"
-provider = "repology"
+provider = "freedesktop"
 dedup_key = "poppler"
 
 [source]
-package = "poppler"
+project = "poppler/poppler"
+
+[version]
+strip_prefix = "poppler-"

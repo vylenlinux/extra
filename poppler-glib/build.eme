@@ -6,7 +6,7 @@ homepage="https://poppler.freedesktop.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=poppler-glib
-version=26.10.0
+version=26.11.0
 release=1
 source="https://poppler.freedesktop.org/poppler-${version}.tar.xz"
 

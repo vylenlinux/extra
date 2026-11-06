@@ -14,7 +14,7 @@ drwxr-xr-x root/root    usr/include/poppler/qt6/
 -rw-r--r-- root/root    usr/include/poppler/qt6/poppler-version.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libpoppler-qt6.so -> libpoppler-qt6.so.3
-lrwxrwxrwx root/root    usr/lib/libpoppler-qt6.so.3 -> libpoppler-qt6.so.3.13.0
--rwxr-xr-x root/root    usr/lib/libpoppler-qt6.so.3.13.0
+lrwxrwxrwx root/root    usr/lib/libpoppler-qt6.so.3 -> libpoppler-qt6.so.3.14.0
+-rwxr-xr-x root/root    usr/lib/libpoppler-qt6.so.3.14.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/poppler-qt6.pc

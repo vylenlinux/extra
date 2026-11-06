@@ -1,5 +1,8 @@
 name = "poppler"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "poppler"
+project = "%(name)/%(name)"
+
+[version]
+strip_prefix = "%(name)-"
