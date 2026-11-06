@@ -6,7 +6,7 @@ homepage="https://www.gtk.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtk4
-version=4.24.1
+version=4.25.0
 release=1
 source="${name}-${version}.tar.bz2::https://gitlab.gnome.org/GNOME/gtk/-/archive/${version}/gtk-${version}.tar.bz2"
 

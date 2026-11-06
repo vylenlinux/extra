@@ -342,6 +342,7 @@ drwxr-xr-x root/root    usr/include/gtk-4.0/gtk/deprecated/
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtkimcontextsimple.h
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtkimmodule.h
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtkimmulticontext.h
+-rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtkinit.h
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtkinscription.h
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtklabel.h
 -rw-r--r-- root/root    usr/include/gtk-4.0/gtk/gtklayoutchild.h
@@ -478,8 +479,8 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Gsk-4.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Gtk-4.0.typelib
 lrwxrwxrwx root/root    usr/lib/libgtk-4.so -> libgtk-4.so.1
-lrwxrwxrwx root/root    usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.2400.1
--rwxr-xr-x root/root    usr/lib/libgtk-4.so.1.2400.1
+lrwxrwxrwx root/root    usr/lib/libgtk-4.so.1 -> libgtk-4.so.1.2500.0
+-rwxr-xr-x root/root    usr/lib/libgtk-4.so.1.2500.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/gtk4-atspi.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/gtk4-broadway.pc
