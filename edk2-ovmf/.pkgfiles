@@ -1,0 +1,19 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/share/
+lrwxrwxrwx root/root    usr/share/OVMF -> /usr/share/edk2
+lrwxrwxrwx root/root    usr/share/edk2-ovmf -> /usr/share/edk2
+drwxr-xr-x root/root    usr/share/edk2/
+drwxr-xr-x root/root    usr/share/edk2/x64/
+-rw-r--r-- root/root    usr/share/edk2/x64/MICROVM.4m.fd
+-rw-r--r-- root/root    usr/share/edk2/x64/OVMF.4m.fd
+-rw-r--r-- root/root    usr/share/edk2/x64/OVMF_CODE.4m.fd
+-rw-r--r-- root/root    usr/share/edk2/x64/OVMF_CODE.secboot.4m.fd
+-rw-r--r-- root/root    usr/share/edk2/x64/OVMF_VARS.4m.fd
+lrwxrwxrwx root/root    usr/share/ovmf -> /usr/share/edk2
+drwxr-xr-x root/root    usr/share/qemu/
+drwxr-xr-x root/root    usr/share/qemu/firmware/
+-rw-r--r-- root/root    usr/share/qemu/firmware/50-edk2-ovmf-x86_64-secure-4m.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-ovmf-microvm-4m.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-ovmf-x86_64-4m.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/80-edk2-ovmf-ia32-on-x86_64-secure-4m.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/81-edk2-ovmf-ia32-on-x86_64-4m.json

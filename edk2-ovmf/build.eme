@@ -1,0 +1,94 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Firmware for Virtual Machines (x86_64, i686 on x86_64)"
+homepage="https://github.com/tianocore/tianocore.github.io/wiki/OVMF"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=edk2-ovmf
+version=202608
+release=1
+
+source="https://downloads.sourceforge.net/project/vylen/sources/edk2/edk2-${version}.tar.xz
+    50-edk2-ovmf-x86_64-secure-4m.json
+    60-edk2-ovmf-microvm-4m.json
+    60-edk2-ovmf-x86_64-4m.json
+    80-edk2-ovmf-ia32-on-x86_64-secure-4m.json
+    81-edk2-ovmf-ia32-on-x86_64-4m.json"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "edk2-${version}"
+    export GCC_BIN=""
+
+    sed 's/ -Werror//g' -i \
+        BaseTools/Conf/*.template \
+        BaseTools/Source/C/Makefiles/*.makefile
+
+    msg_info "Building base tools"
+    make -C BaseTools
+
+    # expose build tooling in PATH
+    . ./edksetup.sh
+
+    _common_args="-b RELEASE \
+        -n $(nproc) \
+        -t GCC"
+
+    _efi_args="-DFD_SIZE_4MB \
+        -DNETWORK_HTTP_BOOT_ENABLE \
+        -DNETWORK_IP6_ENABLE \
+        -DTPM_ENABLE \
+        -DTPM1_ENABLE \
+        -DTPM2_ENABLE"
+
+    _network_tls="-DNETWORK_TLS_ENABLE"
+    msg_info "Building ovmf (X64) with microvm support (4MB FD)"
+
+    # shellcheck disable=SC2086
+    BaseTools/BinWrappers/PosixLike/build \
+        -p OvmfPkg/Microvm/MicrovmX64.dsc \
+        -a X64 \
+        ${_common_args} \
+        ${_efi_args} \
+        ${_network_tls}
+
+    mv Build/MicrovmX64 Build/MicrovmX64-4mb
+    msg_info "Building ovmf (X64) with secure boot support (4MB FD)"
+
+    # shellcheck disable=SC2086
+    BaseTools/BinWrappers/PosixLike/build \
+        -p OvmfPkg/OvmfPkgIa32X64.dsc \
+        -a IA32 \
+        -a X64 \
+        ${_common_args} \
+        ${_efi_args} \
+        ${_network_tls} \
+        -DSECURE_BOOT_ENABLE \
+        -DSMM_REQUIRE
+
+    mv Build/Ovmf3264 Build/Ovmf3264-secure-4mb
+    msg_info "Building ovmf (X64) without secure boot (4MB FD)"
+
+    # shellcheck disable=SC2086
+    BaseTools/BinWrappers/PosixLike/build \
+        -p OvmfPkg/OvmfPkgX64.dsc \
+        -a X64 \
+        ${_common_args} \
+        ${_efi_args} \
+        ${_network_tls}
+
+    mv Build/OvmfX64 Build/OvmfX64-4mb
+
+    install -Dm644 Build/OvmfX64-4mb/RELEASE_GCC/FV/OVMF.fd "${PKG}/usr/share/edk2/x64/OVMF.4m.fd"
+    install -Dm644 Build/OvmfX64-4mb/RELEASE_GCC/FV/OVMF_CODE.fd "${PKG}/usr/share/edk2/x64/OVMF_CODE.4m.fd"
+    install -Dm644 Build/OvmfX64-4mb/RELEASE_GCC/FV/OVMF_VARS.fd "${PKG}/usr/share/edk2/x64/OVMF_VARS.4m.fd"
+    install -Dm644 Build/Ovmf3264-secure-4mb/RELEASE_GCC/FV/OVMF_CODE.fd "${PKG}/usr/share/edk2/x64/OVMF_CODE.secboot.4m.fd"
+    install -Dm644 Build/MicrovmX64-4mb/RELEASE_GCC/FV/MICROVM.fd "${PKG}/usr/share/edk2/x64/MICROVM.4m.fd"
+
+    install -Dm644 "${SRC}"/*.json -t "${PKG}/usr/share/qemu/firmware/"
+
+    ln -s /usr/share/edk2 "${PKG}/usr/share/ovmf"
+    ln -s /usr/share/edk2 "${PKG}/usr/share/edk2-ovmf"
+    ln -s /usr/share/edk2 "${PKG}/usr/share/OVMF"
+}

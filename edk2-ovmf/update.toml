@@ -1,0 +1,10 @@
+name = "edk2-ovmf"
+provider = "github"
+
+[source]
+owner = "tianocore"
+repo = "edk2"
+
+[version]
+include = ["edk2-*"]
+strip_prefix = "edk2-stable"
