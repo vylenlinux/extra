@@ -1,5 +1,2 @@
 name = "purpose"
 provider = "kde"
-
-[kde]
-product = "frameworks"

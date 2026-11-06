@@ -1,5 +1,2 @@
 name = "kdbusaddons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

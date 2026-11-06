@@ -1,5 +1,2 @@
 name = "kiconthemes"
 provider = "kde"
-
-[kde]
-product = "frameworks"

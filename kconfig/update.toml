@@ -1,5 +1,2 @@
 name = "kconfig"
 provider = "kde"
-
-[kde]
-product = "frameworks"

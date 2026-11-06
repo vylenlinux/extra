@@ -1,5 +1,2 @@
 name = "kpackage"
 provider = "kde"
-
-[kde]
-product = "frameworks"

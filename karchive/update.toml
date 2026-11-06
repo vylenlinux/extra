@@ -1,5 +1,2 @@
 name = "karchive"
 provider = "kde"
-
-[kde]
-product = "frameworks"

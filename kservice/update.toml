@@ -1,5 +1,2 @@
 name = "kservice"
 provider = "kde"
-
-[kde]
-product = "frameworks"

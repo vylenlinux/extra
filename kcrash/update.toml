@@ -1,5 +1,2 @@
 name = "kcrash"
 provider = "kde"
-
-[kde]
-product = "frameworks"

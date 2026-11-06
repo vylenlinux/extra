@@ -1,5 +1,2 @@
 name = "kxmlgui"
 provider = "kde"
-
-[kde]
-product = "frameworks"

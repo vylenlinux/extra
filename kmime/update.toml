@@ -1,5 +1,2 @@
 name = "kmime"
 provider = "kde"
-
-[kde]
-product = "frameworks"

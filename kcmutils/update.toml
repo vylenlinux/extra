@@ -1,5 +1,2 @@
 name = "kcmutils"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "ktexttemplate"
 provider = "kde"
-
-[kde]
-product = "frameworks"

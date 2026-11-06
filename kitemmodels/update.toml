@@ -1,5 +1,2 @@
 name = "kitemmodels"
 provider = "kde"
-
-[kde]
-product = "frameworks"

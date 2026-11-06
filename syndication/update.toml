@@ -1,5 +1,2 @@
 name = "syndication"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "baloo"
 provider = "kde"
-
-[kde]
-product = "frameworks"

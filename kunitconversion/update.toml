@@ -1,5 +1,2 @@
 name = "kunitconversion"
 provider = "kde"
-
-[kde]
-product = "frameworks"

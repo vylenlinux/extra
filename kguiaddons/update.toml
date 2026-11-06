@@ -1,5 +1,2 @@
 name = "kguiaddons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

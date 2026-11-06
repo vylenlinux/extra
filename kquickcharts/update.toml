@@ -1,5 +1,2 @@
 name = "kquickcharts"
 provider = "kde"
-
-[kde]
-product = "frameworks"

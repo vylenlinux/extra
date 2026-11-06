@@ -1,5 +1,2 @@
 name = "kcompletion"
 provider = "kde"
-
-[kde]
-product = "frameworks"

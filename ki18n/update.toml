@@ -1,5 +1,2 @@
 name = "ki18n"
 provider = "kde"
-
-[kde]
-product = "frameworks"

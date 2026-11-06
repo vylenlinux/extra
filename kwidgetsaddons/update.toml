@@ -1,5 +1,2 @@
 name = "kwidgetsaddons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "kwallet"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "frameworkintegration"
 provider = "kde"
-
-[kde]
-product = "frameworks"

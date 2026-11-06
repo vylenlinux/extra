@@ -1,5 +1,2 @@
 name = "kcodecs"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "kdeclarative"
 provider = "kde"
-
-[kde]
-product = "frameworks"

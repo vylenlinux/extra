@@ -1,5 +1,2 @@
 name = "threadweaver"
 provider = "kde"
-
-[kde]
-product = "frameworks"

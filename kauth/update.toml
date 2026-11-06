@@ -1,5 +1,2 @@
 name = "kauth"
 provider = "kde"
-
-[kde]
-product = "frameworks"

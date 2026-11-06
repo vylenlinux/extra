@@ -1,5 +1,2 @@
 name = "kpty"
 provider = "kde"
-
-[kde]
-product = "frameworks"

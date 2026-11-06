@@ -1,5 +1,2 @@
 name = "kirigami"
 provider = "kde"
-
-[kde]
-product = "frameworks"

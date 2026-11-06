@@ -1,5 +1,2 @@
 name = "kio"
 provider = "kde"
-
-[kde]
-product = "frameworks"

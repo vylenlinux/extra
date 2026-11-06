@@ -1,5 +1,2 @@
 name = "kholidays"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "kdnssd"
 provider = "kde"
-
-[kde]
-product = "frameworks"

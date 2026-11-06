@@ -1,5 +1,2 @@
 name = "ksvg"
 provider = "kde"
-
-[kde]
-product = "frameworks"

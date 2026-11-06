@@ -1,5 +1,2 @@
 name = "knotifications"
 provider = "kde"
-
-[kde]
-product = "frameworks"

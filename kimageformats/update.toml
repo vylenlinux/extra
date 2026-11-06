@@ -1,5 +1,2 @@
 name = "kimageformats"
 provider = "kde"
-
-[kde]
-product = "frameworks"

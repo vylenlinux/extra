@@ -1,5 +1,2 @@
 name = "sonnet"
 provider = "kde"
-
-[kde]
-product = "frameworks"

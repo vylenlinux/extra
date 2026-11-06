@@ -1,5 +1,2 @@
 name = "kglobalaccel"
 provider = "kde"
-
-[kde]
-product = "frameworks"

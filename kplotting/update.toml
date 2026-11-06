@@ -1,5 +1,2 @@
 name = "kplotting"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "networkmanager-qt"
 provider = "kde"
-
-[kde]
-product = "frameworks"

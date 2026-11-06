@@ -1,5 +1,2 @@
 name = "kcoreaddons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

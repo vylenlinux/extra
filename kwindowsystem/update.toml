@@ -1,5 +1,2 @@
 name = "kwindowsystem"
 provider = "kde"
-
-[kde]
-product = "frameworks"

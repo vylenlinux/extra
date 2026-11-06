@@ -1,5 +1,2 @@
 name = "prison"
 provider = "kde"
-
-[kde]
-product = "frameworks"

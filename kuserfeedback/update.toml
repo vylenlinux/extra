@@ -1,5 +1,2 @@
 name = "kuserfeedback"
 provider = "kde"
-
-[kde]
-product = "frameworks"

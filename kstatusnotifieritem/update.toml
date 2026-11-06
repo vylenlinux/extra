@@ -1,5 +1,2 @@
 name = "kstatusnotifieritem"
 provider = "kde"
-
-[kde]
-product = "frameworks"

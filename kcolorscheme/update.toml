@@ -1,5 +1,2 @@
 name = "kcolorscheme"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "bluez-qt"
 provider = "kde"
-
-[kde]
-product = "frameworks"

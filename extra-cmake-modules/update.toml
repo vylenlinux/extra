@@ -1,5 +1,2 @@
 name = "extra-cmake-modules"
 provider = "kde"
-
-[kde]
-product = "frameworks"

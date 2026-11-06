@@ -1,5 +1,2 @@
 name = "oxygen-icons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

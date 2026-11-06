@@ -1,5 +1,2 @@
 name = "kfilemetadata"
 provider = "kde"
-
-[kde]
-product = "frameworks"

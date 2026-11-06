@@ -1,5 +1,2 @@
 name = "kpeople"
 provider = "kde"
-
-[kde]
-product = "frameworks"

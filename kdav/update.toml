@@ -1,5 +1,2 @@
 name = "kdav"
 provider = "kde"
-
-[kde]
-product = "frameworks"

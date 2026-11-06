@@ -1,5 +1,2 @@
 name = "ktexteditor"
 provider = "kde"
-
-[kde]
-product = "frameworks"

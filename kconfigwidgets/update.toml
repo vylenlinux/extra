@@ -1,5 +1,2 @@
 name = "kconfigwidgets"
 provider = "kde"
-
-[kde]
-product = "frameworks"

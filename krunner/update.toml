@@ -1,5 +1,2 @@
 name = "krunner"
 provider = "kde"
-
-[kde]
-product = "frameworks"

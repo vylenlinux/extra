@@ -1,5 +1,2 @@
 name = "breeze-icons"
 provider = "kde"
-
-[kde]
-product = "frameworks"

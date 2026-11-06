@@ -1,5 +1,2 @@
 name = "ktextwidgets"
 provider = "kde"
-
-[kde]
-product = "frameworks"

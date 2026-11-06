@@ -1,5 +1,2 @@
 name = "kdoctools"
 provider = "kde"
-
-[kde]
-product = "frameworks"

@@ -1,5 +1,2 @@
 name = "kidletime"
 provider = "kde"
-
-[kde]
-product = "frameworks"

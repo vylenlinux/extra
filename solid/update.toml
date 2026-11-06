@@ -1,5 +1,2 @@
 name = "solid"
 provider = "kde"
-
-[kde]
-product = "frameworks"

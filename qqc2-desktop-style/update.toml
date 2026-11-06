@@ -1,5 +1,2 @@
 name = "qqc2-desktop-style"
 provider = "kde"
-
-[kde]
-product = "frameworks"

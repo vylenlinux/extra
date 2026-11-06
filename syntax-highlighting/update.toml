@@ -1,5 +1,2 @@
 name = "syntax-highlighting"
 provider = "kde"
-
-[kde]
-product = "frameworks"
