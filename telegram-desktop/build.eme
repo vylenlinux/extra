@@ -6,7 +6,7 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=telegram-desktop
-version=7.4.0
+version=7.4.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz"
 
