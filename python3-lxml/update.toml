@@ -9,3 +9,4 @@ repo = "lxml"
 include = ["lxml-*"]
 exclude = ["lxml-7.*"]
 strip_prefix = "lxml-"
+replace = { - = "_" }
