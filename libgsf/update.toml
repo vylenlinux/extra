@@ -6,3 +6,4 @@ package = "%(name)"
 
 [version]
 strip_prefix = "LIBGSF_"
+replace = { _ = "." }
