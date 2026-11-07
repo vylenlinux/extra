@@ -7,3 +7,4 @@ repo = "netifaces"
 
 [version]
 strip_prefix = "release_"
+replace = { _ = "." }
