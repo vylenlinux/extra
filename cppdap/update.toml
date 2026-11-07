@@ -7,3 +7,4 @@ repo = "cppdap"
 
 [version]
 strip_prefix = "dap-"
+replace = { - = "_" }
