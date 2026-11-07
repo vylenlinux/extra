@@ -10,7 +10,7 @@ version=1.9.17p2
 release=1
 backup="etc/sudoers"
 
-source="https://www.sudo.ws/dist/${name}-${version}.tar.gz
+source="${name}-${version}.tar.gz::https://github.com/${name}-project/${name}/archive/refs/tags/v${version}.tar.gz
     0001-cve-2026-35535.patch
     0002-Fix-OpenSSL-4.0-compatibility.patch"
 

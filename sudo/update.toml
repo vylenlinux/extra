@@ -1,9 +1,9 @@
 name = "sudo"
-provider = "ftp"
+provider = "github"
 
-[ftp]
-url = "https://www.sudo.ws/dist/"
-filename = "%(name)-%(version).tar.gz"
+[source]
+owner = "%(name)-project"
+repo = "%(name)"
 
 [version]
 scheme = "bsd_patchlevel"
