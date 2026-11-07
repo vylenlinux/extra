@@ -7,3 +7,4 @@ repo = "cryptopp"
 
 [version]
 strip_prefix = "CRYPTOPP_"
+replace = { _ = "." }
