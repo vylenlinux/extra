@@ -9,3 +9,4 @@ repo = "%(name)"
 include = ["NSS_*_RTM"]
 strip_prefix = "NSS_"
 strip_suffix = "_RTM"
+replace = { _ = "." }
