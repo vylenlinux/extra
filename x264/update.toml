@@ -2,5 +2,8 @@ name = "x264"
 provider = "ftp"
 
 [ftp]
-url = "http://download.videolan.org/pub/videolan/x264/snapshots/"
+url = "https://download.videolan.org/pub/videolan/x264/snapshots/"
 filename = "x264-snapshot-%(version)-stable.tar.bz2"
+
+[version]
+replace = { - = "." }
