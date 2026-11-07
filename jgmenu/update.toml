@@ -1,5 +1,6 @@
 name = "jgmenu"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jgmenu"
+owner = "johanmalm"
+repo = "%(name)"
