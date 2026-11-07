@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "openresty"
 repo = "luajit2"
+
+[version]
+replace = { - = "." }
