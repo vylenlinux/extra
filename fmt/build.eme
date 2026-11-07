@@ -6,7 +6,7 @@ homepage="https://fmt.dev/latest/index.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fmt
-version=12.2.0
+version=12.2.1
 release=1
 source="https://github.com/fmtlib/${name}/archive/${version}/${name}-${version}.tar.gz"
 

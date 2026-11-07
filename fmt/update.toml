@@ -1,5 +1,6 @@
 name = "fmt"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fmt"
+owner = "fmtlib"
+repo = "%(name)"
