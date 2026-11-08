@@ -1,0 +1,8 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cosmic-bg
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/cosmic/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicBackground/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicBackground/v1/
+-rw-r--r-- root/root    usr/share/cosmic/com.system76.CosmicBackground/v1/all
