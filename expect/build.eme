@@ -10,75 +10,70 @@ version=5.45.4
 release=1
 
 source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/project/${name}/Expect/${version}/${name}${version}.tar.gz
-    expect-5.32.2-random.patch
-    expect-5.43.0-log_file.patch
-    expect-5.43.0-pkgpath.patch
-    expect-5.45.4-covscan-fixes.patch
-    expect-5.45.4-tcl9-alloc.patch
-    expect-5.45.4-tcl9-ansi-args.patch
-    expect-5.45.4-tcl9-const.patch
-    expect-5.45.4-tcl9-eval-tokens.patch
-    expect-5.45.4-tcl9-mkpasswd.patch
-    expect-5.45.4-tcl9-panic.patch
-    expect-5.45.4-tcl9-size.patch
-    expect-5.45.4-tcl9-varargs.patch
-    expect-5.45.4-tclsh8.patch
-    expect-5.45.4-unification-of-usage-and-man-page.patch
-    expect-5.45-check-telnet.patch
-    expect-5.45-exp-log-buf-overflow.patch
-    expect-5.45-fd-leak.patch
-    expect-5.45-format-security.patch
-    expect-5.45-man-page.patch
-    expect-5.45-match-gt-numchars-segfault.patch
-    expect-5.45-mkpasswd-dash.patch
-    expect-5.45-mkpasswd-man.patch
-    expect-5.45-passmass-su-full-path.patch
-    expect-5.45-re-memleak.patch
-    expect-5.45-segfault-with-stubs.patch
-    expect-c99.patch
-    expect-configure-c99.patch
-    expect-5.45.4-tcl9-final.patch
-    expect-5.45.4-tcl9-bool.patch"
-
-prepare() {
-    # shellcheck disable=SC2164
-    cd "${name}${version}"
-
-    patch -Np1 -i "${SRC}/expect-5.32.2-random.patch"
-    patch -Np1 -i "${SRC}/expect-5.43.0-log_file.patch"
-    patch -Np1 -i "${SRC}/expect-5.43.0-pkgpath.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-covscan-fixes.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-alloc.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-ansi-args.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-const.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-eval-tokens.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-mkpasswd.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-panic.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-size.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-varargs.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tclsh8.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-unification-of-usage-and-man-page.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-check-telnet.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-exp-log-buf-overflow.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-fd-leak.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-format-security.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-man-page.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-match-gt-numchars-segfault.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-mkpasswd-dash.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-mkpasswd-man.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-passmass-su-full-path.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-re-memleak.patch"
-    patch -Np1 -i "${SRC}/expect-5.45-segfault-with-stubs.patch"
-    patch -Np1 -i "${SRC}/expect-c99.patch"
-    patch -Np1 -i "${SRC}/expect-configure-c99.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-final.patch"
-    patch -Np1 -i "${SRC}/expect-5.45.4-tcl9-bool.patch"
-}
+    ${name}-5.32.2-random.patch
+    ${name}-5.43.0-log_file.patch
+    ${name}-5.43.0-pkgpath.patch
+    ${name}-5.45.4-covscan-fixes.patch
+    ${name}-5.45.4-tcl9-alloc.patch
+    ${name}-5.45.4-tcl9-ansi-args.patch
+    ${name}-5.45.4-tcl9-const.patch
+    ${name}-5.45.4-tcl9-eval-tokens.patch
+    ${name}-5.45.4-tcl9-mkpasswd.patch
+    ${name}-5.45.4-tcl9-panic.patch
+    ${name}-5.45.4-tcl9-size.patch
+    ${name}-5.45.4-tcl9-varargs.patch
+    ${name}-5.45.4-tclsh8.patch
+    ${name}-5.45.4-unification-of-usage-and-man-page.patch
+    ${name}-5.45-check-telnet.patch
+    ${name}-5.45-exp-log-buf-overflow.patch
+    ${name}-5.45-fd-leak.patch
+    ${name}-5.45-format-security.patch
+    ${name}-5.45-man-page.patch
+    ${name}-5.45-match-gt-numchars-segfault.patch
+    ${name}-5.45-mkpasswd-dash.patch
+    ${name}-5.45-mkpasswd-man.patch
+    ${name}-5.45-passmass-su-full-path.patch
+    ${name}-5.45-re-memleak.patch
+    ${name}-5.45-segfault-with-stubs.patch
+    ${name}-c99.patch
+    ${name}-configure-c99.patch
+    ${name}-5.45.4-tcl9-final.patch
+    ${name}-5.45.4-tcl9-bool.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}${version}"
     export CFLAGS="${CFLAGS} -std=gnu89"
+
+    patch -Np1 -i "${SRC}/${name}-5.32.2-random.patch"
+    patch -Np1 -i "${SRC}/${name}-5.43.0-log_file.patch"
+    patch -Np1 -i "${SRC}/${name}-5.43.0-pkgpath.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-covscan-fixes.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-alloc.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-ansi-args.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-const.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-eval-tokens.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-mkpasswd.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-panic.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-size.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-varargs.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tclsh8.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-unification-of-usage-and-man-page.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-check-telnet.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-exp-log-buf-overflow.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-fd-leak.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-format-security.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-man-page.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-match-gt-numchars-segfault.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-mkpasswd-dash.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-mkpasswd-man.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-passmass-su-full-path.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-re-memleak.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45-segfault-with-stubs.patch"
+    patch -Np1 -i "${SRC}/${name}-c99.patch"
+    patch -Np1 -i "${SRC}/${name}-configure-c99.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-final.patch"
+    patch -Np1 -i "${SRC}/${name}-5.45.4-tcl9-bool.patch"
 
     ./configure \
         --prefix=/usr \
