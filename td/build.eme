@@ -6,10 +6,10 @@ homepage="https://core.telegram.org/tdlib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=td
-version=1.8.69
+version=1.8.70
 release=1
 
-commit=4c6377aa7386c39217878a9a56d581922ad37ca4
+commit=23383aef218a3123f02b744bfa91bde21056a814
 source="${name}-${commit}.tar.gz::https://github.com/tdlib/${name}/archive/${commit}.tar.gz"
 
 build() {
