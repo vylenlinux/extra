@@ -16,7 +16,6 @@ keybinder3
 libcroco
 libgnomekbd
 librsvg
-libsass
 muffin
 nemo
 network-manager-applet
@@ -27,8 +26,8 @@ python3-pillow
 python3-pyinotify
 python3-pytz
 python3-requests
-python3-sass
 python3-tinycss2
+sassc
 timezonemap
 xapp
 xdg-desktop-portal-xapp
