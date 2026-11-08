@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="System76 Pop Icon Theme"
+homepage="https://github.com/pop-os/icon-theme"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=pop-icon-theme
+version=3.5.1
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/icon-theme/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    vylen-meson "icon-theme-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
