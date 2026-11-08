@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Compositor for the COSMIC desktop environment"
+homepage="https://github.com/pop-os/cosmic-comp"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-comp
+version=1.11.0
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz
+    ${name}-libdisplay-info4.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+
+    patch -Np1 -i "${SRC}/${name}-libdisplay-info4.patch"
+    cargo fetch --locked
+
+    sed 's/lto = "fat"/lto = "thin"/' -i Cargo.toml
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld"
+
+    just build-release --frozen
+    just rootdir="${PKG}" install
+}

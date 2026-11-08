@@ -1,0 +1,11 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cosmic-comp
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/cosmic/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicSettings.Shortcuts/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicSettings.Shortcuts/v1/
+-rw-r--r-- root/root    usr/share/cosmic/com.system76.CosmicSettings.Shortcuts/v1/defaults
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicSettings.WindowRules/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicSettings.WindowRules/v1/
+-rw-r--r-- root/root    usr/share/cosmic/com.system76.CosmicSettings.WindowRules/v1/tiling_exception_defaults

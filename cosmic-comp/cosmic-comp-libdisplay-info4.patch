@@ -1,0 +1,52 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Sun, 08 Nov 2026 21:38:55 +0100
+Subject: [PATCH] cosmic-comp: use libdisplay-info from PR #21
+
+diff --git a/Cargo.lock b/Cargo.lock
+index c0bcfc94..8fe7615f 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -2789,2 +2789 @@ version = "0.3.0"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "59fd96dbb2381ff31f314f07accbdf8550febdcc5cd8761ecaf7c1763361c359"
++source = "git+https://github.com/Smithay/libdisplay-info-rs.git?rev=a2890463af474e4ec3f0037d54d53caba2b9f38b#a2890463af474e4ec3f0037d54d53caba2b9f38b"
+@@ -2802,2 +2801 @@ version = "0.1.1"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "8dc2c710cf5819e91220a446d9e64acc6814386cc22c509c3f0df83c0b874a98"
++source = "git+https://github.com/Smithay/libdisplay-info-rs.git?rev=a2890463af474e4ec3f0037d54d53caba2b9f38b#a2890463af474e4ec3f0037d54d53caba2b9f38b"
+@@ -2813,2 +2811 @@ version = "0.3.0"
+-source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "26590d55b8819f9c6b0d95d9d12dc9edbfd1f2413e88814a33b631ac049bb51f"
++source = "git+https://github.com/Smithay/libdisplay-info-rs.git?rev=a2890463af474e4ec3f0037d54d53caba2b9f38b#a2890463af474e4ec3f0037d54d53caba2b9f38b"
+diff --git a/Cargo.toml b/Cargo.toml
+index fda3bbde..fb56c172 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -32 +32 @@ cosmic-text = { version = "0.19", features = ["shape-run-cache"] }
+-libdisplay-info = "0.3.0"
++libdisplay-info4 = { package = "libdisplay-info", version = "0.3.0", git = "https://github.com/Smithay/libdisplay-info-rs.git", rev = "a2890463af474e4ec3f0037d54d53caba2b9f38b", features = ["v0_4"] }
+diff --git a/cosmic-comp-config/Cargo.toml b/cosmic-comp-config/Cargo.toml
+index f01a4bb3..e24b0963 100644
+--- a/cosmic-comp-config/Cargo.toml
++++ b/cosmic-comp-config/Cargo.toml
+@@ -10 +10 @@ input = "0.10.0"
+-libdisplay-info = { version = "0.3.0", optional = true }
++libdisplay-info4 = { package = "libdisplay-info", version = "0.3.0", git = "https://github.com/Smithay/libdisplay-info-rs.git", rev = "a2890463af474e4ec3f0037d54d53caba2b9f38b", features = ["v0_4"], optional = true }
+@@ -19,0 +20 @@ default = []
++libdisplay-info = ["dep:libdisplay-info4"]
+diff --git a/cosmic-comp-config/src/lib.rs b/cosmic-comp-config/src/lib.rs
+index 515852dd..90863290 100644
+--- a/cosmic-comp-config/src/lib.rs
++++ b/cosmic-comp-config/src/lib.rs
+@@ -26,2 +26,2 @@ pub struct EdidProduct {
+-impl From<libdisplay_info::edid::VendorProduct> for EdidProduct {
+-    fn from(vp: libdisplay_info::edid::VendorProduct) -> Self {
++impl From<libdisplay_info4::edid::VendorProduct> for EdidProduct {
++    fn from(vp: libdisplay_info4::edid::VendorProduct) -> Self {
+diff --git a/src/backend/kms/drm_helpers.rs b/src/backend/kms/drm_helpers.rs
+index 4e2b2a72..0ec9e16d 100644
+--- a/src/backend/kms/drm_helpers.rs
++++ b/src/backend/kms/drm_helpers.rs
+@@ -4 +4 @@ use anyhow::{Context, Result, anyhow};
+-use libdisplay_info::{edid::DisplayDescriptorTag, info::Info};
++use libdisplay_info4::{edid::DisplayDescriptorTag, info::Info};
