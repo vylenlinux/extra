@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A backend implementation for xdg-desktop-portal for the COSMIC desktop environment"
+homepage="https://github.com/pop-os/xdg-desktop-portal-cosmic"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=xdg-desktop-portal-cosmic
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+    cargo fetch --locked
+
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=mold"
+    export CARGO_NET_OFFLINE=true
+
+    just build
+    just rootdir="${PKG}" prefix=/usr libexecdir=/usr/lib install
+}
