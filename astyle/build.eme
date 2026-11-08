@@ -6,7 +6,7 @@ homepage="https://sourceforge.net/projects/astyle/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=astyle
-version=3.6.22
+version=3.6.23
 release=1
 source="https://downloads.sourceforge.net/project/${name}/${name}/${name}%203.6/${name}-${version}.tar.bz2"
 
