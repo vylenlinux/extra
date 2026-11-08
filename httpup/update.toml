@@ -1,5 +1,0 @@
-name = "httpup"
-provider = "repology"
-
-[source]
-package = "httpup"
