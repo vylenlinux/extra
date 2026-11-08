@@ -1,4 +1,4 @@
-name = "python3-sass"
+name = "libsass-python"
 provider = "pypi"
 
 [source]

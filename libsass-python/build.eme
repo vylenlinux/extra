@@ -5,14 +5,14 @@ description="Python sass library"
 homepage="https://github.com/sass/libsass-python"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=python3-sass
+name=libsass-python
 version=0.23.0
 release=1
-source="${name}-${version}.tar.gz::https://github.com/sass/libsass-python/archive/refs/tags/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/sass/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "libsass-python-${version}"
+    cd "${name}-${version}"
     export SYSTEM_SASS=1
 
     gpep517 build-wheel \
