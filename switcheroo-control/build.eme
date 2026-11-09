@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="D-Bus service to check the availability of dual-GPU"
+homepage="https://gitlab.freedesktop.org/hadess/switcheroo-control"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=switcheroo-control
+version=3.0
+release=1
+source="https://gitlab.freedesktop.org/hadess/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    vylen-meson "${name}-${version}" build -Dgtk_doc="$(emerald is-installed gtk-doc && printf 'true' || printf 'false')"
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

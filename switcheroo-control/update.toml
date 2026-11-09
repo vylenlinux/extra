@@ -1,0 +1,5 @@
+name = "switcheroo-control"
+provider = "freedesktop"
+
+[source]
+project = "hadess/%(name)"
