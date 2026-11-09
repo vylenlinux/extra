@@ -6,7 +6,7 @@ homepage="https://ccache.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ccache
-version=4.14.2
+version=4.14.3
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
 

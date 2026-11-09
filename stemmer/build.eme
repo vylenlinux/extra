@@ -6,7 +6,7 @@ homepage="https://snowballstem.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=stemmer
-version=3.1.1
+version=3.2.0
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/snowballstem/snowball/archive/v${version}.tar.gz

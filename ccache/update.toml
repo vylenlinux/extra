@@ -1,5 +1,6 @@
 name = "ccache"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ccache"
+owner = "%(name)"
+repo = "%(name)"

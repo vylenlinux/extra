@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Open Source H265/HEVC video encoder"
-homepage="https://bitbucket.org/multicoreware/x265_git"
+homepage="https://github.com/Multicorewareinc/x265"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=x265
