@@ -2,13 +2,13 @@
 
 # shellcheck disable=SC2034
 description="Library to import various well-known 3D model formats in an uniform manner"
-homepage="https://assimp.sourceforge.net/index.html"
+homepage="https://www.assimp.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=assimp
-version=6.0.5
+version=6.0.6
 release=1
-source="https://github.com/assimp/assimp/archive/v${version}/${name}-${version}.tar.gz"
+source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "${name}-${version}" -B build -G Ninja \
@@ -27,5 +27,5 @@ build() {
     cmake --build build
     DESTDIR="${PKG}" cmake --install build
 
-    sed -i "s|includedir=.*|includedir=/usr/include/assimp|" "${PKG}/usr/lib/pkgconfig/assimp.pc"
+    sed -i "s|includedir=.*|includedir=/usr/include/${name}|" "${PKG}/usr/lib/pkgconfig/${name}.pc"
 }
