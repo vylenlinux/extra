@@ -6,23 +6,21 @@ homepage="https://web.mit.edu/kerberos/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=krb5
-version=1.22.2
+version=1.22.3
 release=1
 
-_version="$(printf "%s" "${version}" | awk -F. '{printf "%s.%s", $1, $2;}')"
-
-source="https://kerberos.org/dist/${name}/$(printf "%s" "${version}" | awk -F. '{printf "%s.%s", $1, $2;}')/${name}-${version}.tar.gz
-    mitkrb-${version}-upstream_fix-1.patch
-    ${name}-${version}-openssl4.patch"
+source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${name}-${version}-final.tar.gz
+    ${name}-${version}-autoconf-2.73.patch
+    ${name}-${version}-openssl4-k5tls.patch"
 
 build() {
     # shellcheck disable=SC2164
-    cd "${name}-${version}/src"
+    cd "${name}-${name}-${version}-final/src"
 
-    patch -Np2 -i "${SRC}/mitkrb-1.22.2-upstream_fix-1.patch"
-    patch -Np2 -i "${SRC}/${name}-${version}-openssl4.patch"
+    patch -Np2 -i "${SRC}/${name}-${version}-autoconf-2.73.patch"
+    patch -Np2 -i "${SRC}/${name}-${version}-openssl4-k5tls.patch"
 
-    sed -i "/KRB5ROOT=/s/\/local//" util/ac_check_krb5.m4
+    autoreconf -fi
 
     ./configure \
         --prefix=/usr \
@@ -41,7 +39,9 @@ build() {
     make
     make DESTDIR="${PKG}" install
 
-    do_service "${name}-kadmind" "${name}-kdc" "${name}-kpropd"
+    do_service "${name}-kadmind" \
+        "${name}-kdc" \
+        "${name}-kpropd"
 
     install -Dm644 "config-files/${name}.conf" -t "${PKG}/etc/"
     install -Dm644 config-files/kdc.conf -t "${PKG}/var/lib/krb5kdc/"

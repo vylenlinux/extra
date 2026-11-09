@@ -1,5 +1,11 @@
 name = "krb5"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "krb5"
+owner = "%(name)"
+repo = "%(name)"
+
+[version]
+include = ["%(name)-*-*"]
+strip_prefix = "%(name)-"
+strip_suffix = "-*"
