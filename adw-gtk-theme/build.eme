@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Unofficial GTK 3 port of the libadwaita theme"
+homepage="https://github.com/lassekongo83/adw-gtk3"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=adw-gtk-theme
+version=6.5
+release=1
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}
