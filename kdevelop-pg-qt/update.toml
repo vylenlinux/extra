@@ -1,0 +1,6 @@
+name = "kdevelop-pg-qt"
+provider = "gitlab"
+
+[source]
+instance = "https://invent.kde.org/"
+project = "kdevelop/%(name)"
