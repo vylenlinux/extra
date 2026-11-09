@@ -1,5 +1,9 @@
 name = "libaio"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "libaio"
+owner = "jmoyer"
+repo = "%(name)"
+
+[version]
+strip_prefix = "%(name)-"
