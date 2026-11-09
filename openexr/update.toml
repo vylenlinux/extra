@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "AcademySoftwareFoundation"
 repo = "openexr"
+
+[version]
+exclude = ["v*-rc"]
