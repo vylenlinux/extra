@@ -1,0 +1,6 @@
+name = "fd"
+provider = "github"
+
+[source]
+owner = "sharkdp"
+repo = "%(name)"
