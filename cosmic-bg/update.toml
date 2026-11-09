@@ -1,9 +1,5 @@
 name = "cosmic-bg"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "%(name)"
-
-[version]
-strip_prefix = "epoch-"
+project = "%(name)"

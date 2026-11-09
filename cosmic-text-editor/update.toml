@@ -1,9 +1,5 @@
 name = "cosmic-text-editor"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "cosmic-edit"
-
-[version]
-strip_prefix = "epoch-"
+project = "%(name)"

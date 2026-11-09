@@ -1,9 +1,5 @@
 name = "cosmic-icon-theme"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "cosmic-icons"
-
-[version]
-strip_prefix = "epoch-"
+project = "cosmic-icons"
