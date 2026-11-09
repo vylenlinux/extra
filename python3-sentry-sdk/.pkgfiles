@@ -2,11 +2,11 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b3.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b4.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b4.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b4.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b4.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0b4.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/
