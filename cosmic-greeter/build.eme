@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="COSMIC greeter for greetd"
+homepage="https://github.com/pop-os/cosmic-greeter"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-greeter
+version=1.11.0
+release=1
+backup="etc/greetd/${name}.toml"
+
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz
+    ${name}-display-manager.patch
+    ${name}-lto.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+    cargo fetch --locked
+
+    patch -Np1 -i "${SRC}/${name}-display-manager.patch"
+    patch -Np1 -i "${SRC}/${name}-lto.patch"
+
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld"
+    export VERGEN_GIT_SHA=80e8a10
+    export VERGEN_GIT_COMMIT_DATE="2026-10-20"
+
+    just build-release --frozen
+    just rootdir="${PKG}" install
+
+    install -Dm644 cosmic-greeter.toml -t "${PKG}/etc/greetd/"
+    install -Dm644 debian/*.service -t "${PKG}/usr/lib/systemd/system/"
+}

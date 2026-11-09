@@ -1,0 +1,9 @@
+name = "cosmic-icon-theme"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "cosmic-icons"
+
+[version]
+strip_prefix = "epoch-"

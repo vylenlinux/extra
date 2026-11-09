@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Image viewer for the COSMIC desktop environment"
+homepage="https://github.com/pop-os/cosmic-viewer"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-viewer
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+    cargo fetch --locked
+
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld"
+    export CFLAGS="${CFLAGS} -ffat-lto-objects"
+    export CXXFLAGS="${CXXFLAGS} -ffat-lto-objects"
+    export TURBOJPEG_SOURCE=pkg-config
+    export TURBOJPEG_DYNAMIC=1
+
+    just build-release --frozen
+    just rootdir="${PKG}" install
+}

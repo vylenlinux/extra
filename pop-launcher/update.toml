@@ -1,0 +1,10 @@
+name = "pop-launcher"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "launcher"
+
+[version]
+include = ["epoch-*"]
+strip_prefix = "epoch-"

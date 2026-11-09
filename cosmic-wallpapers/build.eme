@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Wallpapers for the COSMIC Desktop Environment"
+homepage="https://github.com/pop-os/cosmic-wallpapers"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-wallpapers
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+    make DESTDIR="${PKG}" install
+}

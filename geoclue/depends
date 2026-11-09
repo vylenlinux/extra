@@ -1,0 +1,8 @@
+avahi
+glib
+gobject-introspection
+json-glib
+libnotify
+libsoup
+modemmanager
+vala

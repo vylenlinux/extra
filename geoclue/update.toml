@@ -1,0 +1,5 @@
+name = "geoclue"
+provider = "freedesktop"
+
+[source]
+project = "%(name)/%(name)"

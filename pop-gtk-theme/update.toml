@@ -1,0 +1,6 @@
+name = "pop-gtk-theme"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "gtk-theme"

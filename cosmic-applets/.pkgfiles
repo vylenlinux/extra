@@ -1,0 +1,123 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/cosmic-app-list -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-a11y -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-audio -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-battery -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-bluetooth -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-input-sources -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-minimize -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-network -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-notifications -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-osk -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-power -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-status-area -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-tiling -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-time -> /usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-applet-workspaces -> /usr/bin/cosmic-applets
+-rwxr-xr-x root/root    usr/bin/cosmic-applets
+lrwxrwxrwx root/root    usr/bin/cosmic-panel-button -> /usr/bin/cosmic-applets
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/com.system76.CosmicStatusNotifierWatcher.service
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppList.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletA11y.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletAudio.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletBattery.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletBluetooth.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletInputSources.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletMinimize.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletNetwork.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletNotifications.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletOsk.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletPower.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletStatusArea.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletTiling.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletTime.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicAppletWorkspaces.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicPanelAppButton.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicPanelLauncherButton.desktop
+-rw-r--r-- root/root    usr/share/applications/com.system76.CosmicPanelWorkspacesButton.desktop
+drwxr-xr-x root/root    usr/share/cosmic/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicAppList/
+drwxr-xr-x root/root    usr/share/cosmic/com.system76.CosmicAppList/v1/
+-rw-r--r-- root/root    usr/share/cosmic/com.system76.CosmicAppList/v1/favorites
+-rw-r--r-- root/root    usr/share/cosmic/com.system76.CosmicAppList/v1/filter_top_levels
+drwxr-xr-x root/root    usr/share/dbus-1/
+drwxr-xr-x root/root    usr/share/dbus-1/services/
+-rw-r--r-- root/root    usr/share/dbus-1/services/com.system76.CosmicStatusNotifierWatcher.service
+drwxr-xr-x root/root    usr/share/dbus-1/system.d/
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/com.system76.CosmicSettings.Applet.NetworkManager.SecretAgent.conf
+drwxr-xr-x root/root    usr/share/icons/
+drwxr-xr-x root/root    usr/share/icons/hicolor/
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppList.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletAudio-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletBattery-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletBluetooth-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletInputSources-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletMinimize.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletNetwork-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletNotifications-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletPower-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletStatusArea.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletTiling-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletTiling.Off.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletTiling.On.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletTime-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletWorkspaces.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicPanelAppButton.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicPanelLauncherButton.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/com.system76.CosmicPanelWorkspacesButton.svg
+drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/status/
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-display-brightness-high-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-display-brightness-low-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-display-brightness-medium-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-display-brightness-off-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-0-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-0-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-0-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-0-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-10-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-10-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-10-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-10-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-100-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-100-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-20-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-20-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-20-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-20-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-35-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-35-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-35-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-35-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-5-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-5-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-5-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-5-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-50-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-50-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-50-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-50-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-65-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-65-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-65-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-65-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-80-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-80-limited-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-80-limited-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-80-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-90-charging-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-battery-level-90-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-bluetooth-active-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-bluetooth-disabled-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-notification-disabled-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-notification-new-symbolic.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/status/cosmic-applet-notification-symbolic.svg
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/com.system76.CosmicApplets.metainfo.xml

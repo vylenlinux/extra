@@ -1,0 +1,9 @@
+name = "xdg-desktop-portal-cosmic"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "%(name)"
+
+[version]
+strip_prefix = "epoch-"

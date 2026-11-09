@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Cosmic icon theme"
+homepage="https://github.com/pop-os/cosmic-icons"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-icon-theme
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/cosmic-icons/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "cosmic-icons-epoch-${version}"
+    just rootdir="${PKG}" install
+}

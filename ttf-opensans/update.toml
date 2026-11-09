@@ -1,0 +1,5 @@
+name = "ttf-opensans"
+provider = "git"
+
+[source]
+url = "https://github.com/googlefonts/opensans.git"

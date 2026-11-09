@@ -1,0 +1,6 @@
+name = "sound-theme-freedesktop"
+provider = "ftp"
+
+[ftp]
+url = "https://people.freedesktop.org/~mccann/dist/"
+filename = "%(name)-%(version).tar.bz2"

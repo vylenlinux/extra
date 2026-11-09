@@ -1,0 +1,53 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/pop-launcher/
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/calc/
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/calc/calc -> ../../../../bin/pop-launcher
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/calc/plugin.ron
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/cosmic_toplevel/
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/cosmic_toplevel/cosmic-toplevel -> ../../../../bin/pop-launcher
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/cosmic_toplevel/plugin.ron
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/desktop_entries/
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/desktop_entries/desktop-entries -> ../../../../bin/pop-launcher
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/desktop_entries/plugin.ron
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/files/
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/files/files -> ../../../../bin/pop-launcher
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/files/plugin.ron
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/find/
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/find/find -> ../../../../bin/pop-launcher
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/find/plugin.ron
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/pop_shell/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/pop_shell/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/pop_shell/pop-shell -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/pulse/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/pulse/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/pulse/pulse -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/recent/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/recent/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/recent/recent -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/scripts/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/scripts/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/scripts/scripts -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/terminal/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/terminal/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/terminal/terminal -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/plugins/web/
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/web/config.ron
+-rw-r--r-- root/root    usr/lib/pop-launcher/plugins/web/plugin.ron
+lrwxrwxrwx root/root    usr/lib/pop-launcher/plugins/web/web -> ../../../../bin/pop-launcher
+drwxr-xr-x root/root    usr/lib/pop-launcher/scripts/
+drwxr-xr-x root/root    usr/lib/pop-launcher/scripts/session/
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-bios.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-lock.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-logout.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-reboot.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-shutdown.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/session/session-suspend.sh
+drwxr-xr-x root/root    usr/lib/pop-launcher/scripts/system76-power/
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/system76-power/graphics-compute.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/system76-power/graphics-discrete.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/system76-power/graphics-hybrid.sh
+-rw-r--r-- root/root    usr/lib/pop-launcher/scripts/system76-power/graphics-integrated.sh

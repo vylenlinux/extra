@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A simple, fast and user-friendly alternative to 'find'"
+homepage="https://github.com/sharkdp/fd"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=fd
+version=10.5.2
+release=1
+source="${name}-${version}.tar.gz::https://github.com/sharkdp/${name}/archive/refs/tags/v${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    cargo fetch --locked
+
+    export JEMALLOC_OVERRIDE=/usr/lib/libjemalloc.so
+    export CARGO_FEATURE_UNPREFIXED_MALLOC_ON_SUPPORTED_PLATFORMS=1
+
+    cargo build \
+        --release \
+        --frozen
+
+    make completions
+
+    install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 "autocomplete/${name}.bash" "${PKG}/usr/share/bash-completion/completions/${name}"
+    install -Dm644 "autocomplete/${name}.fish" -t "${PKG}/usr/share/fish/vendor_completions.d/"
+    install -Dm644 "autocomplete/_${name}" -t "${PKG}/usr/share/zsh/site-functions/"
+    install -Dm644 "doc/${name}.1" -t "${PKG}/usr/share/man/man1/"
+}

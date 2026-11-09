@@ -1,0 +1,9 @@
+name = "cosmic-workspaces"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "%(name)-epoch"
+
+[version]
+strip_prefix = "epoch-"

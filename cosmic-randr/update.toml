@@ -1,0 +1,9 @@
+name = "cosmic-randr"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "%(name)"
+
+[version]
+strip_prefix = "epoch-"

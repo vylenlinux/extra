@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Text editor for the COSMIC desktop"
+homepage="https://github.com/pop-os/cosmic-edit"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-text-editor
+version=1.11.0
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/pop-os/cosmic-edit/archive/refs/tags/epoch-${version}.tar.gz
+    ${name}-lto.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "cosmic-edit-epoch-${version}"
+
+    patch -Np1 -i "${SRC}/${name}-lto.patch"
+    cargo fetch --locked
+
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=mold"
+    export RUSTONIG_DYNAMIC_LIBONIG=1
+
+    just build-release --frozen
+    just rootdir="${PKG}" install
+}

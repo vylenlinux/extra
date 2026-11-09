@@ -1,0 +1,6 @@
+name = "libde265"
+provider = "github"
+
+[source]
+owner = "strukturag"
+repo = "%(name)"
