@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Cosmic workspaces"
+homepage="https://github.com/pop-os/cosmic-workspaces-epoch"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-workspaces
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}-epoch/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-epoch-${version}"
+
+    cargo fetch --locked
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld"
+
+    make ARGS='--release --frozen'
+    make DESTDIR="${PKG}" install
+}
