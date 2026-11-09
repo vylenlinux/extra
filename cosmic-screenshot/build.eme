@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Utility for capturing screenshots via XDG Desktop Portal"
+homepage="https://github.com/pop-os/cosmic-screenshot"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-screenshot
+version=1.11.0
+release=1
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-epoch-${version}"
+
+    cargo fetch --locked
+    export RUSTFLAGS="${RUSTFLAGS} -C link-arg=-fuse-ld=lld"
+
+    just build-release --frozen
+    just rootdir="${PKG}" install
+}
