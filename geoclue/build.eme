@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Modular geoinformation service built on the D-Bus messaging system"
+homepage="https://gitlab.freedesktop.org/geoclue/geoclue/-/wikis/home"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=geoclue
+version=2.8.2
+release=1
+backup="etc/${name}/${name}.conf"
+
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz
+    0001-Lock-user-account.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0001-Lock-user-account.patch"
+
+    vylen-meson "${name}-${version}" build -Ddbus-srv-user="${name}"
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    do_tmpfiles "${name}"
+}
