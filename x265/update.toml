@@ -1,5 +1,6 @@
 name = "x265"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "x265"
+owner = "Multicorewareinc"
+repo = "%(name)"
