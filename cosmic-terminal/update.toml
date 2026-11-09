@@ -1,0 +1,9 @@
+name = "cosmic-terminal"
+provider = "github"
+
+[source]
+owner = "pop-os"
+repo = "cosmic-term"
+
+[version]
+strip_prefix = "epoch-"
