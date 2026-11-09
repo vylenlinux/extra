@@ -1,0 +1,16 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/cosmic-session
+-rwxr-xr-x root/root    usr/bin/start-cosmic
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/cosmic-session.target
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/cosmic-mimeapps.list
+drwxr-xr-x root/root    usr/share/dconf/
+drwxr-xr-x root/root    usr/share/dconf/profile/
+-rw-r--r-- root/root    usr/share/dconf/profile/cosmic
+drwxr-xr-x root/root    usr/share/wayland-sessions/
+-rw-r--r-- root/root    usr/share/wayland-sessions/cosmic.desktop
