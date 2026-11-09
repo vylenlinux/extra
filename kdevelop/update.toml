@@ -1,0 +1,5 @@
+name = "kdevelop"
+provider = "kde"
+
+[kde]
+product = "gear"
