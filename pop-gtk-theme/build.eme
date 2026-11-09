@@ -6,7 +6,7 @@ homepage="https://github.com/pop-os/gtk-theme"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pop-gtk-theme
-version=5.3.1
+version=5.5.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/pop-os/gtk-theme/archive/refs/tags/v${version}.tar.gz"
 
