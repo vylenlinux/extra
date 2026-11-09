@@ -1,5 +1,6 @@
 name = "kvantum"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "kvantum"
+owner = "tsujan"
+repo = "%(name)"
