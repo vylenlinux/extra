@@ -1,19 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Open Source H264/AVC video encoder"
 homepage="https://www.videolan.org/developers/x264.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=x264
-version=20191217.2245
-_version=$(printf '%s' "$version" | tr '.' '-')
+version=20250831
 release=1
-source="http://download.videolan.org/pub/videolan/$name/snapshots/$name-snapshot-${_version}-stable.tar.bz2"
+
+commit=0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee
+source="https://code.videolan.org/videolan/${name}/-/archive/${commit}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-snapshot-${_version}-stable
+    # shellcheck disable=SC2164
+    cd "${name}-${commit}"
+    export BASHCOMPLETIONSDIR=/usr/share/bash-completion/completions
 
-	./configure --prefix=/usr \
-	            --enable-shared \
-	            --disable-cli
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        --enable-pic \
+        --enable-lto \
+        --disable-avs
+
+    make
+
+    make DESTDIR="${PKG}" \
+        install-cli \
+        install-lib-shared \
+        install-bashcompletion
 }

@@ -1,9 +1,5 @@
 name = "x264"
-provider = "ftp"
+provider = "git"
 
-[ftp]
-url = "https://download.videolan.org/pub/videolan/x264/snapshots/"
-filename = "x264-snapshot-%(version)-stable.tar.bz2"
-
-[version]
-replace = { - = "." }
+[source]
+url = "https://code.videolan.org/videolan/%(name)/"
