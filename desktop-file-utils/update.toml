@@ -1,5 +1,5 @@
 name = "desktop-file-utils"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "desktop-file-utils"
+project = "xdg/%(name)"
