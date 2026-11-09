@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Library to compare files and strings"
+homepage="https://www.kde.org/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libkomparediff2
+version=26.08.3
+release=1
+source="https://download.kde.org/stable/release-service/${version}/src/${name}-${version}.tar.xz"
+
+build() {
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DBUILD_TESTING=OFF \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

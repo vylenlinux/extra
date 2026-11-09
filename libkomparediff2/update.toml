@@ -1,0 +1,5 @@
+name = "libkomparediff2"
+provider = "kde"
+
+[kde]
+product = "gear"

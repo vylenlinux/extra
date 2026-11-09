@@ -1,0 +1,7 @@
+extra-cmake-modules
+kconfig
+kcoreaddons
+ki18n
+kio
+kxmlgui
+qt6-base
