@@ -1,5 +1,6 @@
 name = "stemmer"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "snowballstemmer"
+owner = "snowballstem"
+repo = "snowball"
