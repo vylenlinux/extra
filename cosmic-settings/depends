@@ -10,7 +10,7 @@ libpulse
 libxkbcommon
 mold
 networkmanager
-nm-connection-editor
+network-manager-applet
 pipewire
 ttf-opensans
 wayland
