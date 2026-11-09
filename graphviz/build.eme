@@ -6,9 +6,9 @@ homepage="https://www.graphviz.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=graphviz
-version=16.1.0
+version=16.1.1
 release=1
-source="https://gitlab.com/${name}/${name}/-/archive/${version}/${name}-${version}.tar.bz2"
+source="https://gitlab.com/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

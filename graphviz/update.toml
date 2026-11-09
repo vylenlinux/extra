@@ -1,5 +1,5 @@
 name = "graphviz"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "graphviz"
+project = "%(name)/%(name)"
