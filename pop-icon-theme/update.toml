@@ -1,6 +1,5 @@
 name = "pop-icon-theme"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "icon-theme"
+project = "icon-theme"

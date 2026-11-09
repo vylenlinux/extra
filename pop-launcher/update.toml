@@ -1,10 +1,5 @@
 name = "pop-launcher"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "launcher"
-
-[version]
-include = ["epoch-*"]
-strip_prefix = "epoch-"
+project = "launcher"

@@ -1,6 +1,5 @@
 name = "pop-gtk-theme"
-provider = "github"
+provider = "cosmic"
 
 [source]
-owner = "pop-os"
-repo = "gtk-theme"
+project = "%(name)"
