@@ -15,6 +15,9 @@ drwxr-xr-x root/root    usr/share/applications/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/services/
 -rw-r--r-- root/root    usr/share/dbus-1/services/org.mate.panel.applet.GvcAppletFactory.service
+drwxr-xr-x root/root    usr/share/glib-2.0/
+drwxr-xr-x root/root    usr/share/glib-2.0/schemas/
+-rw-r--r-- root/root    usr/share/glib-2.0/schemas/org.mate.volume-control.gschema.xml
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/mate-volume-control-status-icon.1.gz
