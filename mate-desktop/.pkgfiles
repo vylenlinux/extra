@@ -21,6 +21,7 @@ drwxr-xr-x root/root    usr/include/mate-desktop-2.0/libmate-desktop/
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr-config.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr-labeler.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr.h
+-rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-systemd.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libmate-desktop-2.so -> libmate-desktop-2.so.17
 lrwxrwxrwx root/root    usr/lib/libmate-desktop-2.so.17 -> libmate-desktop-2.so.17.1.4
