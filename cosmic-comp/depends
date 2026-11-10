@@ -2,7 +2,6 @@ fontconfig
 just
 libdisplay-info
 libinput
-libxcb
 libxkbcommon
 mesa
 pixman

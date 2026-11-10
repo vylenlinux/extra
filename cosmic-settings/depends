@@ -2,15 +2,9 @@ accountsservice
 adw-gtk-theme
 cosmic-icon-theme
 cosmic-randr
-fontconfig
-iso-codes
-just
 libinput
 libpulse
-libxkbcommon
 mold
-networkmanager
 network-manager-applet
 pipewire
 ttf-opensans
-wayland
