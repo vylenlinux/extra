@@ -6,7 +6,7 @@ homepage="https://getcomposer.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=composer
-version=2.11.1
+version=2.11.2
 release=1
 source="${name}-${version}.phar::https://github.com/${name}/${name}/releases/download/${version}/${name}.phar"
 
