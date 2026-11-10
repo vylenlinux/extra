@@ -13,11 +13,10 @@ source="https://github.com/ImageOptim/${name}/archive/${version}/${name}-${versi
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}/imagequant-sys"
+    cargo fetch
 
     export CARGO_PROFILE_RELEASE_LTO=true
     export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
-
-    cargo fetch --target host-tuple
 
     cargo cbuild \
         --prefix=/usr \
