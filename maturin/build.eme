@@ -13,10 +13,7 @@ source="https://github.com/PyO3/${name}/archive/v${version}/${name}-${version}.t
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    cargo fetch \
-        --locked \
-        --target "$(rustc --print host-tuple)"
+    cargo fetch --locked
 
     gpep517 build-wheel \
         --wheel-dir .dist \
