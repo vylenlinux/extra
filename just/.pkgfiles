@@ -5,9 +5,6 @@ drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/bash-completion/
 drwxr-xr-x root/root    usr/share/bash-completion/completions/
 -rw-r--r-- root/root    usr/share/bash-completion/completions/just
-drwxr-xr-x root/root    usr/share/elvish/
-drwxr-xr-x root/root    usr/share/elvish/lib/
--rw-r--r-- root/root    usr/share/elvish/lib/just.elv
 drwxr-xr-x root/root    usr/share/fish/
 drwxr-xr-x root/root    usr/share/fish/vendor_completions.d/
 -rw-r--r-- root/root    usr/share/fish/vendor_completions.d/just.fish

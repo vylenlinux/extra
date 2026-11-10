@@ -13,16 +13,13 @@ source="${name}-${version}.tar.gz::https://github.com/casey/${name}/archive/${ve
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    cargo fetch --locked
 
     export CARGO_PROFILE_RELEASE_DEBUG=2
     export CARGO_PROFILE_RELEASE_STRIP=false
     export CARGO_PROFILE_RELEASE_LTO=true
     export CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
     export CARGO_PROFILE_RELEASE_OPT_LEVEL=3
-
-    cargo fetch \
-        --locked \
-        --target host-tuple
 
     cargo build \
         --frozen \
@@ -39,7 +36,6 @@ build() {
 
     install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
     install -Dm644 "completions/${name}.bash" "${PKG}/usr/share/bash-completion/completions/${name}"
-    install -Dm644 "completions/${name}.elvish" "${PKG}/usr/share/elvish/lib/${name}.elv"
     install -Dm644 "completions/${name}.fish" -t "${PKG}/usr/share/fish/vendor_completions.d/"
     install -Dm644 "completions/${name}.zsh" "${PKG}/usr/share/zsh/site-functions/_${name}"
 }
