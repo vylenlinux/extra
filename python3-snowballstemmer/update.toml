@@ -1,5 +1,7 @@
 name = "python3-snowballstemmer"
-provider = "pypi"
+provider = "github"
+dedup_key = "stemmer"
 
 [source]
-package = "snowballstemmer"
+owner = "snowballstem"
+repo = "snowball"
