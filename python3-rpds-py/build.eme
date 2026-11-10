@@ -13,10 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/crate-py/rpds/archive/refs
 build() {
     # shellcheck disable=SC2164
     cd "rpds-${version}"
-
-    cargo fetch \
-        --locked \
-        --target host-tuple
+    cargo fetch --locked
 
     python3 -m build \
         --wheel \
