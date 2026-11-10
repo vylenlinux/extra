@@ -2,17 +2,17 @@
 
 # shellcheck disable=SC2034
 description="Snowball stemming library collection for Python."
-homepage="https://github.com/snowballstem/snowball"
+homepage="https://github.com/shibukawa/snowball_py/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-snowballstemmer
 version=3.1.1
 release=1
-source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/43/f8/0a71edf031f03c40db17503cb8ca78a69a171254e568e7db241b0ab57ea1/snowballstemmer-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://pypi.org/packages/source/S/Snowballstemmer/${name#*-}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "snowballstemmer-${version}"
+    cd "${name#*-}-${version}"
     python3 setup.py build
 
     python3 setup.py install \
