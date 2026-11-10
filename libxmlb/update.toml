@@ -1,5 +1,6 @@
 name = "libxmlb"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libxmlb"
+owner = "hughsie"
+repo = "%(name)"
