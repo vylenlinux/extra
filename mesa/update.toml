@@ -1,6 +1,9 @@
 name = "mesa"
-provider = "ftp"
+provider = "freedesktop"
 
-[ftp]
-url = "https://mesa.freedesktop.org/archive/"
-filename = "mesa-%(version).tar.xz"
+[source]
+project = "%(name)/%(name)"
+
+[version]
+include = ["%(name)-*"]
+strip_prefix = "%(name)-"

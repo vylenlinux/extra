@@ -6,7 +6,7 @@ homepage="https://www.mesa3d.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mesa
-version=26.2.6
+version=26.3.0
 release=1
 
 ### BEGIN Rust crates
