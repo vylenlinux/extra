@@ -1,5 +1,9 @@
 name = "xwayland"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "xwayland"
+project = "xorg/xserver"
+
+[version]
+include = ["%(name)-*"]
+exclude = ["%(name)-26.0.99.*"]

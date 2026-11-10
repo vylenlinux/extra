@@ -6,7 +6,7 @@ homepage="https://www.x.org/wiki"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xwayland
-version=24.1.14
+version=24.1.15
 release=1
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/xorg/xserver/-/archive/${name}-${version}/xserver-${name}-${version}.tar.gz"
 
