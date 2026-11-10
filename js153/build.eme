@@ -6,7 +6,7 @@ homepage="https://spidermonkey.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=js153
-version=153.6.0
+version=153.7.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
@@ -49,5 +49,5 @@ build() {
     make DESTDIR="${PKG}" install
 
     rm "${PKG}/usr/lib/libjs_static.ajs"
-    sed -i '/@NSPR_CFLAGS@/d' "${PKG}/usr/bin/${name}-config"
+    sed '/@NSPR_CFLAGS@/d' -i "${PKG}/usr/bin/${name}-config"
 }
