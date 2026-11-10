@@ -9,4 +9,5 @@ libgtop
 librsvg
 libwnck3
 libxml2
+mate-common
 polkit
