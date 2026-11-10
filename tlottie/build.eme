@@ -13,10 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/dkaraush/${name}/archive/r
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
-    cargo fetch \
-        --locked \
-        --target host-tuple
+    cargo fetch --locked
 
     cargo build \
         --release \
