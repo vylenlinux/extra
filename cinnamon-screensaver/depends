@@ -1,9 +1,5 @@
 accountsservice
 cinnamon-desktop
-gobject-introspection
-libgnomekbd
-python3-cairo
-python3-gobject3
 python3-setproctitle
 xapp
 xdotool

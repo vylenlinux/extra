@@ -1,14 +1,10 @@
 cinnamon-desktop
 colord
-dbus-glib
 libcanberra
 libcups
 libgnomekbd
-libgudev
 libnotify
-librsvg
 libwacom
 nss
-polkit
 upower
 xf86-input-wacom
