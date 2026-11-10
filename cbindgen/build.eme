@@ -13,7 +13,7 @@ source="https://github.com/eqrion/${name}/archive/v${version}/${name}-${version}
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    cargo fetch --target x86_64-unknown-linux-gnu
+    cargo fetch --locked
 
     cargo build \
         --release \
