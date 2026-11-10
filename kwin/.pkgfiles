@@ -327,12 +327,13 @@ drwxr-xr-x root/root    usr/lib/kconf_update_bin/
 -rwxr-xr-x root/root    usr/lib/kwin-applywindowdecoration
 -rwxr-xr-x root/root    usr/lib/kwin-tabbox-preview
 -rwxr-xr-x root/root    usr/lib/kwin_dialog_helper
+-rwxr-xr-x root/root    usr/lib/kwin_eis_prompter
 -rwxr-xr-x root/root    usr/lib/kwin_killer_helper
-lrwxrwxrwx root/root    usr/lib/libkcmkwincommon.so.6 -> libkcmkwincommon.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkcmkwincommon.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libkcmkwincommon.so.6 -> libkcmkwincommon.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkcmkwincommon.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libkwin.so -> libkwin.so.6
-lrwxrwxrwx root/root    usr/lib/libkwin.so.6 -> libkwin.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkwin.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libkwin.so.6 -> libkwin.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkwin.so.6.8.3
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
@@ -368,6 +369,7 @@ drwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/StickyKeysPlugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/TouchpadShortcutsPlugin.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/buttonsrebind.so
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/eis.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/gamecontroller.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/krunnerintegration.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kwin/plugins/nightlight.so

@@ -6,7 +6,7 @@ homepage="https://invent.kde.org/plasma/breeze"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=breeze
-version=6.8.2
+version=6.8.3
 release=1
 source="https://download.kde.org/stable/plasma/${version}/${name}-${version}.tar.xz"
 

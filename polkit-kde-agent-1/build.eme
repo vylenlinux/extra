@@ -6,7 +6,7 @@ homepage="https://invent.kde.org/plasma/polkit-kde-agent-1"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=polkit-kde-agent-1
-version=6.8.2
+version=6.8.3
 release=1
 source="${name}-${version}.tar.bz2::https://invent.kde.org/plasma/${name}/-/archive/v${version}/${name}-v${version}.tar.bz2"
 

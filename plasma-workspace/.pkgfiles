@@ -124,31 +124,31 @@ drwxr-xr-x root/root    usr/lib/kf6/kauth/
 -rwxr-xr-x root/root    usr/lib/ksecretprompter
 -rwxr-xr-x root/root    usr/lib/ksmserver-logout-greeter
 lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so -> libbatterycontrol.so.6
-lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so.6 -> libbatterycontrol.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libbatterycontrol.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libbatterycontrol.so.6 -> libbatterycontrol.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libbatterycontrol.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libkfontinst.so -> libkfontinst.so.6
-lrwxrwxrwx root/root    usr/lib/libkfontinst.so.6 -> libkfontinst.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkfontinst.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libkfontinst.so.6 -> libkfontinst.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkfontinst.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libkfontinstui.so -> libkfontinstui.so.6
-lrwxrwxrwx root/root    usr/lib/libkfontinstui.so.6 -> libkfontinstui.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkfontinstui.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libkfontinstui.so.6 -> libkfontinstui.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkfontinstui.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libklipper.so -> libklipper.so.6
-lrwxrwxrwx root/root    usr/lib/libklipper.so.6 -> libklipper.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libklipper.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libklipper.so.6 -> libklipper.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libklipper.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libklookandfeel.so -> libklookandfeel.so.6
-lrwxrwxrwx root/root    usr/lib/libklookandfeel.so.6 -> libklookandfeel.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libklookandfeel.so.6.8.2
-lrwxrwxrwx root/root    usr/lib/libkmpris.so.6 -> libkmpris.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkmpris.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libklookandfeel.so.6 -> libklookandfeel.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libklookandfeel.so.6.8.3
+lrwxrwxrwx root/root    usr/lib/libkmpris.so.6 -> libkmpris.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkmpris.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libkworkspace6.so -> libkworkspace6.so.6
-lrwxrwxrwx root/root    usr/lib/libkworkspace6.so.6 -> libkworkspace6.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libkworkspace6.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libkworkspace6.so.6 -> libkworkspace6.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libkworkspace6.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so -> libnotificationmanager.so.1
-lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so.1 -> libnotificationmanager.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libnotificationmanager.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libnotificationmanager.so.1 -> libnotificationmanager.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libnotificationmanager.so.6.8.3
 lrwxrwxrwx root/root    usr/lib/libtaskmanager.so -> libtaskmanager.so.6
-lrwxrwxrwx root/root    usr/lib/libtaskmanager.so.6 -> libtaskmanager.so.6.8.2
--rwxr-xr-x root/root    usr/lib/libtaskmanager.so.6.8.2
+lrwxrwxrwx root/root    usr/lib/libtaskmanager.so.6 -> libtaskmanager.so.6.8.3
+-rwxr-xr-x root/root    usr/lib/libtaskmanager.so.6.8.3
 -rwxr-xr-x root/root    usr/lib/plasma-changeicons
 -rwxr-xr-x root/root    usr/lib/plasma-dbus-run-session-if-needed
 -rwxr-xr-x root/root    usr/lib/plasma-fallback-session-restore
@@ -272,6 +272,11 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/breeze/components/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/breeze/components/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/breeze/components/libcomponents.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/breeze/components/qmldir
+drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kworkspace/
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kworkspace/kde-qmlmodule.version
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kworkspace/kworkspace.qmltypes
+-rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kworkspace/libkworkspaceplugin.so
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kworkspace/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/notificationmanager/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/notificationmanager/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/notificationmanager/libnotificationmanagerplugin.so
