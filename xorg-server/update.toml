@@ -1,5 +1,10 @@
 name = "xorg-server"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "xorg-server"
+project = "xorg/xserver"
+
+[version]
+include = ["%(name)-*"]
+exclude = ["%(name)-26.0.99.*"]
+strip_prefix = "%(name)-"
