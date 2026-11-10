@@ -19,9 +19,7 @@ build() {
     cp "${SRC}/${name}-${version}.Cargo.lock" Cargo.lock
     export RUSTUP_TOOLCHAIN=stable
 
-    cargo fetch \
-        --locked \
-        --target "$(rustc -vV | sed -n 's/host: //p')"
+    cargo fetch --locked
 
     cargo build \
         --release \
