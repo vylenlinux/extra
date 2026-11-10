@@ -6,7 +6,7 @@ homepage="https://vivaldi.com/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vivaldi
-version=8.3.4191.30+1
+version=8.3.4191.35+1
 release=1
 
 _version="$(printf '%s' "${version}" | tr '+' '-')"
