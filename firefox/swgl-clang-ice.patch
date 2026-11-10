@@ -1,0 +1,16 @@
+diff --git a/gfx/wr/swgl/build.rs b/gfx/wr/swgl/build.rs
+--- a/gfx/wr/swgl/build.rs
++++ b/gfx/wr/swgl/build.rs
+@@ -241,7 +241,12 @@
+             build
+                 .flag("-ffast-math")
+                 .flag("-mrecip=none")
+-                .flag("-fno-finite-math-only");
++                .flag("-fno-finite-math-only")
++                // LLVM 23.1.x can hit a SelectionDAG assertion while lowering
++                // zero-extending v4f32 shuffles for -march=x86-64 (pre-SSE4.1).
++                // Disabling inlining of regular functions avoids the pattern;
++                // SWGL's hot paths use ALWAYS_INLINE and remain inlined.
++                .flag("-fno-inline-functions");
+         }
+     }

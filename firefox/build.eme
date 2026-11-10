@@ -6,7 +6,7 @@ homepage="https://www.mozilla.org/firefox/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=firefox
-version=159.0.1
+version=160.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
@@ -14,12 +14,15 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/relea
     config
     distribution.ini
     vendor.js
-    fix-target-detection.patch"
+    fix-target-detection.patch
+    swgl-clang-ice.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
     patch -Np1 -i "${SRC}/fix-target-detection.patch"
+    patch -Np1 -i "${SRC}/swgl-clang-ice.patch"
 
     sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
     install -Dm644 "${SRC}/config" .mozconfig
@@ -35,21 +38,16 @@ build() {
         printf 'ac_add_options --enable-default-toolkit=cairo-gtk3\n' >> .mozconfig
 
     # build configuration
-    # export CC=gcc CXX=g++ # build with GCC
+    export CC=clang
+    export CXX=clang++
+    export HOST_CC=clang
+    export HOST_CXX=clang++
     export CFLAGS="${CFLAGS} -w"
-    export CXXFLAGS="${CXXFLAGS} -w" # disable warnings
-    export RUSTFLAGS="${RUSTFLAGS} -C opt-level=2"
+    export CXXFLAGS="${CXXFLAGS} -w"
     export BUILD_OFFICIAL=1
-    export MOZILLA_OFFICIAL=1
-    export MOZ_APP_REMOTINGNAME="${name}"
-    export MOZ_NOSPAM=1
-    export MOZBUILD_STATE_PATH="${SRC}/mozbuild"
-
-    unset CARGO_PROFILE_RELEASE_OPT_LEVEL
-    unset CARGO_PROFILE_RELEASE_LTO
 
     # python configuration
-    export SHELL=/bin/sh
+    export SHELL=/usr/bin/sh
     export PIP_NETWORK_INSTALL_RESTRICTED_VIRTUALENVS=mach
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=pip
 
