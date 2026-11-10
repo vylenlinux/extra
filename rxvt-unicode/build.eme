@@ -6,13 +6,11 @@ homepage="http://software.schmorp.de/pkg/rxvt-unicode.html"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=rxvt-unicode
-version=9.31
+version=9.32
 release=1
 
 source="http://dist.schmorp.de/${name}/Attic/${name}-${version}.tar.bz2
-    perl-5.38.patch
     urxvt-lerp.patch
-    urxvt-osc.patch
     24-bit-color.patch
     URxvt
     urxvt.desktop"
@@ -21,14 +19,8 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    # Locale fix for perl 5.38
-    patch -Np1 -i "${SRC}/perl-5.38.patch"
-
     # Fix lerp() error with C++20 / GCC16
     patch -Np1 -i "${SRC}/urxvt-lerp.patch"
-
-    # Fix OSC with 7-bit ST.
-    patch -Np1 -i "${SRC}/urxvt-osc.patch"
 
     # add suuport for 24-bit colour
     patch -Np0 -i "${SRC}/24-bit-color.patch"
@@ -47,7 +39,9 @@ build() {
     make
 
     mkdir -p "${PKG}/usr/share/terminfo"
-    TERMINFO="${PKG}/usr/share/terminfo" make DESTDIR="${PKG}" install
+    export TERMINFO="${PKG}/usr/share/terminfo"
+
+    make DESTDIR="${PKG}" install
 
     install -Dm644 "${SRC}/URxvt" -t "${PKG}/etc/X11/app-defaults/"
     install -Dm644 "${SRC}/urxvt.desktop" -t "${PKG}/usr/share/applications/"
