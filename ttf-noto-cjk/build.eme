@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Google Noto CJK fonts"
+homepage="https://fonts.google.com/noto"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ttf-noto-cjk
+version=20240730
+release=1
+
+_sans_version=2.004
+_serif_version=2.003
+
+source="https://github.com/googlefonts/noto-cjk/releases/download/Sans${_sans_version}/03_NotoSansCJK-OTC.zip
+    https://github.com/googlefonts/noto-cjk/releases/download/Serif${_serif_version}/04_NotoSerifCJKOTC.zip
+    70-noto-cjk.conf"
+
+build() {
+    install -Dm644 *.ttc -t "${PKG}/usr/share/fonts/noto-cjk/"
+    install -Dm644 OTC/*.ttc -t "${PKG}/usr/share/fonts/noto-cjk/"
+    install -Dm644 70-noto-cjk.conf -t "${PKG}/usr/share/fontconfig/conf.avail/"
+
+    install -d "${PKG}/usr/share/fontconfig/conf.default"
+    ln -rs "${PKG}/usr/share/fontconfig/conf.avail"/* "${PKG}/usr/share/fontconfig/conf.default/"
+}

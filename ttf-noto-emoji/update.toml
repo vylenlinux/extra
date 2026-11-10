@@ -1,0 +1,9 @@
+name = "ttf-noto-emoji"
+provider = "github"
+
+[source]
+owner = "googlefonts"
+repo = "noto-emoji"
+
+[version]
+field = "tag"

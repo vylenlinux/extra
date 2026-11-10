@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Google Noto TTF fonts"
+homepage="https://fonts.google.com/noto"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ttf-noto
+version=2026.11.01
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-${version}.tar.gz
+    66-noto-sans.conf
+    66-noto-serif.conf
+    66-noto-mono.conf"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "notofonts.github.io-noto-monthly-release-${version}"
+    install -Dm644 fonts/*/hinted/ttf/*.ttf -t "${PKG}/usr/share/fonts/noto/"
+
+    # Moved to ttf-noto-extra
+    rm -f "${PKG}/usr/share/fonts/noto"/Noto*-Condensed*.ttf \
+        "${PKG}/usr/share/fonts/noto"/Noto*-Semi*.ttf \
+        "${PKG}/usr/share/fonts/noto"/Noto*-Extra*.ttf
+
+    for t in sans serif mono; do
+        install -Dm644 "${SRC}/66-noto-${t}.conf" -t "${PKG}/usr/share/fontconfig/conf.avail/"
+    done
+
+    install -d "${PKG}/usr/share/fontconfig/conf.default"
+    ln -rs "${PKG}/usr/share/fontconfig/conf.avail"/* -t "${PKG}/usr/share/fontconfig/conf.default/"
+}

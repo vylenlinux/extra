@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Google Noto TTF fonts (extra)"
+homepage="https://fonts.google.com/noto"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ttf-noto-extra
+version=2026.11.01
+release=1
+source="ttf-noto-${version}.tar.gz::https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "notofonts.github.io-noto-monthly-release-${version}"
+
+    install -Dm644 fonts/*/hinted/ttf/*-Condensed*.ttf -t "${PKG}/usr/share/fonts/noto/"
+    install -Dm644 fonts/*/hinted/ttf/*-Semi*.ttf -t "${PKG}/usr/share/fonts/noto/"
+    install -Dm644 fonts/*/hinted/ttf/*-Extra*.ttf -t "${PKG}/usr/share/fonts/noto/"
+}

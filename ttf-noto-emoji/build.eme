@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Google Noto emoji fonts"
+homepage="https://fonts.google.com/noto"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=ttf-noto-emoji
+version=20260924
+release=1
+
+tag=2026-09-24-unicode18_0
+
+source="https://github.com/googlefonts/noto-emoji/raw/refs/tags/v${tag}/2D/fonts/NotoColorEmoji.ttf
+    https://github.com/googlefonts/noto-emoji/raw/refs/tags/v${tag}/3D/fonts/Noto-3D-192.ttf"
+
+build() {
+    install -Dm644 NotoColorEmoji.ttf Noto-3D-192.ttf -t "${PKG}/usr/share/fonts/noto/"
+}

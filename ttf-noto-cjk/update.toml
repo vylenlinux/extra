@@ -1,0 +1,5 @@
+name = "ttf-noto-cjk"
+provider = "repology"
+
+[source]
+package = "fonts:noto-cjk"

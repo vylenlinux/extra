@@ -1,0 +1,11 @@
+name = "ttf-noto-extra"
+provider = "github"
+dedup_key = "ttf-noto"
+
+[source]
+owner = "notofonts"
+repo = "notofonts.github.io"
+
+[version]
+strip_prefix = "noto-monthly-release-"
+include = ["noto-monthly-release-*"]
