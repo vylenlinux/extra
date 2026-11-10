@@ -61,10 +61,7 @@ build() {
     install -Dm644 "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
 
     # distribution
-    sed \
-         -e "s|@VERSION@|${version}|" \
-         -e "s|@NAME@|${name}|" \
-    -i "${SRC}/distribution.ini" | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
+    sed "s|@VERSION@|${version}|" -i "${SRC}/distribution.ini" | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
 
     # add icons
     for i in 16 22 24 32 48 64 128 256; do
