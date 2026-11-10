@@ -1,6 +1,6 @@
 name = "linux-lts-api-headers"
 provider = "ftp"
-dedup_key = "linux"
+dedup_key = "linux-lts"
 
 [ftp]
 url = "https://www.kernel.org/pub/linux/kernel/v6.x/"
