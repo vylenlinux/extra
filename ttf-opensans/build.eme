@@ -6,10 +6,10 @@ homepage="https://github.com/googlefonts/opensans"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ttf-opensans
-version=20261103
+version=20261110
 release=1
 
-commit=8e14d71005add3120ad40627c1a55b7ba869737c
+commit=6cbc400d4855abee59d85c4ed871d510399bce7b
 source="https://github.com/googlefonts/opensans/archive/${commit}/${name}-${version}.tar.gz"
 
 build() {
