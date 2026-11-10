@@ -1,5 +1,6 @@
 name = "go"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "go"
+[ftp]
+url = "https://golang.org/dl/"
+filename = "%(name)%(version).src.tar.gz"

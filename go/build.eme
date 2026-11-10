@@ -6,7 +6,7 @@ homepage="https://golang.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=go
-version=1.27.3
+version=1.27.4
 release=1
 
 source="${name}-${version}.tar.gz::https://golang.org/dl/${name}${version}.src.tar.gz
