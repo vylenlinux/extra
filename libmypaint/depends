@@ -1,4 +1,3 @@
-glib
 gobject-introspection
 intltool
 json-c

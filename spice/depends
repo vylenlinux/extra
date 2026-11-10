@@ -3,10 +3,8 @@ cyrus-sasl
 gdk-pixbuf
 glib-networking
 libcacard
-libjpeg-turbo
 opus
 orc
-pixman
 python3-pyparsing
 python3-six
 spice-protocol

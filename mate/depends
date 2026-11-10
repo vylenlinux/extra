@@ -1,17 +1,10 @@
 caja
-libmatekbd
-libmateweather
-marco
 mate-backgrounds
 mate-control-center
-mate-desktop
 mate-icon-theme
-mate-menus
 mate-notification-daemon
-mate-panel
 mate-polkit
 mate-session-manager
-mate-settings-daemon
 mate-terminal
 mate-themes
 mate-user-guide

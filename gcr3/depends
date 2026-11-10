@@ -1,10 +1,4 @@
-glib
 gnupg
-gobject-introspection
 gtk3
-libgcrypt
 libsecret
-libxslt
-openssh
 p11-kit
-vala

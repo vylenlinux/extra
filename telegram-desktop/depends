@@ -11,12 +11,9 @@ minizip
 openal
 protobuf
 qt6-5compat
-qt6-imageformats
-qt6-svg
 qt6-wayland
 range-v3
 rnnoise
-svt-av1
 td
 tg_owt
 tlottie

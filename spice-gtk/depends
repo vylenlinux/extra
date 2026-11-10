@@ -1,12 +1,8 @@
-cyrus-sasl
 graphite2
 gst-plugins-good
 gtk3
 json-glib
 libva
-libxcomposite
-libxcursor
-libxinerama
 polkit
 spice
 usbutils

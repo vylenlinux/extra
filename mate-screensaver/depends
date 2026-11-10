@@ -1,14 +1,6 @@
 dbus-glib
-gtk3
-libice
 libmatekbd
 libnotify
-libsm
-libx11
-libxext
-libxklavier
 libxscrnsaver
-libxxf86vm
 mate-desktop
 mate-menus
-mesa

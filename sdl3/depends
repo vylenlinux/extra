@@ -1,9 +1,4 @@
-cmake
-libx11
 libxcursor
-libxext
-libxfixes
-libxi
 libxinerama
 libxkbcommon
 libxrandr

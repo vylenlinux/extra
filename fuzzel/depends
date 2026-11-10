@@ -1,9 +1,2 @@
-cairo
 fcft
-fontconfig
-libpng
 libxkbcommon
-pixman
-scdoc
-tllist
-wayland-protocols

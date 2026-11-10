@@ -1,17 +1,4 @@
-at-spi2-core
-cairo
-dconf
-gdk-pixbuf
-glib
-gobject-introspection
 gspell
-gtk3
 gtksourceview4
-intltool
-itstool
 libpeas1
-libx11
-libxml2
-pango
-python3-gobject3
 xapp

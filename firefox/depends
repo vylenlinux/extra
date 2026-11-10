@@ -1,14 +1,10 @@
 autoconf2.13
-cbindgen
-clang
 dbus-glib
 ffmpeg
 hicolor-icon-theme
 libevent
 libnotify
 libwebp
-libxdamage
-libxscrnsaver
 nodejs
 nss
 unzip

@@ -1,11 +1,8 @@
 asciidoc
 brotli
-cmake
 gdk-pixbuf
 gflags
 giflib
 highway
 lcms2
-libjpeg-turbo
-libpng
 openexr

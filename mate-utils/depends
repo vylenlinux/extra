@@ -1,10 +1,4 @@
-glib
-gtk3
 libcanberra
 libgtop
-libice
-libsm
-libx11
-libxext
 mate-panel
 udisks2

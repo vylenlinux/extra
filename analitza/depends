@@ -1,4 +1,3 @@
 eigen
 extra-cmake-modules
 qt6-5compat
-qt6-svg

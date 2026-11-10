@@ -1,17 +1,13 @@
-alsa-lib
 aom
 dav1d
 fdk-aac
-freetype2
 gnutls
 lame
 libass
 libtheora
-libvorbis
 libvpx
 nv-codec-headers
 opus
 sdl2-compat
 x264
 x265
-yasm

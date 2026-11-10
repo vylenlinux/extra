@@ -1,11 +1,7 @@
-alsa-lib
-clang
 desktop-file-utils
 ffmpeg
 gtk3
-intltool
 jansson
 libdispatch
 libmad
 libsamplerate
-yasm

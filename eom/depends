@@ -1,13 +1,5 @@
 dbus-glib
-glib
-gobject-introspection
-gtk3
-itstool
 lcms2
 libexif
-libjpeg-turbo
 libpeas1
-librsvg
-libx11
-libxml2
 mate-desktop

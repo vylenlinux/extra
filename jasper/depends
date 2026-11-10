@@ -1,4 +1,2 @@
-cmake
 freeglut
 libjpeg-turbo
-libxmu

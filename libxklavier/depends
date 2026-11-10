@@ -1,7 +1,5 @@
-glib
 gobject-introspection
 iso-codes
-libxfixes
 libxi
 libxkbfile
 libxml2

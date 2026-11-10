@@ -1,7 +1,3 @@
-cmake
 gtk3
 imlib2
-librsvg
-libxcomposite
-libxdamage
 startup-notification

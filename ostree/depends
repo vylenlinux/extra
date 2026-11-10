@@ -1,5 +1,4 @@
 fuse
-glib
 gpgme
 libsodium
 libsoup

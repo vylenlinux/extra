@@ -1,13 +1,3 @@
-at-spi2-core
-cairo
-gdk-pixbuf
-glib
-gtk3
-harfbuzz
 libcanberra
 libnotify
-libwnck3
-libx11
-mate-desktop
 mate-panel
-pango

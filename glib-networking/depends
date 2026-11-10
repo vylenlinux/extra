@@ -1,5 +1,2 @@
-glib
 gnutls
-gsettings-desktop-schemas
 libproxy
-p11-kit

@@ -1,6 +1,4 @@
 gnome-common
-gobject-introspection
 libgtop
 libwnck3
 python3-lxml
-vala

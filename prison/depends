@@ -1,5 +1,4 @@
 extra-cmake-modules
 libdmtx
 qrencode
-qt6-multimedia
 zxing-cpp

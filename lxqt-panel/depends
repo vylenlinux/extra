@@ -1,6 +1,5 @@
 layer-shell-qt
 libdbusmenu-lxqt
-libqtxdg
 libstatgrab
 libsysstat
 lm_sensors

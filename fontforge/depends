@@ -1,11 +1,4 @@
-cairo
 desktop-file-utils
-freetype2
-glib
 gtk3
-harfbuzz
 libspiro
 libuninameslist
-libxml2
-pango
-shared-mime-info

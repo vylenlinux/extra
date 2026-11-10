@@ -1,13 +1,5 @@
-alsa-lib
-dbus
-glib
-libice
-libsm
 libsndfile
-libx11
-libxcb
 libxtst
-perl-xml-parser
 rtkit
 speexdsp
 tdb

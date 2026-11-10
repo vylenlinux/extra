@@ -1,12 +1,5 @@
-at-spi2-core
-cairo
 fast_float
 fmt
-fribidi
-gdk-pixbuf
 gnutls
-gobject-introspection
 gtk3
-pango
 simdutf
-vala

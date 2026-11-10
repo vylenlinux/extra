@@ -1,14 +1,8 @@
 cinnamon-desktop
-gobject-introspection
-graphene
-intltool
 libcanberra
 libinput
-libsm
 libwacom
-libxkbcommon
 pipewire
 startup-notification
-wayland-protocols
 xwayland
 zenity

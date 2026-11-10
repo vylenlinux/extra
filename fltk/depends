@@ -1,7 +1,4 @@
-cmake
 fontconfig
 glu
-libglvnd
 libjpeg-turbo
-libpng
 shared-mime-info

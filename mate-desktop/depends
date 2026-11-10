@@ -1,9 +1,4 @@
 dconf
-gdk-pixbuf
 gtk3
 iso-codes
-librsvg
-libxkbcommon
 startup-notification
-wayland
-wayland-protocols

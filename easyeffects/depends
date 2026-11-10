@@ -1,10 +1,8 @@
 appstream-glib
-breeze-icons
 calf
 desktop-file-utils
 fmt
 gsl
-kconfigwidgets
 kiconthemes
 kirigami-addons
 libadwaita

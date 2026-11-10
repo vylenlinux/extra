@@ -1,13 +1,8 @@
 cairomm
-gdk-pixbuf
-glib
 glibmm
-gtk3
 gtkmm3
 itstool
 libgtop
-librsvg
 libwnck3
-libxml2
 mate-common
 polkit

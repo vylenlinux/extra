@@ -1,7 +1,4 @@
 dbus-glib
-gobject-introspection
-gtk3
 gtk-doc
 libdbusmenu
 libindicator
-vala

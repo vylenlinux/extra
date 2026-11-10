@@ -1,9 +1,7 @@
 feh
-gtk3
 libappindicator
 python3-gobject3
 python3-pillow
-python3-yaml
 slurp
 swaybg
 xrandr

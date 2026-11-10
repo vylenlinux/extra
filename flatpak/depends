@@ -2,10 +2,8 @@ appstream
 avahi
 bubblewrap
 dconf
-gdk-pixbuf
 json-glib
 libseccomp
-libxml2
 ostree
 polkit
 python3-pyparsing

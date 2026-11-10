@@ -3,6 +3,5 @@ brotli
 dbus-python
 json-glib
 libsoup
-python3-gobject3
 python3-tappy
 stemmer

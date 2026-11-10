@@ -1,10 +1,7 @@
 brotli
 ffmpeg
-libevent
 libva
-libwebp
 libxcomposite
-libxcursor
 minizip
 nodejs
 nss

@@ -1,7 +1,6 @@
 alsa-lib
 dtc
 libslirp
-orc
 sdl2-compat
 spice
 usbredir

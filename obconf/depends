@@ -1,6 +1,3 @@
 desktop-file-utils
-gtk2
 libglade
-libsm
 openbox
-startup-notification

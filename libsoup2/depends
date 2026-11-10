@@ -1,5 +1,4 @@
 glib-networking
-gobject-introspection
 krb5
 libpsl
 libxml2

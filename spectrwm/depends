@@ -1,6 +1,3 @@
-freetype2
-libx11
-libxcb
 libxcursor
 libxft
 libxrandr

@@ -1,10 +1,7 @@
 desktop-file-utils
-itstool
 libayatana-appindicator
 libgtop
-libmatekbd
 marco
 mate-menus
 mate-settings-daemon
-polkit
 udisks2

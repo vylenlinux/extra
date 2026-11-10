@@ -1,9 +1,4 @@
-cairo
 gcr
-glib
-gobject-introspection
-gtk3
 iso-codes
 mobile-broadband-provider-info
 networkmanager
-vala

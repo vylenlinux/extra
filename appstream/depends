@@ -4,6 +4,4 @@ libfyaml
 libsoup2
 libvips
 libxmlb
-lmdb
 stemmer
-vala

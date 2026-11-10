@@ -1,8 +1,2 @@
-cairo
-gdk-pixbuf
-glib
-gobject-introspection
 gtk3
 libgee
-pango
-vala

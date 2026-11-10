@@ -1,4 +1,2 @@
-cmake
 ffmpeg
 libjpeg-turbo
-libpng

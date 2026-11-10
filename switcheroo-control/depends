@@ -1,5 +1,4 @@
 dbus-python
-glib
 libdrm
 libgudev
 python3-gobject3

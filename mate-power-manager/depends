@@ -1,11 +1,6 @@
-dbus-glib
-gtk3
 libcanberra
 libgnome-keyring
 libnotify
 libsecret
-libx11
-libxext
-libxrandr
 mate-panel
 upower

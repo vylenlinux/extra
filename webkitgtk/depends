@@ -1,9 +1,7 @@
 bubblewrap
-cairo
 enchant
 flite
 gst-plugins-bad
-gtk3
 harfbuzz-icu
 libjxl
 libnotify
@@ -11,7 +9,6 @@ libseccomp
 libsecret
 libsoup
 libwebp
-openjpeg2
 ruby
 unifdef
 wpebackend-fdo

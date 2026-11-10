@@ -1,5 +1,4 @@
 cryptsetup
-gobject-introspection
 json-glib
 keyutils
 libbytesize

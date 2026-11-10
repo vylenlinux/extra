@@ -2,7 +2,6 @@ argon2
 enchant
 krb5
 libpng
-libxml2
 libzip
 oniguruma
 tidy

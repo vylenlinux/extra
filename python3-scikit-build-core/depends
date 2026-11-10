@@ -1,6 +1,3 @@
 cmake
-python3-hatchling
 python3-hatch-vcs
-python3-packaging
-python3-pathspec
 python3-typing_extensions

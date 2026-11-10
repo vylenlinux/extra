@@ -1,8 +1,5 @@
 jxrlib
-libjpeg-turbo
-libpng
 libraw
-libtiff
 libwebp
 openexr
 openjpeg2

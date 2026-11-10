@@ -1,10 +1,6 @@
 cinnamon-desktop
-dconf
-gobject-introspection
 gvfs
-intltool
 libexif
 libgsf
 libnotify
-libxml2
 xapp
