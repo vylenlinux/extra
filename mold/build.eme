@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A Modern Linker"
+homepage="https://github.com/rui314/mold"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=mold
+version=3.0.0
+release=1
+
+source="${name}-${version}.tar.gz::https://github.com/rui314/${name}/archive/v${version}.tar.gz
+    use-lib-without-libexec.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    patch -Np1 -i "${SRC}/use-lib-without-libexec.patch"
+
+    cargo fetch \
+        --locked \
+        --target host-tuple
+
+    cargo build \
+        --frozen \
+        --release \
+        --package mold-cli
+
+    DESTDIR="${PKG}" PREFIX=/usr ./install-mold.sh
+}
