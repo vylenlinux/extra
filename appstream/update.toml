@@ -1,6 +1,6 @@
 name = "appstream"
-provider = "ftp"
+provider = "github"
 
-[ftp]
-url = "https://www.freedesktop.org/software/appstream/releases/"
-filename = "AppStream-%(version).tar.xz"
+[source]
+owner = "ximion"
+repo = "%(name)"

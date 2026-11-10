@@ -68,6 +68,7 @@ drwxr-xr-x root/root    usr/include/appstream/
 -rw-r--r-- root/root    usr/include/appstream/as-image.h
 -rw-r--r-- root/root    usr/include/appstream/as-issue.h
 -rw-r--r-- root/root    usr/include/appstream/as-launchable.h
+-rw-r--r-- root/root    usr/include/appstream/as-locale.h
 -rw-r--r-- root/root    usr/include/appstream/as-macros.h
 -rw-r--r-- root/root    usr/include/appstream/as-metadata.h
 -rw-r--r-- root/root    usr/include/appstream/as-pool.h
@@ -102,14 +103,14 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStream-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/AppStreamCompose-1.0.typelib
 lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so -> libAppStreamQt.so.3
--rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.2
-lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.2
+-rwxr-xr-x root/root    usr/lib/libAppStreamQt.so.1.2.3
+lrwxrwxrwx root/root    usr/lib/libAppStreamQt.so.3 -> libAppStreamQt.so.1.2.3
 lrwxrwxrwx root/root    usr/lib/libappstream-compose.so -> libappstream-compose.so.1
-lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.2
--rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.2
+lrwxrwxrwx root/root    usr/lib/libappstream-compose.so.1 -> libappstream-compose.so.1.2.3
+-rwxr-xr-x root/root    usr/lib/libappstream-compose.so.1.2.3
 lrwxrwxrwx root/root    usr/lib/libappstream.so -> libappstream.so.5
--rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.2
-lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.2
+-rwxr-xr-x root/root    usr/lib/libappstream.so.1.2.3
+lrwxrwxrwx root/root    usr/lib/libappstream.so.5 -> libappstream.so.1.2.3
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream-compose.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/appstream.pc
