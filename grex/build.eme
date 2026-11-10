@@ -13,10 +13,7 @@ source="${name}-${version}.tar.gz::https://github.com/pemistahl/${name}/archive/
 build() {
 	# shellcheck disable=SC2164
 	cd "${name}-${version}"
-
-	cargo fetch \
-	    --locked \
-	    --target x86_64-unknown-linux-gnu
+	cargo fetch --locked
 
 	cargo build \
 	    --frozen \
