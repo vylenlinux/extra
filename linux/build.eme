@@ -6,7 +6,7 @@ homepage="https://www.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=linux
-version=7.3.3
+version=7.3.4
 release=1
 
 _version="${version%.0}"

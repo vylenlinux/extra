@@ -2,5 +2,5 @@ name = "linux"
 provider = "ftp"
 
 [ftp]
-url = "https://www.kernel.org/pub/linux/kernel/v7.x/"
-filename = "linux-%(version).tar.xz"
+url = "https://www.kernel.org/pub/%(name)/kernel/v7.x/"
+filename = "%(name)-%(version).tar.xz"
