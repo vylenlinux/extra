@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmm-glib
 version=1.24.2
-release=2
+release=1
 source="modemmanager-${version}.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/modemmanager/-/archive/${version}/ModemManager-${version}.tar.gz"
 
 build() {
