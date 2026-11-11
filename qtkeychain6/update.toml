@@ -1,5 +1,6 @@
 name = "qtkeychain6"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "qtkeychain6"
+owner = "frankosterfeld"
+repo = "qtkeychain"
