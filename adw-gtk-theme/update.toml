@@ -1,0 +1,6 @@
+name = "adw-gtk-theme"
+provider = "github"
+
+[source]
+owner = "lassekongo83"
+repo = "adw-gtk3"
