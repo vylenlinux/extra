@@ -1,5 +1,5 @@
 name = "vivaldi-ffmpeg-codecs"
-provider = "repology"
+provider = "git"
 
 [source]
-package = "vivaldi-ffmpeg-codecs"
+url = "https://chromium.googlesource.com/chromium/third_party/ffmpeg.git"
