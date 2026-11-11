@@ -13,7 +13,7 @@ source="https://gitlab.gnome.org/GNOME/network-manager-applet/-/archive/${versio
 build() {
     vylen-meson "network-manager-applet-${version}" build \
         -Dselinux=false \
-        -Dwwan="$(emerald is-installed modemmanager && printf "true" || printf "false")"
+        -Dwwan="$(emerald is-installed libmm-glib && printf "true" || printf "false")"
 
     meson compile -C build
     DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
