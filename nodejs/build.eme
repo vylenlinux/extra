@@ -6,7 +6,7 @@ homepage="https://nodejs.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=nodejs
-version=26.13.0
+version=26.13.1
 release=1
 
 source="${name}-${version}.tar.xz::https://nodejs.org/dist/v${version}/node-v${version}.tar.xz
@@ -26,13 +26,4 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
-
-    find "${PKG}" -type f \( \
-        -name 'README.md' -o \
-        -name 'AUTHORS.md' -o \
-        -name 'INSTALL.md' -o \
-        -name 'TODO.org' -o \
-        -name 'ChangeLog' -o \
-        -name 'NEWS' \
-    \) -delete
 }

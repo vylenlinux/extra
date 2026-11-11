@@ -1,5 +1,9 @@
 name = "nodejs"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nodejs"
+owner = "%(name)"
+repo = "node"
+
+[version]
+exclude = ["*-alpha*"]
