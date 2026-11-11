@@ -1,4 +1,4 @@
 cinnamon-menus
 cinnamon-settings-daemon
-libnma
 modemmanager
+nm-connection-editor
