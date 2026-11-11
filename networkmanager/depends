@@ -1,12 +1,9 @@
 docbook-xsl
 gnutls
 jansson
+libmm-glib
 libndp
 libpsl
-libxslt
 newt-tui
 nss
-polkit
-python3-gobject3
-vala
 wpa_supplicant
