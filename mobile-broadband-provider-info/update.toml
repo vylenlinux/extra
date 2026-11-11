@@ -1,5 +1,5 @@
 name = "mobile-broadband-provider-info"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "mobile-broadband-provider-info"
