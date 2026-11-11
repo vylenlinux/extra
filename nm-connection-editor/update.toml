@@ -1,0 +1,9 @@
+name = "nm-connection-editor"
+provider = "gnome"
+dedup_key = "network-manager-applet"
+
+[source]
+package = "network-manager-applet"
+
+[version]
+exclude = ["*-dev"]

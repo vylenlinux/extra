@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="NetworkManager GUI connection editor and widgets"
+homepage="https://gitlab.gnome.org/GNOME/network-manager-applet"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=nm-connection-editor
+version=1.36.0
+release=1
+source="network-manager-applet-${version}.tar.gz::https://gitlab.gnome.org/GNOME/network-manager-applet/-/archive/${version}/network-manager-applet-${version}.tar.gz"
+
+build() {
+    vylen-meson "network-manager-applet-${version}" build \
+        -Dselinux=false \
+        -Dwwan="$(emerald is-installed modemmanager && printf "true" || printf "false")"
+
+    meson compile -C build
+    DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
+
+    install -Dm755 "DESTDIR/usr/bin/${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 "DESTDIR/usr/share/applications/${name}.desktop" -t "${PKG}/usr/share/applications/"
+    install -Dm644 DESTDIR/usr/share/icons/hicolor/22x22/apps/nm-device-wwan.png -t "${PKG}/usr/share/icons/hicolor/22x22/apps/"
+    install -Dm644 DESTDIR/usr/share/icons/hicolor/scalable/apps/nm-device-wwan-symbolic.svg -t "${PKG}/usr/share/icons/hicolor/scalable/apps/"
+    install -Dm644 "DESTDIR/usr/share/man/man1/${name}.1" -t "${PKG}/usr/share/man/man1/"
+    install -Dm644 "DESTDIR/usr/share/metainfo/${name}.appdata.xml" -t "${PKG}/usr/share/metainfo/"
+}
