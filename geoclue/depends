@@ -1,5 +1,5 @@
 avahi
 json-glib
+libmm-glib
 libnotify
 libsoup
-modemmanager
