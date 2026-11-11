@@ -1,5 +1,5 @@
 name = "libosinfo"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libosinfo"
+project = "%(name)/%(name)"
