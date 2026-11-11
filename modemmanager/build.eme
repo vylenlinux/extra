@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=modemmanager
 version=1.24.2
-release=1
+release=2
 
 source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/${name}/-/archive/${version}/ModemManager-${version}.tar.gz
     ${name}-disable-info-logging.patch"
