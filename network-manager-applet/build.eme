@@ -13,7 +13,7 @@ source="https://gitlab.gnome.org/GNOME/${name}/-/archive/${version}/${name}-${ve
 build() {
     vylen-meson "${name}-${version}" build \
         -Dselinux=false \
-        -Dwwan="$(emerald is-installed modemmanager && printf "true" || printf "false")"
+        -Dwwan="$(emerald is-installed libmm-glib && printf "true" || printf "false")"
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
