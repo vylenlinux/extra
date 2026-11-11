@@ -6,9 +6,9 @@ homepage="https://github.com/dkms-project/dkms"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dkms
-version=3.4.4
+version=3.4.5
 release=1
-backup="etc/dkms/framework.conf"
+backup="etc/${name}/framework.conf"
 
 source="${name}-${version}.tar.gz::https://github.com/dkms-project/${name}/archive/v${version}.tar.gz
     buildmodules-template.sh.in"
@@ -18,5 +18,5 @@ build() {
     cd "${name}-${version}"
 
     make DESTDIR="${PKG}" SBIN=/usr/bin install
-    install -Dm644 "${SRC}/buildmodules-template.sh.in" -t "${PKG}/usr/lib/dkms/"
+    install -Dm644 "${SRC}/buildmodules-template.sh.in" -t "${PKG}/usr/lib/${name}/"
 }

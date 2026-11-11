@@ -1,16 +1,6 @@
 #!/bin/sh
 
 # dkms scripts for @NAME@
-dkms_remove() {
-    dkms status -m @NAME@ | while read -r line; do
-        module="$(printf "%s\n" "${line}" | sed 's/,//g' | awk '{print $1;}')"
-        kernel_version="$(printf "%s\n" "${line}" | sed 's/,//g' | awk '{print $2;}')"
-
-        printf "dkms: remove @NAME@ modules for kernel %s...\n" "${kernel_version}"
-        dkms remove -m "${module}" -k "${kernel_version}" >/dev/null 2>&1
-    done
-}
-
 dkms_install() {
     # shellcheck disable=SC2045
     kernel_version="$(find /usr/lib/modules -maxdepth 1 -type d -iname '*-linux' -printf "%f\n" | sort -V | tail -n1)"
@@ -21,6 +11,16 @@ dkms_install() {
     dkms add     -m @NAME@ -v @VERSION@ -k "${kernel_version}" >/dev/null 2>&1
     dkms build   -m @NAME@ -v @VERSION@ -k "${kernel_version}" >/dev/null 2>&1
     dkms install -m @NAME@ -v @VERSION@ -k "${kernel_version}" >/dev/null 2>&1
+}
+
+dkms_remove() {
+    dkms status -m @NAME@ | while read -r line; do
+        module="$(printf "%s\n" "${line}" | sed 's/,//g' | awk '{print $1;}')"
+        kernel_version="$(printf "%s\n" "${line}" | sed 's/,//g' | awk '{print $2;}')"
+
+        printf "dkms: remove @NAME@ modules for kernel %s...\n" "${kernel_version}"
+        dkms remove -m "${module}" -k "${kernel_version}" >/dev/null 2>&1
+    done
 }
 
 case "${1}" in
