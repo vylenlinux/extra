@@ -1,5 +1,6 @@
 name = "libjxl"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libjxl"
+owner = "%(name)"
+repo = "%(name)"
