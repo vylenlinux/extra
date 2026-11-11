@@ -5,6 +5,6 @@ cosmic-randr
 libinput
 libpulse
 mold
-network-manager-applet
+nm-connection-editor
 pipewire
 ttf-opensans
