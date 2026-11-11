@@ -3,6 +3,3 @@ provider = "git"
 
 [source]
 url = "https://github.com/nothings/%(name)"
-
-[git]
-field = "version"
