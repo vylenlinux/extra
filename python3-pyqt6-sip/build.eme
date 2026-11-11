@@ -6,7 +6,7 @@ homepage="https://pypi.org/project/PyQt6-sip/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-pyqt6-sip
-version=13.13.0
+version=13.13.1
 release=1
 source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/P/PyQt6-sip/pyqt6_sip-${version}.tar.gz"
 
