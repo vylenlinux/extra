@@ -6,7 +6,7 @@ homepage="https://www.riverbankcomputing.com/software/sip/intro"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-sip
-version=6.17.2
+version=6.17.3
 release=1
 
 source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/s/sip/sip-${version}.tar.gz
