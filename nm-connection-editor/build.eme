@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=nm-connection-editor
 version=1.36.0
 release=1
-source="network-manager-applet-${version}.tar.gz::https://gitlab.gnome.org/GNOME/network-manager-applet/-/archive/${version}/network-manager-applet-${version}.tar.gz"
+source="https://gitlab.gnome.org/GNOME/network-manager-applet/-/archive/${version}/network-manager-applet-${version}.tar.gz"
 
 build() {
     vylen-meson "network-manager-applet-${version}" build \
