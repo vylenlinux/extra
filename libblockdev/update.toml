@@ -1,5 +1,6 @@
 name = "libblockdev"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libblockdev"
+owner = "storaged-project"
+repo = "%(name)"
