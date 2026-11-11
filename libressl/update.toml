@@ -1,5 +1,6 @@
 name = "libressl"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libressl"
+[ftp]
+url = "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/"
+filename = "%(name)-%(version).tar.gz"
