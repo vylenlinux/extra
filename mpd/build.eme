@@ -6,7 +6,7 @@ homepage="https://www.musicpd.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=mpd
-version=0.24.18
+version=0.24.19
 release=1
 
 source="${name}-${version}.tar.gz::https://github.com/MusicPlayerDaemon/${name}/archive/v${version}.tar.gz
