@@ -1,5 +1,6 @@
 name = "autoconf-archive"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "autoconf-archive"
+[ftp]
+url = "https://ftp.gnu.org/gnu/%(name)/"
+filename = "%(name)-%(version).tar.xz"

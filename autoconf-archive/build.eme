@@ -6,18 +6,15 @@ homepage="https://www.gnu.org/software/autoconf-archive/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=autoconf-archive
-version=2024.10.16
+version=2026.11.11
 release=1
-
-source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz
-    fix_AX_CXX_COMPILE_STDCXX.patch"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-    patch -Np1 -i "${SRC}/fix_AX_CXX_COMPILE_STDCXX.patch"
-
     ./configure --prefix=/usr
+
     make
     make DESTDIR="${PKG}" install
 }
