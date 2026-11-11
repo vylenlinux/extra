@@ -1,0 +1,9 @@
+name = "libmm-glib"
+provider = "freedesktop"
+dedup_key = "modemmanager"
+
+[source]
+project = "mobile-broadband/modemmanager"
+
+[version]
+exclude = ["*-dev"]

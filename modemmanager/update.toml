@@ -1,5 +1,8 @@
 name = "modemmanager"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "modemmanager"
+project = "mobile-broadband/%(name)"
+
+[version]
+exclude = ["*-dev"]

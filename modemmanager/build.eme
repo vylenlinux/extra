@@ -13,13 +13,23 @@ source="${name}-${version}.tar.gz::https://gitlab.freedesktop.org/mobile-broadba
     ${name}-disable-info-logging.patch"
 
 build() {
-    patch -d "ModemManager-${version}" -Np1 -i "${SRC}/modemmanager-disable-info-logging.patch"
+    patch -d "ModemManager-${version}" -Np1 -i "${SRC}/${name}-disable-info-logging.patch"
 
     vylen-meson "ModemManager-${version}" build \
         -Dat_command_via_dbus=true \
         -Dpolkit=permissive \
-        -Dudevdir=/usr/lib/udev
+        -Dudevdir=/usr/lib/udev \
+        -Dvapi=true
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # move to libmm-glib
+    rm -rf "${PKG}/usr/include" \
+        "${PKG}/usr/lib/girepository-1.0" \
+        "${PKG}/usr/lib/pkgconfig" \
+        "${PKG}/usr/share/gir-1.0" \
+        "${PKG}/usr/share/vala"
+
+    rm -f "${PKG}/usr/lib"/libmm-glib.so*
 }

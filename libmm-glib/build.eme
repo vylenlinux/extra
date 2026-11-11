@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="ModemManager library"
+homepage="https://www.freedesktop.org/wiki/Software/ModemManager/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libmm-glib
+version=1.24.2
+release=2
+source="modemmanager-${version}.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/modemmanager/-/archive/${version}/ModemManager-${version}.tar.gz"
+
+build() {
+    vylen-meson "ModemManager-${version}" build \
+        -Dat_command_via_dbus=true \
+        -Dpolkit=permissive \
+        -Dudevdir=/usr/lib/udev \
+        -Dvapi=true
+
+    meson compile -C build
+    DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
+
+    install -dm755 "${PKG}/usr/lib" \
+        "${PKG}/usr/share"
+
+    mv DESTDIR/usr/include -t "${PKG}/usr/"
+    mv DESTDIR/usr/lib/libmm-glib.so* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/girepository-1.0 -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/pkgconfig -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/share/gir-1.0 -t "${PKG}/usr/share/"
+    mv DESTDIR/usr/share/vala -t "${PKG}/usr/share/"
+}
