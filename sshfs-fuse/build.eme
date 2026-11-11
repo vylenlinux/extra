@@ -6,7 +6,7 @@ homepage="https://github.com/libfuse/sshfs"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=sshfs-fuse
-version=3.7.6
+version=3.7.7
 release=1
 source="${name}-${version}.tar.xz::https://github.com/libfuse/sshfs/releases/download/sshfs-${version}/sshfs-${version}.tar.xz"
 

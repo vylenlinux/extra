@@ -1,5 +1,9 @@
 name = "sshfs-fuse"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fusefs:sshfs"
+owner = "libfuse"
+repo = "sshfs"
+
+[version]
+strip_prefix = "sshfs-"
