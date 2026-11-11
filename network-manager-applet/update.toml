@@ -1,5 +1,8 @@
 name = "network-manager-applet"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "network-manager-applet"
+package = "%(name)"
+
+[version]
+exclude = ["*-dev"]
