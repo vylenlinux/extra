@@ -1,5 +1,6 @@
 name = "efivar"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "efivar"
+owner = "rhboot"
+repo = "%(name)"
