@@ -1,9 +1,9 @@
 layer-shell-qt
 libdbusmenu-lxqt
+libpulse
 libstatgrab
 libsysstat
 lm_sensors
 lxqt-globalkeys
 lxqt-menu-data
-pipewire
 solid
