@@ -18,6 +18,7 @@ python3-pyinotify
 python3-pytz
 python3-requests
 python3-tinycss2
+sound-theme-freedesktop
 timezonemap
 xdg-desktop-portal-xapp
 xdg-user-dirs-gtk
