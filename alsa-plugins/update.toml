@@ -1,5 +1,6 @@
 name = "alsa-plugins"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "alsa-plugins"
+owner = "alsa-project"
+repo = "%(name)"

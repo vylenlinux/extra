@@ -10,17 +10,29 @@ version=1.2.12
 release=1
 
 source="ftp://ftp.alsa-project.org/pub/plugins/${name}-${version}.tar.bz2
-    eef274dbc890a21c2400c8bffdcbda243782627d.patch"
+    eef274dbc890a21c2400c8bffdcbda243782627d.patch
+    pulse-sysdefault.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+
     patch -Np1 -i "${SRC}/eef274dbc890a21c2400c8bffdcbda243782627d.patch"
+    patch -Np1 -i "${SRC}/pulse-sysdefault.patch"
 
     ./configure \
         --prefix=/usr \
-        --sysconfdir=/etc
+        --sysconfdir=/etc \
+        --enable-maemo-plugin \
+        --enable-maemo-resource-manager
 
     make
     make DESTDIR="${PKG}" install
+
+    # remove maemo plugin configuration (it overrides defaults for pcm and ctl),
+    # until a better way is found to package default overrides
+    rm "${PKG}/etc/alsa/conf.d/98-maemo.conf"
+
+    # make a proper off-by-default config template out of the example file
+    mv "${PKG}/etc/alsa/conf.d/99-pulseaudio-default.conf.example" "${PKG}/usr/share/alsa/alsa.conf.d/99-pulseaudio-default.conf"
 }
