@@ -6,7 +6,7 @@ homepage="https://github.com/emersion/xdg-desktop-portal-wlr"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xdg-desktop-portal-wlr
-version=0.8.5
+version=0.9.0
 release=1
 
 source="https://github.com/emersion/${name}/archive/v${version}/${name}-${version}.tar.gz
