@@ -1,5 +1,8 @@
 name = "dbus"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "dbus"
+project = "%(name)/%(name)"
+
+[version.normalize]
+strip_prefix = "%(name)-"
