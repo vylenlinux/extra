@@ -68,6 +68,7 @@ drwxr-xr-x root/root    usr/lib/pulseaudio/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/bash-completion/
 drwxr-xr-x root/root    usr/share/bash-completion/completions/
+lrwxrwxrwx root/root    usr/share/bash-completion/completions/pacat -> pactl
 -rw-r--r-- root/root    usr/share/bash-completion/completions/pactl
 lrwxrwxrwx root/root    usr/share/bash-completion/completions/padsp -> pactl
 lrwxrwxrwx root/root    usr/share/bash-completion/completions/paplay -> pactl

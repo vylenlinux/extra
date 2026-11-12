@@ -7,23 +7,11 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libpulse
 version=17.0
-release=1
+release=2
 backup="etc/pulse/client.conf"
 source="https://www.freedesktop.org/software/pulseaudio/releases/pulseaudio-${version}.tar.xz"
 
 build() {
-    _copy_files() {
-        for file; do
-            for source in "${PWD}/DESTDIR"/${file}; do
-                [ -e "${source}" ] || [ -L "${source}" ] || continue
-                relative="${source#"${PWD}/DESTDIR/"}"
-
-                mkdir -p "${PKG}/${relative%/*}"
-                cp -a "${source}" "${PKG}/${relative}"
-            done
-        done
-    }
-
     vylen-meson "pulseaudio-${version}" build \
         -Dtests=false \
         -Ddoxygen="$(emerald is-installed doxygen && printf 'true' || printf 'false')" \
@@ -33,39 +21,32 @@ build() {
     meson compile -C build
     DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
 
-    _copy_files \
-        etc/pulse/client.conf \
-        usr/bin/pacat \
-        usr/bin/pactl \
-        usr/bin/padsp \
-        usr/bin/pamon \
-        usr/bin/paplay \
-        usr/bin/parec \
-        usr/bin/parecord \
-        usr/lib/libpulse.so* \
-        usr/lib/libpulse-simple.so* \
-        usr/lib/libpulse-mainloop-glib.so* \
-        usr/lib/pulseaudio/libpulsedsp.so \
-        usr/lib/pulseaudio/libpulsecommon-*.so \
-        usr/share/man/man1/pacat.1 \
-        usr/share/man/man1/pactl.1 \
-        usr/share/man/man1/padsp.1 \
-        usr/share/man/man1/pamon.1 \
-        usr/share/man/man1/paplay.1 \
-        usr/share/man/man1/parec.1 \
-        usr/share/man/man1/parecord.1 \
-        usr/share/man/man5/pulse-client.conf.5 \
-        usr/share/bash-completion/completions/pacap \
-        usr/share/bash-completion/completions/pactl \
-        usr/share/bash-completion/completions/padsp \
-        usr/share/bash-completion/completions/paplay \
-        usr/share/bash-completion/completions/parec \
-        usr/share/bash-completion/completions/parecord \
-        usr/lib/cmake \
-        usr/lib/pkgconfig \
-        usr/include \
-        usr/share/vala
+    install -dm755 "${PKG}/etc/pulse" \
+        "${PKG}/usr/bin" \
+        "${PKG}/usr/lib/pulseaudio" \
+        "${PKG}/usr/share/man/man1" \
+        "${PKG}/usr/share/man/man5" \
+        "${PKG}/usr/share/bash-completion/completions"
+
+    mv DESTDIR/etc/pulse/client.conf -t "${PKG}/etc/pulse/"
+    mv DESTDIR/usr/lib/pulseaudio/libpulsedsp.so -t "${PKG}/usr/lib/pulseaudio/"
+    mv DESTDIR/usr/share/man/man5/pulse-client.conf.5 -t "${PKG}/usr/share/man/man5/"
+
+    for bin in pacat pactl padsp pamon paplay parec parecord; do
+        mv "DESTDIR/usr/bin/${bin}" -t "${PKG}/usr/bin/"
+        mv "DESTDIR/usr/share/man/man1/${bin}.1" -t "${PKG}/usr/share/man/man1/"
+        mv "DESTDIR/usr/share/bash-completion/completions/${bin}" -t "${PKG}/usr/share/bash-completion/completions/"
+    done
+
+    mv DESTDIR/usr/lib/libpulse.so* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/libpulse-simple.so* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/libpulse-mainloop-glib.so* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/pulseaudio/libpulsecommon-*.so -t "${PKG}/usr/lib/pulseaudio/"
+    mv DESTDIR/usr/lib/cmake -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/pkgconfig -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/include -t "${PKG}/usr/"
+    mv DESTDIR/usr/share/vala -t "${PKG}/usr/share/"
 
     # Superseded by socket activation
-    sed -e '/autospawn/iautospawn = no' -i "${PKG}/etc/pulse/client.conf"
+    sed '/autospawn/iautospawn = no' -i "${PKG}/etc/pulse/client.conf"
 }

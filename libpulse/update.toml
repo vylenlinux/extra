@@ -1,6 +1,6 @@
 name = "libpulse"
-provider = "repology"
+provider = "freedesktop"
 dedup_key = "pulseaudio"
 
 [source]
-package = "pulseaudio"
+project = "pulseaudio/pulseaudio"
