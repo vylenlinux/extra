@@ -6,10 +6,10 @@ homepage="https://github.com/nothings/stb"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=stb
-version=20261112+2
+version=20261112+3
 release=1
 
-commit=9f755b604db3492df2cbeb39bf84b81e3e3932e3
+commit=9600522de53973336fa033a289858a4354cbb04c
 source="https://github.com/nothings/${name}/archive/${commit}/${name}-${version}.tar.gz"
 
 build() {
