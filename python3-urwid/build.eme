@@ -6,7 +6,7 @@ homepage="https://urwid.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-urwid
-version=5.1.2
+version=5.1.3
 release=1
 source="${name}-${version}.tar.gz::https://pypi.python.org/packages/source/u/urwid/urwid-${version}.tar.gz"
 
