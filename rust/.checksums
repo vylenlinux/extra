@@ -5,4 +5,4 @@ b6ba25f3d83a1a2dd95e0d8f0d4174dbb6d8fb3769812158645154f4618cfa46  0004-compiler-
 25d23df3fed4bf2a9ac722e8196d0f99b90a61cefd463f18440b49f2aa9059b6  0005-compiler-Use-ld.lld-by-default.patch
 90c3c90a4aea311b84185e59c418c0aa50d54b764b3ef80e77a049e28d87b060  0006-compiler-Swap-primary-and-secondary-lib-dirs.patch
 11ef158b6d4c9225604627cdbc9867db64d7e48aa40c344adf3afae494518506  bootstrap.toml
-2bc52b886be16ce836c0aeed92e5b139bd3ad11ad299fd017762e8b30d7b5076  rust-1.99.1.tar.xz
+5bedb0c18db7b23cf23356cc2cf0fd08e218c221e3841d1dddaeb26fd69957e9  rust-1.100.0.tar.xz

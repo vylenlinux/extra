@@ -1,5 +1,6 @@
 name = "rust"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "rust"
+owner = "%(name)-lang"
+repo = "%(name)"
