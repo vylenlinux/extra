@@ -6,6 +6,6 @@ knighttime
 kscreenlocker
 kwayland
 libdisplay-info
-pipewire
+libpipewire
 vulkan-icd-loader
 xwayland
