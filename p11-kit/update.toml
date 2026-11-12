@@ -1,5 +1,6 @@
 name = "p11-kit"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "p11-kit"
+owner = "p11-glue"
+repo = "%(name)"
