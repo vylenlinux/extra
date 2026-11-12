@@ -1,0 +1,6 @@
+name = "libpipewire"
+provider = "freedesktop"
+dedup_key = "pipewire"
+
+[source]
+project = "pipewire/pipewire"

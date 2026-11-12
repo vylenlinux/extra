@@ -1,6 +1,5 @@
 name = "pipewire"
-provider = "github"
+provider = "freedesktop"
 
 [source]
-owner = "pipewire"
-repo = "pipewire"
+project = "%(name)/%(name)"

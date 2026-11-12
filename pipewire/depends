@@ -1,6 +1,1 @@
-bluez
-ffmpeg
-gst-plugins-base
-jack
-rtkit
-sbc
+libpipewire

@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # shellcheck disable=SC2034
-description="Server and user space API to deal with multimedia"
+description="Low-latency audio/video router and processor"
 homepage="https://github.com/PipeWire/pipewire"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=pipewire
 version=1.6.11
-release=1
+release=2
 backup="etc/security/limits.d/25-pw-rlimits.conf"
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/refs/tags/${version}.tar.gz"
 
@@ -18,10 +18,21 @@ build() {
         -Dexamples=disabled \
         -Dsession-managers=[] \
         -Dsystemd-system-service=enabled \
-        -Dsystemd-user-service=enabled
+        -Dsystemd-user-service=enabled \
+        -Dman=enabled
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    # moved to libpipewire
+    rm -rf "${PKG}/usr/include" \
+        "${PKG}/usr/lib/pipewire-0.3" \
+        "${PKG}/usr/lib/spa-0.2"
+
+    rm -f "${PKG}/usr/lib"/libpipewire-0.3.so* \
+        "${PKG}/usr/lib/pkgconfig/libpipewire-0.3.pc" \
+        "${PKG}/usr/lib/pkgconfig/libspa-0.2.pc" \
+        "${PKG}/usr/share/man/man7"/libpipewire*
 
     # enable alsa by default
     install -Dm644 /dev/null "${PKG}/usr/share/${name}/media-session.d/with-alsa"

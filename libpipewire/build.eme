@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Low-latency audio/video router and processor - client library"
+homepage="https://github.com/PipeWire/pipewire"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libpipewire
+version=1.6.11
+release=1
+source="pipewire-${version}.tar.gz::https://github.com/pipewire/pipewire/archive/refs/tags/${version}.tar.gz"
+
+build() {
+    vylen-meson "pipewire-${version}" build \
+        -Ddocs=disabled \
+        -Dvulkan=disabled \
+        -Dexamples=disabled \
+        -Dsession-managers=[] \
+        -Dsystemd-system-service=enabled \
+        -Dsystemd-user-service=enabled \
+        -Dman=enabled
+
+    meson compile -C build
+    DESTDIR="${PWD}/DESTDIR" meson install --no-rebuild -C build
+
+    install -dm755 "${PKG}/usr/lib/pkgconfig" \
+        "${PKG}/usr/share/man/man7"
+
+    mv DESTDIR/usr/include -t "${PKG}/usr/"
+    mv DESTDIR/usr/lib/pipewire-0.3 -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/spa-0.2 -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/libpipewire-0.3.so* -t "${PKG}/usr/lib/"
+    mv DESTDIR/usr/lib/pkgconfig/libpipewire-0.3.pc -t "${PKG}/usr/lib/pkgconfig/"
+    mv DESTDIR/usr/lib/pkgconfig/libspa-0.2.pc -t "${PKG}/usr/lib/pkgconfig/"
+    mv DESTDIR/usr/share/man/man7/libpipewire* -t "${PKG}/usr/share/man/man7/"
+}
