@@ -4,5 +4,5 @@ provider = "crates"
 [source]
 crate = "cargo-c"
 
-[version]
+[version.normalize]
 strip_suffix = "+*"

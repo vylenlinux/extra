@@ -5,5 +5,5 @@ provider = "github"
 owner = "openresty"
 repo = "luajit2"
 
-[version]
-replace = { - = "." }
+[version.normalize]
+replace = { "-" = "." }

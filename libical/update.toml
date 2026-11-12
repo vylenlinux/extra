@@ -5,5 +5,5 @@ provider = "github"
 owner = "%(name)"
 repo = "%(name)"
 
-[version]
-exclude = ["20221025-f9ed452c1d"]
+[version.filter]
+exclude = ['^20221025-f9ed452c1d$']

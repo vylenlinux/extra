@@ -5,5 +5,5 @@ provider = "github"
 owner = "mm2"
 repo = "Little-CMS"
 
-[version]
+[version.normalize]
 strip_prefix = "lcms"

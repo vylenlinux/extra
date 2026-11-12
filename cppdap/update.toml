@@ -5,6 +5,6 @@ provider = "github"
 owner = "google"
 repo = "cppdap"
 
-[version]
+[version.normalize]
 strip_prefix = "dap-"
-replace = { - = "_" }
+replace = { "-" = "_" }

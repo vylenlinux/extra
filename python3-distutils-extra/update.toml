@@ -5,6 +5,8 @@ provider = "gitlab"
 instance = "https://salsa.debian.org/"
 project = "python-team/packages/python-distutils-extra"
 
-[version]
-include = ["debian/*"]
+[version.normalize]
 strip_prefix = "debian/"
+
+[version.filter]
+include = ['^debian/.*$']

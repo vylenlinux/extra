@@ -4,6 +4,6 @@ provider = "gnome"
 [source]
 package = "%(name)"
 
-[version]
+[version.normalize]
 strip_prefix = "LIBGSF_"
-replace = { _ = "." }
+replace = { "_" = "." }

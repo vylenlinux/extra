@@ -4,5 +4,5 @@ provider = "repology"
 [source]
 package = "libwnck"
 
-[repology]
-version_prefix = "2."
+[version.filter]
+include = ['^2\..*$']

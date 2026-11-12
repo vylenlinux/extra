@@ -5,8 +5,10 @@ provider = "github"
 owner = "mozilla"
 repo = "%(name)"
 
-[version]
-include = ["NSS_*_RTM"]
+[version.normalize]
 strip_prefix = "NSS_"
 strip_suffix = "_RTM"
-replace = { _ = "." }
+replace = { "_" = "." }
+
+[version.filter]
+include = ['^NSS_.*_RTM$']

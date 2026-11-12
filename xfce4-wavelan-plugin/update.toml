@@ -4,5 +4,5 @@ provider = "xfce"
 [source]
 package = "panel-plugins/%(name)"
 
-[version]
-exclude = ["4.2_master"]
+[version.filter]
+exclude = ['^4\.2_master$']

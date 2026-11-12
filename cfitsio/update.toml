@@ -5,5 +5,5 @@ provider = "github"
 owner = "HEASARC"
 repo = "cfitsio"
 
-[version]
+[version.normalize]
 strip_prefix = "%(name)-"

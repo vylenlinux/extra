@@ -5,6 +5,6 @@ provider = "github"
 owner = "al45tair"
 repo = "netifaces"
 
-[version]
+[version.normalize]
 strip_prefix = "release_"
-replace = { _ = "." }
+replace = { "_" = "." }

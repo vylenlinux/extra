@@ -4,5 +4,5 @@ provider = "freedesktop"
 [source]
 project = "%(name)/%(name)"
 
-[version]
+[version.normalize]
 strip_prefix = "%(name)-"

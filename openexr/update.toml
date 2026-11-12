@@ -3,7 +3,7 @@ provider = "github"
 
 [source]
 owner = "AcademySoftwareFoundation"
-repo = "openexr"
+repo = "%(name)"
 
-[version]
-exclude = ["v*-rc"]
+[version.filter]
+exclude = ['^v.*-rc$']

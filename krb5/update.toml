@@ -5,7 +5,9 @@ provider = "github"
 owner = "%(name)"
 repo = "%(name)"
 
-[version]
-include = ["%(name)-*-*"]
+[version.normalize]
 strip_prefix = "%(name)-"
 strip_suffix = "-*"
+
+[version.filter]
+include = ['^%(name)-.*-.*$']

@@ -5,5 +5,5 @@ provider = "codeberg"
 owner = "jmoyer"
 repo = "%(name)"
 
-[version]
+[version.normalize]
 strip_prefix = "%(name)-"

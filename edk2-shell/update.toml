@@ -5,6 +5,8 @@ provider = "github"
 owner = "tianocore"
 repo = "edk2"
 
-[version]
-include = ["edk2-*"]
+[version.normalize]
 strip_prefix = "edk2-stable"
+
+[version.filter]
+include = ['^edk2-.*$']

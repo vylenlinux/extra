@@ -5,5 +5,5 @@ provider = "github"
 owner = "linuxwacom"
 repo = "xf86-input-wacom"
 
-[version]
+[version.normalize]
 strip_prefix = "%(name)-"

@@ -4,8 +4,8 @@ provider = "repology"
 [source]
 package = "spidermonkey"
 
-[repology]
-version_prefix = "140."
-
-[version]
+[version.normalize]
 strip_suffix = "esr"
+
+[version.filter]
+include = ['^140\..*$']

@@ -6,5 +6,5 @@ dedup_key = "linux-lts"
 url = "https://www.kernel.org/pub/linux/kernel/v6.x/"
 filename = "linux-%(version).tar.xz"
 
-[version]
-exclude = ["6.19*"]
+[version.filter]
+exclude = ['^6\.19.*$']

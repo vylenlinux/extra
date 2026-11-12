@@ -5,5 +5,5 @@ provider = "github"
 owner = "%(name)"
 repo = "%(name)"
 
-[version]
-replace = { - = "." }
+[version.normalize]
+replace = { "-" = "." }

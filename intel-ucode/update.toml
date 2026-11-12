@@ -5,5 +5,5 @@ provider = "github"
 owner = "intel"
 repo = "Intel-Linux-Processor-Microcode-Data-Files"
 
-[version]
+[version.normalize]
 strip_prefix = "microcode-"

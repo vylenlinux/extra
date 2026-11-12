@@ -5,8 +5,10 @@ provider = "github"
 owner = "lxml"
 repo = "lxml"
 
-[version]
-include = ["lxml-*"]
-exclude = ["lxml-7.*"]
+[version.normalize]
 strip_prefix = "lxml-"
-replace = { - = "_" }
+replace = { "-" = "_" }
+
+[version.filter]
+include = ['^lxml-.*$']
+exclude = ['^lxml-7\..*$']

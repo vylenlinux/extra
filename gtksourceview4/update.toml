@@ -6,4 +6,6 @@ package = "gtksourceview"
 
 [repology]
 match_name = "gtksourceview4"
-version_prefix = "4."
+
+[version.filter]
+include = ['^4\..*$']

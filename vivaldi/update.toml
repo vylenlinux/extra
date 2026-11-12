@@ -5,5 +5,5 @@ provider = "ftp"
 url = "https://repo.vivaldi.com/archive/rpm/x86_64/"
 filename = "%(name)-stable-%(version).x86_64.rpm"
 
-[version]
-replace = { - = "+" }
+[version.normalize]
+replace = { "-" = "+" }

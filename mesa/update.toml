@@ -4,6 +4,8 @@ provider = "freedesktop"
 [source]
 project = "%(name)/%(name)"
 
-[version]
-include = ["%(name)-*"]
+[version.normalize]
 strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['^%(name)-.*$']

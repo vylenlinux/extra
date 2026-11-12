@@ -5,5 +5,5 @@ provider = "github"
 owner = "benhoyt"
 repo = "%(name)"
 
-[version]
+[version.normalize]
 strip_prefix = "r"

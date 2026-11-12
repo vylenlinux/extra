@@ -4,5 +4,5 @@ provider = "linuxmint"
 [source]
 package = "%(name)"
 
-[version]
-exclude = ["*-unstable"]
+[version.filter]
+exclude = ['^.*-unstable$']

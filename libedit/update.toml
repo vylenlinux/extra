@@ -4,5 +4,5 @@ provider = "repology"
 [source]
 package = "libedit"
 
-[version]
-replace = { - = "_" }
+[version.normalize]
+replace = { "-" = "_" }

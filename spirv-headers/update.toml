@@ -5,5 +5,5 @@ provider = "github"
 owner = "KhronosGroup"
 repo = "%(name)"
 
-[version]
-include = ["v1.*"]
+[version.filter]
+include = ['^v1\..*$']

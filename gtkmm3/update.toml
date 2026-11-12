@@ -4,5 +4,5 @@ provider = "repology"
 [source]
 package = "gtkmm"
 
-[repology]
-version_prefix = "3."
+[version.filter]
+include = ['^3\..*$']

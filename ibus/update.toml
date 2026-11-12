@@ -5,5 +5,5 @@ provider = "github"
 owner = "ibus"
 repo = "ibus"
 
-[version]
-exclude = ["20080901"]
+[version.filter]
+exclude = ['^20080901$']

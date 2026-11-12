@@ -5,6 +5,6 @@ provider = "github"
 owner = "weidai11"
 repo = "cryptopp"
 
-[version]
+[version.normalize]
 strip_prefix = "CRYPTOPP_"
-replace = { _ = "." }
+replace = { "_" = "." }

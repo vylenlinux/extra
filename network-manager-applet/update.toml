@@ -4,5 +4,5 @@ provider = "gnome"
 [source]
 package = "%(name)"
 
-[version]
-exclude = ["*-dev"]
+[version.filter]
+exclude = ['^.*-dev$']

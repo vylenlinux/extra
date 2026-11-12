@@ -5,5 +5,5 @@ provider = "github"
 owner = "libfuse"
 repo = "sshfs"
 
-[version]
+[version.normalize]
 strip_prefix = "sshfs-"

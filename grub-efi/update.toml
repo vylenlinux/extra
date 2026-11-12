@@ -5,6 +5,8 @@ dedup_key = "grub"
 [source]
 project = "gnu-grub/grub"
 
-[version]
-include = ["grub-*"]
+[version.normalize]
 strip_prefix = "grub-"
+
+[version.filter]
+include = ['^grub-.*$']

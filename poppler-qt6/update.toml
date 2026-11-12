@@ -5,5 +5,5 @@ dedup_key = "poppler"
 [source]
 project = "poppler/poppler"
 
-[version]
+[version.normalize]
 strip_prefix = "poppler-"

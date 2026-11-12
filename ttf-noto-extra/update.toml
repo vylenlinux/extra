@@ -6,6 +6,8 @@ dedup_key = "ttf-noto"
 owner = "notofonts"
 repo = "notofonts.github.io"
 
-[version]
+[version.normalize]
 strip_prefix = "noto-monthly-release-"
-include = ["noto-monthly-release-*"]
+
+[version.filter]
+include = ['^noto-monthly-release-.*$']

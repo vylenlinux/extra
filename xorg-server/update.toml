@@ -4,7 +4,9 @@ provider = "freedesktop"
 [source]
 project = "xorg/xserver"
 
-[version]
-include = ["%(name)-*"]
-exclude = ["%(name)-26.0.99.*"]
+[version.normalize]
 strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['^%(name)-.*$']
+exclude = ['^%(name)-26\.0\.99\..*$']

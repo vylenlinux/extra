@@ -5,5 +5,5 @@ provider = "github"
 owner = "%(name)"
 repo = "node"
 
-[version]
-exclude = ["*-alpha*"]
+[version.filter]
+exclude = ['^.*-alpha.*$']

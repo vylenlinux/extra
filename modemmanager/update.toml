@@ -4,5 +4,5 @@ provider = "freedesktop"
 [source]
 project = "mobile-broadband/%(name)"
 
-[version]
-exclude = ["*-dev"]
+[version.filter]
+exclude = ['^.*-dev$']

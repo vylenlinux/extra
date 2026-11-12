@@ -4,5 +4,5 @@ provider = "freedesktop"
 [source]
 project = "slirp/%(name)"
 
-[version]
-exclude = ["2020*"]
+[version.filter]
+exclude = ['^2020.*$']

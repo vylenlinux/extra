@@ -5,5 +5,5 @@ provider = "github"
 owner = "Kitware"
 repo = "%(name)"
 
-[version]
-exclude = ["v*-rc*"]
+[version.filter]
+exclude = ['^v.*-rc.*$']

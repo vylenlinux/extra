@@ -5,6 +5,8 @@ provider = "github"
 owner = "libsdl-org"
 repo = "SDL"
 
-[version]
-include = ["release-*"]
+[version.normalize]
 strip_prefix = "release-"
+
+[version.filter]
+include = ['^release-.*$']

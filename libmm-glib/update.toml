@@ -5,5 +5,5 @@ dedup_key = "modemmanager"
 [source]
 project = "mobile-broadband/modemmanager"
 
-[version]
-exclude = ["*-dev"]
+[version.filter]
+exclude = ['^.*-dev$']

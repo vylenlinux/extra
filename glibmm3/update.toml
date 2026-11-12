@@ -4,5 +4,5 @@ provider = "repology"
 [source]
 package = "glibmm"
 
-[repology]
-version_prefix = "2.66."
+[version.filter]
+include = ['^2\.66\..*$']

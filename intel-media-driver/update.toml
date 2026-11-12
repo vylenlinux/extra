@@ -8,5 +8,5 @@ repo = "media-driver"
 [github]
 tag_prefix = "intel-media-2"
 
-[version]
+[version.normalize]
 strip_prefix = "intel-media-"
