@@ -1,5 +1,7 @@
 name = "cabextract"
-provider = "repology"
+provider = "html"
 
-[source]
-package = "cabextract"
+[html]
+url = "https://cabextract.org.uk/"
+selector = "h2#download + p"
+version_regex = 'cabextract version ([0-9]+\.[0-9]+(?:\.[0-9]+)*)'
