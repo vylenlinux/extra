@@ -1,5 +1,9 @@
 name = "udisks2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "udisks"
+owner = "storaged-project"
+repo = "udisks"
+
+[version.normalize]
+strip_prefix = "udisks-"
