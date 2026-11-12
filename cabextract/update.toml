@@ -4,4 +4,4 @@ provider = "html"
 [html]
 url = "https://cabextract.org.uk/"
 selector = "h2#download + p"
-version_regex = 'cabextract version ([0-9]+\.[0-9]+(?:\.[0-9]+)*)'
+version_regex = '%(name) version ([0-9]+\.[0-9]+(?:\.[0-9]+)*)'
