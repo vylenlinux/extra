@@ -2,7 +2,6 @@ adwaita-fonts
 gst-plugins-bad
 libepoxy
 librsvg
-libxkbcommon
 python3-gobject3
 sassc
 shaderc
