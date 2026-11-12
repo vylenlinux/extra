@@ -1,8 +1,9 @@
 name = "dialog"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "dialog"
+[ftp]
+url = "https://invisible-mirror.net/archives/%(name)"
+filename = "%(name)-%(version).tgz"
 
-[version]
-replace = { - = "_" }
+[version.normalize]
+replace = { "-" = "_" }
