@@ -1,8 +1,8 @@
 cinnamon-desktop
 libcanberra
 libinput
+libpipewire
 libwacom
-pipewire
 startup-notification
 xwayland
 zenity
