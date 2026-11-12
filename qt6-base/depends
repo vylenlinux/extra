@@ -4,8 +4,6 @@ double-conversion
 gst-plugins-base
 libinput
 liburing
-libxi
-libxkbcommon
 shared-mime-info
 vulkan-headers
 xcb-util-cursor
