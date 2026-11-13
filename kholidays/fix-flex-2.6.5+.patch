@@ -1,3 +1,11 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Fri, 13 Nov 2026 21:00:30 +0100
+Subject: [PATCH] Fix kholidays scanner build with Flex 2.6.5 and newer
+
+---
+ src/parsers/plan2/FlexLexer.h | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
 diff --git a/src/parsers/plan2/FlexLexer.h b/src/parsers/plan2/FlexLexer.h
 --- a/src/parsers/plan2/FlexLexer.h
 +++ b/src/parsers/plan2/FlexLexer.h
