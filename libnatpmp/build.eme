@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A portable and fully compliant implementation of the NAT-PMP protocol"
+homepage="https://miniupnp.tuxfamily.org/libnatpmp.html"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libnatpmp
+version=20230423
+release=1
+source="https://miniupnp.tuxfamily.org/files/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    make
+    make PREFIX="${PKG}" install
+
+    install -Dm644 natpmp_declspec.h -t "${PKG}/usr/include/"
+    install -Dm644 natpmpc.1 -t "${PKG}/usr/share/man/man1/"
+}

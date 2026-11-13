@@ -1,0 +1,14 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/natpmpc
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/natpmp.h
+-rw-r--r-- root/root    usr/include/natpmp_declspec.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libnatpmp.a
+lrwxrwxrwx root/root    usr/lib/libnatpmp.so -> libnatpmp.so.1
+-rw-r--r-- root/root    usr/lib/libnatpmp.so.1
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/natpmpc.1.gz

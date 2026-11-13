@@ -1,0 +1,6 @@
+name = "libnatpmp"
+provider = "ftp"
+
+[ftp]
+url = "https://miniupnp.tuxfamily.org/files/"
+filename = "%(name)-%(version).tar.gz"
