@@ -6,9 +6,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://ostreedev.github.io/ostree/"
 
 name=ostree
-version=2026.6
+version=2026.7
 release=1
-source="${name}-${version}.tar.xz::https://github.com/ostreedev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://github.com/${name}dev/${name}/releases/download/v${version}/lib${name}-${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164
@@ -17,6 +17,7 @@ build() {
     ./configure \
         --prefix=/usr \
         --sysconfdir=/etc \
+        \
         --with-builtin-grub2-mkconfig \
         --with-ed25519-libsodium \
         --with-openssl \

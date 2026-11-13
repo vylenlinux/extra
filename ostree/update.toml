@@ -2,5 +2,5 @@ name = "ostree"
 provider = "github"
 
 [source]
-owner = "ostreedev"
+owner = "%(name)dev"
 repo = "%(name)"
