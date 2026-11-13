@@ -6,7 +6,7 @@ homepage="https://github.com/danoli3/FreeImage"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=freeimage
-version=3.19.32
+version=3.19.33
 release=1
 source="${name}-${version}.tar.gz::https://github.com/danoli3/${name}/archive/refs/tags/${version}.tar.gz"
 
@@ -18,11 +18,14 @@ build() {
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
         -DCMAKE_CXX_STANDARD=20 \
+        \
         -DFREEIMAGE_STATIC=OFF \
         -DFREEIMAGE_LINUX_PACKAGE_LAYOUT=ON \
         -DFREEIMAGE_USE_SYSTEM_LIBS=ON \
+        \
         -DBUILD_JXR=ON \
         -DBUILD_TESTS=OFF \
+        \
         -Wno-author
 
     cmake --build build
