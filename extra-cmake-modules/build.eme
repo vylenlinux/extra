@@ -6,7 +6,7 @@ homepage="https://community.kde.org/Frameworks"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=extra-cmake-modules
-version=6.31.0
+version=6.32.0
 release=1
 source="${name}-${version}.tar.gz::https://github.com/KDE/${name}/archive/refs/tags/v${version}.tar.gz"
 

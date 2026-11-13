@@ -45,14 +45,14 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6KCMUtils/
 drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/kcmdesktopfilegenerator
 lrwxrwxrwx root/root    usr/lib/libKF6KCMUtils.so -> libKF6KCMUtils.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KCMUtils.so.6 -> libKF6KCMUtils.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6KCMUtils.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6KCMUtils.so.6 -> libKF6KCMUtils.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6KCMUtils.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsCore.so -> libKF6KCMUtilsCore.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsCore.so.6 -> libKF6KCMUtilsCore.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6KCMUtilsCore.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsCore.so.6 -> libKF6KCMUtilsCore.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6KCMUtilsCore.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsQuick.so -> libKF6KCMUtilsQuick.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsQuick.so.6 -> libKF6KCMUtilsQuick.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6KCMUtilsQuick.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6KCMUtilsQuick.so.6 -> libKF6KCMUtilsQuick.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6KCMUtilsQuick.so.6.32.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/
@@ -74,7 +74,7 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kcmutils/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kcmutils/libkcmutilsqmlplugin.so
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/AboutPlugin.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/AboutPage.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/GridDelegateMenu.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/GridViewInternal.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kcmutils/private/kcmutilsprivateqmlplugin.qmltypes
@@ -367,15 +367,19 @@ drwxr-xr-x root/root    usr/share/locale/sq/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sq/LC_MESSAGES/kcmutils6.mo
 drwxr-xr-x root/root    usr/share/locale/sr/
 drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kcmshell6.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kcmutils6.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kcmshell6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kcmutils6.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kcmshell6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kcmutils6.mo
 drwxr-xr-x root/root    usr/share/locale/sr@latin/
 drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kcmshell6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kcmutils6.mo
 drwxr-xr-x root/root    usr/share/locale/sv/
 drwxr-xr-x root/root    usr/share/locale/sv/LC_MESSAGES/

@@ -40,8 +40,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6ConfigWidgets/
 -rw-r--r-- root/root    usr/lib/cmake/KF6ConfigWidgets/KF6ConfigWidgetsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6ConfigWidgets/KF6ConfigWidgetsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6ConfigWidgets.so -> libKF6ConfigWidgets.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6ConfigWidgets.so.6 -> libKF6ConfigWidgets.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6ConfigWidgets.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6ConfigWidgets.so.6 -> libKF6ConfigWidgets.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6ConfigWidgets.so.6.32.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/designer/
@@ -306,9 +306,11 @@ drwxr-xr-x root/root    usr/share/locale/my/
 drwxr-xr-x root/root    usr/share/locale/nan_TW/
 drwxr-xr-x root/root    usr/share/locale/nan_TW/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nan_TW/LC_MESSAGES/kconfigwidgets6.mo
+-rw-r--r-- root/root    usr/share/locale/nan_TW/kf6_entry.desktop
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/kconfigwidgets6.mo
+-rw-r--r-- root/root    usr/share/locale/nan_TW@latin/kf6_entry.desktop
 drwxr-xr-x root/root    usr/share/locale/nb/
 drwxr-xr-x root/root    usr/share/locale/nb/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nb/LC_MESSAGES/kconfigwidgets6.mo

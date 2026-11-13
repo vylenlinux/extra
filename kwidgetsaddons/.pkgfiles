@@ -171,9 +171,6 @@ drwxr-xr-x root/root    usr/include/KF6/KWidgetsAddons/
 -rw-r--r-- root/root    usr/include/KF6/KWidgetsAddons/kwidgetsaddons_export.h
 -rw-r--r-- root/root    usr/include/KF6/KWidgetsAddons/kwidgetsaddons_version.h
 -rw-r--r-- root/root    usr/include/KF6/KWidgetsAddons/kxyselector.h
-drwxr-xr-x root/root    usr/include/PySide6/
-drwxr-xr-x root/root    usr/include/PySide6/KWidgetsAddons/
--rw-r--r-- root/root    usr/include/PySide6/KWidgetsAddons/kwidgetsaddons_python.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KF6WidgetsAddons/
@@ -182,19 +179,13 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6WidgetsAddons/
 -rw-r--r-- root/root    usr/lib/cmake/KF6WidgetsAddons/KF6WidgetsAddonsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6WidgetsAddons/KF6WidgetsAddonsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6WidgetsAddons.so -> libKF6WidgetsAddons.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6WidgetsAddons.so.6 -> libKF6WidgetsAddons.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6WidgetsAddons.so.6.31.0
-drwxr-xr-x root/root    usr/lib/python3.14/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
--rwxr-xr-x root/root    usr/lib/python3.14/site-packages/KWidgetsAddons.cpython-314-x86_64-linux-gnu.so
+lrwxrwxrwx root/root    usr/lib/libKF6WidgetsAddons.so.6 -> libKF6WidgetsAddons.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6WidgetsAddons.so.6.32.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/designer/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/designer/kwidgetsaddons6widgets.so
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/PySide6/
-drwxr-xr-x root/root    usr/share/PySide6/typesystems/
--rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_kwidgetsaddons.xml
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/af/
 drwxr-xr-x root/root    usr/share/locale/af/LC_MESSAGES/

@@ -36,50 +36,47 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6KirigamiPlatform/
 -rw-r--r-- root/root    usr/lib/cmake/KF6KirigamiPlatform/KF6KirigamiPlatformTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6KirigamiPlatform/KF6KirigamiPlatformTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKirigami.so -> libKirigami.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigami.so.6 -> libKirigami.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigami.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigami.so.6 -> libKirigami.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigami.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiControls.so -> libKirigamiControls.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiControls.so.6 -> libKirigamiControls.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiControls.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiControls.so.6 -> libKirigamiControls.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiControls.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiDelegates.so -> libKirigamiDelegates.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiDelegates.so.6 -> libKirigamiDelegates.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiDelegates.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiDelegates.so.6 -> libKirigamiDelegates.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiDelegates.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiDialogs.so -> libKirigamiDialogs.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiDialogs.so.6 -> libKirigamiDialogs.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiDialogs.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiDialogs.so.6 -> libKirigamiDialogs.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiDialogs.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiForms.so -> libKirigamiForms.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiForms.so.6 -> libKirigamiForms.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiForms.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiForms.so.6 -> libKirigamiForms.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiForms.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateCards.so -> libKirigamiFormsPrivateCards.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateCards.so.6 -> libKirigamiFormsPrivateCards.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateCards.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateCards.so.6 -> libKirigamiFormsPrivateCards.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateCards.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateFlat.so -> libKirigamiFormsPrivateFlat.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateFlat.so.6 -> libKirigamiFormsPrivateFlat.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateFlat.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateFlat.so.6 -> libKirigamiFormsPrivateFlat.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateFlat.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateTemplates.so -> libKirigamiFormsPrivateTemplates.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateTemplates.so.6 -> libKirigamiFormsPrivateTemplates.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateTemplates.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiFormsPrivateTemplates.so.6 -> libKirigamiFormsPrivateTemplates.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiFormsPrivateTemplates.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiLayouts.so -> libKirigamiLayouts.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiLayouts.so.6 -> libKirigamiLayouts.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiLayouts.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiLayouts.so.6 -> libKirigamiLayouts.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiLayouts.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiLayoutsPrivate.so -> libKirigamiLayoutsPrivate.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiLayoutsPrivate.so.6 -> libKirigamiLayoutsPrivate.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiLayoutsPrivate.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiLayoutsPrivate.so.6 -> libKirigamiLayoutsPrivate.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiLayoutsPrivate.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiPlatform.so -> libKirigamiPlatform.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiPlatform.so.6 -> libKirigamiPlatform.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiPlatform.so.6.31.0
-lrwxrwxrwx root/root    usr/lib/libKirigamiPolyfill.so -> libKirigamiPolyfill.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiPolyfill.so.6 -> libKirigamiPolyfill.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiPolyfill.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiPlatform.so.6 -> libKirigamiPlatform.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiPlatform.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiPrimitives.so -> libKirigamiPrimitives.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiPrimitives.so.6 -> libKirigamiPrimitives.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiPrimitives.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiPrimitives.so.6 -> libKirigamiPrimitives.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiPrimitives.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiPrivate.so -> libKirigamiPrivate.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiPrivate.so.6 -> libKirigamiPrivate.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiPrivate.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiPrivate.so.6 -> libKirigamiPrivate.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiPrivate.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKirigamiTemplates.so -> libKirigamiTemplates.so.6
-lrwxrwxrwx root/root    usr/lib/libKirigamiTemplates.so.6 -> libKirigamiTemplates.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKirigamiTemplates.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKirigamiTemplates.so.6 -> libKirigamiTemplates.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKirigamiTemplates.so.6.32.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/metatypes/
 -rw-r--r-- root/root    usr/lib/qt6/metatypes/qt6kirigamiplatform_metatypes.json
@@ -102,6 +99,7 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/ActionToolBar.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/ApplicationItem.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/ApplicationWindow.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/Avatar.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/Badge.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/Card.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/controls/CardsLayout.qml
@@ -249,16 +247,16 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/private/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/KirigamiPrivate.qmltypes
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/private/libKirigamiPrivateplugin.so
-drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/private/polyfill/
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/polyfill/KirigamiPolyfill.qmltypes
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/polyfill/kde-qmlmodule.version
--rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/private/polyfill/libKirigamiPolyfillplugin.so
--rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/polyfill/qmldir
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/private/qmldir
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/qmldir
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/AbstractApplicationHeader.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/Badge.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/InlineMessage.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/NavigationTabBar.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/NavigationTabButton.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/OverlayDrawer.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/Material/Theme.qml
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/org.kde.desktop/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/styles/org.kde.desktop/AbstractApplicationHeader.qml
@@ -267,6 +265,7 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/AbstractApplicationHeader.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/AbstractCard.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/AppHeaderSizeGroup.qml
+-rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/Avatar.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/Badge.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/Chip.qml
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/kirigami/templates/Heading.qml

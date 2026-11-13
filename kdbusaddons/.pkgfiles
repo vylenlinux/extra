@@ -22,8 +22,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6DBusAddons/
 -rw-r--r-- root/root    usr/lib/cmake/KF6DBusAddons/KF6DBusAddonsTargets.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6DBusAddons/KF6dbus.service.in
 lrwxrwxrwx root/root    usr/lib/libKF6DBusAddons.so -> libKF6DBusAddons.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6DBusAddons.so.6 -> libKF6DBusAddons.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6DBusAddons.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6DBusAddons.so.6 -> libKF6DBusAddons.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6DBusAddons.so.6.32.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
@@ -164,9 +164,6 @@ drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/sa/
 drwxr-xr-x root/root    usr/share/locale/sa/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sa/LC_MESSAGES/kdbusaddons6_qt.qm
-drwxr-xr-x root/root    usr/share/locale/se/
-drwxr-xr-x root/root    usr/share/locale/se/LC_MESSAGES/
--rw-r--r-- root/root    usr/share/locale/se/LC_MESSAGES/kdbusaddons6_qt.qm
 drwxr-xr-x root/root    usr/share/locale/sk/
 drwxr-xr-x root/root    usr/share/locale/sk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sk/LC_MESSAGES/kdbusaddons6_qt.qm

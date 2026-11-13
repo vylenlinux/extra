@@ -28,8 +28,8 @@ drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/kdesu_stub
 -rwxr-xr-x root/root    usr/lib/kf6/kdesud
 lrwxrwxrwx root/root    usr/lib/libKF6Su.so -> libKF6Su.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Su.so.6 -> libKF6Su.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6Su.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6Su.so.6 -> libKF6Su.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6Su.so.6.32.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/

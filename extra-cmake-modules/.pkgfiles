@@ -1,3 +1,4 @@
+drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/ECM/
 drwxr-xr-x root/root    usr/share/ECM/cmake/
@@ -8,6 +9,7 @@ drwxr-xr-x root/root    usr/share/ECM/find-modules/
 -rw-r--r-- root/root    usr/share/ECM/find-modules/Find7Zip.cmake
 -rw-r--r-- root/root    usr/share/ECM/find-modules/Find7z.cmake
 -rw-r--r-- root/root    usr/share/ECM/find-modules/FindCanberra.cmake
+-rw-r--r-- root/root    usr/share/ECM/find-modules/FindDesktopFileUtils.cmake
 -rw-r--r-- root/root    usr/share/ECM/find-modules/FindEGL.cmake
 -rw-r--r-- root/root    usr/share/ECM/find-modules/FindFFmpeg.cmake
 -rw-r--r-- root/root    usr/share/ECM/find-modules/FindGLIB2.cmake

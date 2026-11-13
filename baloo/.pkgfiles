@@ -39,11 +39,12 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Baloo/
 drwxr-xr-x root/root    usr/lib/kf6/
 -rwxr-xr-x root/root    usr/lib/kf6/baloo_file
 -rwxr-xr-x root/root    usr/lib/kf6/baloo_file_extractor
+-rwxr-xr-x root/root    usr/lib/kf6/baloo_idle_monitor
 lrwxrwxrwx root/root    usr/lib/libKF6Baloo.so -> libKF6Baloo.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6Baloo.so.6 -> libKF6Baloo.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6Baloo.so.6.31.0
-lrwxrwxrwx root/root    usr/lib/libKF6BalooEngine.so.6 -> libKF6BalooEngine.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6BalooEngine.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6Baloo.so.6 -> libKF6Baloo.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6Baloo.so.6.32.0
+lrwxrwxrwx root/root    usr/lib/libKF6BalooEngine.so.6 -> libKF6BalooEngine.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6BalooEngine.so.6.32.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/KF6Baloo.pc
 drwxr-xr-x root/root    usr/lib/qt6/
@@ -68,6 +69,10 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/baloo/experimental/
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/baloo/kde-qmlmodule.version
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/baloo/libbalooplugin.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/baloo/qmldir
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/kde-baloo-idle-monitor.service
+-rw-r--r-- root/root    usr/lib/systemd/user/kde-baloo.service
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/config.kcfg/
 -rw-r--r-- root/root    usr/share/config.kcfg/baloosettings.kcfg
@@ -78,6 +83,9 @@ drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.kde.baloo.main.xml
 -rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.kde.baloo.scheduler.xml
+drwxr-xr-x root/root    usr/share/dbus-1/services/
+-rw-r--r-- root/root    usr/share/dbus-1/services/org.kde.baloo.service
+-rw-r--r-- root/root    usr/share/dbus-1/services/org.kde.baloo_idle_monitor.service
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
 drwxr-xr-x root/root    usr/share/locale/ar/LC_MESSAGES/
@@ -627,7 +635,11 @@ drwxr-xr-x root/root    usr/share/locale/sl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/kio6_timeline.mo
 drwxr-xr-x root/root    usr/share/locale/sr/
 drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/baloo_file6.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/baloo_file_extractor6.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/balooctl6.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/baloodb6.mo
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/balooengine6.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/baloosearch6.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/balooshow6.mo
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kio6_baloosearch.mo
@@ -635,7 +647,11 @@ drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kio6_timeline.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/baloo_file6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/baloo_file_extractor6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/balooctl6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/baloodb6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/balooengine6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/baloosearch6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/balooshow6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kio6_baloosearch.mo
@@ -643,7 +659,11 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kio6_timeline.mo
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/
 drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/baloo_file6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/baloo_file_extractor6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/balooctl6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/baloodb6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/balooengine6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/baloosearch6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/balooshow6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kio6_baloosearch.mo
@@ -651,7 +671,11 @@ drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kio6_timeline.mo
 drwxr-xr-x root/root    usr/share/locale/sr@latin/
 drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/baloo_file6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/baloo_file_extractor6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/balooctl6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/baloodb6.mo
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/balooengine6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/baloosearch6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/balooshow6.mo
 -rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kio6_baloosearch.mo

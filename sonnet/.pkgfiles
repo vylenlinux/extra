@@ -43,18 +43,17 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6Sonnet/
 -rw-r--r-- root/root    usr/lib/cmake/KF6Sonnet/KF6SonnetTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6Sonnet/KF6SonnetTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6SonnetCore.so -> libKF6SonnetCore.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6SonnetCore.so.6 -> libKF6SonnetCore.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6SonnetCore.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6SonnetCore.so.6 -> libKF6SonnetCore.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6SonnetCore.so.6.32.0
 lrwxrwxrwx root/root    usr/lib/libKF6SonnetUi.so -> libKF6SonnetUi.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6SonnetUi.so.6 -> libKF6SonnetUi.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6SonnetUi.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6SonnetUi.so.6 -> libKF6SonnetUi.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6SonnetUi.so.6.32.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/designer/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/designer/sonnet6widgets.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/sonnet/
--rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/sonnet/sonnet_aspell.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/sonnet/sonnet_hunspell.so
 drwxr-xr-x root/root    usr/lib/qt6/qml/
 drwxr-xr-x root/root    usr/lib/qt6/qml/org/

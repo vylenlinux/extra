@@ -14,11 +14,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6StatusNotifierItem/
 -rw-r--r-- root/root    usr/lib/cmake/KF6StatusNotifierItem/KF6StatusNotifierItemTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6StatusNotifierItem/KF6StatusNotifierItemTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6StatusNotifierItem.so -> libKF6StatusNotifierItem.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6StatusNotifierItem.so.6 -> libKF6StatusNotifierItem.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6StatusNotifierItem.so.6.31.0
-drwxr-xr-x root/root    usr/lib/python3.14/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
--rwxr-xr-x root/root    usr/lib/python3.14/site-packages/KStatusNotifierItem.cpython-314-x86_64-linux-gnu.so
+lrwxrwxrwx root/root    usr/lib/libKF6StatusNotifierItem.so.6 -> libKF6StatusNotifierItem.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6StatusNotifierItem.so.6.32.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
@@ -46,6 +43,9 @@ drwxr-xr-x root/root    usr/share/locale/cs/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/de/
 drwxr-xr-x root/root    usr/share/locale/de/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/kstatusnotifieritem6_qt.qm
+drwxr-xr-x root/root    usr/share/locale/el/
+drwxr-xr-x root/root    usr/share/locale/el/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 drwxr-xr-x root/root    usr/share/locale/en_GB/
 drwxr-xr-x root/root    usr/share/locale/en_GB/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/kstatusnotifieritem6_qt.qm
@@ -106,6 +106,9 @@ drwxr-xr-x root/root    usr/share/locale/lv/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/kstatusnotifieritem6_qt.qm
+drwxr-xr-x root/root    usr/share/locale/nb/
+drwxr-xr-x root/root    usr/share/locale/nb/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/nb/LC_MESSAGES/kstatusnotifieritem6_qt.qm
 drwxr-xr-x root/root    usr/share/locale/nl/
 drwxr-xr-x root/root    usr/share/locale/nl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/kstatusnotifieritem6_qt.qm

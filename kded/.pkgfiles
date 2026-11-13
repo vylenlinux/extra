@@ -24,6 +24,9 @@ drwxr-xr-x root/root    usr/share/man/ca/man8/
 drwxr-xr-x root/root    usr/share/man/ca@valencia/
 drwxr-xr-x root/root    usr/share/man/ca@valencia/man8/
 -rw-r--r-- root/root    usr/share/man/ca@valencia/man8/kded6.8.gz
+drwxr-xr-x root/root    usr/share/man/de/
+drwxr-xr-x root/root    usr/share/man/de/man8/
+-rw-r--r-- root/root    usr/share/man/de/man8/kded6.8.gz
 drwxr-xr-x root/root    usr/share/man/es/
 drwxr-xr-x root/root    usr/share/man/es/man8/
 -rw-r--r-- root/root    usr/share/man/es/man8/kded6.8.gz
@@ -41,6 +44,9 @@ drwxr-xr-x root/root    usr/share/man/nl/man8/
 drwxr-xr-x root/root    usr/share/man/pt_BR/
 drwxr-xr-x root/root    usr/share/man/pt_BR/man8/
 -rw-r--r-- root/root    usr/share/man/pt_BR/man8/kded6.8.gz
+drwxr-xr-x root/root    usr/share/man/ru/
+drwxr-xr-x root/root    usr/share/man/ru/man8/
+-rw-r--r-- root/root    usr/share/man/ru/man8/kded6.8.gz
 drwxr-xr-x root/root    usr/share/man/sl/
 drwxr-xr-x root/root    usr/share/man/sl/man8/
 -rw-r--r-- root/root    usr/share/man/sl/man8/kded6.8.gz

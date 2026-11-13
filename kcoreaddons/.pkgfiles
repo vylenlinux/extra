@@ -79,9 +79,6 @@ drwxr-xr-x root/root    usr/include/KF6/KCoreAddons/
 -rw-r--r-- root/root    usr/include/KF6/KCoreAddons/ktexttohtml.h
 -rw-r--r-- root/root    usr/include/KF6/KCoreAddons/kurlmimedata.h
 -rw-r--r-- root/root    usr/include/KF6/KCoreAddons/kuser.h
-drwxr-xr-x root/root    usr/include/PySide6/
-drwxr-xr-x root/root    usr/include/PySide6/KCoreAddons/
--rw-r--r-- root/root    usr/include/PySide6/KCoreAddons/kcoreaddons_python.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/KF6CoreAddons/
@@ -91,13 +88,10 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6CoreAddons/
 -rw-r--r-- root/root    usr/lib/cmake/KF6CoreAddons/KF6CoreAddonsTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6CoreAddons/KF6CoreAddonsTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6CoreAddons.so -> libKF6CoreAddons.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6CoreAddons.so.6 -> libKF6CoreAddons.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6CoreAddons.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6CoreAddons.so.6 -> libKF6CoreAddons.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6CoreAddons.so.6.32.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/KF6CoreAddons.pc
-drwxr-xr-x root/root    usr/lib/python3.14/
-drwxr-xr-x root/root    usr/lib/python3.14/site-packages/
--rwxr-xr-x root/root    usr/lib/python3.14/site-packages/KCoreAddons.cpython-314-x86_64-linux-gnu.so
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/metatypes/
 -rw-r--r-- root/root    usr/lib/qt6/metatypes/qt6kf6coreaddons_metatypes.json
@@ -110,9 +104,6 @@ drwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/coreaddons/
 -rwxr-xr-x root/root    usr/lib/qt6/qml/org/kde/coreaddons/libkcoreaddonsplugin.so
 -rw-r--r-- root/root    usr/lib/qt6/qml/org/kde/coreaddons/qmldir
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/PySide6/
-drwxr-xr-x root/root    usr/share/PySide6/typesystems/
--rw-r--r-- root/root    usr/share/PySide6/typesystems/typesystem_kcoreaddons.xml
 drwxr-xr-x root/root    usr/share/kf6/
 drwxr-xr-x root/root    usr/share/kf6/jsonschema/
 -rw-r--r-- root/root    usr/share/kf6/jsonschema/kpluginmetadata.schema.json

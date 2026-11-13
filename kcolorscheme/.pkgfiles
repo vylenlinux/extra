@@ -20,8 +20,8 @@ drwxr-xr-x root/root    usr/lib/cmake/KF6ColorScheme/
 -rw-r--r-- root/root    usr/lib/cmake/KF6ColorScheme/KF6ColorSchemeTargets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/KF6ColorScheme/KF6ColorSchemeTargets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6ColorScheme.so -> libKF6ColorScheme.so.6
-lrwxrwxrwx root/root    usr/lib/libKF6ColorScheme.so.6 -> libKF6ColorScheme.so.6.31.0
--rwxr-xr-x root/root    usr/lib/libKF6ColorScheme.so.6.31.0
+lrwxrwxrwx root/root    usr/lib/libKF6ColorScheme.so.6 -> libKF6ColorScheme.so.6.32.0
+-rwxr-xr-x root/root    usr/lib/libKF6ColorScheme.so.6.32.0
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/ar/
@@ -48,6 +48,9 @@ drwxr-xr-x root/root    usr/share/locale/cs/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/de/
 drwxr-xr-x root/root    usr/share/locale/de/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/de/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/el/
+drwxr-xr-x root/root    usr/share/locale/el/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/kcolorscheme6.mo
 drwxr-xr-x root/root    usr/share/locale/en_GB/
 drwxr-xr-x root/root    usr/share/locale/en_GB/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/en_GB/LC_MESSAGES/kcolorscheme6.mo
@@ -111,6 +114,9 @@ drwxr-xr-x root/root    usr/share/locale/lv/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/
 drwxr-xr-x root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nan_TW@latin/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/nb/
+drwxr-xr-x root/root    usr/share/locale/nb/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/nb/LC_MESSAGES/kcolorscheme6.mo
 drwxr-xr-x root/root    usr/share/locale/nl/
 drwxr-xr-x root/root    usr/share/locale/nl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/nl/LC_MESSAGES/kcolorscheme6.mo
@@ -141,6 +147,18 @@ drwxr-xr-x root/root    usr/share/locale/sk/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/sl/
 drwxr-xr-x root/root    usr/share/locale/sl/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sl/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/sr/
+drwxr-xr-x root/root    usr/share/locale/sr/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/
+drwxr-xr-x root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavian/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/
+drwxr-xr-x root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/kcolorscheme6.mo
+drwxr-xr-x root/root    usr/share/locale/sr@latin/
+drwxr-xr-x root/root    usr/share/locale/sr@latin/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/sr@latin/LC_MESSAGES/kcolorscheme6.mo
 drwxr-xr-x root/root    usr/share/locale/sv/
 drwxr-xr-x root/root    usr/share/locale/sv/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/sv/LC_MESSAGES/kcolorscheme6.mo
