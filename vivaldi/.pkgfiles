@@ -506,7 +506,7 @@ drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/adblocker_resources/redirectable_resources.json
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-bundle.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-common-bundle.js
--rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-a7388423416ba6192af17f28d0192ed6.js
+-rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/background-service-worker-c4a181c19ff742e6a4b9fa4e7ea6fa12.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle-mailreader-worker.js
 -rw-r--r-- root/root    opt/vivaldi/resources/vivaldi/bundle.js
 drwxr-xr-x root/root    opt/vivaldi/resources/vivaldi/components/
