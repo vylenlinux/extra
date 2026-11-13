@@ -1,5 +1,5 @@
 name = "lxappearance"
-provider = "repology"
+provider = "lxde"
 
 [source]
 package = "lxappearance"
