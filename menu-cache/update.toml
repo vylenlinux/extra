@@ -1,5 +1,5 @@
 name = "menu-cache"
-provider = "repology"
+provider = "lxde"
 
 [source]
 package = "menu-cache"
