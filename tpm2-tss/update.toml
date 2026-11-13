@@ -1,0 +1,9 @@
+name = "tpm2-tss"
+provider = "github"
+
+[source]
+owner = "tpm2-software"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['.*s$']

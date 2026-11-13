@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Implementation of the TCG Trusted Platform Module 2.0 Software Stack (TSS2)"
+homepage="https://github.com/tpm2-software/tpm2-tss"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=tpm2-tss
+version=4.2.2
+release=1
+
+backup="etc/${name}/fapi-config.json
+    etc/${name}/fapi-profiles/P_ECCP256SHA256-high-range.json
+    etc/${name}/fapi-profiles/P_ECCP256SHA256-legacy.json
+    etc/${name}/fapi-profiles/P_ECCP256SHA256-low-range.json
+    etc/${name}/fapi-profiles/P_ECCP256SHA256.json
+    etc/${name}/fapi-profiles/P_ECCP384SHA384.json
+    etc/${name}/fapi-profiles/P_RSA2048SHA256-high-range.json
+    etc/${name}/fapi-profiles/P_RSA2048SHA256-legacy.json
+    etc/${name}/fapi-profiles/P_RSA2048SHA256-low-range.json
+    etc/${name}/fapi-profiles/P_RSA2048SHA256.json
+    etc/${name}/fapi-profiles/P_RSA3072SHA384.json"
+
+source="https://github.com/tpm2-software/${name}/releases/download/${version}/${name}-${version}.tar.gz
+    0001-dist-Fully-lock-the-tss-system-user.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    sed '/VERSION/d' -i bootstrap
+    printf '%s\n' "${PKG}" > VERSION
+
+    patch -Np1 -i "${SRC}/0001-dist-Fully-lock-the-tss-system-user.patch"
+    ./bootstrap
+
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        \
+        --enable-integration \
+        \
+        --disable-defaultflags \
+        --disable-tcti-i2c-ftdi \
+        --disable-tcti-libtpms \
+        --disable-tcti-spi-ftdi \
+        --disable-tcti-spi-ltt2go \
+        --disable-weakcrypto \
+        \
+        --with-runstatedir=/run \
+        --with-sysusersdir=/usr/lib/sysusers.d \
+        --with-tmpfilesdir=/usr/lib/tmpfiles.d \
+        --with-udevrulesprefix=60-
+
+    make
+    make DESTDIR="${PKG}" install
+
+    do_tmpfiles "${name}"
+}
