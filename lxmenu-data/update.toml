@@ -1,5 +1,5 @@
 name = "lxmenu-data"
-provider = "repology"
+provider = "lxde"
 
 [source]
 package = "lxmenu-data"
