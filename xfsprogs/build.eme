@@ -6,7 +6,7 @@ homepage="https://xfs.wiki.kernel.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=xfsprogs
-version=7.2.1
+version=7.3.0
 release=1
 source="https://www.kernel.org/pub/linux/utils/fs/xfs/${name}/${name}-${version}.tar.xz"
 
@@ -23,9 +23,10 @@ build() {
         --sbindir=/usr/bin \
         --localstatedir=/var \
         --libexecdir=/usr/lib \
-        --enable-readline \
         --disable-libicu
 
     make
-    make DIST_ROOT="${PKG}" install install-dev
+
+    make DIST_ROOT="${PKG}" install
+    make DIST_ROOT="${PKG}" install-dev
 }
