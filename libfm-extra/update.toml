@@ -1,5 +1,5 @@
 name = "libfm-extra"
-provider = "repology"
+provider = "lxde"
 dedup_key = "libfm"
 
 [source]
