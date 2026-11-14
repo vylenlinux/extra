@@ -1,0 +1,6 @@
+name = "passim"
+provider = "github"
+
+[source]
+owner = "hughsie"
+repo = "%(name)"
