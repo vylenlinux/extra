@@ -1,0 +1,6 @@
+name = "gnu-efi"
+provider = "github"
+
+[source]
+owner = "ncroxon"
+repo = "%(name)"
