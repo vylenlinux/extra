@@ -2,5 +2,5 @@ name = "libxtst"
 provider = "ftp"
 
 [ftp]
-url = "https://ftp.x.org/pub/individual/lib/"
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
 filename = "libXtst-%(version).tar.xz"
