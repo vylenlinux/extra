@@ -13,10 +13,11 @@ source="asusctl-${version}.tar.gz::https://github.com/OpenGamingCollective/asusc
 build() {
     # shellcheck disable=SC2164
     cd "asusctl-${version}"
+    cargo fetch --locked
 
     cargo build \
         --release \
-        --locked
+        --frozen
 
     make DESTDIR="${PKG}" \
         install-rog_gui \
