@@ -2,5 +2,5 @@ name = "go"
 provider = "ftp"
 
 [ftp]
-url = "https://golang.org/dl/"
+url = "https://go.dev/dl/"
 filename = "%(name)%(version).src.tar.gz"
