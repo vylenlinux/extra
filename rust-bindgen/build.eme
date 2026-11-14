@@ -13,7 +13,11 @@ source="${name}-${version}.tar.gz::https://github.com/rust-lang/${name}/archive/
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    cargo fetch --locked
 
-    cargo build --release
+    cargo build \
+        --release \
+        --frozen
+
     install -Dm755 target/release/bindgen -t "${PKG}/usr/bin/"
 }
