@@ -2,14 +2,14 @@
 
 # shellcheck disable=SC2034
 description="High level abstract threading library"
-homepage="https://www.threadingbuildingblocks.org"
+homepage="https://github.com/uxlfoundation/onetbb"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tbb
 version=2023.2.0
 release=1
 
-source="https://github.com/oneapi-src/oneTBB/archive/v${version}/${name}-${version}.tar.gz
+source="https://github.com/uxlfoundation/oneTBB/archive/v${version}/${name}-${version}.tar.gz
     tbb-no-pip.patch"
 
 build() {
