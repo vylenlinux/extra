@@ -2,5 +2,5 @@ name = "libvirt"
 provider = "ftp"
 
 [ftp]
-url = "https://libvirt.org/sources/"
+url = "https://download.libvirt.org/"
 filename = "%(name)-%(version).tar.xz"
