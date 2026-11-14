@@ -2,5 +2,5 @@ name = "libxrender"
 provider = "ftp"
 
 [ftp]
-url = "https://ftp.x.org/pub/individual/lib/"
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
 filename = "libXrender-%(version).tar.xz"
