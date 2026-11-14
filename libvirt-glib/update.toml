@@ -2,5 +2,5 @@ name = "libvirt-glib"
 provider = "ftp"
 
 [ftp]
-url = "https://libvirt.org/sources/glib/"
+url = "https://download.libvirt.org/glib/"
 filename = "%(name)-%(version).tar.xz"
