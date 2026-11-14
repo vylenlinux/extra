@@ -2,4 +2,4 @@ name = "kgamma2"
 provider = "git"
 
 [source]
-url = "https://invent.kde.org/davidedmundson/%(name)"
+url = "https://invent.kde.org/davidedmundson/%(name).git"
