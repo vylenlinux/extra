@@ -59,9 +59,6 @@ drwxr-xr-x root/root    usr/share/dbus-1/system.d/
 -rw-r--r-- root/root    usr/share/dbus-1/system.d/org.freedesktop.UPower.conf
 drwxr-xr-x root/root    usr/share/gir-1.0/
 -rw-r--r-- root/root    usr/share/gir-1.0/UPowerGlib-1.0.gir
-drwxr-xr-x root/root    usr/share/installed-tests/
-drwxr-xr-x root/root    usr/share/installed-tests/upower/
--rw-r--r-- root/root    usr/share/installed-tests/upower/upower-integration.test
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/fr/
 drwxr-xr-x root/root    usr/share/locale/fr/LC_MESSAGES/
