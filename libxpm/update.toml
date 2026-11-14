@@ -2,5 +2,5 @@ name = "libxpm"
 provider = "ftp"
 
 [ftp]
-url = "https://ftp.x.org/pub/individual/lib/"
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
 filename = "libXpm-%(version).tar.xz"
