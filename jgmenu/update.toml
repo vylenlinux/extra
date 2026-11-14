@@ -2,5 +2,5 @@ name = "jgmenu"
 provider = "github"
 
 [source]
-owner = "johanmalm"
+owner = "jgmenu"
 repo = "%(name)"
