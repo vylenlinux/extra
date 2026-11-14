@@ -1,7 +1,5 @@
 name = "gst-plugins-bad"
-provider = "ftp"
-dedup_key = "gstreamer"
+provider = "freedesktop"
 
-[ftp]
-url = "https://gstreamer.freedesktop.org/src/%(name)"
-filename = "%(name)-%(version).tar.xz"
+[source]
+project = "gstreamer/%(name)"
