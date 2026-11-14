@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=gc
 version=8.2.12
 release=1
-source="https://github.com/ivmai/bdwgc/releases/download/v${version}/${name}-${version}.tar.gz"
+source="https://github.com/bdwgc/bdwgc/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

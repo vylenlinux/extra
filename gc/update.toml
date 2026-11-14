@@ -2,5 +2,5 @@ name = "gc"
 provider = "github"
 
 [source]
-owner = "ivmai"
+owner = "bdwgc"
 repo = "bdwgc"
