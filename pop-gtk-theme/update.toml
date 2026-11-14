@@ -2,4 +2,4 @@ name = "pop-gtk-theme"
 provider = "cosmic"
 
 [source]
-project = "%(name)"
+project = "gtk-theme"
