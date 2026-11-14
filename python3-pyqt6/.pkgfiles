@@ -40,6 +40,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuick.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuick3D.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuick3D.pyi
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuickControls2.abi3-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuickControls2.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuickWidgets.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtQuickWidgets.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtRemoteObjects.abi3-x86_64-linux-gnu.so
@@ -58,6 +60,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtSvgWidgets.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtTest.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtTest.pyi
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtTextToSpeech.abi3-x86_64-linux-gnu.so
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtTextToSpeech.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtWebChannel.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtWebChannel.pyi
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/QtWebSockets.abi3-x86_64-linux-gnu.so
@@ -640,6 +644,11 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuick3
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuick3D/qquick3dgeometry.sip
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuick3D/qquick3dobject.sip
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuick3D/qquick3dtexturedata.sip
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickControls2/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickControls2/QtQuickControls2.toml
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickControls2/QtQuickControls2mod.sip
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickControls2/qquickattachedpropertypropagator.sip
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickControls2/qquickstyle.sip
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickWidgets/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickWidgets/QtQuickWidgets.toml
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtQuickWidgets/QtQuickWidgetsmod.sip
@@ -721,6 +730,11 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTest/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTest/qtestkeyboard.sip
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTest/qtestmouse.sip
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTest/qtestsystem.sip
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTextToSpeech/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTextToSpeech/QtTextToSpeech.toml
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTextToSpeech/QtTextToSpeechmod.sip
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTextToSpeech/qtexttospeech.sip
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtTextToSpeech/qvoice.sip
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtWebChannel/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtWebChannel/QtWebChannel.toml
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/PyQt6/bindings/QtWebChannel/QtWebChannelmod.sip
@@ -984,10 +998,10 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/PyQt6/uic/widget-plugin
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/dbus/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/dbus/mainloop/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/dbus/mainloop/pyqt6.abi3-x86_64-linux-gnu.so
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.0.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.0.dist-info/INSTALLER
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.0.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.0.dist-info/RECORD
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.1.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.1.dist-info/INSTALLER
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.1.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pyqt6-6.12.1.dist-info/RECORD
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/PyQt6/
