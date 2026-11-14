@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Simple daemon to allow session software to update firmware"
+homepage="https://github.com/fwupd/fwupd"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=fwupd
+version=2.1.9
+release=1
+
+backup="etc/${name}/${name}.conf
+    etc/${name}/remotes.d/lvfs-testing.conf
+    etc/${name}/remotes.d/lvfs.conf
+    etc/${name}/remotes.d/vendor-directory.conf"
+
+source="https://github.com/${name}/${name}/releases/download/${version}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Dsupported_build=enabled \
+        -Dsystemd_unit_user="${name}" \
+        -Dp2p_policy=none
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+
+    python3 -m compileall -d /usr/share "${PKG}/usr/share"
+    python3 -O -m compileall -d /usr/share "${PKG}/usr/share"
+
+    do_polkit_rules "${name}-refresh"
+    do_sysusers "${name}"
+}
