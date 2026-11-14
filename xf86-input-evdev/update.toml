@@ -2,5 +2,5 @@ name = "xf86-input-evdev"
 provider = "ftp"
 
 [ftp]
-url = "https://www.x.org/pub/individual/driver/"
-filename = "xf86-input-evdev-%(version).tar.xz"
+url = "https://xorg.freedesktop.org/archive/individual/driver/"
+filename = "%(name)-%(version).tar.xz"
