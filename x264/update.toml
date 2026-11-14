@@ -2,4 +2,4 @@ name = "x264"
 provider = "git"
 
 [source]
-url = "https://code.videolan.org/videolan/%(name)/"
+url = "https://code.videolan.org/videolan/%(name).git"
