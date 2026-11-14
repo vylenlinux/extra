@@ -2,7 +2,7 @@ name = "dialog"
 provider = "ftp"
 
 [ftp]
-url = "https://invisible-mirror.net/archives/%(name)"
+url = "https://invisible-mirror.net/archives/%(name)/"
 filename = "%(name)-%(version).tgz"
 
 [version.normalize]
