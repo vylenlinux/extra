@@ -13,10 +13,11 @@ source="${name}-${version}.tar.gz::https://github.com/OpenGamingCollective/${nam
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    cargo fetch --locked
 
     cargo build \
         --release \
-        --locked
+        --frozen
 
     make DESTDIR="${PKG}" \
         install-asusctl \
