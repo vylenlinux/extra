@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="EFI Application used by uefi-capsule plugin in fwupd"
+homepage="https://github.com/fwupd/fwupd-efi"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=fwupd-efi
+version=1.9
+release=1
+source="https://github.com/fwupd/${name}/releases/download/${version}/${name}-${version}.tar.xz"
+
+build() {
+    vylen-meson "${name}-${version}" build \
+        -Defi_sbat_distro_id='vylen' \
+        -Defi_sbat_distro_summary='Vylen GNU/Linux' \
+        -Defi_sbat_distro_pkgname="${name}" \
+        -Defi_sbat_distro_version="${version}" \
+        -Defi_sbat_distro_url="https://vylen.gitlab.io/packages/#${name}" \
+        -Dgenpeimg=disabled
+
+    meson compile -C build
+    DESTDIR="${PKG}" meson install --no-rebuild -C build
+}

@@ -1,0 +1,6 @@
+name = "fwupd-efi"
+provider = "github"
+
+[source]
+owner = "fwupd"
+repo = "%(name)"

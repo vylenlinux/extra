@@ -1,0 +1,7 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/fwupd/
+drwxr-xr-x root/root    usr/lib/fwupd/efi/
+-rwxr-xr-x root/root    usr/lib/fwupd/efi/fwupdx64.efi
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/fwupd-efi.pc
