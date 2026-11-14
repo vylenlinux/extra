@@ -2,7 +2,4 @@ name = "wlr-protocols"
 provider = "git"
 
 [source]
-url = "https://gitlab.freedesktop.org/wlroots/%(name)"
-
-[git]
-field = "version"
+url = "https://gitlab.freedesktop.org/wlroots/%(name).git"
