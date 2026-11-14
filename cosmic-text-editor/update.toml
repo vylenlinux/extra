@@ -2,4 +2,4 @@ name = "cosmic-text-editor"
 provider = "cosmic"
 
 [source]
-project = "%(name)"
+project = "cosmic-edit"
