@@ -2,4 +2,5 @@ name = "mate-icon-theme-faenza"
 provider = "mate"
 
 [source]
+owner = "mate-desktop-legacy-archive"
 package = "%(name)"
