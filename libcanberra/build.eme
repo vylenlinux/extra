@@ -28,7 +28,7 @@ build() {
         --with-systemdsystemunitdir=/usr/lib/systemd/system
 
     make
-    make -j1 DESTDIR="${PKG}" install
+    make DESTDIR="${PKG}" install
 
     # Remove login, logout and system-ready sounds.
     # We have no sound themes that include these so do not play them.
