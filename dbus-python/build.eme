@@ -14,8 +14,4 @@ build() {
     vylen-meson "${name}-${name}-${version}" build -Dtests=disabled
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    python3 "${name}-${name}-${version}/tools/generate-pkginfo.py" "${version}" PKG-INFO
-    python3 -m compileall -d /usr/lib "${PKG}/usr/lib"
-    python3 -O -m compileall -d /usr/lib "${PKG}/usr/lib"
 }
