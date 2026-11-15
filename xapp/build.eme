@@ -14,6 +14,4 @@ build() {
     vylen-meson "${name}-${version}" build
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    python3 -m compileall -o 0 -o 1 -o 2 --hardlink-dupes -s "${PKG}" "${PKG}/${PYTHON_SITE_PACKAGES}"
 }
