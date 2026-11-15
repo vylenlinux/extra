@@ -6,16 +6,16 @@ homepage="https://github.com/nemtrif/utfcpp"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=utf8cpp
-version=4.2.1
+version=5.0.0
 release=1
 source="https://github.com/nemtrif/utfcpp/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "utfcpp-${version}" -B build \
-        -DCMAKE_BUILD_TYPE=None \
+        -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DUTF8_TESTS=OFF
+        -Wno-author
 
-    make -C build
-    make -C build DESTDIR="${PKG}" install
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
 }

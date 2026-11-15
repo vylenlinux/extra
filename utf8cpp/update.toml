@@ -1,5 +1,6 @@
 name = "utf8cpp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "utfcpp"
+owner = "nemtrif"
+repo = "utfcpp"
