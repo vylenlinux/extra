@@ -27,6 +27,4 @@ build() {
 
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
-
-    do_revdep
 }
