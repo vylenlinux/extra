@@ -25,9 +25,6 @@ build() {
     meson compile -C build
     DESTDIR="${PKG}" meson install --no-rebuild -C build
 
-    python3 -m compileall -d /usr/share "${PKG}/usr/share"
-    python3 -O -m compileall -d /usr/share "${PKG}/usr/share"
-
     do_polkit_rules "${name}-refresh"
     do_sysusers "${name}"
 }
