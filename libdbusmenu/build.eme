@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library for passing menus over DBus"
 homepage="https://launchpad.net/libdbusmenu"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,27 +8,29 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=libdbusmenu
 version=16.04.0
 release=1
-source="https://launchpad.net/libdbusmenu/${version%.*}/$version/+download/libdbusmenu-$version.tar.gz"
+source="https://launchpad.net/${name}/${version%.*}/${version}/+download/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	sed -i 's/-Werror//' libdbusmenu-*/Makefile.am
-	sed -i 's/-Werror//' libdbusmenu-*/Makefile.in
+    sed 's/-Werror//' -i \
+        libdbusmenu-*/Makefile.am \
+        libdbusmenu-*/Makefile.in
 
-	export HAVE_VALGRIND_TRUE='#'
-	export HAVE_VALGRIND_FALSE=''
+    export HAVE_VALGRIND_TRUE='#'
+    export HAVE_VALGRIND_FALSE=''
 
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--libexecdir=/usr/lib/$name \
-		--localstatedir=/var \
-		--disable-dumper \
-		--disable-static \
-		--disable-tests \
-		--with-gtk=3
-	make
-	make -j1 DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --libexecdir="/usr/lib/${name}" \
+        --localstatedir=/var \
+        --disable-dumper \
+        --disable-static \
+        --disable-tests \
+        --with-gtk=3
 
+    make
+    make DESTDIR="${PKG}" install
 }
