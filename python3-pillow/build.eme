@@ -13,7 +13,6 @@ source="${name}-${version}.tar.gz::https://github.com/python-pillow/Pillow/archi
 build() {
     # shellcheck disable=SC2164
     cd "Pillow-${version}"
-    export CFLAGS="${CFLAGS} -O2 -L/lib -flto=auto"
 
     gpep517 build-wheel \
         --wheel-dir .dist \
@@ -21,5 +20,6 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    install -Dm644 src/libImaging/*.h -t "${PKG}/usr/include/${PYTHON_PVERSION}/"
+    python_version="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])));')"
+    install -Dm644 src/libImaging/*.h -t "${PKG}/usr/include/python${python_version}/"
 }
