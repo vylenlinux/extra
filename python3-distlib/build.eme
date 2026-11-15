@@ -20,5 +20,5 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    rm "${PKG}/${PYTHON_SITE_PACKAGES}/distlib"/*.exe
+    rm -f "${PKG}/usr/lib"/python3.*/site-packages/distlib/*.exe
 }
