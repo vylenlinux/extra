@@ -1,3 +1,6 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Define blocks for your i3bar status line"
 homepage="https://github.com/vivien/i3blocks"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
@@ -5,16 +8,18 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=i3blocks
 version=1.5
 release=1
-backup="etc/i3blocks.conf"
-source="$name-$version.tar.gz::https://github.com/vivien/i3blocks/archive/$version.tar.gz"
+backup="etc/${name}.conf"
+source="${name}-${version}.tar.gz::https://github.com/vivien/${name}/archive/${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./autogen.sh
 
-	./autogen.sh
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc
-	make
-	make -j1 DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc
+
+    make
+    make DESTDIR="${PKG}" install
 }
