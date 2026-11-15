@@ -12,9 +12,6 @@ drwxr-xr-x root/root    usr/include/passim-1/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Passim-1.0.typelib
-drwxr-xr-x root/root    usr/lib/installed-tests/
-drwxr-xr-x root/root    usr/lib/installed-tests/passim/
--rwxr-xr-x root/root    usr/lib/installed-tests/passim/passim-self-test
 lrwxrwxrwx root/root    usr/lib/libpassim.so -> libpassim.so.1
 lrwxrwxrwx root/root    usr/lib/libpassim.so.1 -> libpassim.so.1.0.0
 -rwxr-xr-x root/root    usr/lib/libpassim.so.1.0.0
@@ -44,9 +41,6 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/256x256/apps/
 drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/
 drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/apps/
 -rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/org.freedesktop.Passim.svg
-drwxr-xr-x root/root    usr/share/installed-tests/
-drwxr-xr-x root/root    usr/share/installed-tests/passim/
--rw-r--r-- root/root    usr/share/installed-tests/passim/passim-self-test.test
 drwxr-xr-x root/root    usr/share/locale/
 drwxr-xr-x root/root    usr/share/locale/cs/
 drwxr-xr-x root/root    usr/share/locale/cs/LC_MESSAGES/
