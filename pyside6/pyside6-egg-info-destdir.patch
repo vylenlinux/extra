@@ -1,0 +1,22 @@
+--- a/build_scripts/setup_runner.py
++++ b/build_scripts/setup_runner.py
+@@ -262,4 +262,19 @@ class SetupRunner:
+         """
+
+         kwargs = config.setup_kwargs
++
++        # Stage setuptools metadata under DESTDIR when building distro packages.
++        # egg_info itself does not apply DESTDIR; direct its output to the
++        # interpreter's platform-specific site-packages directory instead.
++        if "egg_info" in sys.argv[1:] and os.environ.get("DESTDIR"):
++            import sysconfig
++
++            if not any(arg == "--egg-base" or arg.startswith("--egg-base=")
++                       for arg in sys.argv):
++                destdir = os.path.abspath(os.environ["DESTDIR"])
++                platlib = sysconfig.get_path("platlib")
++                egg_base = os.path.join(destdir, platlib.lstrip(os.sep))
++                os.makedirs(egg_base, exist_ok=True)
++                sys.argv.extend(["--egg-base", egg_base])
++
+         setup(**kwargs)  # type: ignore[arg-type]
