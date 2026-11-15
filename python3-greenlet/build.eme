@@ -20,5 +20,5 @@ build() {
 
     python3 -m installer -d "${PKG}" .dist/*.whl
 
-    rm -r "${PKG}/${PYTHON_SITE_PACKAGES}/greenlet/tests/"
+    rm -rf "${PKG}/usr/lib"/python3.*/site-packages/greenlet/tests
 }
