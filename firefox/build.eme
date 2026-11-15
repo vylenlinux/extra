@@ -72,7 +72,4 @@ build() {
 
     # remove crap
     rm -f "${PKG}/usr/lib/${name}/removed-files"
-
-    # exclude library for revdep.
-    do_revdep
 }
