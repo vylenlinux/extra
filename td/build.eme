@@ -7,10 +7,10 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=td
 version=1.8.70
-release=2
+release=3
 
-commit=c8828d50f5eac2fc7089ce1089d7ce9095c61b5e
-source="${name}-${commit}.tar.gz::https://github.com/tdlib/${name}/archive/${commit}.tar.gz"
+commit=5aef7d4036be9bb18e3c78f6709da81f47bb7a70
+source="https://github.com/tdlib/${name}/archive/${commit}/${name}-${commit}.tar.gz"
 
 build() {
     cmake -S "${name}-${commit}" -B build \
