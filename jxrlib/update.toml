@@ -3,4 +3,4 @@ provider = "github"
 
 [source]
 owner = "mircomir"
-repo = "jxrlib"
+repo = "%(name)"
