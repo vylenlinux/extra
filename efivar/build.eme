@@ -6,7 +6,7 @@ homepage="https://github.com/rhboot/efivar"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=efivar
-version=40
+version=39
 release=1
 source="${name}-${version}.tar.gz::https://github.com/rhboot/${name}/archive/${version}.tar.gz"
 
