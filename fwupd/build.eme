@@ -6,7 +6,7 @@ homepage="https://github.com/fwupd/fwupd"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=fwupd
-version=2.1.9
+version=2.1.10
 release=1
 
 backup="etc/${name}/${name}.conf
