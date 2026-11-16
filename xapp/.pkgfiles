@@ -38,8 +38,8 @@ drwxr-xr-x root/root    usr/lib/gtk-3.0/
 drwxr-xr-x root/root    usr/lib/gtk-3.0/modules/
 -rwxr-xr-x root/root    usr/lib/gtk-3.0/modules/libxapp-gtk3-module.so
 lrwxrwxrwx root/root    usr/lib/libxapp.so -> libxapp.so.1
-lrwxrwxrwx root/root    usr/lib/libxapp.so.1 -> libxapp.so.3.4.0
--rwxr-xr-x root/root    usr/lib/libxapp.so.3.4.0
+lrwxrwxrwx root/root    usr/lib/libxapp.so.1 -> libxapp.so.3.4.1
+-rwxr-xr-x root/root    usr/lib/libxapp.so.3.4.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/xapp.pc
 drwxr-xr-x root/root    usr/lib/python3.15/
@@ -47,10 +47,6 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/gi/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/gi/overrides/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/XApp.py
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/XApp.cpython-315.opt-1.pyc
-hrw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/XApp.cpython-315.opt-2.pyc link to usr/lib/python3.15/site-packages/gi/overrides/__pycache__/XApp.cpython-315.opt-1.pyc
-hrw-r--r-- root/root    usr/lib/python3.15/site-packages/gi/overrides/__pycache__/XApp.cpython-315.pyc link to usr/lib/python3.15/site-packages/gi/overrides/__pycache__/XApp.cpython-315.opt-1.pyc
 drwxr-xr-x root/root    usr/lib/xapps/
 -rw-r--r-- root/root    usr/lib/xapps/applet_constants.py
 -rwxr-xr-x root/root    usr/lib/xapps/mate-xapp-status-applet.py
@@ -171,6 +167,9 @@ drwxr-xr-x root/root    usr/share/locale/de/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/el/
 drwxr-xr-x root/root    usr/share/locale/el/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/el/LC_MESSAGES/xapp.mo
+drwxr-xr-x root/root    usr/share/locale/en_AU/
+drwxr-xr-x root/root    usr/share/locale/en_AU/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/en_AU/LC_MESSAGES/xapp.mo
 drwxr-xr-x root/root    usr/share/locale/en_CA/
 drwxr-xr-x root/root    usr/share/locale/en_CA/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/en_CA/LC_MESSAGES/xapp.mo
@@ -204,6 +203,12 @@ drwxr-xr-x root/root    usr/share/locale/fr/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/fr_CA/
 drwxr-xr-x root/root    usr/share/locale/fr_CA/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/fr_CA/LC_MESSAGES/xapp.mo
+drwxr-xr-x root/root    usr/share/locale/fur/
+drwxr-xr-x root/root    usr/share/locale/fur/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/fur/LC_MESSAGES/xapp.mo
+drwxr-xr-x root/root    usr/share/locale/gl/
+drwxr-xr-x root/root    usr/share/locale/gl/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/gl/LC_MESSAGES/xapp.mo
 drwxr-xr-x root/root    usr/share/locale/he/
 drwxr-xr-x root/root    usr/share/locale/he/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/he/LC_MESSAGES/xapp.mo
@@ -264,6 +269,9 @@ drwxr-xr-x root/root    usr/share/locale/lv/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/mai/
 drwxr-xr-x root/root    usr/share/locale/mai/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/mai/LC_MESSAGES/xapp.mo
+drwxr-xr-x root/root    usr/share/locale/mi/
+drwxr-xr-x root/root    usr/share/locale/mi/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/mi/LC_MESSAGES/xapp.mo
 drwxr-xr-x root/root    usr/share/locale/mk/
 drwxr-xr-x root/root    usr/share/locale/mk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/mk/LC_MESSAGES/xapp.mo
@@ -327,6 +335,9 @@ drwxr-xr-x root/root    usr/share/locale/th/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/tr/
 drwxr-xr-x root/root    usr/share/locale/tr/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/tr/LC_MESSAGES/xapp.mo
+drwxr-xr-x root/root    usr/share/locale/ug/
+drwxr-xr-x root/root    usr/share/locale/ug/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/ug/LC_MESSAGES/xapp.mo
 drwxr-xr-x root/root    usr/share/locale/uk/
 drwxr-xr-x root/root    usr/share/locale/uk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/uk/LC_MESSAGES/xapp.mo
