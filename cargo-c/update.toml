@@ -1,8 +1,6 @@
 name = "cargo-c"
-provider = "crates"
+provider = "github"
 
 [source]
-crate = "cargo-c"
-
-[version.normalize]
-strip_suffix = "+*"
+owner = "lu-zero"
+repo = "%(name)"

@@ -6,24 +6,16 @@ homepage="https://github.com/lu-zero/cargo-c/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cargo-c
-version=0.10.26
+version=0.10.27
 release=1
-
-source="https://github.com/lu-zero/${name}/archive/v${version}/${name}-${version}.tar.gz
-    ${name}-${version}.Cargo.lock::https://github.com/lu-zero/${name}/releases/download/v${version}/Cargo.lock"
+source="https://github.com/lu-zero/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    cargo build --release
 
-    cp "${SRC}/${name}-${version}.Cargo.lock" Cargo.lock
-    export RUSTUP_TOOLCHAIN=stable
-
-    cargo fetch --locked
-
-    cargo build \
-        --release \
-        --frozen
-
-    find target/release -maxdepth 1 -type f -executable -exec install -Dm755 -t "${PKG}/usr/bin/" {} +
+    for f in cinstall cbuild capi ctest; do
+        install -Dm755 "target/release/cargo-${f}" -t "${PKG}/usr/bin/"
+    done
 }
