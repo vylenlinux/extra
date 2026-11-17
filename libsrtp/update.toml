@@ -1,5 +1,6 @@
 name = "libsrtp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsrtp"
+owner = "cisco"
+repo = "%(name)"
