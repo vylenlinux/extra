@@ -6,7 +6,7 @@ homepage="https://code.videolan.org/videolan/dav1d/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dav1d
-version=1.5.4
+version=1.5.5
 release=1
 source="https://code.videolan.org/videolan/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 

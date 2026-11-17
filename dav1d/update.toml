@@ -1,5 +1,6 @@
 name = "dav1d"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "dav1d"
+instance = "https://code.videolan.org/"
+project = "videolan/%(name)"
