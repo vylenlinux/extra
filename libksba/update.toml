@@ -1,5 +1,6 @@
 name = "libksba"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libksba"
+[ftp]
+url = "https://gnupg.org/ftp/gcrypt/%(name)/"
+filename = "%(name)-%(version).tar.bz2"
