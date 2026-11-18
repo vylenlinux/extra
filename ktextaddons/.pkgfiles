@@ -135,6 +135,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateTex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateLocalTagsDatabase
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateManager
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateManagerBase
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateMcpToolsManager
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateMenuConfigureDialog
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateMenuConfigureWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateMenuTextInfo
@@ -164,7 +165,9 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateTex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateStackWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTag
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTagsModel
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextAgentModel
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextClient
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextConfigureMcpServersWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextConfigurePluginsWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextConfigurePromptWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextInstance
@@ -176,6 +179,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateTex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextPromptSortFilterProxyModel
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextReplyInfo
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextRequest
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextSkillModel
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextToolBaseJob
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextToolInternal
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/TextAutoGenerateText/TextAutoGenerateTextToolInternalInterface
@@ -222,6 +226,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratelocaltagsdatabase.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemanager.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemanagerbase.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemcptoolsmanager.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemenuconfiguredialog.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemenuconfigurewidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratemenutextinfo.h
@@ -252,7 +257,9 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetag.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetagsmodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetext_export.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextagentmodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextclient.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextconfiguremcpserverswidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextconfigurepluginswidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextconfigurepromptwidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextglobalconfig.h
@@ -265,6 +272,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetex
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextpromptsortfilterproxymodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextreplyinfo.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextrequest.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetextskillmodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetexttoolbasejob.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetexttoolinternal.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateText/textautogeneratetext/textautogeneratetexttoolinternalinterface.h
@@ -296,6 +304,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/Text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolClient
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolClientCapabilities
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolClientProtocolManager
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCommonUtils
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCompleteRequest
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCompleteRequestParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCompleteResult
@@ -303,6 +312,8 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/Text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCreateMessageRequestParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCreateMessageResult
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolCreateTaskResult
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolDiscoverRequest
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolDiscoverResult
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolElicitRequest
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolElicitRequestFormParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolElicitRequestURLParams
@@ -365,6 +376,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/Text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolReadResourceRequestParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolReadResourceResult
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolRelatedTaskMetadata
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolRequestMeta
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolRequestParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolResource
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolResourceContents
@@ -380,6 +392,13 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/Text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolSamplingMessage
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServer
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerCapabilities
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerPrompt
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerProtocolManager
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerResource
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolSetLevelRequest
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolSetLevelRequestParams
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings
@@ -405,13 +424,15 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/Text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolURLElicitationRequiredError
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUnsubscribeRequest
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUnsubscribeRequestParams
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUnsupportedProtocolVersionError
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUntitledMultiSelectEnumSchema
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUntitledSingleSelectEnumSchema
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpProtocolUtils
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpRegistryServerInfo
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpRegistryServerModel
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpServer
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpServerManager
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpServerModel
--rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/TextAutoGenerateTextMcpProtocolCore/McpServerSortFilterProxyModel
 drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolannotations.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolaudiocontent.h
@@ -428,6 +449,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolclient.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolclientcapabilities.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolclientprotocolmanager.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcommonutils.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcompleterequest.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcompleterequestparams.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcompleteresult.h
@@ -435,6 +457,8 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcreatemessagerequestparams.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcreatemessageresult.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolcreatetaskresult.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocoldiscoverrequest.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocoldiscoverresult.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolelicitationcompletenotification.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolelicitrequest.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolelicitrequestformparams.h
@@ -497,6 +521,7 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolreadresourcerequestparams.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolreadresourceresult.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolrelatedtaskmetadata.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolrequestmeta.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolrequestparams.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolresource.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolresourcecontents.h
@@ -512,6 +537,13 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolsamplingmessage.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolserver.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolservercapabilities.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolserverprompt.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolserverprotocolmanager.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolserverresource.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolservertool.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolservertoolarguments.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolservertoolcall.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolserverutils.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolsetlevelrequest.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolsetlevelrequestparams.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolsettings.h
@@ -536,24 +568,32 @@ drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/text
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocoltoolusecontent.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolunsubscriberequest.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolunsubscriberequestparams.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolunsupportedprotocolversionerror.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocoluntitledmultiselectenumschema.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocoluntitledsingleselectenumschema.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolurlelicitationrequirederror.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpprotocolutils.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpregistryserverinfo.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpregistryservermodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpserver.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpservermanager.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpservermodel.h
--rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/mcpserversortfilterproxymodel.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolCore/textautogeneratetextmcpprotocolcore/textautogeneratetextmcpprotocolcore_export.h
 drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/
 drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/AddMcpServerDialog
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/AddMcpServerRootsWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/AddMcpServerWidget
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureDialog
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/McpServerListView
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/TextAutoGenerateTextMcpProtocolWidgets/McpServerWidget
 drwxr-xr-x root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/addmcpserverdialog.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/addmcpserverrootswidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/addmcpserverwidget.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/mcpprotocolserverconfiguredialog.h
+-rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/mcpprotocolserverconfigurewidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/mcpserverlistview.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/mcpserverwidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextAutoGenerateTextMcpProtocolWidgets/textautogeneratetextmcpprotocolwidgets/textautogeneratetextmcpprotocolwidgets_export.h
@@ -692,6 +732,8 @@ drwxr-xr-x root/root    usr/include/KF6/TextSpeechToText/
 drwxr-xr-x root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextAction
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextClient
+-rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextConfigureDialog
+-rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextConfigureWidget
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextEngineLoader
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextManager
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/SpeechToTextMenu
@@ -700,6 +742,8 @@ drwxr-xr-x root/root    usr/include/KF6/TextSpeechToText/TextSpeechToText/
 drwxr-xr-x root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextaction.h
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextclient.h
+-rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextconfiguredialog.h
+-rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextconfigurewidget.h
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextengineloader.h
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextmanager.h
 -rw-r--r-- root/root    usr/include/KF6/TextSpeechToText/textspeechtotext/speechtotextmenu.h
@@ -831,84 +875,86 @@ drwxr-xr-x root/root    usr/lib/cmake/textutils-cmark-rc-copy/
 -rw-r--r-- root/root    usr/lib/cmake/textutils-cmark-rc-copy/textutils-cmark-rc-copy-targets-release.cmake
 -rw-r--r-- root/root    usr/lib/cmake/textutils-cmark-rc-copy/textutils-cmark-rc-copy-targets.cmake
 lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so -> libKF6TextAddonsWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so.1 -> libKF6TextAddonsWidgets.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAddonsWidgets.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAddonsWidgets.so.1 -> libKF6TextAddonsWidgets.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAddonsWidgets.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so -> libKF6TextAutoCorrectionCore.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so.1 -> libKF6TextAutoCorrectionCore.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionCore.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionCore.so.1 -> libKF6TextAutoCorrectionCore.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionCore.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so -> libKF6TextAutoCorrectionWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.1 -> libKF6TextAutoCorrectionWidgets.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.1 -> libKF6TextAutoCorrectionWidgets.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoCorrectionWidgets.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so -> libKF6TextAutoGenerateText.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so.1 -> libKF6TextAutoGenerateText.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateText.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateText.so.1 -> libKF6TextAutoGenerateText.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateText.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolCore.so -> libKF6TextAutoGenerateTextMcpProtocolCore.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolCore.so.1 -> libKF6TextAutoGenerateTextMcpProtocolCore.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolCore.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolCore.so.1 -> libKF6TextAutoGenerateTextMcpProtocolCore.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolCore.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolWidgets.so -> libKF6TextAutoGenerateTextMcpProtocolWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolWidgets.so.1 -> libKF6TextAutoGenerateTextMcpProtocolWidgets.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolWidgets.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolWidgets.so.1 -> libKF6TextAutoGenerateTextMcpProtocolWidgets.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextAutoGenerateTextMcpProtocolWidgets.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so -> libKF6TextCustomEditor.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so.1 -> libKF6TextCustomEditor.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextCustomEditor.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextCustomEditor.so.1 -> libKF6TextCustomEditor.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextCustomEditor.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so -> libKF6TextEditTextToSpeech.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so.1 -> libKF6TextEditTextToSpeech.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextEditTextToSpeech.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextEditTextToSpeech.so.1 -> libKF6TextEditTextToSpeech.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextEditTextToSpeech.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so -> libKF6TextEmoticonsCore.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so.1 -> libKF6TextEmoticonsCore.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsCore.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsCore.so.1 -> libKF6TextEmoticonsCore.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsCore.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so -> libKF6TextEmoticonsWidgets.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so.1 -> libKF6TextEmoticonsWidgets.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsWidgets.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextEmoticonsWidgets.so.1 -> libKF6TextEmoticonsWidgets.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextEmoticonsWidgets.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so -> libKF6TextGrammarCheck.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so.1 -> libKF6TextGrammarCheck.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextGrammarCheck.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextGrammarCheck.so.1 -> libKF6TextGrammarCheck.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextGrammarCheck.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so -> libKF6TextSpeechToText.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so.1 -> libKF6TextSpeechToText.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextSpeechToText.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextSpeechToText.so.1 -> libKF6TextSpeechToText.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextSpeechToText.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so -> libKF6TextTranslator.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so.1 -> libKF6TextTranslator.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextTranslator.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextTranslator.so.1 -> libKF6TextTranslator.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextTranslator.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so -> libKF6TextUtils.so.1
-lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so.1 -> libKF6TextUtils.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libKF6TextUtils.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libkokoroinstalltexttospeech.so.1 -> libkokoroinstalltexttospeech.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libkokoroinstalltexttospeech.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libkokorotexttospeech.so.1 -> libkokorotexttospeech.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libkokorotexttospeech.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libKF6TextUtils.so.1 -> libKF6TextUtils.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libKF6TextUtils.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libkokoroinstalltexttospeech.so.1 -> libkokoroinstalltexttospeech.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libkokoroinstalltexttospeech.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libkokorotexttospeech.so.1 -> libkokorotexttospeech.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libkokorotexttospeech.so.2.3.0
 -rwxr-xr-x root/root    usr/lib/libmcpprotocolclientplugin.so.0
 -rwxr-xr-x root/root    usr/lib/libmcpprotocolserverplugin.so.0
-lrwxrwxrwx root/root    usr/lib/libspeechtotextwhisper.so.1 -> libspeechtotextwhisper.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libspeechtotextwhisper.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libspeechtotextwhisperinstall.so.1 -> libspeechtotextwhisperinstall.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libspeechtotextwhisperinstall.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerategenericnetwork.so.1 -> libtextautogenerategenericnetwork.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerategenericnetwork.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogeneratellamacpp.so.1 -> libtextautogeneratellamacpp.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogeneratellamacpp.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogeneratelmstudio.so.1 -> libtextautogeneratelmstudio.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogeneratelmstudio.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollama.so.1 -> libtextautogenerateollama.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollama.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacloud.so.1 -> libtextautogenerateollamacloud.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacloud.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacommon.so.1 -> libtextautogenerateollamacommon.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacommon.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamaonline.so.1 -> libtextautogenerateollamaonline.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerateollamaonline.so.2.2.0
-lrwxrwxrwx root/root    usr/lib/libtextautogenerateplugincommon.so.1 -> libtextautogenerateplugincommon.so.2.2.0
--rwxr-xr-x root/root    usr/lib/libtextautogenerateplugincommon.so.2.2.0
+lrwxrwxrwx root/root    usr/lib/libspeechtotextwhisper.so.1 -> libspeechtotextwhisper.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libspeechtotextwhisper.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libspeechtotextwhisperinstall.so.1 -> libspeechtotextwhisperinstall.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libspeechtotextwhisperinstall.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerategenericnetwork.so.1 -> libtextautogenerategenericnetwork.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerategenericnetwork.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogeneratellamacpp.so.1 -> libtextautogeneratellamacpp.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogeneratellamacpp.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogeneratelmstudio.so.1 -> libtextautogeneratelmstudio.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogeneratelmstudio.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollama.so.1 -> libtextautogenerateollama.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollama.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacloud.so.1 -> libtextautogenerateollamacloud.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacloud.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamacommon.so.1 -> libtextautogenerateollamacommon.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamacommon.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateollamaonline.so.1 -> libtextautogenerateollamaonline.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateollamaonline.so.2.3.0
+lrwxrwxrwx root/root    usr/lib/libtextautogenerateplugincommon.so.1 -> libtextautogenerateplugincommon.so.2.3.0
+-rwxr-xr-x root/root    usr/lib/libtextautogenerateplugincommon.so.2.3.0
 lrwxrwxrwx root/root    usr/lib/libtextutils-cmark-rc-copy.so -> libtextutils-cmark-rc-copy.so.0
 lrwxrwxrwx root/root    usr/lib/libtextutils-cmark-rc-copy.so.0 -> libtextutils-cmark-rc-copy.so.0.31.0
 -rwxr-xr-x root/root    usr/lib/libtextutils-cmark-rc-copy.so.0.31.0
 drwxr-xr-x root/root    usr/lib/qt6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/
+drwxr-xr-x root/root    usr/lib/qt6/plugins/autogeneratetext/
+drwxr-xr-x root/root    usr/lib/qt6/plugins/autogeneratetext/toolplugins/
+-rwxr-xr-x root/root    usr/lib/qt6/plugins/autogeneratetext/toolplugins/textautogeneratetext_exampletoolplugin.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/designer/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/designer/textcustomeditor.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/designer/texttranslatorwidgets6.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/speechtotext/
--rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/speechtotext/speechtotext_google.so
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/speechtotext/speechtotext_whisper.so
 drwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/textautogeneratetext/
 -rwxr-xr-x root/root    usr/lib/qt6/plugins/kf6/textautogeneratetext/autogeneratetext_genericnetwork.so
@@ -1072,6 +1118,7 @@ drwxr-xr-x root/root    usr/share/locale/fi/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextaddonswidgets.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextautocorrection.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextautogeneratetext.mo
+-rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextautogeneratetextmcpprotocol.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextcustomeditor.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextedittexttospeech.mo
 -rw-r--r-- root/root    usr/share/locale/fi/LC_MESSAGES/libtextemoticons.mo
@@ -1266,6 +1313,8 @@ drwxr-xr-x root/root    usr/share/locale/ru/
 drwxr-xr-x root/root    usr/share/locale/ru/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextaddonswidgets.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextautocorrection.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextautogeneratetext.mo
+-rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextautogeneratetextmcpprotocol.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextcustomeditor.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextedittexttospeech.mo
 -rw-r--r-- root/root    usr/share/locale/ru/LC_MESSAGES/libtextemoticons.mo
@@ -1322,6 +1371,7 @@ drwxr-xr-x root/root    usr/share/locale/ta/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextaddonswidgets.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextautocorrection.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextautogeneratetext.mo
+-rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextautogeneratetextmcpprotocol.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextcustomeditor.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextedittexttospeech.mo
 -rw-r--r-- root/root    usr/share/locale/ta/LC_MESSAGES/libtextemoticons.mo
