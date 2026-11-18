@@ -1,5 +1,6 @@
 name = "libcue"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libcue"
+owner = "lipnitsk"
+repo = "%(name)"
