@@ -6,3 +6,6 @@ package = "bind"
 
 [repology]
 match_name = "bind9"
+
+[version.filter]
+exclude = ['9\.21\..*']
