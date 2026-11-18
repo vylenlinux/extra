@@ -1,5 +1,5 @@
 name = "fontconfig"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "fontconfig"
+project = "%(name)/%(name)"
