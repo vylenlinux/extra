@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Cosmic Desktop meta port"
+homepage="https://system76.com/cosmic"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=cosmic-desktop
+version=1.11.0
+release=1
+
+build() {
+    mkdir -p "${PKG}/usr"
+}
