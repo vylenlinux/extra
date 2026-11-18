@@ -1,6 +1,0 @@
-name = "bspwm-rounded"
-provider = "github"
-
-[source]
-owner = "phuhl"
-repo = "bspwm-rounded"
