@@ -1,5 +1,6 @@
 name = "libxfont2"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxfont2"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
+filename = "libXfont2-%(version).tar.xz"
