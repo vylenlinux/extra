@@ -1,5 +1,6 @@
 name = "webkitgtk"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "webkitgtk"
+[ftp]
+url = "https://webkitgtk.org/releases/"
+filename = "%(name)-%(version).tar.xz"
