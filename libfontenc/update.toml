@@ -1,5 +1,11 @@
 name = "libfontenc"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libfontenc"
+project = "xorg/lib/%(name)"
+
+[version.normalize]
+strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['%(name)-.*']
