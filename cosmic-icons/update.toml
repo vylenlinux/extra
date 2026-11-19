@@ -1,0 +1,5 @@
+name = "cosmic-icons"
+provider = "cosmic"
+
+[source]
+project = "%(name)"

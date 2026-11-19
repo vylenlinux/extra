@@ -5,13 +5,13 @@ description="Cosmic icon theme"
 homepage="https://github.com/pop-os/cosmic-icons"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=cosmic-icon-theme
+name=cosmic-icons
 version=1.11.0
 release=1
-source="${name}-${version}.tar.gz::https://github.com/pop-os/cosmic-icons/archive/refs/tags/epoch-${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "cosmic-icons-epoch-${version}"
+    cd "${name}-epoch-${version}"
     just rootdir="${PKG}" install
 }

@@ -1,5 +1,0 @@
-name = "cosmic-icon-theme"
-provider = "cosmic"
-
-[source]
-project = "cosmic-icons"
