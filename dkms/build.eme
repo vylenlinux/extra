@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=dkms
 version=3.4.5
-release=1
+release=2
 backup="etc/${name}/framework.conf"
 
 source="${name}-${version}.tar.gz::https://github.com/dkms-project/${name}/archive/v${version}.tar.gz
