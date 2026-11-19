@@ -1,5 +1,0 @@
-name = "cosmic-text-editor"
-provider = "cosmic"
-
-[source]
-project = "cosmic-edit"
