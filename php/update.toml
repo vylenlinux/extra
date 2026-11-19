@@ -1,5 +1,12 @@
 name = "php"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "php"
+owner = "%(name)"
+repo = "%(name)-src"
+
+[version.normalize]
+strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['^%(name)-.*$']
