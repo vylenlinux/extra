@@ -229,9 +229,9 @@ drwxr-xr-x root/root    usr/include/ruby-4.0.0/x86_64-linux/
 drwxr-xr-x root/root    usr/include/ruby-4.0.0/x86_64-linux/ruby/
 -rw-r--r-- root/root    usr/include/ruby-4.0.0/x86_64-linux/ruby/config.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libruby.so -> libruby.so.4.0.9
-lrwxrwxrwx root/root    usr/lib/libruby.so.4.0 -> libruby.so.4.0.9
--rwxr-xr-x root/root    usr/lib/libruby.so.4.0.9
+lrwxrwxrwx root/root    usr/lib/libruby.so -> libruby.so.4.0.10
+lrwxrwxrwx root/root    usr/lib/libruby.so.4.0 -> libruby.so.4.0.10
+-rwxr-xr-x root/root    usr/lib/libruby.so.4.0.10
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/ruby-4.0.pc
 drwxr-xr-x root/root    usr/lib/ruby/
@@ -1765,7 +1765,7 @@ drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/gems/irb-1.16.0/lib/irb/lc/ja/
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/gems/irb-1.16.0/lib/irb/xmp.rb
 drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/gems/irb-1.16.0/man/
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/gems/irb-1.16.0/man/irb.1
-drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/gems/json-2.18.0/
+drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/gems/json-2.18.3/
 drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/gems/logger-1.7.0/
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/gems/logger-1.7.0/BSDL
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/gems/logger-1.7.0/COPYING
@@ -3534,7 +3534,7 @@ drwxr-xr-x root/root    usr/lib/ruby/gems/4.0.0/specifications/default/
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/io-nonblock-0.3.2.gemspec
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/io-wait-0.4.0.gemspec
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/ipaddr-1.2.8.gemspec
--rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/json-2.18.0.gemspec
+-rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/json-2.18.3.gemspec
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/net-http-0.9.1.gemspec
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/net-protocol-0.2.2.gemspec
 -rw-r--r-- root/root    usr/lib/ruby/gems/4.0.0/specifications/default/open-uri-0.5.0.gemspec
