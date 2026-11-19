@@ -1,5 +1,14 @@
 name = "nspr"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nspr"
+owner = "mozilla"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "NSPR_"
+strip_suffix = "_RTM"
+replace = { "_" = "." }
+
+[version.filter]
+include = ['NSPR_.*_RTM']
