@@ -6,7 +6,7 @@ homepage="https://www.php.net"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=php
-version=8.5.12
+version=8.5.13
 release=1
 source="https://php.net/distributions/${name}-${version}.tar.xz"
 
@@ -43,7 +43,6 @@ build() {
         --enable-sysvshm=shared \
         --with-bz2=shared \
         --with-curl=shared \
-        --with-db6=/usr \
         --with-enchant=shared \
         --with-external-pcre \
         --with-ffi=shared \

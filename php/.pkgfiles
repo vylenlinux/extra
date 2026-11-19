@@ -445,3 +445,6 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/php.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/phpdbg.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/phpize.1.gz
+drwxr-xr-x root/root    var/
+drwxr-xr-x root/root    var/log/
+drwxr-xr-x root/root    var/run/
