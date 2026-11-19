@@ -5,16 +5,16 @@ description="Cosmic Terminal Emulator"
 homepage="https://github.com/pop-os/cosmic-term"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
-name=cosmic-terminal
+name=cosmic-term
 version=1.11.0
 release=1
 
-source="${name}-${version}.tar.gz::https://github.com/pop-os/cosmic-term/archive/refs/tags/epoch-${version}.tar.gz
+source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz
     ${name}-lto.patch"
 
 build() {
     # shellcheck disable=SC2164
-    cd "cosmic-term-epoch-${version}"
+    cd "${name}-epoch-${version}"
     patch -Np1 -i "${SRC}/${name}-lto.patch"
 
     cargo fetch --locked

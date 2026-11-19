@@ -1,0 +1,5 @@
+name = "cosmic-term"
+provider = "cosmic"
+
+[source]
+project = "%(name)"
