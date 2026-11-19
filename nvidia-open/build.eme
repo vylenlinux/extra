@@ -17,16 +17,20 @@ build() {
     cd "NVIDIA-kernel-module-source-${version}"
 
     # Attempt to make builds reproducible
-    sed -i "s/^  HOSTNAME.*/  HOSTNAME = echo vylen/" utils.mk
-    sed -i "s/^WHOAMI.*/WHOAMI = echo emerald/" utils.mk
-    sed -i "s/^DATE.*/DATE = date -r version.mk/" utils.mk
+    sed \
+        -e 's/^  HOSTNAME.*/  HOSTNAME = printf vylen/' \
+        -e 's/^WHOAMI.*/WHOAMI = printf emerald/' \
+        -e 's/^DATE.*/DATE = date -r version.mk/' \
+    -i utils.mk
 
-    sed -i "s/__VERSION_STRING/${version}/" kernel-open/dkms.conf
     # shellcheck disable=SC2016
-    sed -i 's/__JOBS/`nproc`/' kernel-open/dkms.conf
-    sed -i 's/__EXCLUDE_MODULES//' kernel-open/dkms.conf
-    sed -i 's/__DKMS_MODULES//' kernel-open/dkms.conf
-    sed -i 's/NV_EXCLUDE_BUILD_MODULES/IGNORE_PREEMPT_RT_PRESENCE=1 NV_EXCLUDE_BUILD_MODULES/' kernel-open/dkms.conf
+    sed \
+        -e "s/__VERSION_STRING/${version}/" \
+        -e 's/__JOBS/`nproc`/' \
+        -e 's/__EXCLUDE_MODULES//' \
+        -e 's/__DKMS_MODULES//' \
+        -e 's/NV_EXCLUDE_BUILD_MODULES/IGNORE_PREEMPT_RT_PRESENCE=1 NV_EXCLUDE_BUILD_MODULES/' \
+    -i kernel-open/dkms.conf
 
     # Additional parameters for open kernel modules
     cat "${SRC}/dkms.conf.in" >> kernel-open/dkms.conf

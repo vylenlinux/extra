@@ -1,7 +1,7 @@
 #!/bin/sh
 
 post_install() {
-    sh /var/lib/dkms/buildmodules-nvidia-open.sh
+    sh /var/lib/dkms/buildmodules-nvidia-open.sh install
 }
 
 post_upgrade() {
