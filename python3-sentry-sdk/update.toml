@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "getsentry"
 repo = "sentry-python"
+
+[version.filter]
+exclude = ['.*rc.*']
