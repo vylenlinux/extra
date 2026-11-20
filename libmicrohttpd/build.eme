@@ -6,7 +6,7 @@ homepage="https://www.gnu.org/software/libmicrohttpd/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmicrohttpd
-version=1.0.10
+version=1.0.11
 release=1
 source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
