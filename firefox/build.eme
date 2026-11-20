@@ -30,7 +30,7 @@ build() {
     # audio
     emerald is-installed alsa-lib && printf 'ac_add_options --enable-alsa\n' >> .mozconfig
     emerald is-installed jack && printf 'ac_add_options --enable-jack\n' >> .mozconfig
-    emerald is-installed pulseaudio && printf 'ac_add_options --enable-pulseaudio\n' >> .mozconfig
+    emerald is-installed libpulse && printf 'ac_add_options --enable-pulseaudio\n' >> .mozconfig
 
     # wayland
     emerald is-installed wayland-protocols && \
