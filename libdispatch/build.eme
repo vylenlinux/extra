@@ -6,9 +6,9 @@ homepage="https://github.com/swiftlang/swift-corelibs-libdispatch"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libdispatch
-version=6.4.2
+version=6.4.3
 release=1
-source="${name}-${version}.tar.gz::https://github.com/apple/swift-corelibs-${name}/archive/swift-${version}-RELEASE.tar.gz"
+source="https://github.com/swiftlang/swift-corelibs-${name}/archive/swift-${version}-RELEASE/${name}-${version}.tar.gz"
 
 build() {
     export CC=clang

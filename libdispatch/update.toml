@@ -1,5 +1,13 @@
 name = "libdispatch"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libdispatch"
+owner = "swiftlang"
+repo = "swift-corelibs-%(name)"
+
+[version.normalize]
+strip_prefix = "swift-"
+strip_suffix = "-RELEASE"
+
+[version.filter]
+include = ['^swift-.*-RELEASE$']
