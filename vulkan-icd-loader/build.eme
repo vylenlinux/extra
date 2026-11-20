@@ -6,23 +6,22 @@ homepage="https://www.khronos.org/vulkan/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-icd-loader
-version=1.4.368
+version=1.4.369
 release=1
-source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/v${version}.tar.gz"
+source="https://github.com/KhronosGroup/Vulkan-Loader/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "Vulkan-Loader-${version}" -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
-        -DCMAKE_INSTALL_SYSCONFDIR=/etc \
-        -DCMAKE_INSTALL_DATADIR=/share \
         -DCMAKE_SKIP_RPATH=True \
         -DCMAKE_BUILD_TYPE=Release \
         -DVULKAN_HEADERS_INSTALL_DIR=/usr \
         -DBUILD_TESTS=Off \
         -DBUILD_WSI_XCB_SUPPORT=On \
         -DBUILD_WSI_XLIB_SUPPORT=On \
-        -DBUILD_WSI_WAYLAND_SUPPORT=On
+        -DBUILD_WSI_WAYLAND_SUPPORT=On \
+        -Wno-author
 
     cmake --build build
     DESTDIR="${PKG}" cmake --install build

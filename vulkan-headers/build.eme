@@ -6,9 +6,9 @@ homepage="https://github.com/KhronosGroup/vulkan-headers"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=vulkan-headers
-version=1.4.368
+version=1.4.369
 release=1
-source="${name}-${version}.tar.gz::https://github.com/KhronosGroup/${name}/archive/refs/tags/v${version}.tar.gz"
+source="https://github.com/KhronosGroup/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "Vulkan-Headers-${version}" -B build -G Ninja \
