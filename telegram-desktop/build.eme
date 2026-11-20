@@ -6,15 +6,15 @@ homepage="https://telegram.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=telegram-desktop
-version=7.4.4
+version=7.4.5
 release=1
 source="${name}-${version}.tar.gz::https://github.com/telegramdesktop/tdesktop/releases/download/v${version}/tdesktop-${version}-full.tar.gz"
 
 build() {
     cmake -S "tdesktop-${version}-full" -B build -G Ninja \
-        -DCMAKE_VERBOSE_MAKEFILE=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_VERBOSE_MAKEFILE=ON \
         -DTDESKTOP_API_ID=611335 \
         -DTDESKTOP_API_HASH=d524b414d21f4d37f08684c1df41ac9c \
         -Wno-author
