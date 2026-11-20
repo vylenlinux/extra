@@ -1,5 +1,6 @@
 name = "gpgme"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "gpgme"
+[ftp]
+url = "https://gnupg.org/ftp/gcrypt/%(name)/"
+filename = "%(name)-%(version).tar.bz2"
