@@ -40,8 +40,8 @@ build() {
         -Dsoxr="$(emerald is-installed libsoxr && printf "enabled" || printf "disabled")" \
         -Dmpcdec=disabled \
         -Dmpg123="$(emerald is-installed mpg123 && printf "enabled" || printf "disabled")" \
-        -Dpulse="$(emerald is-installed pulseaudio && printf "enabled" || printf "disabled")" \
-        -Dpipewire="$(emerald is-installed pipewire && printf "enabled" || printf "disabled")" \
+        -Dpulse="$(emerald is-installed libpulse && printf "enabled" || printf "disabled")" \
+        -Dpipewire="$(emerald is-installed libpipewire && printf "enabled" || printf "disabled")" \
         -Dsmbclient="$(emerald is-installed samba && printf "enabled" || printf "disabled")" \
         -Dtwolame="$(emerald is-installed twolame && printf "enabled" || printf "disabled")" \
         -Dvorbis="$(emerald is-installed libvorbis && printf "enabled" || printf "disabled")" \
