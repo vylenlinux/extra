@@ -1,5 +1,6 @@
 name = "ffmpeg"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "ffmpeg"
+[ftp]
+url = "https://ffmpeg.org/releases/"
+filename = "%(name)-%(version).tar.xz"

@@ -6,12 +6,12 @@ homepage="https://ffmpeg.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ffmpeg
-version=9.0.2
+version=9.1
 release=1
 
 source="https://ffmpeg.org/releases/${name}-${version}.tar.xz
     add-av_stream_get_first_dts-for-chromium.patch
-    ffmpeg-x264-10bit"
+    ${name}-x264-10bit"
 
 build() {
     # shellcheck disable=SC2164
@@ -36,16 +36,18 @@ build() {
 
     # adds the ALSA library to the Flite LDFLAGS variable and
     # enables the discovery of Flite
-    sed -i 's/-lflite"/-lflite -lasound"/' configure
+    sed 's/-lflite"/-lflite -lasound"/' -i configure
 
     # shellcheck disable=SC2086
     ./configure \
         --prefix=/usr \
+        \
         --disable-static \
         --disable-debug \
         --disable-optimizations \
         --disable-stripping \
         --disable-doc \
+        \
         --enable-gpl \
         --enable-gnutls \
         --enable-version3 \
@@ -68,6 +70,7 @@ build() {
         --enable-libaom \
         --enable-libdav1d \
         --enable-nvenc \
+        \
         ${_opt}
 
     make
@@ -76,6 +79,6 @@ build() {
     make DESTDIR="${PKG}" install
     install -m755 tools/qt-faststart -t "${PKG}/usr/bin/"
 
-    [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/ffmpeg-x264-10bit" -t "${PKG}/usr/bin/"
-    rm -r "${PKG}/usr/share/ffmpeg/examples"
+    [ -e /usr/lib/pkgconfig/x264.pc ] && install -Dm755 "${SRC}/${name}-x264-10bit" -t "${PKG}/usr/bin/"
+    rm -r "${PKG}/usr/share/${name}/examples"
 }
