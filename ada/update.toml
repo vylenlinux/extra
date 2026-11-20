@@ -1,5 +1,6 @@
 name = "ada"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ada"
+owner = "%(name)-url"
+repo = "%(name)"
