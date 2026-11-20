@@ -1,5 +1,6 @@
 name = "svt-av1"
-provider = "gitlab"
+provider = "github"
 
 [source]
-project = "AOMediaCodec/%(name)"
+owner = "AOMediaCodec"
+repo = "%(name)"
