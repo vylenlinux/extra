@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A native, familiar music streaming client"
+homepage="https://github.com/sonorahq/sonora"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=sonora
+version=0.50.3
+release=1
+source="https://github.com/sonorahq/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    cargo fetch --locked
+    export RUSTFLAGS="-C link-args=-Wl,-z,shstk"
+
+    cargo build \
+        --release \
+        --frozen
+
+    install -Dm755 "target/release/${name}" -t "${PKG}/usr/bin/"
+    install -Dm644 "assets/linux/${name}.desktop" -t "${PKG}/usr/share/applications/"
+    install -Dm644 "assets/linux/${name}.svg" -t "${PKG}/usr/share/icons/hicolor/scalable/apps/"
+
+    for dir in assets/linux/icons/hicolor/*; do
+        install -Dm644 "${dir}/apps/${name}.png" -t "${PKG}/usr/share/icons/hicolor/${dir##*/}/apps/"
+    done
+}

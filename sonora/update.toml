@@ -1,0 +1,6 @@
+name = "sonora"
+provider = "github"
+
+[source]
+owner = "sonorahq"
+repo = "%(name)"

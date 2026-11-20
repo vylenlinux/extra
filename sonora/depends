@@ -1,0 +1,7 @@
+rust
+alsa-lib
+dbus
+fontconfig
+hicolor-icon-theme
+libxkbcommon
+vulkan-icd-loader
