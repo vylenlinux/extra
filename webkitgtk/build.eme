@@ -11,6 +11,10 @@ release=1
 source="https://webkitgtk.org/releases/${name}-${version}.tar.xz"
 
 build() {
+    export CC=clang
+    export CXX=clang++
+    export LDFLAGS="${LDFLAGS} -fuse-ld=lld"
+
     cmake -S "${name}-${version}" -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
@@ -34,6 +38,6 @@ build() {
         -DUSE_SYSTEM_SYSPROF_CAPTURE=NO \
         -Wno-author
 
-    ninja -C build -j"${CBUILD_JOBS}"
+    cmake --build build
     DESTDIR="${PKG}" cmake --install build
 }
