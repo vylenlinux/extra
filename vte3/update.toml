@@ -1,5 +1,5 @@
 name = "vte3"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "vte"
