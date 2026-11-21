@@ -1,28 +1,40 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library used to develop file managers providing some file management utilities"
 homepage="https://lxde.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libfm
 version=1.4.1
-release=1
-source="$name-$version.tar.gz::https://github.com/lxde/libfm/archive/$version.tar.gz"
+release=2
+
+source="https://github.com/lxde/${name}/archive/${version}/${name}-${version}.tar.gz
+    https://github.com/lxde/${name}/commit/f3861c0d6a1a0c720ede5d7ae4941e515240ce5e.patch"
 
 build() {
-	cd $name-$version
-	./autogen.sh
-	./configure --prefix=/usr \
-	            --sysconfdir=/etc \
-		    --with-gtk=3 \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
-	rm -rf $PKG/usr/include/libfm
-	mv $PKG/usr/include/libfm-1.0/ $PKG/usr/include/libfm
+    patch -Np1 -i "${SRC}/f3861c0d6a1a0c720ede5d7ae4941e515240ce5e.patch"
+    ./autogen.sh
 
-	rm $PKG/usr/include/libfm/fm-version.h \
-	   $PKG/usr/include/libfm/fm-extra.h \
-	   $PKG/usr/include/libfm/fm-xml-file.h
-	rm $PKG/usr/lib/libfm-extra.*
-	rm $PKG/usr/lib/pkgconfig/libfm-extra.pc
+    ./configure \
+        --prefix=/usr \
+        --sysconfdir=/etc \
+        --with-gtk=3 \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
+
+    rm -rf "${PKG}/usr/include/${name}"
+    mv "${PKG}/usr/include/${name}-1.0" "${PKG}/usr/include/${name}"
+
+    rm \
+        "${PKG}/usr/include/${name}/fm-version.h" \
+        "${PKG}/usr/include/${name}/fm-extra.h" \
+        "${PKG}/usr/include/${name}/fm-xml-file.h" \
+        "${PKG}/usr/lib"/libfm-extra.* \
+        "${PKG}/usr/lib/pkgconfig/${name}-extra.pc"
 }
