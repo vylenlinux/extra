@@ -21,5 +21,5 @@ build() {
         --sysconfdir=/etc
 
     make
-    make DESTDIR="${PKG}" install
+    make -j1 DESTDIR="${PKG}" install
 }
