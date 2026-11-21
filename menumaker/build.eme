@@ -19,5 +19,5 @@ build() {
         --infodir=/usr/share/info
 
     make
-    make DESTDIR="${PKG}" install
+    make -j1 DESTDIR="${PKG}" install
 }
