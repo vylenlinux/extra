@@ -1,5 +1,6 @@
 name = "yaml"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libyaml"
+owner = "%(name)"
+repo = "lib%(name)"

@@ -2,13 +2,13 @@
 
 # shellcheck disable=SC2034
 description="C library for parsing and emitting YAML"
-homepage="https://pyyaml.org/wiki/LibYAML"
+homepage="https://github.com/yaml/libyaml"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=yaml
-version=0.2.5
+version=0.2.6
 release=1
-source="https://pyyaml.org/download/libyaml/${name}-${version}.tar.gz"
+source="https://github.com/${name}/lib${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
