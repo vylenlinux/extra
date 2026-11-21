@@ -6,7 +6,7 @@ homepage="https://www.graphviz.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=graphviz
-version=16.1.1
+version=16.1.2
 release=1
 source="https://gitlab.com/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
@@ -19,9 +19,9 @@ build() {
         --prefix=/usr \
         --libdir=/usr/lib \
         --libexecdir=/usr/lib \
+        --enable-python3=yes \
         --disable-perl \
-        --disable-python \
-        --enable-python3=yes
+        --disable-python
 
     make
     make DESTDIR="${PKG}" install
