@@ -3,3 +3,6 @@ provider = "gnome"
 
 [source]
 package = "vte"
+
+[version.filter]
+exclude = ['[0-9]+\.[0-9]*[13579]\..*'] # devel

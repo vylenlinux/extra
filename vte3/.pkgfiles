@@ -14,10 +14,8 @@ drwxr-xr-x root/root    usr/include/vte-2.91-gtk4/vte/
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vteenums.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vteglobals.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vtemacros.h
--rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vteproperties.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vtepty.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vteregex.h
--rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vtesystemd.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vteterminal.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vtetypebuiltins-gtk4.h
 -rw-r--r-- root/root    usr/include/vte-2.91-gtk4/vte/vtetypebuiltins.h
@@ -30,10 +28,8 @@ drwxr-xr-x root/root    usr/include/vte-2.91/vte/
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vteenums.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vteglobals.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vtemacros.h
--rw-r--r-- root/root    usr/include/vte-2.91/vte/vteproperties.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vtepty.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vteregex.h
--rw-r--r-- root/root    usr/include/vte-2.91/vte/vtesystemd.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vteterminal.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vtetypebuiltins-gtk3.h
 -rw-r--r-- root/root    usr/include/vte-2.91/vte/vtetypebuiltins.h
@@ -46,8 +42,8 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 lrwxrwxrwx root/root    usr/lib/libvte-2.91-gtk4.so -> libvte-2.91-gtk4.so.0
 -rwxr-xr-x root/root    usr/lib/libvte-2.91-gtk4.so.0
 lrwxrwxrwx root/root    usr/lib/libvte-2.91.so -> libvte-2.91.so.0
-lrwxrwxrwx root/root    usr/lib/libvte-2.91.so.0 -> libvte-2.91.so.0.8500.0
--rwxr-xr-x root/root    usr/lib/libvte-2.91.so.0.8500.0
+lrwxrwxrwx root/root    usr/lib/libvte-2.91.so.0 -> libvte-2.91.so.0.8400.2
+-rwxr-xr-x root/root    usr/lib/libvte-2.91.so.0.8400.2
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/vte-2.91-gtk4.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/vte-2.91.pc
