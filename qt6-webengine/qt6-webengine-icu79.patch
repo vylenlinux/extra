@@ -1,0 +1,26 @@
+diff --git a/src/3rdparty/chromium/v8/src/regexp/gen-regexp-special-case.cc b/src/3rdparty/chromium/v8/src/regexp/gen-regexp-special-case.cc
+--- a/src/3rdparty/chromium/v8/src/regexp/gen-regexp-special-case.cc
++++ b/src/3rdparty/chromium/v8/src/regexp/gen-regexp-special-case.cc
+@@ -73,6 +73,7 @@
+     for (int32_t j = 0; j < current.getRangeCount(); j++) {
+       for (UChar32 c = current.getRangeStart(j); c <= current.getRangeEnd(j);
+            c++) {
++        if (c > 0xffff) continue;
+         if (c == i) {
+           continue;
+         }
+@@ -109,6 +110,7 @@
+   for (int32_t i = 0; i < special_add.getRangeCount(); i++) {
+     for (UChar32 c = special_add.getRangeStart(i);
+          c <= special_add.getRangeEnd(i); c++) {
++      if (c > 0xffff) continue;
+       UChar32 canonical = RegExpCaseFolding::Canonicalize(c);
+       current.set(c, c);
+       current.closeOver(USET_CASE_INSENSITIVE);
+@@ -116,6 +118,7 @@
+       for (int32_t j = 0; j < current.getRangeCount(); j++) {
+         for (UChar32 c2 = current.getRangeStart(j);
+              c2 <= current.getRangeEnd(j); c2++) {
++          if (c2 > 0xffff) continue;
+           CHECK_EQ(canonical, RegExpCaseFolding::Canonicalize(c2));
+        }
