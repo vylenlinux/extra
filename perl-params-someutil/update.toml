@@ -1,0 +1,5 @@
+name = "perl-params-someutil"
+provider = "metacpan"
+
+[source]
+package = "Params-SomeUtil"
