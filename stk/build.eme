@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="The Synthesis ToolKit in C++"
+homepage="https://ccrma.stanford.edu/software/stk/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=stk
+version=5.0.1
+release=1
+source="https://github.com/thestk/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fi
+
+    export RAWWAVE_PATH="/usr/share/${name}/rawwaves/"
+    export CPPFLAGS="${CPPFLAGS:+${CPPFLAGS} }-D__LINUX_ALSA__ -D__UNIX_JACK__"
+
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        \
+        --with-alsa \
+        --with-jack
+
+    make
+    make -C projects/demo
+
+    (cd doc/doxygen && doxygen)
+    make DESTDIR="${PKG}" install
+
+    install -Dm755 projects/demo/stk-demo -t "${PKG}/usr/bin/"
+    install -Dm644 projects/demo/tcl/*.tcl -t "${PKG}/usr/share/${name}/tcl/"
+    install -Dm644 projects/demo/scores/*.ski -t "${PKG}/usr/share/${name}/scores/"
+    install -Dm644 rawwaves/*.raw rawwaves/*.c -t "${PKG}/usr/share/${name}/rawwaves/"
+}
