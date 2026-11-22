@@ -1,0 +1,9 @@
+name = "libmusicxml"
+provider = "github"
+
+[source]
+owner = "grame-cncm"
+repo = "%(name)"
+
+[version.filter]
+exclude = ["300"]
