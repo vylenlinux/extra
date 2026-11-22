@@ -1,0 +1,35 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -389,6 +389,10 @@
+ option(LWS_WITHOUT_BUILTIN_GETIFADDRS "Don't use the BSD getifaddrs implementation from libwebsockets if it is missing (this will result in a compilation error) ... The default is to assume that your libc provides it. On some systems such as uclibc it doesn't exist." OFF)
+ option(LWS_FALLBACK_GETHOSTBYNAME "Also try to do dns resolution using gethostbyname if getaddrinfo fails" OFF)
+ option(LWS_WITHOUT_BUILTIN_SHA1 "Don't build the lws sha-1 (eg, because openssl will provide it" OFF)
++if (LWS_WITH_GNUTLS AND LWS_WITHOUT_BUILTIN_SHA1)
++	message(STATUS "GnuTLS selected: using the built-in SHA1 implementation")
++	set(LWS_WITHOUT_BUILTIN_SHA1 OFF)
++endif()
+ option(LWS_WITHOUT_DAEMONIZE "Don't build the daemonization api" ON)
+ option(LWS_SSL_SERVER_WITH_ECDH_CERT "Include SSL server use ECDH certificate" OFF)
+ option(LWS_WITH_LEJP "With the Lightweight JSON Parser" ON)
+--- a/lib/tls/tls.c
++++ b/lib/tls/tls.c
+@@ -283,7 +283,7 @@
+
+ #if (!defined(LWS_WITH_MBEDTLS) && !defined(LWS_WITH_BEARSSL) && \
+ 	!defined(LWS_WITH_SCHANNEL) && !defined(LWS_WITH_OPENHITLS) && \
+-	defined(OPENSSL_VERSION_NUMBER) && \
++	!defined(LWS_WITH_GNUTLS) && defined(OPENSSL_VERSION_NUMBER) && \
+ 				  OPENSSL_VERSION_NUMBER >= 0x10002000L)
+ static int
+ alpn_cb(SSL *s, const unsigned char **out, unsigned char *outlen,
+--- a/include/libwebsockets/lws-sha1-base64.h
++++ b/include/libwebsockets/lws-sha1-base64.h
+@@ -29,6 +29,8 @@
+  */
+ ///@{
+ #ifdef LWS_SHA1_USE_OPENSSL_NAME
++/* OpenSSL no longer guarantees that ssl.h includes the SHA declarations. */
++#include <openssl/sha.h>
+ #define lws_SHA1 SHA1
+ #else
+ /**

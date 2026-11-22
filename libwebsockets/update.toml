@@ -1,0 +1,9 @@
+name = "libwebsockets"
+provider = "github"
+
+[source]
+owner = "warmcat"
+repo = "%(name)"
+
+[version.filter]
+include = ["^v.*$"]

@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="C library for websocket clients and servers"
+homepage="https://libwebsockets.org"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=libwebsockets
+version=5.1.0
+release=1
+
+source="https://github.com/warmcat/${name}/archive/v${version}/${name}-${version}.tar.gz
+    ${name}-openssl-sha1.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/${name}-openssl-sha1.patch"
+
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DDISABLE_WERROR=ON \
+        -DLWS_IPV6=ON \
+        -DLWS_LINK_TESTAPPS_DYNAMIC=ON \
+        -DLWS_UNIX_SOCK=ON \
+        -DLWS_WITHOUT_BUILTIN_GETIFADDRS=ON \
+        -DLWS_WITHOUT_BUILTIN_SHA1=ON \
+        -DLWS_WITHOUT_CLIENT=OFF \
+        -DLWS_WITHOUT_SERVER=OFF \
+        -DLWS_WITHOUT_TESTAPPS=ON \
+        -DLWS_WITHOUT_TEST_CLIENT=ON \
+        -DLWS_WITHOUT_TEST_PING=ON \
+        -DLWS_WITHOUT_TEST_SERVER=OFF \
+        -DLWS_WITHOUT_TEST_SERVER_EXTPOLL=ON \
+        -DLWS_WITH_ACME=ON \
+        -DLWS_WITH_DISKCACHE=ON \
+        -DLWS_WITH_EXTERNAL_POLL=ON \
+        -DLWS_WITH_FTS=ON \
+        -DLWS_WITH_GLIB=ON \
+        -DLWS_WITH_HTTP2=ON \
+        -DLWS_WITH_HTTP_PROXY=ON \
+        -DLWS_WITH_LIBEV=ON \
+        -DLWS_WITH_LIBEVENT=OFF \
+        -DLWS_WITH_LIBUV=ON \
+        -DLWS_WITH_LWSAC=ON \
+        -DLWS_WITH_RANGES=ON \
+        -DLWS_WITH_SOCKS5=ON \
+        -DLWS_WITH_STATIC=OFF \
+        -DLWS_WITH_THREADPOOL=ON \
+        -DLWS_WITH_ZIP_FOPS=ON \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
