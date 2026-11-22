@@ -1,0 +1,5 @@
+name = "perl-archive-zip"
+provider = "metacpan"
+
+[source]
+package = "Archive-Zip"
