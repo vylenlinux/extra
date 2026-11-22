@@ -1,0 +1,5 @@
+name = "perl-sub-prototype"
+provider = "metacpan"
+
+[source]
+package = "Sub-Prototype"
