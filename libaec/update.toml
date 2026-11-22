@@ -1,0 +1,6 @@
+name = "libaec"
+provider = "gitlab"
+
+[source]
+instance = "https://gitlab.dkrz.de/"
+project = "dkrz-sw/%(name)"

@@ -1,0 +1,17 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/libaec.h
+-rw-r--r-- root/root    usr/include/szlib.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/libaec/
+-rw-r--r-- root/root    usr/lib/cmake/libaec/libaec-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libaec/libaec-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libaec/libaec_shared-targets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/libaec/libaec_shared-targets.cmake
+lrwxrwxrwx root/root    usr/lib/libaec.so -> libaec.so.0
+lrwxrwxrwx root/root    usr/lib/libaec.so.0 -> libaec.so.0.1.8
+-rwxr-xr-x root/root    usr/lib/libaec.so.0.1.8
+lrwxrwxrwx root/root    usr/lib/libsz.so -> libsz.so.2
+lrwxrwxrwx root/root    usr/lib/libsz.so.2 -> libsz.so.2.0.1
+-rwxr-xr-x root/root    usr/lib/libsz.so.2.0.1
