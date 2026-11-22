@@ -1,7 +1,6 @@
 bubblewrap
 enchant
-flite
-gst-plugins-bad
+gtk4
 harfbuzz-icu
 libjxl
 libnotify
