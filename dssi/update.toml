@@ -1,0 +1,5 @@
+name = "dssi"
+provider = "repology"
+
+[source]
+package = "%(name)"
