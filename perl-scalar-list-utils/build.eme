@@ -17,4 +17,7 @@ build() {
 
     make
     make DESTDIR="${PKG}" install
+
+    # fix conflict with perl
+    rm -r "${PKG}/usr/share/man/man3"
 }
