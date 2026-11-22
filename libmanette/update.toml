@@ -1,0 +1,5 @@
+name = "libmanette"
+provider = "gnome"
+
+[source]
+package = "%(name)"
