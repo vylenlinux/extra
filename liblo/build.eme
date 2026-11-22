@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A lightweight OSC (Open Sound Control) implementation"
+homepage="https://github.com/radarsat1/liblo"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=liblo
+version=0.36
+release=1
+source="https://github.com/radarsat1/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+
+    autoreconf -fi
+    ./configure --prefix=/usr
+
+    make
+    make DESTDIR="${PKG}" install
+
+    install -Dm644 doc/man/man3/*.3 -t "${PKG}/usr/share/man/man3/"
+    install -Dm644 examples/*.cpp examples/*.c -t "${PKG}/usr/share/${name}/examples/"
+    install -Dm644 doc/html/* -t "${PKG}/usr/share/doc/${name}/html/"
+    install -Dm644 doc/latex/* -t "${PKG}/usr/share/doc/${name}/latex/"
+}

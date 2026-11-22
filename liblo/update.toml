@@ -1,0 +1,6 @@
+name = "liblo"
+provider = "github"
+
+[source]
+owner = "radarsat1"
+repo = "%(name)"
