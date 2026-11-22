@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Perl extension for easily overriding subroutines"
+homepage="https://metacpan.org/dist/Sub-Override"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=perl-sub-override
+version=0.12
+release=1
+source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/M/MV/MVSJES/Sub-Override-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "Sub-Override-${version}"
+    perl Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
+}
