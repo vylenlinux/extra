@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="ExtUtils::MakeMaker - Create a module Makefile"
+homepage="https://metacpan.org/pod/ExtUtils::MakeMaker"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=perl-extutils-makemaker
+version=7.78
+release=1
+source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "ExtUtils-MakeMaker-${version}"
+    perl Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
+}

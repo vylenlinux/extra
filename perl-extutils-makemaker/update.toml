@@ -1,0 +1,5 @@
+name = "perl-extutils-makemaker"
+provider = "metacpan"
+
+[source]
+package = "ExtUtils-MakeMaker"
