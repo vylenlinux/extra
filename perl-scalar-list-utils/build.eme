@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A selection of general-utility list subroutines"
+homepage="https://metacpan.org/release/Scalar-List-Utils"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=perl-scalar-list-utils
+version=1.70
+release=1
+source="${name}-${version}.tar.gz::https://search.cpan.org/CPAN/authors/id/P/PE/PEVANS/Scalar-List-Utils-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "Scalar-List-Utils-${version}"
+    perl Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
+}

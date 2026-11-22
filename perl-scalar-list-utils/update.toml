@@ -1,0 +1,5 @@
+name = "perl-scalar-list-utils"
+provider = "metacpan"
+
+[source]
+package = "Scalar-List-Utils"
