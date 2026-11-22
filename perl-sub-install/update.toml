@@ -1,0 +1,5 @@
+name = "perl-sub-install"
+provider = "metacpan"
+
+[source]
+package = "Sub-Install"
