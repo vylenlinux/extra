@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Programming language for sound rendering and signal processing"
+homepage="https://csound.com"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=csound
+version=7.0.0
+release=1
+
+source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz
+    ${name}.sh"
+
+build() {
+    sed 's/yyg->yy_flex_debug_r=1;/csound_preset_debug(1, yyscanner);/' -i "${name}-${version}/Engine/csound_pre.lex"
+
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -Wno-error=template-body" \
+        -DBUILD_STATIC_LIBRARY=ON \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    install -Dm755 "${name}.sh" -t "${PKG}/etc/profile.d/"
+    mv "${PKG}/usr/bin/extract" "${PKG}/usr/bin/${name}-extract"
+}

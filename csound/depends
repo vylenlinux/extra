@@ -1,0 +1,13 @@
+dssi
+fluidsynth
+hdf5
+libmusicxml
+libwebsockets
+lua
+portaudio
+portmidi
+portsmf
+stk
+strip-nondeterminism
+swig
+wiiuse
