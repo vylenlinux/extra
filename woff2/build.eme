@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Web Open Font Format 2 reference implementation"
+homepage="https://github.com/google/woff2"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=woff2
+version=1.0.2
+release=1
+
+source="https://github.com/google/${name}/archive/v${version}/${name}-${version}.tar.gz
+    https://github.com/google/${name}/commit/08ece7871775c0d7bf4fdff64b961cdc256adf6c.patch
+    0001-HACK-Install-binaries.patch"
+
+build() {
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/0001-HACK-Install-binaries.patch"
+    patch -d "${name}-${version}" -Np1 -i "${SRC}/08ece7871775c0d7bf4fdff64b961cdc256adf6c.patch"
+
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}

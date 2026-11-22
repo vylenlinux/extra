@@ -1,0 +1,6 @@
+name = "woff2"
+provider = "github"
+
+[source]
+owner = "google"
+repo = "%(name)"
