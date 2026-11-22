@@ -1,0 +1,6 @@
+name = "strip-nondeterminism"
+provider = "gitlab"
+
+[source]
+instance = "https://salsa.debian.org/"
+project = "reproducible-builds/%(name)"
