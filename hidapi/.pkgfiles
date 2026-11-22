@@ -1,0 +1,22 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/hidapi/
+-rw-r--r-- root/root    usr/include/hidapi/hidapi.h
+-rw-r--r-- root/root    usr/include/hidapi/hidapi_libusb.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/hidapi/
+-rw-r--r-- root/root    usr/lib/cmake/hidapi/hidapi-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/hidapi/hidapi-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/hidapi/libhidapi-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/hidapi/libhidapi.cmake
+lrwxrwxrwx root/root    usr/lib/libhidapi-hidraw.so -> libhidapi-hidraw.so.0
+lrwxrwxrwx root/root    usr/lib/libhidapi-hidraw.so.0 -> libhidapi-hidraw.so.0.16.0
+-rwxr-xr-x root/root    usr/lib/libhidapi-hidraw.so.0.16.0
+lrwxrwxrwx root/root    usr/lib/libhidapi-libusb.so -> libhidapi-libusb.so.0
+lrwxrwxrwx root/root    usr/lib/libhidapi-libusb.so.0 -> libhidapi-libusb.so.0.16.0
+-rwxr-xr-x root/root    usr/lib/libhidapi-libusb.so.0.16.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/hidapi-hidraw.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/hidapi-libusb.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/hidapi.pc

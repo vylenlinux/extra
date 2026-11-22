@@ -1,0 +1,12 @@
+name = "hidapi"
+provider = "github"
+
+[source]
+owner = "libusb"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['%(name)-.*']

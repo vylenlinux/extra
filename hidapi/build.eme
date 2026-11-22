@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Simple library for communicating with USB and Bluetooth HID devices"
+homepage="https://github.com/libusb/hidapi"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=hidapi
+version=0.16.0
+release=1
+source="https://github.com/libusb/${name}/archive/refs/tags/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+}
