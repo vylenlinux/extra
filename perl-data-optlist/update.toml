@@ -1,0 +1,5 @@
+name = "perl-data-optlist"
+provider = "metacpan"
+
+[source]
+package = "Data-OptList"
