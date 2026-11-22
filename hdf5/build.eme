@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="General purpose library and file format for storing scientific data"
+homepage="https://www.hdfgroup.org/hdf5"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=hdf5
+version=2.2.0
+release=1
+source="https://github.com/HDFGroup/${name}/releases/download/${version}/${name}-${version}.tar.gz"
+
+build() {
+    cmake -S "${name}-${version}" -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
+        -DHDF5_USE_GNU_DIRS=ON \
+        -DBUILD_STATIC_LIBS=OFF \
+        -DHDF5_BUILD_CPP_LIB=ON \
+        -DHDF5_BUILD_HL_LIB=ON \
+        -DHDF5_BUILD_FORTRAN=OFF \
+        -DHDF5_BUILD_JAVA=OFF \
+        -DHDF5_ENABLE_ZLIB_SUPPORT=ON \
+        -DHDF5_ENABLE_SZIP_SUPPORT=ON \
+        -DHDF5_ENABLE_SZIP_ENCODING=ON \
+        -DHDF5_INSTALL_CMAKE_DIR="lib/cmake/${name}" \
+        -Wno-author
+
+    cmake --build build
+    DESTDIR="${PKG}" cmake --install build
+
+    rm -f "${PKG}/usr/share/LICENSE"
+}

@@ -1,0 +1,6 @@
+name = "hdf5"
+provider = "github"
+
+[source]
+owner = "HDFGroup"
+repo = "%(name)"
