@@ -1,0 +1,5 @@
+name = "perl-sub-exporter"
+provider = "metacpan"
+
+[source]
+package = "Sub-Exporter"

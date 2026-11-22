@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="A sophisticated exporter for custom-built routines"
+homepage="https://metacpan.org/release/Sub-Exporter"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=perl-sub-exporter
+version=0.992
+release=1
+source="${name}-${version}.tar.gz::https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Exporter-${version}.tar.gz"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "Sub-Exporter-${version}"
+    perl Makefile.PL
+
+    make
+    make DESTDIR="${PKG}" install
+}
