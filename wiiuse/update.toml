@@ -1,0 +1,6 @@
+name = "wiiuse"
+provider = "github"
+
+[source]
+owner = "%(name)"
+repo = "%(name)"
