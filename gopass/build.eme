@@ -6,7 +6,7 @@ homepage="https://github.com/gopasspw/gopass"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gopass
-version=1.17.4
+version=1.17.5
 release=1
 source="https://github.com/gopasspw/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
@@ -19,8 +19,10 @@ build() {
         -modcacherw"
 
     # shellcheck disable=SC2016
-    sed -i 's|-gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"||' Makefile
-    sed -i 's|CGO_ENABLED=0||' Makefile
+    sed \
+        -e 's|-gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"||' \
+        -e 's|CGO_ENABLED=0||' \
+    -i Makefile
 
     make DESTDIR="${PKG}" PREFIX=/usr install
 }
