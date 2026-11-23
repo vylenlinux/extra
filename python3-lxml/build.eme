@@ -6,7 +6,7 @@ homepage="https://lxml.de/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-lxml
-version=6.1.3_1
+version=6.2.0
 release=1
 
 _version="$(printf "%s" "${version}" | sed 's/_/-/')"
