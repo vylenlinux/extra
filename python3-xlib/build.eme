@@ -2,25 +2,24 @@
 
 # shellcheck disable=SC2034
 description="A fully functional X client library for Python programs"
-homepage="https://github.com/python-xlib/python-xlib"
+homepage="hhttps://salsa.debian.org/python-team/packages/python-xlib"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-xlib
-version=0.33
+version=1.0
 release=1
 
-source="${name}-${version}.tar.gz::https://github.com/python-xlib/python-xlib/archive/${version}/python-${version}.tar.gz
-    pkg_resources-fix.patch"
+source="${name}-${version}.tar.gz::https://salsa.debian.org/python-team/packages/python-xlib/-/archive/upstream/${version}/python-xlib-upstream-${version}.tar.gz
+    avoid-uv.patch"
 
 build() {
     # shellcheck disable=SC2164
-    cd "python-xlib-${version}"
+    cd "python-xlib-upstream-${version}"
+    patch -Np1 -i "${SRC}/avoid-uv.patch"
 
-    patch -Np1 -i "${SRC}/pkg_resources-fix.patch"
-    python3 setup.py build
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-    python3 setup.py install \
-        --root="${PKG}" \
-        --optimize=1 \
-        --skip-build
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }

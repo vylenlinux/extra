@@ -1,0 +1,26 @@
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Mon, 23 Nov 2026 23:52:41 +0100
+Subject: [PATCH] Replace uv_build with setuptools
+
+diff '--color=auto' -ruN --no-dereference a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2026-11-22 18:27:14.000000000 +0100
++++ b/pyproject.toml	2026-11-23 23:53:56.571000000 +0100
+@@ -1,11 +1,12 @@
+ [build-system]
+-requires = ["uv_build~=0.13.5"]
+-build-backend = "uv_build"
++requires = ["setuptools>=77"]
++build-backend = "setuptools.build_meta"
+
+-[tool.uv.build-backend]
+-module-name = "Xlib"
+-module-root = ""
+-source-include = ["test/*.py"]
++[tool.setuptools.packages.find]
++include = ["Xlib*"]
++
++[tool.setuptools.package-data]
++"*" = ["*.pyi", "py.typed"]
+
+ [project]
+ name = "avasam-python-xlib"

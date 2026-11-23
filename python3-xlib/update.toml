@@ -1,6 +1,9 @@
 name = "python3-xlib"
-provider = "github"
+provider = "gitlab"
 
 [source]
-owner = "python-xlib"
-repo = "python-xlib"
+instance = "https://salsa.debian.org/"
+project = "python-team/packages/python-xlib"
+
+[version.normalize]
+strip_prefix = "upstream/"
