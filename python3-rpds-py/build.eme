@@ -6,7 +6,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/crate-py/rpds"
 
 name=python3-rpds-py
-version=2026.9.1
+version=2026.11.1
 release=1
 source="${name}-${version}.tar.gz::https://github.com/crate-py/rpds/archive/refs/tags/v${version}.tar.gz"
 
@@ -15,9 +15,9 @@ build() {
     cd "rpds-${version}"
     cargo fetch --locked
 
-    python3 -m build \
-        --wheel \
-        --no-isolation
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
-    python3 -m installer --destdir="${PKG}" dist/*.whl
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
