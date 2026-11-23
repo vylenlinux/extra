@@ -6,10 +6,10 @@ homepage="https://github.com/desktop-app/tg_owt"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tg_owt
-version=20261119+1
+version=20261123+1
 release=1
 
-commit=642ddb107b42da7c8d152401b71cd429475e5266
+commit=a9d098a8f126dff818889d56f4241d7d2aaac9c1
 source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
 build() {
