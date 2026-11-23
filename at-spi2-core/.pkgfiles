@@ -93,8 +93,8 @@ drwxr-xr-x root/root    usr/lib/gtk-2.0/
 drwxr-xr-x root/root    usr/lib/gtk-2.0/modules/
 -rwxr-xr-x root/root    usr/lib/gtk-2.0/modules/libatk-bridge.so
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so -> libatk-1.0.so.0
-lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.26210.1
--rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.26210.1
+lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.26211.1
+-rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.26211.1
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so -> libatk-bridge-2.0.so.0
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so.0 -> libatk-bridge-2.0.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libatk-bridge-2.0.so.0.0.0
@@ -302,6 +302,9 @@ drwxr-xr-x root/root    usr/share/locale/lv/LC_MESSAGES/
 drwxr-xr-x root/root    usr/share/locale/mai/
 drwxr-xr-x root/root    usr/share/locale/mai/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/mai/LC_MESSAGES/at-spi2-core.mo
+drwxr-xr-x root/root    usr/share/locale/mi/
+drwxr-xr-x root/root    usr/share/locale/mi/LC_MESSAGES/
+-rw-r--r-- root/root    usr/share/locale/mi/LC_MESSAGES/at-spi2-core.mo
 drwxr-xr-x root/root    usr/share/locale/mk/
 drwxr-xr-x root/root    usr/share/locale/mk/LC_MESSAGES/
 -rw-r--r-- root/root    usr/share/locale/mk/LC_MESSAGES/at-spi2-core.mo
