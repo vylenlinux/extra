@@ -2,5 +2,5 @@ name = "parallel"
 provider = "ftp"
 
 [ftp]
-url = "https://ftp.gnu.org/gnu/parallel/"
-filename = "parallel-%(version).tar.bz2"
+url = "https://ftp.gnu.org/gnu/%(name)/"
+filename = "%(name)-%(version).tar.bz2"
