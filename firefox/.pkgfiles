@@ -32,6 +32,7 @@ drwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/
 drwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/0.1/
 -rwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/0.1/libclearkey.so
 -rw-r--r-- root/root    usr/lib/firefox/gmp-clearkey/0.1/manifest.json
+-rwxr-xr-x root/root    usr/lib/firefox/libfreeblpriv3.so
 -rwxr-xr-x root/root    usr/lib/firefox/libgkcodecs.so
 -rwxr-xr-x root/root    usr/lib/firefox/liblgpllibs.so
 -rwxr-xr-x root/root    usr/lib/firefox/libmozavcodec.so
@@ -41,6 +42,11 @@ drwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/0.1/
 -rwxr-xr-x root/root    usr/lib/firefox/libmozsandbox.so
 -rwxr-xr-x root/root    usr/lib/firefox/libmozsqlite3.so
 -rwxr-xr-x root/root    usr/lib/firefox/libmozwayland.so
+-rwxr-xr-x root/root    usr/lib/firefox/libnss3.so
+-rwxr-xr-x root/root    usr/lib/firefox/libnssutil3.so
+-rwxr-xr-x root/root    usr/lib/firefox/libsmime3.so
+-rwxr-xr-x root/root    usr/lib/firefox/libsoftokn3.so
+-rwxr-xr-x root/root    usr/lib/firefox/libssl3.so
 -rwxr-xr-x root/root    usr/lib/firefox/libxul.so
 -rw-r--r-- root/root    usr/lib/firefox/omni.ja
 -rwxr-xr-x root/root    usr/lib/firefox/pingsender
@@ -74,3 +80,5 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/apps/
 drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/
 drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/apps/
 -rw-r--r-- root/root    usr/share/icons/hicolor/64x64/apps/firefox.png
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/org.mozilla.firefox.metainfo.xml

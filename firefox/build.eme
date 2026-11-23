@@ -14,18 +14,17 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/relea
     config
     distribution.ini
     vendor.js
+    org.mozilla.${name}.metainfo.xml
     fix-target-detection.patch
     swgl-clang-ice.patch"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
+    install -Dm644 "${SRC}/config" .mozconfig
 
     patch -Np1 -i "${SRC}/fix-target-detection.patch"
     patch -Np1 -i "${SRC}/swgl-clang-ice.patch"
-
-    sed -i 's/icu-i18n/icu-uc &/' js/moz.configure
-    install -Dm644 "${SRC}/config" .mozconfig
 
     # audio
     emerald is-installed alsa-lib && printf 'ac_add_options --enable-alsa\n' >> .mozconfig
@@ -42,9 +41,6 @@ build() {
     export CXX=clang++
     export HOST_CC=clang
     export HOST_CXX=clang++
-    export CFLAGS="${CFLAGS} -w"
-    export CXXFLAGS="${CXXFLAGS} -w"
-    export BUILD_OFFICIAL=1
 
     # python configuration
     export SHELL=/usr/bin/sh
@@ -54,14 +50,12 @@ build() {
     ./mach build
     DESTDIR="${PKG}" ./mach install
 
-    unset MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE \
-        MOZBUILD_STATE_PATH
-
     # vendor
     install -Dm644 "${SRC}/vendor.js" -t "${PKG}/usr/lib/${name}/browser/defaults/preferences/"
 
     # distribution
-    sed "s|@VERSION@|${version}|" -i "${SRC}/distribution.ini" | install -Dm644 /dev/stdin "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
+    sed "s|@VERSION@|${version}|" -i "${SRC}/distribution.ini"
+    install -Dm644 "${SRC}/distribution.ini" -t "${PKG}/usr/lib/${name}/distribution/"
 
     # add icons
     for i in 16 22 24 32 48 64 128 256; do
@@ -69,6 +63,7 @@ build() {
     done
 
     install -Dm644 "${SRC}/${name}.desktop" -t "${PKG}/usr/share/applications/"
+    install -Dm644 "${SRC}/org.mozilla.${name}.metainfo.xml" -t "${PKG}/usr/share/metainfo/"
 
     # remove crap
     rm -f "${PKG}/usr/lib/${name}/removed-files"
