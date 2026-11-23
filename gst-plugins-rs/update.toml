@@ -1,0 +1,8 @@
+name = "gst-plugins-rs"
+provider = "freedesktop"
+
+[source]
+project = "gstreamer/%(name)"
+
+[version.filter]
+exclude = ['1\.[0-9]*[13579]\..*'] # devel

@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
+description="Multimedia graph framework"
+homepage="https://gstreamer.freedesktop.org/"
+maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
+
+name=gst-plugins-rs
+version=0.15.4
+release=1
+
+source="https://gitlab.freedesktop.org/gstreamer/${name}/-/archive/${version}/${name}-${version}.tar.gz
+    0001-Update-lockfile.patch"
+
+build() {
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    export SODIUM_USE_PKG_CONFIG=1
+
+    patch -Np1 -i "${SRC}/0001-Update-lockfile.patch"
+    cargo fetch --locked
+
+    _cargo_c_options="--prefix /usr \
+        --library-type cdylib \
+        --features asm,aws,dmabuf,dssim,gtk_v4_20,livekit,v1_22,v1_24,v1_26,v1_28,vulkan,waylandegl,x11egl,x11glx \
+        --workspace \
+        --exclude gst-plugin-ndi \
+        --exclude gst-plugin-validate \
+        --exclude gst-plugin-vvdec"
+
+    cargo build \
+        --release \
+        --frozen \
+        --bin gst-webrtc-signalling-server
+
+    # shellcheck disable=SC2086
+    cargo cbuild \
+        --release \
+        --frozen \
+        ${_cargo_c_options}
+
+    # shellcheck disable=SC2086
+    cargo cinstall \
+        --release \
+        --frozen \
+        ${_cargo_c_options} \
+        --destdir "${PKG}"
+
+    install -Dm755 target/release/gst-webrtc-signalling-server -t "${PKG}/usr/bin/"
+}
