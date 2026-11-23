@@ -4,6 +4,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/AEGIS.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/AES.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/ARC2.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/ARC4.py
@@ -22,6 +23,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_Salsa20_avx2_bmi2.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/AEGIS.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/AEGIS.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/AES.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/AES.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache__/ARC2.cpython-315.opt-1.pyc
@@ -105,6 +108,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/__pycache
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_mode_xts.py
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_pkcs1_decode.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_pkcs1_oaep_decode.py
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_raw_aegis.abi3-x86_64-linux-gnu.so
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_raw_aegis_aesni.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_raw_aes.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_raw_aesni.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Cipher/_raw_arc2.abi3-x86_64-linux-gnu.so
@@ -305,6 +310,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/MLDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/MLKEM.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/RSA.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/SLHDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/DSA.cpython-315.opt-1.pyc
@@ -321,6 +327,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pyca
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/MLKEM.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/RSA.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/RSA.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/SLHDSA.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/SLHDSA.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/__init__.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/__init__.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_curve.cpython-315.opt-1.pyc
@@ -329,6 +337,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pyca
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_ec_lib.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_edwards.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_edwards.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_fips205.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_fips205.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_montgomery.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_montgomery.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pycache__/_nist_ecc.cpython-315.opt-1.pyc
@@ -344,6 +354,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pyca
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_ec_nat_bmi2_adx.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_ed25519.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_edwards.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_fips205.py
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_mldsa.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_mldsa_avx2_bmi2.abi3-x86_64-linux-gnu.so
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_mlkem.abi3-x86_64-linux-gnu.so
@@ -352,6 +363,9 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/__pyca
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_nist_ecc.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_openssh.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_point.py
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_slhdsa.abi3-x86_64-linux-gnu.so
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_slhdsa_avx2_bmi2.abi3-x86_64-linux-gnu.so
+-rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/PublicKey/_slhdsa_shani.abi3-x86_64-linux-gnu.so
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Random/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Random/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Random/__pycache__/
@@ -368,6 +382,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/__init__.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/common.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/common.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_AEGIS.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_AEGIS.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_AES.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_AES.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_ARC2.cpython-315.opt-1.pyc
@@ -423,6 +439,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_shared_objects.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/__pycache__/test_shared_objects.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/common.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/test_AEGIS.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/test_AES.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/test_ARC2.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Cipher/test_ARC4.py
@@ -613,6 +630,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicK
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_MLKEM.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_RSA.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_RSA.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_SLHDSA.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_SLHDSA.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_Curve25519.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_Curve25519.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_Curve448.cpython-315.opt-1.pyc
@@ -627,6 +646,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicK
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_MLKEM.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_RSA.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_RSA.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_SLHDSA.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_SLHDSA.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_passphrase.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/__pycache__/test_import_passphrase.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_DSA.py
@@ -641,6 +662,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicK
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_MLDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_MLKEM.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_RSA.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_SLHDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_Curve25519.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_Curve448.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_DSA.py
@@ -648,6 +670,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicK
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_MLDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_MLKEM.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_RSA.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_SLHDSA.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/PublicKey/test_import_passphrase.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Random/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Random/__init__.py
@@ -672,11 +695,14 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signatu
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/__pycache__/test_pkcs1_15.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/__pycache__/test_pss.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/__pycache__/test_pss.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/__pycache__/test_slhdsa.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/__pycache__/test_slhdsa.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_dss.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_eddsa.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_mldsa.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_pkcs1_15.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_pss.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Signature/test_slhdsa.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/SelfTest/Util/__pycache__/
@@ -747,10 +773,13 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pyca
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pycache__/pkcs1_15.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pycache__/pss.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pycache__/pss.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pycache__/slhdsa.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/__pycache__/slhdsa.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/eddsa.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/mldsa.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/pkcs1_15.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/pss.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Signature/slhdsa.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Util/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/Counter.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/Padding.py
@@ -775,6 +804,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/_raw_api.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/_threads.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/_threads.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/_typing.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/_typing.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/asn1.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/asn1.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__/number.cpython-315.opt-1.pyc
@@ -789,6 +820,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Util/__pycache__
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/_raw_api.py
 -rwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/Util/_strxor.abi3-x86_64-linux-gnu.so
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/_threads.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/_typing.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/asn1.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/number.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/Util/strxor.py
@@ -797,9 +829,9 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/__init__.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/__pycache__/__init__.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/Crypto/py.typed
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/requires.txt
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.5.0-py3.15.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/pycryptodome-4.6.0-py3.15.egg-info/top_level.txt
