@@ -6,7 +6,7 @@ homepage="https://github.com/tianocore/tianocore.github.io/wiki/OVMF"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=edk2-ovmf
-version=202608
+version=202611
 release=1
 
 source="https://downloads.sourceforge.net/project/vylen/sources/edk2/edk2-${version}.tar.xz
