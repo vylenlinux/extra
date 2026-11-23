@@ -2,11 +2,11 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.15/
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0rc1.dist-info/
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0rc1.dist-info/METADATA
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0rc1.dist-info/RECORD
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0rc1.dist-info/WHEEL
--rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.0rc1.dist-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.1b2.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.1b2.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.1b2.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.1b2.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk-3.0.1b2.dist-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/
@@ -18,6 +18,8 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_compat.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_init_implementation.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_init_implementation.cpython-315.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_lock_free_metrics_batcher.cpython-315.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_lock_free_metrics_batcher.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_log_batcher.cpython-315.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_log_batcher.cpython-315.pyc
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/_lru_cache.cpython-315.opt-1.pyc
@@ -79,6 +81,7 @@ drwxr-xr-x root/root    usr/lib/python3.15/site-packages/sentry_sdk/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_batcher.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_compat.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_init_implementation.py
+-rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_lock_free_metrics_batcher.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_log_batcher.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_lru_cache.py
 -rw-r--r-- root/root    usr/lib/python3.15/site-packages/sentry_sdk/_metrics_batcher.py
