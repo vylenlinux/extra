@@ -1,0 +1,6 @@
+name = "csound"
+provider = "github"
+
+[source]
+owner = "%(name)"
+repo = "%(name)"
