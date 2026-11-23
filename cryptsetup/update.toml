@@ -1,5 +1,5 @@
 name = "cryptsetup"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "cryptsetup"
+project = "%(name)/%(name)"
