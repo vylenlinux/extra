@@ -2,5 +2,5 @@ name = "libetpan"
 provider = "github"
 
 [source]
-owner = "dinhviethoa"
+owner = "dinhvh"
 repo = "%(name)"
