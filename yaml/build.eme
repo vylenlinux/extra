@@ -6,7 +6,7 @@ homepage="https://github.com/yaml/libyaml"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=yaml
-version=0.2.6
+version=0.2.7
 release=1
 source="https://github.com/${name}/lib${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
