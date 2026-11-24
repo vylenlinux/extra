@@ -1,0 +1,48 @@
+Subject: [PATCH] Use setuptools instead of Poetry for builds
+From: Vylen Linux Team <wonkru-dev@proton.me>
+Date: Tue, 24 Nov 2026 14:27:30 +0100
+
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -6,7 +6,7 @@
+     { name = "Sébastien Eustace", email = "sebastien@eustace.io" },
+     { name = "Frost Ming", email = "me@frostming.com" }
+ ]
+-license = "MIT"
++license = { text = "MIT" }
+
+ readme = "README.md"
+ requires-python = ">=3.9"
+@@ -15,14 +15,6 @@
+ Homepage = "https://github.com/python-poetry/tomlkit"
+ Repository = "https://github.com/python-poetry/tomlkit"
+ Changelog = "https://github.com/python-poetry/tomlkit/blob/master/CHANGELOG.md"
+-
+-[tool.poetry]
+-include = [
+-  { path = "tomlkit/py.typed" },
+-  { path = "tests", format = "sdist" },
+-  { path = "docs", format = "sdist" },
+-  { path = "CHANGELOG.md", format = "sdist" },
+-]
+
+ [dependency-groups]
+ dev = [
+@@ -68,6 +60,15 @@
+     "truthy-bool",
+ ]
+
++[tool.setuptools]
++include-package-data = true
++
++[tool.setuptools.packages.find]
++include = ["tomlkit*"]
++
++[tool.setuptools.package-data]
++tomlkit = ["py.typed"]
++
+ [build-system]
+-requires = ["poetry-core>=2.2.0"]
+-build-backend = "poetry.core.masonry.api"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
