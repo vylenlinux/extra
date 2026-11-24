@@ -2,13 +2,13 @@
 
 # shellcheck disable=SC2034
 description="A C++ library to decode QRCode"
-homepage="https://github.com/nu-book/zxing-cpp"
+homepage="https://github.com/zxing-cpp/zxing-cpp"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=zxing-cpp
-version=3.1.1
+version=3.2.0
 release=1
-source="https://github.com/nu-book/${name}/archive/v${version}/${name}-${version}.tar.gz"
+source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
     cmake -S "${name}-${version}" -B build -G Ninja \
@@ -17,9 +17,11 @@ build() {
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DCMAKE_C_FLAGS_RELEASE="${CFLAGS}" \
+        \
         -DZXING_C_API=ON \
         -DZXING_USE_BUNDLED_ZINT=OFF \
         -DZXING_EXAMPLES=OFF \
+        \
         -Wno-author
 
     cmake --build build

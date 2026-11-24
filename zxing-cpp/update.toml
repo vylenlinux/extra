@@ -1,5 +1,6 @@
 name = "zxing-cpp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "zxing-cpp"
+owner = "%(name)"
+repo = "%(name)"
