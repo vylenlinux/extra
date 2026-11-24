@@ -1,4 +1,4 @@
-name = "perl-archive-zip"
+name = "perl-archive-cpio"
 provider = "metacpan"
 
 [source]
