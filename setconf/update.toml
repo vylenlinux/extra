@@ -1,5 +1,6 @@
 name = "setconf"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "setconf"
+owner = "xyproto"
+repo = "%(name)"
