@@ -6,4 +6,7 @@ owner = "tpm2-software"
 repo = "%(name)"
 
 [version.filter]
-exclude = ['.*s$']
+exclude = [
+    '.*s$',
+    '.*-rc.*'
+]
