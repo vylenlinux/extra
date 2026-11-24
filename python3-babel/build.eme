@@ -1,21 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A collection of tools for internationalizing Python applications"
 homepage="https://babel.pocoo.org/en/latest/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-babel
-version=2.18.0
+version=2.19.0
 release=1
-source="https://github.com/python-babel/babel/archive/v$version/$name-$version.tar.gz"
-
+source="https://github.com/python-babel/babel/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-  cd babel-$version
+    # shellcheck disable=SC2164
+    cd "babel-${version}"
+    python3 scripts/download_import_cldr.py
 
-	/usr/bin/python3 setup.py import_cldr
-	gpep517 build-wheel \
-		--wheel-dir .dist \
-		--output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG \
-		.dist/*.whl
+    gpep517 build-wheel \
+        --wheel-dir .dist \
+        --output-fd 3 3>&1 >&2
 
+    python3 -m installer -d "${PKG}" .dist/*.whl
 }
