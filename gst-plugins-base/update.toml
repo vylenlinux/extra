@@ -1,5 +1,9 @@
 name = "gst-plugins-base"
-provider = "freedesktop"
+provider = "ftp"
 
-[source]
-project = "gstreamer/%(name)"
+[ftp]
+url = "https://gstreamer.freedesktop.org/src/%(name)/"
+filename = "%(name)-%(version).tar.xz"
+
+[version.filter]
+exclude = ['1\.[0-9]*[13579]\..*'] # devel
