@@ -2,4 +2,4 @@ name = "gdk-pixbuf-xlib"
 provider = "gnome"
 
 [source]
-project = "Archive/%(name)"
+package = "Archive/%(name)"
