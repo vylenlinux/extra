@@ -2,4 +2,4 @@ name = "gtk-doc"
 provider = "gnome"
 
 [source]
-project = "GNOME/%(name)"
+package = "%(name)"
