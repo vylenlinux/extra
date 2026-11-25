@@ -6,9 +6,9 @@ homepage="https://github.com/pop-os/cosmic-wallpapers"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cosmic-wallpapers
-version=1.11.0
+version=1.12.0
 release=1
-source="${name}-${version}.tar.gz::https://github.com/pop-os/${name}/archive/refs/tags/epoch-${version}.tar.gz"
+source="https://github.com/pop-os/${name}/archive/epoch-${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

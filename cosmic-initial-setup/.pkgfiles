@@ -90,15 +90,6 @@ drwxr-xr-x root/root    usr/share/cosmic-layouts/top-panel-and-bottom-dock/com.s
 -rw-r--r-- root/root    usr/share/cosmic-layouts/top-panel-and-bottom-dock/com.system76.CosmicPanel/v1/entries
 -rw-r--r-- root/root    usr/share/cosmic-layouts/top-panel-and-bottom-dock/icon.png
 -rw-r--r-- root/root    usr/share/cosmic-layouts/top-panel-and-bottom-dock/layout.kdl
-drwxr-xr-x root/root    usr/share/cosmic-themes/
--rw-r--r-- root/root    usr/share/cosmic-themes/comet-light.png
--rw-r--r-- root/root    usr/share/cosmic-themes/comet-light.ron
--rw-r--r-- root/root    usr/share/cosmic-themes/cream-light.png
--rw-r--r-- root/root    usr/share/cosmic-themes/cream-light.ron
--rw-r--r-- root/root    usr/share/cosmic-themes/mocha-dark.png
--rw-r--r-- root/root    usr/share/cosmic-themes/mocha-dark.ron
--rw-r--r-- root/root    usr/share/cosmic-themes/nebula-dark.png
--rw-r--r-- root/root    usr/share/cosmic-themes/nebula-dark.ron
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/
 drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/

@@ -6,7 +6,7 @@ homepage="https://system76.com/cosmic"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cosmic-desktop
-version=1.11.0
+version=1.12.0
 release=1
 
 build() {
