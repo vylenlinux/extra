@@ -2,4 +2,4 @@ name = "librest"
 provider = "gnome"
 
 [source]
-project = "GNOME/%(name)"
+package = "%(name)"
