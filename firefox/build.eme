@@ -16,7 +16,8 @@ source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/${name}/relea
     vendor.js
     org.mozilla.${name}.metainfo.xml
     fix-target-detection.patch
-    swgl-clang-ice.patch"
+    swgl-clang-ice.patch
+    system-nss-include-order.patch"
 
 build() {
     # shellcheck disable=SC2164
@@ -25,6 +26,7 @@ build() {
 
     patch -Np1 -i "${SRC}/fix-target-detection.patch"
     patch -Np1 -i "${SRC}/swgl-clang-ice.patch"
+    patch -Np1 -i "${SRC}/system-nss-include-order.patch"
 
     # audio
     emerald is-installed alsa-lib && printf 'ac_add_options --enable-alsa\n' >> .mozconfig
