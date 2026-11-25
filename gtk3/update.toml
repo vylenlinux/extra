@@ -2,7 +2,7 @@ name = "gtk3"
 provider = "gnome"
 
 [source]
-project = "GNOME/gtk"
+package = "gtk"
 
 [version.filter]
 include = ['^3\..*$']
