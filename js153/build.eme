@@ -6,7 +6,7 @@ homepage="https://spidermonkey.dev/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=js153
-version=153.7.0
+version=153.8.0
 release=1
 
 source="${name}-${version}.tar.xz::https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
@@ -38,12 +38,15 @@ build() {
 
     ../js/src/configure \
         --prefix=/usr \
+        \
         --with-intl-api \
         --with-system-zlib \
         --with-system-icu \
+        \
+        --enable-readline \
+        \
         --disable-jemalloc \
-        --disable-debug-symbols \
-        --enable-readline
+        --disable-debug-symbols
 
     make
     make DESTDIR="${PKG}" install
