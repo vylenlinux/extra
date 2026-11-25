@@ -2,4 +2,4 @@ name = "gcolor3"
 provider = "gnome"
 
 [source]
-project = "World/%(name)"
+package = "World/%(name)"
