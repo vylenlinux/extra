@@ -3,3 +3,6 @@ provider = "repology"
 
 [source]
 package = "cunit-original"
+
+[version.normalize]
+replace = { "-" = "." }
