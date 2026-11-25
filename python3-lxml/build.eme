@@ -6,11 +6,11 @@ homepage="https://lxml.de/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=python3-lxml
-version=6.2.0
+version=6.1.3+1
 release=1
 
-_version="$(printf "%s" "${version}" | sed 's/_/-/')"
-source="${name}-${version}.tar.gz::https://github.com/lxml/lxml/archive/refs/tags/lxml-${_version}.tar.gz"
+_version="$(printf "%s" "${version}" | sed 's/+/-/')"
+source="https://github.com/lxml/lxml/archive/lxml-${_version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164

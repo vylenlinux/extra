@@ -7,7 +7,7 @@ repo = "lxml"
 
 [version.normalize]
 strip_prefix = "lxml-"
-replace = { "-" = "_" }
+replace = { "-" = "+" }
 
 [version.filter]
 include = ['^lxml-.*$']
