@@ -6,13 +6,15 @@ homepage="https://cython.org/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=cython3
-version=3.3.2
+version=3.3.2+1
 release=1
-source="${name}-${version}.tar.gz::https://github.com/cython/cython/archive/${version}.tar.gz"
+
+_version="$(printf '%s' "${version}" | tr '+' '-')"
+source="https://github.com/cython/cython/archive/${_version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
-    cd "cython-${version}"
+    cd "cython-${_version}"
 
     gpep517 build-wheel \
         --wheel-dir .dist \
