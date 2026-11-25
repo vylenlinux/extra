@@ -2,4 +2,4 @@ name = "libsecret"
 provider = "gnome"
 
 [source]
-project = "GNOME/%(name)"
+package = "%(name)"
