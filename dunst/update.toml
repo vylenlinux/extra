@@ -1,5 +1,6 @@
 name = "dunst"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "dunst"
+owner = "dunst-project"
+repo = "%(name)"

@@ -1,5 +1,6 @@
 name = "libepoxy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libepoxy"
+owner = "anholt"
+repo = "%(name)"

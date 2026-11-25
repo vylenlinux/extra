@@ -1,5 +1,6 @@
 name = "libvarlink"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libvarlink"
+owner = "varlink"
+repo = "%(name)"

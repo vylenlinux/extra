@@ -1,5 +1,9 @@
 name = "flatbuffers"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "flatbuffers"
+owner = "google"
+repo = "%(name)"
+
+[version.filter]
+include = ['^v[0-9]{2}\.[0-9]{2}\.[0-9]{2}$']

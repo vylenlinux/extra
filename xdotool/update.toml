@@ -1,5 +1,6 @@
 name = "xdotool"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xdotool"
+owner = "jordansissel"
+repo = "%(name)"

@@ -1,5 +1,9 @@
 name = "libnma"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libnma"
+owner = "GNOME"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['.*-dev$']

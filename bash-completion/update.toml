@@ -1,5 +1,9 @@
 name = "bash-completion"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bash-completion"
+owner = "scop"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['^[0-9]{8}-alt.*$']

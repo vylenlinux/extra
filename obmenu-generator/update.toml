@@ -1,5 +1,6 @@
 name = "obmenu-generator"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "obmenu-generator"
+owner = "trizen"
+repo = "%(name)"

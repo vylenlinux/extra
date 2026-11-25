@@ -1,5 +1,6 @@
 name = "discount"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "discount"
+owner = "Orc"
+repo = "%(name)"

@@ -1,5 +1,5 @@
 name = "gcolor3"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "gcolor3"
+project = "World/%(name)"

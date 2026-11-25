@@ -1,5 +1,9 @@
 name = "flatpak"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "flatpak"
+owner = "%(name)"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['[0-9]+\.[0-9]*[13579]\..*'] # devel

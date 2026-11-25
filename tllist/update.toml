@@ -1,5 +1,6 @@
 name = "tllist"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "tllist"
+owner = "dnkl"
+repo = "%(name)"

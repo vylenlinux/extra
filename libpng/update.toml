@@ -1,5 +1,12 @@
 name = "libpng"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libpng"
+owner = "pnggroup"
+repo = "%(name)"
+
+[version.filter]
+exclude = [
+    '.*alpha.*',
+    '.*beta.*'
+]

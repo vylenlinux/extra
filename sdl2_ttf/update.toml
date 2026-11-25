@@ -1,5 +1,12 @@
 name = "sdl2_ttf"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sdl2-ttf"
+owner = "libsdl-org"
+repo = "SDL_ttf"
+
+[version.normalize]
+strip_prefix = "release-"
+
+[version.filter]
+include = ['^release-2\..*$']

@@ -1,5 +1,6 @@
 name = "dfc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "dfc"
+owner = "Rolinh"
+repo = "%(name)"

@@ -1,5 +1,6 @@
 name = "libcpuid"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libcpuid"
+owner = "anrieff"
+repo = "%(name)"

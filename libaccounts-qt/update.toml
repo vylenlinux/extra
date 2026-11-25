@@ -1,5 +1,11 @@
 name = "libaccounts-qt"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libaccounts-qt"
+project = "accounts-sso/%(name)"
+
+[version.normalize]
+strip_prefix = "VERSION_"
+
+[version.filter]
+include = ['^VERSION_.*$']

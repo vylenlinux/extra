@@ -1,5 +1,5 @@
 name = "tint2"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "tint2"
+project = "nick87720z/%(name)"

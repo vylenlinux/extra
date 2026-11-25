@@ -1,5 +1,6 @@
 name = "fcft"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "fcft"
+owner = "dnkl"
+repo = "%(name)"

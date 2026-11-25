@@ -1,5 +1,6 @@
 name = "swig"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "swig"
+owner = "%(name)"
+repo = "%(name)"

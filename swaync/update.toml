@@ -1,5 +1,6 @@
 name = "swaync"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sway-notification-center"
+owner = "ErikReider"
+repo = "SwayNotificationCenter"

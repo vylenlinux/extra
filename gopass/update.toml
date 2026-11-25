@@ -1,5 +1,6 @@
 name = "gopass"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gopass-gopasspw"
+owner = "gopasspw"
+repo = "%(name)"

@@ -1,5 +1,11 @@
 name = "signon-plugin-oauth2"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "signon-plugin-oauth2"
+project = "accounts-sso/%(name)"
+
+[version.normalize]
+strip_prefix = "VERSION_"
+
+[version.filter]
+include = ['^VERSION_.*$']

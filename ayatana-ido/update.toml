@@ -1,5 +1,6 @@
 name = "ayatana-ido"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ayatana-ido"
+owner = "AyatanaIndicators"
+repo = "%(name)"

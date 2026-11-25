@@ -1,5 +1,6 @@
 name = "gtk-session-lock"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gtk-session-lock"
+owner = "Cu3PO42"
+repo = "%(name)"

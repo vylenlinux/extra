@@ -1,5 +1,6 @@
 name = "libgusb"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libgusb"
+owner = "hughsie"
+repo = "%(name)"

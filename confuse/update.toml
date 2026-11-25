@@ -1,5 +1,6 @@
 name = "confuse"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libconfuse"
+owner = "libconfuse"
+repo = "libconfuse"

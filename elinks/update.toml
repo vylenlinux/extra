@@ -1,5 +1,6 @@
 name = "elinks"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "elinks"
+owner = "rkd77"
+repo = "%(name)"

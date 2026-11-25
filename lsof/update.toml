@@ -1,5 +1,6 @@
 name = "lsof"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "lsof"
+owner = "lsof-org"
+repo = "%(name)"

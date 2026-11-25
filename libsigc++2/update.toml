@@ -1,8 +1,10 @@
 name = "libsigc++2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsigc++"
+owner = "libsigcplusplus"
+repo = "libsigcplusplus"
 
-[repology]
-match_name = "libsigc++2"
+[version.filter]
+include = ['^2\..*$']
+exclude = ['^2\.99\..*$']

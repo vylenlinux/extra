@@ -1,5 +1,6 @@
 name = "cjson"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cjson"
+owner = "DaveGamble"
+repo = "cJSON"

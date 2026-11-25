@@ -1,5 +1,6 @@
 name = "openal"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "openal-soft"
+owner = "kcat"
+repo = "openal-soft"

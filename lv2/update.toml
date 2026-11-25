@@ -1,5 +1,6 @@
 name = "lv2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "lv2"
+owner = "%(name)"
+repo = "%(name)"

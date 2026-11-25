@@ -1,5 +1,6 @@
 name = "libtpms"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libtpms"
+owner = "stefanberger"
+repo = "%(name)"

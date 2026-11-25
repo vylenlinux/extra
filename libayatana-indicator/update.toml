@@ -1,5 +1,6 @@
 name = "libayatana-indicator"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libayatana-indicator"
+owner = "AyatanaIndicators"
+repo = "%(name)"

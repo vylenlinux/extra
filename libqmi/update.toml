@@ -1,5 +1,5 @@
 name = "libqmi"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libqmi"
+project = "mobile-broadband/%(name)"

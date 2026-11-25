@@ -1,5 +1,6 @@
 name = "iniparser"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "iniparser"
+owner = "ndevilla"
+repo = "%(name)"

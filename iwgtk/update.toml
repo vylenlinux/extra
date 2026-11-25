@@ -1,5 +1,6 @@
 name = "iwgtk"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "iwgtk"
+owner = "J-Lentz"
+repo = "%(name)"

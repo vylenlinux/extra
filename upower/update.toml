@@ -1,5 +1,5 @@
 name = "upower"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "upower"
+project = "%(name)/%(name)"

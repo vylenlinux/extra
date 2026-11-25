@@ -1,5 +1,6 @@
 name = "swaylock"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "swaylock"
+owner = "swaywm"
+repo = "%(name)"

@@ -1,5 +1,6 @@
 name = "jwm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jwm"
+owner = "joewing"
+repo = "%(name)"

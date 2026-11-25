@@ -1,5 +1,6 @@
 name = "fontforge"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fontforge"
+owner = "%(name)"
+repo = "%(name)"

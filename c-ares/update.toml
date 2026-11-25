@@ -1,5 +1,6 @@
 name = "c-ares"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "c-ares"
+owner = "%(name)"
+repo = "%(name)"

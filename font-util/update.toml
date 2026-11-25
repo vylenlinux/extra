@@ -1,5 +1,11 @@
 name = "font-util"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "font-util"
+project = "xorg/font/util"
+
+[version.normalize]
+strip_prefix = "%(name)-"
+
+[version.filter]
+include = ['^%(name)-.*$']

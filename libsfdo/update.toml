@@ -1,5 +1,5 @@
 name = "libsfdo"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libsfdo"
+project = "vyivel/%(name)"

@@ -1,5 +1,6 @@
 name = "libsigc++"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsigc++"
+owner = "libsigcplusplus"
+repo = "libsigcplusplus"

@@ -1,5 +1,6 @@
 name = "grantlee"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "grantlee-qt6"
+owner = "steveire"
+repo = "%(name)"

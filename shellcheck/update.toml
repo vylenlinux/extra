@@ -1,5 +1,6 @@
 name = "shellcheck"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "shellcheck"
+owner = "koalaman"
+repo = "%(name)"

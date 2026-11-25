@@ -1,5 +1,6 @@
 name = "abseil-cpp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "abseil-cpp"
+owner = "abseil"
+repo = "%(name)"

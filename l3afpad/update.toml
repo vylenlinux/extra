@@ -1,5 +1,6 @@
 name = "l3afpad"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "l3afpad"
+owner = "stevenhoneyman"
+repo = "%(name)"

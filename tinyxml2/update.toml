@@ -1,5 +1,6 @@
 name = "tinyxml2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "tinyxml"
+owner = "leethomason"
+repo = "%(name)"

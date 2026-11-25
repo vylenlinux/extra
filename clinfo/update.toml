@@ -1,5 +1,9 @@
 name = "clinfo"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "clinfo"
+owner = "Oblomov"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['^20170207$']

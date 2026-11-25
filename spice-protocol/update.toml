@@ -1,5 +1,5 @@
 name = "spice-protocol"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "spice-protocol"
+project = "spice/%(name)"

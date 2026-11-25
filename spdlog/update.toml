@@ -1,5 +1,6 @@
 name = "spdlog"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "spdlog"
+owner = "gabime"
+repo = "%(name)"

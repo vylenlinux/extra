@@ -1,5 +1,6 @@
 name = "libnvme"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libnvme"
+owner = "linux-nvme"
+repo = "%(name)"

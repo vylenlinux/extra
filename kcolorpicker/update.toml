@@ -1,5 +1,6 @@
 name = "kcolorpicker"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "kcolorpicker"
+owner = "ksnip"
+repo = "kColorPicker"

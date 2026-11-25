@@ -1,5 +1,6 @@
 name = "fuzzel"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "fuzzel"
+owner = "dnkl"
+repo = "%(name)"

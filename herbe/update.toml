@@ -1,5 +1,6 @@
 name = "herbe"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "herbe"
+owner = "dudik"
+repo = "%(name)"

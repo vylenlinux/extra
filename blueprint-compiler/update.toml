@@ -1,5 +1,5 @@
 name = "blueprint-compiler"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "blueprint-compiler"
+package = "%(name)"

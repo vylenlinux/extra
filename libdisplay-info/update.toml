@@ -1,5 +1,5 @@
 name = "libdisplay-info"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libdisplay-info"
+project = "emersion/%(name)"

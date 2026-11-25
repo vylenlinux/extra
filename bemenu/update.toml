@@ -1,5 +1,6 @@
 name = "bemenu"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bemenu"
+owner = "Cloudef"
+repo = "%(name)"

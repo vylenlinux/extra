@@ -1,5 +1,6 @@
 name = "gtk4-layer-shell"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gtk4-layer-shell"
+owner = "wmww"
+repo = "%(name)"

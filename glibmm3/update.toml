@@ -1,8 +1,8 @@
 name = "glibmm3"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "glibmm"
+project = "GNOME/glibmm"
 
 [version.filter]
 include = ['^2\.66\..*$']

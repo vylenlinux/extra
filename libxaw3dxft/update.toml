@@ -1,5 +1,9 @@
 name = "libxaw3dxft"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libxaw3dxft"
+owner = "DaveFlater"
+repo = "libXaw3dXft"
+
+[version.filter]
+exclude = ['.*-endling$']

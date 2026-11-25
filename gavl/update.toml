@@ -1,5 +1,6 @@
 name = "gavl"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gavl"
+owner = "bplaum"
+repo = "%(name)"

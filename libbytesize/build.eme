@@ -1,16 +1,23 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Library facilitates the common operations with sizes in bytes"
-homepage="https://github.com/rhinstaller/libbytesize"
+homepage="https://github.com/storaged-project/libbytesize"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libbytesize
 version=2.12
 release=1
-source="https://github.com/storaged-project/$name/releases/download/$version/$name-$version.tar.gz"
+source="https://github.com/storaged-project/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version	
-	./configure --prefix=/usr --with-gtk-doc=no
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
 
+    ./configure \
+        --prefix=/usr \
+        --with-gtk-doc=no
+
+    make
+    make DESTDIR="${PKG}" install
 }

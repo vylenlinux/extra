@@ -1,5 +1,12 @@
 name = "libmusicbrainz5"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libmusicbrainz"
+owner = "metabrainz"
+repo = "libmusicbrainz"
+
+[version.normalize]
+strip_prefix = "release-"
+
+[version.filter]
+exclude = ['^start$']

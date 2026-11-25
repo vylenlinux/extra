@@ -1,5 +1,6 @@
 name = "libqalculate"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libqalculate"
+owner = "Qalculate"
+repo = "%(name)"

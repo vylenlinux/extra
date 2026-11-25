@@ -1,5 +1,9 @@
 name = "libgd"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gd"
+owner = "%(name)"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "gd-"

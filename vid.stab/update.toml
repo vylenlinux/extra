@@ -1,5 +1,6 @@
 name = "vid.stab"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "vid.stab"
+owner = "georgmartius"
+repo = "%(name)"

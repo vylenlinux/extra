@@ -1,5 +1,6 @@
 name = "mlt"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mlt"
+owner = "mltframework"
+repo = "%(name)"

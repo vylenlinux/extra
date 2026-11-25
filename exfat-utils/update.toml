@@ -1,5 +1,6 @@
 name = "exfat-utils"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "exfat-utils"
+owner = "relan"
+repo = "exfat"

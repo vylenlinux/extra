@@ -1,5 +1,6 @@
 name = "libmad"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "libmad"
+owner = "tenacityteam"
+repo = "%(name)"

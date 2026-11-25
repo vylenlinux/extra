@@ -1,5 +1,6 @@
 name = "cgroupfs-mount"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cgroupfs-mount"
+owner = "tianon"
+repo = "%(name)"

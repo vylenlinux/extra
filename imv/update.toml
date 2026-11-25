@@ -1,5 +1,6 @@
 name = "imv"
-provider = "repology"
+provider = "sourcehut"
 
 [source]
-package = "imv"
+owner = "~exec64"
+repo = "%(name)"

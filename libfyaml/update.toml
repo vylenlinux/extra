@@ -1,5 +1,13 @@
 name = "libfyaml"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libfyaml"
+owner = "pantoniou"
+repo = "%(name)"
+
+[version.filter]
+exclude = [
+    '.*-rc.*',
+    '.*-beta.*',
+    '.*-alpha.*'
+]

@@ -1,5 +1,6 @@
 name = "iotop"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "iotop-c"
+owner = "Tomas-M"
+repo = "%(name)"

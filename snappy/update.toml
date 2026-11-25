@@ -1,5 +1,6 @@
 name = "snappy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "snappy-compression"
+owner = "google"
+repo = "%(name)"

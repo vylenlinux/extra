@@ -1,5 +1,6 @@
 name = "libmpdclient"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libmpdclient"
+owner = "MusicPlayerDaemon"
+repo = "%(name)"

@@ -1,5 +1,6 @@
 name = "kimageannotator"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "kimageannotator"
+owner = "ksnip"
+repo = "kImageAnnotator"

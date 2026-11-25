@@ -1,5 +1,5 @@
 name = "libxml2"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libxml2"
+project = "GNOME/%(name)"

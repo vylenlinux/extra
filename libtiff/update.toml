@@ -1,5 +1,5 @@
 name = "libtiff"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "tiff"
+project = "%(name)/%(name)"

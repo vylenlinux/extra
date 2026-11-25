@@ -1,5 +1,6 @@
 name = "fnott"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "fnott"
+owner = "dnkl"
+repo = "%(name)"

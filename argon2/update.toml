@@ -1,5 +1,6 @@
 name = "argon2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "argon2"
+owner = "P-H-C"
+repo = "phc-winner-argon2"

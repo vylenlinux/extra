@@ -1,5 +1,6 @@
 name = "libebur128"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libebur128"
+owner = "jiixyj"
+repo = "%(name)"

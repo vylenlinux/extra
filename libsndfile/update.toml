@@ -1,5 +1,6 @@
 name = "libsndfile"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsndfile"
+owner = "%(name)"
+repo = "%(name)"

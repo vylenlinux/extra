@@ -1,5 +1,6 @@
 name = "double-conversion"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "double-conversion"
+owner = "google"
+repo = "%(name)"

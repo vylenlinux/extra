@@ -1,5 +1,6 @@
 name = "libva-utils"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libva-utils"
+owner = "intel"
+repo = "%(name)"

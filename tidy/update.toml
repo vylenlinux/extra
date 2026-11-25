@@ -1,5 +1,9 @@
 name = "tidy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "tidy"
+owner = "htacg"
+repo = "tidy-html5"
+
+[version.filter]
+exclude = ['.*-next$']

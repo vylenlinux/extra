@@ -1,5 +1,6 @@
 name = "re2c"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "re2c"
+owner = "skvadrik"
+repo = "%(name)"

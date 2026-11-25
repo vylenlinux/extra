@@ -1,5 +1,9 @@
 name = "jack"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jack-audio-connection-kit"
+owner = "jackaudio"
+repo = "jack2"
+
+[version.filter]
+exclude = ['^1.90$']

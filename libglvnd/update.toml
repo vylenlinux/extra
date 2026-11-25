@@ -1,5 +1,6 @@
 name = "libglvnd"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libglvnd"
+owner = "NVIDIA"
+repo = "%(name)"

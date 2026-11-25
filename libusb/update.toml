@@ -1,5 +1,6 @@
 name = "libusb"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libusb"
+owner = "%(name)"
+repo = "%(name)"

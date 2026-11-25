@@ -1,5 +1,6 @@
 name = "sxiv"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sxiv"
+owner = "xyb3rt"
+repo = "%(name)"

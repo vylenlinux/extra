@@ -1,5 +1,6 @@
 name = "cmark"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cmark"
+owner = "commonmark"
+repo = "%(name)"

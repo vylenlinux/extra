@@ -1,5 +1,6 @@
 name = "rpcsvc-proto"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "rpcsvc-proto"
+owner = "thkukuk"
+repo = "%(name)"

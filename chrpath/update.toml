@@ -1,5 +1,9 @@
 name = "chrpath"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "chrpath"
+owner = "pere"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "release_"

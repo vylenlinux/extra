@@ -1,5 +1,9 @@
 name = "spirv-tools"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "spirv-tools"
+owner = "KhronosGroup"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['.*\.rc.*']

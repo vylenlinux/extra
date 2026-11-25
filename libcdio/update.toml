@@ -1,5 +1,6 @@
 name = "libcdio"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libcdio"
+owner = "%(name)"
+repo = "%(name)-c"

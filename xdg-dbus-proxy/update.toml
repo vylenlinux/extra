@@ -1,5 +1,6 @@
 name = "xdg-dbus-proxy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xdg-dbus-proxy"
+owner = "flatpak"
+repo = "%(name)"

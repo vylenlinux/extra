@@ -1,5 +1,9 @@
 name = "intel-gmmlib"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gmmlib"
+owner = "intel"
+repo = "gmmlib"
+
+[version.normalize]
+strip_prefix = "%(name)-"

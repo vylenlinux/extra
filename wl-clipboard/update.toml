@@ -1,5 +1,6 @@
 name = "wl-clipboard"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "wl-clipboard"
+owner = "bugaevc"
+repo = "%(name)"

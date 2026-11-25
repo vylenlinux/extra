@@ -1,5 +1,5 @@
 name = "osinfo-db"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "osinfo-db"
+project = "libosinfo/%(name)"

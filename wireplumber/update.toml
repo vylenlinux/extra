@@ -1,5 +1,5 @@
 name = "wireplumber"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "wireplumber"
+project = "pipewire/%(name)"

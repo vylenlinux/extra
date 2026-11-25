@@ -1,8 +1,9 @@
 name = "libsoup2"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "libsoup"
 
 [version.filter]
 include = ['^2\..*$']
+exclude = ['^2\.99\..*$']

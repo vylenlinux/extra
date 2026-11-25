@@ -1,5 +1,6 @@
 name = "libavif"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libavif"
+owner = "AOMediaCodec"
+repo = "%(name)"

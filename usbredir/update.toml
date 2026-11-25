@@ -1,5 +1,8 @@
 name = "usbredir"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "usbredir"
+project = "spice/%(name)"
+
+[version.normalize]
+strip_prefix = "%(name)-"

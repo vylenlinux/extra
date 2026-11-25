@@ -1,5 +1,6 @@
 name = "glm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "glm"
+owner = "g-truc"
+repo = "%(name)"

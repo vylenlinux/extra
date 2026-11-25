@@ -1,5 +1,5 @@
 name = "virglrenderer"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "virglrenderer"
+project = "virgl/%(name)"

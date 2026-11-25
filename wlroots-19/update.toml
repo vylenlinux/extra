@@ -1,8 +1,8 @@
 name = "wlroots-19"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "wlroots"
+project = "wlroots/wlroots"
 
-[repology]
-match_name = "wlroots0.19"
+[version.filter]
+include = ['^0\.19\..*$']

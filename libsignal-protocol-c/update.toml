@@ -1,5 +1,6 @@
 name = "libsignal-protocol-c"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsignal-protocol-c"
+owner = "signalapp"
+repo = "%(name)"

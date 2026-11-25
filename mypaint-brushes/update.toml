@@ -1,5 +1,6 @@
 name = "mypaint-brushes"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mypaint-brushes"
+owner = "mypaint"
+repo = "%(name)"

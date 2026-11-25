@@ -1,5 +1,6 @@
 name = "mtm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mtm"
+owner = "deadpixi"
+repo = "%(name)"

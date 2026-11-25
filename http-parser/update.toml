@@ -1,5 +1,6 @@
 name = "http-parser"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "http-parser"
+owner = "nodejs"
+repo = "%(name)"

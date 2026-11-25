@@ -1,5 +1,6 @@
 name = "asciidoc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "asciidoc"
+owner = "%(name)-py"
+repo = "%(name)-py"

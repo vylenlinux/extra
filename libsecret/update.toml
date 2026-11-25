@@ -1,5 +1,5 @@
 name = "libsecret"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libsecret"
+project = "GNOME/%(name)"

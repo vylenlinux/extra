@@ -1,5 +1,8 @@
 name = "xdg-utils"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "xdg-utils"
+project = "xdg/%(name)"
+
+[version.filter]
+exclude = ['.*-rc.*']

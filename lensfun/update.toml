@@ -1,5 +1,9 @@
 name = "lensfun"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "lensfun"
+owner = "%(name)"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['[0-9]+\.[0-9]+\.9[0-9]']

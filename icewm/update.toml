@@ -1,5 +1,6 @@
 name = "icewm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "icewm"
+owner = "ice-wm"
+repo = "%(name)"

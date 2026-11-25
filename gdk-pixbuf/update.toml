@@ -1,5 +1,5 @@
 name = "gdk-pixbuf"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "gdk-pixbuf"
+project = "GNOME/%(name)"

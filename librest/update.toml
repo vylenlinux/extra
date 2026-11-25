@@ -1,5 +1,5 @@
 name = "librest"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "rest"
+project = "GNOME/%(name)"

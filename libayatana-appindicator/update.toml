@@ -1,5 +1,6 @@
 name = "libayatana-appindicator"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libayatana-appindicator"
+owner = "AyatanaIndicators"
+repo = "%(name)"

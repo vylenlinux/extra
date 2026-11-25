@@ -1,5 +1,6 @@
 name = "gflags"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gflags"
+owner = "%(name)"
+repo = "%(name)"

@@ -1,17 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Standalone CSS2 parsing and manipulation library"
-homepage="https://gitlab.gnome.org/GNOME/libcroco"
+homepage="https://gitlab.gnome.org/Archive/libcroco"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libcroco
 version=0.6.13
 release=1
-source="https://gitlab.gnome.org/Archive/libcroco/-/archive/$version/$name-$version.tar.gz"
+source="https://gitlab.gnome.org/Archive/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	autoreconf -fvi
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    autoreconf -fi
 
+    ./configure \
+        --prefix=/usr \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }

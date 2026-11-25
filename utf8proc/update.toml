@@ -1,5 +1,6 @@
 name = "utf8proc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "utf8proc"
+owner = "JuliaStrings"
+repo = "%(name)"

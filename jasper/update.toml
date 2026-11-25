@@ -1,5 +1,9 @@
 name = "jasper"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "jasper"
+owner = "%(name)-software"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "version-"

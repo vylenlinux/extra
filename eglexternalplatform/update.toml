@@ -1,5 +1,6 @@
 name = "eglexternalplatform"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "eglexternalplatform"
+owner = "NVIDIA"
+repo = "%(name)"

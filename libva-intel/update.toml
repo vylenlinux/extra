@@ -1,5 +1,6 @@
 name = "libva-intel"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libva-intel-driver-irql"
+owner = "irql-notlessorequal"
+repo = "intel-vaapi-driver"

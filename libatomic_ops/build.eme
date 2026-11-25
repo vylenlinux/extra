@@ -1,19 +1,25 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Implementations for atomic memory update operations on a number of architectures"
-homepage="https://github.com/ivmai/libatomic_ops"
+homepage="https://github.com/bdwgc/libatomic_ops"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libatomic_ops
 version=7.10.0
 release=1
-source="$name-$version.tar.gz::https://github.com/ivmai/libatomic_ops/archive/v$version.tar.gz"
+source="https://github.com/bdwgc/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
-	./autogen.sh
-	./configure --prefix=/usr    \
-	            --enable-shared  \
-	            --disable-static
-	make
-	make DESTDIR=$PKG install
+    # shellcheck disable=SC2164
+    cd "${name}-${version}"
+    ./autogen.sh
 
+    ./configure \
+        --prefix=/usr \
+        --enable-shared \
+        --disable-static
+
+    make
+    make DESTDIR="${PKG}" install
 }

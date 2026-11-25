@@ -1,5 +1,5 @@
 name = "power-profiles-daemon"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "power-profiles-daemon"
+project = "upower/%(name)"

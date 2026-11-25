@@ -1,5 +1,6 @@
 name = "foot"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "foot"
+owner = "dnkl"
+repo = "%(name)"

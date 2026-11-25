@@ -8,7 +8,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=iucode-tool
 version=2.3.1
 release=1
-source="${name}-${version}.tar.xz::https://gitlab.com/${name}/releases/raw/master/${name}_${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://gitlab.com/${name}/${name}/releases/raw/master/${name}_${version}.tar.xz"
 
 build() {
     # shellcheck disable=SC2164

@@ -1,5 +1,6 @@
 name = "imath"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "imath"
+owner = "AcademySoftwareFoundation"
+repo = "Imath"

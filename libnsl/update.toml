@@ -1,5 +1,6 @@
 name = "libnsl"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libnsl"
+owner = "thkukuk"
+repo = "%(name)"

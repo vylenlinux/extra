@@ -1,5 +1,6 @@
 name = "swtpm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "swtpm"
+owner = "stefanberger"
+repo = "%(name)"

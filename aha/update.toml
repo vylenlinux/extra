@@ -1,5 +1,6 @@
 name = "aha"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "aha"
+owner = "theZiz"
+repo = "%(name)"

@@ -1,5 +1,12 @@
 name = "fuse"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libfuse"
+owner = "libfuse"
+repo = "libfuse"
+
+[version.normalize]
+strip_prefix = "%(name)-"
+
+[version.filter]
+exclude = ['^start$']

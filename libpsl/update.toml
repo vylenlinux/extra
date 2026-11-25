@@ -1,5 +1,6 @@
 name = "libpsl"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libpsl"
+owner = "rockdaboot"
+repo = "%(name)"

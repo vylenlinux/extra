@@ -1,5 +1,6 @@
 name = "gmime3"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gmime"
+owner = "jstedfast"
+repo = "gmime"

@@ -1,5 +1,6 @@
 name = "librsync"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "librsync"
+owner = "%(name)"
+repo = "%(name)"

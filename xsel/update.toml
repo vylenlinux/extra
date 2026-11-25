@@ -1,5 +1,6 @@
 name = "xsel"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xsel"
+owner = "kfish"
+repo = "%(name)"

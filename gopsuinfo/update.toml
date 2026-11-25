@@ -1,5 +1,6 @@
 name = "gopsuinfo"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gopsuinfo"
+owner = "nwg-piotr"
+repo = "%(name)"

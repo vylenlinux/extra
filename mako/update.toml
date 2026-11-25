@@ -1,5 +1,6 @@
 name = "mako"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "mako-notifier"
+owner = "emersion"
+repo = "%(name)"

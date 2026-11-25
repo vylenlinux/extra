@@ -1,5 +1,6 @@
 name = "shaderc"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "shaderc"
+owner = "google"
+repo = "%(name)"

@@ -1,5 +1,5 @@
 name = "libei"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libei"
+project = "libinput/%(name)"

@@ -1,5 +1,6 @@
 name = "qcoro"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "qcoro"
+owner = "%(name)"
+repo = "%(name)"

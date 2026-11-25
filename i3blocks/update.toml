@@ -1,5 +1,6 @@
 name = "i3blocks"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "i3blocks"
+owner = "vivien"
+repo = "%(name)"

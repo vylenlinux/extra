@@ -1,5 +1,6 @@
 name = "swappy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "swappy"
+owner = "jtheoof"
+repo = "%(name)"

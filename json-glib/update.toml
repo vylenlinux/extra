@@ -1,5 +1,5 @@
 name = "json-glib"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "json-glib"
+project = "GNOME/%(name)"

@@ -1,5 +1,6 @@
 name = "cxxopts"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "cxxopts"
+owner = "jarro2783"
+repo = "%(name)"

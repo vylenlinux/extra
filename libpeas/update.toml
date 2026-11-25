@@ -1,5 +1,5 @@
 name = "libpeas"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libpeas"
+package = "%(name)"

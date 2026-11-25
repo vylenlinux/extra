@@ -1,5 +1,6 @@
 name = "asciidoctor"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "asciidoctor"
+owner = "%(name)"
+repo = "%(name)"

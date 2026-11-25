@@ -1,5 +1,6 @@
 name = "icoextract"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "icoextract"
+owner = "jlu5"
+repo = "%(name)"

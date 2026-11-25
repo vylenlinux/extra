@@ -1,5 +1,6 @@
 name = "hunspell"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "hunspell"
+owner = "%(name)"
+repo = "%(name)"

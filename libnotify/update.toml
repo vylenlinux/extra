@@ -1,5 +1,5 @@
 name = "libnotify"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libnotify"
+project = "GNOME/%(name)"

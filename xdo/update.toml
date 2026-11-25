@@ -1,5 +1,6 @@
 name = "xdo"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xdo"
+owner = "baskerville"
+repo = "%(name)"

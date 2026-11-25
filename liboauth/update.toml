@@ -1,5 +1,6 @@
 name = "liboauth"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "liboauth"
+owner = "x42"
+repo = "%(name)"

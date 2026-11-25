@@ -1,5 +1,6 @@
 name = "fdupes"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fdupes"
+owner = "adrianlopezroche"
+repo = "%(name)"

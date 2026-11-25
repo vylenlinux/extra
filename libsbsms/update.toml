@@ -1,5 +1,6 @@
 name = "libsbsms"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsbsms"
+owner = "claytonotey"
+repo = "%(name)"

@@ -1,5 +1,5 @@
 name = "libgee"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libgee"
+project = "GNOME/%(name)"

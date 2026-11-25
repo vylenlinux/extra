@@ -1,5 +1,8 @@
 name = "xkeyboard-config"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "xkeyboard-config"
+project = "%(name)/%(name)"
+
+[version.normalize]
+strip_prefix = "%(name)-"

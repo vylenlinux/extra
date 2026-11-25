@@ -1,5 +1,6 @@
 name = "libquotient"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libquotient"
+owner = "quotient-im"
+repo = "libQuotient"

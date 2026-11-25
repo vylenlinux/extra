@@ -1,5 +1,6 @@
 name = "egl-wayland"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "egl-wayland"
+owner = "NVIDIA"
+repo = "%(name)"

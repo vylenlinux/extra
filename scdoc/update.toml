@@ -1,5 +1,6 @@
 name = "scdoc"
-provider = "repology"
+provider = "sourcehut"
 
 [source]
-package = "scdoc"
+owner = "sircmpwn"
+repo = "%(name)"

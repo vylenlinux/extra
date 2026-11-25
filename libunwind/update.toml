@@ -1,5 +1,12 @@
 name = "libunwind"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libunwind"
+owner = "%(name)"
+repo = "%(name)"
+
+[version.filter]
+exclude = [
+    '.*20[0-9]{6}', # snapshot
+    '^4\.0\..*$'
+]

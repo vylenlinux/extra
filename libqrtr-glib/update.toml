@@ -1,5 +1,5 @@
 name = "libqrtr-glib"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libqrtr-glib"
+project = "mobile-broadband/%(name)"

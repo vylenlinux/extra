@@ -1,5 +1,9 @@
 name = "speexdsp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "speexdsp"
+owner = "xiph"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "SpeexDSP-"

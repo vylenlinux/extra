@@ -1,5 +1,5 @@
 name = "libliftoff"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libliftoff"
+project = "emersion/%(name)"

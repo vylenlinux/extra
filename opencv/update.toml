@@ -1,5 +1,6 @@
 name = "opencv"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "opencv"
+owner = "%(name)"
+repo = "%(name)"

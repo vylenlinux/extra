@@ -1,5 +1,6 @@
 name = "libsass"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsass"
+owner = "sass"
+repo = "%(name)"

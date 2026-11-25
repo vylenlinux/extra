@@ -1,5 +1,6 @@
 name = "scrot"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "scrot"
+owner = "resurrecting-open-source-projects"
+repo = "%(name)"

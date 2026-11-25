@@ -1,5 +1,6 @@
 name = "ntfs-3g"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ntfs-3g"
+owner = "tuxera"
+repo = "%(name)"

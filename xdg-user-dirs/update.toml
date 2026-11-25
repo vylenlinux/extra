@@ -1,5 +1,5 @@
 name = "xdg-user-dirs"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "xdg-user-dirs"
+project = "xdg/%(name)"

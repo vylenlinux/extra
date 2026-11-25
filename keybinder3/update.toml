@@ -1,5 +1,12 @@
 name = "keybinder3"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "keybinder"
+owner = "kupferlauncher"
+repo = "keybinder"
+
+[version.normalize]
+strip_prefix = "keybinder-3.0-v"
+
+[version.filter]
+include = ['^keybinder-3\.0-v.*$']

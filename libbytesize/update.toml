@@ -1,5 +1,6 @@
 name = "libbytesize"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libbytesize"
+owner = "storaged-project"
+repo = "%(name)"

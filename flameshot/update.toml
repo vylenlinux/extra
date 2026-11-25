@@ -1,5 +1,6 @@
 name = "flameshot"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "flameshot"
+owner = "flameshot-org"
+repo = "%(name)"

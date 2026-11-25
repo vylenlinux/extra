@@ -1,5 +1,6 @@
 name = "trash-cli"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "trash-cli"
+owner = "andreafrancia"
+repo = "%(name)"

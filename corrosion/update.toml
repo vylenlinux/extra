@@ -1,5 +1,6 @@
 name = "corrosion"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "corrosion"
+owner = "corrosion-rs"
+repo = "%(name)"

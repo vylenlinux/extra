@@ -1,5 +1,6 @@
 name = "highway"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "highway-simd-library"
+owner = "google"
+repo = "%(name)"

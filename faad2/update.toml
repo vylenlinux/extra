@@ -1,5 +1,6 @@
 name = "faad2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "faad2"
+owner = "knik0"
+repo = "%(name)"

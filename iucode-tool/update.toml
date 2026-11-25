@@ -1,5 +1,5 @@
 name = "iucode-tool"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "iucode-tool"
+project = "%(name)/%(name)"

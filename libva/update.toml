@@ -1,5 +1,12 @@
 name = "libva"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libva"
+owner = "intel"
+repo = "%(name)"
+
+[version.filter]
+exclude = [
+    '^[0-9]{8}.*$',
+    '.*-video$'
+]

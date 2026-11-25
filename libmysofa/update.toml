@@ -1,5 +1,6 @@
 name = "libmysofa"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libmysofa"
+owner = "hoene"
+repo = "%(name)"

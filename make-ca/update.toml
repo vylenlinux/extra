@@ -1,5 +1,6 @@
 name = "make-ca"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "make-ca"
+owner = "lfs-book"
+repo = "%(name)"

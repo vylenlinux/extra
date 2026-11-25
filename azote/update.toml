@@ -1,5 +1,6 @@
 name = "azote"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "azote"
+owner = "nwg-piotr"
+repo = "%(name)"

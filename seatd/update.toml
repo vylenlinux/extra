@@ -1,5 +1,6 @@
 name = "seatd"
-provider = "repology"
+provider = "sourcehut"
 
 [source]
-package = "seatd"
+owner = "kennylevinsen"
+repo = "%(name)"

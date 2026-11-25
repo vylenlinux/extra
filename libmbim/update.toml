@@ -1,5 +1,5 @@
 name = "libmbim"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libmbim"
+project = "mobile-broadband/%(name)"

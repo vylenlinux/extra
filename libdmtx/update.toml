@@ -1,5 +1,6 @@
 name = "libdmtx"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libdmtx"
+owner = "dmtx"
+repo = "%(name)"

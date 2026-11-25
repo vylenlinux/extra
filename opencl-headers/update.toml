@@ -1,5 +1,6 @@
 name = "opencl-headers"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "opencl-icd-loader"
+owner = "KhronosGroup"
+repo = "%(name)"

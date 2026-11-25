@@ -1,5 +1,6 @@
 name = "picom"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "picom"
+owner = "yshui"
+repo = "%(name)"

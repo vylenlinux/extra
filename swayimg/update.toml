@@ -1,5 +1,6 @@
 name = "swayimg"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "swayimg"
+owner = "artemsen"
+repo = "%(name)"

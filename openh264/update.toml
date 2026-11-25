@@ -1,5 +1,6 @@
 name = "openh264"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "openh264"
+owner = "cisco"
+repo = "%(name)"

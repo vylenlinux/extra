@@ -1,5 +1,9 @@
 name = "nv-codec-headers"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "nv-codec-headers"
+owner = "FFmpeg"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "n"

@@ -1,5 +1,6 @@
 name = "granite"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "granite"
+owner = "elementary"
+repo = "%(name)"

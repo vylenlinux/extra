@@ -1,5 +1,6 @@
 name = "libatomic_ops"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libatomic-ops"
+owner = "bdwgc"
+repo = "%(name)"

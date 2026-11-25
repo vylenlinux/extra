@@ -1,5 +1,8 @@
 name = "networkmanager"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "networkmanager"
+project = "%(name)/%(name)"
+
+[version.filter]
+exclude = ['[0-9]+\.[0-9]*[13579]\..*'] # devel

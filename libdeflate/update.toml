@@ -1,5 +1,6 @@
 name = "libdeflate"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libdeflate"
+owner = "ebiggers"
+repo = "%(name)"

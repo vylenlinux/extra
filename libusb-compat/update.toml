@@ -1,5 +1,6 @@
 name = "libusb-compat"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libusb-compat"
+owner = "libusb"
+repo = "libusb-compat-0.1"

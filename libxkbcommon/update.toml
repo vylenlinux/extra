@@ -1,5 +1,12 @@
 name = "libxkbcommon"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libxkbcommon"
+owner = "xkbcommon"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "xkbcommon-"
+
+[version.filter]
+exclude = ['^xkbcommon-.*-beta.*$']

@@ -1,5 +1,5 @@
 name = "gspell"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "gspell"
+project = "GNOME/%(name)"

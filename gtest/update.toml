@@ -1,5 +1,6 @@
 name = "gtest"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "gtest"
+owner = "google"
+repo = "googletest"

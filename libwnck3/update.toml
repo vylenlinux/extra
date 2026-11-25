@@ -1,5 +1,5 @@
 name = "libwnck3"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "libwnck"
+project = "GNOME/libwnck"

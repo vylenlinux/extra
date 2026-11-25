@@ -1,5 +1,12 @@
 name = "libmypaint"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libmypaint"
+owner = "mypaint"
+repo = "%(name)"
+
+[version.filter]
+exclude = [
+    '.*-alpha.*',
+    '.*-beta.*'
+]

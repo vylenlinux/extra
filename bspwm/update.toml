@@ -1,5 +1,6 @@
 name = "bspwm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bspwm"
+owner = "baskerville"
+repo = "%(name)"

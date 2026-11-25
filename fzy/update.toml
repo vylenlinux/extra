@@ -1,5 +1,6 @@
 name = "fzy"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "fzy"
+owner = "jhawthorn"
+repo = "%(name)"

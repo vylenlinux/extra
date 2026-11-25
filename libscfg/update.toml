@@ -1,5 +1,6 @@
 name = "libscfg"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "libscfg"
+owner = "emersion"
+repo = "%(name)"

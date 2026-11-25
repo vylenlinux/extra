@@ -1,5 +1,8 @@
 name = "signon-ui"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "signon-ui"
+project = "accounts-sso/%(name)"
+
+[version.normalize]
+strip_suffix = "+*"

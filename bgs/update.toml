@@ -1,5 +1,6 @@
 name = "bgs"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "bgs"
+owner = "Gottox"
+repo = "%(name)"

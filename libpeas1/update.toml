@@ -1,8 +1,11 @@
 name = "libpeas1"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "libpeas"
 
-[repology]
-match_name = "libpeas1"
+[version.normalize]
+strip_prefix = "libpeas-"
+
+[version.filter]
+include = ['^libpeas-.*$']

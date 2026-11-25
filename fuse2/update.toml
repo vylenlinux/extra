@@ -1,8 +1,13 @@
 name = "fuse2"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libfuse"
+owner = "libfuse"
+repo = "libfuse"
 
-[repology]
-match_name = "fuse2"
+[version.normalize]
+strip_prefix = "fuse-"
+
+[version.filter]
+include = ['^fuse-2\..*$']
+exclude = ['^start$']

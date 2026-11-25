@@ -1,5 +1,6 @@
 name = "flac"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "flac"
+owner = "xiph"
+repo = "%(name)"

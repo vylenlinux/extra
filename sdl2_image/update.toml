@@ -1,5 +1,12 @@
 name = "sdl2_image"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sdl2-image"
+owner = "libsdl-org"
+repo = "SDL_image"
+
+[version.normalize]
+strip_prefix = "release-"
+
+[version.filter]
+include = ['^release-2\..*$']

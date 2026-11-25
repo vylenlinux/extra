@@ -1,5 +1,6 @@
 name = "libexif"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libexif"
+owner = "%(name)"
+repo = "%(name)"

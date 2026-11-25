@@ -1,5 +1,5 @@
 description="Library to create Wayland desktop components using the Layer Shell protocol"
-homepage="https://github.com/wmww/gtk-layer-shell"
+homepage="https://github.com/wmww/gtk4-layer-shell"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gtk4-layer-shell

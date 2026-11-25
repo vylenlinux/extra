@@ -1,5 +1,5 @@
 name = "wlroots"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "wlroots"
+project = "%(name)/%(name)"

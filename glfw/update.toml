@@ -1,5 +1,6 @@
 name = "glfw"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "glfw"
+owner = "%(name)"
+repo = "%(name)"

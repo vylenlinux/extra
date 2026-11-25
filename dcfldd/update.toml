@@ -1,5 +1,6 @@
 name = "dcfldd"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "dcfldd"
+owner = "resurrecting-open-source-projects"
+repo = "%(name)"

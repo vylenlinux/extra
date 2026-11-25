@@ -1,5 +1,11 @@
 name = "libaccounts-glib"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libaccounts-glib"
+project = "accounts-sso/%(name)"
+
+[version.normalize]
+strip_prefix = "VERSION_"
+
+[version.filter]
+include = ['^VERSION_.*$']

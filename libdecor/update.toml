@@ -1,5 +1,5 @@
 name = "libdecor"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libdecor"
+project = "%(name)/%(name)"

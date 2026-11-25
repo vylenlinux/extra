@@ -1,5 +1,6 @@
 name = "sowm"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "sowm"
+owner = "dylanaraps"
+repo = "%(name)"

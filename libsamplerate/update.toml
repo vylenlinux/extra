@@ -1,5 +1,6 @@
 name = "libsamplerate"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libsamplerate"
+owner = "libsndfile"
+repo = "%(name)"

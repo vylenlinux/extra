@@ -1,5 +1,6 @@
 name = "oniguruma"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "oniguruma"
+owner = "kkos"
+repo = "%(name)"

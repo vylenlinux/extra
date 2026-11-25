@@ -1,5 +1,6 @@
 name = "clipit"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "clipit"
+owner = "CristianHenzel"
+repo = "ClipIt"

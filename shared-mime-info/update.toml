@@ -1,5 +1,5 @@
 name = "shared-mime-info"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "shared-mime-info"
+project = "xdg/%(name)"

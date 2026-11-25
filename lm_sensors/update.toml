@@ -1,5 +1,9 @@
 name = "lm_sensors"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "lm-sensors"
+owner = "lm-sensors"
+repo = "lm-sensors"
+
+[version.normalize]
+replace = { "-" = "." }

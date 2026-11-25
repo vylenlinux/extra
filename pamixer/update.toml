@@ -1,5 +1,6 @@
 name = "pamixer"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "pamixer"
+owner = "cdemoulins"
+repo = "%(name)"

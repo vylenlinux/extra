@@ -1,11 +1,8 @@
 name = "gtk3"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "gtk"
-
-[repology]
-match_name = "gtk3"
+project = "GNOME/gtk"
 
 [version.filter]
 include = ['^3\..*$']

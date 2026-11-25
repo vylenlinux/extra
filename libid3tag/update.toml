@@ -1,5 +1,6 @@
 name = "libid3tag"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "libid3tag"
+owner = "tenacityteam"
+repo = "%(name)"

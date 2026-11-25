@@ -1,5 +1,6 @@
 name = "freeglut"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "freeglut"
+owner = "%(name)"
+repo = "%(name)"

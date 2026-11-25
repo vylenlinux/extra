@@ -1,5 +1,6 @@
 name = "zathura-pdf-poppler"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "zathura-pdf-poppler"
+owner = "pwmt"
+repo = "%(name)"

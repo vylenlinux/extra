@@ -1,5 +1,6 @@
 name = "range-v3"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "range-v3"
+owner = "ericniebler"
+repo = "%(name)"

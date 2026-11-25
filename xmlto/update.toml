@@ -1,5 +1,6 @@
 name = "xmlto"
-provider = "repology"
+provider = "codeberg"
 
 [source]
-package = "xmlto"
+owner = "%(name)"
+repo = "%(name)"

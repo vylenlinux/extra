@@ -1,5 +1,6 @@
 name = "opendoas"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "opendoas"
+owner = "Duncaen"
+repo = "OpenDoas"

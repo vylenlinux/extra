@@ -1,5 +1,5 @@
 name = "adwaita-icon-theme"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "adwaita-icon-theme"
+project = "GNOME/%(name)"

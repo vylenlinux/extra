@@ -1,5 +1,6 @@
 name = "xfce4-hotcorner-plugin"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "xfce4-hotcorner-plugin"
+owner = "christopherkobayashi"
+repo = "%(name)"

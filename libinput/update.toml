@@ -1,5 +1,5 @@
 name = "libinput"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libinput"
+project = "%(name)/%(name)"

@@ -1,5 +1,6 @@
 name = "polkit"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "polkit"
+owner = "polkit-org"
+repo = "%(name)"
