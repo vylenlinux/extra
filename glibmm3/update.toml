@@ -2,7 +2,7 @@ name = "glibmm3"
 provider = "gnome"
 
 [source]
-project = "GNOME/glibmm"
+package = "glibmm"
 
 [version.filter]
 include = ['^2\.66\..*$']
