@@ -4,3 +4,6 @@ provider = "github"
 [source]
 owner = "cython"
 repo = "cython"
+
+[version.normalize]
+replace = { "-" = "+" }
