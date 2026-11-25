@@ -2,4 +2,4 @@ name = "gexiv2"
 provider = "gnome"
 
 [source]
-project = "GNOME/%(name)"
+package = "%(name)"
