@@ -2,4 +2,4 @@ name = "libwnck3"
 provider = "gnome"
 
 [source]
-project = "GNOME/libwnck"
+package = "libwnck"
