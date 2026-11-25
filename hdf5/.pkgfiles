@@ -104,6 +104,7 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/H5StrType.h
 -rw-r--r-- root/root    usr/include/H5TBpublic.h
 -rw-r--r-- root/root    usr/include/H5TSdevelop.h
+-rw-r--r-- root/root    usr/include/H5TSpublic.h
 -rw-r--r-- root/root    usr/include/H5Tdevelop.h
 -rw-r--r-- root/root    usr/include/H5Tpublic.h
 -rw-r--r-- root/root    usr/include/H5VLconnector.h
@@ -133,20 +134,20 @@ drwxr-xr-x root/root    usr/lib/cmake/hdf5/Modules/
 -rw-r--r-- root/root    usr/lib/cmake/hdf5/hdf5-targets.cmake
 -rw-r--r-- root/root    usr/lib/libhdf5.settings
 lrwxrwxrwx root/root    usr/lib/libhdf5.so -> libhdf5.so.320
-lrwxrwxrwx root/root    usr/lib/libhdf5.so.320 -> libhdf5.so.320.2.0
--rwxr-xr-x root/root    usr/lib/libhdf5.so.320.2.0
+lrwxrwxrwx root/root    usr/lib/libhdf5.so.320 -> libhdf5.so.320.3.0
+-rwxr-xr-x root/root    usr/lib/libhdf5.so.320.3.0
 lrwxrwxrwx root/root    usr/lib/libhdf5_cpp.so -> libhdf5_cpp.so.320
-lrwxrwxrwx root/root    usr/lib/libhdf5_cpp.so.320 -> libhdf5_cpp.so.320.2.0
--rwxr-xr-x root/root    usr/lib/libhdf5_cpp.so.320.2.0
+lrwxrwxrwx root/root    usr/lib/libhdf5_cpp.so.320 -> libhdf5_cpp.so.320.2.1
+-rwxr-xr-x root/root    usr/lib/libhdf5_cpp.so.320.2.1
 lrwxrwxrwx root/root    usr/lib/libhdf5_hl.so -> libhdf5_hl.so.320
-lrwxrwxrwx root/root    usr/lib/libhdf5_hl.so.320 -> libhdf5_hl.so.320.0.3
--rwxr-xr-x root/root    usr/lib/libhdf5_hl.so.320.0.3
+lrwxrwxrwx root/root    usr/lib/libhdf5_hl.so.320 -> libhdf5_hl.so.320.0.4
+-rwxr-xr-x root/root    usr/lib/libhdf5_hl.so.320.0.4
 lrwxrwxrwx root/root    usr/lib/libhdf5_hl_cpp.so -> libhdf5_hl_cpp.so.320
-lrwxrwxrwx root/root    usr/lib/libhdf5_hl_cpp.so.320 -> libhdf5_hl_cpp.so.320.0.3
--rwxr-xr-x root/root    usr/lib/libhdf5_hl_cpp.so.320.0.3
+lrwxrwxrwx root/root    usr/lib/libhdf5_hl_cpp.so.320 -> libhdf5_hl_cpp.so.320.0.4
+-rwxr-xr-x root/root    usr/lib/libhdf5_hl_cpp.so.320.0.4
 lrwxrwxrwx root/root    usr/lib/libhdf5_tools.so -> libhdf5_tools.so.320
-lrwxrwxrwx root/root    usr/lib/libhdf5_tools.so.320 -> libhdf5_tools.so.320.0.3
--rwxr-xr-x root/root    usr/lib/libhdf5_tools.so.320.0.3
+lrwxrwxrwx root/root    usr/lib/libhdf5_tools.so.320 -> libhdf5_tools.so.320.0.4
+-rwxr-xr-x root/root    usr/lib/libhdf5_tools.so.320.0.4
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/hdf5.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/hdf5_cpp.pc
