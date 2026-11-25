@@ -2,4 +2,4 @@ name = "mm-common"
 provider = "gnome"
 
 [source]
-project = "GNOME/%(name)"
+package = "%(name)"
