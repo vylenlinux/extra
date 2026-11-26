@@ -9,5 +9,5 @@ libxshmfence
 libxxf86vm
 python3-mako
 python3-ply
-python3-yaml
+python3-pyyaml
 rust-bindgen
