@@ -18,6 +18,7 @@ drwxr-xr-x root/root    usr/include/mate-desktop-2.0/libmate-desktop/
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-hsv.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-image-menu-item.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-languages.h
+-rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-monitor-info.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr-config.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr-labeler.h
 -rw-r--r-- root/root    usr/include/mate-desktop-2.0/libmate-desktop/mate-rr.h
@@ -439,5 +440,10 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/mate-color-select.1.gz
 drwxr-xr-x root/root    usr/share/mate-about/
 -rw-r--r-- root/root    usr/share/mate-about/mate-version.xml
+drwxr-xr-x root/root    usr/share/mate-wayland-protocols/
+-rw-r--r-- root/root    usr/share/mate-wayland-protocols/mate-input-device-v1.xml
+-rw-r--r-- root/root    usr/share/mate-wayland-protocols/mate-output-v1.xml
+drwxr-xr-x root/root    usr/share/pkgconfig/
+-rw-r--r-- root/root    usr/share/pkgconfig/mate-wayland-protocols.pc
 drwxr-xr-x root/root    usr/share/xdg-desktop-portal/
 -rw-r--r-- root/root    usr/share/xdg-desktop-portal/mate-portals.conf
