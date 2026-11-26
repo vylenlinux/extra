@@ -7,9 +7,9 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=td
 version=1.8.71
-release=2
+release=3
 
-commit=1b9efe84d6e9a2e2f6eadeeea32b0726d2b8c25d
+commit=e7ac61dd69409c31b3c8c7367b33b07eecce701f
 source="https://github.com/tdlib/${name}/archive/${commit}/${name}-${commit}.tar.gz"
 
 build() {
