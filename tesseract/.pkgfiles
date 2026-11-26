@@ -16,7 +16,6 @@ drwxr-xr-x root/root    usr/include/tesseract/
 -rw-r--r-- root/root    usr/include/tesseract/unichar.h
 -rw-r--r-- root/root    usr/include/tesseract/version.h
 drwxr-xr-x root/root    usr/lib/
--rw-r--r-- root/root    usr/lib/libtesseract.a
 lrwxrwxrwx root/root    usr/lib/libtesseract.so -> libtesseract.so.5.0.5
 lrwxrwxrwx root/root    usr/lib/libtesseract.so.5 -> libtesseract.so.5.0.5
 -rwxr-xr-x root/root    usr/lib/libtesseract.so.5.0.5

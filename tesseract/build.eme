@@ -6,16 +6,18 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 homepage="https://github.com/tesseract-ocr/tesseract"
 
 name=tesseract
-version=5.5.4
+version=5.5.5
 release=1
-source="${name}-${version}.tar.gz::https://github.com/${name}-ocr/${name}/archive/${version}.tar.gz"
+source="https://github.com/${name}-ocr/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
-
     ./autogen.sh
-    ./configure --prefix=/usr
+
+    ./configure \
+        --prefix=/usr \
+        --disable-static
 
     make
     make DESTDIR="${PKG}" install
