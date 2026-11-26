@@ -7,7 +7,7 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=gflags
 version=2.3.1
-release=1
+release=2
 source="${name}-${version}.tar.gz::https://github.com/${name}/${name}/archive/v${version}.tar.gz"
 
 build() {
@@ -17,7 +17,7 @@ build() {
         -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS}" \
         -DREGISTER_INSTALL_PREFIX=OFF \
         -DBUILD_SHARED_LIBS=ON \
-        -DBUILD_STATIC_LIBS=ON \
+        -DBUILD_STATIC_LIBS=OFF \
         -DBUILD_TESTING=ON \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -Wno-author
