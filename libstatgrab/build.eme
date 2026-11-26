@@ -1,17 +1,24 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="A library that provides cross platform access to statistics about the system on which it's run"
-homepage="https://www.i-scream.org/libstatgrab"
+homepage="https://libstatgrab.org"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libstatgrab
-version=0.92.1
+version=0.92.2
 release=1
-source="http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/$name/$name-$version.tar.gz"
+
+_version="$(printf '%s' "${version}" | tr '.' '_')"
+source="https://github.com/${name}/${name}/archive/LIBSTATGRAB_${_version}/${name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+    # shellcheck disable=SC2164
+    cd "${name}-LIBSTATGRAB_${_version}"
 
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    autoreconf -fi
+    ./configure --prefix=/usr
 
+    make
+    make DESTDIR="${PKG}" install
 }
