@@ -1,5 +1,15 @@
 name = "ghostscript"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ghostscript"
+owner = "ArtifexSoftware"
+repo = "ghostpdl-downloads"
+
+[version]
+local_format = "{{_version}}"
+
+[version.normalize]
+strip_prefix = "gs"
+
+[version.filter]
+include = ['^gs[0-9]{5}$']
