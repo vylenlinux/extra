@@ -1,4 +1,4 @@
-name = "python3-yaml"
+name = "python3-pyyaml"
 provider = "pypi"
 
 [source]
