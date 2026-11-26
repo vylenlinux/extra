@@ -1,0 +1,6 @@
+name = "fluidsynth"
+provider = "github"
+
+[source]
+owner = "%(name)"
+repo = "%(name)"
