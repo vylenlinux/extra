@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="A fork of libgnomekbd"
-homepage="https://mate-desktop.org"
+homepage="https://github.com/mate-desktop/libmatekbd"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=libmatekbd
