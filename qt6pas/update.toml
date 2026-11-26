@@ -1,5 +1,15 @@
 name = "qt6pas"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "qt6pas"
+project = "freepascal.org/lazarus/lazarus"
+
+[version]
+local_format = "{{lazarus_version}}"
+
+[version.normalize]
+strip_prefix = "lazarus_"
+
+[version.filter]
+include = ['^lazarus_.*$']
+exclude = ['^lazarus_.*_RC.*$']

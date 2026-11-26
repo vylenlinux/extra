@@ -1,18 +1,22 @@
+#!/bin/sh
+
+# shellcheck disable=SC2034
 description="Free Pascal Qt6 binding library updated by lazarus IDE"
-homepage="https://gitlab.com/freepascal.org/lazarus"
+homepage="https://gitlab.com/freepascal.org/lazarus/lazarus"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=qt6pas
 version=6.2.10
-release=1
-lz_tag=3_8
-lz_version=3.8.0
-source="lazarus-$lz_version.tar.bz2::https://gitlab.com/freepascal.org/lazarus/lazarus/-/archive/lazarus_${lz_tag}/lazarus-lazarus_${lz_tag}.tar.bz2"
+release=2
+
+lazarus_version=4_8
+source="lazarus-${lazarus_version}.tar.gz::https://gitlab.com/freepascal.org/lazarus/lazarus/-/archive/lazarus_${lazarus_version}/lazarus-lazarus_${lazarus_version}.tar.gz"
 
 build() {
+    # shellcheck disable=SC2164
+    cd "lazarus-lazarus_${lazarus_version}/lcl/interfaces/qt6/cbindings"
+    qmake6
 
-    cd lazarus-lazarus_${lz_tag}/lcl/interfaces/qt6/cbindings
-    qmake6 
-    make 
-    make  INSTALL_ROOT=$PKG install
+    make
+    make INSTALL_ROOT="${PKG}" install
 }
