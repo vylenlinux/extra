@@ -1,5 +1,5 @@
 name = "spice-gtk"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "spice-gtk"
+project = "spice/%(name)"
