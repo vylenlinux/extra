@@ -5,7 +5,7 @@ drwxr-xr-x root/root    usr/include/libcue/
 lrwxrwxrwx root/root    usr/include/libcue/libcue.h -> ../libcue.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libcue.so -> libcue.so.2
-lrwxrwxrwx root/root    usr/lib/libcue.so.2 -> libcue.so.2.4.3
--rwxr-xr-x root/root    usr/lib/libcue.so.2.4.3
+lrwxrwxrwx root/root    usr/lib/libcue.so.2 -> libcue.so.2.4.4
+-rwxr-xr-x root/root    usr/lib/libcue.so.2.4.4
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcue.pc
