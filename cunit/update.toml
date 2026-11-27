@@ -5,4 +5,4 @@ provider = "repology"
 package = "cunit-original"
 
 [version.normalize]
-replace = { "-" = "." }
+replace = { "-" = ".", "+" = "." }
