@@ -8,13 +8,13 @@ maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 name=spice-gtk
 version=0.43
 release=1
-source="https://gitlab.freedesktop.org/-/project/64/uploads/88f5d31a961da9921add46ca3f0be904/${name}-${version}.tar.xz"
+source="https://downloads.sourceforge.net/project/vylen/sources/${name}/${name}-${version}.tar.xz"
 
 build() {
     vylen-meson "${name}-${version}" build \
         --libexecdir="/usr/lib/${name}" \
         -Dgtk=enabled \
-        -Dgtk_doc=disabled \
+        -Dgtk_doc="$(emerald is-installed gtk-doc && printf 'enabled' || printf 'disabled')" \
         -Dusb-ids-path=/usr/share/hwdata/usb.ids
 
     meson compile -C build
