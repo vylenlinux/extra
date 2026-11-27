@@ -2,5 +2,5 @@ name = "mkfontscale"
 provider = "ftp"
 
 [ftp]
-url = "http://ftp.x.org/pub/individual/app/"
+url = "https://xorg.freedesktop.org/archive/individual/app/"
 filename = "%(name)-%(version).tar.xz"
