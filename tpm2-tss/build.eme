@@ -6,7 +6,7 @@ homepage="https://github.com/tpm2-software/tpm2-tss"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=tpm2-tss
-version=4.2.2
+version=4.2.3
 release=1
 
 backup="etc/${name}/fapi-config.json
