@@ -1,5 +1,6 @@
 name = "ttf-noto-cjk"
 provider = "repology"
+skip_update = true # Repology is the only reliable version source
 
 [source]
 package = "fonts:noto-cjk"
