@@ -1,5 +1,6 @@
 name = "docbook-xml"
 provider = "repology"
+skip_update = true # Repology is the only reliable version source
 
 [source]
-package = "docbook-xml"
+package = "%(name)"
