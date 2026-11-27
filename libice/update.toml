@@ -2,5 +2,5 @@ name = "libice"
 provider = "ftp"
 
 [ftp]
-url = "http://ftp.x.org/pub/individual/lib/"
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
 filename = "libICE-%(version).tar.xz"
