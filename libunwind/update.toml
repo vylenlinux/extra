@@ -8,5 +8,6 @@ repo = "%(name)"
 [version.filter]
 exclude = [
     '.*20[0-9]{6}', # snapshot
-    '^4\.0\..*$'
+    '^4\.0\..*$',
+    '^.*-branchpoint$'
 ]
