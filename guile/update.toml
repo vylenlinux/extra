@@ -1,5 +1,6 @@
 name = "guile"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "guile"
+[ftp]
+url = "https://ftp.gnu.org/gnu/%(name)/"
+filename = "%(name)-%(version).tar.xz"

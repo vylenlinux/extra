@@ -1,5 +1,6 @@
 name = "font-jis-misc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "font-jis-misc"
+[ftp]
+url = "https://www.x.org/archive/individual/font/"
+filename = "%(name)-%(version).tar.xz"

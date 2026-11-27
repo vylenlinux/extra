@@ -1,5 +1,6 @@
 name = "leafpad"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "leafpad"
+[ftp]
+url = "https://ftp.cc.uoc.gr/mirrors/nongnu.org/%(name)/"
+filename = "%(name)-%(version).tar.gz"

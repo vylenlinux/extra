@@ -1,8 +1,6 @@
 name = "wget2"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "wget"
-
-[repology]
-match_name = "wget2"
+[ftp]
+url = "https://ftp.gnu.org/gnu/wget/"
+filename = "%(name)-%(version).tar.gz"

@@ -1,5 +1,6 @@
 name = "libxft"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxft"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXft-%(version).tar.xz"

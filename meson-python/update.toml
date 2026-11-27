@@ -1,5 +1,5 @@
 name = "meson-python"
-provider = "repology"
+provider = "pypi"
 
 [source]
-package = "meson-python"
+package = "meson_python"

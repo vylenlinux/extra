@@ -1,5 +1,5 @@
 name = "ethtool"
-provider = "repology"
+provider = "cgit"
 
 [source]
-package = "ethtool"
+url = "https://git.kernel.org/pub/scm/network/%(name)/%(name).git"

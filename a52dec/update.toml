@@ -1,5 +1,6 @@
 name = "a52dec"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "a52dec"
+[ftp]
+url = "https://distfiles.adelielinux.org/source/%(name)/"
+filename = "%(name)-%(version).tar.gz"

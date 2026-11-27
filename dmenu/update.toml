@@ -1,5 +1,6 @@
 name = "dmenu"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "dmenu"
+[ftp]
+url = "http://dl.suckless.org/tools/"
+filename = "%(name)-%(version).tar.gz"

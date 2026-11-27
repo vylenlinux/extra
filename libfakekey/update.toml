@@ -1,5 +1,6 @@
 name = "libfakekey"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libfakekey"
+[ftp]
+url = "https://mirror.ihost.md/slackware/slackware64-15.0/source/l/%(name)/"
+filename = "%(name)-%(version).tar.xz"

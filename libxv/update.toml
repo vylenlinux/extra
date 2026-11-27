@@ -1,5 +1,6 @@
 name = "libxv"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxv"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXv-%(version).tar.xz"

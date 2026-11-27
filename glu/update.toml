@@ -1,5 +1,6 @@
 name = "glu"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "glu"
+[ftp]
+url = "https://archive.mesa3d.org/%(name)/"
+filename = "%(name)-%(version).tar.xz"

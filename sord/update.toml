@@ -1,5 +1,6 @@
 name = "sord"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "sord"
+[ftp]
+url = "https://download.drobilla.net/"
+filename = "%(name)-%(version).tar.xz"

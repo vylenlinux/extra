@@ -1,5 +1,6 @@
 name = "libxres"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxres"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXres-%(version).tar.xz"

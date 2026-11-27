@@ -1,5 +1,5 @@
 name = "libnice"
-provider = "repology"
+provider = "freedesktop"
 
 [source]
-package = "libnice"
+package = "%(name)/%(name)"

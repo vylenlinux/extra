@@ -1,5 +1,6 @@
 name = "cifs-utils"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "cifs-utils"
+[ftp]
+url = "https://download.samba.org/pub/linux-cifs/%(name)/"
+filename = "%(name)-%(version).tar.bz2"

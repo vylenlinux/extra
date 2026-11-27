@@ -1,5 +1,2 @@
 name = "libidl2"
-provider = "repology"
-
-[source]
-package = "libidl2"
+provider = "manual" # upstream is archived and no longer maintained

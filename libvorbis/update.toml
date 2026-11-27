@@ -1,5 +1,6 @@
 name = "libvorbis"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libvorbis"
+[ftp]
+url = "https://ftp.osuosl.org/pub/xiph/releases/vorbis/"
+filename = "%(name)-%(version).tar.xz"

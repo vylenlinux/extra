@@ -1,5 +1,6 @@
 name = "iso-codes"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "iso-codes"
+[ftp]
+url = "https://deb.debian.org/debian/pool/main/i/%(name)/"
+filename = "%(name)_%(version).orig.tar.xz"

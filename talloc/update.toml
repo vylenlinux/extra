@@ -1,5 +1,6 @@
 name = "talloc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "talloc"
+[ftp]
+url = "https://www.samba.org/ftp/%(name)/"
+filename = "%(name)-%(version).tar.gz"

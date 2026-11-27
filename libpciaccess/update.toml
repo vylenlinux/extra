@@ -1,5 +1,6 @@
 name = "libpciaccess"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libpciaccess"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

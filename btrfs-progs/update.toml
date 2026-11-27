@@ -1,5 +1,6 @@
 name = "btrfs-progs"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "btrfs-progs"
+[ftp]
+url = "https://www.kernel.org/pub/linux/kernel/people/kdave/%(name)/"
+filename = "%(name)-v%(version).tar.xz"

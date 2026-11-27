@@ -1,5 +1,6 @@
 name = "libisofs"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libisofs"
+[ftp]
+url = "https://files.libburnia-project.org/releases/"
+filename = "%(name)-%(version).tar.gz"

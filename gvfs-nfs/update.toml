@@ -1,5 +1,5 @@
 name = "gvfs-nfs"
-provider = "repology"
+provider = "gnome"
 dedup_key = "gvfs"
 
 [source]

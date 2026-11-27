@@ -1,5 +1,6 @@
 name = "mc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "mc"
+[ftp]
+url = "http://ftp.midnight-commander.org/"
+filename = "%(name)-%(version).tar.xz"

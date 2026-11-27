@@ -1,5 +1,14 @@
 name = "firefox"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "firefox"
+owner = "mozilla-%(name)"
+repo = "%(name)"
+
+[version.filter]
+include = ['^FIREFOX_[0-9]+(?:_[0-9]+){1,3}_RELEASE$']
+
+[version.normalize]
+strip_prefix = "FIREFOX_"
+strip_suffix = "_RELEASE"
+replace = { "_" = "." }

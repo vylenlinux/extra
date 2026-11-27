@@ -1,5 +1,13 @@
 name = "ntp"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "ntp"
+owner = "%(name)-project"
+repo = "%(name)"
+
+[version.normalize]
+strip_prefix = "NTP_"
+replace = { "_" = ".", "P" = "p" }
+
+[github]
+use_releases = true

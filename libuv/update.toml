@@ -1,5 +1,6 @@
 name = "libuv"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "libuv"
+owner = "%(name)"
+repo = "%(name)"

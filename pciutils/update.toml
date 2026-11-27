@@ -1,5 +1,5 @@
 name = "pciutils"
-provider = "repology"
+provider = "cgit"
 
 [source]
-package = "pciutils"
+url = "https://git.kernel.org/pub/scm/utils/%(name)/%(name).git"

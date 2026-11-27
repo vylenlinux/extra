@@ -1,5 +1,6 @@
 name = "libebml"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libebml"
+[ftp]
+url = "https://dl.matroska.org/downloads/%(name)/"
+filename = "%(name)-%(version).tar.xz"

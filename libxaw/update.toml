@@ -1,5 +1,6 @@
 name = "libxaw"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxaw"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXaw-%(version).tar.xz"

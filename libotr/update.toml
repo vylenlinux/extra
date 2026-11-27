@@ -1,5 +1,6 @@
 name = "libotr"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libotr"
+[ftp]
+url = "https://otr.cypherpunks.ca/"
+filename = "%(name)-%(version).tar.gz"

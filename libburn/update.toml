@@ -1,5 +1,6 @@
 name = "libburn"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libburn"
+[ftp]
+url = "https://files.libburnia-project.org/releases/"
+filename = "%(name)-%(version).tar.gz"

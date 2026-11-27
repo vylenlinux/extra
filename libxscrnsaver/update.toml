@@ -1,5 +1,6 @@
 name = "libxscrnsaver"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxscrnsaver"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXScrnSaver-%(version).tar.xz"

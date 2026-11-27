@@ -1,5 +1,6 @@
 name = "xtrans"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xtrans"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

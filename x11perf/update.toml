@@ -1,5 +1,6 @@
 name = "x11perf"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "x11perf"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/test/"
+filename = "%(name)-%(version).tar.xz"

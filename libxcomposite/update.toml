@@ -1,5 +1,6 @@
 name = "libxcomposite"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxcomposite"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXcomposite-%(version).tar.xz"

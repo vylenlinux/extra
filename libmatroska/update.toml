@@ -1,5 +1,6 @@
 name = "libmatroska"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libmatroska"
+[ftp]
+url = "https://dl.matroska.org/downloads/%(name)/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "libxmu"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxmu"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXmu-%(version).tar.xz"

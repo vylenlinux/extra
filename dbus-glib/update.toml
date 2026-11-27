@@ -1,5 +1,6 @@
 name = "dbus-glib"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "dbus-glib"
+[ftp]
+url = "https://dbus.freedesktop.org/releases/%(name)/"
+filename = "%(name)-%(version).tar.gz"

@@ -1,5 +1,6 @@
 name = "sbc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "sbc"
+[ftp]
+url = "https://mirrors.edge.kernel.org/pub/linux/bluetooth/"
+filename = "%(name)-%(version).tar.xz"

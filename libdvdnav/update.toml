@@ -1,5 +1,6 @@
 name = "libdvdnav"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libdvdnav"
+instance = "https://code.videolan.org/"
+project = "videolan/%(name)"

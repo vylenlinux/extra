@@ -1,5 +1,6 @@
 name = "fakeroot"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fakeroot"
+[ftp]
+url = "http://ftp.debian.org/debian/pool/main/f/%(name)/"
+filename = "%(name)_%(version).orig.tar.xz"

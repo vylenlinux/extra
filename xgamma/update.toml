@@ -1,5 +1,6 @@
 name = "xgamma"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xgamma"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

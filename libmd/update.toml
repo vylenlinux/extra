@@ -1,5 +1,6 @@
 name = "libmd"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libmd"
+[ftp]
+url = "https://libbsd.freedesktop.org/releases/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "iwd"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "iwd"
+[ftp]
+url = "https://www.kernel.org/pub/linux/network/wireless/"
+filename = "%(name)-%(version).tar.xz"

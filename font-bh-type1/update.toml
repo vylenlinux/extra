@@ -1,5 +1,6 @@
 name = "font-bh-type1"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:bh-type1"
+[ftp]
+url = "http://ftp.x.org/pub/individual/font/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,11 +1,9 @@
 name = "bindutils"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "bind"
-
-[repology]
-match_name = "bind9"
+instance = "https://gitlab.isc.org/"
+project = "isc-projects/bind9"
 
 [version.filter]
-exclude = ['9\.21\..*']
+exclude = ['[0-9]+\.[0-9]*[13579]\..*'] # devel

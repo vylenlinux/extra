@@ -1,5 +1,6 @@
 name = "xauth"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xauth"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

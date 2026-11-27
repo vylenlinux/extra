@@ -1,5 +1,6 @@
 name = "xdpyinfo"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xdpyinfo"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.gz"

@@ -1,5 +1,6 @@
 name = "font-isas-misc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:isas-misc"
+[ftp]
+url = "https://www.x.org/archive/individual/font/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "parted"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "parted"
+[ftp]
+url = "https://ftp.gnu.org/gnu/%(name)/"
+filename = "%(name)-%(version).tar.xz"

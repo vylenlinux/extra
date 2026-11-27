@@ -1,5 +1,6 @@
 name = "lsb-release"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "lsb-release-minimal"
+instance = "https://salsa.debian.org/"
+project = "gioele/%(name)-minimal"

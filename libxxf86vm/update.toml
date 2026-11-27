@@ -1,5 +1,6 @@
 name = "libxxf86vm"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxxf86vm"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXxf86vm-%(version).tar.xz"

@@ -2,7 +2,7 @@
 
 # shellcheck disable=SC2034
 description="Fast, compact, key-value embedded data store"
-homepage="https://github.com/LMDB/lmdb"
+homepage="https://git.openldap.org/openldap/openldap"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=lmdb

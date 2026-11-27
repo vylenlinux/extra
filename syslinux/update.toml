@@ -1,5 +1,6 @@
 name = "syslinux"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "syslinux"
+[ftp]
+url = "https://www.kernel.org/pub/linux/utils/boot/%(name)/"
+filename = "%(name)-%(version).tar.xz"

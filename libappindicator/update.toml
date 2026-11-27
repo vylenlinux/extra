@@ -1,5 +1,6 @@
 name = "libappindicator"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libappindicator"
+[ftp]
+url = "https://old-releases.ubuntu.com/ubuntu/pool/universe/liba/%(name)/"
+filename = "%(name)_%(version).orig.tar.gz"

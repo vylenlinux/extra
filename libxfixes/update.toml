@@ -1,5 +1,6 @@
 name = "libxfixes"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxfixes"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
+filename = "libXfixes-%(version).tar.xz"

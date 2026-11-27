@@ -1,8 +1,2 @@
 name = "autoconf2.13"
-provider = "repology"
-
-[source]
-package = "autoconf"
-
-[repology]
-match_name = "autoconf-2.13"
+provider = "manual"

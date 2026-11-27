@@ -1,5 +1,6 @@
 name = "popt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "popt"
+[ftp]
+url = "https://ftp.osuosl.org/pub/rpm/%(name)/releases/popt-1.x/"
+filename = "%(name)-%(version).tar.gz"

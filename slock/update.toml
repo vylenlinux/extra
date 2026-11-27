@@ -1,5 +1,6 @@
 name = "slock"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "slock"
+[ftp]
+url = "https://dl.suckless.org/tools/"
+filename = "%(name)-%(version).tar.gz"

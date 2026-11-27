@@ -1,5 +1,6 @@
 name = "itstool"
-provider = "repology"
+provider = "github"
 
 [source]
-package = "itstool"
+owner = "%(name)"
+repo = "%(name)"

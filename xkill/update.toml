@@ -1,5 +1,6 @@
 name = "xkill"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xkill"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

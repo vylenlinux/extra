@@ -1,5 +1,6 @@
 name = "xhost"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xhost"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

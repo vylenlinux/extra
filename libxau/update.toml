@@ -1,5 +1,6 @@
 name = "libxau"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxau"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXau-%(version).tar.xz"

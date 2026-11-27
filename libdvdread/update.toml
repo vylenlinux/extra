@@ -1,5 +1,6 @@
 name = "libdvdread"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libdvdread"
+instance = "https://code.videolan.org/"
+project = "videolan/%(name)"

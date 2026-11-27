@@ -1,5 +1,6 @@
 name = "lynx"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "lynx"
+[ftp]
+url = "https://invisible-mirror.net/archives/%(name)/tarballs/"
+filename = "lynx%(version).tar.bz2"

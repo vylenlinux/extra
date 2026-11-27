@@ -1,5 +1,6 @@
 name = "lilv"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "lilv"
+[ftp]
+url = "https://download.drobilla.net/"
+filename = "%(name)-%(version).tar.xz"

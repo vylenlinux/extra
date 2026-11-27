@@ -1,5 +1,6 @@
 name = "libxrandr"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxrandr"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXrandr-%(version).tar.xz"

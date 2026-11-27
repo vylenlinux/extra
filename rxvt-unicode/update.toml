@@ -1,5 +1,6 @@
 name = "rxvt-unicode"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "rxvt-unicode"
+[ftp]
+url = "http://dist.schmorp.de/%(name)/Attic/"
+filename = "%(name)-%(version).tar.bz2"

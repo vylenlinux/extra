@@ -1,5 +1,6 @@
 name = "libspectre"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libspectre"
+[ftp]
+url = "https://libspectre.freedesktop.org/releases/"
+filename = "%(name)-%(version).tar.gz"

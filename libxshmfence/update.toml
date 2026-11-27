@@ -1,5 +1,6 @@
 name = "libxshmfence"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxshmfence"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

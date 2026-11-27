@@ -1,5 +1,6 @@
 name = "libxdmcp"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxdmcp"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXdmcp-%(version).tar.xz"

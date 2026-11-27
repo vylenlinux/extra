@@ -1,5 +1,6 @@
 name = "libxext"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxext"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXext-%(version).tar.xz"

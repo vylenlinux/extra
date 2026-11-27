@@ -1,5 +1,6 @@
 name = "farbfeld"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "farbfeld"
+[ftp]
+url = "https://dl.suckless.org/%(name)/"
+filename = "%(name)-%(version).tar.gz"

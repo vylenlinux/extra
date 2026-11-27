@@ -1,5 +1,6 @@
 name = "libfs"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libfs"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
+filename = "libFS-%(version).tar.xz"

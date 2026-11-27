@@ -1,5 +1,8 @@
 name = "pango"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "pango"
+package = "%(name)"
+
+[version.filter]
+exclude = ['^1.90$'] # devel

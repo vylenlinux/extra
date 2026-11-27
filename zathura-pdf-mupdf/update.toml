@@ -1,5 +1,6 @@
 name = "zathura-pdf-mupdf"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "zathura-pdf-mupdf"
+[ftp]
+url = "https://pwmt.org/projects/%(name)/download/"
+filename = "%(name)-%(version).tar.xz"

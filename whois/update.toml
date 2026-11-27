@@ -1,5 +1,6 @@
 name = "whois"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "whois"
+[ftp]
+url = "https://ftp.debian.org/debian/pool/main/w/%(name)/"
+filename = "%(name)_%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "xterm"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xterm"
+[ftp]
+url = "http://invisible-mirror.net/archives/%(name)/"
+filename = "%(name)-%(version).tgz"

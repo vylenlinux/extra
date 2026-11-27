@@ -1,5 +1,6 @@
 name = "cpio"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "cpio"
+[ftp]
+url = "https://ftp.gnu.org/gnu/%(name)/"
+filename = "%(name)-%(version).tar.bz2"

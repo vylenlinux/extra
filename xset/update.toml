@@ -1,5 +1,6 @@
 name = "xset"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xset"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

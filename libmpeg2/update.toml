@@ -1,5 +1,6 @@
 name = "libmpeg2"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libmpeg2"
+[ftp]
+url = "https://download.videolan.org/contrib/%(name)/"
+filename = "%(name)-%(version).tar.gz"

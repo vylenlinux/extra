@@ -1,5 +1,5 @@
 name = "f2fs-tools"
-provider = "repology"
+provider = "cgit"
 
 [source]
-package = "f2fs-tools"
+url = "https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/%(name).git"

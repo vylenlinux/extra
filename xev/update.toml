@@ -1,5 +1,6 @@
 name = "xev"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xev"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

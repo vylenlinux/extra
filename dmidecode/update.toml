@@ -1,5 +1,6 @@
 name = "dmidecode"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "dmidecode"
+[ftp]
+url = "https://download.savannah.gnu.org/releases/%(name)/"
+filename = "%(name)-%(version).tar.xz"

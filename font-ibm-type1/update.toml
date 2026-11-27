@@ -1,5 +1,6 @@
 name = "font-ibm-type1"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:ibm-type1"
+[ftp]
+url = "http://ftp.x.org/pub/individual/font/"
+filename = "%(name)-%(version).tar.xz"

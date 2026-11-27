@@ -1,5 +1,6 @@
 name = "libxpresent"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxpresent"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
+filename = "libXpresent-%(version).tar.xz"

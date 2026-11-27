@@ -1,5 +1,6 @@
 name = "font-adobe-utopia-type1"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:adobe-utopia-type1"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/font/"
+filename = "%(name)-%(version).tar.xz"

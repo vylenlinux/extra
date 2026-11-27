@@ -1,5 +1,6 @@
 name = "sgml-common"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "sgml-common"
+[ftp]
+url = "https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/"
+filename = "%(name)-%(version).tgz"

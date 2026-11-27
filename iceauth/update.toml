@@ -1,5 +1,6 @@
 name = "iceauth"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "iceauth"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/app/"
+filename = "%(name)-%(version).tar.xz"

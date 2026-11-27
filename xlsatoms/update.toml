@@ -1,5 +1,6 @@
 name = "xlsatoms"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xlsatoms"
+[ftp]
+url = "http://ftp.x.org/pub/individual/app/"
+filename = "%(name)-%(version).tar.xz"

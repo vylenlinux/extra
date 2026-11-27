@@ -1,5 +1,6 @@
 name = "libxdamage"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxdamage"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXdamage-%(version).tar.xz"

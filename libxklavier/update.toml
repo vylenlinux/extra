@@ -1,5 +1,6 @@
 name = "libxklavier"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxklavier"
+[ftp]
+url = "https://people.freedesktop.org/~svu/"
+filename = "%(name)-%(version).tar.bz2"

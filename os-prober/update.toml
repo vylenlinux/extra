@@ -1,5 +1,6 @@
 name = "os-prober"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "os-prober"
+[ftp]
+url = "https://deb.debian.org/debian/pool/main/o/%(name)/"
+filename = "%(name)_%(version).tar.xz"

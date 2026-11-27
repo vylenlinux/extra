@@ -1,5 +1,6 @@
 name = "libtheora"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libtheora"
+instance = "https://gitlab.xiph.org/"
+project = "xiph/theora"

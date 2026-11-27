@@ -1,5 +1,6 @@
 name = "hicolor-icon-theme"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "hicolor-icon-theme"
+[ftp]
+url = "https://icon-theme.freedesktop.org/releases/"
+filename = "%(name)-%(version).tar.xz"

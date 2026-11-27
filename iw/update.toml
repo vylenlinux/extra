@@ -1,5 +1,6 @@
 name = "iw"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "iw"
+[ftp]
+url = "https://www.kernel.org/pub/software/network/%(name)/"
+filename = "%(name)-%(version).tar.xz"

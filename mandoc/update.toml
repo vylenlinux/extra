@@ -1,5 +1,6 @@
 name = "mandoc"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "mandoc"
+[ftp]
+url = "http://mandoc.bsd.lv/snapshots/"
+filename = "%(name)-%(version).tar.gz"

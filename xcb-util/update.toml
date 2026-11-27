@@ -1,5 +1,6 @@
 name = "xcb-util"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xcb-util"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/xcb/"
+filename = "%(name)-%(version).tar.xz"

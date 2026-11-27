@@ -1,5 +1,6 @@
 name = "xcb-util-errors"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xcb-util-errors"
+[ftp]
+url = "https://xcb.freedesktop.org/dist/"
+filename = "%(name)-%(version).tar.xz"

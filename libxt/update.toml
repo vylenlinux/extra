@@ -1,5 +1,6 @@
 name = "libxt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxt"
+[ftp]
+url = "https://www.x.org/releases/individual/lib/"
+filename = "libXt-%(version).tar.xz"

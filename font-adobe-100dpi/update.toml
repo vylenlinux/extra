@@ -1,5 +1,6 @@
 name = "font-adobe-100dpi"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:adobe-100dpi"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/font/"
+filename = "%(name)-%(version).tar.xz"

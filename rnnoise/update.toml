@@ -1,5 +1,6 @@
 name = "rnnoise"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "rnnoise-xiph"
+instance = "https://gitlab.xiph.org/"
+project = "xiph/%(name)"

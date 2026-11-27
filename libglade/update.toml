@@ -1,5 +1,2 @@
 name = "libglade"
-provider = "repology"
-
-[source]
-package = "libglade"
+provider = "manual" # upstream is archived and no longer maintained

@@ -1,5 +1,6 @@
 name = "libwebp"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libwebp"
+[ftp]
+url = "http://downloads.webmproject.org/releases/webp/"
+filename = "%(name)-%(version).tar.gz"

@@ -1,5 +1,6 @@
 name = "sratom"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "sratom"
+[ftp]
+url = "https://download.drobilla.net/"
+filename = "%(name)-%(version).tar.xz"

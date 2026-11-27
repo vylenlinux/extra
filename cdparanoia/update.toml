@@ -1,5 +1,6 @@
 name = "cdparanoia"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "cdparanoia"
+[ftp]
+url = "https://ftp.osuosl.org/pub/xiph/releases/%(name)/"
+filename = "%(name)-III-%(version).src.tgz"

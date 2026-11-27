@@ -1,5 +1,6 @@
 name = "font-alias"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "font-alias"
+[ftp]
+url = "http://ftp.x.org/pub/individual/font/"
+filename = "%(name)-%(version).tar.xz"

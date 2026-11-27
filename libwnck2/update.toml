@@ -1,8 +1,2 @@
 name = "libwnck2"
-provider = "repology"
-
-[source]
-package = "libwnck"
-
-[version.filter]
-include = ['^2\..*$']
+provider = "manual"

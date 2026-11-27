@@ -1,5 +1,6 @@
 name = "usbutils"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "usbutils"
+[ftp]
+url = "https://www.kernel.org/pub/linux/utils/usb/%(name)/"
+filename = "%(name)-%(version).tar.xz"

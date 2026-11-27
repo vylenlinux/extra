@@ -1,5 +1,6 @@
 name = "encodings"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "encodings"
+[ftp]
+url = "https://xorg.freedesktop.org//releases/individual/font/"
+filename = "%(name)-%(version).tar.xz"

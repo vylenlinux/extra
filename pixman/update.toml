@@ -1,5 +1,6 @@
 name = "pixman"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "pixman"
+[ftp]
+url = "https://www.x.org/releases/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "libev"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libev"
+[ftp]
+url = "http://dist.schmorp.de/%(name)/"
+filename = "%(name)-%(version).tar.gz"

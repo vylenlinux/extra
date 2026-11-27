@@ -1,5 +1,6 @@
 name = "bdftopcf"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "bdftopcf"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/util/"
+filename = "%(name)-%(version).tar.xz"

@@ -1,5 +1,6 @@
 name = "libxkbfile"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxkbfile"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

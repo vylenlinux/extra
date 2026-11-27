@@ -1,5 +1,6 @@
 name = "libxcursor"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxcursor"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXcursor-%(version).tar.xz"

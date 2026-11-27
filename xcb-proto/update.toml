@@ -1,5 +1,6 @@
 name = "xcb-proto"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "xcb-proto"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/proto/"
+filename = "%(name)-%(version).tar.xz"

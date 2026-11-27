@@ -1,5 +1,9 @@
 name = "libreplaygain"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "libreplaygain"
+instance = "https://salsa.debian.org/"
+project = "multimedia-team/%(name)"
+
+[version.normalize]
+strip_prefix = "upstream/1.0_"

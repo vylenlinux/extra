@@ -1,5 +1,6 @@
 name = "compface"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "compface"
+[ftp]
+url = "http://mirrors.ibiblio.org/xemacs/aux/"
+filename = "%(name)-%(version).tar.gz"

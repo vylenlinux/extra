@@ -1,5 +1,6 @@
 name = "util-macros"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "util-macros"
+[ftp]
+url = "https://xorg.freedesktop.org/archive/individual/util/"
+filename = "%(name)-%(version).tar.xz"

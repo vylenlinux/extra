@@ -1,8 +1,9 @@
 name = "gtkmm3"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "gtkmm"
 
 [version.filter]
 include = ['^3\..*$']
+exclude = ['[0-9]+\.[0-9]*[13579]\..*']

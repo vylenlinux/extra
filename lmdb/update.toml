@@ -1,5 +1,12 @@
 name = "lmdb"
-provider = "repology"
+provider = "gitlab"
 
 [source]
-package = "lmdb"
+instance = "https://git.openldap.org/"
+project = "openldap/openldap"
+
+[version.normalize]
+strip_prefix = "LMDB_"
+
+[version.filter]
+include = ['^LMDB_.*$']

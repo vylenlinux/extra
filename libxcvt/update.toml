@@ -1,5 +1,6 @@
 name = "libxcvt"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxcvt"
+[ftp]
+url = "https://xorg.freedesktop.org/releases/individual/lib/"
+filename = "%(name)-%(version).tar.xz"

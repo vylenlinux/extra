@@ -1,5 +1,6 @@
 name = "timezonemap"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libtimezonemap"
+[ftp]
+url = "https://deb.debian.org/debian/pool/main/libt/libtimezonemap/"
+filename = "libtimezonemap_%(version).orig.tar.gz"

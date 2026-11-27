@@ -1,5 +1,6 @@
 name = "font-misc-ethiopic"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "fonts:misc-ethiopic"
+[ftp]
+url = "http://ftp.x.org/pub/individual/font/"
+filename = "%(name)-%(version).tar.xz"

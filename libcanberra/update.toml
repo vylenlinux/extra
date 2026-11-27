@@ -1,5 +1,6 @@
 name = "libcanberra"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libcanberra"
+[ftp]
+url = "http://0pointer.de/lennart/projects/%(name)/"
+filename = "%(name)-%(version).tar.xz"

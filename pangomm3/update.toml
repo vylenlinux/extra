@@ -1,8 +1,8 @@
 name = "pangomm3"
-provider = "repology"
+provider = "gnome"
 
 [source]
 package = "pangomm"
 
-[repology]
-match_name = "pangomm2.46"
+[version.filter]
+include = ['^2\.46.*$']

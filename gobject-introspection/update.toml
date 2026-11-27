@@ -1,5 +1,5 @@
 name = "gobject-introspection"
-provider = "repology"
+provider = "gnome"
 
 [source]
-package = "gobject-introspection"
+package = "%(name)"

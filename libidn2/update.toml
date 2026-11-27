@@ -1,5 +1,6 @@
 name = "libidn2"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libidn2"
+[ftp]
+url = "https://ftp.gnu.org/gnu/libidn/"
+filename = "%(name)-%(version).tar.gz"

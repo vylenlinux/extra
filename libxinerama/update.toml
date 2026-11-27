@@ -1,5 +1,6 @@
 name = "libxinerama"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libxinerama"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libXinerama-%(version).tar.xz"

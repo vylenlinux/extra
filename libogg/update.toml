@@ -1,5 +1,6 @@
 name = "libogg"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libogg"
+[ftp]
+url = "https://ftp.osuosl.org/pub/xiph/releases/ogg/"
+filename = "%(name)-%(version).tar.xz"

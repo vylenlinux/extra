@@ -1,5 +1,6 @@
 name = "libice"
-provider = "repology"
+provider = "ftp"
 
-[source]
-package = "libice"
+[ftp]
+url = "http://ftp.x.org/pub/individual/lib/"
+filename = "libICE-%(version).tar.xz"

@@ -1,5 +1,2 @@
 name = "gdl"
-provider = "repology"
-
-[source]
-package = "gdl-gnome-docking-library"
+provider = "manual" # upstream is archived and no longer maintained
