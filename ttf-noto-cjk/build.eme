@@ -17,10 +17,10 @@ source="https://github.com/notofonts/noto-cjk/releases/download/Sans${_sans_vers
     70-noto-cjk.conf"
 
 build() {
-    install -Dm644 *.ttc -t "${PKG}/usr/share/fonts/noto-cjk/"
-    install -Dm644 OTC/*.ttc -t "${PKG}/usr/share/fonts/noto-cjk/"
+    # shellcheck disable=SC2035
+    install -Dm644 *.ttc OTC/*.ttc -t "${PKG}/usr/share/fonts/noto-cjk/"
     install -Dm644 70-noto-cjk.conf -t "${PKG}/usr/share/fontconfig/conf.avail/"
 
     install -d "${PKG}/usr/share/fontconfig/conf.default"
-    ln -rs "${PKG}/usr/share/fontconfig/conf.avail"/* "${PKG}/usr/share/fontconfig/conf.default/"
+    ln -s ../conf.avail/70-noto-cjk.conf -t "${PKG}/usr/share/fontconfig/conf.default/"
 }
