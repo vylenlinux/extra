@@ -1,5 +1,6 @@
 name = "js140"
 provider = "repology"
+skip_update = true # Repology is the only reliable version source
 
 [source]
 package = "spidermonkey"
