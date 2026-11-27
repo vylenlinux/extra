@@ -2,5 +2,5 @@ name = "libxt"
 provider = "ftp"
 
 [ftp]
-url = "https://www.x.org/releases/individual/lib/"
+url = "https://xorg.freedesktop.org/archive/individual/lib/"
 filename = "libXt-%(version).tar.xz"
