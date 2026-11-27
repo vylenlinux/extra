@@ -2,5 +2,5 @@ name = "font-adobe-75dpi"
 provider = "ftp"
 
 [ftp]
-url = "https://www.x.org/archive/individual/font/"
+url = "https://xorg.freedesktop.org/archive/individual/font/"
 filename = "%(name)-%(version).tar.xz"
