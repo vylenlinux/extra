@@ -2,5 +2,5 @@ name = "font-alias"
 provider = "ftp"
 
 [ftp]
-url = "http://ftp.x.org/pub/individual/font/"
+url = "https://xorg.freedesktop.org/archive/individual/font/"
 filename = "%(name)-%(version).tar.xz"
