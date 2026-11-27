@@ -3,4 +3,7 @@ provider = "github"
 
 [source]
 owner = "quotient-im"
-repo = "libQuotient"
+repo = "%(name)"
+
+[version.filter]
+exclude = ['^.*-beta.*$']
