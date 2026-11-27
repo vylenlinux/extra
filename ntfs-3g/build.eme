@@ -6,7 +6,7 @@ homepage="https://www.tuxera.com/community/open-source-ntfs-3g/"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=ntfs-3g
-version=2026.9.28
+version=2026.11.23
 release=1
 source="${name}-${version}.tar.gz::https://github.com/tuxera/${name}/archive/refs/tags/${version}.tar.gz"
 
@@ -16,20 +16,22 @@ build() {
     autoreconf -fi
 
     # shellcheck disable=SC2016
-    sed -i 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/bin|g' \
+    sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/bin|g' -i \
         ntfsprogs/Makefile.in \
         src/Makefile.in
 
     ./configure \
         --prefix=/usr \
         --sbindir=/usr/bin \
-        --disable-static \
+        \
         --with-fuse=external \
+        \
+        --disable-static \
         --disable-ldconfig
 
     make
     make rootbindir=/usr/bin rootsbindir=/usr/bin rootlibdir=/usr/lib DESTDIR="${PKG}" install
 
-    ln -s ntfs-3g "${PKG}/usr/bin/mount.ntfs"
-    ln -s ntfs-3g.8 "${PKG}/usr/share/man/man8/mount.ntfs.8"
+    ln -s "${name}" "${PKG}/usr/bin/mount.ntfs"
+    ln -s "${name}.8" "${PKG}/usr/share/man/man8/mount.ntfs.8"
 }
