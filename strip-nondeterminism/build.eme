@@ -6,7 +6,7 @@ homepage="https://salsa.debian.org/reproducible-builds/strip-nondeterminism"
 maintainer="Vylen Linux Team <wonkru-dev@proton.me>"
 
 name=strip-nondeterminism
-version=1.15.1
+version=1.16.0
 release=1
 source="https://salsa.debian.org/reproducible-builds/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
@@ -14,7 +14,7 @@ build() {
     # shellcheck disable=SC2164
     cd "${name}-${version}"
 
-    sed -r 's|bin/dh_strip_nondeterminism ||g' -i Makefile.PL
+    sed 's|bin/dh_strip_nondeterminism ||g' -i Makefile.PL
     perl Makefile.PL
 
     make
